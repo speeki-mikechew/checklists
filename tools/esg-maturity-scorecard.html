@@ -113,27 +113,21 @@
 
         /* Navbar */
         nav {
-            background: rgba(255, 255, 255, 0.95);
-            border-bottom: 1px solid var(--speeki-border);
-            padding: 20px 4vw;
+            background: #0a1628;
+            padding: 0 32px;
             position: sticky;
             top: 0;
             z-index: 100;
-            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
         }
 
         .nav-content {
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
+            align-items: center;
             justify-content: space-between;
-            align-items: center;
-        }
-
-        .nav-logo {
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
+            height: 64px;
         }
 
         .nav-logo img {
@@ -144,42 +138,33 @@
         .nav-right {
             display: flex;
             align-items: center;
-            gap: 16px;
+            gap: 24px;
         }
 
         .nav-back {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            color: var(--speeki-gray);
+            color: #e2e8f0;
             text-decoration: none;
             font-size: 14px;
-            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 6px;
             transition: color 0.2s;
         }
 
-        .nav-back:hover {
-            color: var(--speeki-dark);
-        }
+        .nav-back:hover { color: #00FF7F; }
 
         .nav-cta {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: var(--speeki-green);
-            color: var(--speeki-dark);
-            padding: 10px 20px;
-            border-radius: 8px;
+            background: #00FF7F;
+            color: #0a1628;
+            padding: 8px 20px;
+            border-radius: 6px;
             text-decoration: none;
             font-weight: 600;
             font-size: 14px;
-            transition: all 0.2s;
+            transition: background 0.2s;
         }
 
-        .nav-cta:hover {
-            filter: brightness(0.95);
-            transform: translateY(-1px);
-        }
+        .nav-cta:hover { background: #00e06f; }
 
         /* Page Header */
         .page-header {
@@ -1375,21 +1360,40 @@
 
         /* Footer */
         footer {
-            background: var(--speeki-dark-blue);
-            padding: 40px 0;
-            color: rgba(255,255,255,0.6);
-            font-size: 13px;
+            background: #0a1628;
+            color: #9ca3af;
             text-align: center;
+            padding: 48px 32px;
+            margin-top: 60px;
         }
 
-        footer a {
-            color: rgba(255,255,255,0.6);
+        footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-logo img {
+            height: 40px;
+            width: auto;
+            margin-bottom: 12px;
+        }
+
+        .footer-links {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: #9ca3af;
             text-decoration: none;
+            font-size: 13px;
+            transition: color 0.2s;
         }
 
-        footer a:hover {
-            color: var(--speeki-green);
-        }
+        .footer-links a:hover { color: #00FF7F; }
 
         /* Responsive */
         @media (max-width: 768px) {
@@ -1761,11 +1765,18 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 Speeki. All rights reserved. &nbsp;|&nbsp;
-                <a href="https://www.speeki.com/privacy">Privacy Policy</a> &nbsp;|&nbsp;
-                <a href="https://www.speeki.com">Speeki.com</a>
+            <a href="../index.html" class="footer-logo"><img src="../speeki-logo.png" alt="Speeki"></a>
+            <p>The Sustainability Firm</p>
+            <p style="margin-top: 16px; color: #9ca3af; font-size: 13px;">
+                © 2026 Speeki Pte Ltd. All rights reserved.
             </p>
-            <p style="margin-top: 8px;">This tool is for educational and self-assessment purposes only. It does not constitute professional advice.</p>
+            <div class="footer-links">
+                <a href="https://www.speeki.com">Home</a>
+                <a href="https://www.speeki.com/platform">Platform</a>
+                <a href="https://www.speeki.com/services">Services</a>
+                <a href="../index.html">Resources</a>
+                <a href="mailto:info@speeki.com">Contact</a>
+            </div>
         </div>
     </footer>
 

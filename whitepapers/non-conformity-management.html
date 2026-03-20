@@ -81,54 +81,52 @@ body {
 }
 
 /* ─── NAV ─────────────────────────────────────────── */
-.nav {
-  background: var(--navy);
+nav {
+  background: #0a1628;
+  padding: 0 32px;
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 2px 20px rgba(0,0,0,0.25);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
 }
-.nav-inner {
+.nav-content {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 32px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 68px;
-}
-.nav-logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
+  height: 64px;
 }
 .nav-logo img {
-  filter: brightness(0) invert(1);
+  height: 50px;
+  width: auto;
 }
-.nav-links {
+.nav-right {
   display: flex;
   align-items: center;
-  gap: 28px;
-  list-style: none;
+  gap: 24px;
 }
-.nav-links a {
-  color: rgba(255,255,255,0.75);
+.nav-back {
+  color: #e2e8f0;
   text-decoration: none;
   font-size: 14px;
-  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
   transition: color 0.2s;
 }
-.nav-links a:hover { color: var(--teal-accessible); }
+.nav-back:hover { color: #00FF7F; }
 .nav-cta {
-  background: var(--teal);
-  color: var(--navy) !important;
+  background: #00FF7F;
+  color: #0a1628;
   padding: 8px 20px;
   border-radius: 6px;
-  font-weight: 600 !important;
-  transition: background 0.2s !important;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background 0.2s;
 }
-.nav-cta:hover { background: var(--teal-dark) !important; }
+.nav-cta:hover { background: #00e06f; }
 
 /* ─── BREADCRUMB ──────────────────────────────────── */
 .breadcrumb {
@@ -504,23 +502,36 @@ body {
 }
 
 /* ─── FOOTER ──────────────────────────────────────── */
-.footer {
-  background: var(--navy);
-  color: rgba(255,255,255,0.65);
-  padding: 40px 32px;
+footer {
+  background: #0a1628;
+  color: #9ca3af;
   text-align: center;
-  font-size: 13px;
-  margin-top: 80px;
+  padding: 48px 32px;
+  margin-top: 60px;
 }
-
-.footer a {
-  color: var(--teal);
+footer .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.footer-logo img {
+  height: 40px;
+  width: auto;
+  margin-bottom: 12px;
+}
+.footer-links {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+.footer-links a {
+  color: #9ca3af;
   text-decoration: none;
+  font-size: 13px;
+  transition: color 0.2s;
 }
-
-.footer a:hover {
-  text-decoration: underline;
-}
+.footer-links a:hover { color: #00FF7F; }
 
 /* ─── RESPONSIVE ──────────────────────────────────── */
 @media (max-width: 768px) {
@@ -557,10 +568,6 @@ body {
     font-size: 18px;
   }
 
-  .nav-inner {
-    padding: 0 16px;
-  }
-
   .breadcrumb-inner {
     padding: 0 16px;
   }
@@ -582,17 +589,21 @@ body {
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
 <!-- Navigation -->
-<nav class="nav">
-  <div class="nav-inner">
-    <a href="../index.html" class="nav-logo">
-      <img src="../speeki-logo.png" alt="Speeki" style="height: 50px; width: auto;">
-    </a>
-    <ul class="nav-links">
-      <li><a href="../index.html">Home</a></li>
-      <li><a href="../index.html">Resources</a></li>
-      <li><a href="https://www.speeki.com" class="nav-cta" target="_blank">Visit Website</a></li>
-    </ul>
-  </div>
+<nav>
+    <div class="nav-content">
+        <a href="../index.html" class="nav-logo" aria-label="Speeki - Back to Resources Hub">
+            <img src="../speeki-logo.png" alt="Speeki" style="height: 50px; width: auto;">
+        </a>
+        <div class="nav-right">
+            <a href="../index.html" class="nav-back" aria-label="Back to all resources">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+                All Resources
+            </a>
+            <a href="https://www.speeki.com" class="nav-cta">Visit Speeki.com</a>
+        </div>
+    </div>
 </nav>
 
 <!-- Breadcrumb -->
@@ -1643,8 +1654,21 @@ speeki.com</td>
   </div>
 </section>
 
-<footer class="footer">
-  <p><strong>Speeki Whitepaper Series.</strong> Non-Conformity Management. Published 20 March 2026. <a href="https://www.speeki.com">Visit speeki.com</a></p>
+<footer>
+    <div class="container">
+        <a href="../index.html" class="footer-logo"><img src="../speeki-logo.png" alt="Speeki"></a>
+        <p>The Sustainability Firm</p>
+        <p style="margin-top: 16px; color: #9ca3af; font-size: 13px;">
+            © 2026 Speeki Pte Ltd. All rights reserved.
+        </p>
+        <div class="footer-links">
+            <a href="https://www.speeki.com">Home</a>
+            <a href="https://www.speeki.com/platform">Platform</a>
+            <a href="https://www.speeki.com/services">Services</a>
+            <a href="../index.html">Resources</a>
+            <a href="mailto:info@speeki.com">Contact</a>
+        </div>
+    </div>
 </footer>
 
 <script>
