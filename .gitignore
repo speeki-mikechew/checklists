@@ -1,28 +1,47 @@
-# Source documents (keep in data/ or attachments, not in git)
+# Source documents
 *.docx
 *.pdf
 *.xlsx
 *.pptx
 
-# Python scripts (build tools, not output)
+# Build/analysis scripts
 *.py
+*.sh
 __pycache__/
 
-# Data/extracted content
+# Analysis and strategy docs
+*.md
+
+# Analysis output (keep robots.txt)
+*.txt
+!robots.txt
+
+# Screenshots (non-logo)
+checklist-page-*.png
+index-page-*.png
+
+# Non-public HTML pages
+login.html
+growth-dashboard.html
+
+# Data/extracted content directories
 data/
 extracted_content/
 docx_extracted/
 
-# OS
+# OS / IDE
 .DS_Store
+Thumbs.db
+.idea/
+.vscode/
 
 # Node
 node_modules/
 
-# === Orchestrator baseline (auto-added) ===
-node_modules/
-.DS_Store
-Thumbs.db
+# Worktrees
+.worktrees/
+
+# Misc
 *.log
 *.tmp
 *.swp
@@ -34,10 +53,6 @@ dist/
 build/
 .cache/
 .playwright-mcp/
-.worktrees/
 coverage/
 *.tgz
-.idea/
-.vscode/
-__pycache__/
 *.pyc
