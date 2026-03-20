@@ -3,12 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>HR Due Diligence and ISO 37001 Clause 7.2.2.2 — Speeki Resources</title>
+<title>HR Due Diligence and ISO 37001 Clause 7.2.2.2 — Speeki</title>
 <meta name="description" content="Why most companies get pre-employment due diligence wrong under ISO 37001 Clause 7.2.2.2. A guide to HR due diligence, incentive review, and compliance declarations.">
-<meta property="og:title" content="HR Due Diligence and ISO 37001 Clause 7.2.2.2 — Speeki Resources">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="HR Due Diligence and ISO 37001 Clause 7.2.2.2 — Speeki">
 <meta property="og:description" content="Why most companies get pre-employment due diligence wrong under ISO 37001 Clause 7.2.2.2. A guide to HR due diligence, incentive review, and compliance declarations.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://www.speeki.com/en-GB/resources/whitepapers/iso-37001-employee-hiring.html">
+<<<<<<< HEAD
 <meta property="og:image" content="https://www.speeki.com/assets/speeki-og-image.jpg">
 <meta property="og:site_name" content="Speeki">
 <meta name="twitter:card" content="summary_large_image">
@@ -16,6 +18,12 @@
 <meta name="twitter:description" content="Why most companies get pre-employment due diligence wrong under ISO 37001 Clause 7.2.2.2. A guide to HR due diligence, incentive review, and compliance declarations.">
 <meta name="twitter:image" content="https://www.speeki.com/assets/speeki-og-image.jpg">
 <meta name="robots" content="index, follow">
+=======
+<meta property="og:site_name" content="Speeki">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="HR Due Diligence and ISO 37001 Clause 7.2.2.2 — Speeki">
+<meta name="twitter:description" content="Why most companies get pre-employment due diligence wrong under ISO 37001 Clause 7.2.2.2. A guide to HR due diligence, incentive review, and compliance declarations.">
+>>>>>>> main
 <link rel="canonical" href="https://www.speeki.com/en-GB/resources/whitepapers/iso-37001-employee-hiring.html">
 <script type="application/ld+json">
 {
@@ -23,12 +31,26 @@
   "@type": "Article",
   "headline": "HR Due Diligence and ISO 37001 Clause 7.2.2.2",
   "description": "Why most companies get pre-employment due diligence wrong under ISO 37001 Clause 7.2.2.2. A guide to HR due diligence, incentive review, and compliance declarations.",
+<<<<<<< HEAD
   "url": "https://www.speeki.com/en-GB/resources/whitepapers/iso-37001-employee-hiring.html",
+=======
+  "author": {
+    "@type": "Organization",
+    "name": "Speeki",
+    "url": "https://www.speeki.com"
+  },
+>>>>>>> main
   "publisher": {
     "@type": "Organization",
     "name": "Speeki",
     "url": "https://www.speeki.com"
+<<<<<<< HEAD
   }
+=======
+  },
+  "url": "https://www.speeki.com/en-GB/resources/whitepapers/iso-37001-employee-hiring.html",
+  "mainEntityOfPage": "https://www.speeki.com/en-GB/resources/whitepapers/iso-37001-employee-hiring.html"
+>>>>>>> main
 }
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,6 +61,8 @@
   --navy-mid: #1a2d5a;
   --navy-light: #243672;
   --teal: #00FF7F;
+  --teal-text: #00875a;
+  --teal-accessible: #00875a;
   --teal-dark: #00e06e;
   --teal-light: #e6fff0;
   --gold: #f0a500;
@@ -107,7 +131,7 @@ body {
   font-weight: 500;
   transition: color 0.2s;
 }
-.nav-links a:hover { color: var(--teal); }
+.nav-links a:hover { color: var(--teal-accessible); }
 .nav-links .active { color: var(--white); }
 .nav-cta {
   background: var(--teal);
@@ -135,9 +159,9 @@ body {
   color: rgba(255,255,255,0.5);
 }
 .breadcrumb a { color: rgba(255,255,255,0.6); text-decoration: none; }
-.breadcrumb a:hover { color: var(--teal); }
+.breadcrumb a:hover { color: var(--teal-accessible); }
 .breadcrumb-sep { opacity: 0.4; }
-.breadcrumb-current { color: var(--teal); }
+.breadcrumb-current { color: var(--teal-accessible); }
 
 /* --- HERO --- */
 .hero {
@@ -263,7 +287,7 @@ body {
   gap: 8px;
   transition: border-color 0.2s, color 0.2s;
 }
-.btn-outline:hover { border-color: var(--teal); color: var(--teal); }
+.btn-outline:hover { border-color: var(--teal-accessible); color: var(--teal-accessible); }
 .hero-card {
   background: rgba(255,255,255,0.05);
   border: 1px solid rgba(255,255,255,0.1);
@@ -376,7 +400,7 @@ body {
   line-height: 1;
   margin-bottom: 4px;
 }
-.stat-number span { color: var(--teal); }
+.stat-number span { color: var(--teal-accessible); }
 .stat-label { color: var(--text-light); font-size: 13px; }
 
 /* --- CONTENT LAYOUT --- */
@@ -714,9 +738,13 @@ body {
   .stat-item:nth-child(3), .stat-item:nth-child(4) { border-bottom: none; padding-bottom: 0; }
   .footer-top { grid-template-columns: 1fr; gap: 32px; }
 }
-</style>
+        /* Skip Navigation Link */
+        .skip-link { position: absolute; top: -40px; left: 0; background: #0a1f44; color: #fff; padding: 8px 16px; z-index: 10000; font-size: 14px; }
+        .skip-link:focus { top: 0; }
+        </style>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
 <!-- NAV -->
 <nav class="nav">
@@ -744,7 +772,7 @@ body {
 </div>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero" id="main-content">
   <div class="hero-inner">
     <div class="hero-content">
       <div class="hero-tag">
@@ -1222,7 +1250,7 @@ body {
 
     <p>Speeki provides independent ISO 37001 anti-bribery management system certification and ABMS gap assessments across 100+ countries. Our assessment teams have evaluated Clause 7.2.2.2 compliance across organisations in multiple sectors and jurisdictions. We work with organisations at all stages of ABMS maturity &#8212; from initial gap assessment through to certification readiness and ongoing assurance.</p>
 
-    <p><strong>Contact us at <a href="mailto:info@speeki.com" style="color: var(--teal);">info@speeki.com</a> or visit <a href="https://www.speeki.com" target="_blank" style="color: var(--teal);">www.speeki.com</a></strong></p>
+    <p><strong>Contact us at <a href="mailto:info@speeki.com" style="color: var(--teal-text);">info@speeki.com</a> or visit <a href="https://www.speeki.com" target="_blank" style="color: var(--teal-text);">www.speeki.com</a></strong></p>
 
   </article>
 

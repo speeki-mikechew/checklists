@@ -19,6 +19,7 @@
 
         :root {
             --speeki-green: #00FF7F;
+            --speeki-green-text: #00875a;
             --speeki-dark-blue: #0a1f44;
             --speeki-dark: #0a1f44;
             --speeki-gray: #4a5568;
@@ -63,7 +64,11 @@
         }
 
         .logo-text span {
+<<<<<<< HEAD
             color: #00875a;
+=======
+            color: var(--speeki-green-text);
+>>>>>>> main
         }
 
         h1 {
@@ -184,10 +189,14 @@
                 padding: 32px 24px;
             }
         }
-    </style>
+            /* Skip Navigation Link */
+        .skip-link { position: absolute; top: -40px; left: 0; background: #0a1f44; color: #fff; padding: 8px 16px; z-index: 10000; font-size: 14px; }
+        .skip-link:focus { top: 0; }
+        </style>
 </head>
 <body>
-    <div class="login-container">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    <div class="login-container" id="main-content">
         <div class="logo">
             <div class="logo-text">Speeki<span>.</span></div>
         </div>

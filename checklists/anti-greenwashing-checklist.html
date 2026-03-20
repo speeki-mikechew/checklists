@@ -18,8 +18,13 @@
     <meta name="twitter:title" content="CSO's Anti-Greenwashing Checklist | Speeki">
     <meta name="twitter:description" content="Ten essential actions to reduce greenwashing risk in ESG reporting. Interactive checklist with progress tracking.">
     <meta name="robots" content="index, follow">
+<<<<<<< HEAD:anti-greenwashing-checklist.html
     <title>CSO's Anti-Greenwashing Checklist | Speeki - ESG Reporting Tool</title>
     <link rel="canonical" href="https://www.speeki.com/en-GB/resources/anti-greenwashing-checklist.html">
+=======
+    <title>CSO's Anti-Greenwashing Checklist | Speeki</title>
+    <link rel="canonical" href="https://www.speeki.com/checklists/anti-greenwashing">
+>>>>>>> main:checklists/anti-greenwashing-checklist.html
 
     <script type="application/ld+json">
     {
@@ -70,6 +75,7 @@
 
         :root {
             --speeki-green: #00FF7F;
+            --speeki-green-text: #00875a;
             --speeki-dark-blue: #0a1f44;
             --speeki-dark: #0a1f44;
             --speeki-gray: #4a5568;
@@ -118,7 +124,7 @@
         }
 
         .nav-logo img {
-            height: 32px;
+            height: 50px;
             width: auto;
         }
 
@@ -156,7 +162,11 @@
         }
 
         .header-highlight {
+<<<<<<< HEAD:anti-greenwashing-checklist.html
             color: #00875a;
+=======
+            color: var(--speeki-green-text);
+>>>>>>> main:checklists/anti-greenwashing-checklist.html
             position: relative;
         }
 
@@ -927,9 +937,13 @@
                 padding: 40px 6vw;
             }
         }
-    </style>
+            /* Skip Navigation Link */
+        .skip-link { position: absolute; top: -40px; left: 0; background: #0a1f44; color: #fff; padding: 8px 16px; z-index: 10000; font-size: 14px; }
+        .skip-link:focus { top: 0; }
+        </style>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <nav>
         <div class="nav-content">
             <a href="index.html" class="nav-logo"><img src="speeki-logo.png" alt="Speeki - The Sustainability Firm"></a>
@@ -952,7 +966,7 @@
             </div>
         </header>
 
-        <main>
+        <main id="main-content">
             <form id="checklistForm">
                 <!-- Item 1 -->
                 <div class="checklist-item">

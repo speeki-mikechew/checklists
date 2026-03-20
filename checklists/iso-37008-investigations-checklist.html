@@ -6,27 +6,27 @@
     <script src="assets/auth.js"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ISO 37002 assurance checklist: 12 areas auditors evaluate when assessing whistleblowing management system effectiveness. Understand documentation standards and common audit findings.">
-    <meta name="keywords" content="ISO 37002, whistleblowing, speak-up culture, whistleblowing management, compliance, reporting system, ISO certification">
+    <meta name="description" content="ISO 37008 Internal Investigations Management Checklist by Speeki. Essential steps for managing effective internal investigations, evidence handling, reporting and compliance. Interactive tool with progress tracking.">
+    <meta name="keywords" content="ISO 37008, internal investigations, investigations management, evidence handling, compliance, corporate investigations, fraud investigation, ISO certification">
     <meta name="author" content="Speeki, Scott Lane">
-    <meta property="og:title" content="ISO 37002 Whistleblowing Management Systems Checklist | Speeki">
-    <meta property="og:description" content="ISO 37002 assurance checklist: 12 areas auditors evaluate when assessing whistleblowing management system effectiveness. Understand documentation standards and common audit findings.">
+    <meta property="og:title" content="ISO 37008 Internal Investigations Management Checklist | Speeki">
+    <meta property="og:description" content="Essential steps for managing effective internal investigations based on ISO 37008. Interactive checklist with progress tracking.">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://www.speeki.com/en-GB/resources/iso-37002-whistleblowing-checklist.html">
+    <meta property="og:url" content="https://www.speeki.com/en-GB/resources/iso-37008-investigations-checklist.html">
     <meta property="og:site_name" content="Speeki">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="ISO 37002 Whistleblowing Management Systems Checklist | Speeki">
-    <meta name="twitter:description" content="ISO 37002 assurance checklist: 12 areas auditors evaluate when assessing whistleblowing management system effectiveness.">
+    <meta name="twitter:title" content="ISO 37008 Internal Investigations Management Checklist | Speeki">
+    <meta name="twitter:description" content="Essential steps for managing effective internal investigations based on ISO 37008.">
     <meta name="robots" content="index, follow">
-    <title>ISO 37002 Whistleblowing Management Systems Checklist | Speeki</title>
-    <link rel="canonical" href="https://www.speeki.com/en-GB/resources/iso-37002-whistleblowing-checklist.html">
+    <title>ISO 37008 Internal Investigations Management Checklist | Speeki</title>
+    <link rel="canonical" href="https://www.speeki.com/en-GB/resources/iso-37008-investigations-checklist.html">
 
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "HowTo",
-        "name": "ISO 37002 Whistleblowing Management Systems Checklist",
-        "description": "12 areas auditors evaluate when assessing whistleblowing management system effectiveness and ISO 37002 compliance.",
+        "name": "ISO 37008 Internal Investigations Management Checklist",
+        "description": "Essential steps for managing effective internal investigations based on ISO 37008 guidance.",
         "author": {
             "@type": "Person",
             "name": "Scott Lane",
@@ -42,18 +42,16 @@
             "url": "https://www.speeki.com"
         },
         "step": [
-            {"@type": "HowToStep", "name": "Assess the current state of your whistleblowing management system", "position": 1},
-            {"@type": "HowToStep", "name": "Define the context and scope of your whistleblowing management system", "position": 2},
-            {"@type": "HowToStep", "name": "Get leadership commitment", "position": 3},
-            {"@type": "HowToStep", "name": "Set up a whistleblowing policy", "position": 4},
-            {"@type": "HowToStep", "name": "Define roles, responsibilities and authority", "position": 5},
-            {"@type": "HowToStep", "name": "Create a plan for the management system", "position": 6},
-            {"@type": "HowToStep", "name": "Generate awareness and provide training", "position": 7},
-            {"@type": "HowToStep", "name": "Create a documentation plan", "position": 8},
-            {"@type": "HowToStep", "name": "Set rules around confidentiality", "position": 9},
-            {"@type": "HowToStep", "name": "Set up and manage reporting channels", "position": 10},
-            {"@type": "HowToStep", "name": "Monitor, measure and evaluate the whistleblowing management system", "position": 11},
-            {"@type": "HowToStep", "name": "Seek continual improvement", "position": 12}
+            {"@type": "HowToStep", "name": "Establish the investigations management framework", "position": 1},
+            {"@type": "HowToStep", "name": "Define investigation triggers and thresholds", "position": 2},
+            {"@type": "HowToStep", "name": "Plan the investigation approach", "position": 3},
+            {"@type": "HowToStep", "name": "Secure and preserve evidence", "position": 4},
+            {"@type": "HowToStep", "name": "Conduct interviews and gather information", "position": 5},
+            {"@type": "HowToStep", "name": "Analyse findings and draw conclusions", "position": 6},
+            {"@type": "HowToStep", "name": "Document and report investigation outcomes", "position": 7},
+            {"@type": "HowToStep", "name": "Address legal and compliance considerations", "position": 8},
+            {"@type": "HowToStep", "name": "Close investigations and implement remediation", "position": 9},
+            {"@type": "HowToStep", "name": "Monitor, review and improve the investigations system", "position": 10}
         ]
     }
     </script>
@@ -72,11 +70,15 @@
 
         :root {
             --speeki-green: #00FF7F;
+            --speeki-green-text: #00875a;
             --speeki-dark-blue: #0a1f44;
             --speeki-dark: #0a1f44;
             --speeki-gray: #4a5568;
             --speeki-light-gray: #f8f9fa;
             --speeki-border: #e5e7eb;
+            --speeki-success: #f0fdf4;
+            --speeki-warning: #dc2626;
+            --speeki-warning-bg: #fef2f2;
         }
 
         body {
@@ -119,7 +121,7 @@
         }
 
         .nav-logo img {
-            height: 32px;
+            height: 50px;
             width: auto;
         }
 
@@ -156,7 +158,7 @@
         }
 
         .header-highlight {
-            color: var(--speeki-green);
+            color: var(--speeki-green-text);
             position: relative;
         }
 
@@ -225,6 +227,55 @@
             padding: 60px 4vw;
         }
 
+        .section-intro {
+            margin-bottom: 48px;
+            padding: 24px;
+            background: var(--speeki-light-gray);
+            border-radius: 8px;
+            border-left: 4px solid var(--speeki-green);
+        }
+
+        .section-intro h2 {
+            font-size: 20px;
+            color: var(--speeki-dark);
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .section-intro p {
+            font-size: 16px;
+            color: var(--speeki-gray);
+            line-height: 1.6;
+        }
+
+        .related-standards {
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid var(--speeki-border);
+        }
+
+        .related-standards span {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--speeki-gray);
+            font-weight: 600;
+        }
+
+        .related-standards a {
+            display: inline-block;
+            margin-left: 12px;
+            color: var(--speeki-dark-blue);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .related-standards a:hover {
+            color: var(--speeki-green-text);
+        }
+
         .checklist-item {
             margin-bottom: 60px;
             padding-bottom: 0;
@@ -268,7 +319,7 @@
         }
 
         .item-number.completed::after {
-            content: '✓';
+            content: '\2713';
             position: absolute;
             font-size: 24px;
             color: var(--speeki-dark);
@@ -340,6 +391,85 @@
 
         .sub-item input[type="checkbox"]:checked + label {
             color: var(--speeki-dark);
+            font-weight: 500;
+        }
+
+        .red-flags-section {
+            margin-top: 80px;
+            padding: 48px;
+            background: var(--speeki-warning-bg);
+            border-radius: 8px;
+            border-left: 4px solid var(--speeki-warning);
+        }
+
+        .red-flags-section h3 {
+            font-size: 24px;
+            color: var(--speeki-dark);
+            margin-bottom: 24px;
+            font-weight: 700;
+        }
+
+        .red-flags-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 16px;
+        }
+
+        .red-flag-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 16px;
+            background: #ffffff;
+            border-radius: 6px;
+            border: 1px solid rgba(220, 38, 38, 0.2);
+        }
+
+        .red-flag-icon {
+            color: var(--speeki-warning);
+            font-weight: 700;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .red-flag-item p {
+            font-size: 14px;
+            color: var(--speeki-gray);
+            line-height: 1.5;
+        }
+
+        .self-assessment-section {
+            margin-top: 80px;
+            padding: 48px;
+            background: var(--speeki-success);
+            border-radius: 8px;
+            border-left: 4px solid var(--speeki-green);
+        }
+
+        .self-assessment-section h3 {
+            font-size: 24px;
+            color: var(--speeki-dark);
+            margin-bottom: 24px;
+            font-weight: 700;
+        }
+
+        .assessment-questions {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .assessment-question {
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 6px;
+            border: 1px solid var(--speeki-border);
+        }
+
+        .assessment-question p {
+            font-size: 16px;
+            color: var(--speeki-dark);
+            line-height: 1.6;
             font-weight: 500;
         }
 
@@ -524,7 +654,6 @@
         .footer-links a:hover {
             color: var(--speeki-dark);
         }
-
         .auditor-insight {
             background: #f8f9fa;
             border-left: 4px solid var(--speeki-green);
@@ -822,21 +951,48 @@
             footer {
                 padding: 40px 6vw;
             }
+
+            .red-flags-section,
+            .self-assessment-section {
+                padding: 32px 24px;
+            }
+
+            .red-flags-list {
+                grid-template-columns: 1fr;
+            }
+
+            .section-intro {
+                padding: 20px;
+            }
+
+            .related-standards {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .related-standards a {
+                margin-left: 0;
+            }
         }
-    </style>
+            /* Skip Navigation Link */
+        .skip-link { position: absolute; top: -40px; left: 0; background: #0a1f44; color: #fff; padding: 8px 16px; z-index: 10000; font-size: 14px; }
+        .skip-link:focus { top: 0; }
+        </style>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <nav>
         <div class="nav-content">
             <a href="index.html" class="nav-logo"><img src="speeki-logo.png" alt="Speeki - The Sustainability Firm"></a>
-            <a href="index.html" class="nav-back">← Back to Resources</a>
+            <a href="index.html" class="nav-back">Back to Resources</a>
         </div>
     </nav>
 
     <div class="container">
         <header>
-            <h1>ISO 37002 <span class="header-highlight">Whistleblowing</span> Management Systems Checklist</h1>
-            <p>12 areas auditors evaluate when assessing whistleblowing management system effectiveness and ISO 37002 compliance. This checklist reflects the areas independent auditors evaluate when providing assurance over your whistleblowing system.</p>
+            <h1>ISO 37008 <span class="header-highlight">Internal Investigations</span> Management Checklist</h1>
+            <p>ISO 37008 provides guidance on establishing and managing internal investigation processes within organisations. Effective investigations are critical for addressing misconduct, protecting organisational integrity, and ensuring compliance with legal and regulatory requirements.</p>
             <div class="progress-section">
                 <div class="progress-info">
                     <h3>Progress</h3>
@@ -844,50 +1000,60 @@
                         <div class="progress-fill" id="progressFill"></div>
                     </div>
                 </div>
-                <div class="progress-text" id="progressText">0/12</div>
+                <div class="progress-text" id="progressText">0/10</div>
             </div>
         </header>
 
-        <main>
+        <main id="main-content">
+            <div class="section-intro">
+                <h2>About This Checklist</h2>
+                <p>This checklist covers the key elements of ISO 37008 for managing internal investigations. It addresses investigation planning, evidence handling, interviewing techniques, documentation, and legal considerations to help organisations conduct thorough, fair, and legally defensible investigations.</p>
+                <div class="related-standards">
+                    <span>Related Standards:</span>
+                    <a href="iso-37002-whistleblowing-checklist.html">ISO 37002 Whistleblowing (investigations often follow whistleblower reports)</a>
+                    <a href="iso-37001-checklist.html">ISO 37001 Anti-Bribery (bribery allegations require investigation)</a>
+                </div>
+            </div>
+
             <form id="checklistForm">
                 <div class="checklist-item">
                     <div class="item-header">
                         <div class="item-number" data-item="1">1</div>
                         <div class="item-title">
-                            <h2>Assess the current state of your whistleblowing management system</h2>
+                            <h2>Establish the investigations management framework</h2>
                         </div>
                     </div>
                     <div class="sub-items">
                         <div class="sub-item">
                             <input type="checkbox" id="item1_1" class="checklist-checkbox">
-                            <label for="item1_1">Determine the number of reports being made</label>
+                            <label for="item1_1">Define the scope and objectives of the investigations function</label>
                         </div>
                         <div class="sub-item">
                             <input type="checkbox" id="item1_2" class="checklist-checkbox">
-                            <label for="item1_2">Identify the types of issues being reported</label>
+                            <label for="item1_2">Establish governance structures with clear reporting lines</label>
                         </div>
                         <div class="sub-item">
                             <input type="checkbox" id="item1_3" class="checklist-checkbox">
-                            <label for="item1_3">Analyse possible reasons for a lack of reports</label>
+                            <label for="item1_3">Obtain leadership commitment and adequate resourcing</label>
                         </div>
                         <div class="sub-item">
                             <input type="checkbox" id="item1_4" class="checklist-checkbox">
-                            <label for="item1_4">Assess whether the organisation acted on reports</label>
+                            <label for="item1_4">Document investigations policies and procedures</label>
                         </div>
                         <div class="sub-item">
                             <input type="checkbox" id="item1_5" class="checklist-checkbox">
-                            <label for="item1_5">Identify any failures in responding to good-faith reports</label>
+                            <label for="item1_5">Ensure independence of the investigations function from operational management</label>
                         </div>
                     </div>
                     <div class="auditor-tip">
                         <div class="auditor-tip-header">What Auditors Look For</div>
                         <div class="auditor-tip-content">
-                            <p>Auditors evaluate whether organisations have conducted a genuine baseline assessment of their whistleblowing system. They look for documented evidence of current reporting volumes, trend analysis over time, and honest evaluation of system gaps.</p>
+                            <p>Auditors assess whether the investigations function has genuine independence from business operations. They examine board-level oversight, dedicated budget allocation, and whether the function can investigate senior management without interference.</p>
                             <div class="red-flag">
-                                <span class="red-flag-text">Red flag: No historical data on report volumes or types, or inability to explain why report numbers are unusually low compared to industry benchmarks.</span>
+                                <span class="red-flag-text">Investigations function reports solely to operational management with no audit committee oversight or independent escalation path.</span>
                             </div>
                             <div class="why-matters">
-                                <span class="why-matters-text">Why this matters: A thorough current-state assessment demonstrates management commitment and provides the foundation for measuring improvement. Auditors view this as essential evidence that the system is genuinely managed, not just implemented.</span>
+                                <span class="why-matters-text">Independence ensures investigations can pursue misconduct at any level without pressure to suppress findings or limit scope.</span>
                             </div>
                         </div>
                     </div>
@@ -897,40 +1063,40 @@
                     <div class="item-header">
                         <div class="item-number" data-item="2">2</div>
                         <div class="item-title">
-                            <h2>Define the context and scope of your whistleblowing management system</h2>
+                            <h2>Define investigation triggers and thresholds</h2>
                         </div>
                     </div>
                     <div class="sub-items">
                         <div class="sub-item">
                             <input type="checkbox" id="item2_1" class="checklist-checkbox">
-                            <label for="item2_1">Consider organisational size and structure</label>
+                            <label for="item2_1">Establish criteria for when a formal investigation is required</label>
                         </div>
                         <div class="sub-item">
                             <input type="checkbox" id="item2_2" class="checklist-checkbox">
-                            <label for="item2_2">Account for all operational locations</label>
+                            <label for="item2_2">Define escalation procedures based on allegation severity</label>
                         </div>
                         <div class="sub-item">
                             <input type="checkbox" id="item2_3" class="checklist-checkbox">
-                            <label for="item2_3">Ensure reporting tools are available in multiple languages</label>
+                            <label for="item2_3">Create a triage process for incoming reports and allegations</label>
                         </div>
                         <div class="sub-item">
                             <input type="checkbox" id="item2_4" class="checklist-checkbox">
-                            <label for="item2_4">Address accessibility issues for all workforce members</label>
+                            <label for="item2_4">Identify types of misconduct that require external involvement</label>
                         </div>
                         <div class="sub-item">
                             <input type="checkbox" id="item2_5" class="checklist-checkbox">
-                            <label for="item2_5">Align with business model and risk profile</label>
+                            <label for="item2_5">Document decision-making rationale for all investigation initiations</label>
                         </div>
                     </div>
                     <div class="auditor-tip">
                         <div class="auditor-tip-header">What Auditors Look For</div>
                         <div class="auditor-tip-content">
-                            <p>Auditors assess whether the whistleblowing system scope genuinely covers all relevant stakeholders, locations, and languages. They verify that accessibility has been tested across different user groups, including remote workers, contractors, and non-native speakers.</p>
+                            <p>Auditors verify that triage decisions are documented consistently. They look for clear criteria defining when allegations warrant formal investigation versus informal resolution, and evidence that similar matters receive similar treatment.</p>
                             <div class="red-flag">
-                                <span class="red-flag-text">Red flag: Reporting channels only available in one language despite multinational operations, or no consideration of how factory workers or field staff can submit reports.</span>
+                                <span class="red-flag-text">No documented rationale for declining to investigate allegations, or pattern of closing cases involving senior personnel without investigation.</span>
                             </div>
                             <div class="why-matters">
-                                <span class="why-matters-text">Why this matters: A system that excludes portions of the workforce cannot be effective. Auditors view scope gaps as fundamental design flaws that undermine the entire whistleblowing programme.</span>
+                                <span class="why-matters-text">Consistent triage criteria prevent accusations of selective enforcement and demonstrate the organisation takes all allegations seriously regardless of the subject's position.</span>
                             </div>
                         </div>
                     </div>
@@ -940,40 +1106,44 @@
                     <div class="item-header">
                         <div class="item-number" data-item="3">3</div>
                         <div class="item-title">
-                            <h2>Get leadership commitment</h2>
+                            <h2>Plan the investigation approach</h2>
                         </div>
                     </div>
                     <div class="sub-items">
                         <div class="sub-item">
                             <input type="checkbox" id="item3_1" class="checklist-checkbox">
-                            <label for="item3_1">Obtain approval for whistleblowing policy from top management</label>
+                            <label for="item3_1">Assign qualified investigators with appropriate expertise</label>
                         </div>
                         <div class="sub-item">
                             <input type="checkbox" id="item3_2" class="checklist-checkbox">
-                            <label for="item3_2">Promote a speak-up culture to encourage reporting</label>
+                            <label for="item3_2">Assess and manage conflicts of interest</label>
                         </div>
                         <div class="sub-item">
                             <input type="checkbox" id="item3_3" class="checklist-checkbox">
-                            <label for="item3_3">Promise and enforce non-retaliation policies</label>
+                            <label for="item3_3">Develop an investigation plan with clear objectives and scope</label>
                         </div>
                         <div class="sub-item">
                             <input type="checkbox" id="item3_4" class="checklist-checkbox">
-                            <label for="item3_4">Promote confidentiality and anonymity in reporting</label>
+                            <label for="item3_4">Identify potential evidence sources and witnesses</label>
                         </div>
                         <div class="sub-item">
                             <input type="checkbox" id="item3_5" class="checklist-checkbox">
-                            <label for="item3_5">Align system with organisational values and objectives</label>
+                            <label for="item3_5">Establish timelines and resource requirements</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item3_6" class="checklist-checkbox">
+                            <label for="item3_6">Consider jurisdictional and cross-border implications</label>
                         </div>
                     </div>
                     <div class="auditor-tip">
                         <div class="auditor-tip-header">What Auditors Look For</div>
                         <div class="auditor-tip-content">
-                            <p>Auditors seek evidence of visible leadership commitment beyond policy signatures. They look for board minutes discussing whistleblowing, executive communications promoting speak-up culture, and documented instances where leadership acted on reports without retaliation.</p>
+                            <p>Auditors examine investigation plans for scope clarity, investigator qualifications, and conflict-of-interest assessments. They verify that plans identify all potential evidence sources and establish realistic timelines with appropriate resource allocation.</p>
                             <div class="red-flag">
-                                <span class="red-flag-text">Red flag: Leadership approval exists only on paper, with no evidence of active promotion or discussion at board level. Any documented retaliation incidents that went unaddressed.</span>
+                                <span class="red-flag-text">Investigator assigned has direct reporting relationship to investigation subject, or no documented conflict assessment before assignment.</span>
                             </div>
                             <div class="why-matters">
-                                <span class="why-matters-text">Why this matters: Without genuine leadership commitment, whistleblowing systems fail to generate trust. Auditors recognize that tone-at-the-top directly influences whether employees feel safe reporting concerns.</span>
+                                <span class="why-matters-text">Proper planning ensures investigations are thorough, fair, and legally defensible while avoiding scope creep or premature conclusions.</span>
                             </div>
                         </div>
                     </div>
@@ -983,40 +1153,44 @@
                     <div class="item-header">
                         <div class="item-number" data-item="4">4</div>
                         <div class="item-title">
-                            <h2>Set up a whistleblowing policy</h2>
+                            <h2>Secure and preserve evidence</h2>
                         </div>
                     </div>
                     <div class="sub-items">
                         <div class="sub-item">
                             <input type="checkbox" id="item4_1" class="checklist-checkbox">
-                            <label for="item4_1">Define the scope of the reporting programme</label>
+                            <label for="item4_1">Implement immediate evidence preservation measures</label>
                         </div>
                         <div class="sub-item">
                             <input type="checkbox" id="item4_2" class="checklist-checkbox">
-                            <label for="item4_2">Prohibit negative or detrimental conduct</label>
+                            <label for="item4_2">Issue legal hold notices where appropriate</label>
                         </div>
                         <div class="sub-item">
                             <input type="checkbox" id="item4_3" class="checklist-checkbox">
-                            <label for="item4_3">Ensure trust, impartiality and protection during investigations</label>
+                            <label for="item4_3">Maintain chain of custody documentation for all evidence</label>
                         </div>
                         <div class="sub-item">
                             <input type="checkbox" id="item4_4" class="checklist-checkbox">
-                            <label for="item4_4">Outline how investigations work and set expectations</label>
+                            <label for="item4_4">Secure electronic data and prevent spoliation</label>
                         </div>
                         <div class="sub-item">
                             <input type="checkbox" id="item4_5" class="checklist-checkbox">
-                            <label for="item4_5">Explain how to access reporting channels</label>
+                            <label for="item4_5">Document physical evidence collection and storage</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item4_6" class="checklist-checkbox">
+                            <label for="item4_6">Ensure evidence handling complies with data protection requirements</label>
                         </div>
                     </div>
                     <div class="auditor-tip">
                         <div class="auditor-tip-header">What Auditors Look For</div>
                         <div class="auditor-tip-content">
-                            <p>Auditors examine whether the whistleblowing policy is comprehensive, clearly written, and accessible. They verify that it defines reportable concerns, explains the reporting process, and explicitly commits to non-retaliation with specific consequences for violations.</p>
+                            <p>Auditors scrutinise chain of custody documentation, legal hold processes, and evidence storage security. They verify that digital evidence was forensically preserved and that physical evidence handling follows documented protocols.</p>
                             <div class="red-flag">
-                                <span class="red-flag-text">Red flag: Policy uses vague language, lacks clear definitions of wrongdoing, or buries reporting instructions in lengthy legal text. No explicit anti-retaliation commitment with enforcement mechanisms.</span>
+                                <span class="red-flag-text">Evidence collected without chain of custody documentation, or digital data accessed without forensic imaging that could alter metadata.</span>
                             </div>
                             <div class="why-matters">
-                                <span class="why-matters-text">Why this matters: The policy is the foundation of the entire whistleblowing programme. If employees cannot easily understand how to report or what protections they have, the system cannot function effectively.</span>
+                                <span class="why-matters-text">Proper evidence preservation ensures findings are admissible in legal proceedings and cannot be challenged on procedural grounds.</span>
                             </div>
                         </div>
                     </div>
@@ -1026,40 +1200,44 @@
                     <div class="item-header">
                         <div class="item-number" data-item="5">5</div>
                         <div class="item-title">
-                            <h2>Define roles, responsibilities and authority</h2>
+                            <h2>Conduct interviews and gather information</h2>
                         </div>
                     </div>
                     <div class="sub-items">
                         <div class="sub-item">
                             <input type="checkbox" id="item5_1" class="checklist-checkbox">
-                            <label for="item5_1">Hire individuals with reporting and compliance expertise</label>
+                            <label for="item5_1">Prepare interview plans with key questions and objectives</label>
                         </div>
                         <div class="sub-item">
                             <input type="checkbox" id="item5_2" class="checklist-checkbox">
-                            <label for="item5_2">Empower team to receive, assess, address and review reports</label>
+                            <label for="item5_2">Inform interviewees of their rights and the interview purpose</label>
                         </div>
                         <div class="sub-item">
                             <input type="checkbox" id="item5_3" class="checklist-checkbox">
-                            <label for="item5_3">Provide appropriate training for the whistleblowing team</label>
+                            <label for="item5_3">Conduct interviews in appropriate settings with proper documentation</label>
                         </div>
                         <div class="sub-item">
                             <input type="checkbox" id="item5_4" class="checklist-checkbox">
-                            <label for="item5_4">Invest in technology applications for reporting</label>
+                            <label for="item5_4">Allow legal representation where required or appropriate</label>
                         </div>
                         <div class="sub-item">
                             <input type="checkbox" id="item5_5" class="checklist-checkbox">
-                            <label for="item5_5">Underscore the importance of individual voices to create change</label>
+                            <label for="item5_5">Record or document interviews accurately and contemporaneously</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item5_6" class="checklist-checkbox">
+                            <label for="item5_6">Protect witness confidentiality and prevent retaliation</label>
                         </div>
                     </div>
                     <div class="auditor-tip">
                         <div class="auditor-tip-header">What Auditors Look For</div>
                         <div class="auditor-tip-content">
-                            <p>Auditors verify that specific individuals are assigned responsibility for the whistleblowing function with appropriate independence, authority, and resources. They assess whether investigators have relevant qualifications and sufficient training on handling sensitive matters.</p>
+                            <p>Auditors review interview documentation for procedural fairness, including whether interviewees were informed of their rights, offered legal representation where appropriate, and given opportunity to review and correct their statements.</p>
                             <div class="red-flag">
-                                <span class="red-flag-text">Red flag: Whistleblowing function assigned as additional duty with no dedicated time allocation, or investigators have conflicts of interest with business units they investigate.</span>
+                                <span class="red-flag-text">Interview records lack signatures or acknowledgments, or show leading questions that could suggest coercion or bias.</span>
                             </div>
                             <div class="why-matters">
-                                <span class="why-matters-text">Why this matters: Clear accountability ensures reports are handled properly. Auditors view inadequate resourcing or conflicted roles as indicators that the organisation is not treating whistleblowing seriously.</span>
+                                <span class="why-matters-text">Fair interview processes protect both witness rights and the integrity of evidence, reducing risk of successful legal challenges to findings.</span>
                             </div>
                         </div>
                     </div>
@@ -1069,40 +1247,40 @@
                     <div class="item-header">
                         <div class="item-number" data-item="6">6</div>
                         <div class="item-title">
-                            <h2>Create a plan for the management system</h2>
+                            <h2>Analyse findings and draw conclusions</h2>
                         </div>
                     </div>
                     <div class="sub-items">
                         <div class="sub-item">
                             <input type="checkbox" id="item6_1" class="checklist-checkbox">
-                            <label for="item6_1">Set goals for encouraging reporting and supporting whistleblowers</label>
+                            <label for="item6_1">Review and organise all collected evidence systematically</label>
                         </div>
                         <div class="sub-item">
                             <input type="checkbox" id="item6_2" class="checklist-checkbox">
-                            <label for="item6_2">Establish objectives for dealing with reports in a timely manner</label>
+                            <label for="item6_2">Assess credibility and reliability of evidence and witnesses</label>
                         </div>
                         <div class="sub-item">
                             <input type="checkbox" id="item6_3" class="checklist-checkbox">
-                            <label for="item6_3">Distribute whistleblowing policy to all employees</label>
+                            <label for="item6_3">Apply appropriate standards of proof (balance of probabilities)</label>
                         </div>
                         <div class="sub-item">
                             <input type="checkbox" id="item6_4" class="checklist-checkbox">
-                            <label for="item6_4">Provide training on the whistleblowing policy</label>
+                            <label for="item6_4">Identify corroborating and contradicting evidence</label>
                         </div>
                         <div class="sub-item">
                             <input type="checkbox" id="item6_5" class="checklist-checkbox">
-                            <label for="item6_5">Implement technological tools to support reporting channels</label>
+                            <label for="item6_5">Form conclusions based on facts, not assumptions</label>
                         </div>
                     </div>
                     <div class="auditor-tip">
                         <div class="auditor-tip-header">What Auditors Look For</div>
                         <div class="auditor-tip-content">
-                            <p>Auditors review whether the organisation has documented objectives for the whistleblowing system with measurable targets. They assess implementation plans, timeline adherence, and evidence that resources were allocated as planned.</p>
+                            <p>Auditors evaluate whether conclusions logically follow from documented evidence. They examine credibility assessments, the standard of proof applied, and whether alternative explanations were properly considered and ruled out.</p>
                             <div class="red-flag">
-                                <span class="red-flag-text">Red flag: No documented implementation plan, objectives stated only in general terms without metrics, or significant gaps between planned and actual rollout.</span>
+                                <span class="red-flag-text">Conclusions drawn without documented analysis of contradicting evidence, or findings that rely on single-source testimony without corroboration.</span>
                             </div>
                             <div class="why-matters">
-                                <span class="why-matters-text">Why this matters: A clear plan demonstrates intentional system design rather than ad-hoc implementation. Auditors use planning documentation to assess management commitment and capability.</span>
+                                <span class="why-matters-text">Rigorous analysis ensures findings withstand scrutiny and provides defensible basis for disciplinary or legal action.</span>
                             </div>
                         </div>
                     </div>
@@ -1112,40 +1290,44 @@
                     <div class="item-header">
                         <div class="item-number" data-item="7">7</div>
                         <div class="item-title">
-                            <h2>Generate awareness and provide training</h2>
+                            <h2>Document and report investigation outcomes</h2>
                         </div>
                     </div>
                     <div class="sub-items">
                         <div class="sub-item">
                             <input type="checkbox" id="item7_1" class="checklist-checkbox">
-                            <label for="item7_1">Train personnel on how to report concerns</label>
+                            <label for="item7_1">Prepare a comprehensive investigation report</label>
                         </div>
                         <div class="sub-item">
                             <input type="checkbox" id="item7_2" class="checklist-checkbox">
-                            <label for="item7_2">Educate on identifying potential wrongdoing or detrimental conduct</label>
+                            <label for="item7_2">Include executive summary, methodology, findings, and recommendations</label>
                         </div>
                         <div class="sub-item">
                             <input type="checkbox" id="item7_3" class="checklist-checkbox">
-                            <label for="item7_3">Clarify who employees can voice concerns to</label>
+                            <label for="item7_3">Ensure report is clear, objective, and supported by evidence</label>
                         </div>
                         <div class="sub-item">
                             <input type="checkbox" id="item7_4" class="checklist-checkbox">
-                            <label for="item7_4">Provide access to guidance documents and code of conduct</label>
+                            <label for="item7_4">Maintain confidentiality in report distribution</label>
                         </div>
                         <div class="sub-item">
                             <input type="checkbox" id="item7_5" class="checklist-checkbox">
-                            <label for="item7_5">Train management on review processes and confidentiality</label>
+                            <label for="item7_5">Report to appropriate stakeholders (board, audit committee, legal)</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item7_6" class="checklist-checkbox">
+                            <label for="item7_6">Consider regulatory reporting obligations</label>
                         </div>
                     </div>
                     <div class="auditor-tip">
                         <div class="auditor-tip-header">What Auditors Look For</div>
                         <div class="auditor-tip-content">
-                            <p>Auditors examine training records to verify all employees received whistleblowing awareness training, with enhanced training for managers and investigators. They assess whether training covers practical scenarios and is refreshed periodically.</p>
+                            <p>Auditors assess report quality for clarity, objectivity, and evidentiary support. They verify that distribution was appropriately restricted and that the report clearly distinguishes between facts, analysis, and recommendations.</p>
                             <div class="red-flag">
-                                <span class="red-flag-text">Red flag: Training completion rates below 90%, no evidence of manager-specific training on handling disclosures, or training content not updated for three or more years.</span>
+                                <span class="red-flag-text">Investigation reports that omit methodology description, fail to address scope limitations, or do not clearly link findings to supporting evidence.</span>
                             </div>
                             <div class="why-matters">
-                                <span class="why-matters-text">Why this matters: Awareness is prerequisite to reporting. Auditors recognize that even well-designed systems fail if employees do not know how to use them or managers mishandle initial disclosures.</span>
+                                <span class="why-matters-text">Well-structured reports enable informed decision-making by leadership and demonstrate thorough, professional investigation conduct.</span>
                             </div>
                         </div>
                     </div>
@@ -1155,36 +1337,44 @@
                     <div class="item-header">
                         <div class="item-number" data-item="8">8</div>
                         <div class="item-title">
-                            <h2>Create a documentation plan</h2>
+                            <h2>Address legal and compliance considerations</h2>
                         </div>
                     </div>
                     <div class="sub-items">
                         <div class="sub-item">
                             <input type="checkbox" id="item8_1" class="checklist-checkbox">
-                            <label for="item8_1">Maintain documentation according to data retention policies</label>
+                            <label for="item8_1">Ensure investigations comply with employment law requirements</label>
                         </div>
                         <div class="sub-item">
                             <input type="checkbox" id="item8_2" class="checklist-checkbox">
-                            <label for="item8_2">Ensure only appropriate personnel can access investigation documents</label>
+                            <label for="item8_2">Protect legal privilege where applicable</label>
                         </div>
                         <div class="sub-item">
                             <input type="checkbox" id="item8_3" class="checklist-checkbox">
-                            <label for="item8_3">Manage data in accordance with relevant data protection laws</label>
+                            <label for="item8_3">Comply with data protection and privacy laws</label>
                         </div>
                         <div class="sub-item">
                             <input type="checkbox" id="item8_4" class="checklist-checkbox">
-                            <label for="item8_4">Protect personally identifiable information in reports</label>
+                            <label for="item8_4">Consider self-reporting obligations to regulators</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item8_5" class="checklist-checkbox">
+                            <label for="item8_5">Coordinate with law enforcement when required</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item8_6" class="checklist-checkbox">
+                            <label for="item8_6">Document legal advice received during the investigation</label>
                         </div>
                     </div>
                     <div class="auditor-tip">
                         <div class="auditor-tip-header">What Auditors Look For</div>
                         <div class="auditor-tip-content">
-                            <p>Auditors assess whether case documentation is complete, secure, and retained according to policy. They verify access controls exist, audit trails are maintained, and retention periods comply with legal requirements across all operating jurisdictions.</p>
+                            <p>Auditors verify compliance with employment law, data protection regulations, and privilege protocols. They examine whether legal counsel was appropriately engaged and whether self-reporting obligations were identified and addressed.</p>
                             <div class="red-flag">
-                                <span class="red-flag-text">Red flag: Investigation files stored in shared drives without access restrictions, no documented retention policy, or evidence of premature deletion of case records.</span>
+                                <span class="red-flag-text">Cross-border data transfers during investigation without legal review, or failure to identify mandatory regulatory reporting triggers.</span>
                             </div>
                             <div class="why-matters">
-                                <span class="why-matters-text">Why this matters: Proper documentation provides evidence of due process and enables trend analysis. Auditors view documentation failures as both a compliance risk and indicator of system immaturity.</span>
+                                <span class="why-matters-text">Legal compliance protects the organisation from liability exposure and ensures investigation outcomes can be acted upon without procedural challenges.</span>
                             </div>
                         </div>
                     </div>
@@ -1194,40 +1384,44 @@
                     <div class="item-header">
                         <div class="item-number" data-item="9">9</div>
                         <div class="item-title">
-                            <h2>Set rules around confidentiality</h2>
+                            <h2>Close investigations and implement remediation</h2>
                         </div>
                     </div>
                     <div class="sub-items">
                         <div class="sub-item">
                             <input type="checkbox" id="item9_1" class="checklist-checkbox">
-                            <label for="item9_1">Preserve confidentiality of reporters and involved subjects</label>
+                            <label for="item9_1">Ensure all investigation steps are complete before closure</label>
                         </div>
                         <div class="sub-item">
                             <input type="checkbox" id="item9_2" class="checklist-checkbox">
-                            <label for="item9_2">Manage investigatory processes to retain confidentiality</label>
+                            <label for="item9_2">Implement disciplinary actions fairly and consistently</label>
                         </div>
                         <div class="sub-item">
                             <input type="checkbox" id="item9_3" class="checklist-checkbox">
-                            <label for="item9_3">Establish rules around anonymity for reporters</label>
+                            <label for="item9_3">Address systemic issues identified during the investigation</label>
                         </div>
                         <div class="sub-item">
                             <input type="checkbox" id="item9_4" class="checklist-checkbox">
-                            <label for="item9_4">Communicate effects of confidentiality on investigatory effectiveness</label>
+                            <label for="item9_4">Communicate outcomes appropriately to relevant parties</label>
                         </div>
                         <div class="sub-item">
                             <input type="checkbox" id="item9_5" class="checklist-checkbox">
-                            <label for="item9_5">Address impact on communication when reports are anonymous</label>
+                            <label for="item9_5">Provide feedback to the original reporter where appropriate</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item9_6" class="checklist-checkbox">
+                            <label for="item9_6">Archive investigation records in accordance with retention policies</label>
                         </div>
                     </div>
                     <div class="auditor-tip">
                         <div class="auditor-tip-header">What Auditors Look For</div>
                         <div class="auditor-tip-content">
-                            <p>Auditors verify that confidentiality controls are technically implemented, not just promised. They examine whether systems prevent identity disclosure, how need-to-know access is determined, and whether anonymity options genuinely protect reporter identity.</p>
+                            <p>Auditors examine closure procedures for completeness, including whether all investigation steps were finished, disciplinary actions were proportionate and consistent, and systemic issues identified during investigation were addressed through remediation.</p>
                             <div class="red-flag">
-                                <span class="red-flag-text">Red flag: System logs IP addresses or metadata that could identify anonymous reporters, confidentiality relies solely on policy rather than technical controls, or broad access to case details.</span>
+                                <span class="red-flag-text">Pattern of investigations closing without documented outcomes, or disciplinary actions inconsistent with severity of substantiated findings.</span>
                             </div>
                             <div class="why-matters">
-                                <span class="why-matters-text">Why this matters: Confidentiality breaches destroy trust and can expose reporters to retaliation. Auditors consider confidentiality protection as fundamental to whistleblowing system integrity.</span>
+                                <span class="why-matters-text">Proper closure demonstrates investigations achieve their purpose of addressing misconduct and strengthening controls, not merely documenting problems.</span>
                             </div>
                         </div>
                     </div>
@@ -1237,95 +1431,111 @@
                     <div class="item-header">
                         <div class="item-number" data-item="10">10</div>
                         <div class="item-title">
-                            <h2>Set up and manage reporting channels</h2>
+                            <h2>Monitor, review and improve the investigations system</h2>
                         </div>
                     </div>
                     <div class="sub-items">
                         <div class="sub-item">
                             <input type="checkbox" id="item10_1" class="checklist-checkbox">
-                            <label for="item10_1">Ensure multiple reporting channels are available</label>
+                            <label for="item10_1">Track key performance indicators (case volumes, resolution times)</label>
                         </div>
                         <div class="sub-item">
                             <input type="checkbox" id="item10_2" class="checklist-checkbox">
-                            <label for="item10_2">Provide notification and feedback to reporters about next steps</label>
+                            <label for="item10_2">Conduct periodic reviews of investigation quality</label>
                         </div>
                         <div class="sub-item">
                             <input type="checkbox" id="item10_3" class="checklist-checkbox">
-                            <label for="item10_3">Assess risk of detriment to the whistleblower</label>
+                            <label for="item10_3">Identify trends and root causes across investigations</label>
                         </div>
                         <div class="sub-item">
                             <input type="checkbox" id="item10_4" class="checklist-checkbox">
-                            <label for="item10_4">Follow due process and ensure adequate resourcing</label>
+                            <label for="item10_4">Provide regular training and development for investigators</label>
                         </div>
                         <div class="sub-item">
                             <input type="checkbox" id="item10_5" class="checklist-checkbox">
-                            <label for="item10_5">Document everything and maintain an audit trail</label>
+                            <label for="item10_5">Update procedures based on lessons learned and best practices</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item10_6" class="checklist-checkbox">
+                            <label for="item10_6">Report on investigations programme effectiveness to the board</label>
                         </div>
                     </div>
-                </div>
-
-                <div class="checklist-item">
-                    <div class="item-header">
-                        <div class="item-number" data-item="11">11</div>
-                        <div class="item-title">
-                            <h2>Monitor, measure and evaluate the whistleblowing management system</h2>
-                        </div>
-                    </div>
-                    <div class="sub-items">
-                        <div class="sub-item">
-                            <input type="checkbox" id="item11_1" class="checklist-checkbox">
-                            <label for="item11_1">Maintain indicators for evaluation (number of reports, response times)</label>
-                        </div>
-                        <div class="sub-item">
-                            <input type="checkbox" id="item11_2" class="checklist-checkbox">
-                            <label for="item11_2">Track types of issues raised through the system</label>
-                        </div>
-                        <div class="sub-item">
-                            <input type="checkbox" id="item11_3" class="checklist-checkbox">
-                            <label for="item11_3">Survey employees regarding awareness of reporting system</label>
-                        </div>
-                        <div class="sub-item">
-                            <input type="checkbox" id="item11_4" class="checklist-checkbox">
-                            <label for="item11_4">Annually audit the reporting and whistleblowing system</label>
-                        </div>
-                        <div class="sub-item">
-                            <input type="checkbox" id="item11_5" class="checklist-checkbox">
-                            <label for="item11_5">Have management regularly review system effectiveness and resources</label>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="checklist-item">
-                    <div class="item-header">
-                        <div class="item-number" data-item="12">12</div>
-                        <div class="item-title">
-                            <h2>Seek continual improvement</h2>
-                        </div>
-                    </div>
-                    <div class="sub-items">
-                        <div class="sub-item">
-                            <input type="checkbox" id="item12_1" class="checklist-checkbox">
-                            <label for="item12_1">Resolve non-conformities identified through audits and reviews</label>
-                        </div>
-                        <div class="sub-item">
-                            <input type="checkbox" id="item12_2" class="checklist-checkbox">
-                            <label for="item12_2">Increase access to reporting channels based on feedback</label>
-                        </div>
-                        <div class="sub-item">
-                            <input type="checkbox" id="item12_3" class="checklist-checkbox">
-                            <label for="item12_3">Enhance awareness of reporting tools organisation-wide</label>
-                        </div>
-                        <div class="sub-item">
-                            <input type="checkbox" id="item12_4" class="checklist-checkbox">
-                            <label for="item12_4">Improve response times for resolving issues</label>
-                        </div>
-                        <div class="sub-item">
-                            <input type="checkbox" id="item12_5" class="checklist-checkbox">
-                            <label for="item12_5">Use insights to improve overall business operations</label>
+                    <div class="auditor-tip">
+                        <div class="auditor-tip-header">What Auditors Look For</div>
+                        <div class="auditor-tip-content">
+                            <p>Auditors assess whether the organisation tracks meaningful KPIs, conducts quality reviews of closed investigations, and uses trend analysis to identify systemic issues. They verify that lessons learned feed back into policy and procedure updates.</p>
+                            <div class="red-flag">
+                                <span class="red-flag-text">No metrics tracked beyond basic case counts, or recurring investigation themes without corresponding control improvements.</span>
+                            </div>
+                            <div class="why-matters">
+                                <span class="why-matters-text">Continuous improvement demonstrates mature governance and maximises the value of investigation findings for organisational learning.</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </form>
+
+            <div class="red-flags-section">
+                <h3>Red Flags in Internal Investigations</h3>
+                <div class="red-flags-list">
+                    <div class="red-flag-item">
+                        <span class="red-flag-icon">!</span>
+                        <p>Evidence disappearing or being altered after an investigation is announced</p>
+                    </div>
+                    <div class="red-flag-item">
+                        <span class="red-flag-icon">!</span>
+                        <p>Witnesses changing their accounts or refusing to cooperate</p>
+                    </div>
+                    <div class="red-flag-item">
+                        <span class="red-flag-icon">!</span>
+                        <p>Senior management attempting to influence investigation outcomes</p>
+                    </div>
+                    <div class="red-flag-item">
+                        <span class="red-flag-icon">!</span>
+                        <p>Retaliation against whistleblowers or witnesses during the investigation</p>
+                    </div>
+                    <div class="red-flag-item">
+                        <span class="red-flag-icon">!</span>
+                        <p>Conflicts of interest among assigned investigators</p>
+                    </div>
+                    <div class="red-flag-item">
+                        <span class="red-flag-icon">!</span>
+                        <p>Inadequate documentation or breaks in chain of custody</p>
+                    </div>
+                    <div class="red-flag-item">
+                        <span class="red-flag-icon">!</span>
+                        <p>Pressure to close investigations prematurely</p>
+                    </div>
+                    <div class="red-flag-item">
+                        <span class="red-flag-icon">!</span>
+                        <p>Pattern of similar allegations that are repeatedly unfounded</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="self-assessment-section">
+                <h3>Self-Assessment Questions</h3>
+                <div class="assessment-questions">
+                    <div class="assessment-question">
+                        <p>Does your organisation have a documented investigation policy that is regularly reviewed and updated?</p>
+                    </div>
+                    <div class="assessment-question">
+                        <p>Are investigators properly trained and do they have access to appropriate resources and expertise?</p>
+                    </div>
+                    <div class="assessment-question">
+                        <p>Is there a clear escalation path for serious allegations, including those involving senior management?</p>
+                    </div>
+                    <div class="assessment-question">
+                        <p>How do you ensure evidence is preserved and chain of custody is maintained?</p>
+                    </div>
+                    <div class="assessment-question">
+                        <p>Are investigation outcomes consistently followed through with appropriate remediation and disciplinary action?</p>
+                    </div>
+                    <div class="assessment-question">
+                        <p>Do you track and report on investigation metrics to identify trends and areas for improvement?</p>
+                    </div>
+                </div>
+            </div>
 
             <div class="summary-section">
                 <h3>Your Checklist Progress</h3>
@@ -1335,7 +1545,7 @@
                         <div class="stat-label">Steps Completed</div>
                     </div>
                     <div class="stat">
-                        <div class="stat-number" id="totalRemaining">12</div>
+                        <div class="stat-number" id="totalRemaining">10</div>
                         <div class="stat-label">Steps Remaining</div>
                     </div>
                     <div class="stat">
@@ -1350,60 +1560,50 @@
             </div>
         </main>
 
-        <!-- Red Flags Section -->
-        <div class="red-flags-section">
-            <div class="red-flags-section-header">What Auditors Look For: ISO 37002 Red Flags</div>
-            <div class="red-flags-content">
-                <p style="color: var(--speeki-gray); font-size: 15px; margin-bottom: 20px;">When providing assurance over whistleblowing management systems, auditors commonly flag the following areas as concerns. Understanding these red flags helps ensure your system meets verification standards.</p>
-
-                <div class="red-flag-category">
-                    <h5>System Design Red Flags</h5>
-                    <ul>
-                        <li>Reporting channels not accessible anonymously</li>
-                        <li>Investigation function reports to management being investigated</li>
-                        <li>No defined escalation matrix for sensitive reports</li>
-                        <li>Case management system without access controls or audit trail</li>
-                    </ul>
-                </div>
-
-                <div class="red-flag-category">
-                    <h5>Operational Red Flags</h5>
-                    <ul>
-                        <li>Reports closed without documented investigation rationale</li>
-                        <li>Average investigation time exceeding 90 days without explanation</li>
-                        <li>Lack of reporter feedback loop (even if anonymous)</li>
-                        <li>No evidence of root cause analysis for substantiated cases</li>
-                    </ul>
-                </div>
-
-                <div class="red-flag-category">
-                    <h5>Governance Red Flags</h5>
-                    <ul>
-                        <li>Board receives only summary statistics, not case themes</li>
-                        <li>No review of cases involving senior management by independent parties</li>
-                        <li>Retaliation allegations not tracked or reported separately</li>
-                        <li>No periodic testing of channel effectiveness (e.g., dummy reports)</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
         <div class="cta-section">
-            <h3>Preparing for Whistleblowing Programme Assurance?</h3>
-            <p>The Speeki Platform maintains the audit trail and documentation that independent reviewers require when evaluating whistleblowing system effectiveness. Meet the evidence standards that certification bodies and auditors evaluate.</p>
+            <h3>Ready for ISO 37008 Investigations Assurance?</h3>
+            <p>The Speeki Platform maintains the case management documentation and audit trail that auditors require when assessing investigation processes against ISO 37008 standards. Ensure your investigation procedures meet verification requirements.</p>
             <a href="https://www.speeki.com/platform" class="cta-button">Learn More About Speeki Platform</a>
         </div>
 
-        <footer>
+            <!-- Red Flags Section -->
+    <div class="red-flags-section">
+            <div class="red-flags-section-header">What Auditors Look For: ISO 37008 Investigations Red Flags</div>
+        <div class="red-flags-content">
+            <p style="color: var(--speeki-gray); font-size: 15px; margin-bottom: 20px;">When assessing investigation processes under ISO 37008, auditors commonly flag the following process and documentation concerns.</p>
+
+            <div class="red-flag-category">
+                <h5>Process Red Flags</h5>
+                <ul>
+                    <li>Investigation scope not documented at commencement</li>
+                    <li>No protocols for evidence preservation and chain of custody</li>
+                    <li>Investigator reports to subject of investigation</li>
+                </ul>
+            </div>
+
+            <div class="red-flag-category">
+                <h5>Documentation Red Flags</h5>
+                <ul>
+                    <li>Interview notes not contemporaneously recorded</li>
+                    <li>No documented criteria for case escalation or closure</li>
+                    <li>Root cause analysis not documented</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+<footer>
             <p style="font-size: 12px; color: #999999; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 1.5px;">© 2026 Speeki Pte Ltd</p>
-            <p><strong>ISO 37002 Whistleblowing Management Systems Checklist</strong></p>
-            <p style="margin-top: 12px;">A practical guide to building effective whistleblowing systems based on ISO 37002</p>
-            <p style="margin-top: 20px; font-size: 13px;">Author: Scott Lane, CEO & Founder of Speeki</p>
+            <p><strong>ISO 37008 Internal Investigations Management Checklist</strong></p>
+            <p style="margin-top: 12px;">A practical guide to managing effective internal investigations based on ISO 37008</p>
+            <p style="margin-top: 20px; font-size: 13px;">Author: Scott Lane, CEO and Founder of Speeki</p>
             <div class="footer-links">
                 <a href="https://www.speeki.com">Home</a>
                 <a href="https://www.speeki.com/platform">Platform</a>
                 <a href="index.html">All Resources</a>
-                <a href="iso-37001-checklist.html">ISO 37001 Checklist</a>
+                <a href="iso-37002-whistleblowing-checklist.html">ISO 37002 Whistleblowing Checklist</a>
+                <a href="iso-37001-checklist.html">ISO 37001 Anti-Bribery Checklist</a>
                 <a href="mailto:info@speeki.com">Contact</a>
             </div>
         </footer>
@@ -1417,10 +1617,10 @@
         const totalRemaining = document.getElementById('totalRemaining');
         const percentComplete = document.getElementById('percentComplete');
 
-        const TOTAL_MAIN_ITEMS = 12;
+        const TOTAL_MAIN_ITEMS = 10;
 
         function loadProgress() {
-            const saved = localStorage.getItem('iso37002Progress');
+            const saved = localStorage.getItem('iso37008InvestigationsProgress');
             if (saved) {
                 const checked = JSON.parse(saved);
                 checkboxes.forEach(checkbox => {
@@ -1480,13 +1680,13 @@
             const checked = Array.from(checkboxes)
                 .filter(cb => cb.checked)
                 .map(cb => cb.id);
-            localStorage.setItem('iso37002Progress', JSON.stringify(checked));
+            localStorage.setItem('iso37008InvestigationsProgress', JSON.stringify(checked));
         }
 
         function resetChecklist() {
             if (confirm('Are you sure you want to reset the entire checklist? This cannot be undone.')) {
                 checkboxes.forEach(checkbox => checkbox.checked = false);
-                localStorage.removeItem('iso37002Progress');
+                localStorage.removeItem('iso37008InvestigationsProgress');
                 updateProgress();
             }
         }
@@ -1495,7 +1695,7 @@
             const completedMainItems = countCompletedMainItems();
             const percentage = Math.round((completedMainItems / TOTAL_MAIN_ITEMS) * 100);
 
-            let exportText = 'ISO 37002 Whistleblowing Management Systems Checklist - Progress Report\n';
+            let exportText = 'ISO 37008 Internal Investigations Management Checklist - Progress Report\n';
             exportText += '='.repeat(70) + '\n\n';
             exportText += `Overall Progress: ${completedMainItems}/${TOTAL_MAIN_ITEMS} (${percentage}%)\n\n`;
             exportText += 'Completed Steps:\n';
@@ -1503,7 +1703,8 @@
 
             for (let i = 1; i <= TOTAL_MAIN_ITEMS; i++) {
                 const itemCheckboxes = document.querySelectorAll(`input[id^="item${i}_"]`);
-                const itemTitle = document.querySelector(`.item-number[data-item="${i}"]`)?.nextElementSibling?.querySelector('h2')?.textContent;
+                const itemNumber = document.querySelector(`.item-number[data-item="${i}"]`);
+                const itemTitle = itemNumber?.closest('.item-header')?.querySelector('h2')?.textContent;
 
                 if (itemTitle) {
                     const checkedInSection = Array.from(itemCheckboxes).filter(cb => cb.checked).length;
@@ -1514,7 +1715,7 @@
                     Array.from(itemCheckboxes).forEach(cb => {
                         const label = document.querySelector(`label[for="${cb.id}"]`)?.textContent;
                         if (label) {
-                            exportText += `   ${cb.checked ? '✓' : '○'} ${label}\n`;
+                            exportText += `   ${cb.checked ? '\u2713' : '\u25CB'} ${label}\n`;
                         }
                     });
                 }
@@ -1527,7 +1728,7 @@
 
             const element = document.createElement('a');
             element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(exportText));
-            element.setAttribute('download', 'ISO-37002-Whistleblowing-Checklist-Progress.txt');
+            element.setAttribute('download', 'ISO-37008-Investigations-Checklist-Progress.txt');
             element.style.display = 'none';
             document.body.appendChild(element);
             element.click();

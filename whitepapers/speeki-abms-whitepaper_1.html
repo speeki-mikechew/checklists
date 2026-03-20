@@ -368,7 +368,7 @@ body {
   line-height: 1;
   margin-bottom: 4px;
 }
-.stat-number span { color: var(--teal); }
+.stat-number span { color: var(--teal-text); }
 .stat-label { color: var(--text-light); font-size: 13px; }
 
 /* ─── CONTENT LAYOUT ──────────────────────────────── */
@@ -1215,9 +1215,13 @@ body {
 
 /* ─── HIDDEN OBJECTIVES (filter) ─────────────────── */
 .obj-card.hidden { display: none; }
-</style>
+        /* Skip Navigation Link */
+        .skip-link { position: absolute; top: -40px; left: 0; background: #0a1f44; color: #fff; padding: 8px 16px; z-index: 10000; font-size: 14px; }
+        .skip-link:focus { top: 0; }
+        </style>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
 <!-- NAV -->
 <nav class="nav">
@@ -1251,7 +1255,7 @@ body {
 </div>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero" id="main-content">
   <div class="hero-inner">
     <div class="hero-content">
       <div class="hero-tag">
@@ -1614,7 +1618,11 @@ body {
   <div class="related-inner">
     <div class="related-header">
       <h2>Related Resources</h2>
+<<<<<<< HEAD:speeki-abms-whitepaper_1.html
       <a href="index.html" style="color: var(--teal); text-decoration: none; font-size: 14px; font-weight: 600;">View All Resources →</a>
+=======
+      <a href="../index.html" style="color: var(--teal-accessible); text-decoration: none; font-size: 14px; font-weight: 600;">View All Resources →</a>
+>>>>>>> main:whitepapers/speeki-abms-whitepaper_1.html
     </div>
     <div class="related-grid">
       <a href="#" class="related-card">
