@@ -383,13 +383,13 @@ speeki_export_count: 1
 speeki_cta_clicks: 3
 speeki_return_visits: 2
 speeki_calculator_uses: 1
-speeki_last_visit: "2024-03-19T10:30:00.000Z"
+speeki_last_visit: "2026-03-19T10:30:00.000Z"
 
 // Funnel Data
 speeki_funnel: {
-  "landing": {"reached_at": "2024-03-19T10:00:00.000Z"},
-  "engagement": {"reached_at": "2024-03-19T10:05:00.000Z"},
-  "lead_capture": {"reached_at": "2024-03-19T10:15:00.000Z"}
+  "landing": {"reached_at": "2026-03-19T10:00:00.000Z"},
+  "engagement": {"reached_at": "2026-03-19T10:05:00.000Z"},
+  "lead_capture": {"reached_at": "2026-03-19T10:15:00.000Z"}
 }
 
 // Events Log (last 100 events)
@@ -397,14 +397,14 @@ speeki_events: [
   {
     "event": "page_view",
     "properties": {"page": "/index.html"},
-    "timestamp": "2024-03-19T10:00:00.000Z"
+    "timestamp": "2026-03-19T10:00:00.000Z"
   }
 ]
 
 // A/B Tests
 speeki_ab_cta_text: {
   "variant": "Get Free Access",
-  "assigned_at": "2024-03-19T10:00:00.000Z"
+  "assigned_at": "2026-03-19T10:00:00.000Z"
 }
 ```
 
