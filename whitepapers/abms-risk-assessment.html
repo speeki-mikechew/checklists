@@ -3,19 +3,12 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Anti-Bribery Risk Assessment Under ISO 37001 Clause 4.5 — Speeki Resources</title>
-<meta name="description" content="Gross risk, net risk, control testing, and specificity requirements for ISO 37001 anti-bribery risk assessment. A practical framework from Speeki's certification auditors.">
-<meta name="keywords" content="ISO 37001, anti-bribery risk assessment, ABMS, Clause 4.5, gross risk, net risk, control testing, Speeki">
-<meta name="author" content="Speeki">
-<meta property="og:title" content="Anti-Bribery Risk Assessment Under ISO 37001 Clause 4.5">
-<meta property="og:description" content="Gross risk, net risk, control testing, and specificity requirements for ISO 37001 anti-bribery risk assessment. A practical framework from Speeki's certification auditors.">
+<title>Anti-Bribery Risk Assessment Under ISO 37001 — Speeki Resources</title>
+<meta name="description" content="Gross risk, net risk, control testing, and why bribery risks demand specificity. A practical guide to ISO 37001 Clause 4.5 anti-bribery risk assessment.">
+<meta property="og:title" content="Anti-Bribery Risk Assessment Under ISO 37001 — Speeki Resources">
+<meta property="og:description" content="Gross risk, net risk, control testing, and why bribery risks demand specificity. A practical guide to ISO 37001 Clause 4.5 anti-bribery risk assessment.">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://www.speeki.com/resources/whitepapers/abms-risk-assessment">
 <meta property="og:site_name" content="Speeki">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Anti-Bribery Risk Assessment Under ISO 37001 Clause 4.5">
-<meta name="twitter:description" content="How to build a risk assessment that passes ISO 37001 certification — from the auditors who conduct it.">
-<link rel="canonical" href="https://www.speeki.com/resources/whitepapers/abms-risk-assessment">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
 <style>
@@ -56,7 +49,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* NAV */
+/* ─── NAV ─────────────────────────────────────────── */
 .nav {
   background: var(--navy);
   position: sticky;
@@ -112,6 +105,7 @@ body {
   transition: color 0.2s;
 }
 .nav-links a:hover { color: var(--teal); }
+.nav-links .active { color: var(--white); }
 .nav-cta {
   background: var(--teal);
   color: var(--navy) !important;
@@ -122,7 +116,7 @@ body {
 }
 .nav-cta:hover { background: var(--teal-dark) !important; }
 
-/* BREADCRUMB */
+/* ─── BREADCRUMB ──────────────────────────────────── */
 .breadcrumb {
   background: var(--navy-mid);
   padding: 12px 0;
@@ -142,7 +136,7 @@ body {
 .breadcrumb-sep { opacity: 0.4; }
 .breadcrumb-current { color: var(--teal); }
 
-/* HERO */
+/* ─── HERO ────────────────────────────────────────── */
 .hero {
   background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 50%, #162050 100%);
   padding: 72px 0 80px;
@@ -352,7 +346,7 @@ body {
 }
 .download-btn:hover { background: var(--teal-dark); }
 
-/* STATS STRIP */
+/* ─── STATS STRIP ─────────────────────────────────── */
 .stats-strip {
   background: var(--gray-100);
   border-bottom: 1px solid var(--border);
@@ -382,7 +376,7 @@ body {
 .stat-number span { color: var(--teal); }
 .stat-label { color: var(--text-light); font-size: 13px; }
 
-/* CONTENT LAYOUT */
+/* ─── CONTENT LAYOUT ──────────────────────────────── */
 .content-section {
   max-width: 1200px;
   margin: 0 auto;
@@ -393,7 +387,7 @@ body {
   align-items: start;
 }
 
-/* ARTICLE */
+/* ─── ARTICLE ─────────────────────────────────────── */
 .article h2 {
   font-family: 'DM Serif Display', serif;
   font-size: 30px;
@@ -408,12 +402,6 @@ body {
   font-weight: 600;
   color: var(--navy);
   margin: 36px 0 12px;
-}
-.article h4 {
-  font-size: 17px;
-  font-weight: 600;
-  color: var(--navy);
-  margin: 28px 0 10px;
 }
 .article p {
   color: var(--text-light);
@@ -430,28 +418,6 @@ body {
   border-left: 4px solid var(--teal);
   padding-left: 20px;
   margin-bottom: 32px;
-}
-.article ul {
-  margin: 16px 0 24px 0;
-  padding-left: 0;
-  list-style: none;
-}
-.article ul li {
-  padding-left: 20px;
-  position: relative;
-  margin-bottom: 10px;
-  color: var(--text-light);
-  line-height: 1.65;
-}
-.article ul li::before {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 10px;
-  width: 6px;
-  height: 6px;
-  background: var(--teal);
-  border-radius: 50%;
 }
 
 .pullquote {
@@ -483,7 +449,7 @@ body {
   z-index: 1;
 }
 
-/* COMPARISON TABLE */
+/* ─── COMPARISON TABLE ────────────────────────────── */
 .comparison-table {
   width: 100%;
   border-collapse: collapse;
@@ -510,15 +476,17 @@ body {
   padding: 14px 16px;
   font-size: 14px;
   vertical-align: top;
-  color: var(--text-light);
 }
 .comparison-table td:first-child {
   font-weight: 600;
   color: var(--navy);
+  width: 180px;
   border-right: 1px solid var(--border);
 }
+.comparison-table td:nth-child(2) { color: var(--text-light); }
+.comparison-table td:last-child { color: var(--text-light); }
 
-/* GAPS GRID */
+/* ─── GAPS TABLE ──────────────────────────────────── */
 .gaps-grid {
   display: grid;
   gap: 16px;
@@ -534,51 +502,35 @@ body {
 .gap-card h4 { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
 .gap-card p { font-size: 14px; color: var(--text-light); line-height: 1.6; margin: 0; }
 
-/* RISK MATRIX */
-.risk-matrix {
-  overflow-x: auto;
+/* ─── THREE LINES MODEL ───────────────────────────── */
+.three-lines-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
   margin: 28px 0;
 }
-.risk-matrix table {
-  width: 100%;
-  border-collapse: collapse;
+.line-card {
+  background: var(--white);
+  border: 1px solid var(--border);
   border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 2px 16px rgba(15,28,63,0.08);
-  min-width: 520px;
+  padding: 24px;
+  box-shadow: 0 2px 12px rgba(15,28,63,0.06);
 }
-.risk-matrix th {
-  background: var(--navy);
-  color: var(--white);
+.line-header {
   font-size: 11px;
-  font-weight: 600;
-  padding: 12px 10px;
-  text-align: center;
-  letter-spacing: 0.05em;
+  font-weight: 700;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 10px;
 }
-.risk-matrix td {
-  padding: 10px;
-  text-align: center;
-  font-size: 13px;
-  font-weight: 600;
-  border: 1px solid rgba(255,255,255,0.15);
-}
-.risk-matrix td.row-label {
-  background: var(--navy-mid);
-  color: rgba(255,255,255,0.8);
-  font-size: 11px;
-  font-weight: 600;
-  text-align: left;
-  padding-left: 14px;
-  width: 140px;
-}
-.cell-extreme { background: #dc2626; color: white; }
-.cell-high { background: #f97316; color: white; }
-.cell-medium { background: #f59e0b; color: var(--navy); }
-.cell-low { background: #22c55e; color: white; }
+.line-card h4 { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+.line-card p { font-size: 14px; color: var(--text-light); line-height: 1.65; margin: 0; }
 
-/* PHASES */
+/* ─── ROADMAP SECTION ─────────────────────────────── */
+.roadmap-section {
+  margin: 48px 0;
+}
 .phase-card {
   background: var(--white);
   border: 1px solid var(--border);
@@ -607,8 +559,16 @@ body {
   font-size: 18px;
   flex-shrink: 0;
 }
-.phase-title { font-size: 20px; font-weight: 700; color: var(--navy); }
-.phase-card ul { list-style: none; padding: 0; margin: 0; }
+.phase-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--navy);
+}
+.phase-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 .phase-card li {
   padding-left: 28px;
   position: relative;
@@ -628,44 +588,7 @@ body {
   border-radius: 50%;
 }
 
-/* WARNING/INSIGHT BOX */
-.insight-box {
-  background: rgba(0,196,180,0.08);
-  border: 1px solid rgba(0,196,180,0.25);
-  border-left: 4px solid var(--teal);
-  border-radius: 8px;
-  padding: 20px 24px;
-  margin: 28px 0;
-}
-.insight-box .insight-label {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--teal-dark);
-  margin-bottom: 8px;
-}
-.insight-box p { font-size: 15px; color: var(--text); line-height: 1.65; margin: 0; }
-
-.warning-box {
-  background: #fef2f2;
-  border: 1px solid #fecaca;
-  border-left: 4px solid #dc2626;
-  border-radius: 8px;
-  padding: 20px 24px;
-  margin: 28px 0;
-}
-.warning-box .warning-label {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: #dc2626;
-  margin-bottom: 8px;
-}
-.warning-box p { font-size: 15px; color: var(--text); line-height: 1.65; margin: 0; }
-
-/* SIDEBAR */
+/* ─── SIDEBAR ─────────────────────────────────────── */
 .sidebar { position: sticky; top: 92px; }
 .sidebar-card {
   background: var(--white);
@@ -723,7 +646,7 @@ body {
 }
 .promo-btn:hover { background: var(--teal-dark); }
 
-/* FOOTER */
+/* ─── FOOTER ──────────────────────────────────────── */
 .footer {
   background: var(--navy);
   color: rgba(255,255,255,0.65);
@@ -756,7 +679,7 @@ body {
   color: rgba(255,255,255,0.45);
 }
 
-/* RESPONSIVE */
+/* ─── RESPONSIVE ──────────────────────────────────── */
 @media (max-width: 768px) {
   .hero-inner { grid-template-columns: 1fr; gap: 32px; }
   .hero-title { font-size: 36px; }
@@ -806,7 +729,7 @@ body {
         Whitepaper
       </div>
       <h1 class="hero-title">Anti-Bribery Risk Assessment Under <em>ISO 37001 Clause 4.5</em></h1>
-      <p class="hero-subtitle">Gross risk, net risk, control testing, and the specificity requirements that most assessments fail to deliver</p>
+      <p class="hero-subtitle">Gross risk, net risk, control testing, and why bribery risks demand specificity — not corporate generality</p>
       <div class="hero-meta">
         <div class="hero-meta-item">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
@@ -815,17 +738,17 @@ body {
         <div class="hero-meta-dot"></div>
         <div class="hero-meta-item">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
-          20 min read
+          22 min read
         </div>
         <div class="hero-meta-dot"></div>
         <div class="hero-meta-item">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-2 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
-          ISO 37001 &bull; ISO 31000 &bull; ISO 37000
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+          Risk Managers, Compliance Teams, Internal Auditors
         </div>
       </div>
       <div class="hero-actions">
-        <a href="#specificity" class="btn-primary">
-          Read the Whitepaper
+        <a href="#standards" class="btn-primary">
+          Get Started
           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
         </a>
         <a href="https://www.speeki.com/en-GB/contact-us" target="_blank" class="btn-outline">
@@ -840,16 +763,16 @@ body {
         </div>
         <div class="doc-info">
           <h4>Speeki Whitepaper</h4>
-          <p>2025 Edition &bull; ABMS Series</p>
+          <p>2025 Edition • ABMS / ISO 37001</p>
         </div>
       </div>
       <h3>Key Topics</h3>
       <div class="hero-card-topics">
-        <div class="topic-item"><span class="topic-dot"></span>ISO 37001 Clause 4.5 Requirements</div>
-        <div class="topic-item"><span class="topic-dot"></span>Bribery Scenario Identification</div>
-        <div class="topic-item"><span class="topic-dot"></span>Gross vs Net Risk Discipline</div>
-        <div class="topic-item"><span class="topic-dot"></span>Control Testing Framework</div>
-        <div class="topic-item"><span class="topic-dot"></span>What Auditors Look For</div>
+        <div class="topic-item"><span class="topic-dot"></span>Gross vs Net Risk Assessment</div>
+        <div class="topic-item"><span class="topic-dot"></span>Control Testing Methodology</div>
+        <div class="topic-item"><span class="topic-dot"></span>Bribery Scenario Development</div>
+        <div class="topic-item"><span class="topic-dot"></span>ISO 31000 Risk Framework</div>
+        <div class="topic-item"><span class="topic-dot"></span>Auditor Perspective</div>
       </div>
       <div class="hero-card-download">
         <a href="mailto:info@speeki.com?subject=ABMS Risk Assessment Whitepaper Request" class="download-btn">
@@ -865,20 +788,20 @@ body {
 <div class="stats-strip">
   <div class="stats-inner">
     <div class="stat-item">
-      <div class="stat-number"><span>4</span></div>
-      <div class="stat-label">Scenario Identification Lenses</div>
+      <div class="stat-number"><span>3</span></div>
+      <div class="stat-label">Standards Referenced</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number"><span>9</span></div>
+      <div class="stat-label">Assessment Steps</div>
     </div>
     <div class="stat-item">
       <div class="stat-number"><span>5</span></div>
-      <div class="stat-label">Risk Likelihood Levels</div>
+      <div class="stat-label">Control Types</div>
     </div>
     <div class="stat-item">
-      <div class="stat-number"><span>3</span></div>
-      <div class="stat-label">Control Categories</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-number">9<span>sec</span></div>
-      <div class="stat-label">Common Audit Failures Identified</div>
+      <div class="stat-number"><span>4</span></div>
+      <div class="stat-label">Risk Treatment Options</div>
     </div>
   </div>
 </div>
@@ -886,498 +809,694 @@ body {
 <!-- CONTENT -->
 <div class="content-section">
   <article class="article">
-    <p class="lead">Anti-bribery risk assessment is the engine of ISO 37001. Every other element of the standard — the controls, the due diligence, the training, the monitoring — is calibrated and justified by what the risk assessment reveals. An assessment that is vague, generic, or disconnected from actual transactions produces controls that are similarly vague, generic, and disconnected from actual risk.</p>
 
-    <p>The failure pattern is consistent across organisations of all sizes and sectors. Risk assessments are conducted at the corporate level. They produce statements like "medium corruption risk in procurement" or "elevated exposure in government-facing markets." Controls are then mapped to these categories. The assessment is filed, approved, and used as evidence of compliance.</p>
+    <p class="lead">ISO 37001 Clause 4.5 requires organisations to conduct a documented bribery risk assessment. Most organisations produce one. Far fewer produce one that would survive scrutiny by a certification auditor, a regulator, or a court. The difference lies almost entirely in specificity, methodology, and the discipline of separating gross risk from net risk.</p>
 
-    <p>It does not work. Certification auditors conducting ISO 37001 audits on behalf of accredited certification bodies see this pattern repeatedly — and they reject it.</p>
+    <p>This whitepaper sets out the technical requirements of an anti-bribery risk assessment that is genuinely fit for purpose — one that can support ISO 37001 certification, inform control design, and provide real governance value rather than serving as a compliance artefact.</p>
 
-    <h2 id="framework">1. The Standards Framework</h2>
+    <h2 id="standards">1. The Standards Framework</h2>
 
-    <h3>1.1 ISO 37001 Clause 4.5 — What Is Actually Required</h3>
+    <p>Three international standards govern the design and conduct of an anti-bribery risk assessment within an Anti-Bribery Management System (ABMS). Each plays a distinct role, and a well-constructed assessment draws on all three.</p>
 
-    <p>ISO 37001 Clause 4.5 is more prescriptive than many organisations recognise. The standard requires that the organisation shall carry out an anti-bribery risk assessment that takes into account:</p>
+    <p><strong>ISO 37001:2016 — Clause 4.5</strong> is the compliance anchor. It requires the organisation to document a bribery risk assessment that considers the nature, scale, and complexity of activities; the countries and sectors in which the organisation operates; the nature of its business relationships; the transactions, projects, and activities it undertakes; the regulatory and enforcement context; and the conduct of associated persons.</p>
 
-    <ul>
-      <li>The nature, scale, and complexity of the organisation's activities</li>
-      <li>The countries and sectors in which the organisation operates</li>
-      <li>The business relationships it has — including business partners, joint ventures, agents, subsidiaries, and supply chain participants</li>
-      <li>The transactions it conducts, particularly those involving government officials, public procurement, or high-value discretionary decisions</li>
-      <li>The regulatory and legal context in each jurisdiction</li>
-      <li>The persons associated with the organisation who could commit bribery on its behalf</li>
-    </ul>
+    <p><strong>ISO 31000:2018</strong> provides the risk methodology. Its three-stage framework — Risk Identification, Risk Analysis, and Risk Evaluation — supplies the procedural backbone for moving from a list of possible risks through to a scored, prioritised, and treatment-ready risk register. ISO 31000 also establishes the importance of context (both internal and external) before any risk identification begins.</p>
 
-    <p>These requirements point unmistakably toward specificity. The standard is not asking for a general statement about the organisation's risk profile. It is asking for an analysis of how bribery could actually occur in this organisation's specific context.</p>
-
-    <p>Clause 4.5 further requires that the risk assessment be documented, reviewed at planned intervals or when significant changes occur, and that it inform the design and implementation of anti-bribery controls.</p>
-
-    <h3>1.2 ISO 31000 — The Risk Management Framework</h3>
-
-    <p>ISO 37001 does not prescribe a specific risk assessment methodology. Organisations are expected to apply recognised risk management practice, and the global standard for this is ISO 31000:2018. ISO 31000 identifies three core stages: risk identification, risk analysis, and risk evaluation. These stages are sequential and interdependent.</p>
+    <p><strong>ISO 37000:2021</strong> adds the governance layer. The governing body is accountable for defining and approving the organisation's risk appetite, and that appetite must be articulated before net risk scores can be interpreted against a threshold that triggers escalation or treatment.</p>
 
     <table class="comparison-table">
       <thead>
         <tr>
-          <th>ISO 31000 Stage</th>
-          <th>What It Means</th>
-          <th>In an ISO 37001 Context</th>
+          <th>Standard</th>
+          <th>Role in Risk Assessment</th>
+          <th>Key Contribution</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Risk Identification</td>
-          <td>Find and describe all sources of risk, events, and their potential consequences</td>
-          <td>Map every transaction type, function, geography, and counterparty category where bribery could occur</td>
+          <td>ISO 31000:2018</td>
+          <td>Risk methodology framework</td>
+          <td>Identification, Analysis, and Evaluation stages; context-setting; treatment options</td>
         </tr>
         <tr>
-          <td>Risk Analysis</td>
-          <td>Understand the nature of the risk and determine the level of risk (likelihood x consequence)</td>
-          <td>Score each identified bribery scenario for likelihood and consequence at gross level, then assess net risk after controls</td>
+          <td>ISO 37001:2016</td>
+          <td>Compliance requirement and scope definition</td>
+          <td>Clause 4.5 mandatory factors; documentation requirements; review triggers; associated persons scope</td>
         </tr>
         <tr>
-          <td>Risk Evaluation</td>
-          <td>Compare the level of risk against risk criteria to determine whether the risk is acceptable</td>
-          <td>Determine which residual bribery risks require additional controls, enhanced monitoring, or escalated treatment</td>
+          <td>ISO 37000:2021</td>
+          <td>Governance accountability</td>
+          <td>Governing body accountability for risk appetite; oversight of assessment process; approval of treatment plans</td>
         </tr>
       </tbody>
     </table>
 
     <h2 id="specificity">2. The Specificity Imperative</h2>
 
-    <h3>2.1 Why Corporate-Level Risk Assessment Fails</h3>
+    <p>The single most common failure in anti-bribery risk assessment is operating at the wrong level of abstraction. Organisations conduct assessments at the category level — "procurement bribery risk", "third-party risk", "permit-related risk" — and assign each category a rating. The output is a heat map. The heat map is filed. No useful action follows.</p>
 
-    <p>Corporate-level risk statements fail for three connected reasons. First, they cannot identify specific controls because they have not identified specific scenarios. A control is a mechanism that prevents or detects a specific bribery event. Without the specific event, the control cannot be designed with precision.</p>
+    <p>This approach fails for three reasons. First, a category-level risk cannot be controlled — controls attach to specific transactions, roles, and counterparties, not to abstract categories. Second, a category-level risk cannot be tested — there is no scenario against which a control's effectiveness can be evaluated. Third, category-level assessments consistently fail ISO 37001 certification audits, because the auditor cannot trace the risk to a specific scenario, a specific control, and evidence of that control operating.</p>
 
-    <p>Second, corporate-level statements cannot be tested. If the risk is "elevated bribery exposure in government-facing operations", what does a control look like and how would you verify it works? The abstraction is too great.</p>
-
-    <p>Third, corporate-level assessments fail the certification audit. An ISO 37001 auditor will probe the risk assessment directly: "Show me the bribery scenarios you identified. Show me how the controls map to those scenarios. Show me the evidence you tested those controls."</p>
-
-    <div class="warning-box">
-      <div class="warning-label">Critical Failure</div>
-      <p>Listing "procurement bribery risk: HIGH" is not a risk assessment. It is a risk label. The assessment is the documented analysis of which specific procurement transactions, with which specific counterparties, in which specific jurisdictions, under which specific conditions, create bribery exposure — and how.</p>
+    <div class="pullquote">
+      <p>Listing 'procurement bribery risk: HIGH' is not a risk assessment. It is a risk acknowledgement. The assessment begins where acknowledgement ends — with the specific question: who, to whom, in which transaction, using what mechanism, under what circumstances, and with what consequence if it occurs?</p>
     </div>
 
-    <h3>2.2 The Bribery Scenario: The Unit of Analysis</h3>
+    <h3>The Bribery Scenario as the Unit of Analysis</h3>
 
-    <p>The fundamental unit of analysis in an anti-bribery risk assessment is the bribery scenario — not the risk category, not the business function, not the geography. A bribery scenario is a specific, plausible description of how a bribery event could occur: who the internal actor is, what decision or outcome they are seeking to influence, who the counterparty is, what form the bribe would take, and under what conditions the scenario would arise.</p>
+    <p>The correct unit of analysis is the bribery scenario: a discrete, fact-specific description of a situation in which bribery could occur. Each scenario identifies the role within the organisation (who might pay or receive), the counterparty (who would receive or pay), the specific transaction or interaction (the context in which the bribery would occur), the form of bribe (cash, gift, hospitality, kickback, equity interest), the intended outcome (a licence, contract award, regulatory approval, reduced inspection frequency), and the conditions that make the scenario plausible.</p>
 
-    <p>Bribery scenarios are inherently local. They are shaped by local business practices, local regulatory environments, local relationships, and local pressure points. The same company in the same industry operating across three different geographies will face materially different bribery scenarios in each location.</p>
-
-    <h3>2.3 Identifying Bribery Scenarios — The Four Lenses</h3>
-
-    <p>Bribery scenarios can be systematically identified through four analytical lenses, applied in combination. No single lens is sufficient; used together they generate a comprehensive scenario set.</p>
+    <p><strong>Four lenses for identifying scenarios:</strong></p>
 
     <div class="gaps-grid">
       <div class="gap-card">
-        <h4>Lens 1: Transaction Mapping</h4>
-        <p>Map every significant category of transaction where a decision-maker on the other side has discretionary power affecting the organisation's interests: regulatory applications, public procurement, customs clearance, tax negotiations, commercial contract awards, and employment of individuals with regulatory influence.</p>
+        <h4>Transaction Mapping</h4>
+        <p>For each significant transaction category — procurement, sales, customs clearance, permit applications, tax assessments, litigation — identify the points at which a bribe could be offered, solicited, or accepted. Map the counterparties involved at each point.</p>
       </div>
       <div class="gap-card">
-        <h4>Lens 2: Interaction Mapping</h4>
-        <p>Map every significant category of interaction with persons outside the organisation who have discretionary power — including government and regulatory relationships, business partner and agent relationships, political relationships, and charitable or community relationships.</p>
+        <h4>Interaction Mapping</h4>
+        <p>Identify every recurring interaction between organisational personnel (or associated persons) and public officials, regulatory bodies, law enforcement, or commercial counterparties in positions of discretion. Each interaction type is a potential scenario cluster.</p>
       </div>
       <div class="gap-card">
-        <h4>Lens 3: Pressure Point Analysis</h4>
-        <p>Identify the circumstances under which individuals within the organisation face pressure that could motivate or rationalise bribery: revenue pressure, operational delivery timelines, competitive pressure in markets where bribery is known to occur, relationship pressure, and personal financial pressure.</p>
+        <h4>Pressure Point Analysis</h4>
+        <p>Consider the commercial and operational pressures within the business — revenue targets, licence dependencies, supply chain bottlenecks, regulatory approvals — and identify where those pressures create incentives for individuals to consider bribery as a solution.</p>
       </div>
       <div class="gap-card">
-        <h4>Lens 4: Historical and Intelligence Analysis</h4>
-        <p>Analyse internal incident reports, whistleblower submissions, and prior compliance findings. Review enforcement actions against industry peers. Consult Transparency International CPI, TRACE Matrix, and World Bank governance indicators for each jurisdiction. Engage local legal counsel for jurisdiction-specific intelligence.</p>
+        <h4>Historical and Intelligence Analysis</h4>
+        <p>Draw on internal incident history, whistleblower reports, due diligence findings, sector enforcement actions (FCPA, Bribery Act, OECD country reports), and corruption perception indices for all relevant markets. Reported cases in similar organisations define plausible scenarios for yours.</p>
       </div>
     </div>
+
+    <h3>Geography Matters: the Same Company, Different Scenarios</h3>
+
+    <p>A scenario that is implausible in one jurisdiction may be the primary risk in another. The assessment must be jurisdiction-specific. The following illustrates how the same company function — customs clearance — generates different scenarios across three geographies:</p>
+
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th>Jurisdiction</th>
+          <th>Scenario</th>
+          <th>Risk Driver</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Singapore</td>
+          <td>Logistics officer facilitates accelerated clearance through agent network; agent absorbs facilitation payment without disclosure</td>
+          <td>Low direct risk; agent opacity is the concern</td>
+        </tr>
+        <tr>
+          <td>Indonesia</td>
+          <td>Local operations manager pays customs official directly to release goods held pending inspection; payment processed as "storage fee" through petty cash</td>
+          <td>Facilitation payment with false accounting; high likelihood in specific ports</td>
+        </tr>
+        <tr>
+          <td>France</td>
+          <td>Commercial director offers hospitality package to procurement official of state-owned enterprise during tender evaluation period</td>
+          <td>Commercial kickback / improper advantage; Sapin II and Bribery Act exposure</td>
+        </tr>
+      </tbody>
+    </table>
 
     <h2 id="gross-risk">3. Gross Risk: The Inherent Baseline</h2>
 
-    <h3>3.1 What Gross Risk Means and Why It Matters</h3>
+    <p>Gross risk — sometimes called inherent risk — is the level of exposure that exists before any controls are applied. It reflects the raw vulnerability of a given scenario given the nature of the business, the jurisdiction, the transaction, and the counterparty, assuming nothing has been done to prevent or detect the bribery.</p>
 
-    <p>Gross risk — sometimes called inherent risk — is the level of risk that exists before any controls are applied. It represents the organisation's raw exposure to a bribery scenario in a world where no preventive, detective, or corrective controls exist.</p>
+    <p>Many organisations skip gross risk assessment entirely, proceeding directly to a net risk score that incorporates the effect of existing controls. This is a significant error. Without a documented gross risk baseline, the control framework becomes invisible: you cannot demonstrate what your controls are contributing, you cannot identify which risks are well-controlled and which are not, and you cannot defend your net risk scores under audit because there is no documented reasoning for the reduction applied.</p>
 
-    <p>Many organisations skip gross risk assessment entirely. They identify a risk and immediately describe it in terms of their existing control framework, producing a net risk estimate that they treat as the starting point. This is a fundamental error. Without a gross risk baseline, it is impossible to evaluate whether controls are adequate, because you do not know what they are supposed to be reducing.</p>
-
-    <div class="insight-box">
-      <div class="insight-label">Fundamental Principle</div>
-      <p>Gross risk tells you what you are exposed to. Net risk tells you what you have done about it. The gap between them is the compliance task.</p>
+    <div class="pullquote">
+      <p>Gross risk tells you what you are exposed to. Net risk tells you what you have done about it. The difference between them is the contribution of your controls.</p>
     </div>
 
-    <h3>3.2 Scoring Gross Risk — Likelihood</h3>
+    <h3>Likelihood and Consequence Scales</h3>
 
-    <p>Gross likelihood is the probability that the bribery scenario would occur in the absence of any controls. It is an assessment of the intrinsic conditions that make the scenario plausible.</p>
+    <p>Gross risk is calculated as the product of likelihood and consequence, each scored on a defined scale. The scales must be calibrated to the organisation's context and applied consistently across all scenarios.</p>
+
+    <p><strong>Likelihood scale (1–5):</strong></p>
 
     <table class="comparison-table">
       <thead>
         <tr>
           <th>Score</th>
-          <th>Label</th>
-          <th>Definition</th>
-          <th>Bribery-Specific Indicators</th>
+          <th>Rating</th>
+          <th>Indicative Description</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>5</td>
-          <td>Almost Certain</td>
-          <td>The scenario is expected to occur frequently or routinely</td>
-          <td>High-volume government interactions in jurisdictions where facilitation payments are endemic</td>
-        </tr>
-        <tr>
-          <td>4</td>
-          <td>Likely</td>
-          <td>The scenario would occur in most circumstances without active prevention</td>
-          <td>Regular commercial dealings with state-owned enterprises in high-risk markets; use of third-party agents</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td>Possible</td>
-          <td>The scenario could occur under certain conditions</td>
-          <td>Periodic permit applications in moderate-risk jurisdictions; competitive markets with some corruption history</td>
+          <td>1</td>
+          <td>Rare</td>
+          <td>Could occur only in exceptional circumstances; no known precedent in sector or jurisdiction</td>
         </tr>
         <tr>
           <td>2</td>
           <td>Unlikely</td>
-          <td>The scenario would occur only in unusual circumstances</td>
-          <td>Low-frequency government interactions in jurisdictions with strong rule of law</td>
+          <td>Could occur at some time; limited precedent; structural factors make it improbable</td>
         </tr>
         <tr>
-          <td>1</td>
-          <td>Rare</td>
-          <td>The scenario would occur only in exceptional circumstances</td>
-          <td>Jurisdictions with Transparency International CPI above 75; transactions subject to independent oversight</td>
+          <td>3</td>
+          <td>Possible</td>
+          <td>Might occur; known precedent in sector or jurisdiction; conditions present</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Likely</td>
+          <td>Will probably occur in most circumstances; precedent exists within comparable organisations</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Almost Certain</td>
+          <td>Expected to occur; known occurrence within the organisation or close sector peers</td>
         </tr>
       </tbody>
     </table>
 
-    <h3>3.3 The Gross Risk Matrix</h3>
+    <p><strong>Consequence scale (1–5):</strong> Consequence should be evaluated across four dimensions — legal/regulatory, financial, reputational, and operational — and the highest dimension score used as the consequence rating for the scenario.</p>
 
-    <p>The gross risk matrix combines likelihood and consequence scores to produce a gross risk rating for each bribery scenario. Consequence must be assessed across multiple dimensions: legal/criminal, financial, reputational, and operational — with the highest individual dimension score driving the overall consequence rating.</p>
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th>Score</th>
+          <th>Rating</th>
+          <th>Legal/Regulatory</th>
+          <th>Financial</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>1</td>
+          <td>Minor</td>
+          <td>Administrative breach; internal remediation only</td>
+          <td>Immaterial financial impact</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Moderate</td>
+          <td>Regulatory notice; limited enforcement action</td>
+          <td>Up to 1% of annual revenue</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Significant</td>
+          <td>Formal investigation; potential prosecution of individuals</td>
+          <td>1–5% of annual revenue</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Major</td>
+          <td>Corporate prosecution; significant financial penalties</td>
+          <td>5–15% of annual revenue</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Catastrophic</td>
+          <td>Debarment, licence loss, criminal conviction of senior personnel</td>
+          <td>Existential financial impact</td>
+        </tr>
+      </tbody>
+    </table>
 
-    <div class="risk-matrix">
-      <table>
-        <thead>
-          <tr>
-            <th>Consequence / Likelihood</th>
-            <th>Rare (1)</th>
-            <th>Unlikely (2)</th>
-            <th>Possible (3)</th>
-            <th>Likely (4)</th>
-            <th>Almost Certain (5)</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="row-label">Catastrophic (5)</td>
-            <td class="cell-medium">5 — Medium</td>
-            <td class="cell-high">10 — High</td>
-            <td class="cell-extreme">15 — Extreme</td>
-            <td class="cell-extreme">20 — Extreme</td>
-            <td class="cell-extreme">25 — Extreme</td>
-          </tr>
-          <tr>
-            <td class="row-label">Major (4)</td>
-            <td class="cell-low">4 — Low</td>
-            <td class="cell-medium">8 — Medium</td>
-            <td class="cell-high">12 — High</td>
-            <td class="cell-extreme">16 — Extreme</td>
-            <td class="cell-extreme">20 — Extreme</td>
-          </tr>
-          <tr>
-            <td class="row-label">Significant (3)</td>
-            <td class="cell-low">3 — Low</td>
-            <td class="cell-medium">6 — Medium</td>
-            <td class="cell-medium">9 — Medium</td>
-            <td class="cell-high">12 — High</td>
-            <td class="cell-extreme">15 — Extreme</td>
-          </tr>
-          <tr>
-            <td class="row-label">Moderate (2)</td>
-            <td class="cell-low">2 — Low</td>
-            <td class="cell-low">4 — Low</td>
-            <td class="cell-medium">6 — Medium</td>
-            <td class="cell-medium">8 — Medium</td>
-            <td class="cell-high">10 — High</td>
-          </tr>
-          <tr>
-            <td class="row-label">Minor (1)</td>
-            <td class="cell-low">1 — Low</td>
-            <td class="cell-low">2 — Low</td>
-            <td class="cell-low">3 — Low</td>
-            <td class="cell-low">4 — Low</td>
-            <td class="cell-medium">5 — Medium</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <p>The risk matrix maps the product of these two scores (1–25) to a rating band. Scores of 20–25 are EXTREME; 15–19 are HIGH; 8–14 are MEDIUM; and 1–7 are LOW. These thresholds must be defined before scoring begins and approved by management.</p>
 
     <h2 id="controls">4. Controls: Mapping, Testing, and Net Risk</h2>
 
-    <h3>4.1 The Function of Controls in Risk Assessment</h3>
+    <p>Once gross risk scores are established, the assessment turns to the control framework. For each scenario, the assessor identifies every control that is in place that could reduce the likelihood that the bribery occurs, or the consequence if it does. Controls are then tested, and a net risk score is calculated based on the tested effectiveness of those controls.</p>
 
-    <p>Controls are the mechanisms through which an organisation reduces gross risk to an acceptable net level. In the context of ISO 37001, controls fall into three broad categories: preventive controls (which reduce the likelihood of a bribery event occurring), detective controls (which identify when bribery has occurred or is occurring), and corrective controls (which limit the consequences when a bribery event is detected).</p>
-
-    <p>Effective anti-bribery risk assessment does not merely list the controls that exist. It evaluates the extent to which those controls actually reduce the gross risk score — and that evaluation can only be performed through testing.</p>
-
-    <div class="pullquote">
-      <p>An untested control is a hypothesis. When you record a net risk score based on claimed control effectiveness, you are asserting a fact that the control is working as designed. Without testing, that assertion is unsupported.</p>
-    </div>
-
-    <h3>4.2 Control Effectiveness Ratings</h3>
-
-    <p>Control testing must produce a documented effectiveness rating for each control tested. The rating directly determines the extent to which the control reduces gross likelihood in the net risk calculation.</p>
+    <h3>Types of Controls</h3>
 
     <div class="gaps-grid">
       <div class="gap-card">
-        <h4>Effective</h4>
-        <p>Control is designed adequately, implemented as designed, and operating consistently. Likelihood score may be reduced by 2–3 points from gross level, subject to a floor of 1. Requires positive results from all three test questions: design, implementation, and operation.</p>
+        <h4>Preventive Controls</h4>
+        <p>Designed to reduce the likelihood that a bribery scenario occurs. Examples: third-party due diligence, gifts and hospitality pre-approval, segregation of duties in procurement, prohibition on facilitation payments, mandatory anti-bribery training.</p>
       </div>
       <div class="gap-card">
-        <h4>Partially Effective</h4>
-        <p>Control has adequate design but is not consistently implemented, or has implementation gaps. Likelihood score may be reduced by 1 point from gross level. Requires documented evidence of the gap alongside positive design assessment.</p>
+        <h4>Detective Controls</h4>
+        <p>Designed to identify that a bribery event has occurred or is occurring. Examples: expense report review, whistleblower channel, transaction monitoring, internal audit, management review of anomalous payments.</p>
       </div>
       <div class="gap-card">
-        <h4>Ineffective</h4>
-        <p>Control has design deficiencies, or is not implemented at all, or testing reveals it is not operating. No reduction in likelihood score is applied. This rating requires documented remediation through the treatment planning process.</p>
+        <h4>Corrective Controls</h4>
+        <p>Designed to contain damage and prevent recurrence following a detected event. Examples: investigation protocol, disciplinary procedures, regulatory self-reporting, remediation planning, clawback provisions.</p>
       </div>
     </div>
 
-    <h3>4.3 From Gross to Net: The Key Discipline</h3>
+    <div class="pullquote">
+      <p>An untested control is a hypothesis. When you record a net risk score based on controls that have not been tested, you are not assessing risk — you are expressing hope.</p>
+    </div>
 
-    <p>Net risk is calculated by applying the control effectiveness ratings to the gross risk scores. The key discipline is that <strong>controls primarily affect likelihood, not consequence</strong>. A well-designed and effectively operating preventive control makes a bribery event less likely to occur. It does not reduce the scale of harm if the event occurs anyway.</p>
+    <h3>Control Testing Framework</h3>
 
-    <p>This distinction has important implications. An organisation with very high inherent consequence exposure (Catastrophic = 5) can never achieve low net risk by building preventive controls alone. If the consequence of a bribery scenario materialising is catastrophic, the risk can only be brought to an acceptable level by either avoiding the activity or ensuring the net likelihood is driven to its minimum floor.</p>
+    <p>Each control must be evaluated against three questions before it can be credited in the net risk calculation:</p>
 
-    <h2 id="treatment">5. Risk Evaluation and Treatment</h2>
+    <div class="three-lines-grid">
+      <div class="line-card">
+        <div class="line-header">Design Adequacy</div>
+        <h4>Is the control designed to address the risk?</h4>
+        <p>A control that is well-designed but addresses a different risk, or that has no logical connection to the bribery scenario, cannot reduce the net risk for that scenario. Design adequacy is assessed by reviewing the control's documented purpose, scope, and mechanism.</p>
+      </div>
+      <div class="line-card">
+        <div class="line-header">Implementation</div>
+        <h4>Has the control been implemented as designed?</h4>
+        <p>A policy that exists on paper but has never been communicated, trained, or operationalised is not a functioning control. Implementation testing requires evidence that the control exists in the real operating environment — not just in the policy library.</p>
+      </div>
+      <div class="line-card">
+        <div class="line-header">Operating Effectiveness</div>
+        <h4>Is the control operating effectively over time?</h4>
+        <p>Operating effectiveness testing requires evidence of actual performance: approval records, training completion logs, due diligence files, exception reports, audit findings. A control that operated effectively six months ago may not be operating effectively today.</p>
+      </div>
+    </div>
 
-    <h3>5.1 Risk Appetite and Evaluation Criteria</h3>
+    <h3>Control Effectiveness Ratings and Net Risk Calculation</h3>
 
-    <p>Risk evaluation — the comparison of net risk scores against defined criteria to determine acceptability — cannot be conducted without a defined risk appetite. Risk appetite is the statement of how much residual bribery risk the organisation is prepared to accept after controls are applied. It must be defined by the governing body before the risk evaluation stage, consistent with ISO 37000.</p>
+    <p>Following testing, each control is rated on its effectiveness. These ratings determine how much the gross risk score is reduced:</p>
 
-    <h3>5.2 Risk Treatment Options</h3>
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th>Effectiveness Rating</th>
+          <th>Definition</th>
+          <th>Score Reduction</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Effective</td>
+          <td>Designed adequately, implemented, operating with evidence of consistent performance</td>
+          <td>Reduces likelihood by 2–3 points</td>
+        </tr>
+        <tr>
+          <td>Partially Effective</td>
+          <td>Designed adequately but implementation gaps or inconsistent operation noted</td>
+          <td>Reduces likelihood by 1 point</td>
+        </tr>
+        <tr>
+          <td>Ineffective</td>
+          <td>Control exists but testing reveals it is not operating as designed</td>
+          <td>No reduction applied</td>
+        </tr>
+        <tr>
+          <td>Not In Place</td>
+          <td>No control exists for this scenario</td>
+          <td>No reduction; gap identified for treatment</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p>A critical point: controls primarily reduce <strong>likelihood</strong>, not consequence. The consequence of a bribery event — prosecution, financial penalty, reputational damage — is determined by the nature of the act, the jurisdiction, and enforcement practice, not by the organisation's internal control framework. Adjusting consequence scores downward based on the existence of controls is a methodological error that inflates optimism and deflates treatment urgency.</p>
+
+    <p><strong>Worked example:</strong> A Vietnamese sales representative has discretion over distributor selection and pricing. The gross risk score for a commercial kickback scenario is: Likelihood 4 (Likely) x Consequence 5 (Catastrophic, given FCPA and local law exposure) = 20 (EXTREME). After testing, a third-party due diligence control is rated Partially Effective (implementation gaps in annual refresh), and a gifts and hospitality pre-approval policy is rated Effective. The net likelihood is reduced from 4 to 2. Net risk = 2 x 5 = 10 (HIGH). The scenario remains HIGH, requiring senior management attention and a documented treatment plan.</p>
+
+    <h2 id="evaluation">5. Risk Evaluation and Treatment</h2>
+
+    <p>Risk evaluation is the process of comparing net risk scores against the organisation's defined risk appetite to determine which risks require treatment and at what level of escalation. Risk appetite must be defined by management and approved by the governing body before the evaluation phase begins — not after.</p>
+
+    <h3>Escalation Thresholds</h3>
+
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th>Net Risk Rating</th>
+          <th>Escalation Level</th>
+          <th>Required Response</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>EXTREME (20–25)</td>
+          <td>Board / Governing Body</td>
+          <td>Immediate treatment required; board-approved plan; progress reported at each board meeting</td>
+        </tr>
+        <tr>
+          <td>HIGH (15–19)</td>
+          <td>Senior Management</td>
+          <td>Treatment plan approved by CEO or equivalent; quarterly progress review; internal audit coverage</td>
+        </tr>
+        <tr>
+          <td>MEDIUM (8–14)</td>
+          <td>Management Review</td>
+          <td>Treatment plan at function level; semi-annual review; documented in risk register</td>
+        </tr>
+        <tr>
+          <td>LOW (1–7)</td>
+          <td>Standard Monitoring</td>
+          <td>Existing controls maintained; annual review; no additional treatment required unless appetite changes</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>The Four Treatment Options</h3>
 
     <div class="gaps-grid">
       <div class="gap-card">
         <h4>Avoid</h4>
-        <p>Eliminating the activity that gives rise to the bribery risk — declining to enter a market, refusing to engage a category of business partner, withdrawing from a procurement process. Avoidance is appropriate where the net risk cannot be reduced to within appetite through controls, and where the commercial cost of avoidance is acceptable.</p>
+        <p>Withdraw from the activity, market, or relationship that creates the risk. This is appropriate where the gross risk is EXTREME and no combination of controls can reduce it to within appetite. Avoidance must be a deliberate, documented decision — not a default.</p>
       </div>
       <div class="gap-card">
         <h4>Reduce</h4>
-        <p>Implementing additional or enhanced controls to bring net risk within appetite. This is the most common treatment response and the one most directly connected to the ISO 37001 control framework. Treatment plans must specify which additional controls, with named owners and target dates.</p>
+        <p>Implement or strengthen controls to bring the net risk within appetite. The treatment plan must specify which controls will be implemented, by whom, by when, and what evidence will be produced. Generic commitments ("improve due diligence") are not treatment plans.</p>
       </div>
       <div class="gap-card">
-        <h4>Share / Transfer</h4>
-        <p>Transferring some portion of the financial consequence to a third party — typically through insurance coverage for regulatory investigations and legal costs. This does not reduce the likelihood of the bribery event but reduces financial consequence. Importantly, liability for criminal conduct generally cannot be insured away.</p>
+        <h4>Share or Transfer</h4>
+        <p>Engage a third party — insurer, joint venture partner, contractual indemnity — to share exposure. Note that legal liability for bribery cannot be transferred: a company cannot indemnify itself against criminal prosecution. Sharing applies primarily to financial consequence, not legal exposure.</p>
       </div>
       <div class="gap-card">
         <h4>Accept</h4>
-        <p>Deciding that a risk at its current net level falls within the organisation's risk appetite. Acceptance must be an explicit, documented decision — not a default resulting from failure to act. It requires sign-off at the appropriate governance level and periodic review to confirm the risk has not changed.</p>
+        <p>Formally document that the risk falls within appetite and no additional treatment is required. Acceptance is an explicit decision, not the absence of a decision. It must be approved at the appropriate level given the risk rating and reviewed at least annually.</p>
       </div>
     </div>
 
-    <h2 id="auditor">6. What an ISO 37001 Auditor Will Look For</h2>
+    <p>Treatment plans must be specific, actionable, time-bound, and auditable. The risk assessment is not complete until every risk above the organisation's appetite threshold has a documented treatment plan with a named owner and a delivery date.</p>
 
-    <p>Understanding how a certification auditor will approach the risk assessment review is essential for organisations building or improving their programme.</p>
+    <h2 id="scenarios">6. High-Risk Bribery Scenarios: A Reference Library</h2>
 
-    <h3>6.1 Document Review</h3>
-
-    <ul>
-      <li>The risk assessment procedure: does it define methodology, frequency, roles, and trigger events?</li>
-      <li>The risk register: does it contain specific scenarios (not categories)? Does it have gross and net scores? Are controls mapped to scenarios?</li>
-      <li>Control testing documentation: what was tested, when, by whom, and what did the testing find?</li>
-      <li>Treatment plans: are they specific, owned, time-bound, and linked to risk register entries?</li>
-      <li>Approval records: has the risk assessment been formally approved at the appropriate level?</li>
-      <li>Review records: is there evidence of the last review? Were trigger events assessed?</li>
-    </ul>
-
-    <h3>6.2 Interview Questions Auditors Will Ask</h3>
+    <p>The following scenario categories represent the most commonly identified high-risk bribery situations across ISO 37001 engagements. Organisations should use these as a starting point for scenario development, adapting each to their specific jurisdictions, business models, and counterparty profiles.</p>
 
     <div class="gaps-grid">
       <div class="gap-card">
-        <h4>"Walk me through how you identified the bribery scenarios in your risk register."</h4>
-        <p>Tests whether the process was genuine or the register was populated from a template. Auditors can tell the difference within minutes.</p>
+        <h4>Facilitation Payment — Customs and Border Control</h4>
+        <p>Operations or logistics personnel make payments to customs officials to secure timely release of goods. Payments are coded as storage or handling fees. Relevant in high-volume import/export operations across markets with high corruption perception scores.</p>
       </div>
       <div class="gap-card">
-        <h4>"What is your gross likelihood score for this scenario, and why?"</h4>
-        <p>Tests whether assessors understand the gross/net distinction and can articulate scoring rationale. A blank stare indicates the scores were assigned without genuine analysis.</p>
+        <h4>Permit Acceleration — Regulatory Authorities</h4>
+        <p>Project or compliance personnel make payments to accelerate the issuance of operating licences, environmental permits, or construction approvals. Particularly prevalent in infrastructure, extractive, and real estate sectors.</p>
       </div>
       <div class="gap-card">
-        <h4>"How did you test this control, and what did the testing find?"</h4>
-        <p>Tests whether control testing is genuine and evidenced. An answer of "we reviewed the policy" is insufficient for an effectiveness rating.</p>
+        <h4>Public Procurement — Tender Manipulation</h4>
+        <p>Sales or business development personnel provide financial or other advantages to procurement officials at state-owned enterprises or government bodies to influence tender evaluation. Often structured through intermediaries to obscure the payment chain.</p>
       </div>
       <div class="gap-card">
-        <h4>"What would happen to your net risk score if this control failed?"</h4>
-        <p>Tests understanding of control dependency and residual risk exposure. Organisations that cannot answer this question do not understand their own risk assessment.</p>
+        <h4>Tax Assessment Negotiation</h4>
+        <p>Finance or tax personnel make payments to tax inspectors to reduce assessed tax liabilities or avoid penalties. Common in jurisdictions where tax enforcement is discretionary and audit outcomes are negotiable.</p>
+      </div>
+      <div class="gap-card">
+        <h4>Judicial and Regulatory Proceedings</h4>
+        <p>Legal or compliance personnel make payments to influence the outcome of regulatory investigations, court proceedings, or enforcement actions. High consequence scenario given the direct involvement of legal institutions.</p>
+      </div>
+      <div class="gap-card">
+        <h4>Commercial Kickbacks — Private Sector</h4>
+        <p>Sales personnel provide undisclosed financial benefits to procurement staff at commercial customers in exchange for contract awards or preferential pricing. The private sector equivalent of public procurement bribery; covered by ISO 37001 and the UK Bribery Act.</p>
+      </div>
+      <div class="gap-card">
+        <h4>Undisclosed Agent or Intermediary</h4>
+        <p>A commercial agent, consultant, or introducer receives a commission that is wholly or partly used to make payments to public officials or commercial counterparties on the organisation's behalf. The organisation fails to conduct adequate due diligence or contractual controls.</p>
+      </div>
+      <div class="gap-card">
+        <h4>Internal: Procurement Staff Receiving Kickbacks</h4>
+        <p>Internal procurement personnel solicit or accept payments from suppliers in exchange for preferential treatment in vendor selection, pricing negotiations, or invoice approval. This is passive bribery — the organisation is the victim as well as the potential perpetrator under inadequate control environments.</p>
+      </div>
+      <div class="gap-card">
+        <h4>Management Conflicts of Interest</h4>
+        <p>Senior personnel approve transactions with entities in which they hold undisclosed financial interests, or influence hiring decisions to benefit family members of business counterparties. Conflicts of interest that create structural opportunities for corruption must be included in the risk assessment scope.</p>
       </div>
     </div>
 
-    <h3>6.3 Transaction Testing</h3>
+    <h2 id="process">7. Conducting the Risk Assessment: Process and Governance</h2>
 
-    <p>Auditors will sample actual transactions to verify that the control framework the risk assessment claims actually operates in practice:</p>
+    <p>The risk assessment is not a desk exercise. It requires structured engagement with business units, operational functions, and — where applicable — associated persons. The following phased process reflects the requirements of ISO 37001 Clause 4.5 and the methodology of ISO 31000.</p>
 
-    <ul>
-      <li>A sample of gifts and hospitality register entries: are entries complete, approved, and consistent with policy limits? Are there entries near contract award dates?</li>
-      <li>A sample of business partner due diligence files: are they complete? Proportionate to risk? Free of unresolved red flags?</li>
-      <li>A sample of high-risk transactions (government-adjacent sales, public procurement bids, agent-facilitated deals): do the transaction records align with the control framework?</li>
-      <li>Expense claim data for high-risk roles in high-risk jurisdictions: any anomalies consistent with facilitation payment patterns?</li>
-    </ul>
-
-    <h2 id="review">7. Review Frequency and Triggers</h2>
-
-    <p>ISO 37001 Clause 4.5 requires the risk assessment to be reviewed at planned intervals and whenever significant changes occur. "Planned intervals" should be interpreted as at least annually for the full assessment, with more frequent targeted reviews when specific trigger conditions arise:</p>
-
-    <ul>
-      <li>Entry into a new market, jurisdiction, or sector</li>
-      <li>Acquisition of or merger with another organisation</li>
-      <li>Commencement of material new business relationships (agents, joint venture partners, significant suppliers)</li>
-      <li>A bribery incident or credible allegation within the organisation</li>
-      <li>A significant enforcement action against a peer organisation in the same market or sector</li>
-      <li>A material change in the regulatory environment of an operating jurisdiction</li>
-      <li>Identification of a significant control failure through audit, monitoring, or other source</li>
-    </ul>
-
-    <div id="implementation">
-      <h2>8. Building Your Assessment: A Phased Approach</h2>
-
+    <div class="roadmap-section">
       <div class="phase-card">
         <div class="phase-header">
           <div class="phase-number">1</div>
-          <div class="phase-title">Foundation: Scope and Methodology</div>
+          <div class="phase-title">Phase 1: Scope Definition</div>
         </div>
         <ul>
-          <li>Define the scope of the assessment: which entities, geographies, functions, and business relationships are included</li>
-          <li>Select and document the risk assessment methodology aligned to ISO 31000 principles</li>
-          <li>Define the likelihood and consequence scales with organisation-specific calibration</li>
-          <li>Define the gross risk matrix and net risk calculation approach</li>
-          <li>Obtain governing body approval for risk appetite and acceptance thresholds before proceeding to evaluation</li>
+          <li>Define the organisational scope: legal entities, business units, geographies, and associated persons to be covered</li>
+          <li>Confirm that the scope aligns with the ABMS scope as defined under ISO 37001 Clause 4.3</li>
+          <li>Identify the assessment team, including functional subject matter experts and any external specialist support</li>
+          <li>Obtain approval from the ABMS owner or top management for the scope and methodology before commencing</li>
         </ul>
       </div>
 
       <div class="phase-card">
         <div class="phase-header">
           <div class="phase-number">2</div>
-          <div class="phase-title">Scenario Development</div>
+          <div class="phase-title">Phase 2: Context Analysis</div>
         </div>
         <ul>
-          <li>Apply all four identification lenses: transaction mapping, interaction mapping, pressure point analysis, and historical intelligence</li>
-          <li>Develop specific scenario narratives for each identified risk — not categories, but plausible event descriptions with named actors and counterparty types</li>
-          <li>Engage local management and legal counsel in each significant operating jurisdiction</li>
-          <li>Document each scenario in the risk register with all required fields before assigning scores</li>
+          <li>Analyse the external context: jurisdictions, regulatory frameworks, enforcement history, corruption perception data, sector-specific risks</li>
+          <li>Analyse the internal context: business model, revenue streams, transaction types, organisational structure, historical incidents</li>
+          <li>Review existing ABMS documentation: policies, procedures, prior risk assessments, audit findings, due diligence outcomes</li>
+          <li>Confirm or update the organisation's risk appetite statement in consultation with the governing body</li>
         </ul>
       </div>
 
       <div class="phase-card">
         <div class="phase-header">
           <div class="phase-number">3</div>
-          <div class="phase-title">Gross Risk Scoring and Control Mapping</div>
+          <div class="phase-title">Phases 3 and 4: Transaction Mapping and Scenario Development</div>
         </div>
         <ul>
-          <li>Score each scenario for gross likelihood and gross consequence using the defined scales</li>
-          <li>Calculate gross risk scores and apply risk matrix ratings</li>
-          <li>Map all existing controls to each scenario — preventive, detective, and corrective</li>
-          <li>Prepare a control testing programme addressing design adequacy, implementation, and operating effectiveness</li>
+          <li>Map all significant transaction categories and recurring interactions with public officials and commercial counterparties</li>
+          <li>Conduct structured interviews with business unit leaders, finance, legal, procurement, sales, HR, and operations</li>
+          <li>Develop the full scenario inventory using the four lenses: transaction mapping, interaction mapping, pressure point analysis, and historical and intelligence analysis</li>
+          <li>Document each scenario in sufficient detail to support gross risk scoring and control mapping</li>
+          <li>Validate the scenario inventory with functional leaders before proceeding to scoring</li>
         </ul>
       </div>
 
       <div class="phase-card">
         <div class="phase-header">
           <div class="phase-number">4</div>
-          <div class="phase-title">Control Testing, Net Risk, and Treatment</div>
+          <div class="phase-title">Phases 5 and 6: Gross Risk Scoring and Control Mapping</div>
         </div>
         <ul>
-          <li>Execute the control testing programme and document test evidence for each control</li>
-          <li>Assign effectiveness ratings based on test results</li>
-          <li>Calculate net risk scores by applying effectiveness ratings to gross likelihood</li>
-          <li>Evaluate net risk against risk appetite criteria — identify scenarios above acceptance threshold</li>
-          <li>Develop documented treatment plans for all scenarios above threshold, with named owners and target dates</li>
-          <li>Obtain formal approval of the completed assessment at the appropriate governance level</li>
+          <li>Score each scenario for gross likelihood using the defined 1–5 scale with documented rationale</li>
+          <li>Score each scenario for consequence across all four dimensions (legal, financial, reputational, operational)</li>
+          <li>Calculate the gross risk score (likelihood x consequence) and assign the gross risk rating</li>
+          <li>Map every existing control to each scenario it is designed to address</li>
+          <li>Review control documentation: policies, procedures, training records, due diligence files, approval logs</li>
+        </ul>
+      </div>
+
+      <div class="phase-card">
+        <div class="phase-header">
+          <div class="phase-number">5</div>
+          <div class="phase-title">Phases 7 and 8: Control Testing and Net Risk Scoring</div>
+        </div>
+        <ul>
+          <li>Test each mapped control for design adequacy, implementation, and operating effectiveness</li>
+          <li>Document testing methodology and evidence for each control</li>
+          <li>Assign an effectiveness rating to each control (Effective, Partially Effective, Ineffective, Not In Place)</li>
+          <li>Calculate the net likelihood for each scenario based on tested control effectiveness ratings</li>
+          <li>Calculate the net risk score (net likelihood x consequence) and assign the net risk rating</li>
+          <li>Identify control gaps: scenarios where no effective control is in place to reduce gross likelihood</li>
+        </ul>
+      </div>
+
+      <div class="phase-card">
+        <div class="phase-header">
+          <div class="phase-number">6</div>
+          <div class="phase-title">Phases 9 and 10: Risk Evaluation and Treatment Planning</div>
+        </div>
+        <ul>
+          <li>Compare each net risk rating against the defined risk appetite thresholds</li>
+          <li>Identify all scenarios where net risk exceeds appetite and requires treatment</li>
+          <li>Develop specific, actionable, time-bound treatment plans for each out-of-appetite scenario</li>
+          <li>Assign treatment plan ownership to named individuals with authority and resources to execute</li>
+          <li>Document acceptance decisions for scenarios that fall within appetite, with appropriate approval</li>
+          <li>Escalate EXTREME and HIGH risks to the appropriate governance level as defined in the escalation framework</li>
+        </ul>
+      </div>
+
+      <div class="phase-card">
+        <div class="phase-header">
+          <div class="phase-number">7</div>
+          <div class="phase-title">Phases 11 and 12: Documentation, Approval, Integration, and Monitoring</div>
+        </div>
+        <ul>
+          <li>Compile the complete risk assessment report: scope, methodology, scenario inventory, gross and net risk scores, control testing results, treatment plans</li>
+          <li>Obtain formal approval from top management and, where required by scope, the governing body</li>
+          <li>Integrate the risk assessment outputs into ABMS control design: update policies, procedures, and training to address identified gaps</li>
+          <li>Establish the review schedule: at minimum annual, and triggered by significant changes in context</li>
+          <li>Track treatment plan progress through the ABMS monitoring and measurement function (ISO 37001 Clause 9.1)</li>
         </ul>
       </div>
     </div>
 
-    <h2 id="conclusion">Conclusion</h2>
+    <h3>Review Triggers</h3>
 
-    <p>Anti-bribery risk assessment under ISO 37001 Clause 4.5 is not a compliance exercise to be completed once and filed. It is the analytical foundation of the entire anti-bribery management system. Every control, every due diligence process, every training programme, and every monitoring activity derives its justification from what the risk assessment reveals.</p>
+    <p>ISO 37001 requires the risk assessment to be reviewed and updated when significant changes occur. Triggers that mandate an unscheduled review include: entry into a new market or jurisdiction; acquisition or divestiture of a business; engagement of a new category of associated person; a bribery incident or near-miss within the organisation; a significant enforcement action against a sector peer; material changes to the regulatory or enforcement environment; and significant organisational restructuring affecting control ownership.</p>
 
-    <p>The assessment must be specific. Bribery occurs in specific transactions, conducted by specific people, with specific counterparties, under specific conditions. An assessment that does not reach that level of specificity cannot design controls that actually address the risk.</p>
+    <h2 id="failures">8. Common Failures in Anti-Bribery Risk Assessment</h2>
 
-    <p>The assessment must distinguish between gross and net risk. Gross risk tells you what you are exposed to before controls. Net risk tells you what you have done about it. The gap between them is the compliance task.</p>
+    <p>The following failures are consistently observed in risk assessments reviewed during ISO 37001 gap analyses, certification pre-audits, and post-incident investigations. Each represents a methodological or governance deficiency that undermines the value and defensibility of the assessment.</p>
 
-    <p>Control testing is not optional. It is the mechanism by which claimed risk reduction becomes evidenced risk reduction. Every control on which you rely in your net risk calculation must have been tested, and the test results must be documented.</p>
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th>Failure</th>
+          <th>Why It Matters</th>
+          <th>Corrective Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Assessing at category level rather than scenario level</td>
+          <td>Categories cannot be controlled, tested, or used to inform specific treatment actions</td>
+          <td>Rebuild the assessment around discrete, fact-specific bribery scenarios</td>
+        </tr>
+        <tr>
+          <td>Applying the same risk profile across all jurisdictions</td>
+          <td>Risk is inherently jurisdiction-specific; a single profile ignores material differences in enforcement, corruption levels, and transaction types</td>
+          <td>Conduct jurisdiction-specific scenario development for each material geography</td>
+        </tr>
+        <tr>
+          <td>Conflating gross and net risk</td>
+          <td>Without a gross risk baseline, the control framework's contribution cannot be demonstrated or defended</td>
+          <td>Always score gross risk before applying any control credit</td>
+        </tr>
+        <tr>
+          <td>Recording controls without testing them</td>
+          <td>Untested controls may not be operating; net risk scores based on untested controls are unreliable</td>
+          <td>Test every mapped control for design, implementation, and operating effectiveness before applying a credit</td>
+        </tr>
+        <tr>
+          <td>Assuming controls reduce consequence</td>
+          <td>Controls primarily reduce likelihood; consequence is determined by the act and the enforcement environment</td>
+          <td>Apply control credit only to likelihood scores; hold consequence constant except in exceptional, documented circumstances</td>
+        </tr>
+        <tr>
+          <td>Treating risk acceptance as the absence of action</td>
+          <td>Undocumented acceptance is not governance; it is negligence</td>
+          <td>Require explicit approval documentation for every scenario rated within appetite</td>
+        </tr>
+        <tr>
+          <td>Not assessing passive or inbound bribery</td>
+          <td>ISO 37001 covers both active bribery (paying) and passive bribery (receiving); an assessment that covers only outbound bribery is incomplete</td>
+          <td>Include scenarios in which organisational personnel are solicited for bribes or receive undisclosed benefits</td>
+        </tr>
+        <tr>
+          <td>Failing to connect risk assessment to control design</td>
+          <td>A risk assessment that does not result in specific control improvements or confirmations has no governance value</td>
+          <td>Require explicit linkage between each gap identified and the control or treatment plan that addresses it</td>
+        </tr>
+        <tr>
+          <td>No review following significant events</td>
+          <td>A risk assessment that predates a material change in context may be wholly unreliable as a current picture of exposure</td>
+          <td>Implement and enforce a defined set of review triggers; document when reviews are triggered and what changes result</td>
+        </tr>
+        <tr>
+          <td>Generic or aspirational treatment plans</td>
+          <td>"Improve due diligence" is not a treatment plan; it cannot be tracked, tested, or held to account</td>
+          <td>Require treatment plans to specify the control to be implemented, the owner, the deadline, and the evidence of completion</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 id="auditor">9. What an ISO 37001 Auditor Will Look For</h2>
+
+    <p>Certification auditors conducting an assessment under ISO 37001 will evaluate the bribery risk assessment across three evidence categories. Understanding the auditor's perspective allows organisations to build an assessment that is both genuinely useful and readily verifiable.</p>
+
+    <h3>Document Review</h3>
+
+    <p>The auditor will review the risk assessment document itself, the methodology documentation, the risk appetite statement, individual scenario records, control testing evidence, treatment plans, and approval records. The document must be traceable — every score must have a documented rationale, every control credit must have a corresponding test record, and every treatment plan must have an owner and a date.</p>
+
+    <h3>Interview Evidence</h3>
+
+    <p>Auditors will interview the risk assessment owner, functional leaders, and compliance personnel. The interviews test whether the assessment reflects genuine organisational knowledge or was produced as a documentation exercise. Key auditor questions include:</p>
+
+    <div class="gaps-grid">
+      <div class="gap-card">
+        <h4>"Walk me through how you identified the bribery scenarios in your Vietnam operations."</h4>
+        <p>The auditor is testing whether the scenario development process was substantive — whether real business knowledge was applied — or whether scenarios were copied from a template without contextual adaptation.</p>
+      </div>
+      <div class="gap-card">
+        <h4>"What is your gross likelihood score for this scenario, and why?"</h4>
+        <p>The auditor expects a reasoned answer based on contextual factors: enforcement precedent, transaction volume, counterparty profile, jurisdictional corruption data. A score without reasoning will not satisfy the auditor.</p>
+      </div>
+      <div class="gap-card">
+        <h4>"How did you test this control, and what did the testing find?"</h4>
+        <p>The auditor expects a specific answer: the testing method (sample review, interview, observation, walkthrough), the sample size, the period covered, and the outcome. "We reviewed the policy and it looked adequate" is not testing.</p>
+      </div>
+      <div class="gap-card">
+        <h4>"Show me the evidence that this control is operating effectively."</h4>
+        <p>For each control credited in the net risk calculation, the auditor will request contemporaneous evidence of operation: approval records, training logs, due diligence reports, exception reports. Evidence that cannot be produced suggests the control credit should not have been applied.</p>
+      </div>
+      <div class="gap-card">
+        <h4>"Has there been any event since your last review that should have triggered a reassessment?"</h4>
+        <p>The auditor is testing whether the review trigger mechanism is understood and actually applied, or whether it exists only in the policy documentation.</p>
+      </div>
+    </div>
+
+    <h3>Transaction Testing</h3>
+
+    <p>For specific high-risk scenarios, the auditor may request a sample of underlying transactions to verify that controls are operating as described. This might include a sample of gifts and hospitality approvals, a sample of third-party due diligence files, or a sample of payments to agents in high-risk markets. The findings from transaction testing directly inform the auditor's assessment of whether the net risk scores are supportable.</p>
+
+    <div class="pullquote">
+      <p>An auditor's job is not to find a risk assessment document. It is to determine whether the organisation actually knows what its bribery risks are, and whether it has built controls that actually work.</p>
+    </div>
+
+    <h2 id="conclusion">10. Conclusion</h2>
+
+    <p>The bribery risk assessment is not a compliance artefact to be produced for certification and then filed. It is the engine of the entire ABMS. Every element of ISO 37001 — due diligence scope, control design, training content, monitoring activity, incident response — should derive from the risk assessment. An ABMS that is disconnected from its risk assessment is an ABMS that is managing documentation rather than managing risk.</p>
+
+    <p>An assessment that meets the standard requires three disciplines that most organisations find difficult in practice. It requires <strong>specificity</strong> — the willingness to identify and document discrete, fact-specific scenarios rather than comfortable abstractions. It requires <strong>gross-to-net discipline</strong> — the commitment to establish an inherent baseline before applying control credits, so that the contribution of the control framework is visible and defensible. And it requires <strong>control testing</strong> — the rigour to verify that controls are actually working before crediting them in the net risk calculation.</p>
+
+    <p>Organisations that invest in building a risk assessment that meets these three disciplines will find that it delivers value far beyond certification: it provides a defensible account of the organisation's bribery exposure, a clear map of where the control framework is strong and where it is weak, and a governance record that demonstrates genuine organisational commitment to anti-bribery compliance.</p>
+
+    <p>Speeki provides independent anti-bribery risk assessments, ABMS gap analyses, and ISO 37001 certification across 100+ countries. Our assessors bring deep sector and jurisdictional experience to scenario development, control testing, and treatment plan design.</p>
+
+    <p><strong>Contact us at <a href="mailto:info@speeki.com" style="color: var(--teal);">info@speeki.com</a> or visit <a href="https://www.speeki.com" target="_blank" style="color: var(--teal);">www.speeki.com</a></strong></p>
 
   </article>
 
   <!-- SIDEBAR -->
   <aside class="sidebar">
     <div class="sidebar-card">
-      <div class="sidebar-card-header">Contents</div>
+      <div class="sidebar-card-header">Table of Contents</div>
       <div class="sidebar-card-body">
         <nav class="toc-nav">
-          <a href="#framework" class="toc-link">
-            <span class="toc-dot"></span>1. The Standards Framework
+          <a href="#standards" class="toc-link active">
+            <span class="toc-dot"></span>
+            The Standards Framework
           </a>
           <a href="#specificity" class="toc-link">
-            <span class="toc-dot"></span>2. The Specificity Imperative
+            <span class="toc-dot"></span>
+            The Specificity Imperative
           </a>
           <a href="#gross-risk" class="toc-link">
-            <span class="toc-dot"></span>3. Gross Risk: The Baseline
+            <span class="toc-dot"></span>
+            Gross Risk: The Inherent Baseline
           </a>
           <a href="#controls" class="toc-link">
-            <span class="toc-dot"></span>4. Controls and Net Risk
+            <span class="toc-dot"></span>
+            Controls: Mapping, Testing, Net Risk
           </a>
-          <a href="#treatment" class="toc-link">
-            <span class="toc-dot"></span>5. Risk Evaluation and Treatment
+          <a href="#evaluation" class="toc-link">
+            <span class="toc-dot"></span>
+            Risk Evaluation and Treatment
+          </a>
+          <a href="#scenarios" class="toc-link">
+            <span class="toc-dot"></span>
+            High-Risk Bribery Scenarios
+          </a>
+          <a href="#process" class="toc-link">
+            <span class="toc-dot"></span>
+            Process and Governance
+          </a>
+          <a href="#failures" class="toc-link">
+            <span class="toc-dot"></span>
+            Common Failures
           </a>
           <a href="#auditor" class="toc-link">
-            <span class="toc-dot"></span>6. What Auditors Look For
+            <span class="toc-dot"></span>
+            What an Auditor Will Look For
           </a>
-          <a href="#review" class="toc-link">
-            <span class="toc-dot"></span>7. Review Frequency
-          </a>
-          <a href="#implementation" class="toc-link">
-            <span class="toc-dot"></span>8. Phased Approach
-          </a>
-        </nav>
-      </div>
-    </div>
-
-    <div class="sidebar-card">
-      <div class="sidebar-card-header">Standards Referenced</div>
-      <div class="sidebar-card-body">
-        <nav class="toc-nav">
-          <a href="https://www.iso.org/standard/65073.html" target="_blank" class="toc-link">
-            <span class="toc-dot"></span>ISO 37001 — Anti-Bribery Management Systems
-          </a>
-          <a href="https://www.iso.org/standard/65694.html" target="_blank" class="toc-link">
-            <span class="toc-dot"></span>ISO 31000 — Risk Management
-          </a>
-          <a href="https://www.iso.org/standard/75056.html" target="_blank" class="toc-link">
-            <span class="toc-dot"></span>ISO 37000 — Governance of Organisations
+          <a href="#conclusion" class="toc-link">
+            <span class="toc-dot"></span>
+            Conclusion
           </a>
         </nav>
       </div>
     </div>
 
     <div class="sidebar-card">
-      <div class="sidebar-card-header">Related Resources</div>
       <div class="sidebar-card-body">
-        <nav class="toc-nav">
-          <a href="abms-objectives.html" class="toc-link">
-            <span class="toc-dot"></span>ABMS Objectives: Beyond the Checkbox
-          </a>
-          <a href="iso-37001-employee-hiring.html" class="toc-link">
-            <span class="toc-dot"></span>HR Due Diligence Under ISO 37001
-          </a>
-          <a href="../checklists/iso-37001-checklist.html" class="toc-link">
-            <span class="toc-dot"></span>ISO 37001 Compliance Checklist
-          </a>
-          <a href="non-conformity-management.html" class="toc-link">
-            <span class="toc-dot"></span>Non-Conformity Management System
-          </a>
-        </nav>
+        <div class="speeki-promo">
+          <h4>ISO 37001 Certification</h4>
+          <p>Speeki provides independent anti-bribery risk assessments and ISO 37001 certification across 100+ countries.</p>
+          <a href="https://www.speeki.com/en-GB/contact-us" target="_blank" class="promo-btn">Contact Speeki</a>
+        </div>
       </div>
-    </div>
-
-    <div class="speeki-promo">
-      <h4>ISO 37001 Certification</h4>
-      <p>Speeki provides accredited ISO 37001 certification services. Our auditors wrote this whitepaper from direct certification audit experience.</p>
-      <a href="https://www.speeki.com/en-GB/contact-us" target="_blank" class="promo-btn">Talk to Our Team</a>
     </div>
   </aside>
 </div>
@@ -1388,66 +1507,72 @@ body {
     <div class="footer-top">
       <div class="footer-brand">
         <h3>Speeki</h3>
-        <p>Independent ESG assurance and ISO certification. We help organisations build management systems that work — not just ones that pass audits.</p>
+        <p>Building trust through independent assurance and compliance services across 100+ countries.</p>
       </div>
       <div class="footer-col">
         <h4>Resources</h4>
         <ul>
-          <li><a href="../index.html">All Resources</a></li>
-          <li><a href="icsr-internal-controls.html">ICSR Whitepaper</a></li>
-          <li><a href="abms-objectives.html">ABMS Objectives</a></li>
-          <li><a href="non-conformity-management.html">NCR Management</a></li>
+          <li><a href="../index.html">Whitepapers</a></li>
+          <li><a href="../index.html">Checklists</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Checklists</h4>
+        <h4>Company</h4>
         <ul>
-          <li><a href="../checklists/iso-37001-checklist.html">ISO 37001</a></li>
-          <li><a href="../checklists/iso-37002-whistleblowing-checklist.html">ISO 37002</a></li>
-          <li><a href="../checklists/iso-37008-investigations-checklist.html">ISO 37008</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Speeki</h4>
-        <ul>
-          <li><a href="https://www.speeki.com" target="_blank">speeki.com</a></li>
+          <li><a href="https://www.speeki.com" target="_blank">About Speeki</a></li>
           <li><a href="https://www.speeki.com/en-GB/contact-us" target="_blank">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="https://www.speeki.com/en-GB/privacy-policy" target="_blank">Privacy Policy</a></li>
+          <li><a href="https://www.speeki.com/en-GB/terms" target="_blank">Terms of Service</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2026 Speeki. All rights reserved.</p>
+      &copy; 2025 Speeki. All rights reserved.
     </div>
   </div>
 </footer>
 
 <script>
-// Active TOC highlighting on scroll
-(function() {
-  const sections = document.querySelectorAll('h2[id]');
-  const tocLinks = document.querySelectorAll('.toc-link');
+// Smooth scroll for TOC links
+document.querySelectorAll('.toc-link').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    const targetId = this.getAttribute('href');
+    const targetElement = document.querySelector(targetId);
+    if (targetElement) {
+      const navHeight = document.querySelector('.nav').offsetHeight;
+      const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navHeight - 20;
+      window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+    }
+  });
+});
 
-  function updateActiveToc() {
-    let current = '';
-    sections.forEach(section => {
-      const sectionTop = section.getBoundingClientRect().top;
-      if (sectionTop <= 120) {
-        current = section.getAttribute('id');
-      }
-    });
-    tocLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href') === '#' + current) {
-        link.classList.add('active');
-        const dot = link.querySelector('.toc-dot');
-        if (dot) dot.style.background = 'var(--teal)';
-      }
-    });
-  }
+// Active TOC link on scroll
+window.addEventListener('scroll', function() {
+  const sections = document.querySelectorAll('.article h2[id]');
+  const navHeight = document.querySelector('.nav').offsetHeight;
+  let current = '';
 
-  window.addEventListener('scroll', updateActiveToc);
-  updateActiveToc();
-})();
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - navHeight - 100;
+    if (window.pageYOffset >= sectionTop) {
+      current = section.getAttribute('id');
+    }
+  });
+
+  document.querySelectorAll('.toc-link').forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === '#' + current) {
+      link.classList.add('active');
+    }
+  });
+});
 </script>
+
 </body>
 </html>
