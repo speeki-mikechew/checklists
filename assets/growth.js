@@ -63,11 +63,11 @@
                             <line x1="16" y1="17" x2="8" y2="17"></line>
                         </svg>
                     </div>
-                    <h3>Get Your Free Progress Report</h3>
-                    <p>Enter your email to receive a detailed PDF report of your checklist progress, plus tips to achieve full compliance.</p>
+                    <h3>Get This Compliance Checklist</h3>
+                    <p>Enter your email to receive a copy of this checklist guide and related compliance resources.</p>
                     <form id="speeki-lead-form">
                         <input type="email" id="speeki-email" placeholder="your@email.com" required>
-                        <button type="submit">Send My Report</button>
+                        <button type="submit">Send Me the Checklist</button>
                     </form>
                     <p class="speeki-privacy">We respect your privacy. Unsubscribe anytime.</p>
                 </div>
@@ -119,7 +119,7 @@
                     </svg>
                 </div>
                 <h3>Thank You!</h3>
-                <p>Check your inbox for your progress report and compliance tips.</p>
+                <p>Check your inbox for the compliance checklist and resources.</p>
                 <button class="speeki-modal-cta" onclick="SpeekiGrowth.hideLeadCaptureModal()">Continue Checklist</button>
             `;
 
