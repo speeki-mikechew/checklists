@@ -150,6 +150,36 @@ font-family: "DM Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetic
 
 ---
 
+## Content Rules — Auditor Independence (ISO 17021-1)
+
+Speeki is an accredited certification body under ISO 17021-1. This imposes strict boundaries on all content produced, including the growth engine, educational materials, whitepapers, checklists, and marketing copy.
+
+### ALLOWED Content
+- **Educate based on published standards** — CSRD, ISSB, ISO 37001, etc. Standard-based information that applies to all organisations in a category
+- **Present factual observations from public data** — e.g. "Your published sustainability report does not reference external assurance"
+- **Explain Speeki services** — scope, methodology, standards applied
+- **Share industry trends** — regulatory developments, market analysis, standard updates
+
+### NOT ALLOWED Content
+- **Advise or recommend specific actions** — e.g. "You should get ISO 37001" is NOT permitted
+- **Score or rate** a company's ESG performance, readiness, or maturity
+- **Customise or tailor** educational information for a specific audit client — this implies designing a programme
+- **Use consultative language** that suggests Speeki is designing something for a specific client
+
+### Key Principle
+> Education and training using published standards is fine. Customising or tailoring information for a specific audit client is not — it creates the appearance of designing a programme.
+
+### Language Guidelines
+| Instead of... | Use... |
+|--------------|--------|
+| "You should implement..." | "Organisations typically implement..." |
+| "We recommend..." | "The standard requires..." / "Best practice includes..." |
+| "Get certified" | "Learn about certification requirements" |
+| "Your organisation needs" | "Organisations seeking compliance need" |
+| "Based on your situation" | "Based on the standard requirements" |
+
+---
+
 ## Visual Design Language
 
 ### Decorative Elements
