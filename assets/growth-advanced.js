@@ -130,7 +130,7 @@
                 const originalShareTwitter = window.SpeekiGrowth.shareTwitter;
                 window.SpeekiGrowth.shareTwitter = () => {
                     const url = encodeURIComponent(referralLink);
-                    const text = encodeURIComponent('Check out this compliance checklist from @Speeki');
+                    const text = encodeURIComponent('Check out this compliance resource from @Speeki');
                     window.open(`https://twitter.com/intent/tweet?url=${url}&text=${text}`, '_blank', 'width=600,height=400');
                     this.trackEvent('referral_share', { platform: 'twitter' });
                 };
@@ -151,7 +151,7 @@
                 </div>
                 <div class="toast-content">
                     <strong>Welcome!</strong>
-                    <p>A colleague recommended this checklist to you.</p>
+                    <p>A colleague recommended this resource to you.</p>
                 </div>
             `;
             document.body.appendChild(toast);

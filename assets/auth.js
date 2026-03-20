@@ -1,5 +1,5 @@
 /**
- * Speeki Checklists Authentication Module
+ * Speeki Resources Authentication Module
  * Provides JWT-based session management for password-protected access
  */
 

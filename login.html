@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
-    <meta name="description" content="Secure login for Speeki Checklists - Access interactive ESG and sustainability assessment tools for your team.">
-    <meta property="og:title" content="Login | Speeki Checklists">
-    <meta property="og:description" content="Secure login for Speeki Checklists - Access interactive ESG and sustainability assessment tools for your team.">
+    <meta name="description" content="Secure login for Speeki Resources - Access interactive ESG and sustainability tools, checklists, and whitepapers for your team.">
+    <meta property="og:title" content="Login | Speeki Resources">
+    <meta property="og:description" content="Secure login for Speeki Resources - Access interactive ESG and sustainability tools, checklists, and whitepapers for your team.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://www.speeki.com/assets/speeki-og-image.jpg">
     <meta property="og:site_name" content="Speeki">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Login | Speeki Checklists">
-    <meta name="twitter:description" content="Secure login for Speeki Checklists - Access interactive ESG and sustainability assessment tools.">
+    <meta name="twitter:title" content="Login | Speeki Resources">
+    <meta name="twitter:description" content="Secure login for Speeki Resources - Access interactive ESG and sustainability tools and whitepapers.">
     <meta name="twitter:image" content="https://www.speeki.com/assets/speeki-og-image.jpg">
-    <title>Login | Speeki Checklists - Team Review</title>
+    <title>Login | Speeki Resources Hub</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -210,7 +210,7 @@
         <div class="accent-bar"></div>
 
         <h1>Team Review Access</h1>
-        <p class="subtitle">Enter the password to access the checklists</p>
+        <p class="subtitle">Enter the password to access the resources hub</p>
 
         <form id="loginForm">
             <div class="form-group">
@@ -219,7 +219,7 @@
                 <p class="error-message" id="errorMessage">Incorrect password. Please try again.</p>
             </div>
 
-            <button type="submit" id="submitBtn">Access Checklists</button>
+            <button type="submit" id="submitBtn">Access Resources</button>
         </form>
 
         <div class="review-notice">
@@ -262,7 +262,7 @@
                         passwordInput.classList.add('error');
                         errorMessage.classList.add('visible');
                         submitBtn.disabled = false;
-                        submitBtn.textContent = 'Access Checklists';
+                        submitBtn.textContent = 'Access Resources';
                         passwordInput.focus();
                         passwordInput.select();
                     }
