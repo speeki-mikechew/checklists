@@ -1,0 +1,1367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beyond the Checkbox: ABMS Objectives — Speeki Resources</title>
+<meta name="description" content="Why most organisations set activity-based ABMS objectives instead of outcome-based ones — and how to design objectives that genuinely measure whether an anti-bribery programme is working. ISO 37001:2025 Clause 6.2.">
+<meta name="keywords" content="ABMS objectives, ISO 37001, anti-bribery management system, compliance objectives, ISO 37001:2025, Clause 6.2, SMART objectives">
+<meta name="author" content="Speeki">
+<meta property="og:title" content="Beyond the Checkbox: Why Companies Need to Rethink ABMS Objectives">
+<meta property="og:description" content="Most ABMS objectives measure activity, not effectiveness. This whitepaper shows how to design objectives that are genuinely connected to bribery risk and capable of demonstrating whether the system is working.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.speeki.com/resources/whitepapers/abms-objectives">
+<meta property="og:site_name" content="Speeki">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Beyond the Checkbox: ABMS Objectives — Speeki">
+<meta name="twitter:description" content="ISO 37001:2025 requires measurable, risk-connected ABMS objectives. Most organisations fall short. Here is what better looks like.">
+<link rel="canonical" href="https://www.speeki.com/resources/whitepapers/abms-objectives">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0f1c3f;
+  --navy-mid: #1a2d5a;
+  --navy-light: #243672;
+  --teal: #00c4b4;
+  --teal-dark: #00a89a;
+  --teal-light: #e6faf8;
+  --gold: #f0a500;
+  --white: #ffffff;
+  --off-white: #f7f8fc;
+  --gray-100: #f0f2f7;
+  --gray-200: #e2e6f0;
+  --gray-400: #9aa3bf;
+  --gray-600: #5a6380;
+  --gray-800: #2d3558;
+  --text: #1a2033;
+  --text-light: #4a5270;
+  --border: #dde1ef;
+  --shadow: 0 4px 24px rgba(15,28,63,0.10);
+  --shadow-lg: 0 12px 48px rgba(15,28,63,0.18);
+  --radius: 8px;
+  --radius-lg: 16px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--text);
+  background: var(--white);
+  line-height: 1.6;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── NAV ─────────────────────────────────────────── */
+.nav {
+  background: var(--navy);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.25);
+}
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+.nav-logo-mark {
+  width: 36px;
+  height: 36px;
+  background: var(--teal);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--navy);
+  letter-spacing: -1px;
+}
+.nav-brand {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: -0.5px;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  list-style: none;
+}
+.nav-links a {
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--teal); }
+.nav-links .active { color: var(--white); }
+.nav-cta {
+  background: var(--teal);
+  color: var(--navy) !important;
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-weight: 600 !important;
+  transition: background 0.2s !important;
+}
+.nav-cta:hover { background: var(--teal-dark) !important; }
+
+/* ─── BREADCRUMB ──────────────────────────────────── */
+.breadcrumb {
+  background: var(--navy-mid);
+  padding: 12px 0;
+}
+.breadcrumb-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.5);
+}
+.breadcrumb a { color: rgba(255,255,255,0.6); text-decoration: none; }
+.breadcrumb a:hover { color: var(--teal); }
+.breadcrumb-sep { opacity: 0.4; }
+.breadcrumb-current { color: var(--teal); }
+
+/* ─── HERO ────────────────────────────────────────── */
+.hero {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 50%, #162050 100%);
+  padding: 72px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -120px;
+  right: -80px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(0,196,180,0.12) 0%, transparent 65%);
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -80px;
+  left: 20%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(0,196,180,0.06) 0%, transparent 65%);
+  pointer-events: none;
+}
+.hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 64px;
+  align-items: start;
+}
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0,196,180,0.12);
+  border: 1px solid rgba(0,196,180,0.3);
+  color: var(--teal);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 100px;
+  margin-bottom: 24px;
+}
+.hero-tag svg { width: 12px; height: 12px; }
+.hero-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 52px;
+  line-height: 1.08;
+  color: var(--white);
+  margin-bottom: 12px;
+  letter-spacing: -1px;
+}
+.hero-title em {
+  font-style: italic;
+  color: var(--teal);
+}
+.hero-subtitle {
+  font-size: 18px;
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 36px;
+  line-height: 1.5;
+  max-width: 560px;
+}
+.hero-meta {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+.hero-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255,255,255,0.55);
+  font-size: 13px;
+}
+.hero-meta-item svg { color: var(--teal); width: 14px; height: 14px; }
+.hero-meta-dot { width: 4px; height: 4px; background: rgba(255,255,255,0.2); border-radius: 50%; }
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.btn-primary {
+  background: var(--teal);
+  color: var(--navy);
+  border: none;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.2s, transform 0.15s;
+}
+.btn-primary:hover { background: var(--teal-dark); transform: translateY(-1px); }
+.btn-outline {
+  background: transparent;
+  color: rgba(255,255,255,0.8);
+  border: 1px solid rgba(255,255,255,0.25);
+  padding: 13px 24px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: border-color 0.2s, color 0.2s;
+}
+.btn-outline:hover { border-color: var(--teal); color: var(--teal); }
+.hero-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 32px;
+  backdrop-filter: blur(8px);
+  position: relative;
+  top: 12px;
+}
+.hero-card-doc {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.doc-icon {
+  width: 48px;
+  height: 60px;
+  background: var(--navy);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid rgba(0,196,180,0.3);
+  position: relative;
+}
+.doc-icon::before {
+  content: 'PDF';
+  color: var(--teal);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  position: absolute;
+  bottom: 6px;
+}
+.doc-icon svg { color: var(--teal); }
+.doc-info h4 { color: var(--white); font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+.doc-info p { color: rgba(255,255,255,0.45); font-size: 12px; }
+.hero-card h3 { color: var(--white); font-size: 14px; font-weight: 600; margin-bottom: 14px; }
+.hero-card-topics {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.topic-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255,255,255,0.65);
+  font-size: 13px;
+}
+.topic-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--teal);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.hero-card-download {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.download-btn {
+  width: 100%;
+  background: var(--teal);
+  color: var(--navy);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.download-btn:hover { background: var(--teal-dark); }
+
+/* ─── STATS STRIP ─────────────────────────────────── */
+.stats-strip {
+  background: var(--gray-100);
+  border-bottom: 1px solid var(--border);
+  padding: 28px 0;
+}
+.stats-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+.stat-item {
+  padding: 0 32px;
+  border-right: 1px solid var(--border);
+}
+.stat-item:first-child { padding-left: 0; }
+.stat-item:last-child { border-right: none; }
+.stat-number {
+  font-family: 'DM Serif Display', serif;
+  font-size: 36px;
+  color: var(--navy);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.stat-number span { color: var(--teal); }
+.stat-label { color: var(--text-light); font-size: 13px; }
+
+/* ─── CONTENT LAYOUT ──────────────────────────────── */
+.content-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 64px 32px;
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 64px;
+  align-items: start;
+}
+
+/* ─── ARTICLE ─────────────────────────────────────── */
+.article h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 30px;
+  color: var(--navy);
+  margin: 48px 0 16px;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+.article h2:first-child { margin-top: 0; }
+.article h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--navy);
+  margin: 36px 0 12px;
+}
+.article p {
+  color: var(--text-light);
+  margin-bottom: 20px;
+  line-height: 1.75;
+  font-size: 16px;
+}
+.article p strong { color: var(--text); }
+.article .lead {
+  font-size: 18px;
+  color: var(--text);
+  font-weight: 400;
+  line-height: 1.7;
+  border-left: 4px solid var(--teal);
+  padding-left: 20px;
+  margin-bottom: 32px;
+}
+
+.pullquote {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+  border-radius: 12px;
+  padding: 32px 36px;
+  margin: 36px 0;
+  position: relative;
+}
+.pullquote::before {
+  content: '"';
+  font-family: 'DM Serif Display', serif;
+  font-size: 96px;
+  color: var(--teal);
+  opacity: 0.2;
+  position: absolute;
+  top: -8px;
+  left: 20px;
+  line-height: 1;
+}
+.pullquote p {
+  font-family: 'DM Serif Display', serif;
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--white);
+  font-style: italic;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* ─── COMPARISON TABLE ────────────────────────────── */
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 32px 0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(15,28,63,0.08);
+}
+.comparison-table thead th {
+  background: var(--navy);
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 14px 16px;
+  text-align: left;
+}
+.comparison-table tbody tr { border-bottom: 1px solid var(--border); }
+.comparison-table tbody tr:last-child { border-bottom: none; }
+.comparison-table tbody tr:nth-child(odd) { background: var(--off-white); }
+.comparison-table tbody tr:nth-child(even) { background: var(--white); }
+.comparison-table td {
+  padding: 14px 16px;
+  font-size: 14px;
+  vertical-align: top;
+}
+.comparison-table td:first-child {
+  font-weight: 600;
+  color: var(--navy);
+  width: 180px;
+  border-right: 1px solid var(--border);
+}
+.comparison-table td:nth-child(2) { color: var(--text-light); }
+.comparison-table td:last-child { color: var(--text-light); }
+
+/* ─── GAPS GRID ───────────────────────────────────── */
+.gaps-grid {
+  display: grid;
+  gap: 16px;
+  margin: 28px 0;
+}
+.gap-card {
+  background: var(--off-white);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px;
+  border-left: 4px solid var(--teal);
+}
+.gap-card h4 { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+.gap-card p { font-size: 14px; color: var(--text-light); line-height: 1.6; margin: 0; }
+
+/* ─── OBJECTIVE CARD ──────────────────────────────── */
+.objective-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 12px rgba(15,28,63,0.06);
+  border-left: 4px solid var(--teal);
+}
+.objective-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 6px;
+}
+.objective-card h4 { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
+.objective-card p { font-size: 14px; color: var(--text-light); line-height: 1.6; margin: 0; }
+
+/* ─── OBJECTIVE GRID ──────────────────────────────── */
+.objective-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 28px 0;
+}
+
+/* ─── FIELD TABLE ─────────────────────────────────── */
+.field-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 28px 0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(15,28,63,0.08);
+  font-size: 14px;
+}
+.field-table thead th {
+  background: var(--navy);
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 12px 16px;
+  text-align: left;
+}
+.field-table tbody tr { border-bottom: 1px solid var(--border); }
+.field-table tbody tr:last-child { border-bottom: none; }
+.field-table tbody tr:nth-child(odd) { background: var(--off-white); }
+.field-table tbody tr:nth-child(even) { background: var(--white); }
+.field-table td { padding: 12px 16px; vertical-align: top; line-height: 1.6; }
+.field-table td:first-child { font-weight: 600; color: var(--navy); width: 180px; border-right: 1px solid var(--border); }
+.field-table td:nth-child(2) { color: var(--text-light); width: 200px; border-right: 1px solid var(--border); }
+.field-table td:last-child { color: var(--text-light); }
+
+/* ─── PHASE CARDS ─────────────────────────────────── */
+.roadmap-section { margin: 48px 0; }
+.phase-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 32px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 12px rgba(15,28,63,0.07);
+  border-left: 4px solid var(--teal);
+}
+.phase-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.phase-number {
+  background: var(--teal);
+  color: var(--navy);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+.phase-title { font-size: 20px; font-weight: 700; color: var(--navy); }
+.phase-card ul { list-style: none; padding: 0; margin: 0; }
+.phase-card li {
+  padding-left: 28px;
+  position: relative;
+  margin-bottom: 12px;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+.phase-card li:last-child { margin-bottom: 0; }
+.phase-card li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 6px;
+  height: 6px;
+  background: var(--teal);
+  border-radius: 50%;
+}
+
+/* ─── SIDEBAR ─────────────────────────────────────── */
+.sidebar { position: sticky; top: 92px; }
+.sidebar-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 12px rgba(15,28,63,0.07);
+}
+.sidebar-card-header {
+  background: var(--navy);
+  padding: 16px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--white);
+  letter-spacing: 0.02em;
+}
+.sidebar-card-body { padding: 20px; }
+.toc-nav { display: flex; flex-direction: column; gap: 2px; }
+.toc-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  color: var(--text-light);
+  font-size: 13px;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+}
+.toc-link:hover { background: var(--off-white); color: var(--navy); }
+.toc-link.active { background: var(--teal-light); color: var(--teal-dark); font-weight: 600; }
+.toc-dot { width: 5px; height: 5px; background: var(--border); border-radius: 50%; flex-shrink: 0; }
+.toc-link.active .toc-dot { background: var(--teal); }
+
+.speeki-promo {
+  background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+}
+.speeki-promo h4 { color: var(--white); font-size: 15px; font-weight: 600; margin-bottom: 8px; }
+.speeki-promo p { color: rgba(255,255,255,0.55); font-size: 13px; margin-bottom: 16px; line-height: 1.5; }
+.promo-btn {
+  display: block;
+  background: var(--teal);
+  color: var(--navy);
+  text-align: center;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.promo-btn:hover { background: var(--teal-dark); }
+
+/* ─── FOOTER ──────────────────────────────────────── */
+.footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.65);
+  padding: 48px 0 32px;
+  margin-top: 80px;
+}
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+.footer-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.footer-brand h3 { color: var(--white); font-size: 22px; margin-bottom: 12px; }
+.footer-brand p { font-size: 14px; line-height: 1.6; margin-bottom: 20px; }
+.footer-col h4 { color: var(--white); font-size: 14px; font-weight: 600; margin-bottom: 16px; }
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 10px; }
+.footer-col a { color: rgba(255,255,255,0.65); text-decoration: none; font-size: 14px; transition: color 0.2s; }
+.footer-col a:hover { color: var(--teal); }
+.footer-bottom {
+  text-align: center;
+  font-size: 13px;
+  color: rgba(255,255,255,0.45);
+}
+
+/* ─── RESPONSIVE ──────────────────────────────────── */
+@media (max-width: 768px) {
+  .hero-inner { grid-template-columns: 1fr; gap: 32px; }
+  .hero-title { font-size: 36px; }
+  .content-section { grid-template-columns: 1fr; gap: 32px; }
+  .sidebar { position: static; }
+  .stats-inner { grid-template-columns: 1fr 1fr; gap: 20px; }
+  .stat-item { border-right: none; padding: 0; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+  .stat-item:nth-child(3), .stat-item:nth-child(4) { border-bottom: none; padding-bottom: 0; }
+  .footer-top { grid-template-columns: 1fr; gap: 32px; }
+  .objective-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <div class="nav-logo-mark">S</div>
+      <span class="nav-brand">Speeki</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Resources</a></li>
+      <li><a href="https://www.speeki.com" target="_blank">speeki.com</a></li>
+      <li><a href="https://www.speeki.com/en-GB/contact-us" target="_blank" class="nav-cta">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="../index.html">Resources</a>
+    <span class="breadcrumb-sep">/</span>
+    <a href="../index.html">Whitepapers</a>
+    <span class="breadcrumb-sep">/</span>
+    <span class="breadcrumb-current">ABMS Objectives</span>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-tag">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+        Whitepaper
+      </div>
+      <h1 class="hero-title">Beyond the Checkbox: <em>ABMS Objectives</em></h1>
+      <p class="hero-subtitle">Why companies need to rethink how they set objectives for their Anti-Bribery Management System</p>
+      <div class="hero-meta">
+        <div class="hero-meta-item">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+          March 2026
+        </div>
+        <div class="hero-meta-dot"></div>
+        <div class="hero-meta-item">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+          20 min read
+        </div>
+        <div class="hero-meta-dot"></div>
+        <div class="hero-meta-item">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" /></svg>
+          ISO 37001:2025
+        </div>
+      </div>
+      <div class="hero-actions">
+        <a href="#what-makes-effective" class="btn-primary">
+          Read Article
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+        </a>
+        <a href="https://www.speeki.com/en-GB/contact-us" target="_blank" class="btn-outline">
+          Contact Speeki
+        </a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-doc">
+        <div class="doc-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+        </div>
+        <div class="doc-info">
+          <h4>Speeki Article</h4>
+          <p>March 2026 • ABMS / ISO 37001</p>
+        </div>
+      </div>
+      <h3>Key Topics</h3>
+      <div class="hero-card-topics">
+        <div class="topic-item"><span class="topic-dot"></span>Activity vs Effectiveness Objectives</div>
+        <div class="topic-item"><span class="topic-dot"></span>ISO 37001:2025 Clause 6.2 Requirements</div>
+        <div class="topic-item"><span class="topic-dot"></span>25 Example SMART Objectives</div>
+        <div class="topic-item"><span class="topic-dot"></span>Measurement Methodology Design</div>
+        <div class="topic-item"><span class="topic-dot"></span>Regulator and Auditor Expectations</div>
+      </div>
+      <div class="hero-card-download">
+        <a href="mailto:info@speeki.com?subject=ABMS Objectives Article Request" class="download-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10" /></svg>
+          Request PDF
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-strip">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <div class="stat-number"><span>25</span></div>
+      <div class="stat-label">Example ABMS Objectives</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number"><span>5</span></div>
+      <div class="stat-label">SMART Framework Fields</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number"><span>4</span></div>
+      <div class="stat-label">Common Traps to Avoid</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">6.<span>2</span></div>
+      <div class="stat-label">ISO 37001:2025 Clause</div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="content-section">
+  <article class="article">
+    <p class="lead">Ask most compliance teams what their ABMS objectives look like and you will hear: "Complete mandatory training for all employees." Or: "Conduct the annual risk assessment." These are not bad objectives. But they measure activity — not effectiveness. ISO 37001:2025 is explicit: objectives must be meaningful, genuinely connected to identified bribery risks, and capable of demonstrating whether the system is actually working.</p>
+
+    <h2 id="problem">1. The Problem with Simple Objectives</h2>
+
+    <p>When organisations implement an Anti-Bribery Management System under ISO 37001, one of the most important — and most frequently mishandled — requirements is the setting of objectives. The objectives most teams produce track whether something was done, not whether doing it made any difference.</p>
+
+    <p>ISO 37001:2025 is explicit on this point. Clause 6.2 requires that ABMS objectives be measurable, take into account applicable requirements, be relevant to identified bribery risks, and be monitored and updated as appropriate. The Standard does not say objectives should be easy to achieve. It says they should be meaningful — genuinely connected to the risks the organisation faces and capable of demonstrating whether the system is actually working.</p>
+
+    <div class="pullquote">
+      <p>The Standard does not say objectives should be easy. It says they should be meaningful — genuinely connected to risk and capable of demonstrating whether the system is working.</p>
+    </div>
+
+    <p>This article argues that most organisations are leaving significant value on the table when they design their ABMS objectives — and that the organisations that get this right are not only better protected against bribery risk, but better positioned to defend their programme when it comes under external scrutiny.</p>
+
+    <h2 id="what-makes-effective">2. What Makes an ABMS Objective Genuinely Effective?</h2>
+
+    <p>A well-constructed ABMS objective does five things simultaneously. It is connected to a specific, identified bribery risk in the organisation's risk register — not a generic category, but a named risk with a reference number. It has a measurable target that can be tracked over time and that tells the organisation whether it is improving, static, or going backwards. It explains how the measurement will actually be performed — which system, which data, which process, which person. It has a defined timeframe that creates accountability without being arbitrary. And it is owned by a named individual who is responsible for its achievement.</p>
+
+    <p>The SMART framework — Specific, Measurable, Achievable, Relevant, Time-bound — is a useful starting point. But the application of SMART to ABMS objectives requires more rigour than it does in, say, a performance review. An ABMS objective that looks SMART on paper but is designed to be easily achievable rather than genuinely informative is not serving its purpose. It is generating false assurance.</p>
+
+    <h2 id="traps">3. The Traps Most Organisations Fall Into</h2>
+
+    <div class="gaps-grid">
+      <div class="gap-card">
+        <h4>Trap 1: Measuring Completion Rather Than Comprehension</h4>
+        <p>Training completion rates are the classic example. An objective of "95% anti-bribery training completion" can be achieved with a population of employees who clicked through a module without reading a word of it. A stronger objective measures the average post-assessment score and sets a minimum pass mark — distinguishing between people who completed the training and people who actually understood it.</p>
+      </div>
+      <div class="gap-card">
+        <h4>Trap 2: Measuring Inputs Rather Than Outcomes</h4>
+        <p>"Conduct the annual risk assessment" is an input objective. It tells you something happened. It tells you nothing about whether what happened changed anything. A better objective measures whether the risk assessment refreshed the risk profile, whether new risks were identified, and whether Top Management formally approved the output — all by a defined deadline.</p>
+      </div>
+      <div class="gap-card">
+        <h4>Trap 3: Objectives Detached From the Actual Risk Profile</h4>
+        <p>A global energy company operating in Papua New Guinea, India, and West Africa faces materially different bribery risks in each market. An objective designed for the organisation as a whole — set at a comfortable global average — may mask serious underperformance in the markets that matter most. Effective ABMS objectives are sometimes global, sometimes regional, and sometimes specific to a single country where a particular risk is concentrated.</p>
+      </div>
+      <div class="gap-card">
+        <h4>Trap 4: Ignoring the Behavioural Dimension</h4>
+        <p>Compliance programmes exist to change behaviour. But most ABMS objectives measure process compliance, not behavioural change. How many employees actually believe that managers in their company have integrity? How willing are people to use the Speak Up system? These questions require different measurement instruments: employee surveys, culture scores, behavioural metrics derived from system data. They are harder to design and significantly more valuable.</p>
+      </div>
+    </div>
+
+    <div class="pullquote">
+      <p>An objective designed for the organisation as a whole — set at a comfortable global average — may mask serious underperformance in the markets that matter most.</p>
+    </div>
+
+    <h2 id="anatomy">4. Anatomy of a Well-Constructed ABMS Objective</h2>
+
+    <p>Before looking at the breadth of what a good objectives programme covers, it is worth examining the structure of a single well-constructed objective in detail. The following is a fully worked example using the objective of reducing the turnaround time for Level 1 due diligence reports (OBJ-005).</p>
+
+    <table class="field-table">
+      <thead>
+        <tr>
+          <th>Field</th>
+          <th>Content (OBJ-005)</th>
+          <th>Why This Field Exists</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Relevant Risk</td>
+          <td>Delays in completing due diligence create pressure to proceed before screening is complete, increasing bribery risk.</td>
+          <td>Every objective must be anchored to a specific, identified risk. This field forces the question: what bribery risk is this objective actually managing?</td>
+        </tr>
+        <tr>
+          <td>Risk Reference</td>
+          <td>Risk BR-013 — Due Diligence Process Delay and Bypass Risk</td>
+          <td>Creates a traceable link from the objective back to the risk register — essential for audit purposes and demonstrating that the programme is risk-driven.</td>
+        </tr>
+        <tr>
+          <td>Scope</td>
+          <td>Global</td>
+          <td>Defining scope as Global, Regional, or Local makes clear who is accountable and prevents global averages from masking poor performance in specific markets.</td>
+        </tr>
+        <tr>
+          <td>Objective Statement</td>
+          <td>Reduce average Level 1 DD turnaround from 15 business days to 7 business days by Q3 2026.</td>
+          <td>Must include a baseline, a target, and a timeframe. "Improve due diligence turnaround" is not an objective statement. The difference is accountability.</td>
+        </tr>
+        <tr>
+          <td>SMART — Specific</td>
+          <td>Level 1 DD reports must be completed within 7 business days of request submission. No exceptions without documented justification.</td>
+          <td>Specificity eliminates ambiguity about what is being measured and what counts as compliant.</td>
+        </tr>
+        <tr>
+          <td>SMART — Measurable</td>
+          <td>Average number of business days between request submission and report completion, calculated monthly from the KYC system.</td>
+          <td>Defines the metric — not the target. Before setting any number, confirm the data exists and can be extracted consistently.</td>
+        </tr>
+        <tr>
+          <td>SMART — Achievable</td>
+          <td>Achievable through process streamlining, API integration with screening providers, and clearer intake requirements.</td>
+          <td>Confirms the organisation has the means to achieve the target if it invests the required effort.</td>
+        </tr>
+        <tr>
+          <td>SMART — Relevant</td>
+          <td>Faster turnaround reduces commercial pressure to bypass due diligence and reinforces compliance as an operational enabler.</td>
+          <td>Connects the objective back to the risk. The anti-bribery logic must be made explicit.</td>
+        </tr>
+        <tr>
+          <td>SMART — Time-bound</td>
+          <td>Baseline measured in Q1 2026. Target of 7 business days to be achieved by Q3 2026.</td>
+          <td>Without a timeframe, an objective cannot be failed. Creates a defined moment of reckoning.</td>
+        </tr>
+        <tr>
+          <td>How We Measure It</td>
+          <td>KYC system records request submission and completion dates. Monthly average calculated by region and DD type. Cases exceeding 10 days reviewed for root cause.</td>
+          <td>The measurement methodology is not a footnote — it specifies the system, frequency, granularity, and response when performance falls short.</td>
+        </tr>
+        <tr>
+          <td>Target</td>
+          <td>Average Level 1 DD turnaround of 7 business days or fewer by Q3 2026.</td>
+          <td>Specific, numeric, and time-bound. Not all objectives should have a 100% target — targets should reflect risk proportionality and operational reality.</td>
+        </tr>
+        <tr>
+          <td>Owner</td>
+          <td>Head of Due Diligence / Compliance Manager</td>
+          <td>Named ownership is non-negotiable. An objective without an owner is a wish.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="pullquote">
+      <p>An objective without an action plan is a statement of intent. An objective with a numbered action plan is a management commitment.</p>
+    </div>
+
+    <h2 id="examples">5. Twenty-Five Examples of What Better Looks Like</h2>
+
+    <p>To illustrate what a more rigorous and comprehensive ABMS objectives programme looks like, below are twenty-five examples spanning the full range of ABMS risk areas. Each is linked to a specific risk, scoped appropriately as global, regional, or local, and designed around a measurement methodology rather than a completion checklist.</p>
+
+    <div class="objective-grid">
+      <div class="objective-card">
+        <div class="objective-label">OBJ-001 — Global</div>
+        <h4>Third-Party EDD Coverage</h4>
+        <p>100% of new high-risk third parties complete enhanced due diligence before contract execution. Measured quarterly from the KYC system. Any shortfall triggers a 30-day root cause review.</p>
+      </div>
+      <div class="objective-card">
+        <div class="objective-label">OBJ-002 — Global</div>
+        <h4>Employee Perception of Management Integrity</h4>
+        <p>Increase Q6 of the Annual Employee Survey (manager integrity) from 36% to 75% by year-end. Disaggregated by region, with regions below 60% subject to targeted culture improvement plans.</p>
+      </div>
+      <div class="objective-card">
+        <div class="objective-label">OBJ-003 — Global</div>
+        <h4>Anti-Bribery Training Completion Rate</h4>
+        <p>95% of in-scope employees complete mandatory training by 31 December. Monthly LMS reports with two-stage escalation at 60 and 90 days overdue.</p>
+      </div>
+      <div class="objective-card">
+        <div class="objective-label">OBJ-004 — Global</div>
+        <h4>Gifts Pre-Approval vs Expense Claim Matching</h4>
+        <p>Fewer than 5% of government-related G&amp;E submissions have no matching pre-approval reference. Quarterly reconciliation with individual review of all unmatched claims.</p>
+      </div>
+      <div class="objective-card">
+        <div class="objective-label">OBJ-005 — Global</div>
+        <h4>Level 1 DD Report Turnaround Time</h4>
+        <p>Reduce average Level 1 DD turnaround from 15 to 7 business days by Q3. Monthly KYC system data. Root cause review for all cases exceeding 10 days.</p>
+      </div>
+      <div class="objective-card">
+        <div class="objective-label">OBJ-006 — Global</div>
+        <h4>Compliance SLA — Response to Issues</h4>
+        <p>95% of Tier 1 issues responded to within 3 business days; 100% of Tier 2 within 7. Case management system tracks all escalations with automated SLA alerts.</p>
+      </div>
+      <div class="objective-card">
+        <div class="objective-label">OBJ-007 — Global</div>
+        <h4>Speak Up Investigation Resolution Time</h4>
+        <p>Reduce average investigation closure time from 94 to 60 calendar days. Quarterly NAVEX data, disaggregated by investigation type and region.</p>
+      </div>
+      <div class="objective-card">
+        <div class="objective-label">OBJ-008 — Global</div>
+        <h4>ISO 37001 Internal Auditor Certification</h4>
+        <p>100% of compliance and internal audit team members with ABMS responsibilities hold current ISO 37001 auditor certification by 31 March. Certification register maintained and reviewed monthly.</p>
+      </div>
+      <div class="objective-card">
+        <div class="objective-label">OBJ-009 — Global</div>
+        <h4>Manager-Led Integrity Sessions</h4>
+        <p>100% of people managers deliver two structured integrity sessions with their teams during the year. Session completion records submitted to HR and tracked quarterly.</p>
+      </div>
+      <div class="objective-card">
+        <div class="objective-label">OBJ-010 — Global</div>
+        <h4>DD Report Quality — Error and Omission Rate</h4>
+        <p>Reduce DD report error rate from 22% to below 8% by year-end. Quarterly QA review of a random 15% sample of completed reports against a standardised checklist.</p>
+      </div>
+      <div class="objective-card">
+        <div class="objective-label">OBJ-011 — Global</div>
+        <h4>Annual Controls Testing Programme</h4>
+        <p>100% of planned ABMS controls tests completed by 30 November. 100% of findings have corrective actions assigned within 30 days. Controls testing tracker reviewed monthly.</p>
+      </div>
+      <div class="objective-card">
+        <div class="objective-label">OBJ-012 — Africa &amp; APAC</div>
+        <h4>ASP Due Diligence Completion</h4>
+        <p>100% of active Administrative Services Providers in Africa and Asia Pacific have a completed, current due diligence file by Q2. Regional scope reflects elevated ASP risk in these markets.</p>
+      </div>
+      <div class="objective-card">
+        <div class="objective-label">OBJ-013 — Global</div>
+        <h4>Conflicts of Interest Declaration Rate</h4>
+        <p>90% annual COI declaration completion rate by 31 December. 100% of declared conflicts assessed within 30 days of declaration. Monthly completion reports from COI system.</p>
+      </div>
+      <div class="objective-card">
+        <div class="objective-label">OBJ-014 — Global</div>
+        <h4>Background Check Completion Before Start Date</h4>
+        <p>100% of new hires in high-risk roles and jurisdictions complete background screening before their employment start date. Quarterly HR system comparison of check completion and start dates.</p>
+      </div>
+      <div class="objective-card">
+        <div class="objective-label">OBJ-015 — Africa Region</div>
+        <h4>Speak Up Awareness</h4>
+        <p>Increase the percentage of Africa-region employees correctly identifying the Speak Up channel from 41% to 70% in the Annual Employee Survey. Mid-year pulse check to assess progress.</p>
+      </div>
+      <div class="objective-card">
+        <div class="objective-label">OBJ-016 — Global</div>
+        <h4>Management Review Input Quality and Timeliness</h4>
+        <p>100% of management review input reports submitted on time and complete for all four 2026 reviews. Submission compliance tracked by the CCO and reported as a standing agenda item.</p>
+      </div>
+      <div class="objective-card">
+        <div class="objective-label">OBJ-017 — Global</div>
+        <h4>Annual Bribery Risk Assessment Refresh</h4>
+        <p>Risk assessment refresh completed and approved by Top Management by 31 March. ERM integration confirmed by 30 April. Evidence filed in the ABMS document management system.</p>
+      </div>
+      <div class="objective-card">
+        <div class="objective-label">OBJ-018 — Global</div>
+        <h4>Internal Audit Corrective Action Closure Rate</h4>
+        <p>90% of internal audit corrective actions closed within agreed timeframes by year-end. Actions overdue by more than 30 days escalated to the CCO. Quarterly tracker review.</p>
+      </div>
+      <div class="objective-card">
+        <div class="objective-label">OBJ-019 — Papua New Guinea</div>
+        <h4>Anti-Bribery Culture Score</h4>
+        <p>Improve PNG compliance culture survey score from 52% to 72% by year-end. Country-specific scope reflects elevated risk in this jurisdiction. Results disaggregated by team and location.</p>
+      </div>
+      <div class="objective-card">
+        <div class="objective-label">OBJ-020 — Global</div>
+        <h4>Sanctions Screening Coverage Rate</h4>
+        <p>100% sanctions screening coverage across all in-scope counterparty categories by Q3. Quarterly system-generated coverage report. Gaps addressed within 30 days of identification.</p>
+      </div>
+      <div class="objective-card">
+        <div class="objective-label">OBJ-021 — India</div>
+        <h4>G&amp;E Policy Breach Rate</h4>
+        <p>Reduce government-related G&amp;E policy breaches in India from 18 per quarter to fewer than 4 by Q4. Local scope reflects elevated risk. Quarterly reconciliation with individual breach follow-up.</p>
+      </div>
+      <div class="objective-card">
+        <div class="objective-label">OBJ-022 — Global</div>
+        <h4>Investigation Quality Audit Score</h4>
+        <p>Average investigation quality score of 80% or above across a random 30% sample of 2026 investigations. Independent annual audit using a standardised quality assessment rubric.</p>
+      </div>
+      <div class="objective-card">
+        <div class="objective-label">OBJ-023 — Global</div>
+        <h4>Business Associate Code of Conduct Acknowledgment</h4>
+        <p>100% of active high-risk and medium-risk business associates have a signed Code of Conduct acknowledgment by 30 June. Business associate acknowledgment register reviewed quarterly.</p>
+      </div>
+      <div class="objective-card">
+        <div class="objective-label">OBJ-024 — Global</div>
+        <h4>Top Management ABMS Training</h4>
+        <p>100% of Top Management complete a tailored ABMS responsibilities briefing by 30 June. New appointments complete within 60 days. Attendance register maintained in the ABMS document system.</p>
+      </div>
+      <div class="objective-card">
+        <div class="objective-label">OBJ-025 — Global</div>
+        <h4>Anti-Bribery Training Comprehension Score</h4>
+        <p>Average post-training assessment score of 80% or above by year-end. Minimum 70% pass mark required for individual completion to be recorded as compliant. Monthly LMS data by region and business unit.</p>
+      </div>
+    </div>
+
+    <h2 id="architecture">6. The Architecture Behind Good Objectives</h2>
+
+    <p>What distinguishes the objectives above from a typical ABMS objectives register is architecture. Each one is built on three foundations that most organisations underinvest in when setting their objectives.</p>
+
+    <div class="gaps-grid">
+      <div class="gap-card">
+        <h4>Foundation 1: Traceability</h4>
+        <p>Every objective should be linked to a specific risk in the risk register by reference number. This creates an auditable chain from risk to objective to action to outcome — the kind of chain that demonstrates to a certifier, a regulator, or a board that the programme is risk-driven rather than activity-driven.</p>
+      </div>
+      <div class="gap-card">
+        <h4>Foundation 2: Scope Granularity</h4>
+        <p>Not every objective should be global. Some of the most important objectives in a well-designed ABMS are the local ones — the country-specific, market-specific, or function-specific objectives that acknowledge where the real risk concentrations are. A global average target that looks acceptable may be concealing a market where performance is dangerously low.</p>
+      </div>
+      <div class="gap-card">
+        <h4>Foundation 3: Measurement Discipline</h4>
+        <p>The measurement methodology is not a footnote to the objective — it is the objective. If you cannot describe precisely how the data will be collected, by whom, from which system, on what frequency, and what will happen when the target is missed, then the objective is not yet finished. The organisations that do this well treat measurement design as a first-class activity.</p>
+      </div>
+    </div>
+
+    <h2 id="regulators">7. What Auditors and Regulators Are Looking For</h2>
+
+    <p>The shift from ISO 37001:2016 to ISO 37001:2025 has brought with it a clearer expectation that objectives are substantive, not ceremonial. Certification auditors conducting surveillance audits are increasingly probing not just whether objectives exist, but whether they are genuine indicators of programme performance. Can the organisation demonstrate trend data over time? Can it explain what happened when a target was missed? Are objectives reviewed and updated when the risk landscape changes?</p>
+
+    <p>Regulatory enforcement bodies apply a similar lens. The US Department of Justice, the UK Serious Fraud Office, and equivalent agencies in other jurisdictions have consistently indicated in published guidance that credit is given for programmes that are demonstrably effective — not merely formally implemented.</p>
+
+    <div class="pullquote">
+      <p>An objectives register that shows the organisation measuring the things that matter is significantly more valuable in a mitigation argument than one that records a series of easily completed process activities.</p>
+    </div>
+
+    <p>There is also a board governance dimension. Senior leaders and non-executive directors who are expected to provide oversight of the ABMS need meaningful data to do so. Telling a board that anti-bribery training completion was 94% tells them almost nothing about whether the organisation is protected from bribery. Telling them that investigation closure times dropped from 94 days to 58 days, that the culture score in a high-risk market improved by 20 percentage points, and that the error rate in due diligence reports fell from 22% to 6% — that tells them something they can act on.</p>
+
+    <h2 id="getting-started">8. Getting Started</h2>
+
+    <p>Redesigning an ABMS objectives register does not need to be a transformation project. The following steps provide a practical path for organisations looking to move from activity-based to outcome-based objectives.</p>
+
+    <div class="roadmap-section">
+      <div class="phase-card">
+        <div class="phase-header">
+          <div class="phase-number">1</div>
+          <div class="phase-title">Start With the Risk Register</div>
+        </div>
+        <ul>
+          <li>Every objective should have a parent risk — if an objective cannot be linked to a specific identified risk, it should be questioned</li>
+          <li>Work through the risk register and ask, for each material risk: what does success in managing this risk actually look like?</li>
+          <li>Ask: what would we measure to know if we are improving?</li>
+        </ul>
+      </div>
+
+      <div class="phase-card">
+        <div class="phase-header">
+          <div class="phase-number">2</div>
+          <div class="phase-title">Distinguish Activity Metrics From Outcome Metrics</div>
+        </div>
+        <ul>
+          <li>Activity metrics — training completed, audits conducted, reports filed — have their place as supporting data but should not be the primary objectives</li>
+          <li>Identify at least one outcome metric for each material risk area: a measure that tells you whether the control is working, not just whether it was performed</li>
+          <li>Challenge existing objectives: does this tell us anything about whether bribery risk is being reduced?</li>
+        </ul>
+      </div>
+
+      <div class="phase-card">
+        <div class="phase-header">
+          <div class="phase-number">3</div>
+          <div class="phase-title">Scope Your Objectives Deliberately</div>
+        </div>
+        <ul>
+          <li>For each objective, ask: is this risk global, regional, or concentrated in specific markets?</li>
+          <li>If the answer is specific markets, design the objective at that level</li>
+          <li>A single global objective may be appropriate as an overarching measure, but the subsidiary country-level objective is often where the real accountability sits</li>
+        </ul>
+      </div>
+
+      <div class="phase-card">
+        <div class="phase-header">
+          <div class="phase-number">4</div>
+          <div class="phase-title">Design the Measurement Methodology First</div>
+        </div>
+        <ul>
+          <li>Work out how you will collect the data, from which system, on what frequency, and who is responsible</li>
+          <li>The target number comes after the measurement method is defined — not before</li>
+          <li>If you cannot measure it consistently, you cannot set a meaningful target for it</li>
+        </ul>
+      </div>
+
+      <div class="phase-card">
+        <div class="phase-header">
+          <div class="phase-number">5</div>
+          <div class="phase-title">Build in a Review Cycle</div>
+        </div>
+        <ul>
+          <li>Objectives should be reviewed at every management review meeting</li>
+          <li>Ask: are targets being achieved? If not, why? Has the underlying risk changed?</li>
+          <li>The best ABMS objectives registers are living documents — updated as the programme matures and as new information about the risk landscape emerges</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 id="conclusion">9. Conclusion</h2>
+
+    <p>ISO 37001:2025 sets a clear expectation: ABMS objectives should be meaningful, measurable, and connected to identified bribery risks. Most organisations meet the minimum threshold. The organisations that genuinely distinguish themselves — in the eyes of certifiers, regulators, boards, and their own employees — are the ones that go further.</p>
+
+    <p>They design objectives that measure outcomes, not just activities. They scope objectives at the level of granularity that reflects where risk actually concentrates. They invest in the measurement architecture that makes tracking and accountability possible. And they review and update their objectives as the business and its risk profile evolve.</p>
+
+    <div class="pullquote">
+      <p>They are built to tell an organisation something true and useful about whether its anti-bribery programme is working. In an environment where bribery risk is persistent, regulators are sophisticated, and the consequences of failure are severe — that is exactly what an ABMS objective should do.</p>
+    </div>
+
+    <p>Speeki is an accredited ISO certification body providing independent assurance and certification under ISO 37001:2025 globally.</p>
+
+    <p><strong>Contact us at <a href="mailto:info@speeki.com" style="color: var(--teal);">info@speeki.com</a> or visit <a href="https://www.speeki.com" target="_blank" style="color: var(--teal);">www.speeki.com</a></strong></p>
+  </article>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-card">
+      <div class="sidebar-card-header">Table of Contents</div>
+      <div class="sidebar-card-body">
+        <nav class="toc-nav">
+          <a href="#problem" class="toc-link">
+            <span class="toc-dot"></span>
+            The Problem With Simple Objectives
+          </a>
+          <a href="#what-makes-effective" class="toc-link">
+            <span class="toc-dot"></span>
+            What Makes an Objective Effective
+          </a>
+          <a href="#traps" class="toc-link">
+            <span class="toc-dot"></span>
+            The Traps to Avoid
+          </a>
+          <a href="#anatomy" class="toc-link">
+            <span class="toc-dot"></span>
+            Anatomy of a Good Objective
+          </a>
+          <a href="#examples" class="toc-link active">
+            <span class="toc-dot"></span>
+            25 Example Objectives
+          </a>
+          <a href="#architecture" class="toc-link">
+            <span class="toc-dot"></span>
+            Architecture Behind Good Objectives
+          </a>
+          <a href="#regulators" class="toc-link">
+            <span class="toc-dot"></span>
+            What Auditors and Regulators Want
+          </a>
+          <a href="#getting-started" class="toc-link">
+            <span class="toc-dot"></span>
+            Getting Started
+          </a>
+          <a href="#conclusion" class="toc-link">
+            <span class="toc-dot"></span>
+            Conclusion
+          </a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-card-body">
+        <div class="speeki-promo">
+          <h4>ABMS Certification Services</h4>
+          <p>Speeki provides ISO 37001:2025 certification and assurance services across 100+ countries.</p>
+          <a href="https://www.speeki.com/en-GB/contact-us" target="_blank" class="promo-btn">Contact Speeki</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-card-header">Related Resources</div>
+      <div class="sidebar-card-body">
+        <nav class="toc-nav">
+          <a href="../iso-37001-checklist.html" class="toc-link">
+            <span class="toc-dot"></span>
+            ISO 37001 Compliance Checklist
+          </a>
+          <a href="abms-risk-assessment.html" class="toc-link">
+            <span class="toc-dot"></span>
+            ABMS Risk Assessment Whitepaper
+          </a>
+          <a href="iso-37001-employee-hiring.html" class="toc-link">
+            <span class="toc-dot"></span>
+            Employee Hiring in ISO 37001
+          </a>
+        </nav>
+      </div>
+    </div>
+  </aside>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h3>Speeki</h3>
+        <p>Building trust through independent assurance and compliance services across 100+ countries.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="../index.html">Whitepapers</a></li>
+          <li><a href="../index.html">Checklists</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="https://www.speeki.com" target="_blank">About Speeki</a></li>
+          <li><a href="https://www.speeki.com/en-GB/contact-us" target="_blank">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="https://www.speeki.com/en-GB/privacy-policy" target="_blank">Privacy Policy</a></li>
+          <li><a href="https://www.speeki.com/en-GB/terms" target="_blank">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 Speeki. All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script>
+// Smooth scroll for TOC links
+document.querySelectorAll('.toc-link').forEach(link => {
+  link.addEventListener('click', function(e) {
+    const href = this.getAttribute('href');
+    if (href && href.startsWith('#')) {
+      e.preventDefault();
+      const targetElement = document.querySelector(href);
+      if (targetElement) {
+        const navHeight = document.querySelector('.nav').offsetHeight;
+        const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navHeight - 20;
+        window.scrollTo({ top: targetPosition, behavior: 'smooth' });
+      }
+    }
+  });
+});
+
+// Active TOC link on scroll
+window.addEventListener('scroll', function() {
+  const sections = document.querySelectorAll('.article h2[id]');
+  const navHeight = document.querySelector('.nav').offsetHeight;
+  let current = '';
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - navHeight - 100;
+    if (window.pageYOffset >= sectionTop) {
+      current = section.getAttribute('id');
+    }
+  });
+
+  document.querySelectorAll('.toc-link').forEach(link => {
+    link.classList.remove('active');
+    const href = link.getAttribute('href');
+    if (href && href === '#' + current) {
+      link.classList.add('active');
+    }
+  });
+});
+</script>
+
+</body>
+</html>

@@ -90,6 +90,36 @@
                     "position": 9,
                     "name": "ISO 26000 Social Responsibility Checklist",
                     "url": "https://www.speeki.com/checklists/iso-26000-social-responsibility"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 10,
+                    "name": "Internal Controls Over Sustainability Reporting",
+                    "url": "https://www.speeki.com/resources/whitepapers/icsr-internal-controls"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 11,
+                    "name": "Anti-Bribery Risk Assessment Under ISO 37001 Clause 4.5",
+                    "url": "https://www.speeki.com/resources/whitepapers/abms-risk-assessment"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 12,
+                    "name": "Beyond the Checkbox: Setting Effective ABMS Objectives",
+                    "url": "https://www.speeki.com/resources/whitepapers/abms-objectives"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 13,
+                    "name": "Employee Hiring in ISO 37001",
+                    "url": "https://www.speeki.com/resources/whitepapers/iso-37001-employee-hiring"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 14,
+                    "name": "Non-Conformity Management",
+                    "url": "https://www.speeki.com/resources/whitepapers/non-conformity-management"
                 }
             ]
         }
@@ -636,6 +666,131 @@
         .quiz-options {
             max-height: 260px;
             overflow-y: auto;
+        }
+
+        /* Category Filter Bar */
+        .filter-bar {
+            margin-bottom: 40px;
+        }
+
+        .filter-bar-label {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--speeki-gray);
+            margin-bottom: 12px;
+        }
+
+        .filter-groups {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            align-items: center;
+        }
+
+        .filter-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .filter-group-divider {
+            width: 1px;
+            height: 24px;
+            background: var(--speeki-border);
+        }
+
+        .filter-btn {
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 1.5px solid var(--speeki-border);
+            background: #ffffff;
+            color: var(--speeki-gray);
+        }
+
+        .filter-btn:hover {
+            border-color: var(--speeki-green);
+            color: var(--speeki-dark);
+        }
+
+        .filter-btn.active {
+            background: var(--speeki-dark-blue);
+            color: #ffffff;
+            border-color: var(--speeki-dark-blue);
+        }
+
+        .filter-results-count {
+            font-size: 13px;
+            color: var(--speeki-gray);
+            margin-left: auto;
+        }
+
+        /* Whitepaper Card */
+        .whitepaper-card {
+            background: #ffffff;
+            border: 1px solid var(--speeki-border);
+            border-radius: 8px;
+            padding: 40px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: block;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .whitepaper-card::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 4px;
+            height: 0;
+            background: var(--speeki-dark-blue);
+            transition: height 0.3s ease;
+        }
+
+        .whitepaper-card:hover {
+            border-color: var(--speeki-dark-blue);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .whitepaper-card:hover::before {
+            height: 100%;
+        }
+
+        .whitepaper-card .card-tag {
+            background: #eff6ff;
+            color: #1d4ed8;
+        }
+
+        .whitepaper-card .card-cta {
+            color: var(--speeki-dark-blue);
+        }
+
+        /* Hidden card (filtered out) */
+        .resource-card.hidden,
+        .checklist-card.hidden,
+        .whitepaper-card.hidden {
+            display: none;
+        }
+
+        .no-results-msg {
+            display: none;
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--speeki-gray);
+            font-size: 16px;
+        }
+
+        .no-results-msg.show {
+            display: block;
         }
 
         /* Main Content */
@@ -1367,6 +1522,20 @@
             .cta-secondary {
                 text-align: center;
             }
+
+            .filter-groups {
+                gap: 8px;
+            }
+
+            .filter-group-divider {
+                display: none;
+            }
+
+            .filter-results-count {
+                width: 100%;
+                margin-left: 0;
+                margin-top: 8px;
+            }
         }
     </style>
 </head>
@@ -1392,7 +1561,7 @@
                     <span class="stat-label">Professionals using our tools</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">9</span>
+                    <span class="stat-number">14</span>
                     <span class="stat-label">Interactive resources</span>
                 </div>
                 <div class="stat-item">
@@ -1566,14 +1735,35 @@
 
     <main>
         <div class="container">
+
+            <!-- Category Filter Bar -->
+            <div class="filter-bar" id="resourceFilterBar">
+                <div class="filter-bar-label">Filter by</div>
+                <div class="filter-groups">
+                    <div class="filter-group">
+                        <button class="filter-btn active" data-filter="type" data-value="all">All Resources</button>
+                        <button class="filter-btn" data-filter="type" data-value="checklist">Checklists</button>
+                        <button class="filter-btn" data-filter="type" data-value="whitepaper">Whitepapers</button>
+                    </div>
+                    <div class="filter-group-divider"></div>
+                    <div class="filter-group">
+                        <button class="filter-btn" data-filter="topic" data-value="esg-reporting">ESG Reporting</button>
+                        <button class="filter-btn" data-filter="topic" data-value="iso-standards">ISO Standards</button>
+                        <button class="filter-btn" data-filter="topic" data-value="governance">Governance</button>
+                        <button class="filter-btn" data-filter="topic" data-value="anti-bribery">Anti-Bribery</button>
+                    </div>
+                    <span class="filter-results-count" id="filterResultsCount">14 resources</span>
+                </div>
+            </div>
+
             <section class="section-intro" id="interactive-checklists">
                 <h2>Interactive Checklists</h2>
                 <p>Comprehensive, actionable checklists designed for sustainability professionals, CSOs, and compliance teams. Each tool addresses critical pain points in ESG reporting and helps you maintain transparency and credibility.</p>
             </section>
 
-            <div class="resources-grid">
+            <div class="resources-grid" id="checklistsGrid">
                 <!-- Anti-Greenwashing Checklist -->
-                <a href="anti-greenwashing-checklist.html" class="checklist-card" data-checklist="anti-greenwashing">
+                <a href="checklists/anti-greenwashing-checklist.html" class="checklist-card" data-checklist="anti-greenwashing" data-type="checklist" data-topic="esg-reporting">
                     <span class="card-badge">Most Popular</span>
                     <span class="card-tag">ESG Reporting</span>
                     <h3 class="card-title">CSO's Anti-Greenwashing Checklist</h3>
@@ -1594,7 +1784,7 @@
                 </a>
 
                 <!-- GHG Reporting Readiness Checklist -->
-                <a href="ghg-reporting-readiness-checklist.html" class="checklist-card" data-checklist="ghg-reporting">
+                <a href="checklists/ghg-reporting-readiness-checklist.html" class="checklist-card" data-checklist="ghg-reporting" data-type="checklist" data-topic="esg-reporting">
                     <span class="card-tag">ESG Reporting</span>
                     <h3 class="card-title">GHG Reporting Readiness Checklist</h3>
                     <p class="card-description">Assess your organisation's ability to confidently calculate and report Scope 1, 2 and 3 emissions with this comprehensive readiness checklist.</p>
@@ -1613,7 +1803,7 @@
                 </a>
 
                 <!-- ESG Reporting Assurance Checklist -->
-                <a href="esg-reporting-assurance-checklist.html" class="checklist-card" data-checklist="esg-assurance">
+                <a href="checklists/esg-reporting-assurance-checklist.html" class="checklist-card" data-checklist="esg-assurance" data-type="checklist" data-topic="esg-reporting">
                     <span class="card-tag">ESG Reporting</span>
                     <h3 class="card-title">ESG Reporting Assurance Checklist</h3>
                     <p class="card-description">Prepare for external ESG assurance with this comprehensive readiness assessment covering CSRD, ESRS, IFRS S1/S2, GRI and TCFD reporting frameworks.</p>
@@ -1632,7 +1822,7 @@
                 </a>
 
                 <!-- ESG Software Must-Haves Checklist -->
-                <a href="esg-software-checklist.html" class="checklist-card" data-checklist="esg-software">
+                <a href="checklists/esg-software-checklist.html" class="checklist-card" data-checklist="esg-software" data-type="checklist" data-topic="esg-reporting">
                     <span class="card-tag">ESG Reporting</span>
                     <h3 class="card-title">ESG Software Must-Haves Checklist</h3>
                     <p class="card-description">Evaluate ESG software platforms on essential capabilities for data management, reporting, compliance and stakeholder engagement.</p>
@@ -1658,7 +1848,7 @@
 
             <div class="resources-grid">
                 <!-- ISO 37001 Anti-Bribery Checklist -->
-                <a href="iso-37001-checklist.html" class="checklist-card" data-checklist="iso-37001">
+                <a href="checklists/iso-37001-checklist.html" class="checklist-card" data-checklist="iso-37001" data-type="checklist" data-topic="anti-bribery">
                     <span class="card-badge">New</span>
                     <span class="card-tag">ISO Standards</span>
                     <h3 class="card-title">ISO 37001 Anti-Bribery Checklist</h3>
@@ -1678,7 +1868,7 @@
                 </a>
 
                 <!-- ISO 37002 Whistleblowing Checklist -->
-                <a href="iso-37002-whistleblowing-checklist.html" class="checklist-card" data-checklist="iso-37002">
+                <a href="checklists/iso-37002-whistleblowing-checklist.html" class="checklist-card" data-checklist="iso-37002" data-type="checklist" data-topic="iso-standards">
                     <span class="card-tag">ISO Standards</span>
                     <h3 class="card-title">ISO 37002 Whistleblowing Checklist</h3>
                     <p class="card-description">Build an effective whistleblowing management system based on ISO 37002 guidance to ensure compliance and foster speak-up culture.</p>
@@ -1697,7 +1887,7 @@
                 </a>
 
                 <!-- ISO 37000 Governance Checklist -->
-                <a href="iso-37000-governance-checklist.html" class="checklist-card" data-checklist="iso-37000">
+                <a href="checklists/iso-37000-governance-checklist.html" class="checklist-card" data-checklist="iso-37000" data-type="checklist" data-topic="governance">
                     <span class="card-tag">ISO Standards</span>
                     <h3 class="card-title">ISO 37000 Governance Checklist</h3>
                     <p class="card-description">Comprehensive guide to implementing ISO 37000 governance principles and achieving organisational excellence through effective governance frameworks.</p>
@@ -1715,7 +1905,7 @@
                 </a>
 
                 <!-- ISO 37008 Investigations Checklist -->
-                <a href="iso-37008-investigations-checklist.html" class="checklist-card" data-checklist="iso-37008">
+                <a href="checklists/iso-37008-investigations-checklist.html" class="checklist-card" data-checklist="iso-37008" data-type="checklist" data-topic="iso-standards">
                     <span class="card-tag">ISO Standards</span>
                     <h3 class="card-title">ISO 37008 Internal Investigations Checklist</h3>
                     <p class="card-description">Manage effective internal investigations with ISO 37008 best practices covering evidence handling, reporting, and legal compliance considerations.</p>
@@ -1734,7 +1924,7 @@
                 </a>
 
                 <!-- ISO 26000 Social Responsibility Checklist -->
-                <a href="iso-26000-social-responsibility-checklist.html" class="checklist-card" data-checklist="iso-26000">
+                <a href="checklists/iso-26000-social-responsibility-checklist.html" class="checklist-card" data-checklist="iso-26000" data-type="checklist" data-topic="governance">
                     <span class="card-tag">ISO Standards</span>
                     <h3 class="card-title">ISO 26000 Social Responsibility Checklist</h3>
                     <p class="card-description">Assess your organisation's social responsibility practices across seven core subjects using ISO 26000 guidance for sustainable business practices.</p>
@@ -1749,6 +1939,74 @@
                         <span>167 professionals completed this</span>
                     </div>
                     <span class="card-cta">Start Checklist</span>
+                </a>
+            </div>
+
+            <!-- Whitepapers Section -->
+            <section class="section-intro" style="margin-top: 80px;" id="whitepapers">
+                <h2>Whitepapers &amp; Guides</h2>
+                <p>In-depth technical guidance from Speeki's assurance and compliance specialists. Practical frameworks, methodologies, and expert insight to advance your understanding of key governance and sustainability standards.</p>
+            </section>
+
+            <div class="resources-grid" id="whitepaperGrid">
+                <!-- ICSR Whitepaper -->
+                <a href="whitepapers/icsr-internal-controls.html" class="whitepaper-card" data-type="whitepaper" data-topic="esg-reporting">
+                    <span class="card-tag">ESG Reporting</span>
+                    <h3 class="card-title">Internal Controls Over Sustainability Reporting</h3>
+                    <p class="card-description">Why non-financial data demands the same rigour as financial data. A comprehensive framework for building robust Internal Controls over Sustainability Reporting (ICSR).</p>
+                    <div class="card-meta">
+                        <span class="card-meta-item">12 min read</span>
+                        <span class="card-meta-item">Whitepaper</span>
+                    </div>
+                    <span class="card-cta">Read Whitepaper</span>
+                </a>
+
+                <!-- ABMS Risk Assessment Whitepaper -->
+                <a href="whitepapers/abms-risk-assessment.html" class="whitepaper-card" data-type="whitepaper" data-topic="anti-bribery">
+                    <span class="card-tag">Anti-Bribery</span>
+                    <h3 class="card-title">Anti-Bribery Risk Assessment Under ISO 37001 Clause 4.5</h3>
+                    <p class="card-description">Gross risk, net risk, control testing, and specificity requirements for ISO 37001 anti-bribery risk assessment. A practical framework from Speeki's certification auditors.</p>
+                    <div class="card-meta">
+                        <span class="card-meta-item">10 min read</span>
+                        <span class="card-meta-item">Whitepaper</span>
+                    </div>
+                    <span class="card-cta">Read Whitepaper</span>
+                </a>
+
+                <!-- Beyond the Checkbox: ABMS Objectives Whitepaper -->
+                <a href="whitepapers/speeki-abms-whitepaper_1.html" class="whitepaper-card" data-type="whitepaper" data-topic="anti-bribery">
+                    <span class="card-tag">Anti-Bribery</span>
+                    <h3 class="card-title">Beyond the Checkbox: Setting Effective ABMS Objectives</h3>
+                    <p class="card-description">How to move from activity-based compliance to outcome-focused anti-bribery management. Guidance on ISO 37001:2025 Clause 6.2 objectives that measure real impact.</p>
+                    <div class="card-meta">
+                        <span class="card-meta-item">15 min read</span>
+                        <span class="card-meta-item">Whitepaper</span>
+                    </div>
+                    <span class="card-cta">Read Whitepaper</span>
+                </a>
+
+                <!-- Employee Hiring in ISO 37001 Whitepaper -->
+                <a href="whitepapers/iso-37001-employee-hiring.html" class="whitepaper-card" data-type="whitepaper" data-topic="anti-bribery">
+                    <span class="card-tag">Anti-Bribery</span>
+                    <h3 class="card-title">Employee Hiring in ISO 37001: HR Due Diligence &amp; Declarations</h3>
+                    <p class="card-description">Pre-employment due diligence, performance incentive reviews, and anti-bribery declarations under ISO 37001:2025 Clause 7.2.2.2. Essential guidance for HR and compliance teams.</p>
+                    <div class="card-meta">
+                        <span class="card-meta-item">8 min read</span>
+                        <span class="card-meta-item">Whitepaper</span>
+                    </div>
+                    <span class="card-cta">Read Whitepaper</span>
+                </a>
+
+                <!-- Non-Conformity Management Whitepaper -->
+                <a href="whitepapers/non-conformity-management.html" class="whitepaper-card" data-type="whitepaper" data-topic="iso-standards">
+                    <span class="card-tag">ISO Standards</span>
+                    <h3 class="card-title">Non-Conformity Management: A Systematic Approach</h3>
+                    <p class="card-description">Building a robust non-conformity management system applicable across ISO 37001, 37301, 42001, 27001, 45001, 9001, and 14001. NCR lifecycle, root cause analysis, and corrective action frameworks.</p>
+                    <div class="card-meta">
+                        <span class="card-meta-item">10 min read</span>
+                        <span class="card-meta-item">Whitepaper</span>
+                    </div>
+                    <span class="card-cta">Read Whitepaper</span>
                 </a>
             </div>
 
@@ -1775,7 +2033,7 @@
                 <div class="lead-magnet-grid">
                     <div class="lead-magnet-text">
                         <h2>Download the Complete ESG Toolkit</h2>
-                        <p>Get all 9 resources in a single PDF bundle, plus exclusive bonus content to accelerate your ESG programme:</p>
+                        <p>Get all 14 resources in a single PDF bundle, plus exclusive bonus content to accelerate your ESG programme:</p>
                         <ul class="lead-magnet-benefits">
                             <li>All interactive resources in printable format</li>
                             <li>ESG implementation roadmap template</li>
@@ -1955,7 +2213,7 @@
         const checklistDatabase = {
             'anti-greenwashing': {
                 title: "CSO's Anti-Greenwashing Checklist",
-                link: 'anti-greenwashing-checklist.html',
+                link: 'checklists/anti-greenwashing-checklist.html',
                 category: 'reporting',
                 industries: ['manufacturing', 'retail', 'energy', 'financial', 'technology', 'healthcare', 'other'],
                 maturityFit: ['early', 'developing'],
@@ -1965,7 +2223,7 @@
             },
             'ghg-reporting': {
                 title: 'GHG Reporting Readiness Checklist',
-                link: 'ghg-reporting-readiness-checklist.html',
+                link: 'checklists/ghg-reporting-readiness-checklist.html',
                 category: 'reporting',
                 industries: ['manufacturing', 'energy', 'retail', 'technology', 'other'],
                 maturityFit: ['developing', 'mature'],
@@ -1975,7 +2233,7 @@
             },
             'esg-assurance': {
                 title: 'ESG Reporting Assurance Checklist',
-                link: 'esg-reporting-assurance-checklist.html',
+                link: 'checklists/esg-reporting-assurance-checklist.html',
                 category: 'reporting',
                 industries: ['financial', 'manufacturing', 'energy', 'healthcare', 'other'],
                 maturityFit: ['mature'],
@@ -1985,7 +2243,7 @@
             },
             'esg-software': {
                 title: 'ESG Software Must-Haves Checklist',
-                link: 'esg-software-checklist.html',
+                link: 'checklists/esg-software-checklist.html',
                 category: 'reporting',
                 industries: ['financial', 'technology', 'manufacturing', 'healthcare', 'other'],
                 maturityFit: ['developing', 'mature'],
@@ -1995,7 +2253,7 @@
             },
             'iso-37001': {
                 title: 'ISO 37001 Anti-Bribery Checklist',
-                link: 'iso-37001-checklist.html',
+                link: 'checklists/iso-37001-checklist.html',
                 category: 'compliance',
                 industries: ['financial', 'manufacturing', 'healthcare', 'energy', 'other'],
                 maturityFit: ['early', 'developing'],
@@ -2005,7 +2263,7 @@
             },
             'iso-37002': {
                 title: 'ISO 37002 Whistleblowing Checklist',
-                link: 'iso-37002-whistleblowing-checklist.html',
+                link: 'checklists/iso-37002-whistleblowing-checklist.html',
                 category: 'compliance',
                 industries: ['financial', 'manufacturing', 'healthcare', 'technology', 'retail', 'other'],
                 maturityFit: ['developing', 'mature'],
@@ -2015,7 +2273,7 @@
             },
             'iso-37000': {
                 title: 'ISO 37000 Governance Checklist',
-                link: 'iso-37000-governance-checklist.html',
+                link: 'checklists/iso-37000-governance-checklist.html',
                 category: 'governance',
                 industries: ['financial', 'manufacturing', 'energy', 'healthcare', 'other'],
                 maturityFit: ['early', 'developing'],
@@ -2025,7 +2283,7 @@
             },
             'iso-37008': {
                 title: 'ISO 37008 Internal Investigations Checklist',
-                link: 'iso-37008-investigations-checklist.html',
+                link: 'checklists/iso-37008-investigations-checklist.html',
                 category: 'compliance',
                 industries: ['financial', 'manufacturing', 'healthcare', 'other'],
                 maturityFit: ['mature'],
@@ -2035,7 +2293,7 @@
             },
             'iso-26000': {
                 title: 'ISO 26000 Social Responsibility Checklist',
-                link: 'iso-26000-social-responsibility-checklist.html',
+                link: 'checklists/iso-26000-social-responsibility-checklist.html',
                 category: 'governance',
                 industries: ['retail', 'manufacturing', 'technology', 'healthcare', 'other'],
                 maturityFit: ['developing', 'mature'],
@@ -2525,14 +2783,84 @@
         }
 
         // Track card clicks
-        document.querySelectorAll('.checklist-card').forEach(card => {
+        document.querySelectorAll('.checklist-card, .whitepaper-card').forEach(card => {
             card.addEventListener('click', function() {
-                const checklist = this.dataset.checklist;
+                const checklist = this.dataset.checklist || this.dataset.type;
                 if (window.SpeekiGrowth) {
                     window.SpeekiGrowth.trackEvent('checklist_clicked', { checklist: checklist });
                 }
             });
         });
+
+        // Resource filter functionality
+        (function() {
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const resultsCount = document.getElementById('filterResultsCount');
+            let activeType = 'all';
+            let activeTopic = null;
+
+            // Ensure ISO checklist cards have data-type and data-topic attributes
+            document.querySelectorAll('.checklist-card:not([data-type])').forEach(function(card) {
+                card.dataset.type = 'checklist';
+                var cls = card.dataset.checklist || '';
+                if (cls === 'iso-37000') {
+                    card.dataset.topic = 'governance';
+                } else if (cls.indexOf('iso') !== -1) {
+                    card.dataset.topic = 'iso-standards';
+                } else {
+                    card.dataset.topic = 'esg-reporting';
+                }
+            });
+
+            function applyFilters() {
+                var visible = 0;
+                document.querySelectorAll('.checklist-card, .whitepaper-card').forEach(function(card) {
+                    var typeMatch = activeType === 'all' || card.dataset.type === activeType;
+                    var topicMatch = !activeTopic || card.dataset.topic === activeTopic;
+                    if (typeMatch && topicMatch) {
+                        card.classList.remove('hidden');
+                        visible++;
+                    } else {
+                        card.classList.add('hidden');
+                    }
+                });
+                if (resultsCount) {
+                    resultsCount.textContent = visible + ' resource' + (visible !== 1 ? 's' : '');
+                }
+            }
+
+            filterBtns.forEach(function(btn) {
+                btn.addEventListener('click', function() {
+                    var filterType = this.dataset.filter;
+                    var filterValue = this.dataset.value;
+                    if (filterType === 'type') {
+                        document.querySelectorAll('.filter-btn[data-filter="type"]').forEach(function(b) {
+                            b.classList.remove('active');
+                        });
+                        this.classList.add('active');
+                        activeType = filterValue;
+                        document.querySelectorAll('.filter-btn[data-filter="topic"]').forEach(function(b) {
+                            b.classList.remove('active');
+                        });
+                        activeTopic = null;
+                    } else if (filterType === 'topic') {
+                        if (this.classList.contains('active')) {
+                            this.classList.remove('active');
+                            activeTopic = null;
+                        } else {
+                            document.querySelectorAll('.filter-btn[data-filter="topic"]').forEach(function(b) {
+                                b.classList.remove('active');
+                            });
+                            this.classList.add('active');
+                            activeTopic = filterValue;
+                        }
+                    }
+                    applyFilters();
+                });
+            });
+
+            applyFilters();
+        }());
 
         // Hide exit modal if already subscribed
         if (localStorage.getItem('speeki_lead') || localStorage.getItem('speeki_exit_lead')) {
