@@ -1,0 +1,2672 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <!-- Security: Protect page with authentication -->
+    <script src="../assets/auth.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ESG Maturity Scorecard by Speeki. Assess your organisation's ESG readiness across Governance, Environmental, Social, and Reporting dimensions. Get an instant score and tailored recommendations.">
+    <meta name="keywords" content="ESG maturity scorecard, ESG assessment, ESG readiness, sustainability assessment, ESG governance, ESG reporting readiness, Speeki">
+    <meta name="author" content="Speeki">
+    <meta property="og:title" content="ESG Maturity Scorecard | Speeki">
+    <meta property="og:description" content="Assess your organisation's ESG maturity across four dimensions and receive an instant score with recommended next steps.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.speeki.com/assets/speeki-og-image.jpg">
+    <meta property="og:url" content="https://www.speeki.com/en-GB/resources/tools/esg-maturity-scorecard.html">
+    <meta property="og:site_name" content="Speeki">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ESG Maturity Scorecard | Speeki">
+    <meta name="twitter:description" content="Assess your organisation's ESG maturity across four dimensions and receive an instant score with recommended next steps.">
+    <meta name="twitter:image" content="https://www.speeki.com/assets/speeki-og-image.jpg">
+    <meta name="robots" content="index, follow">
+    <title>ESG Maturity Scorecard | Speeki - Assess Your ESG Readiness</title>
+    <link rel="canonical" href="https://www.speeki.com/en-GB/resources/tools/esg-maturity-scorecard.html">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "ESG Maturity Scorecard",
+        "description": "Interactive ESG maturity assessment tool. Score your organisation's readiness across Governance, Environmental, Social, and Reporting dimensions.",
+        "url": "https://www.speeki.com/en-GB/resources/tools/esg-maturity-scorecard.html",
+        "applicationCategory": "BusinessApplication",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Speeki",
+            "url": "https://www.speeki.com"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/growth.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --speeki-green: #00FF7F;
+            --speeki-green-text: #00875a;
+            --speeki-dark-blue: #0a1f44;
+            --speeki-dark: #0a1f44;
+            --speeki-gray: #4a5568;
+            --speeki-light-gray: #f8f9fa;
+            --speeki-border: #e5e7eb;
+        }
+
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', 'Arial', sans-serif;
+            background: #ffffff;
+            color: var(--speeki-dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 4vw;
+        }
+
+        .container-wide {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 4vw;
+        }
+
+        /* Skip Link */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #0a1f44;
+            color: #fff;
+            padding: 8px 16px;
+            z-index: 10000;
+            font-size: 14px;
+        }
+        .skip-link:focus { top: 0; }
+
+        /* Visually Hidden */
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0,0,0,0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* Navbar */
+        nav {
+            background: rgba(255, 255, 255, 0.95);
+            border-bottom: 1px solid var(--speeki-border);
+            padding: 20px 4vw;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .nav-logo img {
+            height: 50px;
+            width: auto;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .nav-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--speeki-gray);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-back:hover {
+            color: var(--speeki-dark);
+        }
+
+        .nav-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--speeki-green);
+            color: var(--speeki-dark);
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+
+        .nav-cta:hover {
+            filter: brightness(0.95);
+            transform: translateY(-1px);
+        }
+
+        /* Page Header */
+        .page-header {
+            background: linear-gradient(135deg, var(--speeki-dark-blue) 0%, #1a2d5c 100%);
+            padding: 60px 0 80px;
+            color: #ffffff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: -60px;
+            right: -60px;
+            width: 250px;
+            height: 250px;
+            background: var(--speeki-green);
+            opacity: 0.08;
+            border-radius: 50%;
+        }
+
+        .page-header::after {
+            content: '';
+            position: absolute;
+            bottom: -80px;
+            left: -40px;
+            width: 200px;
+            height: 200px;
+            background: var(--speeki-green);
+            opacity: 0.05;
+            border-radius: 50%;
+        }
+
+        .page-header-inner {
+            position: relative;
+            z-index: 1;
+        }
+
+        .tool-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0, 255, 127, 0.15);
+            color: var(--speeki-green);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 20px;
+        }
+
+        .page-header h1 {
+            font-size: 48px;
+            font-weight: 700;
+            letter-spacing: -1.5px;
+            margin-bottom: 20px;
+            line-height: 1.1;
+            color: #ffffff;
+        }
+
+        .page-header p {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.85);
+            max-width: 680px;
+            line-height: 1.7;
+        }
+
+        .header-meta {
+            display: flex;
+            gap: 32px;
+            margin-top: 32px;
+            flex-wrap: wrap;
+        }
+
+        .header-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.75);
+            font-weight: 500;
+        }
+
+        .header-meta-item svg {
+            color: var(--speeki-green);
+            flex-shrink: 0;
+        }
+
+        /* Scorecard Wrapper */
+        .scorecard-wrapper {
+            padding: 60px 0 80px;
+        }
+
+        /* Intro / Start Screen */
+        #scorecardIntro {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        #scorecardIntro h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--speeki-dark);
+            margin-bottom: 16px;
+            letter-spacing: -0.8px;
+        }
+
+        #scorecardIntro p {
+            font-size: 17px;
+            color: var(--speeki-gray);
+            line-height: 1.7;
+            max-width: 640px;
+            margin: 0 auto 32px;
+        }
+
+        .dimensions-preview {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin: 40px 0;
+            text-align: left;
+        }
+
+        .dimension-preview-card {
+            background: var(--speeki-light-gray);
+            border: 1px solid var(--speeki-border);
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .dimension-preview-card .dim-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            background: var(--speeki-dark-blue);
+            color: var(--speeki-green);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .dimension-preview-card h4 {
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--speeki-dark);
+            margin-bottom: 4px;
+        }
+
+        .dimension-preview-card p {
+            font-size: 13px;
+            color: var(--speeki-gray);
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .btn-start {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--speeki-green);
+            color: var(--speeki-dark-blue);
+            padding: 18px 40px;
+            border-radius: 8px;
+            border: none;
+            font-family: inherit;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-start:hover {
+            background: #00e070;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 255, 127, 0.3);
+        }
+
+        /* Quiz Panel */
+        #scorecardQuiz {
+            display: none;
+        }
+
+        .dimension-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 32px;
+            padding-bottom: 24px;
+            border-bottom: 2px solid var(--speeki-border);
+        }
+
+        .dimension-icon {
+            width: 52px;
+            height: 52px;
+            border-radius: 10px;
+            background: var(--speeki-dark-blue);
+            color: var(--speeki-green);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+
+        .dimension-label {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .dimension-name {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--speeki-gray);
+        }
+
+        .dimension-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--speeki-dark);
+            letter-spacing: -0.5px;
+        }
+
+        /* Progress */
+        .progress-container {
+            margin-bottom: 40px;
+        }
+
+        .progress-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .progress-label {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--speeki-gray);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .progress-percent {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--speeki-green-text);
+        }
+
+        .progress-bar {
+            height: 6px;
+            background: var(--speeki-border);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--speeki-green);
+            border-radius: 3px;
+            transition: width 0.4s ease;
+        }
+
+        .progress-steps {
+            display: flex;
+            gap: 6px;
+            margin-top: 12px;
+        }
+
+        .progress-step-dot {
+            flex: 1;
+            height: 4px;
+            border-radius: 2px;
+            background: var(--speeki-border);
+            transition: background 0.3s;
+        }
+
+        .progress-step-dot.active {
+            background: var(--speeki-green);
+        }
+
+        .progress-step-dot.completed {
+            background: var(--speeki-dark-blue);
+        }
+
+        /* Question */
+        .question-block {
+            display: none;
+            animation: fadeInUp 0.3s ease;
+        }
+
+        .question-block.active {
+            display: block;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .question-counter {
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: var(--speeki-gray);
+            margin-bottom: 12px;
+        }
+
+        .question-text {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--speeki-dark);
+            margin-bottom: 8px;
+            line-height: 1.4;
+            letter-spacing: -0.3px;
+        }
+
+        .question-context {
+            font-size: 14px;
+            color: var(--speeki-gray);
+            margin-bottom: 24px;
+            line-height: 1.6;
+            padding: 12px 16px;
+            background: #f0fdf4;
+            border-left: 3px solid var(--speeki-green);
+            border-radius: 0 6px 6px 0;
+        }
+
+        .answer-options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-bottom: 32px;
+        }
+
+        .answer-option {
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 16px 20px;
+            border: 2px solid var(--speeki-border);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.2s;
+            background: #ffffff;
+        }
+
+        .answer-option:hover {
+            border-color: var(--speeki-green);
+            background: #f0fdf4;
+        }
+
+        .answer-option.selected {
+            border-color: var(--speeki-green);
+            background: #f0fdf4;
+        }
+
+        .answer-option input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            accent-color: var(--speeki-green);
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .answer-option-content {
+            flex: 1;
+        }
+
+        .answer-option-label {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--speeki-dark);
+            margin-bottom: 3px;
+        }
+
+        .answer-option-detail {
+            font-size: 13px;
+            color: var(--speeki-gray);
+            line-height: 1.5;
+        }
+
+        .answer-score-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: var(--speeki-border);
+            font-size: 11px;
+            font-weight: 700;
+            color: var(--speeki-gray);
+            flex-shrink: 0;
+            transition: all 0.2s;
+        }
+
+        .answer-option.selected .answer-score-badge {
+            background: var(--speeki-green);
+            color: var(--speeki-dark-blue);
+        }
+
+        /* Navigation Buttons */
+        .question-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .btn-nav {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+        }
+
+        .btn-back {
+            background: transparent;
+            color: var(--speeki-gray);
+            border: 2px solid var(--speeki-border) !important;
+        }
+
+        .btn-back:hover {
+            border-color: var(--speeki-gray) !important;
+            color: var(--speeki-dark);
+        }
+
+        .btn-next {
+            background: var(--speeki-dark-blue);
+            color: #ffffff;
+            margin-left: auto;
+        }
+
+        .btn-next:hover:not(:disabled) {
+            background: #1a2d5c;
+            transform: translateY(-1px);
+        }
+
+        .btn-next:disabled {
+            background: #d1d5db;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .btn-calculate {
+            background: var(--speeki-green);
+            color: var(--speeki-dark-blue);
+        }
+
+        .btn-calculate:hover:not(:disabled) {
+            background: #00e070;
+            transform: translateY(-1px);
+        }
+
+        /* Dimension Transition Card */
+        .dimension-transition {
+            display: none;
+            text-align: center;
+            padding: 40px 20px;
+            animation: fadeInUp 0.3s ease;
+        }
+
+        .dimension-transition.active {
+            display: block;
+        }
+
+        .dim-transition-icon {
+            width: 72px;
+            height: 72px;
+            border-radius: 14px;
+            background: var(--speeki-dark-blue);
+            color: var(--speeki-green);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            margin: 0 auto 24px;
+        }
+
+        .dim-transition-completed {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: var(--speeki-green-text);
+            margin-bottom: 8px;
+        }
+
+        .dim-transition-next {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--speeki-dark);
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+
+        .dim-transition-desc {
+            font-size: 15px;
+            color: var(--speeki-gray);
+            max-width: 500px;
+            margin: 0 auto 32px;
+            line-height: 1.6;
+        }
+
+        .dim-score-preview {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--speeki-light-gray);
+            border: 1px solid var(--speeki-border);
+            border-radius: 8px;
+            padding: 12px 20px;
+            font-size: 14px;
+            color: var(--speeki-gray);
+            margin-bottom: 32px;
+        }
+
+        .dim-score-preview strong {
+            color: var(--speeki-dark);
+            font-size: 18px;
+        }
+
+        /* Results Panel */
+        #scorecardResults {
+            display: none;
+        }
+
+        .results-header {
+            text-align: center;
+            padding: 48px 0 40px;
+            border-bottom: 1px solid var(--speeki-border);
+            margin-bottom: 48px;
+        }
+
+        .maturity-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 24px;
+            border-radius: 24px;
+            font-size: 14px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 24px;
+        }
+
+        .maturity-badge.beginning {
+            background: #fef3c7;
+            color: #92400e;
+        }
+
+        .maturity-badge.developing {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+
+        .maturity-badge.established {
+            background: #d1fae5;
+            color: #065f46;
+        }
+
+        .maturity-badge.leading {
+            background: #f0fdf4;
+            color: var(--speeki-dark-blue);
+            border: 2px solid var(--speeki-green);
+        }
+
+        .score-circle {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            margin: 0 auto 24px;
+            border: 6px solid;
+            position: relative;
+        }
+
+        .score-circle.beginning { border-color: #f59e0b; }
+        .score-circle.developing { border-color: #3b82f6; }
+        .score-circle.established { border-color: #10b981; }
+        .score-circle.leading { border-color: var(--speeki-green); box-shadow: 0 0 0 4px rgba(0,255,127,0.15); }
+
+        .score-number {
+            font-size: 42px;
+            font-weight: 700;
+            color: var(--speeki-dark);
+            line-height: 1;
+            letter-spacing: -2px;
+        }
+
+        .score-out-of {
+            font-size: 14px;
+            color: var(--speeki-gray);
+            font-weight: 500;
+        }
+
+        .results-header h2 {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--speeki-dark);
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+        }
+
+        .results-summary {
+            font-size: 17px;
+            color: var(--speeki-gray);
+            max-width: 640px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* Dimension Scores */
+        .dim-scores-section {
+            margin-bottom: 48px;
+        }
+
+        .dim-scores-section h3 {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--speeki-dark);
+            margin-bottom: 24px;
+            letter-spacing: -0.5px;
+        }
+
+        .dim-score-row {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 18px;
+        }
+
+        .dim-score-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            width: 200px;
+            flex-shrink: 0;
+        }
+
+        .dim-score-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 6px;
+            background: var(--speeki-dark-blue);
+            color: var(--speeki-green);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            flex-shrink: 0;
+        }
+
+        .dim-score-name {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--speeki-dark);
+        }
+
+        .dim-score-bar-wrap {
+            flex: 1;
+            background: var(--speeki-border);
+            border-radius: 4px;
+            height: 10px;
+            overflow: hidden;
+        }
+
+        .dim-score-bar {
+            height: 100%;
+            border-radius: 4px;
+            transition: width 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            background: var(--speeki-green);
+        }
+
+        .dim-score-value {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--speeki-dark);
+            width: 60px;
+            text-align: right;
+            flex-shrink: 0;
+        }
+
+        /* Strengths & Improvements */
+        .strengths-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+            margin-bottom: 48px;
+        }
+
+        .strengths-card {
+            background: #ffffff;
+            border: 1px solid var(--speeki-border);
+            border-radius: 10px;
+            padding: 28px;
+        }
+
+        .strengths-card.strengths {
+            border-left: 4px solid var(--speeki-green);
+        }
+
+        .strengths-card.improvements {
+            border-left: 4px solid #f59e0b;
+        }
+
+        .strengths-card h4 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--speeki-dark);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .strengths-card h4 .card-icon {
+            font-size: 18px;
+        }
+
+        .strengths-list {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .strengths-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 14px;
+            color: var(--speeki-gray);
+            line-height: 1.5;
+        }
+
+        .strengths-list li::before {
+            content: '';
+            flex-shrink: 0;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--speeki-gray);
+            margin-top: 7px;
+        }
+
+        .strengths-card.strengths .strengths-list li::before {
+            background: var(--speeki-green-text);
+        }
+
+        .strengths-card.improvements .strengths-list li::before {
+            background: #f59e0b;
+        }
+
+        /* Recommended Resources */
+        .resources-section {
+            margin-bottom: 48px;
+        }
+
+        .resources-section h3 {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--speeki-dark);
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .resources-section > p {
+            font-size: 15px;
+            color: var(--speeki-gray);
+            margin-bottom: 24px;
+        }
+
+        .resource-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .resource-link-card {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 18px 20px;
+            border: 1px solid var(--speeki-border);
+            border-radius: 10px;
+            text-decoration: none;
+            transition: all 0.2s;
+            background: #ffffff;
+        }
+
+        .resource-link-card:hover {
+            border-color: var(--speeki-green);
+            background: #f0fdf4;
+            transform: translateX(4px);
+        }
+
+        .resource-link-type {
+            display: inline-flex;
+            align-items: center;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            flex-shrink: 0;
+            width: 88px;
+            justify-content: center;
+        }
+
+        .resource-link-type.checklist {
+            background: #f0fdf4;
+            color: #166534;
+        }
+
+        .resource-link-type.whitepaper {
+            background: #eff6ff;
+            color: #1d4ed8;
+        }
+
+        .resource-link-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--speeki-dark);
+            flex: 1;
+        }
+
+        .resource-link-arrow {
+            color: var(--speeki-gray);
+            transition: transform 0.2s;
+            flex-shrink: 0;
+        }
+
+        .resource-link-card:hover .resource-link-arrow {
+            transform: translateX(4px);
+            color: var(--speeki-green-text);
+        }
+
+        /* CTA Lead Capture */
+        .cta-capture {
+            background: var(--speeki-light-gray);
+            border: 1px solid var(--speeki-border);
+            border-radius: 12px;
+            padding: 40px;
+            margin-bottom: 32px;
+        }
+
+        .cta-capture h3 {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--speeki-dark);
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .cta-capture > p {
+            font-size: 15px;
+            color: var(--speeki-gray);
+            margin-bottom: 24px;
+            line-height: 1.6;
+        }
+
+        .capture-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr auto;
+            gap: 12px;
+            align-items: end;
+        }
+
+        .capture-form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .capture-form-group label {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--speeki-dark);
+        }
+
+        .capture-form-group input {
+            width: 100%;
+            padding: 12px 14px;
+            border: 2px solid var(--speeki-border);
+            border-radius: 8px;
+            font-size: 14px;
+            font-family: inherit;
+            transition: border-color 0.2s;
+        }
+
+        .capture-form-group input:focus {
+            outline: none;
+            border-color: var(--speeki-green);
+        }
+
+        .btn-capture {
+            padding: 12px 24px;
+            background: var(--speeki-dark-blue);
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+
+        .btn-capture:hover {
+            background: #1a2d5c;
+            transform: translateY(-1px);
+        }
+
+        .capture-success {
+            display: none;
+            align-items: center;
+            gap: 12px;
+            padding: 16px;
+            background: #f0fdf4;
+            border: 1px solid var(--speeki-green);
+            border-radius: 8px;
+            font-size: 14px;
+            color: var(--speeki-green-text);
+            font-weight: 500;
+        }
+
+        .capture-success.show {
+            display: flex;
+        }
+
+        /* Share Section */
+        .share-section {
+            text-align: center;
+            padding: 32px 0;
+            border-top: 1px solid var(--speeki-border);
+            margin-top: 8px;
+        }
+
+        .share-section h4 {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--speeki-gray);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+        }
+
+        .share-btns {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 20px;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+            border: 1.5px solid var(--speeki-border);
+            background: #ffffff;
+            color: var(--speeki-gray);
+        }
+
+        .share-btn:hover {
+            background: var(--speeki-dark-blue);
+            color: #ffffff;
+            border-color: var(--speeki-dark-blue);
+        }
+
+        /* Retake Button */
+        .retake-section {
+            text-align: center;
+            padding-top: 16px;
+        }
+
+        .btn-retake {
+            background: transparent;
+            color: var(--speeki-gray);
+            border: 1.5px solid var(--speeki-border);
+            padding: 10px 24px;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-retake:hover {
+            border-color: var(--speeki-gray);
+            color: var(--speeki-dark);
+        }
+
+        /* CTA Banner */
+        .demo-cta-banner {
+            background: linear-gradient(135deg, var(--speeki-dark-blue) 0%, #1a2d5c 100%);
+            padding: 60px 0;
+            margin-top: 0;
+        }
+
+        .demo-cta-inner {
+            text-align: center;
+            max-width: 640px;
+            margin: 0 auto;
+        }
+
+        .demo-cta-inner h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 16px;
+            letter-spacing: -0.8px;
+        }
+
+        .demo-cta-inner p {
+            font-size: 17px;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 32px;
+            line-height: 1.7;
+        }
+
+        .demo-cta-btns {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .demo-cta-primary {
+            display: inline-block;
+            background: var(--speeki-green);
+            color: var(--speeki-dark-blue);
+            padding: 16px 36px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.2s;
+        }
+
+        .demo-cta-primary:hover {
+            background: #00e070;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 255, 127, 0.3);
+        }
+
+        .demo-cta-secondary {
+            display: inline-block;
+            background: transparent;
+            color: rgba(255, 255, 255, 0.85);
+            padding: 16px 36px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            border: 1.5px solid rgba(255, 255, 255, 0.35);
+            transition: all 0.2s;
+        }
+
+        .demo-cta-secondary:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Related Resources section */
+        .related-section {
+            padding: 60px 0;
+            background: var(--speeki-light-gray);
+        }
+
+        .related-section h2 {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--speeki-dark);
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .related-section > .container-wide > p {
+            font-size: 15px;
+            color: var(--speeki-gray);
+            margin-bottom: 32px;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .related-card {
+            background: #ffffff;
+            border: 1px solid var(--speeki-border);
+            border-radius: 8px;
+            padding: 24px;
+            text-decoration: none;
+            transition: all 0.2s;
+            display: block;
+        }
+
+        .related-card:hover {
+            border-color: var(--speeki-green);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.07);
+        }
+
+        .related-card-tag {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+            background: #f0fdf4;
+            color: #166534;
+        }
+
+        .related-card-tag.wp {
+            background: #eff6ff;
+            color: #1d4ed8;
+        }
+
+        .related-card h4 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--speeki-dark);
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+
+        .related-card p {
+            font-size: 13px;
+            color: var(--speeki-gray);
+            line-height: 1.5;
+            margin-bottom: 14px;
+        }
+
+        .related-card-cta {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--speeki-dark);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .related-card:hover .related-card-cta {
+            color: var(--speeki-green-text);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--speeki-dark-blue);
+            padding: 40px 0;
+            color: rgba(255,255,255,0.6);
+            font-size: 13px;
+            text-align: center;
+        }
+
+        footer a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            color: var(--speeki-green);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 32px;
+            }
+
+            .dimensions-preview {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .strengths-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .capture-form {
+                grid-template-columns: 1fr;
+            }
+
+            .question-text {
+                font-size: 18px;
+            }
+
+            .dim-score-label {
+                width: 140px;
+            }
+
+            .dim-score-name {
+                font-size: 13px;
+            }
+
+            .header-meta {
+                gap: 16px;
+            }
+
+            .results-header h2 {
+                font-size: 28px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .dimensions-preview {
+                grid-template-columns: 1fr;
+            }
+
+            .page-header h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Sticky Navbar -->
+    <nav>
+        <div class="nav-content">
+            <a href="../index.html" class="nav-logo" aria-label="Speeki - Back to Resources Hub">
+                <img src="../speeki-logo.png" alt="Speeki" style="height: 50px; width: auto;">
+            </a>
+            <div class="nav-right">
+                <a href="../index.html" class="nav-back" aria-label="Back to all resources">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                    All Resources
+                </a>
+                <a href="https://www.speeki.com" class="nav-cta">Visit Speeki.com</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="page-header">
+        <div class="container page-header-inner">
+            <div class="tool-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                </svg>
+                Free Interactive Tool
+            </div>
+            <h1>ESG Maturity Scorecard</h1>
+            <p>Assess your organisation's ESG readiness across four dimensions. Answer 12 questions to receive an instant maturity score and tailored recommendations — no registration required.</p>
+            <div class="header-meta">
+                <span class="header-meta-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                    5–8 minutes
+                </span>
+                <span class="header-meta-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="3" y1="9" x2="21" y2="9"></line>
+                        <line x1="9" y1="21" x2="9" y2="9"></line>
+                    </svg>
+                    4 Dimensions · 12 Questions
+                </span>
+                <span class="header-meta-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                        <path d="M2 17l10 5 10-5"></path>
+                        <path d="M2 12l10 5 10-5"></path>
+                    </svg>
+                    Assurance perspective
+                </span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main-content" class="scorecard-wrapper">
+        <div class="container">
+
+            <!-- INTRO SCREEN -->
+            <div id="scorecardIntro">
+                <h2>How prepared is your ESG programme?</h2>
+                <p>This scorecard examines your organisation's ESG maturity from an assurance and audit perspective — helping you understand where evidence-based practices are strong and where gaps may exist.</p>
+
+                <div class="dimensions-preview" role="list">
+                    <div class="dimension-preview-card" role="listitem">
+                        <div class="dim-icon" aria-hidden="true">&#9881;</div>
+                        <h4>Governance</h4>
+                        <p>Leadership accountability, board oversight, and strategic integration of ESG.</p>
+                    </div>
+                    <div class="dimension-preview-card" role="listitem">
+                        <div class="dim-icon" aria-hidden="true">&#127807;</div>
+                        <h4>Environmental</h4>
+                        <p>Data collection, emissions tracking, targets, and verification processes.</p>
+                    </div>
+                    <div class="dimension-preview-card" role="listitem">
+                        <div class="dim-icon" aria-hidden="true">&#128101;</div>
+                        <h4>Social</h4>
+                        <p>Workforce practices, supply chain due diligence, and community engagement.</p>
+                    </div>
+                    <div class="dimension-preview-card" role="listitem">
+                        <div class="dim-icon" aria-hidden="true">&#128200;</div>
+                        <h4>Reporting</h4>
+                        <p>Disclosure quality, framework alignment, and assurance readiness.</p>
+                    </div>
+                </div>
+
+                <button class="btn-start" id="btnStart" aria-label="Start the ESG Maturity Scorecard assessment">
+                    Start Assessment
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+
+                <p style="font-size: 13px; color: var(--speeki-gray); margin-top: 20px;">
+                    No account required. Your progress is saved locally in your browser.
+                </p>
+            </div>
+
+            <!-- QUIZ PANEL -->
+            <div id="scorecardQuiz" role="form" aria-label="ESG Maturity Assessment">
+
+                <!-- Progress Bar -->
+                <div class="progress-container" aria-live="polite" aria-atomic="true">
+                    <div class="progress-meta">
+                        <span class="progress-label" id="progressLabel">Dimension 1 of 4</span>
+                        <span class="progress-percent" id="progressPercent">0% complete</span>
+                    </div>
+                    <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Assessment progress">
+                        <div class="progress-fill" id="progressFill" style="width: 0%"></div>
+                    </div>
+                    <div class="progress-steps" id="progressSteps" aria-hidden="true">
+                        <!-- 12 dots generated by JS -->
+                    </div>
+                </div>
+
+                <!-- Dimension Header -->
+                <div class="dimension-header">
+                    <div class="dimension-icon" id="dimIcon" aria-hidden="true">&#9881;</div>
+                    <div class="dimension-label">
+                        <span class="dimension-name" id="dimName">Governance</span>
+                        <span class="dimension-title" id="dimTitle">ESG Governance &amp; Leadership</span>
+                    </div>
+                </div>
+
+                <!-- Questions Container -->
+                <div id="questionsContainer">
+                    <!-- Injected dynamically -->
+                </div>
+
+                <!-- Dimension Transition -->
+                <div class="dimension-transition" id="dimTransition" aria-live="polite">
+                    <div class="dim-transition-icon" id="transIcon" aria-hidden="true">&#127807;</div>
+                    <div class="dim-transition-completed" id="transCompleted">Governance Complete</div>
+                    <div class="dim-transition-next" id="transNext">Next: Environmental</div>
+                    <p class="dim-transition-desc" id="transDesc">Now we'll look at how your organisation tracks, measures, and verifies environmental performance data.</p>
+                    <div class="dim-score-preview" aria-label="Your Governance score">
+                        Governance score: <strong id="transScore">0/9</strong>
+                    </div>
+                    <button class="btn-nav btn-next" id="btnContinueDim" aria-label="Continue to next dimension">
+                        Continue
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="question-nav" id="questionNav">
+                    <button class="btn-nav btn-back" id="btnBack" style="display:none" aria-label="Previous question">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                        Back
+                    </button>
+                    <button class="btn-nav btn-next" id="btnNext" disabled aria-label="Next question">
+                        Next
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+
+            </div><!-- /scorecardQuiz -->
+
+            <!-- RESULTS PANEL -->
+            <div id="scorecardResults" aria-live="polite">
+
+                <div class="results-header">
+                    <div class="score-circle" id="scoreCircle" aria-label="Your overall ESG maturity score">
+                        <span class="score-number" id="scoreDisplay">0</span>
+                        <span class="score-out-of">out of 36</span>
+                    </div>
+                    <div class="maturity-badge" id="maturityBadge" role="status"></div>
+                    <h2 id="resultsTitle">Your ESG Maturity Level</h2>
+                    <p class="results-summary" id="resultsSummary"></p>
+                </div>
+
+                <!-- Dimension Scores -->
+                <div class="dim-scores-section">
+                    <h3>Score by Dimension</h3>
+                    <div id="dimScoreBars">
+                        <!-- Injected by JS -->
+                    </div>
+                </div>
+
+                <!-- Strengths & Improvements -->
+                <div class="strengths-grid">
+                    <div class="strengths-card strengths">
+                        <h4><span class="card-icon" aria-hidden="true">&#10003;</span> Your Strengths</h4>
+                        <ul class="strengths-list" id="strengthsList" aria-label="Your ESG strengths">
+                            <!-- Injected by JS -->
+                        </ul>
+                    </div>
+                    <div class="strengths-card improvements">
+                        <h4><span class="card-icon" aria-hidden="true">&#8679;</span> Priority Areas</h4>
+                        <ul class="strengths-list" id="improvementsList" aria-label="Priority areas for improvement">
+                            <!-- Injected by JS -->
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Recommended Resources -->
+                <div class="resources-section">
+                    <h3>Recommended Resources</h3>
+                    <p>Based on your scores, these Speeki resources address your most relevant areas:</p>
+                    <div class="resource-links" id="recommendedResources">
+                        <!-- Injected by JS -->
+                    </div>
+                </div>
+
+                <!-- Lead Capture CTA -->
+                <div class="cta-capture" id="leadCapture">
+                    <h3>Get Detailed Recommendations</h3>
+                    <p>Enter your email to receive a personalised report with specific action steps based on your scorecard results, plus early access to new Speeki resources.</p>
+                    <form class="capture-form" id="captureForm" novalidate>
+                        <div class="capture-form-group">
+                            <label for="captureEmail">Work Email</label>
+                            <input type="email" id="captureEmail" name="email" placeholder="you@company.com" required autocomplete="email">
+                        </div>
+                        <div class="capture-form-group">
+                            <label for="captureName">Your Name</label>
+                            <input type="text" id="captureName" name="name" placeholder="Jane Smith" autocomplete="name">
+                        </div>
+                        <button type="submit" class="btn-capture">Send My Report</button>
+                    </form>
+                    <div class="capture-success" id="captureSuccess" role="status" aria-live="polite">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        Your scorecard report is on its way. Check your inbox.
+                    </div>
+                    <p style="font-size: 12px; color: var(--speeki-gray); margin-top: 12px;">
+                        By submitting, you agree to our <a href="https://www.speeki.com/privacy" style="color: var(--speeki-dark); text-decoration: underline;">Privacy Policy</a>. Unsubscribe anytime.
+                    </p>
+                </div>
+
+                <!-- Share Buttons -->
+                <div class="share-section">
+                    <h4>Share Your Result</h4>
+                    <div class="share-btns">
+                        <a id="shareLinkedIn" href="#" target="_blank" rel="noopener noreferrer" class="share-btn" aria-label="Share on LinkedIn">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                            LinkedIn
+                        </a>
+                        <a id="shareTwitter" href="#" target="_blank" rel="noopener noreferrer" class="share-btn" aria-label="Share on X (Twitter)">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                            Share on X
+                        </a>
+                        <button class="share-btn" id="btnCopyLink" aria-label="Copy link to scorecard">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                            Copy Link
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Retake -->
+                <div class="retake-section">
+                    <button class="btn-retake" id="btnRetake" aria-label="Retake the ESG Maturity Scorecard">Retake Assessment</button>
+                </div>
+
+            </div><!-- /scorecardResults -->
+
+        </div><!-- /container -->
+    </main>
+
+    <!-- Demo CTA Banner -->
+    <section class="demo-cta-banner" aria-label="Learn more about Speeki">
+        <div class="demo-cta-inner">
+            <h2>See Speeki in Action</h2>
+            <p>Speeki is the assurance-focused ESG platform for organisations that need verifiable, audit-ready sustainability data. See how it maps to your maturity gaps.</p>
+            <div class="demo-cta-btns">
+                <a href="https://www.speeki.com/request-demo" class="demo-cta-primary">Request a Demo</a>
+                <a href="../index.html" class="demo-cta-secondary">Explore All Resources</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Related Resources -->
+    <section class="related-section" aria-label="Related resources">
+        <div class="container-wide">
+            <h2>Related Resources</h2>
+            <p>Deepen your ESG programme with these tools and guides.</p>
+            <div class="related-grid">
+                <a href="../checklists/esg-reporting-assurance-checklist.html" class="related-card">
+                    <span class="related-card-tag">Checklist</span>
+                    <h4>ESG Reporting Assurance Checklist</h4>
+                    <p>Prepare for external ESG assurance under CSRD, ESRS, IFRS S1/S2, GRI and TCFD.</p>
+                    <span class="related-card-cta">Start Checklist &#8594;</span>
+                </a>
+                <a href="../checklists/anti-greenwashing-checklist.html" class="related-card">
+                    <span class="related-card-tag">Checklist</span>
+                    <h4>CSO's Anti-Greenwashing Checklist</h4>
+                    <p>Ten essential actions to reduce greenwashing risk in ESG reporting and communications.</p>
+                    <span class="related-card-cta">Start Checklist &#8594;</span>
+                </a>
+                <a href="../whitepapers/icsr-internal-controls.html" class="related-card">
+                    <span class="related-card-tag wp">Whitepaper</span>
+                    <h4>Internal Controls Over Sustainability Reporting</h4>
+                    <p>Why non-financial data demands the same rigour as financial data. A framework for ICSR.</p>
+                    <span class="related-card-cta">Read Whitepaper &#8594;</span>
+                </a>
+                <a href="../checklists/ghg-reporting-readiness-checklist.html" class="related-card">
+                    <span class="related-card-tag">Checklist</span>
+                    <h4>GHG Reporting Readiness Checklist</h4>
+                    <p>Review key requirements for Scope 1, 2 and 3 emissions reporting in line with GHG frameworks.</p>
+                    <span class="related-card-cta">Start Checklist &#8594;</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Speeki. All rights reserved. &nbsp;|&nbsp;
+                <a href="https://www.speeki.com/privacy">Privacy Policy</a> &nbsp;|&nbsp;
+                <a href="https://www.speeki.com">Speeki.com</a>
+            </p>
+            <p style="margin-top: 8px;">This tool is for educational and self-assessment purposes only. It does not constitute professional advice.</p>
+        </div>
+    </footer>
+
+    <script>
+    (function() {
+        'use strict';
+
+        // ============================================================
+        // QUESTIONS DATA
+        // 4 dimensions × 3 questions each = 12 questions
+        // Each answer scored 0–3
+        // Max score = 12 × 3 = 36
+        // ============================================================
+        const dimensions = [
+            {
+                id: 'governance',
+                name: 'Governance',
+                title: 'ESG Governance &amp; Leadership',
+                icon: '&#9881;',
+                description: 'How leadership accountability, board oversight, and strategic integration of ESG are structured in your organisation.',
+                questions: [
+                    {
+                        id: 'g1',
+                        text: 'How is ESG accountability structured at the executive level in your organisation?',
+                        context: 'Assurance providers look for clear ownership and accountability for ESG data and commitments at the senior leadership level.',
+                        answers: [
+                            { label: 'No formal accountability', detail: 'ESG responsibilities are informal or ad hoc with no designated owner.', score: 0 },
+                            { label: 'Designated ESG manager', detail: 'A named individual owns ESG, but the role sits outside executive leadership.', score: 1 },
+                            { label: 'C-suite accountability', detail: 'A member of the executive team (e.g., CSO or CFO) holds formal ESG responsibility.', score: 2 },
+                            { label: 'Board-level ESG committee', detail: 'ESG oversight is embedded at board level with defined terms of reference and reporting.', score: 3 }
+                        ]
+                    },
+                    {
+                        id: 'g2',
+                        text: 'How is ESG integrated into your organisation\'s corporate strategy and business planning?',
+                        context: 'A key indicator of ESG maturity is whether sustainability considerations are embedded in business decisions, not treated as a separate programme.',
+                        answers: [
+                            { label: 'Not yet integrated', detail: 'ESG is addressed separately from core business strategy and planning.', score: 0 },
+                            { label: 'Referenced in strategy', detail: 'ESG appears in strategy documents but has limited influence on operational decisions.', score: 1 },
+                            { label: 'Material topic alignment', detail: 'ESG strategy is informed by a materiality assessment and linked to business priorities.', score: 2 },
+                            { label: 'Fully integrated', detail: 'ESG objectives are integrated into capital allocation, M&A due diligence, and performance management.', score: 3 }
+                        ]
+                    },
+                    {
+                        id: 'g3',
+                        text: 'How does your organisation identify and manage ESG-related risks?',
+                        context: 'Effective ESG governance requires a systematic approach to identifying, assessing, and mitigating material sustainability risks.',
+                        answers: [
+                            { label: 'No formal process', detail: 'ESG risks are not formally identified or managed.', score: 0 },
+                            { label: 'Ad hoc identification', detail: 'Some ESG risks are identified reactively, but there is no systematic framework.', score: 1 },
+                            { label: 'Risk register exists', detail: 'ESG risks are included in the enterprise risk register with defined owners and controls.', score: 2 },
+                            { label: 'Integrated risk management', detail: 'ESG risk management is aligned with TCFD/TNFD frameworks, stress-tested, and reported to the board.', score: 3 }
+                        ]
+                    }
+                ]
+            },
+            {
+                id: 'environmental',
+                name: 'Environmental',
+                title: 'Environmental Performance',
+                icon: '&#127807;',
+                description: 'How your organisation tracks, measures, targets, and verifies environmental performance data.',
+                questions: [
+                    {
+                        id: 'e1',
+                        text: 'How does your organisation track and verify environmental performance data (e.g., GHG emissions, energy, water)?',
+                        context: 'Data quality is a primary focus of assurance providers. The robustness of collection, calculation, and verification processes directly affects assurance outcomes.',
+                        answers: [
+                            { label: 'No formal tracking', detail: 'Environmental data is not systematically collected or managed.', score: 0 },
+                            { label: 'Manual spreadsheets', detail: 'Data is collected manually with limited controls or consistency checks.', score: 1 },
+                            { label: 'Structured data management', detail: 'Defined methodology with internal reviews; data is collected consistently across reporting boundaries.', score: 2 },
+                            { label: 'Automated with independent verification', detail: 'Automated data collection systems with documented methodology and independent third-party verification.', score: 3 }
+                        ]
+                    },
+                    {
+                        id: 'e2',
+                        text: 'Does your organisation have documented environmental targets, and how are they monitored?',
+                        context: 'Targets should be specific, time-bound, and aligned to recognised frameworks such as the Science Based Targets initiative (SBTi). Monitoring demonstrates intent and accountability.',
+                        answers: [
+                            { label: 'No formal targets', detail: 'No documented environmental targets exist.', score: 0 },
+                            { label: 'Aspirational targets', detail: 'High-level commitments exist (e.g., "net zero by 2050") without detailed pathways or milestones.', score: 1 },
+                            { label: 'Defined targets with milestones', detail: 'Targets are documented, time-bound, and tracked with interim milestones.', score: 2 },
+                            { label: 'Science-aligned, independently reviewed', detail: 'Targets are validated against science-based frameworks (e.g., SBTi) and progress is independently reviewed.', score: 3 }
+                        ]
+                    },
+                    {
+                        id: 'e3',
+                        text: 'How does your organisation manage environmental impacts in its supply chain?',
+                        context: 'Scope 3 emissions and supply chain environmental practices are increasingly subject to disclosure requirements and assurance scrutiny under CSRD and ESRS E1.',
+                        answers: [
+                            { label: 'Not assessed', detail: 'Supply chain environmental impacts are not assessed or managed.', score: 0 },
+                            { label: 'High-level screening', detail: 'Key suppliers are screened at a high level; limited data is collected.', score: 1 },
+                            { label: 'Supplier questionnaires/audits', detail: 'Suppliers complete environmental questionnaires or are subject to audits; Scope 3 data is partially collected.', score: 2 },
+                            { label: 'Full Scope 3 management', detail: 'Comprehensive Scope 3 inventory with supplier engagement programme and verified data.', score: 3 }
+                        ]
+                    }
+                ]
+            },
+            {
+                id: 'social',
+                name: 'Social',
+                title: 'Social &amp; Workforce Practices',
+                icon: '&#128101;',
+                description: 'How your organisation manages workforce practices, supply chain due diligence, and community engagement.',
+                questions: [
+                    {
+                        id: 's1',
+                        text: 'How does your organisation identify and address human rights risks in its operations and supply chain?',
+                        context: 'Human rights due diligence is required under frameworks including CSRD, the UN Guiding Principles (UNGPs), and the EU Corporate Sustainability Due Diligence Directive (CSDDD).',
+                        answers: [
+                            { label: 'No formal process', detail: 'Human rights risks are not formally assessed or managed.', score: 0 },
+                            { label: 'Policy exists, limited implementation', detail: 'A human rights policy is in place, but due diligence processes are limited or inconsistent.', score: 1 },
+                            { label: 'Structured due diligence', detail: 'Human rights risk assessments are conducted for operations and key suppliers with documented remediation processes.', score: 2 },
+                            { label: 'UNGP-aligned with public reporting', detail: 'Comprehensive human rights due diligence aligned with UNGPs, with grievance mechanisms and public reporting on findings.', score: 3 }
+                        ]
+                    },
+                    {
+                        id: 's2',
+                        text: 'How does your organisation collect, track, and report on workforce diversity and inclusion data?',
+                        context: 'D&I metrics are subject to increasing regulatory disclosure requirements and are examined by assurance providers for data quality and consistency.',
+                        answers: [
+                            { label: 'No data collected', detail: 'Workforce diversity data is not systematically collected.', score: 0 },
+                            { label: 'Basic headcount data', detail: 'Gender and headcount data is tracked but limited in scope (e.g., no pay gap analysis or intersectional data).', score: 1 },
+                            { label: 'Comprehensive workforce data', detail: 'Diversity metrics tracked across gender, seniority, and other dimensions with pay equity analysis.', score: 2 },
+                            { label: 'Verified and publicly disclosed', detail: 'Comprehensive D&I data is independently verified and disclosed in line with ESRS S1 or GRI 405 requirements.', score: 3 }
+                        ]
+                    },
+                    {
+                        id: 's3',
+                        text: 'How does your organisation engage with workers on ESG topics and workplace conditions?',
+                        context: 'Worker engagement and grievance mechanisms are a key indicator of social maturity. Assurance providers assess whether channels are genuine, accessible, and acted upon.',
+                        answers: [
+                            { label: 'No formal engagement', detail: 'There are no formal mechanisms for worker input on ESG or workplace matters.', score: 0 },
+                            { label: 'Annual surveys', detail: 'Annual employee surveys exist, but results have limited linkage to ESG decisions.', score: 1 },
+                            { label: 'Active channels and feedback loops', detail: 'Multiple channels exist (surveys, representative bodies, grievance mechanisms) with documented follow-up.', score: 2 },
+                            { label: 'Structured worker participation', detail: 'Workers or their representatives are formally consulted on ESG strategy and outcomes, with transparent reporting on how input influences decisions.', score: 3 }
+                        ]
+                    }
+                ]
+            },
+            {
+                id: 'reporting',
+                name: 'Reporting',
+                title: 'ESG Reporting &amp; Disclosure',
+                icon: '&#128200;',
+                description: 'How your organisation aligns disclosures with frameworks, manages reporting quality, and prepares for external assurance.',
+                questions: [
+                    {
+                        id: 'r1',
+                        text: 'Which ESG reporting frameworks does your organisation disclose against, and how consistently?',
+                        context: 'Framework alignment is foundational for assurance readiness. Disclosures that follow recognised standards such as GRI, IFRS S1/S2, or ESRS are more readily subject to independent verification.',
+                        answers: [
+                            { label: 'No formal framework', detail: 'ESG disclosures are not aligned with any recognised reporting framework.', score: 0 },
+                            { label: 'Partial or informal alignment', detail: 'Some disclosures reference a framework, but alignment is incomplete or inconsistent.', score: 1 },
+                            { label: 'Single framework applied', detail: 'ESG reporting consistently follows one recognised framework (e.g., GRI, CDP, TCFD).', score: 2 },
+                            { label: 'Multi-framework with assurance', detail: 'Reporting aligns with multiple frameworks (e.g., IFRS S1/S2, ESRS, GRI) and is subject to third-party assurance.', score: 3 }
+                        ]
+                    },
+                    {
+                        id: 'r2',
+                        text: 'How are internal controls over ESG data and reporting managed?',
+                        context: 'Internal controls over sustainability reporting (ICSR) are the backbone of assurance-ready disclosures. Without them, material misstatement risk is high.',
+                        answers: [
+                            { label: 'No formal controls', detail: 'ESG data flows into reports without documented controls or review processes.', score: 0 },
+                            { label: 'Informal checks', detail: 'Data is reviewed informally before publication, but controls are not documented.', score: 1 },
+                            { label: 'Documented control framework', detail: 'Data quality controls are documented, tested, and managed by a responsible team.', score: 2 },
+                            { label: 'ICSR programme with audit trail', detail: 'Formal ICSR programme with control documentation, testing schedules, and audit trail supporting external assurance.', score: 3 }
+                        ]
+                    },
+                    {
+                        id: 'r3',
+                        text: 'What level of external assurance does your organisation obtain for ESG disclosures?',
+                        context: 'External assurance is the ultimate test of reporting credibility. Regulators (CSRD, ISSB) are moving towards mandatory limited assurance, with expectations of reasonable assurance over time.',
+                        answers: [
+                            { label: 'No external assurance', detail: 'ESG disclosures are not subject to any form of external review.', score: 0 },
+                            { label: 'Management review only', detail: 'Disclosures are reviewed internally before publication with no external validation.', score: 1 },
+                            { label: 'Limited assurance engagement', detail: 'An independent practitioner has performed a limited assurance engagement on selected ESG metrics.', score: 2 },
+                            { label: 'Reasonable assurance engagement', detail: 'A reasonable assurance engagement has been performed in line with ISAE 3000 or equivalent standards.', score: 3 }
+                        ]
+                    }
+                ]
+            }
+        ];
+
+        // ============================================================
+        // SCORING & RECOMMENDATIONS
+        // ============================================================
+        const maturityLevels = [
+            {
+                id: 'beginning',
+                label: 'Beginning',
+                range: [0, 9],
+                emoji: '&#127759;',
+                summary: 'Your organisation is in the early stages of ESG development. The foundations — governance accountability, data collection, and reporting frameworks — are not yet firmly in place. This is a common starting point, and the priorities are to establish clear ownership, begin measuring what matters, and understand your material topics.',
+                strengths: [
+                    'Recognising the need for structured ESG assessment',
+                    'Openness to building formal processes from the ground up',
+                    'Potential to leapfrog to best practice by implementing modern systems'
+                ],
+                improvements: [
+                    'Assign clear executive accountability for ESG',
+                    'Conduct a materiality assessment to identify priority topics',
+                    'Begin collecting baseline data on key environmental metrics'
+                ]
+            },
+            {
+                id: 'developing',
+                label: 'Developing',
+                range: [10, 18],
+                emoji: '&#127757;',
+                summary: 'Your organisation has established some ESG practices but they are not yet consistent or comprehensive. You likely have policies in place and are collecting some data, but gaps exist in data quality, framework alignment, and assurance readiness. The next step is to formalise processes and improve the evidence base for your disclosures.',
+                strengths: [
+                    'Basic ESG policies and processes are in place',
+                    'Some environmental and social data is being collected',
+                    'Leadership is aware of ESG reporting requirements'
+                ],
+                improvements: [
+                    'Formalise internal controls over ESG data to improve quality',
+                    'Align reporting to at least one recognised framework (GRI or TCFD)',
+                    'Conduct a formal human rights due diligence assessment'
+                ]
+            },
+            {
+                id: 'established',
+                label: 'Established',
+                range: [19, 27],
+                emoji: '&#127758;',
+                summary: 'Your organisation has well-developed ESG practices with documented processes, clear accountabilities, and structured reporting. You are likely meeting current regulatory disclosure requirements. The focus now should be on deepening data quality, pursuing external assurance, and aligning with emerging mandatory frameworks such as CSRD and ISSB standards.',
+                strengths: [
+                    'Documented ESG processes and internal controls',
+                    'Framework-aligned reporting with consistent data',
+                    'Clear executive and board accountability for ESG'
+                ],
+                improvements: [
+                    'Pursue external limited assurance on key ESG metrics',
+                    'Strengthen Scope 3 emissions data and supply chain due diligence',
+                    'Align disclosures with IFRS S1/S2 or ESRS requirements ahead of compliance deadlines'
+                ]
+            },
+            {
+                id: 'leading',
+                label: 'Leading',
+                range: [28, 36],
+                emoji: '&#11088;',
+                summary: 'Your organisation demonstrates ESG leadership with robust governance, high-quality data, and assurance-ready disclosures. You are ahead of most peers and likely meeting or exceeding current regulatory expectations. The focus should be on maintaining this standard as requirements evolve, deepening supply chain transparency, and moving towards reasonable assurance over time.',
+                strengths: [
+                    'Board-level ESG oversight with robust governance',
+                    'Verified environmental and social data with strong controls',
+                    'External assurance in place for key disclosures'
+                ],
+                improvements: [
+                    'Progress from limited to reasonable assurance over time',
+                    'Expand supply chain ESG requirements and verification',
+                    'Engage workers and stakeholders formally in ESG strategy development'
+                ]
+            }
+        ];
+
+        // Dimension-specific insights
+        const dimensionInsights = {
+            governance: {
+                high: [
+                    'Board-level ESG oversight provides strong accountability',
+                    'Strategic ESG integration supports business case development',
+                    'Systematic risk management reduces reporting surprises'
+                ],
+                low: [
+                    'Establish executive ownership of ESG before scaling programmes',
+                    'Conduct a materiality assessment to prioritise ESG topics',
+                    'Integrate ESG risks into the enterprise risk register'
+                ]
+            },
+            environmental: {
+                high: [
+                    'Automated data collection supports assurance readiness',
+                    'Science-based targets demonstrate credible commitment',
+                    'Supply chain Scope 3 data enables comprehensive disclosure'
+                ],
+                low: [
+                    'Implement structured data management to improve environmental data quality',
+                    'Set science-aligned emissions reduction targets with milestones',
+                    'Begin Scope 3 screening to understand supply chain exposure'
+                ]
+            },
+            social: {
+                high: [
+                    'Strong human rights due diligence reduces regulatory and reputational risk',
+                    'Comprehensive workforce data supports D&I reporting requirements',
+                    'Worker engagement mechanisms demonstrate genuine accountability'
+                ],
+                low: [
+                    'Conduct a human rights risk assessment aligned with UNGPs',
+                    'Begin collecting comprehensive diversity data beyond gender headcount',
+                    'Establish formal worker engagement channels with documented feedback loops'
+                ]
+            },
+            reporting: {
+                high: [
+                    'Multi-framework reporting demonstrates disclosure leadership',
+                    'Formal ICSR controls reduce material misstatement risk',
+                    'External assurance builds credibility with investors and regulators'
+                ],
+                low: [
+                    'Align disclosures with at least one recognised framework (GRI, TCFD)',
+                    'Document internal controls over ESG data collection and reporting',
+                    'Prepare for mandatory limited assurance under CSRD or ISSB requirements'
+                ]
+            }
+        };
+
+        // Resource recommendations based on dimension scores
+        const resourceRecommendations = [
+            {
+                dim: 'reporting',
+                threshold: 2, // show if score <= threshold
+                title: 'ESG Reporting Assurance Checklist',
+                href: '../checklists/esg-reporting-assurance-checklist.html',
+                type: 'checklist',
+                desc: 'Prepare for external ESG assurance under CSRD, ESRS, IFRS S1/S2, GRI and TCFD.'
+            },
+            {
+                dim: 'reporting',
+                threshold: 3,
+                title: 'Internal Controls Over Sustainability Reporting',
+                href: '../whitepapers/icsr-internal-controls.html',
+                type: 'whitepaper',
+                desc: 'A framework for building robust ICSR and making ESG data assurance-ready.'
+            },
+            {
+                dim: 'environmental',
+                threshold: 2,
+                title: 'GHG Reporting Readiness Checklist',
+                href: '../checklists/ghg-reporting-readiness-checklist.html',
+                type: 'checklist',
+                desc: 'Review Scope 1, 2 and 3 emissions calculation and reporting requirements.'
+            },
+            {
+                dim: 'governance',
+                threshold: 2,
+                title: 'ISO 37000 Governance Checklist',
+                href: '../checklists/iso-37000-governance-checklist.html',
+                type: 'checklist',
+                desc: 'Implement ISO 37000 governance principles for organisational excellence.'
+            },
+            {
+                dim: 'reporting',
+                threshold: 3,
+                title: 'CSO\'s Anti-Greenwashing Checklist',
+                href: '../checklists/anti-greenwashing-checklist.html',
+                type: 'checklist',
+                desc: 'Ten actions to reduce greenwashing risk in ESG reporting and communications.'
+            },
+            {
+                dim: 'governance',
+                threshold: 1,
+                title: 'ESG Software Must-Haves Checklist',
+                href: '../checklists/esg-software-checklist.html',
+                type: 'checklist',
+                desc: 'Evaluate ESG platforms for data management, reporting, and compliance.'
+            }
+        ];
+
+        // ============================================================
+        // STATE
+        // ============================================================
+        let state = {
+            currentDimIndex: 0,
+            currentQIndex: 0,
+            answers: {},           // { 'g1': 2, 'e1': 1, ... }
+            phase: 'intro',        // intro | quiz | transition | results
+            showingTransition: false
+        };
+
+        const STORAGE_KEY = 'speeki_esg_scorecard_v1';
+
+        // ============================================================
+        // DOM REFS
+        // ============================================================
+        const elIntro = document.getElementById('scorecardIntro');
+        const elQuiz = document.getElementById('scorecardQuiz');
+        const elResults = document.getElementById('scorecardResults');
+        const elQContainer = document.getElementById('questionsContainer');
+        const elDimTransition = document.getElementById('dimTransition');
+        const elQuestionNav = document.getElementById('questionNav');
+        const elBtnNext = document.getElementById('btnNext');
+        const elBtnBack = document.getElementById('btnBack');
+        const elBtnContinueDim = document.getElementById('btnContinueDim');
+        const elProgressFill = document.getElementById('progressFill');
+        const elProgressLabel = document.getElementById('progressLabel');
+        const elProgressPercent = document.getElementById('progressPercent');
+        const elProgressSteps = document.getElementById('progressSteps');
+        const elDimIcon = document.getElementById('dimIcon');
+        const elDimName = document.getElementById('dimName');
+        const elDimTitle = document.getElementById('dimTitle');
+
+        // ============================================================
+        // INIT
+        // ============================================================
+        function init() {
+            // Try restore saved state
+            const saved = localStorage.getItem(STORAGE_KEY);
+            if (saved) {
+                try {
+                    const parsed = JSON.parse(saved);
+                    if (parsed.answers && Object.keys(parsed.answers).length > 0) {
+                        state.answers = parsed.answers;
+                    }
+                } catch(e) { /* ignore */ }
+            }
+
+            buildProgressDots();
+            bindEvents();
+        }
+
+        function buildProgressDots() {
+            const total = dimensions.reduce((acc, d) => acc + d.questions.length, 0);
+            elProgressSteps.innerHTML = '';
+            for (let i = 0; i < total; i++) {
+                const dot = document.createElement('div');
+                dot.className = 'progress-step-dot';
+                dot.setAttribute('aria-hidden', 'true');
+                elProgressSteps.appendChild(dot);
+            }
+        }
+
+        function bindEvents() {
+            document.getElementById('btnStart').addEventListener('click', startQuiz);
+            elBtnNext.addEventListener('click', onNext);
+            elBtnBack.addEventListener('click', onBack);
+            elBtnContinueDim.addEventListener('click', continueDimension);
+            document.getElementById('btnRetake').addEventListener('click', retake);
+            document.getElementById('btnCopyLink').addEventListener('click', copyLink);
+            document.getElementById('captureForm').addEventListener('submit', onCaptureSubmit);
+        }
+
+        // ============================================================
+        // QUIZ FLOW
+        // ============================================================
+        function startQuiz() {
+            state.phase = 'quiz';
+            elIntro.style.display = 'none';
+            elQuiz.style.display = 'block';
+            renderQuestion();
+        }
+
+        function getGlobalQIndex() {
+            let idx = 0;
+            for (let d = 0; d < state.currentDimIndex; d++) {
+                idx += dimensions[d].questions.length;
+            }
+            idx += state.currentQIndex;
+            return idx;
+        }
+
+        function getTotalQuestions() {
+            return dimensions.reduce((acc, d) => acc + d.questions.length, 0);
+        }
+
+        function renderQuestion() {
+            state.showingTransition = false;
+            elDimTransition.classList.remove('active');
+            elQuestionNav.style.display = 'flex';
+
+            const dim = dimensions[state.currentDimIndex];
+            const q = dim.questions[state.currentQIndex];
+            const globalIdx = getGlobalQIndex();
+            const total = getTotalQuestions();
+
+            // Update dimension header
+            elDimIcon.innerHTML = dim.icon;
+            elDimName.textContent = dim.name;
+            elDimTitle.innerHTML = dim.title;
+
+            // Update progress
+            const pct = Math.round((globalIdx / total) * 100);
+            elProgressFill.style.width = pct + '%';
+            elProgressFill.parentElement.setAttribute('aria-valuenow', pct);
+            elProgressLabel.textContent = `Dimension ${state.currentDimIndex + 1} of ${dimensions.length}`;
+            elProgressPercent.textContent = pct + '% complete';
+
+            // Update dots
+            const dots = elProgressSteps.querySelectorAll('.progress-step-dot');
+            dots.forEach((dot, i) => {
+                dot.classList.remove('active', 'completed');
+                if (i < globalIdx) dot.classList.add('completed');
+                else if (i === globalIdx) dot.classList.add('active');
+            });
+
+            // Render question
+            const saved = state.answers[q.id];
+            elQContainer.innerHTML = `
+                <div class="question-block active" data-qid="${q.id}">
+                    <div class="question-counter">Question ${globalIdx + 1} of ${total}</div>
+                    <div class="question-text">${q.text}</div>
+                    <div class="question-context">${q.context}</div>
+                    <div class="answer-options" role="radiogroup" aria-labelledby="qtext-${q.id}">
+                        ${q.answers.map((a, i) => `
+                            <label class="answer-option${saved === a.score ? ' selected' : ''}" for="ans_${q.id}_${i}">
+                                <input
+                                    type="radio"
+                                    id="ans_${q.id}_${i}"
+                                    name="q_${q.id}"
+                                    value="${a.score}"
+                                    ${saved === a.score ? 'checked' : ''}
+                                    aria-describedby="ans_detail_${q.id}_${i}"
+                                >
+                                <div class="answer-option-content">
+                                    <div class="answer-option-label">${a.label}</div>
+                                    <div class="answer-option-detail" id="ans_detail_${q.id}_${i}">${a.detail}</div>
+                                </div>
+                                <span class="answer-score-badge" aria-hidden="true">${i + 1}</span>
+                            </label>
+                        `).join('')}
+                    </div>
+                </div>
+            `;
+
+            // Bind radio events
+            elQContainer.querySelectorAll('input[type="radio"]').forEach(radio => {
+                radio.addEventListener('change', onAnswerSelect);
+            });
+
+            // Bind label click for highlight
+            elQContainer.querySelectorAll('.answer-option').forEach(opt => {
+                opt.addEventListener('click', () => {
+                    const radio = opt.querySelector('input[type="radio"]');
+                    if (radio) {
+                        radio.checked = true;
+                        radio.dispatchEvent(new Event('change'));
+                    }
+                });
+            });
+
+            // Next button state
+            elBtnNext.disabled = (saved === undefined || saved === null);
+            updateNextButtonLabel();
+
+            // Back button
+            elBtnBack.style.display = (globalIdx > 0) ? 'inline-flex' : 'none';
+
+            // Save state
+            saveState();
+        }
+
+        function updateNextButtonLabel() {
+            const dim = dimensions[state.currentDimIndex];
+            const isLastQ = state.currentQIndex === dim.questions.length - 1;
+            const isLastDim = state.currentDimIndex === dimensions.length - 1;
+
+            if (isLastQ && isLastDim) {
+                elBtnNext.innerHTML = 'View My Score <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+                elBtnNext.className = 'btn-nav btn-next btn-calculate';
+            } else {
+                elBtnNext.innerHTML = 'Next <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>';
+                elBtnNext.className = 'btn-nav btn-next';
+            }
+        }
+
+        function onAnswerSelect(e) {
+            const qid = e.target.name.replace('q_', '');
+            const score = parseInt(e.target.value, 10);
+            state.answers[qid] = score;
+
+            // Highlight selected
+            elQContainer.querySelectorAll('.answer-option').forEach(opt => {
+                opt.classList.remove('selected');
+                if (opt.querySelector('input[type="radio"]').checked) {
+                    opt.classList.add('selected');
+                }
+            });
+
+            elBtnNext.disabled = false;
+            saveState();
+        }
+
+        function onNext() {
+            const dim = dimensions[state.currentDimIndex];
+            const isLastQ = state.currentQIndex === dim.questions.length - 1;
+            const isLastDim = state.currentDimIndex === dimensions.length - 1;
+
+            if (isLastQ && isLastDim) {
+                showResults();
+            } else if (isLastQ) {
+                showDimensionTransition();
+            } else {
+                state.currentQIndex++;
+                renderQuestion();
+            }
+        }
+
+        function onBack() {
+            if (state.showingTransition) {
+                state.showingTransition = false;
+                elDimTransition.classList.remove('active');
+                elQuestionNav.style.display = 'flex';
+                renderQuestion();
+                return;
+            }
+
+            if (state.currentQIndex > 0) {
+                state.currentQIndex--;
+                renderQuestion();
+            } else if (state.currentDimIndex > 0) {
+                state.currentDimIndex--;
+                state.currentQIndex = dimensions[state.currentDimIndex].questions.length - 1;
+                renderQuestion();
+            }
+        }
+
+        function showDimensionTransition() {
+            state.showingTransition = true;
+            const completedDim = dimensions[state.currentDimIndex];
+            const nextDim = dimensions[state.currentDimIndex + 1];
+
+            // Calculate completed dimension score
+            const dimScore = completedDim.questions.reduce((acc, q) => {
+                return acc + (state.answers[q.id] || 0);
+            }, 0);
+            const dimMax = completedDim.questions.length * 3;
+
+            // Update transition content
+            document.getElementById('transIcon').innerHTML = nextDim.icon;
+            document.getElementById('transCompleted').textContent = completedDim.name + ' Complete';
+            document.getElementById('transNext').textContent = 'Next: ' + nextDim.name;
+            document.getElementById('transDesc').textContent = nextDim.description;
+            document.getElementById('transScore').textContent = dimScore + '/' + dimMax;
+
+            // Hide question container, show transition
+            elQContainer.innerHTML = '';
+            elQuestionNav.style.display = 'none';
+            elDimTransition.classList.add('active');
+
+            // Back button
+            elBtnBack.style.display = 'inline-flex';
+        }
+
+        function continueDimension() {
+            state.currentDimIndex++;
+            state.currentQIndex = 0;
+            elDimTransition.classList.remove('active');
+            elQuestionNav.style.display = 'flex';
+            renderQuestion();
+        }
+
+        // ============================================================
+        // RESULTS
+        // ============================================================
+        function showResults() {
+            state.phase = 'results';
+            elQuiz.style.display = 'none';
+            elResults.style.display = 'block';
+
+            const totalScore = Object.values(state.answers).reduce((a, b) => a + b, 0);
+            const maxScore = getTotalQuestions() * 3;
+            const pct = (totalScore / maxScore) * 100;
+
+            // Find maturity level
+            const level = maturityLevels.find(l => totalScore >= l.range[0] && totalScore <= l.range[1])
+                || maturityLevels[maturityLevels.length - 1];
+
+            // Score circle
+            const scoreCircle = document.getElementById('scoreCircle');
+            scoreCircle.className = 'score-circle ' + level.id;
+            document.getElementById('scoreDisplay').textContent = totalScore;
+            document.querySelector('.score-out-of').textContent = 'out of ' + maxScore;
+            scoreCircle.setAttribute('aria-label', `Your score: ${totalScore} out of ${maxScore}`);
+
+            // Maturity badge
+            const badge = document.getElementById('maturityBadge');
+            badge.className = 'maturity-badge ' + level.id;
+            badge.innerHTML = level.emoji + ' ' + level.label + ' ESG Maturity';
+
+            // Title & summary
+            document.getElementById('resultsTitle').textContent = level.label + ' ESG Maturity';
+            document.getElementById('resultsSummary').textContent = level.summary;
+
+            // Dimension score bars
+            renderDimScores();
+
+            // Strengths & improvements
+            renderStrengthsAndImprovements(level, pct);
+
+            // Recommended resources
+            renderRecommendedResources();
+
+            // Share buttons
+            setupShareButtons(totalScore, level.label);
+
+            // Animate bars after a tick
+            requestAnimationFrame(() => {
+                document.querySelectorAll('.dim-score-bar').forEach(bar => {
+                    bar.style.width = bar.dataset.target;
+                });
+            });
+
+            // Scroll to top of results
+            elResults.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+            // Save result to localStorage
+            saveState();
+        }
+
+        function getDimensionScore(dimId) {
+            const dim = dimensions.find(d => d.id === dimId);
+            if (!dim) return { score: 0, max: 0 };
+            const score = dim.questions.reduce((acc, q) => acc + (state.answers[q.id] || 0), 0);
+            return { score, max: dim.questions.length * 3 };
+        }
+
+        function renderDimScores() {
+            const container = document.getElementById('dimScoreBars');
+            container.innerHTML = dimensions.map(dim => {
+                const { score, max } = getDimensionScore(dim.id);
+                const pct = Math.round((score / max) * 100);
+                return `
+                    <div class="dim-score-row">
+                        <div class="dim-score-label">
+                            <div class="dim-score-icon" aria-hidden="true">${dim.icon}</div>
+                            <span class="dim-score-name">${dim.name}</span>
+                        </div>
+                        <div class="dim-score-bar-wrap" role="progressbar" aria-valuenow="${score}" aria-valuemin="0" aria-valuemax="${max}" aria-label="${dim.name} score: ${score} out of ${max}">
+                            <div class="dim-score-bar" data-target="${pct}%" style="width: 0%"></div>
+                        </div>
+                        <div class="dim-score-value">${score}/${max}</div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function renderStrengthsAndImprovements(level, overallPct) {
+            // Find best and worst dimensions
+            const dimScores = dimensions.map(d => ({
+                ...d,
+                ...getDimensionScore(d.id),
+                pct: getDimensionScore(d.id).score / getDimensionScore(d.id).max
+            }));
+
+            const sorted = [...dimScores].sort((a, b) => b.pct - a.pct);
+            const topDim = sorted[0];
+            const bottomDim = sorted[sorted.length - 1];
+
+            const strengthsList = document.getElementById('strengthsList');
+            const improvementsList = document.getElementById('improvementsList');
+
+            // Build strengths: best dimension insights + level strengths
+            const strengthInsights = dimensionInsights[topDim.id]?.high || [];
+            const allStrengths = [
+                `Strong ${topDim.name} dimension (${topDim.score}/${topDim.max})`,
+                ...strengthInsights.slice(0, 2)
+            ].concat(level.strengths.slice(0, 1));
+
+            strengthsList.innerHTML = allStrengths.slice(0, 3).map(s =>
+                `<li>${s}</li>`
+            ).join('');
+
+            // Build improvements: worst dimension insights + level improvements
+            const improvInsights = dimensionInsights[bottomDim.id]?.low || [];
+            const allImprovements = [
+                `${bottomDim.name} is your lowest scoring dimension (${bottomDim.score}/${bottomDim.max})`,
+                ...improvInsights.slice(0, 2)
+            ].concat(level.improvements.slice(0, 1));
+
+            improvementsList.innerHTML = allImprovements.slice(0, 3).map(i =>
+                `<li>${i}</li>`
+            ).join('');
+        }
+
+        function renderRecommendedResources() {
+            const container = document.getElementById('recommendedResources');
+            const dimScores = {};
+            dimensions.forEach(d => {
+                dimScores[d.id] = getDimensionScore(d.id).score;
+            });
+
+            // Filter and score recommendations
+            const relevant = resourceRecommendations.filter(r => {
+                return dimScores[r.dim] <= r.threshold * (3 / 3); // show if below threshold
+            });
+
+            // Deduplicate and take top 4
+            const seen = new Set();
+            const unique = relevant.filter(r => {
+                if (seen.has(r.href)) return false;
+                seen.add(r.href);
+                return true;
+            }).slice(0, 4);
+
+            // Fallback: always show at least 2 resources
+            if (unique.length < 2) {
+                unique.push(
+                    {
+                        title: 'ESG Reporting Assurance Checklist',
+                        href: '../checklists/esg-reporting-assurance-checklist.html',
+                        type: 'checklist',
+                        desc: 'Prepare for external ESG assurance under CSRD, ESRS, IFRS S1/S2.'
+                    },
+                    {
+                        title: 'Internal Controls Over Sustainability Reporting',
+                        href: '../whitepapers/icsr-internal-controls.html',
+                        type: 'whitepaper',
+                        desc: 'A framework for building robust ICSR.'
+                    }
+                );
+            }
+
+            container.innerHTML = unique.map(r => `
+                <a href="${r.href}" class="resource-link-card">
+                    <span class="resource-link-type ${r.type}">${r.type === 'checklist' ? 'Checklist' : 'Whitepaper'}</span>
+                    <span class="resource-link-title">${r.title}</span>
+                    <svg class="resource-link-arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </a>
+            `).join('');
+        }
+
+        function setupShareButtons(score, levelLabel) {
+            const url = encodeURIComponent(window.location.href);
+            const text = encodeURIComponent(`I scored ${score}/36 on the ESG Maturity Scorecard — ${levelLabel} maturity. Take the free assessment by Speeki:`);
+
+            document.getElementById('shareLinkedIn').href =
+                `https://www.linkedin.com/sharing/share-offsite/?url=${url}`;
+
+            document.getElementById('shareTwitter').href =
+                `https://twitter.com/intent/tweet?text=${text}&url=${url}`;
+        }
+
+        function copyLink() {
+            const btn = document.getElementById('btnCopyLink');
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(window.location.href).then(() => {
+                    const originalHTML = btn.innerHTML;
+                    btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg> Copied!';
+                    setTimeout(() => { btn.innerHTML = originalHTML; }, 2000);
+                });
+            }
+        }
+
+        // ============================================================
+        // LEAD CAPTURE
+        // ============================================================
+        function onCaptureSubmit(e) {
+            e.preventDefault();
+            const email = document.getElementById('captureEmail').value.trim();
+            if (!email || !email.includes('@')) {
+                document.getElementById('captureEmail').focus();
+                return;
+            }
+
+            // Save email to localStorage (in production, send to CRM/backend)
+            const submission = {
+                email,
+                name: document.getElementById('captureName').value.trim(),
+                score: Object.values(state.answers).reduce((a, b) => a + b, 0),
+                answers: state.answers,
+                timestamp: new Date().toISOString()
+            };
+            localStorage.setItem('speeki_scorecard_lead', JSON.stringify(submission));
+
+            // Show success
+            document.getElementById('captureForm').style.display = 'none';
+            document.getElementById('captureSuccess').classList.add('show');
+        }
+
+        // ============================================================
+        // RETAKE
+        // ============================================================
+        function retake() {
+            state = {
+                currentDimIndex: 0,
+                currentQIndex: 0,
+                answers: {},
+                phase: 'intro',
+                showingTransition: false
+            };
+            localStorage.removeItem(STORAGE_KEY);
+            elResults.style.display = 'none';
+            elQuiz.style.display = 'none';
+            elIntro.style.display = 'block';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // ============================================================
+        // STATE PERSISTENCE
+        // ============================================================
+        function saveState() {
+            localStorage.setItem(STORAGE_KEY, JSON.stringify({
+                answers: state.answers,
+                currentDimIndex: state.currentDimIndex,
+                currentQIndex: state.currentQIndex,
+                phase: state.phase
+            }));
+        }
+
+        // ============================================================
+        // START
+        // ============================================================
+        init();
+
+    })();
+    </script>
+
+</body>
+</html>
