@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <!-- Security: Protect page with authentication -->
-    <script src="../assets/auth.js"></script>
+    <script src="assets/auth.js"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="ISO 37008 Internal Investigations Management Checklist by Speeki. Essential steps for managing effective internal investigations, evidence handling, reporting and compliance.">
@@ -12,7 +12,7 @@
     <meta property="og:title" content="ISO 37008 Internal Investigations Management Checklist | Speeki">
     <meta property="og:description" content="Essential steps for managing effective internal investigations based on ISO 37008. Interactive checklist with progress tracking.">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://www.speeki.com/checklists/iso-37008-investigations">
+    <meta property="og:url" content="https://www.speeki.com/en-GB/resources/iso-37008-investigations-checklist.html">
     <meta property="og:site_name" content="Speeki">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="ISO 37008 Internal Investigations Management Checklist | Speeki">
@@ -59,7 +59,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/growth.css">
+    <link rel="stylesheet" href="assets/growth.css">
 
     <style>
         * {
@@ -70,6 +70,7 @@
 
         :root {
             --speeki-green: #00FF7F;
+            --speeki-green-text: #00875a;
             --speeki-dark-blue: #0a1f44;
             --speeki-dark: #0a1f44;
             --speeki-gray: #4a5568;
@@ -120,7 +121,7 @@
         }
 
         .nav-logo img {
-            height: 32px;
+            height: 50px;
             width: auto;
         }
 
@@ -157,7 +158,7 @@
         }
 
         .header-highlight {
-            color: var(--speeki-green);
+            color: var(--speeki-green-text);
             position: relative;
         }
 
@@ -272,7 +273,7 @@
         }
 
         .related-standards a:hover {
-            color: var(--speeki-green);
+            color: var(--speeki-green-text);
         }
 
         .checklist-item {
@@ -974,13 +975,17 @@
                 margin-left: 0;
             }
         }
-    </style>
+            /* Skip Navigation Link */
+        .skip-link { position: absolute; top: -40px; left: 0; background: #0a1f44; color: #fff; padding: 8px 16px; z-index: 10000; font-size: 14px; }
+        .skip-link:focus { top: 0; }
+        </style>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <nav>
         <div class="nav-content">
-            <a href="../index.html" class="nav-logo"><img src="../speeki-logo.png" alt="Speeki - The Sustainability Firm"></a>
-            <a href="../index.html" class="nav-back">Back to Resources</a>
+            <a href="index.html" class="nav-logo"><img src="speeki-logo.png" alt="Speeki - The Sustainability Firm"></a>
+            <a href="index.html" class="nav-back">Back to Resources</a>
         </div>
     </nav>
 
@@ -999,7 +1004,7 @@
             </div>
         </header>
 
-        <main>
+        <main id="main-content">
             <div class="section-intro">
                 <h2>About This Checklist</h2>
                 <p>This checklist covers the key elements of ISO 37008 for managing internal investigations. It addresses investigation planning, evidence handling, interviewing techniques, documentation, and legal considerations to help organisations conduct thorough, fair, and legally defensible investigations.</p>
@@ -1596,7 +1601,7 @@
             <div class="footer-links">
                 <a href="https://www.speeki.com">Home</a>
                 <a href="https://www.speeki.com/platform">Platform</a>
-                <a href="../index.html">All Resources</a>
+                <a href="index.html">All Resources</a>
                 <a href="iso-37002-whistleblowing-checklist.html">ISO 37002 Whistleblowing Checklist</a>
                 <a href="iso-37001-checklist.html">ISO 37001 Anti-Bribery Checklist</a>
                 <a href="mailto:info@speeki.com">Contact</a>
@@ -1736,8 +1741,8 @@
 
         window.addEventListener('DOMContentLoaded', loadProgress);
     </script>
-    <script src="../assets/growth.js"></script>
-    <script src="../assets/growth-advanced.js"></script>
+    <script src="assets/growth.js"></script>
+    <script src="assets/growth-advanced.js"></script>
 
     <script>
         // Reveal auditor tips and red flags sections when they come into view

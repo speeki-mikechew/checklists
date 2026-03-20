@@ -7,19 +7,17 @@
 <meta name="description" content="A guide to building effective non-conformity management systems across ISO management standards. Covers detection, root cause analysis, and systemic correction.">
 <meta name="keywords" content="non-conformity management, ISO management systems, corrective actions, root cause analysis, ISO 37001, compliance">
 <meta name="author" content="Speeki">
-<meta name="created" content="2026-03-20">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://www.speeki.com/en-GB/resources/whitepapers/non-conformity-management.html">
 <meta property="og:type" content="article">
-    <meta property="og:image" content="https://www.speeki.com/assets/speeki-og-image.jpg">
+<meta property="og:image" content="https://www.speeki.com/assets/speeki-og-image.jpg">
 <meta property="og:title" content="Non-Conformity Management — Speeki Resources">
-<meta property="og:description" content="A comprehensive guide to building effective non-conformity management systems across ISO management standards.">
-<meta property="og:url" content="https://www.speeki.com/whitepapers/non-conformity-management">
+<meta property="og:description" content="A guide to building effective non-conformity management systems across ISO management standards. Covers detection, root cause analysis, and systemic correction.">
+<meta property="og:url" content="https://www.speeki.com/en-GB/resources/whitepapers/non-conformity-management.html">
 <meta property="og:site_name" content="Speeki">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Non-Conformity Management — Speeki Resources">
-<meta name="twitter:description" content="A comprehensive guide to building effective non-conformity management systems across ISO management standards.">
-<link rel="canonical" href="https://www.speeki.com/whitepapers/non-conformity-management">
+<meta name="twitter:title" content="Non-Conformity Management — Speeki">
+<meta name="twitter:description" content="A comprehensive guide to building effective non-conformity management systems across ISO management standards. From detection to root cause analysis to systemic correction.">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -31,11 +29,14 @@
     "name": "Speeki",
     "url": "https://www.speeki.com"
   },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Speeki",
+    "url": "https://www.speeki.com"
+  },
   "datePublished": "2026-03-20",
-  "image": "https://www.speeki.com/assets/og-image-ncr.png",
-  "url": "https://www.speeki.com/whitepapers/non-conformity-management",
-  "isAccessibleForFree": true,
-  "articleBody": "Non-conformity management is one of the most widely implemented and most widely misunderstood requirements across ISO management system standards..."
+  "url": "https://www.speeki.com/en-GB/resources/whitepapers/non-conformity-management.html",
+  "mainEntityOfPage": "https://www.speeki.com/en-GB/resources/whitepapers/non-conformity-management.html"
 }
 </script>
 <style>
@@ -44,6 +45,8 @@
   --navy-mid: #1a2d5a;
   --navy-light: #243672;
   --teal: #00FF7F;
+  --teal-text: #00875a;
+  --teal-accessible: #00875a;
   --teal-dark: #00e06e;
   --teal-light: #e6fff0;
   --gold: #f0a500;
@@ -112,7 +115,7 @@ body {
   font-weight: 500;
   transition: color 0.2s;
 }
-.nav-links a:hover { color: var(--teal); }
+.nav-links a:hover { color: var(--teal-accessible); }
 .nav-cta {
   background: var(--teal);
   color: var(--navy) !important;
@@ -139,9 +142,9 @@ body {
   color: rgba(255,255,255,0.5);
 }
 .breadcrumb a { color: rgba(255,255,255,0.6); text-decoration: none; }
-.breadcrumb a:hover { color: var(--teal); }
+.breadcrumb a:hover { color: var(--teal-accessible); }
 .breadcrumb-sep { opacity: 0.4; }
-.breadcrumb-current { color: var(--teal); }
+.breadcrumb-current { color: var(--teal-accessible); }
 
 /* ─── HERO ────────────────────────────────────────── */
 .hero {
@@ -264,7 +267,7 @@ body {
   gap: 8px;
   transition: border-color 0.2s, color 0.2s;
 }
-.btn-outline:hover { border-color: var(--teal); color: var(--teal); }
+.btn-outline:hover { border-color: var(--teal-accessible); color: var(--teal-accessible); }
 .hero-card {
   background: rgba(255,255,255,0.05);
   border: 1px solid rgba(255,255,255,0.1);
@@ -359,8 +362,8 @@ body {
 }
 
 .sidebar-nav a:hover {
-  color: var(--teal);
-  border-left-color: var(--teal);
+  color: var(--teal-text);
+  border-left-color: var(--teal-text);
   background: var(--teal-light);
 }
 
@@ -408,7 +411,7 @@ body {
 }
 
 .main-content em {
-  color: var(--teal);
+  color: var(--teal-text);
   font-style: italic;
 }
 
@@ -566,9 +569,13 @@ body {
     font-size: 28px;
   }
 }
-</style>
+        /* Skip Navigation Link */
+        .skip-link { position: absolute; top: -40px; left: 0; background: #0a1f44; color: #fff; padding: 8px 16px; z-index: 10000; font-size: 14px; }
+        .skip-link:focus { top: 0; }
+        </style>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
 <!-- Navigation -->
 <nav class="nav">
@@ -594,7 +601,7 @@ body {
 </div>
 
 <!-- Hero Section -->
-<section class="hero">
+<section class="hero" id="main-content">
   <div class="hero-inner">
     <div>
       <div class="hero-tag">ISO MANAGEMENT SYSTEMS</div>

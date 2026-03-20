@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <!-- Security: Protect page with authentication -->
-    <script src="../assets/auth.js"></script>
+    <script src="assets/auth.js"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ISO 26000 Social Responsibility Checklist by Speeki. Assess your organisation's social responsibility practices across seven core subjects. Interactive guidance tool with progress tracking.">
+    <meta name="description" content="ISO 26000 Checklist by Speeki. Assess your organisation's social responsibility practices across seven core ISO subjects. Interactive guidance tool.">
     <meta name="keywords" content="ISO 26000, social responsibility, CSR, stakeholder engagement, human rights, labour practices, environmental responsibility, fair operating practices">
     <meta name="author" content="Speeki">
     <meta property="og:title" content="ISO 26000 Social Responsibility Checklist | Speeki">
     <meta property="og:description" content="Assess your organisation's social responsibility practices using ISO 26000 guidance across seven core subjects.">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://www.speeki.com/checklists/iso-26000-social-responsibility">
+    <meta property="og:url" content="https://www.speeki.com/en-GB/resources/iso-26000-social-responsibility-checklist.html">
     <meta property="og:site_name" content="Speeki">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="ISO 26000 Social Responsibility Checklist | Speeki">
@@ -38,7 +38,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/growth.css">
+    <link rel="stylesheet" href="assets/growth.css">
 
     <style>
         * {
@@ -49,6 +49,7 @@
 
         :root {
             --speeki-green: #00FF7F;
+            --speeki-green-text: #00875a;
             --speeki-dark-blue: #0a1f44;
             --speeki-dark: #0a1f44;
             --speeki-gray: #4a5568;
@@ -96,7 +97,7 @@
         }
 
         .nav-logo img {
-            height: 32px;
+            height: 50px;
             width: auto;
         }
 
@@ -108,7 +109,7 @@
         }
 
         .nav-links a:hover {
-            color: var(--speeki-green);
+            color: var(--speeki-green-text);
         }
 
         header {
@@ -130,7 +131,7 @@
         }
 
         .highlight {
-            color: var(--speeki-green);
+            color: var(--speeki-green-text);
         }
 
         .subtitle {
@@ -377,7 +378,7 @@
         .stat-number {
             font-size: 48px;
             font-weight: 700;
-            color: var(--speeki-green);
+            color: var(--speeki-green-text);
             margin-bottom: 8px;
         }
 
@@ -496,7 +497,7 @@
         }
 
         .footer-links a:hover {
-            color: var(--speeki-green);
+            color: var(--speeki-green-text);
         }
         .auditor-insight {
             background: #f8f9fa;
@@ -753,14 +754,18 @@
                 flex-direction: column;
             }
         }
-    </style>
+            /* Skip Navigation Link */
+        .skip-link { position: absolute; top: -40px; left: 0; background: #0a1f44; color: #fff; padding: 8px 16px; z-index: 10000; font-size: 14px; }
+        .skip-link:focus { top: 0; }
+        </style>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <nav>
         <div class="nav-content">
-            <a href="../index.html" class="nav-logo"><img src="../speeki-logo.png" alt="Speeki - The Sustainability Firm"></a>
+            <a href="index.html" class="nav-logo"><img src="speeki-logo.png" alt="Speeki - The Sustainability Firm"></a>
             <div class="nav-links">
-                <a href="../index.html">← Back to Resources</a>
+                <a href="index.html">← Back to Resources</a>
             </div>
         </div>
     </nav>
@@ -782,7 +787,7 @@
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <div class="main-content">
             <div class="checklist-item">
                 <div class="item-header">
@@ -1297,7 +1302,7 @@
             <div class="footer-links">
                 <a href="https://www.speeki.com">About Speeki</a>
                 <a href="https://www.speeki.com/contact">Contact Us</a>
-                <a href="../index.html">All Resources</a>
+                <a href="index.html">All Resources</a>
             </div>
         </div>
     </footer>
@@ -1408,8 +1413,8 @@
 
         window.addEventListener('load', loadProgress);
     </script>
-    <script src="../assets/growth.js"></script>
-    <script src="../assets/growth-advanced.js"></script>
+    <script src="assets/growth.js"></script>
+    <script src="assets/growth-advanced.js"></script>
 
     <script>
         // Reveal auditor tips and red flags sections when they come into view

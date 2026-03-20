@@ -368,7 +368,7 @@ body {
   line-height: 1;
   margin-bottom: 4px;
 }
-.stat-number span { color: var(--teal); }
+.stat-number span { color: var(--teal-text); }
 .stat-label { color: var(--text-light); font-size: 13px; }
 
 /* ─── CONTENT LAYOUT ──────────────────────────────── */
@@ -1215,24 +1215,27 @@ body {
 
 /* ─── HIDDEN OBJECTIVES (filter) ─────────────────── */
 .obj-card.hidden { display: none; }
-</style>
+        /* Skip Navigation Link */
+        .skip-link { position: absolute; top: -40px; left: 0; background: #0a1f44; color: #fff; padding: 8px 16px; z-index: 10000; font-size: 14px; }
+        .skip-link:focus { top: 0; }
+        </style>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
 <!-- NAV -->
 <nav class="nav">
   <div class="nav-inner">
     <a href="../index.html" class="nav-logo">
-      <div class="nav-logo-mark">S</div>
-      <span class="nav-brand">Speeki</span>
+      <img src="../speeki-logo.png" alt="Speeki" style="height: 60px; width: auto;">
     </a>
     <ul class="nav-links">
       <li><a href="#">Services</a></li>
       <li><a href="#">ISO Certification</a></li>
       <li><a href="#">Assurance</a></li>
       <li><a href="#">Nicole AI</a></li>
-      <li><a href="../index.html" class="active">Resources</a></li>
-      <li><a href="#" class="nav-cta">Get Certified</a></li>
+      <li><a href="index.html" class="active">Resources</a></li>
+      <li><a href="https://www.speeki.com/en-GB/contact-us" target="_blank" class="nav-cta">Contact Us</a></li>
     </ul>
   </div>
 </nav>
@@ -1242,16 +1245,16 @@ body {
   <div class="breadcrumb-inner">
     <a href="https://www.speeki.com">Home</a>
     <span class="breadcrumb-sep">›</span>
-    <a href="../index.html">Resources</a>
+    <a href="index.html">Resources</a>
     <span class="breadcrumb-sep">›</span>
-    <a href="../index.html#whitepapers">Whitepapers</a>
+    <a href="index.html#whitepapers">Whitepapers</a>
     <span class="breadcrumb-sep">›</span>
     <span class="breadcrumb-current">Beyond the Checkbox — ABMS Objectives</span>
   </div>
 </div>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero" id="main-content">
   <div class="hero-inner">
     <div class="hero-content">
       <div class="hero-tag">
@@ -1538,8 +1541,8 @@ body {
 
     <div class="speeki-promo">
       <h4>ISO 37001 Certification</h4>
-      <p>Speeki is an accredited ISO certification body. Get your ABMS independently certified by our expert auditors.</p>
-      <a href="#" class="promo-btn">Start Your Certification →</a>
+      <p>Speeki is an accredited ISO certification body. Independent ISO 37001 certification is available for organisations that have implemented an ABMS.</p>
+      <a href="https://www.speeki.com/en-GB/contact-us" target="_blank" class="promo-btn">Learn About Certification →</a>
     </div>
   </aside>
 </div>
@@ -1614,7 +1617,7 @@ body {
   <div class="related-inner">
     <div class="related-header">
       <h2>Related Resources</h2>
-      <a href="../index.html" style="color: var(--teal); text-decoration: none; font-size: 14px; font-weight: 600;">View All Resources →</a>
+      <a href="../index.html" style="color: var(--teal-accessible); text-decoration: none; font-size: 14px; font-weight: 600;">View All Resources →</a>
     </div>
     <div class="related-grid">
       <a href="#" class="related-card">
@@ -1678,8 +1681,8 @@ body {
       </div>
       <div class="footer-col">
         <h5>Resources</h5>
-        <a href="../index.html#whitepapers">Whitepapers</a>
-        <a href="../index.html">Guides & Templates</a>
+        <a href="index.html#whitepapers">Whitepapers</a>
+        <a href="index.html">Guides & Templates</a>
         <a href="#">Case Studies</a>
         <a href="#">Knowity Academy</a>
         <a href="#">Nicole AI Platform</a>

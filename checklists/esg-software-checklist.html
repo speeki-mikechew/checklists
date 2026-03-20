@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <!-- Security: Protect page with authentication -->
-    <script src="../assets/auth.js"></script>
+    <script src="assets/auth.js"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ESG Software assurance-readiness checklist: Evaluate platforms on audit trail, data integrity, and reporting capabilities that external assurance providers require. Interactive tool with progress tracking.">
+    <meta name="description" content="ESG Software checklist: Evaluate platforms on audit trail, data integrity, and reporting capabilities that external assurance providers require.">
     <meta name="keywords" content="ESG software, sustainability software, ESG platform, ESG reporting tools, carbon accounting software, ESG data management, vendor evaluation">
     <meta name="author" content="Speeki">
     <meta property="og:title" content="ESG Software Must-Haves Checklist | Speeki">
     <meta property="og:description" content="Evaluate ESG software platforms on audit trail, data integrity, and reporting capabilities that external assurance providers require.">
     <meta property="og:type" content="article">
-    <meta property="og:url" content="https://www.speeki.com/checklists/esg-software">
+    <meta property="og:url" content="https://www.speeki.com/en-GB/resources/esg-software-checklist.html">
     <meta property="og:site_name" content="Speeki">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="ESG Software Must-Haves Checklist | Speeki">
@@ -38,7 +38,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../assets/growth.css">
+    <link rel="stylesheet" href="assets/growth.css">
 
     <style>
         * {
@@ -49,6 +49,7 @@
 
         :root {
             --speeki-green: #00FF7F;
+            --speeki-green-text: #00875a;
             --speeki-dark-blue: #0a1f44;
             --speeki-dark: #0a1f44;
             --speeki-gray: #4a5568;
@@ -96,7 +97,7 @@
         }
 
         .nav-logo img {
-            height: 32px;
+            height: 50px;
             width: auto;
         }
 
@@ -108,7 +109,7 @@
         }
 
         .nav-links a:hover {
-            color: var(--speeki-green);
+            color: var(--speeki-green-text);
         }
 
         header {
@@ -130,7 +131,7 @@
         }
 
         .highlight {
-            color: var(--speeki-green);
+            color: var(--speeki-green-text);
         }
 
         .subtitle {
@@ -377,7 +378,7 @@
         .stat-number {
             font-size: 48px;
             font-weight: 700;
-            color: var(--speeki-green);
+            color: var(--speeki-green-text);
             margin-bottom: 8px;
         }
 
@@ -496,7 +497,7 @@
         }
 
         .footer-links a:hover {
-            color: var(--speeki-green);
+            color: var(--speeki-green-text);
         }
 
         .auditor-insight {
@@ -748,14 +749,18 @@
                 flex-direction: column;
             }
         }
-    </style>
+            /* Skip Navigation Link */
+        .skip-link { position: absolute; top: -40px; left: 0; background: #0a1f44; color: #fff; padding: 8px 16px; z-index: 10000; font-size: 14px; }
+        .skip-link:focus { top: 0; }
+        </style>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <nav>
         <div class="nav-content">
-            <a href="../index.html" class="nav-logo"><img src="../speeki-logo.png" alt="Speeki - The Sustainability Firm"></a>
+            <a href="index.html" class="nav-logo"><img src="speeki-logo.png" alt="Speeki - The Sustainability Firm"></a>
             <div class="nav-links">
-                <a href="../index.html">← Back to Resources</a>
+                <a href="index.html">← Back to Resources</a>
             </div>
         </div>
     </nav>
@@ -777,7 +782,7 @@
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <div class="main-content">
             <div class="checklist-item">
                 <div class="item-header">
@@ -1421,9 +1426,9 @@
 
     <section class="cta">
         <div class="cta-content">
-            <h2>Evaluating Your ESG Software for Assurance-Readiness?</h2>
-            <p>When selecting ESG software, consider what evidence and documentation auditors will require during external assurance engagements. The Speeki Platform maintains the audit trail and data integrity that assurance providers evaluate.</p>
-            <button onclick="window.open('https://www.speeki.com', '_blank')">Explore Speeki Platform</button>
+            <h2>Learn About ESG Assurance Requirements</h2>
+            <p>External assurance providers typically evaluate audit trail integrity, data traceability, and reporting methodology. This checklist covers the key software capabilities that assurance providers commonly assess under standards such as ISAE 3000 and ISAE 3410.</p>
+            <button onclick="window.open('https://www.speeki.com', '_blank')">Visit Speeki</button>
         </div>
     </section>
 
@@ -1436,7 +1441,7 @@
             <div class="footer-links">
                 <a href="https://www.speeki.com">About Speeki</a>
                 <a href="https://www.speeki.com/contact">Contact Us</a>
-                <a href="../index.html">All Resources</a>
+                <a href="index.html">All Resources</a>
             </div>
         </div>
     </footer>
@@ -1547,8 +1552,8 @@
 
         window.addEventListener('load', loadProgress);
     </script>
-    <script src="../assets/growth.js"></script>
-    <script src="../assets/growth-advanced.js"></script>
+    <script src="assets/growth.js"></script>
+    <script src="assets/growth-advanced.js"></script>
 
     <script>
         // Reveal auditor tips and red flags sections when they come into view
