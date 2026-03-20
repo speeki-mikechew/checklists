@@ -96,50 +96,11 @@
         }
 
         /* Navigation */
-        nav {
-            background: #ffffff;
-            border-bottom: 1px solid var(--speeki-border);
-            padding: 20px 4vw;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            backdrop-filter: blur(10px);
-            background: rgba(255, 255, 255, 0.95);
-        }
 
-        .nav-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
 
-        .nav-logo {
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-        }
 
-        .nav-logo img {
-            height: 50px;
-            width: auto;
-        }
 
-        .nav-back {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            color: var(--speeki-gray);
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 500;
-            transition: color 0.2s;
-        }
 
-        .nav-back:hover {
-            color: var(--speeki-dark);
-        }
 
         /* Header */
         header {
@@ -591,44 +552,11 @@
         }
 
         /* Footer */
-        footer {
-            text-align: center;
-            color: var(--speeki-gray);
-            margin-top: 0;
-            padding: 60px 4vw;
-            background: #ffffff;
-            border-top: 1px solid var(--speeki-border);
-        }
 
-        footer p {
-            margin: 8px 0;
-            font-size: 14px;
-            line-height: 1.6;
-        }
 
-        footer p strong {
-            color: var(--speeki-dark);
-            font-weight: 600;
-        }
 
-        .footer-links {
-            margin-top: 24px;
-            display: flex;
-            gap: 24px;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
 
-        .footer-links a {
-            color: var(--speeki-gray);
-            text-decoration: none;
-            font-size: 14px;
-            transition: color 0.2s;
-        }
 
-        .footer-links a:hover {
-            color: var(--speeki-dark);
-        }
         .auditor-insight {
             background: #f8f9fa;
             border-left: 4px solid var(--speeki-green);
@@ -926,22 +854,113 @@
             button {
                 width: 100%;
             }
-
-            footer {
-                padding: 40px 6vw;
-            }
+            nav { padding: 0 16px; }
+            .nav-content { height: 56px; }
+            .nav-logo img { height: 40px; }
+            .nav-cta { padding: 6px 14px; font-size: 13px; }
+            footer { padding: 40px 16px; }
+            .footer-links { gap: 16px; }
+        
         }
             /* Skip Navigation Link */
         .skip-link { position: absolute; top: -40px; left: 0; background: #0a1f44; color: #fff; padding: 8px 16px; z-index: 10000; font-size: 14px; }
         .skip-link:focus { top: 0; }
-        </style>
+
+        nav {
+            background: #0a1628;
+            padding: 0 32px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+        }
+        .nav-logo img {
+            height: 50px;
+            width: auto;
+        }
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+        .nav-back {
+            color: #e2e8f0;
+            text-decoration: none;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: color 0.2s;
+        }
+        .nav-back:hover { color: #00FF7F; }
+        .nav-cta {
+            background: #00FF7F;
+            color: #0a1628;
+            padding: 8px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: background 0.2s;
+        }
+        .nav-cta:hover { background: #00e06f; }
+
+        footer {
+            background: #0a1628;
+            color: #9ca3af;
+            text-align: center;
+            padding: 48px 32px;
+            margin-top: 60px;
+        }
+        footer .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .footer-logo img {
+            height: 40px;
+            width: auto;
+            margin-bottom: 12px;
+        }
+        .footer-links {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+        .footer-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            font-size: 13px;
+            transition: color 0.2s;
+        }
+        .footer-links a:hover { color: #00FF7F; }
+</style>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
-    <nav>
+            <nav>
         <div class="nav-content">
-            <a href="../index.html" class="nav-logo"><img src="../speeki-logo.png" alt="Speeki - The Sustainability Firm"></a>
-            <a href="../index.html" class="nav-back">← Back to Resources</a>
+            <a href="../index.html" class="nav-logo" aria-label="Speeki - Back to Resources Hub">
+                <img src="../speeki-logo.png" alt="Speeki" style="height: 50px; width: auto;">
+            </a>
+            <div class="nav-right">
+                <a href="../index.html" class="nav-back" aria-label="Back to all resources">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                    All Resources
+                </a>
+                <a href="https://www.speeki.com" class="nav-cta">Visit Speeki.com</a>
+            </div>
         </div>
     </nav>
 
@@ -1543,17 +1562,21 @@
 </section>
 
 <footer>
-            <p style="font-size: 12px; color: #999999; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 1.5px;">© 2026 Speeki Pte Ltd</p>
-            <p><strong>CSO's Anti-Greenwashing Checklist</strong></p>
-            <p style="margin-top: 12px;">A practical guide to strengthen transparency and credibility in ESG reporting</p>
-            <p style="margin-top: 20px; font-size: 13px;">Author: Scott Lane, CEO & Founder of Speeki</p>
-            <div class="footer-links">
-                <a href="https://www.speeki.com">Home</a>
-                <a href="https://www.speeki.com/platform">Platform</a>
-                <a href="../index.html">All Resources</a>
-                <a href="mailto:info@speeki.com">Contact</a>
-            </div>
-        </footer>
+    <div class="container">
+        <a href="../index.html" class="footer-logo"><img src="../speeki-logo.png" alt="Speeki"></a>
+        <p>The Sustainability Firm</p>
+        <p style="margin-top: 16px; color: #9ca3af; font-size: 13px;">
+            &copy; 2026 Speeki Pte Ltd. All rights reserved.
+        </p>
+        <div class="footer-links">
+            <a href="https://www.speeki.com">Home</a>
+            <a href="https://www.speeki.com/platform">Platform</a>
+            <a href="https://www.speeki.com/services">Services</a>
+            <a href="../index.html">Resources</a>
+            <a href="mailto:info@speeki.com">Contact</a>
+        </div>
+    </div>
+</footer>
     </div>
 
     <script>
