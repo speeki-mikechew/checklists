@@ -44,6 +44,8 @@
   --navy-mid: #1a2d5a;
   --navy-light: #243672;
   --teal: #00FF7F;
+  --teal-text: #00875a;
+  --teal-accessible: #00875a;
   --teal-dark: #00e06e;
   --teal-light: #e6fff0;
   --gold: #f0a500;
@@ -112,7 +114,7 @@ body {
   font-weight: 500;
   transition: color 0.2s;
 }
-.nav-links a:hover { color: var(--teal); }
+.nav-links a:hover { color: var(--teal-accessible); }
 .nav-cta {
   background: var(--teal);
   color: var(--navy) !important;
@@ -139,9 +141,9 @@ body {
   color: rgba(255,255,255,0.5);
 }
 .breadcrumb a { color: rgba(255,255,255,0.6); text-decoration: none; }
-.breadcrumb a:hover { color: var(--teal); }
+.breadcrumb a:hover { color: var(--teal-accessible); }
 .breadcrumb-sep { opacity: 0.4; }
-.breadcrumb-current { color: var(--teal); }
+.breadcrumb-current { color: var(--teal-accessible); }
 
 /* ─── HERO ────────────────────────────────────────── */
 .hero {
@@ -264,7 +266,7 @@ body {
   gap: 8px;
   transition: border-color 0.2s, color 0.2s;
 }
-.btn-outline:hover { border-color: var(--teal); color: var(--teal); }
+.btn-outline:hover { border-color: var(--teal-accessible); color: var(--teal-accessible); }
 .hero-card {
   background: rgba(255,255,255,0.05);
   border: 1px solid rgba(255,255,255,0.1);
@@ -359,8 +361,8 @@ body {
 }
 
 .sidebar-nav a:hover {
-  color: var(--teal);
-  border-left-color: var(--teal);
+  color: var(--teal-text);
+  border-left-color: var(--teal-text);
   background: var(--teal-light);
 }
 
@@ -408,7 +410,7 @@ body {
 }
 
 .main-content em {
-  color: var(--teal);
+  color: var(--teal-text);
   font-style: italic;
 }
 
@@ -566,9 +568,13 @@ body {
     font-size: 28px;
   }
 }
-</style>
+        /* Skip Navigation Link */
+        .skip-link { position: absolute; top: -40px; left: 0; background: #0a1f44; color: #fff; padding: 8px 16px; z-index: 10000; font-size: 14px; }
+        .skip-link:focus { top: 0; }
+        </style>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
 <!-- Navigation -->
 <nav class="nav">
@@ -594,7 +600,7 @@ body {
 </div>
 
 <!-- Hero Section -->
-<section class="hero">
+<section class="hero" id="main-content">
   <div class="hero-inner">
     <div>
       <div class="hero-tag">ISO MANAGEMENT SYSTEMS</div>
