@@ -1537,7 +1537,7 @@
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <!-- Announcement Bar -->
     <div class="announcement-bar">
-        Free ESG Readiness Assessment - <a href="#assessment">Take the 2-minute quiz</a> and get personalised recommendations
+        Free ESG Resource Finder - <a href="#assessment">Take the 2-minute quiz</a> to find the most relevant published resources for your sector
     </div>
 
     <header>
@@ -1577,7 +1577,7 @@
             <div class="assessment-grid">
                 <div class="assessment-text">
                     <h2>Not sure where to start?</h2>
-                    <p>Tell us about your organisation and we'll create a personalised compliance roadmap with the most relevant resources for your industry and maturity level.</p>
+                    <p>Tell us about your organisation to find the most relevant published resources for your industry and focus area.</p>
                     <div class="time-badge">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <circle cx="12" cy="12" r="10"></circle>
@@ -1599,7 +1599,7 @@
                     <!-- Step 0: Company Name (Optional) -->
                     <div class="quiz-step active" data-step="0">
                         <div class="quiz-question">What is your company name?</div>
-                        <p style="font-size: 14px; color: #64748b; margin-bottom: 20px;">We'll use this to provide tailored recommendations based on your industry and compliance needs. Optional - you can skip this step.</p>
+                        <p style="font-size: 14px; color: #64748b; margin-bottom: 20px;">This helps us suggest resources relevant to your industry context. Optional - you can skip this step.</p>
                         <div class="company-input-wrapper">
                             <input type="text" id="companyNameInput" class="company-input" placeholder="e.g., Acme Manufacturing Ltd" />
                             <button type="button" id="analyzeCompanyBtn" class="btn-primary" disabled>Analyze & Continue</button>
@@ -1711,17 +1711,17 @@
                     <!-- Result: Personalised Roadmap -->
                     <div class="quiz-step quiz-result" data-step="result">
                         <div id="roadmapHeader">
-                            <h4 id="resultTitle">Your Personalised Compliance Roadmap</h4>
+                            <h4 id="resultTitle">Suggested Resources for Your Context</h4>
                             <p id="resultIndustryContext" class="industry-context"></p>
                         </div>
                         <div id="roadmapPath" class="roadmap-path">
                             <!-- Dynamic path items will be inserted here -->
                         </div>
                         <div class="roadmap-actions">
-                            <a href="#" id="startFirstChecklist" class="quiz-result-cta">Start Your Journey</a>
+                            <a href="#" id="startFirstChecklist" class="quiz-result-cta">View First Resource</a>
                             <button type="button" id="viewAllChecklists" class="quiz-result-secondary">View All Resources</button>
                         </div>
-                        <p class="roadmap-note">This is your recommended learning path based on your specific needs. Follow these three steps in order for maximum impact, or explore other resources anytime.</p>
+                        <p class="roadmap-note">These resources are suggested based on your industry and focus area. Explore them in any order, or browse all resources below.</p>
                     </div>
                 </div>
             </div>
@@ -1782,7 +1782,7 @@
                 <a href="ghg-reporting-readiness-checklist.html" class="checklist-card" data-checklist="ghg-reporting" data-type="checklist" data-topic="esg-reporting">
                     <span class="card-tag">ESG Reporting</span>
                     <h3 class="card-title">GHG Reporting Readiness Checklist</h3>
-                    <p class="card-description">Assess your organisation's ability to confidently calculate and report Scope 1, 2 and 3 emissions with this comprehensive readiness checklist.</p>
+                    <p class="card-description">Review key requirements for calculating and reporting Scope 1, 2 and 3 emissions in line with recognised GHG accounting frameworks.</p>
                     <div class="card-meta">
                         <span class="card-meta-item">9 Key Areas</span>
                         <span class="card-meta-item">30+ Checkpoints</span>
@@ -1922,7 +1922,7 @@
                 <a href="iso-26000-social-responsibility-checklist.html" class="checklist-card" data-checklist="iso-26000" data-type="checklist" data-topic="governance">
                     <span class="card-tag">ISO Standards</span>
                     <h3 class="card-title">ISO 26000 Social Responsibility Checklist</h3>
-                    <p class="card-description">Assess your organisation's social responsibility practices across seven core subjects using ISO 26000 guidance for sustainable business practices.</p>
+                    <p class="card-description">Understand ISO 26000 guidance across seven core subjects of social responsibility and how they apply to business practice.</p>
                     <div class="card-meta">
                         <span class="card-meta-item">8 Core Areas</span>
                         <span class="card-meta-item">46+ Checkpoints</span>
@@ -2004,7 +2004,7 @@
                 <div class="lead-magnet-grid">
                     <div class="lead-magnet-text">
                         <h2>Download the Complete ESG Toolkit</h2>
-                        <p>Get all 9 resources in a single PDF bundle, plus exclusive bonus content to accelerate your ESG programme:</p>
+                        <p>Get all 9 resources in a single PDF bundle, plus additional reference content for ESG and compliance professionals:</p>
                         <ul class="lead-magnet-benefits">
                             <li>All interactive resources in printable format</li>
                             <li>ESG implementation roadmap template</li>
@@ -2122,8 +2122,8 @@
     <!-- CTA Section -->
     <section class="cta-section">
         <div class="container">
-            <h2>Ready to Transform Your ESG Programme?</h2>
-            <p>The Speeki Platform empowers companies to seamlessly manage their ESG and sustainability programmes with AI-powered insights and automated reporting.</p>
+            <h2>Independent ESG Assurance and Certification</h2>
+            <p>Speeki is an accredited certification body providing independent assurance and ISO certification services across ESG, governance, and compliance standards.</p>
             <div class="cta-buttons">
                 <a href="https://www.speeki.com/demo" class="cta-primary">Book a Demo</a>
                 <a href="https://www.speeki.com/platform" class="cta-secondary">Learn More</a>
@@ -2278,37 +2278,37 @@
         const industryContext = {
             'manufacturing': {
                 name: 'Manufacturing',
-                message: 'Manufacturing companies face unique ESG challenges including supply chain emissions, workplace safety, and environmental compliance. Your roadmap prioritises GHG reporting and operational governance.',
+                message: 'Manufacturing companies face unique ESG challenges including supply chain emissions, workplace safety, and environmental compliance. Published resources on GHG reporting and operational governance are most relevant to this sector.',
                 priorities: ['ghg-reporting', 'iso-37001', 'anti-greenwashing', 'iso-37000']
             },
             'financial': {
                 name: 'Financial Services',
-                message: 'Financial institutions must navigate complex regulatory requirements including TCFD, anti-bribery laws, and ESG disclosure standards. Your roadmap focuses on compliance and assurance readiness.',
+                message: 'Financial institutions must navigate complex regulatory requirements including TCFD, anti-bribery laws, and ESG disclosure standards. Published resources on compliance and assurance readiness are most relevant to this sector.',
                 priorities: ['iso-37001', 'esg-assurance', 'iso-37002', 'anti-greenwashing']
             },
             'technology': {
                 name: 'Technology',
-                message: 'Tech companies are increasingly scrutinised on ESG practices, from carbon footprint to governance. Your roadmap balances sustainability reporting with strong governance frameworks.',
+                message: 'Tech companies are increasingly scrutinised on ESG practices, from carbon footprint to governance. Published resources covering sustainability reporting and governance frameworks are most relevant to this sector.',
                 priorities: ['anti-greenwashing', 'ghg-reporting', 'iso-37002', 'esg-software']
             },
             'retail': {
                 name: 'Retail',
-                message: 'Retail faces pressure from consumers and regulators on supply chain sustainability and social responsibility. Your roadmap emphasises transparency and stakeholder engagement.',
+                message: 'Retail faces pressure from consumers and regulators on supply chain sustainability and social responsibility. Published resources on transparency and stakeholder engagement are most relevant to this sector.',
                 priorities: ['anti-greenwashing', 'iso-26000', 'ghg-reporting', 'iso-37002']
             },
             'energy': {
                 name: 'Energy',
-                message: 'Energy companies are at the forefront of the sustainability transition with significant emissions reporting requirements. Your roadmap prioritises GHG reporting and governance.',
+                message: 'Energy companies are at the forefront of the sustainability transition with significant emissions reporting requirements. Published resources on GHG reporting and governance are most relevant to this sector.',
                 priorities: ['ghg-reporting', 'esg-assurance', 'iso-37000', 'anti-greenwashing']
             },
             'healthcare': {
                 name: 'Healthcare',
-                message: 'Healthcare organisations must balance patient safety, regulatory compliance, and sustainability. Your roadmap covers governance, whistleblowing, and ESG reporting.',
+                message: 'Healthcare organisations must balance patient safety, regulatory compliance, and sustainability. Published resources on governance, whistleblowing, and ESG reporting are most relevant to this sector.',
                 priorities: ['iso-37001', 'iso-37002', 'anti-greenwashing', 'esg-assurance']
             },
             'other': {
                 name: 'Multi-sector',
-                message: 'Based on your sector profile, we recommend a balanced approach covering core ESG reporting, governance, and compliance foundations.',
+                message: 'Resources covering core ESG reporting, governance, and compliance standards are available for multi-sector organisations.',
                 priorities: ['anti-greenwashing', 'iso-37000', 'iso-37001', 'ghg-reporting']
             }
         };
@@ -2525,7 +2525,7 @@
                 const resultDiv = document.getElementById('companyAnalysisResult');
                 resultDiv.innerHTML = `
                     <h5>✓ Company Analyzed</h5>
-                    <p>We've identified <strong>${companyName}</strong> as a ${industryContext[analysis.industry]?.name || 'Multi-sector'} organization. Your recommendations will be tailored accordingly.</p>
+                    <p>We've identified <strong>${companyName}</strong> as a ${industryContext[analysis.industry]?.name || 'Multi-sector'} organization. Showing relevant resources for this context.</p>
                 `;
                 resultDiv.style.display = 'block';
 
@@ -2618,18 +2618,14 @@
             // Update title and context message
             const resultTitle = document.getElementById('resultTitle');
             if (profile.companyName) {
-                resultTitle.textContent = `Your Personalised Path for ${profile.companyName}`;
+                resultTitle.textContent = `Suggested Resources for ${profile.companyName}`;
             } else {
-                resultTitle.textContent = 'Your Personalised Compliance Path';
+                resultTitle.textContent = 'Suggested Resources for Your Sector';
             }
 
             // Update industry context message
             const context = industryContext[profile.industry];
             let contextMessage = context.message;
-
-            if (companyContext) {
-                contextMessage = `Based on our analysis of ${profile.companyName}, ${contextMessage}`;
-            }
 
             document.getElementById('resultIndustryContext').textContent = contextMessage;
 
