@@ -120,8 +120,10 @@
         }
 
         header {
-            background: #ffffff;
-            padding: 60px 4vw 40px;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            color: var(--speeki-dark);
+            padding: 80px 4vw 60px;
+            border-bottom: 1px solid var(--speeki-border);
         }
 
         .header-content {
@@ -129,59 +131,78 @@
             margin: 0 auto;
         }
 
-        h1 {
+        header h1 {
             font-size: 48px;
+            margin-bottom: 24px;
             font-weight: 700;
-            color: var(--speeki-dark-blue);
-            margin-bottom: 16px;
-            line-height: 1.2;
             letter-spacing: -1.5px;
+            color: var(--speeki-dark);
+            max-width: 900px;
+            line-height: 1.2;
         }
 
-        .subtitle {
+        header p {
             font-size: 18px;
             color: var(--speeki-gray);
-            margin-bottom: 32px;
             max-width: 800px;
-        }
-
-        .accent-line {
-            width: 80px;
-            height: 4px;
-            background: var(--speeki-green);
-            border-radius: 2px;
-            margin-bottom: 32px;
+            margin-bottom: 40px;
+            line-height: 1.7;
+            font-weight: 400;
         }
 
         .progress-section {
-            background: var(--speeki-light-gray);
-            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 40px;
+            padding: 30px;
+            background: #ffffff;
             border-radius: 8px;
-            margin-top: 32px;
+            max-width: 600px;
+            border: 1px solid var(--speeki-border);
         }
 
-        .progress-bar-container {
-            background: #e5e5e5;
-            height: 6px;
-            border-radius: 3px;
-            overflow: hidden;
+        .progress-info {
+            text-align: left;
+            flex: 1;
+        }
+
+        .progress-info h3 {
+            font-size: 12px;
+            color: var(--speeki-gray);
             margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 600;
         }
 
         .progress-bar {
+            width: 100%;
+            max-width: 300px;
+            height: 6px;
+            background: #e5e5e5;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
             height: 100%;
             background: var(--speeki-green);
             width: 0%;
             transition: width 0.3s ease;
+            border-radius: 3px;
         }
 
         .progress-text {
-            font-size: 14px;
-            color: var(--speeki-gray);
-            font-weight: 500;
+            color: var(--speeki-dark);
+            font-size: 24px;
+            font-weight: 700;
+            margin-left: 30px;
+            white-space: nowrap;
         }
 
         main {
+            background: white;
             padding: 60px 4vw;
         }
 
@@ -190,233 +211,306 @@
             margin: 0 auto;
         }
 
-        .section {
-            margin-bottom: 48px;
-        }
-
-        .section-title {
-            font-size: 24px;
-            font-weight: 700;
-            color: var(--speeki-dark-blue);
-            margin-bottom: 24px;
-            letter-spacing: -0.5px;
-        }
-
         .checklist-item {
-            background: #ffffff;
-            border: 1px solid var(--speeki-border);
-            border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 16px;
-            transition: all 0.2s;
-            cursor: pointer;
+            margin-bottom: 60px;
+            padding-bottom: 0;
+            border-bottom: none;
         }
 
-        .checklist-item:hover {
-            border-color: var(--speeki-green);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        .checklist-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
         }
 
-        .checklist-item-header {
+        .item-header {
             display: flex;
             align-items: flex-start;
-            gap: 16px;
+            gap: 24px;
+            margin-bottom: 24px;
         }
 
-        .checkbox {
-            width: 20px;
-            height: 20px;
-            border: 2px solid #cccccc;
-            border-radius: 4px;
-            cursor: pointer;
+        .item-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            background: #ffffff;
+            color: var(--speeki-dark);
+            border-radius: 50%;
+            font-size: 18px;
+            font-weight: 700;
             flex-shrink: 0;
-            margin-top: 2px;
-            transition: all 0.2s;
-            accent-color: var(--speeki-green);
+            position: relative;
+            border: 2px solid var(--speeki-border);
+            transition: all 0.2s ease;
         }
 
-        .checkbox:checked {
+        .item-number.completed {
             background: var(--speeki-green);
             border-color: var(--speeki-green);
+            color: var(--speeki-dark);
         }
 
-        .checkbox:hover {
-            border-color: var(--speeki-green);
+        .item-number.completed::after {
+            content: '✓';
+            position: absolute;
+            font-size: 24px;
+            color: var(--speeki-dark);
+            font-weight: bold;
         }
 
-        .checklist-item-content {
+        .item-number.completed {
+            font-size: 0;
+        }
+
+        .item-title {
             flex: 1;
         }
 
-        .checklist-item-title {
-            font-size: 16px;
-            font-weight: 600;
+        .item-title h2 {
+            font-size: 24px;
             color: var(--speeki-dark);
             margin-bottom: 8px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            line-height: 1.3;
         }
 
-        .checklist-item.checked .checklist-item-title {
-            text-decoration: line-through;
-            opacity: 0.6;
+        .sub-items {
+            margin-left: 72px;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .sub-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 16px 0;
+            background: transparent;
+            border-bottom: 1px solid #f0f0f0;
+            cursor: pointer;
+            transition: all 0.15s ease;
+        }
+
+        .sub-item:hover {
+            background: transparent;
+            transform: none;
+        }
+
+        .sub-item:last-child {
+            border-bottom: none;
+        }
+
+        .sub-item input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            flex-shrink: 0;
+            margin-top: 3px;
+            accent-color: var(--speeki-green);
+            border: 2px solid #cccccc;
+        }
+
+        .sub-item label {
+            cursor: pointer;
+            flex: 1;
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--speeki-gray);
+            font-weight: 400;
+        }
+
+        .sub-item input[type="checkbox"]:checked + label {
+            color: var(--speeki-dark);
+            font-weight: 500;
         }
 
         .summary-section {
+            margin-top: 80px;
+            padding: 60px 4vw;
             background: var(--speeki-light-gray);
-            padding: 40px;
-            border-radius: 8px;
-            margin: 60px 0;
+            border-radius: 0;
+            text-align: center;
+            border-top: 1px solid var(--speeki-border);
         }
 
-        .summary-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 32px;
-            margin-bottom: 32px;
+        .summary-section h3 {
+            font-size: 28px;
+            color: var(--speeki-dark);
+            margin-bottom: 48px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
         }
 
-        .summary-stat {
+        .summary-stats {
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+            flex-wrap: wrap;
+            margin-bottom: 48px;
+        }
+
+        .stat {
             text-align: center;
         }
 
-        .summary-number {
+        .stat-number {
             font-size: 48px;
             font-weight: 700;
-            color: var(--speeki-dark-blue);
-            margin-bottom: 8px;
+            color: var(--speeki-dark);
+            letter-spacing: -1px;
         }
 
-        .summary-label {
-            font-size: 14px;
+        .stat-label {
+            font-size: 12px;
             color: var(--speeki-gray);
+            margin-top: 8px;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
             font-weight: 600;
         }
 
-        .button-group {
+        .action-buttons {
             display: flex;
             gap: 16px;
-            flex-wrap: wrap;
             justify-content: center;
+            margin-top: 0;
         }
 
-        .button {
+        button {
             padding: 16px 32px;
             font-size: 14px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+            border: 2px solid var(--speeki-dark-blue);
             border-radius: 6px;
             cursor: pointer;
-            transition: all 0.2s;
-            border: none;
-            font-family: inherit;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        .button-primary {
-            background: var(--speeki-dark-blue);
-            color: #ffffff;
-        }
-
-        .button-primary:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(10, 31, 68, 0.3);
-        }
-
-        .button-secondary {
+        .btn-reset {
             background: #ffffff;
-            color: var(--speeki-dark-blue);
-            border: 1px solid var(--speeki-dark-blue);
+            color: var(--speeki-dark);
+            border-color: var(--speeki-border);
         }
 
-        .button-secondary:hover {
-            background: var(--speeki-light-gray);
-            transform: translateY(-2px);
+        .btn-reset:hover {
+            background: #f5f5f5;
+            border-color: #cccccc;
+        }
+
+        .btn-export {
+            background: var(--speeki-dark-blue);
+            color: white;
+            border-color: var(--speeki-dark-blue);
+        }
+
+        .btn-export:hover {
+            background: #1a2d5c;
+            border-color: #1a2d5c;
         }
 
         .cta-section {
             background: var(--speeki-dark-blue);
-            color: #ffffff;
             padding: 80px 4vw;
             text-align: center;
+            margin-top: 80px;
+            position: relative;
+            overflow: hidden;
         }
 
-        .cta-content {
-            max-width: 800px;
-            margin: 0 auto;
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 200px;
+            height: 200px;
+            background: var(--speeki-green);
+            opacity: 0.1;
+            border-radius: 50%;
         }
 
-        .cta-title {
-            font-size: 36px;
+        .cta-section h3 {
+            font-size: 32px;
             font-weight: 700;
-            margin-bottom: 20px;
-            letter-spacing: -1px;
+            color: #ffffff;
+            margin-bottom: 16px;
         }
 
-        .cta-text {
+        .cta-section p {
             font-size: 18px;
+            color: rgba(255, 255, 255, 0.85);
             margin-bottom: 32px;
-            opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .cta-button {
+            display: inline-block;
             background: var(--speeki-green);
             color: var(--speeki-dark-blue);
             padding: 16px 40px;
-            font-size: 14px;
+            text-decoration: none;
+            border-radius: 6px;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1px;
-            border-radius: 6px;
-            border: none;
-            cursor: pointer;
-            transition: all 0.2s;
-            font-family: inherit;
+            font-size: 14px;
+            transition: all 0.2s ease;
         }
 
         .cta-button:hover {
+            background: #00e070;
             transform: translateY(-2px);
-            box-shadow: 0 8px 24px rgba(0, 255, 127, 0.3);
+            box-shadow: 0 8px 16px rgba(0, 255, 127, 0.3);
         }
 
         footer {
+            text-align: center;
+            color: var(--speeki-gray);
+            margin-top: 0;
+            padding: 60px 4vw;
             background: #ffffff;
             border-top: 1px solid var(--speeki-border);
-            padding: 40px 4vw;
         }
 
-        .footer-content {
-            max-width: 1400px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-
-        .footer-text {
+        footer p {
+            margin: 8px 0;
             font-size: 14px;
-            color: var(--speeki-gray);
+            line-height: 1.6;
+        }
+
+        footer p strong {
+            color: var(--speeki-dark);
+            font-weight: 600;
         }
 
         .footer-links {
+            margin-top: 24px;
             display: flex;
             gap: 24px;
+            justify-content: center;
+            flex-wrap: wrap;
         }
 
         .footer-links a {
-            font-size: 14px;
             color: var(--speeki-gray);
             text-decoration: none;
-            font-weight: 500;
+            font-size: 14px;
             transition: color 0.2s;
         }
 
         .footer-links a:hover {
             color: var(--speeki-dark);
         }
+
         .auditor-insight {
             background: #f8f9fa;
             border-left: 4px solid var(--speeki-green);
@@ -641,36 +735,81 @@
         }
 
         @media (max-width: 768px) {
-            h1 {
+            .auditor-tip {
+                margin-left: 0;
+            }
+            header {
+                padding: 60px 6vw 40px;
+            }
+
+            header h1 {
                 font-size: 36px;
+                letter-spacing: -1px;
             }
 
-            .cta-title {
-                font-size: 28px;
+            header p {
+                font-size: 16px;
             }
 
-            .summary-grid {
-                grid-template-columns: 1fr;
-                gap: 24px;
+            main {
+                padding: 40px 6vw;
             }
 
-            .footer-content {
+            .item-number {
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+            }
+
+            .item-title h2 {
+                font-size: 20px;
+            }
+
+            .sub-items {
+                margin-left: 0;
+            }
+
+            .sub-item label {
+                font-size: 15px;
+            }
+
+            .progress-section {
                 flex-direction: column;
-                text-align: center;
+                align-items: flex-start;
+                gap: 20px;
+                padding: 24px;
             }
 
-            .button-group {
+            .progress-text {
+                margin-left: 0;
+                margin-top: 0;
+            }
+
+            .summary-stats {
+                gap: 40px;
+            }
+
+            .stat-number {
+                font-size: 40px;
+            }
+
+            .action-buttons {
                 flex-direction: column;
-            }
-
-            .button {
                 width: 100%;
             }
+
+            button {
+                width: 100%;
+            }
+
+            footer {
+                padding: 40px 6vw;
+            }
         }
-            /* Skip Navigation Link */
+        /* Skip Navigation Link */
         .skip-link { position: absolute; top: -40px; left: 0; background: #0a1f44; color: #fff; padding: 8px 16px; z-index: 10000; font-size: 14px; }
         .skip-link:focus { top: 0; }
-        </style>
+    </style>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -683,514 +822,482 @@
         </div>
     </nav>
 
-    <header>
-        <div class="header-content">
-            <h1>ESG Reporting Assurance Readiness Checklist</h1>
-            <div class="accent-line"></div>
-            <p class="subtitle">Whether you're reporting for CSRD (ESRS), IFRS S1 and S2, GRI or TCFD, this checklist explains what assurance providers evaluate and the documentation standards they apply when conducting external assurance engagements.</p>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1>ESG Reporting Assurance Readiness Checklist</h1>
+                <p>Whether you're reporting for CSRD (ESRS), IFRS S1 and S2, GRI or TCFD, this checklist explains what assurance providers evaluate and the documentation standards they apply when conducting external assurance engagements.</p>
 
-            <div class="progress-section">
-                <div class="progress-bar-container">
-                    <div class="progress-bar" id="progressBar"></div>
-                </div>
-                <p class="progress-text" id="progressText">0 of 24 items completed (0%)</p>
-            </div>
-        </div>
-    </header>
-
-    <main id="main-content">
-        <div class="main-content">
-            <section class="section">
-                <h2 class="section-title">1. Governance and Oversight</h2>
-                <div class="checklist-item">
-                    <div class="checklist-item-header">
-                        <input type="checkbox" class="checkbox" id="item1">
-                        <label for="item1" class="checklist-item-content">
-                            <div class="checklist-item-title">Have you defined a clear strategy for ESG reporting assurance?</div>
-                        </label>
-                    </div>
-                </div>
-                <div class="checklist-item">
-                    <div class="checklist-item-header">
-                        <input type="checkbox" class="checkbox" id="item2">
-                        <label for="item2" class="checklist-item-content">
-                            <div class="checklist-item-title">Is your audit committee involved in overseeing sustainability reporting and assurance?</div>
-                        </label>
-                    </div>
-                </div>
-                <div class="checklist-item">
-                    <div class="checklist-item-header">
-                        <input type="checkbox" class="checkbox" id="item3">
-                        <label for="item3" class="checklist-item-content">
-                            <div class="checklist-item-title">Do you have internal policies and controls to support assurance?</div>
-                        </label>
-                    </div>
-                </div>
-                <div class="checklist-item">
-                    <div class="checklist-item-header">
-                        <input type="checkbox" class="checkbox" id="item4">
-                        <label for="item4" class="checklist-item-content">
-                            <div class="checklist-item-title">Have clear roles and responsibilities been assigned for the reporting process?</div>
-                        </label>
-                    </div>
-                </div>
-                <div class="auditor-tip">
-                    <div class="auditor-tip-header">What Auditors Look For</div>
-                    <div class="auditor-tip-content">
-                        <p>Auditors expect ESG reporting to have the same governance rigour as financial reporting, including board-level oversight, clear accountability, and documented policies.</p>
-                        <div class="red-flag">
-                            <span class="red-flag-text">Red flag: ESG metrics not subject to the same controls as financial reporting. No audit committee involvement in sustainability disclosures. Unclear accountability for data quality.</span>
-                        </div>
-                        <div class="why-matters">
-                            <span class="why-matters-text">Why this matters: Strong governance signals organisational commitment to reliable reporting and creates the foundation for successful assurance engagements.</span>
+                <div class="progress-section">
+                    <div class="progress-info">
+                        <h3>Progress</h3>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progressFill"></div>
                         </div>
                     </div>
-                </div>
-            </section>
-
-            <section class="section">
-                <h2 class="section-title">2. Data Collection and Reporting</h2>
-                <div class="checklist-item">
-                    <div class="checklist-item-header">
-                        <input type="checkbox" class="checkbox" id="item5">
-                        <label for="item5" class="checklist-item-content">
-                            <div class="checklist-item-title">Are your sustainability data sources documented and verifiable?</div>
-                        </label>
-                    </div>
-                </div>
-                <div class="checklist-item">
-                    <div class="checklist-item-header">
-                        <input type="checkbox" class="checkbox" id="item6">
-                        <label for="item6" class="checklist-item-content">
-                            <div class="checklist-item-title">Have you ensured that collection methods and reported data are consistent, accurate and aligned with reporting requirements?</div>
-                        </label>
-                    </div>
-                </div>
-                <div class="checklist-item">
-                    <div class="checklist-item-header">
-                        <input type="checkbox" class="checkbox" id="item7">
-                        <label for="item7" class="checklist-item-content">
-                            <div class="checklist-item-title">Do you have a process for handling missing or incomplete data?</div>
-                        </label>
-                    </div>
-                </div>
-                <div class="checklist-item">
-                    <div class="checklist-item-header">
-                        <input type="checkbox" class="checkbox" id="item8">
-                        <label for="item8" class="checklist-item-content">
-                            <div class="checklist-item-title">Have internal teams been trained on data collection and reporting best practices?</div>
-                        </label>
-                    </div>
-                </div>
-                <div class="auditor-tip">
-                    <div class="auditor-tip-header">What Auditors Look For</div>
-                    <div class="auditor-tip-content">
-                        <p>Data quality is the foundation of credible ESG reporting. Auditors verify source documentation, calculation methodologies, and consistency of data collection across the organisation.</p>
-                        <div class="red-flag">
-                            <span class="red-flag-text">Red flag: Manual data aggregation from multiple disconnected sources. KPIs calculated differently across business units. No defined data ownership or accountability structure.</span>
-                        </div>
-                        <div class="why-matters">
-                            <span class="why-matters-text">Why this matters: Assurance providers must be able to trace reported figures back to source data. Inconsistent collection methods make verification difficult or impossible.</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section">
-                <h2 class="section-title">3. Gap Analysis and Readiness Assessment</h2>
-                <div class="checklist-item">
-                    <div class="checklist-item-header">
-                        <input type="checkbox" class="checkbox" id="item9">
-                        <label for="item9" class="checklist-item-content">
-                            <div class="checklist-item-title">Have you conducted a gap analysis to identify weaknesses in your reporting?</div>
-                        </label>
-                    </div>
-                </div>
-                <div class="checklist-item">
-                    <div class="checklist-item-header">
-                        <input type="checkbox" class="checkbox" id="item10">
-                        <label for="item10" class="checklist-item-content">
-                            <div class="checklist-item-title">Have you reviewed past assurance findings (if applicable) or other supporting assurances to avoid repeating issues?</div>
-                        </label>
-                    </div>
-                </div>
-                <div class="checklist-item">
-                    <div class="checklist-item-header">
-                        <input type="checkbox" class="checkbox" id="item11">
-                        <label for="item11" class="checklist-item-content">
-                            <div class="checklist-item-title">Do you have a readiness assessment plan to evaluate your assurance preparedness?</div>
-                        </label>
-                    </div>
-                </div>
-                <div class="auditor-tip">
-                    <div class="auditor-tip-header">What Auditors Look For</div>
-                    <div class="auditor-tip-content">
-                        <p>Auditors value organisations that proactively identify and address weaknesses before the assurance engagement. A gap analysis demonstrates maturity and self-awareness.</p>
-                        <div class="red-flag">
-                            <span class="red-flag-text">Red flag: No gap analysis performed prior to assurance engagement. Repeat findings from previous assessments without documented remediation. Targets set without documented baseline methodology.</span>
-                        </div>
-                        <div class="why-matters">
-                            <span class="why-matters-text">Why this matters: Gap analysis helps identify issues early, reducing scope for adverse findings and demonstrating a commitment to continuous improvement.</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section">
-                <h2 class="section-title">4. Documentation and Audit Trail</h2>
-                <div class="checklist-item">
-                    <div class="checklist-item-header">
-                        <input type="checkbox" class="checkbox" id="item12">
-                        <label for="item12" class="checklist-item-content">
-                            <div class="checklist-item-title">Is there a clear audit trail for all reported sustainability data?</div>
-                        </label>
-                    </div>
-                </div>
-                <div class="checklist-item">
-                    <div class="checklist-item-header">
-                        <input type="checkbox" class="checkbox" id="item13">
-                        <label for="item13" class="checklist-item-content">
-                            <div class="checklist-item-title">Have you documented the methodologies and assumptions used in your reporting?</div>
-                        </label>
-                    </div>
-                </div>
-                <div class="checklist-item">
-                    <div class="checklist-item-header">
-                        <input type="checkbox" class="checkbox" id="item14">
-                        <label for="item14" class="checklist-item-content">
-                            <div class="checklist-item-title">Are all required supporting documents and evidence available for assurance providers?</div>
-                        </label>
-                    </div>
-                </div>
-                <div class="checklist-item">
-                    <div class="checklist-item-header">
-                        <input type="checkbox" class="checkbox" id="item15">
-                        <label for="item15" class="checklist-item-content">
-                            <div class="checklist-item-title">Have you ensured that relevant stakeholders understand the documentation process?</div>
-                        </label>
-                    </div>
-                </div>
-                <div class="auditor-tip">
-                    <div class="auditor-tip-header">What Auditors Look For</div>
-                    <div class="auditor-tip-content">
-                        <p>Complete audit trails are essential for limited and reasonable assurance. Auditors require evidence of how data was collected, calculated, reviewed, and approved at each stage.</p>
-                        <div class="red-flag">
-                            <span class="red-flag-text">Red flag: Historical data restated without documented rationale. Methodologies and assumptions not recorded. Evidence files organised ad-hoc rather than systematically.</span>
-                        </div>
-                        <div class="why-matters">
-                            <span class="why-matters-text">Why this matters: Without proper documentation, auditors cannot provide assurance. A clear audit trail demonstrates control over the reporting process.</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section">
-                <h2 class="section-title">5. Pre-Assurance Activities</h2>
-                <div class="checklist-item">
-                    <div class="checklist-item-header">
-                        <input type="checkbox" class="checkbox" id="item16">
-                        <label for="item16" class="checklist-item-content">
-                            <div class="checklist-item-title">Have you conducted pre-assurance audits to test the completeness and accuracy of disclosures?</div>
-                        </label>
-                    </div>
-                </div>
-                <div class="checklist-item">
-                    <div class="checklist-item-header">
-                        <input type="checkbox" class="checkbox" id="item17">
-                        <label for="item17" class="checklist-item-content">
-                            <div class="checklist-item-title">Have key teams received training on assurance expectations?</div>
-                        </label>
-                    </div>
-                </div>
-                <div class="checklist-item">
-                    <div class="checklist-item-header">
-                        <input type="checkbox" class="checkbox" id="item18">
-                        <label for="item18" class="checklist-item-content">
-                            <div class="checklist-item-title">Do you have a process for addressing potential assurance provider concerns in advance?</div>
-                        </label>
-                    </div>
-                </div>
-                <div class="checklist-item">
-                    <div class="checklist-item-header">
-                        <input type="checkbox" class="checkbox" id="item19">
-                        <label for="item19" class="checklist-item-content">
-                            <div class="checklist-item-title">Have you ensured that sustainability reporting is integrated into financial reporting governance?</div>
-                        </label>
-                    </div>
-                </div>
-                <div class="auditor-tip">
-                    <div class="auditor-tip-header">What Auditors Look For</div>
-                    <div class="auditor-tip-content">
-                        <p>Pre-assurance preparation demonstrates readiness. Auditors appreciate working with organisations that have tested their disclosures and trained their teams on what to expect.</p>
-                        <div class="red-flag">
-                            <span class="red-flag-text">Red flag: No internal review or second-line review of ESG disclosures before assurance engagement. Teams unfamiliar with assurance requirements or interview processes.</span>
-                        </div>
-                        <div class="why-matters">
-                            <span class="why-matters-text">Why this matters: Pre-assurance activities reduce friction during the engagement and demonstrate organisational maturity in managing ESG reporting.</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section">
-                <h2 class="section-title">6. Assurance Provider Selection and Next Steps</h2>
-                <div class="checklist-item">
-                    <div class="checklist-item-header">
-                        <input type="checkbox" class="checkbox" id="item20">
-                        <label for="item20" class="checklist-item-content">
-                            <div class="checklist-item-title">Have you selected an assurance provider or defined a selection process?</div>
-                        </label>
-                    </div>
-                </div>
-                <div class="checklist-item">
-                    <div class="checklist-item-header">
-                        <input type="checkbox" class="checkbox" id="item21">
-                        <label for="item21" class="checklist-item-content">
-                            <div class="checklist-item-title">Have you reviewed assurance provider requirements and expectations?</div>
-                        </label>
-                    </div>
-                </div>
-                <div class="checklist-item">
-                    <div class="checklist-item-header">
-                        <input type="checkbox" class="checkbox" id="item22">
-                        <label for="item22" class="checklist-item-content">
-                            <div class="checklist-item-title">Do you have a plan for responding to assurance provider requests efficiently?</div>
-                        </label>
-                    </div>
-                </div>
-                <div class="checklist-item">
-                    <div class="checklist-item-header">
-                        <input type="checkbox" class="checkbox" id="item23">
-                        <label for="item23" class="checklist-item-content">
-                            <div class="checklist-item-title">Are you confident that your ESG reports are ready for external assurance?</div>
-                        </label>
-                    </div>
-                </div>
-                <div class="auditor-tip">
-                    <div class="auditor-tip-header">What Auditors Look For</div>
-                    <div class="auditor-tip-content">
-                        <p>The right assurance provider will understand your industry and reporting requirements. Auditors also evaluate whether you've prepared your team to work efficiently during the engagement.</p>
-                        <div class="red-flag">
-                            <span class="red-flag-text">Red flag: No clear understanding of limited vs reasonable assurance requirements. Provider selection based solely on cost without considering expertise. No single point of contact for assurance provider requests.</span>
-                        </div>
-                        <div class="why-matters">
-                            <span class="why-matters-text">Why this matters: A well-managed assurance engagement is more efficient and less costly. Proper preparation ensures your organisation can respond promptly to provider requests.</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <div class="summary-section">
-                <div class="summary-grid">
-                    <div class="summary-stat">
-                        <div class="summary-number" id="completedCount">0</div>
-                        <div class="summary-label">Completed</div>
-                    </div>
-                    <div class="summary-stat">
-                        <div class="summary-number" id="remainingCount">24</div>
-                        <div class="summary-label">Remaining</div>
-                    </div>
-                    <div class="summary-stat">
-                        <div class="summary-number" id="percentageComplete">0%</div>
-                        <div class="summary-label">Complete</div>
-                    </div>
-                </div>
-                <div class="button-group">
-                    <button class="button button-secondary" id="resetButton">Reset Progress</button>
-                    <button class="button button-primary" id="exportButton">Export Progress</button>
+                    <div class="progress-text" id="progressText">0/23</div>
                 </div>
             </div>
+        </header>
 
-            <section class="section">
-                <h2 class="section-title">Related Checklists</h2>
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
-                    <a href="ghg-reporting-readiness-checklist.html" style="text-decoration: none;">
-                        <div class="checklist-item" style="cursor: pointer;">
-                            <div class="checklist-item-content">
-                                <div class="checklist-item-title">GHG Reporting Readiness</div>
-                                <p style="font-size: 14px; color: var(--speeki-gray); margin-top: 8px;">GHG carbon accounting requirements for Scope 1, 2 and 3</p>
+        <main id="main-content">
+            <form id="checklistForm">
+                <!-- Section 1 -->
+                <div class="checklist-item">
+                    <div class="item-header">
+                        <div class="item-number" data-item="1">1</div>
+                        <div class="item-title">
+                            <h2>Governance and Oversight</h2>
+                        </div>
+                    </div>
+                    <div class="sub-items">
+                        <div class="sub-item">
+                            <input type="checkbox" id="item1_1" class="checklist-checkbox">
+                            <label for="item1_1">Have you defined a clear strategy for ESG reporting assurance?</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item1_2" class="checklist-checkbox">
+                            <label for="item1_2">Is your audit committee involved in overseeing sustainability reporting and assurance?</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item1_3" class="checklist-checkbox">
+                            <label for="item1_3">Do you have internal policies and controls to support assurance?</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item1_4" class="checklist-checkbox">
+                            <label for="item1_4">Have clear roles and responsibilities been assigned for the reporting process?</label>
+                        </div>
+                    </div>
+                    <div class="auditor-tip">
+                        <div class="auditor-tip-header">What Auditors Look For</div>
+                        <div class="auditor-tip-content">
+                            <p>Auditors expect ESG reporting to have the same governance rigour as financial reporting, including board-level oversight, clear accountability, and documented policies.</p>
+                            <div class="red-flag">
+                                <span class="red-flag-text">Red flag: ESG metrics not subject to the same controls as financial reporting. No audit committee involvement in sustainability disclosures. Unclear accountability for data quality.</span>
+                            </div>
+                            <div class="why-matters">
+                                <span class="why-matters-text">Why this matters: Strong governance signals organisational commitment to reliable reporting and creates the foundation for successful assurance engagements.</span>
                             </div>
                         </div>
-                    </a>
-                    <a href="esg-software-checklist.html" style="text-decoration: none;">
-                        <div class="checklist-item" style="cursor: pointer;">
-                            <div class="checklist-item-content">
-                                <div class="checklist-item-title">ESG Software Must-Haves</div>
-                                <p style="font-size: 14px; color: var(--speeki-gray); margin-top: 8px;">Key capabilities for effective ESG programme management</p>
-                            </div>
-                        </div>
-                    </a>
+                    </div>
                 </div>
-            </section>
-        </div>
-    </main>
 
-    <div class="cta-section">
-        <div class="cta-content">
-            <h2 class="cta-title">About ESG Reporting Assurance</h2>
-            <p class="cta-text">The Speeki Platform provides the documentation framework and evidence management that assurance providers require when evaluating ESG disclosures under ISAE 3000. Learn how Speeki supports independent ESG assurance engagements.</p>
-            <button class="cta-button" onclick="window.location.href='https://www.speeki.com/platform'">Learn More About Speeki Platform</button>
+                <!-- Section 2 -->
+                <div class="checklist-item">
+                    <div class="item-header">
+                        <div class="item-number" data-item="2">2</div>
+                        <div class="item-title">
+                            <h2>Data Collection and Reporting</h2>
+                        </div>
+                    </div>
+                    <div class="sub-items">
+                        <div class="sub-item">
+                            <input type="checkbox" id="item2_1" class="checklist-checkbox">
+                            <label for="item2_1">Are your sustainability data sources documented and verifiable?</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item2_2" class="checklist-checkbox">
+                            <label for="item2_2">Have you ensured that collection methods and reported data are consistent, accurate and aligned with reporting requirements?</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item2_3" class="checklist-checkbox">
+                            <label for="item2_3">Do you have a process for handling missing or incomplete data?</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item2_4" class="checklist-checkbox">
+                            <label for="item2_4">Have internal teams been trained on data collection and reporting best practices?</label>
+                        </div>
+                    </div>
+                    <div class="auditor-tip">
+                        <div class="auditor-tip-header">What Auditors Look For</div>
+                        <div class="auditor-tip-content">
+                            <p>Data quality is the foundation of credible ESG reporting. Auditors verify source documentation, calculation methodologies, and consistency of data collection across the organisation.</p>
+                            <div class="red-flag">
+                                <span class="red-flag-text">Red flag: Manual data aggregation from multiple disconnected sources. KPIs calculated differently across business units. No defined data ownership or accountability structure.</span>
+                            </div>
+                            <div class="why-matters">
+                                <span class="why-matters-text">Why this matters: Assurance providers must be able to trace reported figures back to source data. Inconsistent collection methods make verification difficult or impossible.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 3 -->
+                <div class="checklist-item">
+                    <div class="item-header">
+                        <div class="item-number" data-item="3">3</div>
+                        <div class="item-title">
+                            <h2>Gap Analysis and Readiness Assessment</h2>
+                        </div>
+                    </div>
+                    <div class="sub-items">
+                        <div class="sub-item">
+                            <input type="checkbox" id="item3_1" class="checklist-checkbox">
+                            <label for="item3_1">Have you conducted a gap analysis to identify weaknesses in your reporting?</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item3_2" class="checklist-checkbox">
+                            <label for="item3_2">Have you reviewed past assurance findings (if applicable) or other supporting assurances to avoid repeating issues?</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item3_3" class="checklist-checkbox">
+                            <label for="item3_3">Do you have a readiness assessment plan to evaluate your assurance preparedness?</label>
+                        </div>
+                    </div>
+                    <div class="auditor-tip">
+                        <div class="auditor-tip-header">What Auditors Look For</div>
+                        <div class="auditor-tip-content">
+                            <p>Auditors value organisations that proactively identify and address weaknesses before the assurance engagement. A gap analysis demonstrates maturity and self-awareness.</p>
+                            <div class="red-flag">
+                                <span class="red-flag-text">Red flag: No gap analysis performed prior to assurance engagement. Repeat findings from previous assessments without documented remediation. Targets set without documented baseline methodology.</span>
+                            </div>
+                            <div class="why-matters">
+                                <span class="why-matters-text">Why this matters: Gap analysis helps identify issues early, reducing scope for adverse findings and demonstrating a commitment to continuous improvement.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 4 -->
+                <div class="checklist-item">
+                    <div class="item-header">
+                        <div class="item-number" data-item="4">4</div>
+                        <div class="item-title">
+                            <h2>Documentation and Audit Trail</h2>
+                        </div>
+                    </div>
+                    <div class="sub-items">
+                        <div class="sub-item">
+                            <input type="checkbox" id="item4_1" class="checklist-checkbox">
+                            <label for="item4_1">Is there a clear audit trail for all reported sustainability data?</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item4_2" class="checklist-checkbox">
+                            <label for="item4_2">Have you documented the methodologies and assumptions used in your reporting?</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item4_3" class="checklist-checkbox">
+                            <label for="item4_3">Are all required supporting documents and evidence available for assurance providers?</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item4_4" class="checklist-checkbox">
+                            <label for="item4_4">Have you ensured that relevant stakeholders understand the documentation process?</label>
+                        </div>
+                    </div>
+                    <div class="auditor-tip">
+                        <div class="auditor-tip-header">What Auditors Look For</div>
+                        <div class="auditor-tip-content">
+                            <p>Complete audit trails are essential for limited and reasonable assurance. Auditors require evidence of how data was collected, calculated, reviewed, and approved at each stage.</p>
+                            <div class="red-flag">
+                                <span class="red-flag-text">Red flag: Historical data restated without documented rationale. Methodologies and assumptions not recorded. Evidence files organised ad-hoc rather than systematically.</span>
+                            </div>
+                            <div class="why-matters">
+                                <span class="why-matters-text">Why this matters: Without proper documentation, auditors cannot provide assurance. A clear audit trail demonstrates control over the reporting process.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 5 -->
+                <div class="checklist-item">
+                    <div class="item-header">
+                        <div class="item-number" data-item="5">5</div>
+                        <div class="item-title">
+                            <h2>Pre-Assurance Activities</h2>
+                        </div>
+                    </div>
+                    <div class="sub-items">
+                        <div class="sub-item">
+                            <input type="checkbox" id="item5_1" class="checklist-checkbox">
+                            <label for="item5_1">Have you conducted pre-assurance audits to test the completeness and accuracy of disclosures?</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item5_2" class="checklist-checkbox">
+                            <label for="item5_2">Have key teams received training on assurance expectations?</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item5_3" class="checklist-checkbox">
+                            <label for="item5_3">Do you have a process for addressing potential assurance provider concerns in advance?</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item5_4" class="checklist-checkbox">
+                            <label for="item5_4">Have you ensured that sustainability reporting is integrated into financial reporting governance?</label>
+                        </div>
+                    </div>
+                    <div class="auditor-tip">
+                        <div class="auditor-tip-header">What Auditors Look For</div>
+                        <div class="auditor-tip-content">
+                            <p>Pre-assurance preparation demonstrates readiness. Auditors appreciate working with organisations that have tested their disclosures and trained their teams on what to expect.</p>
+                            <div class="red-flag">
+                                <span class="red-flag-text">Red flag: No internal review or second-line review of ESG disclosures before assurance engagement. Teams unfamiliar with assurance requirements or interview processes.</span>
+                            </div>
+                            <div class="why-matters">
+                                <span class="why-matters-text">Why this matters: Pre-assurance activities reduce friction during the engagement and demonstrate organisational maturity in managing ESG reporting.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Section 6 -->
+                <div class="checklist-item">
+                    <div class="item-header">
+                        <div class="item-number" data-item="6">6</div>
+                        <div class="item-title">
+                            <h2>Assurance Provider Selection and Next Steps</h2>
+                        </div>
+                    </div>
+                    <div class="sub-items">
+                        <div class="sub-item">
+                            <input type="checkbox" id="item6_1" class="checklist-checkbox">
+                            <label for="item6_1">Have you selected an assurance provider or defined a selection process?</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item6_2" class="checklist-checkbox">
+                            <label for="item6_2">Have you reviewed assurance provider requirements and expectations?</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item6_3" class="checklist-checkbox">
+                            <label for="item6_3">Do you have a plan for responding to assurance provider requests efficiently?</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item6_4" class="checklist-checkbox">
+                            <label for="item6_4">Are you confident that your ESG reports are ready for external assurance?</label>
+                        </div>
+                    </div>
+                    <div class="auditor-tip">
+                        <div class="auditor-tip-header">What Auditors Look For</div>
+                        <div class="auditor-tip-content">
+                            <p>The right assurance provider will understand your industry and reporting requirements. Auditors also evaluate whether you've prepared your team to work efficiently during the engagement.</p>
+                            <div class="red-flag">
+                                <span class="red-flag-text">Red flag: No clear understanding of limited vs reasonable assurance requirements. Provider selection based solely on cost without considering expertise. No single point of contact for assurance provider requests.</span>
+                            </div>
+                            <div class="why-matters">
+                                <span class="why-matters-text">Why this matters: A well-managed assurance engagement is more efficient and less costly. Proper preparation ensures your organisation can respond promptly to provider requests.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="summary-section">
+                    <h3>Your Checklist Progress</h3>
+                    <div class="summary-stats">
+                        <div class="stat">
+                            <div class="stat-number" id="totalCompleted">0</div>
+                            <div class="stat-label">Items Completed</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number" id="totalRemaining">23</div>
+                            <div class="stat-label">Items Remaining</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number" id="percentComplete">0%</div>
+                            <div class="stat-label">Overall Progress</div>
+                        </div>
+                    </div>
+                    <div class="action-buttons">
+                        <button type="button" class="btn-reset" onclick="resetChecklist()">Reset Checklist</button>
+                        <button type="button" class="btn-export" onclick="exportProgress()">Export Progress</button>
+                    </div>
+                </div>
+            </form>
+        </main>
+
+        <!-- Related Checklists Section -->
+        <div class="speeki-related">
+            <h3>Related Compliance Checklists</h3>
+            <div class="speeki-related-grid">
+                <a href="ghg-reporting-readiness-checklist.html" class="speeki-related-card">
+                    <span class="speeki-related-card-tag">ESG Reporting</span>
+                    <h4>GHG Reporting Readiness</h4>
+                    <p>GHG carbon accounting requirements for Scope 1, 2 and 3</p>
+                </a>
+                <a href="esg-software-checklist.html" class="speeki-related-card">
+                    <span class="speeki-related-card-tag">ESG Reporting</span>
+                    <h4>ESG Software Must-Haves</h4>
+                    <p>Key capabilities for effective ESG programme management</p>
+                </a>
+                <a href="anti-greenwashing-checklist.html" class="speeki-related-card">
+                    <span class="speeki-related-card-tag">ESG Reporting</span>
+                    <h4>Anti-Greenwashing Checklist</h4>
+                    <p>Reduce greenwashing risk in ESG reporting and communications.</p>
+                </a>
+            </div>
         </div>
-    </div>
 
         <!-- Red Flags Section -->
-    <div class="red-flags-section">
+        <div class="red-flags-section">
             <div class="red-flags-section-header">What Auditors Look For: ESG Reporting Assurance Red Flags</div>
-        <div class="red-flags-content">
-            <p style="color: var(--speeki-gray); font-size: 15px; margin-bottom: 20px;">When conducting ESG reporting assurance engagements, auditors commonly flag the following data management, governance, and disclosure concerns.</p>
+            <div class="red-flags-content">
+                <p style="color: var(--speeki-gray); font-size: 15px; margin-bottom: 20px;">When conducting ESG reporting assurance engagements, auditors commonly flag the following data management, governance, and disclosure concerns.</p>
 
-            <div class="red-flag-category">
-                <h5>Data Management Red Flags</h5>
-                <ul>
-                    <li>Manual data aggregation from multiple disconnected sources</li>
-                    <li>No defined data ownership or accountability structure</li>
-                    <li>KPIs calculated differently across business units</li>
-                    <li>Historical data restated without documented rationale</li>
-                </ul>
+                <div class="red-flag-category">
+                    <h5>Data Management Red Flags</h5>
+                    <ul>
+                        <li>Manual data aggregation from multiple disconnected sources</li>
+                        <li>No defined data ownership or accountability structure</li>
+                        <li>KPIs calculated differently across business units</li>
+                        <li>Historical data restated without documented rationale</li>
+                    </ul>
+                </div>
+
+                <div class="red-flag-category">
+                    <h5>Governance Red Flags</h5>
+                    <ul>
+                        <li>ESG metrics not subject to same controls as financial reporting</li>
+                        <li>Materiality assessment conducted without stakeholder input documentation</li>
+                        <li>Targets set without documented baseline methodology</li>
+                        <li>No internal audit or second-line review of ESG disclosures</li>
+                    </ul>
+                </div>
+
+                <div class="red-flag-category">
+                    <h5>Disclosure Red Flags</h5>
+                    <ul>
+                        <li>Forward-looking statements without stated assumptions</li>
+                        <li>Peer comparisons using non-standardised metrics</li>
+                        <li>Environmental claims not tied to verified programmes</li>
+                        <li>Social metrics lacking demographic or geographic disaggregation</li>
+                    </ul>
+                </div>
             </div>
-
-            <div class="red-flag-category">
-                <h5>Governance Red Flags</h5>
-                <ul>
-                    <li>ESG metrics not subject to same controls as financial reporting</li>
-                    <li>Materiality assessment conducted without stakeholder input documentation</li>
-                    <li>Targets set without documented baseline methodology</li>
-                    <li>No internal audit or second-line review of ESG disclosures</li>
-                </ul>
-            </div>
-
-            <div class="red-flag-category">
-                <h5>Disclosure Red Flags</h5>
-                <ul>
-                    <li>Forward-looking statements without stated assumptions</li>
-                    <li>Peer comparisons using non-standardised metrics</li>
-                    <li>Environmental claims not tied to verified programmes</li>
-                    <li>Social metrics lacking demographic or geographic disaggregation</li>
-                </ul>
-            </div>
-
         </div>
-    </div>
 
-<footer>
-        <div class="footer-content">
-            <p class="footer-text">Copyright © 2026 Speeki Pte Ltd. All rights reserved.</p>
+        <!-- CTA Section -->
+        <div class="cta-section">
+            <h3>About ESG Reporting Assurance</h3>
+            <p>The Speeki Platform provides the documentation framework and evidence management that assurance providers require when evaluating ESG disclosures under ISAE 3000. Learn how Speeki supports independent ESG assurance engagements.</p>
+            <a href="https://www.speeki.com/platform" class="cta-button">Learn More About Speeki Platform</a>
+        </div>
+
+        <footer>
+            <p style="font-size: 12px; color: #999999; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 1.5px;">© 2026 Speeki Pte Ltd</p>
+            <p><strong>ESG Reporting Assurance Readiness Checklist</strong></p>
+            <p style="margin-top: 12px;">A comprehensive guide to preparing for external ESG assurance engagements</p>
             <div class="footer-links">
                 <a href="../index.html">All Resources</a>
                 <a href="https://www.speeki.com">Speeki.com</a>
                 <a href="https://www.speeki.com/contact">Contact</a>
             </div>
-        </div>
-    </footer>
+        </footer>
+    </div>
 
     <script>
-        const STORAGE_KEY = 'esgAssuranceProgress';
-        const TOTAL_ITEMS = 24;
+        const checkboxes = document.querySelectorAll('.checklist-checkbox');
+        const progressFill = document.getElementById('progressFill');
+        const progressText = document.getElementById('progressText');
+        const totalCompleted = document.getElementById('totalCompleted');
+        const totalRemaining = document.getElementById('totalRemaining');
+        const percentComplete = document.getElementById('percentComplete');
 
         function loadProgress() {
-            const saved = localStorage.getItem(STORAGE_KEY);
+            const saved = localStorage.getItem('esgAssuranceProgress');
             if (saved) {
-                const checkedIds = JSON.parse(saved);
-                checkedIds.forEach(id => {
-                    const checkbox = document.getElementById(id);
-                    if (checkbox) {
+                const checked = JSON.parse(saved);
+                checkboxes.forEach(checkbox => {
+                    if (checked.includes(checkbox.id)) {
                         checkbox.checked = true;
-                        checkbox.closest('.checklist-item').classList.add('checked');
                     }
                 });
             }
             updateProgress();
         }
 
+        function updateProgress() {
+            const checkedCount = document.querySelectorAll('.checklist-checkbox:checked').length;
+            const totalCount = checkboxes.length;
+            const percentage = (checkedCount / totalCount) * 100;
+
+            progressFill.style.width = percentage + '%';
+            progressText.textContent = `${checkedCount}/${totalCount}`;
+            totalCompleted.textContent = checkedCount;
+            totalRemaining.textContent = totalCount - checkedCount;
+            percentComplete.textContent = Math.round(percentage) + '%';
+
+            updateItemNumbers();
+            saveProgress();
+        }
+
+        function updateItemNumbers() {
+            for (let i = 1; i <= 6; i++) {
+                const itemCheckboxes = document.querySelectorAll(`input[id^="item${i}_"]`);
+                const itemNumber = document.querySelector(`.item-number[data-item="${i}"]`);
+
+                if (itemNumber) {
+                    const allChecked = Array.from(itemCheckboxes).every(cb => cb.checked);
+                    if (allChecked && itemCheckboxes.length > 0) {
+                        itemNumber.classList.add('completed');
+                    } else {
+                        itemNumber.classList.remove('completed');
+                    }
+                }
+            }
+        }
+
         function saveProgress() {
-            const checkboxes = document.querySelectorAll('.checkbox');
-            const checkedIds = Array.from(checkboxes)
+            const checked = Array.from(checkboxes)
                 .filter(cb => cb.checked)
                 .map(cb => cb.id);
-            localStorage.setItem(STORAGE_KEY, JSON.stringify(checkedIds));
-            updateProgress();
+            localStorage.setItem('esgAssuranceProgress', JSON.stringify(checked));
         }
 
-        function updateProgress() {
-            const checkboxes = document.querySelectorAll('.checkbox');
-            const completed = Array.from(checkboxes).filter(cb => cb.checked).length;
-            const percentage = Math.round((completed / TOTAL_ITEMS) * 100);
-
-            document.getElementById('progressBar').style.width = percentage + '%';
-            document.getElementById('progressText').textContent = `${completed} of ${TOTAL_ITEMS} items completed (${percentage}%)`;
-            document.getElementById('completedCount').textContent = completed;
-            document.getElementById('remainingCount').textContent = TOTAL_ITEMS - completed;
-            document.getElementById('percentageComplete').textContent = percentage + '%';
-        }
-
-        function resetProgress() {
-            if (confirm('Are you sure you want to reset all progress? This action cannot be undone.')) {
-                localStorage.removeItem(STORAGE_KEY);
-                const checkboxes = document.querySelectorAll('.checkbox');
-                checkboxes.forEach(cb => {
-                    cb.checked = false;
-                    cb.closest('.checklist-item').classList.remove('checked');
-                });
+        function resetChecklist() {
+            if (confirm('Are you sure you want to reset the entire checklist? This cannot be undone.')) {
+                checkboxes.forEach(checkbox => checkbox.checked = false);
+                localStorage.removeItem('esgAssuranceProgress');
                 updateProgress();
             }
         }
 
         function exportProgress() {
-            const checkboxes = document.querySelectorAll('.checkbox');
-            let output = 'ESG REPORTING ASSURANCE READINESS CHECKLIST - PROGRESS REPORT\n';
-            output += '='.repeat(70) + '\n\n';
-            output += `Date: ${new Date().toLocaleDateString()}\n`;
-            output += `Progress: ${Array.from(checkboxes).filter(cb => cb.checked).length} of ${TOTAL_ITEMS} items completed\n\n`;
+            const checkedCount = document.querySelectorAll('.checklist-checkbox:checked').length;
+            const totalCount = checkboxes.length;
+            const percentage = Math.round((checkedCount / totalCount) * 100);
 
-            const sections = document.querySelectorAll('.section');
-            sections.forEach(section => {
-                const title = section.querySelector('.section-title');
-                if (title) {
-                    output += '\n' + title.textContent + '\n';
-                    output += '-'.repeat(70) + '\n';
+            let exportText = 'ESG REPORTING ASSURANCE READINESS CHECKLIST - PROGRESS REPORT\n';
+            exportText += '='.repeat(70) + '\n\n';
+            exportText += `Overall Progress: ${checkedCount}/${totalCount} (${percentage}%)\n\n`;
+            exportText += `Date: ${new Date().toLocaleDateString()}\n\n`;
+            exportText += 'Completed Items:\n';
+            exportText += '-'.repeat(70) + '\n';
+
+            for (let i = 1; i <= 6; i++) {
+                const itemCheckboxes = document.querySelectorAll(`input[id^="item${i}_"]`);
+                const itemTitle = document.querySelector(`.item-number[data-item="${i}"]`)?.nextElementSibling?.querySelector('h2')?.textContent;
+
+                if (itemTitle) {
+                    const checkedInSection = Array.from(itemCheckboxes).filter(cb => cb.checked).length;
+
+                    exportText += `\n${i}. ${itemTitle}\n`;
+                    exportText += `   Completed: ${checkedInSection}/${itemCheckboxes.length}\n`;
+
+                    Array.from(itemCheckboxes).forEach(cb => {
+                        const label = document.querySelector(`label[for="${cb.id}"]`)?.textContent;
+                        if (label) {
+                            exportText += `   ${cb.checked ? '✓' : '○'} ${label}\n`;
+                        }
+                    });
                 }
+            }
 
-                const items = section.querySelectorAll('.checklist-item');
-                items.forEach(item => {
-                    const checkbox = item.querySelector('.checkbox');
-                    const label = item.querySelector('.checklist-item-title');
-                    if (checkbox && label) {
-                        const status = checkbox.checked ? '[✓]' : '[ ]';
-                        output += `${status} ${label.textContent}\n`;
-                    }
-                });
-            });
+            exportText += '\n' + '='.repeat(70) + '\n';
+            exportText += `Generated: ${new Date().toLocaleString()}\n`;
+            exportText += '\nCreated with Speeki - The Sustainability Firm\n';
+            exportText += 'https://www.speeki.com\n';
 
-            const blob = new Blob([output], { type: 'text/plain' });
-            const url = URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'ESG-Reporting-Assurance-Readiness-Progress.txt';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            URL.revokeObjectURL(url);
+            const element = document.createElement('a');
+            element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(exportText));
+            element.setAttribute('download', 'ESG-Reporting-Assurance-Readiness-Progress.txt');
+            element.style.display = 'none';
+            document.body.appendChild(element);
+            element.click();
+            document.body.removeChild(element);
         }
 
-        document.addEventListener('DOMContentLoaded', function() {
-            loadProgress();
-
-            const checkboxes = document.querySelectorAll('.checkbox');
-            checkboxes.forEach(checkbox => {
-                checkbox.addEventListener('change', function() {
-                    const item = this.closest('.checklist-item');
-                    if (this.checked) {
-                        item.classList.add('checked');
-                    } else {
-                        item.classList.remove('checked');
-                    }
-                    saveProgress();
-                });
-            });
-
-            document.getElementById('resetButton').addEventListener('click', resetProgress);
-            document.getElementById('exportButton').addEventListener('click', exportProgress);
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', updateProgress);
         });
+
+        window.addEventListener('DOMContentLoaded', loadProgress);
     </script>
     <script src="assets/growth.js"></script>
     <script src="assets/growth-advanced.js"></script>
