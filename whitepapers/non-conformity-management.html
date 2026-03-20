@@ -1,0 +1,1612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Non-Conformity Management — Speeki Resources</title>
+<meta name="description" content="A comprehensive guide to building effective non-conformity management systems across ISO management standards. From detection to root cause analysis to systemic correction.">
+<meta name="keywords" content="non-conformity management, ISO management systems, corrective actions, root cause analysis, ISO 37001, compliance">
+<meta name="author" content="Speeki">
+<meta name="created" content="2026-03-20">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Non-Conformity Management — Speeki Resources">
+<meta property="og:description" content="A comprehensive guide to building effective non-conformity management systems across ISO management standards.">
+<meta property="og:url" content="https://www.speeki.com/whitepapers/non-conformity-management">
+<meta property="og:site_name" content="Speeki">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Non-Conformity Management — Speeki Resources">
+<meta name="twitter:description" content="A comprehensive guide to building effective non-conformity management systems across ISO management standards.">
+<link rel="canonical" href="https://www.speeki.com/whitepapers/non-conformity-management">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Non-Conformity Management: Building Systems That Drive Real Change",
+  "description": "A comprehensive guide to building effective non-conformity management systems across ISO management standards. From detection to root cause analysis to systemic correction.",
+  "author": {
+    "@type": "Organization",
+    "name": "Speeki",
+    "url": "https://www.speeki.com"
+  },
+  "datePublished": "2026-03-20",
+  "image": "https://www.speeki.com/assets/og-image-ncr.png",
+  "url": "https://www.speeki.com/whitepapers/non-conformity-management",
+  "isAccessibleForFree": true,
+  "articleBody": "Non-conformity management is one of the most widely implemented and most widely misunderstood requirements across ISO management system standards..."
+}
+</script>
+<style>
+:root {
+  --navy: #0f1c3f;
+  --navy-mid: #1a2d5a;
+  --navy-light: #243672;
+  --teal: #00c4b4;
+  --teal-dark: #00a89a;
+  --teal-light: #e6faf8;
+  --gold: #f0a500;
+  --white: #ffffff;
+  --off-white: #f7f8fc;
+  --gray-100: #f0f2f7;
+  --gray-200: #e2e6f0;
+  --gray-400: #9aa3bf;
+  --gray-600: #5a6380;
+  --gray-800: #2d3558;
+  --text: #1a2033;
+  --text-light: #4a5270;
+  --border: #dde1ef;
+  --shadow: 0 4px 24px rgba(15,28,63,0.10);
+  --shadow-lg: 0 12px 48px rgba(15,28,63,0.18);
+  --radius: 8px;
+  --radius-lg: 16px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--text);
+  background: var(--white);
+  line-height: 1.6;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ─── NAV ─────────────────────────────────────────── */
+.nav {
+  background: var(--navy);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.25);
+}
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+.nav-logo-mark {
+  width: 36px;
+  height: 36px;
+  background: var(--teal);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--navy);
+  letter-spacing: -1px;
+}
+.nav-brand {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: -0.5px;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  list-style: none;
+}
+.nav-links a {
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--teal); }
+.nav-cta {
+  background: var(--teal);
+  color: var(--navy) !important;
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-weight: 600 !important;
+  transition: background 0.2s !important;
+}
+.nav-cta:hover { background: var(--teal-dark) !important; }
+
+/* ─── BREADCRUMB ──────────────────────────────────── */
+.breadcrumb {
+  background: var(--navy-mid);
+  padding: 12px 0;
+}
+.breadcrumb-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.5);
+}
+.breadcrumb a { color: rgba(255,255,255,0.6); text-decoration: none; }
+.breadcrumb a:hover { color: var(--teal); }
+.breadcrumb-sep { opacity: 0.4; }
+.breadcrumb-current { color: var(--teal); }
+
+/* ─── HERO ────────────────────────────────────────── */
+.hero {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 50%, #162050 100%);
+  padding: 72px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -120px;
+  right: -80px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(0,196,180,0.12) 0%, transparent 65%);
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -80px;
+  left: 20%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(0,196,180,0.06) 0%, transparent 65%);
+  pointer-events: none;
+}
+.hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 64px;
+  align-items: start;
+}
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0,196,180,0.12);
+  border: 1px solid rgba(0,196,180,0.3);
+  color: var(--teal);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 100px;
+  margin-bottom: 24px;
+}
+.hero-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 52px;
+  line-height: 1.08;
+  color: var(--white);
+  margin-bottom: 12px;
+  letter-spacing: -1px;
+}
+.hero-title em {
+  font-style: italic;
+  color: var(--teal);
+}
+.hero-subtitle {
+  font-size: 18px;
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 36px;
+  line-height: 1.5;
+  max-width: 560px;
+}
+.hero-meta {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+.hero-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255,255,255,0.55);
+  font-size: 13px;
+}
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.btn-primary {
+  background: var(--teal);
+  color: var(--navy);
+  border: none;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.2s, transform 0.15s;
+}
+.btn-primary:hover { background: var(--teal-dark); transform: translateY(-1px); }
+.btn-outline {
+  background: transparent;
+  color: rgba(255,255,255,0.8);
+  border: 1px solid rgba(255,255,255,0.25);
+  padding: 13px 24px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: border-color 0.2s, color 0.2s;
+}
+.btn-outline:hover { border-color: var(--teal); color: var(--teal); }
+.hero-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 32px;
+  backdrop-filter: blur(8px);
+  position: relative;
+  top: 12px;
+}
+.hero-card-doc {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.doc-icon {
+  width: 48px;
+  height: 60px;
+  background: var(--navy);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid rgba(0,196,180,0.3);
+  position: relative;
+}
+.doc-icon::before {
+  content: 'DOCX';
+  color: var(--teal);
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  position: absolute;
+  bottom: 6px;
+}
+.doc-info h4 { color: var(--white); font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+.doc-info p { color: rgba(255,255,255,0.55); font-size: 13px; }
+.card-meta { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; margin-top: 16px; }
+.card-meta-item { color: rgba(255,255,255,0.5); font-size: 13px; display: flex; align-items: center; gap: 6px; }
+
+/* ─── MAIN WRAPPER ────────────────────────────────── */
+.wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 60px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.main-content {
+  grid-column: 1;
+}
+
+.sidebar {
+  grid-column: 2;
+  position: sticky;
+  top: 80px;
+  height: fit-content;
+}
+
+.sidebar-title {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--gray-600);
+  margin-bottom: 16px;
+}
+
+.sidebar-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sidebar-nav a {
+  display: block;
+  padding: 8px 12px;
+  color: var(--text-light);
+  text-decoration: none;
+  font-size: 14px;
+  border-left: 2px solid transparent;
+  border-radius: 4px;
+  transition: all 0.2s;
+}
+
+.sidebar-nav a:hover {
+  color: var(--teal);
+  border-left-color: var(--teal);
+  background: var(--teal-light);
+}
+
+/* ─── CONTENT ─────────────────────────────────────── */
+.content-section {
+  margin-bottom: 60px;
+  padding-bottom: 60px;
+  border-bottom: 1px solid var(--border);
+}
+
+.content-section:last-child {
+  border-bottom: none;
+}
+
+.main-content h1 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 44px;
+  line-height: 1.1;
+  color: var(--navy);
+  margin-bottom: 24px;
+  letter-spacing: -1px;
+}
+
+.main-content h2 {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-top: 40px;
+  margin-bottom: 20px;
+  letter-spacing: -0.5px;
+}
+
+.main-content h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--navy-mid);
+  margin-top: 28px;
+  margin-bottom: 12px;
+}
+
+.main-content p {
+  margin-bottom: 16px;
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+.main-content em {
+  color: var(--teal);
+  font-style: italic;
+}
+
+.main-content strong {
+  color: var(--navy);
+  font-weight: 600;
+}
+
+.main-content ul, .main-content ol {
+  margin-left: 24px;
+  margin-bottom: 20px;
+}
+
+.main-content li {
+  margin-bottom: 10px;
+  color: var(--text-light);
+  line-height: 1.7;
+}
+
+.content-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 28px 0;
+  background: var(--off-white);
+  border-radius: var(--radius);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.content-table td {
+  padding: 16px;
+  border-bottom: 1px solid var(--border);
+  color: var(--text);
+}
+
+.content-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.content-table tbody tr:hover {
+  background: var(--gray-100);
+}
+
+/* ─── CTA SECTION ─────────────────────────────────── */
+.cta-section {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+  padding: 80px 32px;
+  text-align: center;
+  border-radius: var(--radius-lg);
+  margin-top: 80px;
+  color: var(--white);
+}
+
+.cta-section h2 {
+  color: var(--white);
+  font-size: 40px;
+  margin-bottom: 16px;
+}
+
+.cta-section p {
+  color: rgba(255,255,255,0.8);
+  font-size: 18px;
+  margin-bottom: 32px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cta-btn {
+  background: var(--teal);
+  color: var(--navy);
+  padding: 16px 36px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.2s, transform 0.15s;
+}
+
+.cta-btn:hover {
+  background: var(--teal-dark);
+  transform: translateY(-2px);
+}
+
+/* ─── FOOTER ──────────────────────────────────────── */
+.footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.65);
+  padding: 40px 32px;
+  text-align: center;
+  font-size: 13px;
+  margin-top: 80px;
+}
+
+.footer a {
+  color: var(--teal);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* ─── RESPONSIVE ──────────────────────────────────── */
+@media (max-width: 768px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .sidebar {
+    position: static;
+    top: auto;
+  }
+
+  .hero-inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .hero-title {
+    font-size: 36px;
+  }
+
+  .main-content h1 {
+    font-size: 32px;
+  }
+
+  .main-content h2 {
+    font-size: 24px;
+  }
+
+  .main-content h3 {
+    font-size: 18px;
+  }
+
+  .nav-inner {
+    padding: 0 16px;
+  }
+
+  .breadcrumb-inner {
+    padding: 0 16px;
+  }
+
+  .cta-section {
+    padding: 60px 24px;
+  }
+
+  .cta-section h2 {
+    font-size: 28px;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <div class="nav-logo-mark">S</div>
+      <div class="nav-brand">Speeki</div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/index.html">Resources</a></li>
+      <li><a href="https://www.speeki.com" class="nav-cta" target="_blank">Visit Website</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- Breadcrumb -->
+<div class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="/index.html">Resources</a>
+    <span class="breadcrumb-sep">/</span>
+    <span class="breadcrumb-current">Non-Conformity Management</span>
+  </div>
+</div>
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="hero-inner">
+    <div>
+      <div class="hero-tag">ISO MANAGEMENT SYSTEMS</div>
+      <h1 class="hero-title">Non-Conformity Management: Building Systems That Drive <em>Real Change</em></h1>
+      <p class="hero-subtitle">Why most organisations mistake non-conformity management for action tracking — and how to build a genuine system that detects problems, finds root causes, drives systemic correction, and feeds learning back into your management system.</p>
+      <div class="hero-meta">
+        <div class="hero-meta-item">Applicable to ISO 37001, 37301, 42001, 27001, 45001, 9001, 14001 and all Annex SL standards</div>
+      </div>
+      <div class="hero-actions">
+        <a href="#executive-summary" class="btn-primary">Read Now</a>
+        <a href="/index.html" class="btn-outline">Back to Resources</a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-doc">
+        <div class="doc-icon"></div>
+        <div class="doc-info">
+          <h4>Non-Conformity Management Whitepaper</h4>
+          <p>Digital resource</p>
+        </div>
+      </div>
+      <div class="card-meta">
+        <div class="card-meta-item">10 Sections</div>
+        <div class="card-meta-item">15 min read</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Main Content with Sidebar -->
+<div class="wrapper">
+  <div class="main-content">
+<section class="content-section" id="executive-summary">
+<h1>Executive Summary</h1>
+<p>Non-conformity management is one of the most widely implemented — and most widely misunderstood — requirements across ISO management system standards. Organisations frequently mistake it for a simple action tracker, a punch list, or a corrective action log. They build spreadsheets, assign owners, and mark items as &#x27;closed.&#x27; They believe this constitutes compliance.</p>
+<p>It does not.</p>
+<p>A non-conformity management system is precisely that: a system. It is an integrated, repeatable set of processes that detects deviations, classifies them by severity and type, diagnoses their root cause, drives systemic correction, verifies effectiveness, and feeds learning back into the management system as a whole.</p>
+<p>This whitepaper explains what that system looks like in practice, why it matters, how to build it, and what templates and tools your organisation needs to operate it well. While examples are drawn primarily from ISO 37001 (Anti-Bribery Management Systems), every principle and template in this paper applies equally to ISO 37301, ISO 42001, ISO 27001, ISO 45001, ISO 9001, ISO 14001, and all other Annex SL-aligned management system standards.</p>
+</section>
+<section class="content-section" id="1--the-fundamental-misconception">
+<h1>1.  The Fundamental Misconception</h1>
+<h2>1.1  What Organisations Typically Build</h2>
+<p>Ask most organisations to show you their non-conformity management process and they will produce one of three things:</p>
+<p>A spreadsheet listing observations from an internal audit, with columns for &#x27;action&#x27;, &#x27;owner&#x27;, and &#x27;due date&#x27;.</p>
+<p>A corrective action plan (CAP) drafted in response to an external audit finding.</p>
+<p>A management objectives tracker that conflates improvement targets with actual nonconformities.</p>
+<p>None of these constitute a non-conformity management system. They are artefacts — outputs of a system that does not yet exist. They document symptoms while leaving causes unaddressed. They close records without verifying whether the underlying problem has actually been resolved. And they provide no mechanism for the organisation to learn from patterns across time.</p>
+<h2>1.2  Why the Misconception Persists</h2>
+<p>The confusion is understandable. ISO standards state requirements in abstract terms. Clause 10.1 of ISO 37001, for example, requires organisations to &#x27;react to the nonconformity&#x27;, &#x27;evaluate the need for action to eliminate the causes&#x27;, and take action &#x27;as necessary&#x27;. These phrases are brief and technical. Without guidance on how to operationalise them, organisations default to what they already know: action lists and project trackers.</p>
+<p>External auditors bear some responsibility too. When auditors raise findings as written nonconformities and organisations respond with a corrective action plan, both parties may declare the matter resolved — even when the plan addresses only the immediate symptom rather than the systemic cause.</p>
+<h2>1.3  The Regulatory and Certification Stakes</h2>
+<p>The consequences of getting this wrong are real. ISO 37001 auditors do not simply check that a CAP exists. They assess whether the organisation has built a functional system. They look for:</p>
+<p>Evidence of a defined process for identifying and recording nonconformities across all sources (not just audits).</p>
+<p>A classification methodology that distinguishes severity and type.</p>
+<p>Documented root cause analysis for significant findings.</p>
+<p>Corrective actions that address cause, not just symptom.</p>
+<p>Effectiveness reviews that verify whether actions worked.</p>
+<p>Trend analysis that informs management review.</p>
+<p>Organisations that have only a corrective action tracker are likely to receive further nonconformities about their nonconformity management.</p>
+</section>
+<section class="content-section" id="2--what-non-conformity-management-actually-is">
+<h1>2.  What Non-Conformity Management Actually Is</h1>
+<h2>2.1  The Standard Definition</h2>
+<p>A non-conformity (NC) is, at its core, the non-fulfilment of a requirement. That requirement may come from:</p>
+<p>The ISO management system standard itself (e.g., ISO 37001 Clause 4.5 requires a formal risk assessment; the organisation has never conducted one).</p>
+<p>The organisation&#x27;s own documented policies, procedures, or controls.</p>
+<p>Legal or regulatory obligations incorporated into the management system.</p>
+<p>Contractual requirements with clients, partners, or counterparties.</p>
+<p>Commitments made in the Statement of Applicability or scope documentation.</p>
+<p>Non-conformities are distinct from observations (potential areas of improvement that have not yet breached a requirement), opportunities for improvement (suggestions without an identified gap), and corrective actions (the responses to nonconformities). These distinctions matter because they drive different system responses.</p>
+<h2>2.2  The System Metaphor</h2>
+<p>Think of non-conformity management not as a process but as a circulatory system. The body of your management system continuously generates information — through audits, incident reports, complaints, performance monitoring, and management review. That information, when it identifies a gap, enters the non-conformity system. The system classifies it, diagnoses it, treats it, and returns it to the body in improved form. If the system is healthy, the organisation learns and strengthens with each cycle. If the system is absent or broken, gaps accumulate, compounding risk.</p>
+<h2>2.3  Sources of Non-Conformity</h2>
+<p>A mature system captures nonconformities from multiple sources. Organisations that rely solely on internal audits will systematically miss categories of failure. The complete set of detection sources includes:</p>
+</section>
+<section class="content-section" id="3--building-a-classification-system">
+<h1>3.  Building a Classification System</h1>
+<p>Classification is the first critical decision point in the non-conformity lifecycle. It determines urgency, escalation, the depth of root cause analysis required, and the level of management attention the issue demands. Without a classification system, every finding is treated with equal weight — which means significant failures receive insufficient attention and minor gaps receive disproportionate resource.</p>
+<h2>3.1  The Two Dimensions of Classification</h2>
+<p>Non-conformities should be classified across two independent dimensions: severity and type. These dimensions interact but serve different purposes.</p>
+<h2>3.2  Severity Classification Definitions</h2>
+<p>The following definitions should be embedded in your non-conformity procedure and applied consistently by all persons recording findings:</p>
+<h2>3.3  Type Classification</h2>
+<p>Classifying nonconformities by type enables pattern analysis and drives more targeted corrective actions. The four types below cover the complete range of management system failures:</p>
+</section>
+<section class="content-section" id="4--the-non-conformity-lifecycle-in-detail">
+<h1>4.  The Non-Conformity Lifecycle in Detail</h1>
+<h2>4.1  Stage 1: Detection and Recording</h2>
+<p>Every non-conformity begins with detection. The system must provide multiple, accessible channels for recording nonconformities, and every person within the scope of the management system must understand their obligation to report gaps when they encounter them. Detection cannot be limited to formal audits.</p>
+<p>At the point of detection, the following information must be captured before any analysis begins:</p>
+<p>Date of detection and the source (audit, incident, monitoring, report, etc.).</p>
+<p>Name and role of the person recording the non-conformity.</p>
+<p>The specific requirement that has not been fulfilled (citing the relevant clause, procedure, or policy reference).</p>
+<p>A factual, objective description of what was observed — not an opinion or a proposed solution.</p>
+<p>Any immediate evidence gathered (documents reviewed, interviews conducted, system records accessed).</p>
+<h2>4.2  Stage 2: Containment (Immediate Action)</h2>
+<p>For significant nonconformities — particularly those classified as Major or Critical — containment action may be required before root cause analysis is complete. Containment addresses the immediate risk, not the underlying cause.</p>
+<p>Examples of containment actions in an ISO 37001 context:</p>
+<p>Suspending a business partner relationship pending investigation of a due diligence failure.</p>
+<p>Withdrawing approval authority from an individual pending re-training and reassessment.</p>
+<p>Issuing an emergency communication to clarify a policy requirement where widespread misunderstanding has been identified.</p>
+<p>Containment must be documented separately from corrective action. Conflating them creates the illusion that the problem has been solved when only the immediate risk has been controlled.</p>
+<h2>4.3  Stage 3: Root Cause Analysis</h2>
+<p>Root cause analysis (RCA) is the diagnostic heart of the system. It is the stage most frequently skipped, abbreviated, or performed superficially — and this is why the same nonconformities recur across audit cycles.</p>
+<p>The purpose of RCA is to identify the deepest systemic cause of a non-conformity: not what happened, but why the management system allowed it to happen. The answer should always point to a process, policy, training, resource, or cultural factor that can actually be changed.</p>
+<p>The Five-Why technique is the most accessible RCA method for management system nonconformities. It works by iteratively asking &#x27;why&#x27; until the team reaches a root cause that is actionable and systemic.</p>
+<p>For complex nonconformities — particularly those classified as Systemic — a fishbone diagram provides a structured framework for exploring multiple contributing cause categories simultaneously. The six standard categories for management system analysis are:</p>
+<h2>4.4  Stage 4: Corrective Action</h2>
+<p>Corrective action is the planned and implemented response to a confirmed root cause. It is fundamentally different from correction.</p>
+<p>Each corrective action must have: a specific description of the action to be taken, the name of the responsible person, a target completion date, resource requirements identified, and linkage back to the root cause it addresses. Actions not linked to root causes are corrections, not corrective actions.</p>
+<h2>4.5  Stage 5: Effectiveness Review</h2>
+<p>The effectiveness review is the stage most commonly omitted, and its absence is the primary reason nonconformities recur. Closing a corrective action record because the planned activities were completed is not sufficient. The system requires verification that the actions actually worked.</p>
+<p>An effectiveness review asks: has the root cause been eliminated? Evidence of effectiveness may include:</p>
+<p>Re-audit of the affected area with no recurrence of the finding.</p>
+<p>Monitoring data demonstrating the control is now operating as intended.</p>
+<p>Process output metrics showing improvement over a defined review period.</p>
+<p>Competence records demonstrating staff have completed required training and have been assessed.</p>
+<h2>4.6  Stage 6: Trend Analysis and Learning</h2>
+<p>The final and most strategically valuable stage of the system is trend analysis. Individual nonconformities, once resolved, must be aggregated to identify patterns that individual findings do not reveal. Trend analysis is the mechanism by which the management system learns.</p>
+<p>Trend analysis should be performed at a minimum quarterly and must be presented to management review. Key questions to answer:</p>
+<p>Are certain types of non-conformity (Documentation, Implementation, Effectiveness, Systemic) increasing or decreasing over time?</p>
+<p>Are specific processes, departments, or geographic entities disproportionately represented in the NC register?</p>
+<p>Are specific ISO clauses or control areas consistently generating findings?</p>
+<p>Are the same root cause categories recurring, suggesting systemic issues not yet addressed?</p>
+<p>What is the average time-to-closure by severity, and is it trending in the right direction?</p>
+</section>
+<section class="content-section" id="5--the-template-suite">
+<h1>5.  The Template Suite</h1>
+<p>The following templates form the complete operational infrastructure of a non-conformity management system. Each template serves a distinct function. They are designed to work together as a connected system, with each document referencing and feeding into the next.</p>
+<h2>Template 1: Non-Conformity Record Form</h2>
+<h2>Template 2: NC Register</h2>
+<p>The NC Register is the master log of all non-conformities, maintained in real time by the Management System Owner. It is the primary input to management review and trend analysis. The following fields are mandatory:</p>
+<p>Additional required fields not shown above: CAP reference, RCA completion date, corrective action due date, effectiveness review date, closure date, and reviewer name.</p>
+<h2>Template 3: Root Cause Analysis Worksheet</h2>
+<p>The RCA Worksheet must be completed for all Major and Critical nonconformities. For Minor nonconformities, simplified RCA (minimum three-Why iterations) is acceptable. The worksheet travels with the NC record and is retained as evidence.</p>
+<h2>Template 4: Corrective Action Plan</h2>
+<p>The Corrective Action Plan (CAP) is a structured document linking each identified root cause to specific, measurable, and time-bound corrective actions. It is distinct from the NC Record and must be referenced by unique CAP number. One CAP may address multiple root causes from a single NC, but each corrective action must trace to a specific cause.</p>
+<h2>Template 5: Effectiveness Review Form</h2>
+<p>The effectiveness review must be conducted by someone other than the person who implemented the corrective action. It is not a self-assessment. It is a structured verification that the root cause has been eliminated and the non-conformity has not recurred.</p>
+<h2>Template 6: NC Trend Analysis Report</h2>
+<p>The Trend Analysis Report is produced quarterly by the Management System Owner and submitted to management review. It synthesises data from the NC Register to identify patterns, measure system performance, and flag issues requiring strategic attention.</p>
+<p>The report must include the following analytical sections:</p>
+</section>
+<section class="content-section" id="6--connecting-non-conformity-management-to-the-broader-system">
+<h1>6.  Connecting Non-Conformity Management to the Broader System</h1>
+<h2>6.1  Linkage to Risk Management</h2>
+<p>Non-conformities are, at their core, evidence that risk controls are not functioning as intended. Every Major or Critical non-conformity should trigger a review of the relevant risk assessment entry. If a control was recorded as &#x27;in place and effective&#x27; in the risk register, but an NC demonstrates the control is failing, the risk register must be updated to reflect the revised residual risk. Failing to do so creates a dangerous disconnect between documented risk posture and actual risk exposure.</p>
+<h2>6.2  Linkage to Internal Audit</h2>
+<p>Internal audit is the primary planned source of nonconformities, but it is not the only source. Conversely, trend data from the NC register should directly inform internal audit planning. A process area generating a disproportionate number of NCs should receive more frequent or more detailed audit attention. Internal audit plans that are not informed by NC trend data are likely to be misallocating audit resource.</p>
+<h2>6.3  Linkage to Management Review</h2>
+<p>ISO management system standards require management review to consider the performance of the management system. Non-conformity data is one of the core inputs to that review. Management review must consider at a minimum: the total volume and trend of NCs by severity; the status of open NCs and CAs; patterns identified in trend analysis; and the overall effectiveness of the NC management system itself.</p>
+<p>Management review is not passive. It should result in documented decisions about resource allocation, system improvements, and changes to objectives or targets where the data warrants it.</p>
+<h2>6.4  Linkage to Continual Improvement</h2>
+<p>Clause 10 of all ISO management system standards combines nonconformity management with continual improvement. This is not accidental. The data generated by a well-functioning NC system is one of the most valuable inputs to an organisation&#x27;s improvement programme. Patterns of NCs identify structural weaknesses. Root cause analysis reveals systemic issues. Effectiveness reviews test whether improvement interventions are working. Trend data quantifies progress over time.</p>
+<p>Organisations that treat NC management and continual improvement as separate activities miss the compounding value of integrating them. The system should be designed so that completed effectiveness reviews automatically feed improvement recommendations back into the annual management system review cycle.</p>
+</section>
+<section class="content-section" id="7--common-mistakes-and-how-to-avoid-them">
+<h1>7.  Common Mistakes and How to Avoid Them</h1>
+</section>
+<section class="content-section" id="8--implementation-roadmap">
+<h1>8.  Implementation Roadmap</h1>
+<p>Building a non-conformity management system from the ground up is a structured project. The following phased approach is recommended for organisations implementing this for the first time, or organisations whose existing NC process requires fundamental redesign.</p>
+</section>
+<section class="content-section" id="conclusion">
+<h1>Conclusion</h1>
+<p>Non-conformity management is not a compliance checkbox. It is not a list of actions. It is not a document produced for an auditor. It is a system — a designed, maintained, and continuously improving capability that determines whether your organisation actually learns from failures or merely records them.</p>
+<p>The organisations that build this system properly — with a documented procedure, a classification framework, structured root cause analysis, corrective action plans linked to root causes, effectiveness reviews, and trend reporting — build management systems that get stronger over time. Their audits improve. Their risks reduce. Their certification becomes a genuine reflection of how they operate, not just a document in a folder.</p>
+<p>Those who treat nonconformity management as an audit artefact will find themselves cycling through the same findings, the same corrective actions, and the same certification conversations, year after year.</p>
+<table class="content-table">
+<tbody>
+<tr>
+<td>SPEEKI
+WHITEPAPER</td>
+<td>SPEEKI
+WHITEPAPER</td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Building a Non-Conformity
+Management System
+Why managing nonconformities is a system, not a list — and how to build it right</td>
+<td>Building a Non-Conformity
+Management System
+Why managing nonconformities is a system, not a list — and how to build it right</td>
+</tr>
+<tr>
+<td>Applicable Standards
+ISO 37001  |  ISO 37301  |  ISO 42001  |  ISO 27001
+ISO 45001  |  ISO 9001  |  ISO 14001  |  All MSS</td>
+<td>speeki.com
+2025 Edition</td>
+</tr>
+</tbody>
+</table>
+<table class="content-table">
+<tbody>
+<tr>
+<td>KEY INSIGHT</td>
+<td>A non-conformity register is not a system. Root cause analysis is not an investigation report. Closing an action is not the same as correcting a system failure. This paper shows you the difference — and what to build instead.</td>
+</tr>
+</tbody>
+</table>
+<table class="content-table">
+<tbody>
+<tr>
+<td>WARNING</td>
+<td>Closing a corrective action plan is not the same as implementing a non-conformity management system. One is a document. The other is an ongoing organisational capability.</td>
+</tr>
+</tbody>
+</table>
+<table class="content-table">
+<tbody>
+<tr>
+<td>THE NON-CONFORMITY LIFECYCLE
+DETECT  →  RECORD  →  CLASSIFY  →  CONTAIN  →  DIAGNOSE (RCA)  →  CORRECT  →  VERIFY  →  LEARN
+Each stage is a gate. Skipping any one of them breaks the system.</td>
+</tr>
+</tbody>
+</table>
+<table class="content-table">
+<tbody>
+<tr>
+<td>Source</td>
+<td>Examples</td>
+</tr>
+<tr>
+<td>Internal Audits</td>
+<td>Scheduled and unannounced audits against the management system requirements and documented controls</td>
+</tr>
+<tr>
+<td>External Audits</td>
+<td>Certification body stage 1/2 audits, surveillance audits, recertification findings, regulatory inspections</td>
+</tr>
+<tr>
+<td>Incident Reports</td>
+<td>Bribery incidents or attempted bribes (ISO 37001), data breaches (ISO 27001), safety events (ISO 45001)</td>
+</tr>
+<tr>
+<td>Compliance Monitoring</td>
+<td>KPI performance that falls outside defined thresholds, failed control testing</td>
+</tr>
+<tr>
+<td>Management Review</td>
+<td>Gaps identified during top management&#x27;s periodic review of system performance</td>
+</tr>
+<tr>
+<td>Supplier / Partner Audits</td>
+<td>Third-party or business partner due diligence findings that reveal control failures</td>
+</tr>
+<tr>
+<td>Employee Reports</td>
+<td>Whistleblowing, ethics hotline submissions, complaints, or informal escalations</td>
+</tr>
+<tr>
+<td>Self-Assessments</td>
+<td>Department-level or process-owner self-evaluations against documented requirements</td>
+</tr>
+<tr>
+<td>Regulatory Actions</td>
+<td>Enforcement notices, regulatory findings, prosecutions, or penalty decisions</td>
+</tr>
+</tbody>
+</table>
+<table class="content-table">
+<tbody>
+<tr>
+<td>DIMENSION 1: SEVERITY</td>
+<td>DIMENSION 2: TYPE</td>
+</tr>
+<tr>
+<td>How serious is the gap?
+• Critical (Major) — systemic, high-impact
+• Major — significant, likely audit finding
+• Minor — isolated, limited impact</td>
+<td>What is the nature of the gap?
+• Documentation — policy/procedure gap
+• Implementation — process not followed
+• Effectiveness — control exists but fails
+• Systemic — pattern across multiple areas</td>
+</tr>
+</tbody>
+</table>
+<table class="content-table">
+<tbody>
+<tr>
+<td>Level</td>
+<td>Label</td>
+<td>Definition</td>
+<td>ISO 37001 Example</td>
+</tr>
+<tr>
+<td>CRITICAL</td>
+<td>Systemic or high-impact</td>
+<td>Absence of a required control; an actual bribery incident; complete failure of a core system element. Certification may be at risk.</td>
+<td>No due diligence process exists for any high-risk business partners despite the risk assessment identifying them.</td>
+</tr>
+<tr>
+<td>MAJOR</td>
+<td>Significant gap, consistent pattern</td>
+<td>A required control exists but is not consistently applied, or documented procedures are not followed in multiple instances.</td>
+<td>Training records show 40% of staff in high-risk roles have not completed mandatory ABMS training in the required period.</td>
+</tr>
+<tr>
+<td>MINOR</td>
+<td>Isolated gap, low impact</td>
+<td>A single instance of non-compliance with a documented requirement, with no evidence of pattern or systemic failure. Limited risk exposure.</td>
+<td>One business partner file missing a signed anti-bribery contractual clause that is otherwise present in all other reviewed files.</td>
+</tr>
+</tbody>
+</table>
+<table class="content-table">
+<tbody>
+<tr>
+<td>Type</td>
+<td>Description</td>
+<td>What This Tells You</td>
+</tr>
+<tr>
+<td>Documentation</td>
+<td>Required policy, procedure, or record is absent, outdated, or incomplete.</td>
+<td>System design failure — the framework was never built or has not been maintained.</td>
+</tr>
+<tr>
+<td>Implementation</td>
+<td>A required process or procedure exists but is not being followed in practice.</td>
+<td>Execution failure — awareness, training, resource, or cultural gap. RCA must go to the &#x27;why not followed&#x27; question.</td>
+</tr>
+<tr>
+<td>Effectiveness</td>
+<td>A control is documented and implemented but is not achieving its intended outcome.</td>
+<td>Design or calibration failure — the control itself is flawed or the risk has changed. Most complex to resolve.</td>
+</tr>
+<tr>
+<td>Systemic</td>
+<td>A pattern of nonconformities across multiple processes, functions, or periods suggesting a management system-level failure.</td>
+<td>Root cause likely sits in leadership, culture, or system architecture. Requires escalation to senior management.</td>
+</tr>
+</tbody>
+</table>
+<table class="content-table">
+<tbody>
+<tr>
+<td>CRITICAL PRINCIPLE</td>
+<td>The recording of a non-conformity must describe the gap, not propose the solution. The solution is determined after root cause analysis. Conflating recording with solution design is one of the most common errors organisations make and systematically undermines RCA quality.</td>
+</tr>
+</tbody>
+</table>
+<table class="content-table">
+<tbody>
+<tr>
+<td>Level</td>
+<td>Question</td>
+<td>Example (ISO 37001 — Training Gap)</td>
+</tr>
+<tr>
+<td>Finding</td>
+<td>What happened?</td>
+<td>40% of staff in high-risk roles have not completed mandatory ABMS training within the required 12-month period.</td>
+</tr>
+<tr>
+<td>Why 1</td>
+<td>Why did this happen?</td>
+<td>Training completions were not tracked against the schedule.</td>
+</tr>
+<tr>
+<td>Why 2</td>
+<td>Why were they not tracked?</td>
+<td>No person was assigned responsibility for monitoring training compliance.</td>
+</tr>
+<tr>
+<td>Why 3</td>
+<td>Why was no person assigned?</td>
+<td>The training procedure does not assign ownership of the monitoring function.</td>
+</tr>
+<tr>
+<td>Why 4</td>
+<td>Why does the procedure omit this?</td>
+<td>The procedure was drafted to describe delivery, not monitoring, and was never reviewed against the full lifecycle requirement.</td>
+</tr>
+<tr>
+<td>Root Cause</td>
+<td>Systemic cause</td>
+<td>The organisation&#x27;s procedure design process does not require identification of monitoring responsibilities, creating a systematic gap between process documentation and operational accountability.</td>
+</tr>
+</tbody>
+</table>
+<table class="content-table">
+<tbody>
+<tr>
+<td>People
+Training gaps, role clarity, competence, culture, accountability</td>
+<td>Process
+Procedure design, workflow, decision points, controls, interfaces</td>
+<td>Systems
+Technology, tools, data flows, monitoring capability, reporting</td>
+</tr>
+<tr>
+<td>Management
+Oversight, tone at the top, resource allocation, priority signals</td>
+<td>Policy / Design
+Requirements definition, scope, control design adequacy, framework gaps</td>
+<td>Environment
+Regulatory change, organisational change, third-party dependency, context shifts</td>
+</tr>
+</tbody>
+</table>
+<table class="content-table">
+<tbody>
+<tr>
+<td>Correction</td>
+<td>Corrective Action</td>
+</tr>
+<tr>
+<td>Fixes the immediate instance of the problem.</td>
+<td>Fixes the root cause so the problem cannot recur.</td>
+</tr>
+<tr>
+<td>Fast and tactical.</td>
+<td>Planned, resource-allocated, and time-bound.</td>
+</tr>
+<tr>
+<td>May not prevent recurrence.</td>
+<td>Designed specifically to prevent recurrence.</td>
+</tr>
+<tr>
+<td>E.g., re-training one employee who was identified as untrained.</td>
+<td>E.g., redesigning the training monitoring procedure to assign accountability, create a dashboard, and trigger automated alerts.</td>
+</tr>
+</tbody>
+</table>
+<table class="content-table">
+<tbody>
+<tr>
+<td>KEY RULE</td>
+<td>Effectiveness cannot be evaluated immediately after implementing a corrective action. A reasonable observation period — typically 30 to 90 days depending on severity — is required before the effectiveness review can be conducted and the NC formally closed.</td>
+</tr>
+</tbody>
+</table>
+<table class="content-table">
+<tbody>
+<tr>
+<td>Template</td>
+<td>Purpose</td>
+<td>Feeds Into</td>
+</tr>
+<tr>
+<td>NC Record Form</td>
+<td>Capture and classify each non-conformity at point of detection</td>
+<td>NC Register</td>
+</tr>
+<tr>
+<td>NC Register</td>
+<td>Central log of all nonconformities with status, owner, and lifecycle tracking</td>
+<td>Management Review, Trend Report</td>
+</tr>
+<tr>
+<td>RCA Worksheet</td>
+<td>Structured analysis of root cause using Five-Why or fishbone methodology</td>
+<td>Corrective Action Plan</td>
+</tr>
+<tr>
+<td>Corrective Action Plan (CAP)</td>
+<td>Detailed plan for implementing corrective actions linked to root causes</td>
+<td>Effectiveness Review</td>
+</tr>
+<tr>
+<td>Effectiveness Review Form</td>
+<td>Structured assessment of whether corrective actions have eliminated the root cause</td>
+<td>NC Register (closure), Trend Report</td>
+</tr>
+<tr>
+<td>NC Trend Analysis Report</td>
+<td>Quarterly/annual aggregation and pattern analysis of all NCs</td>
+<td>Management Review</td>
+</tr>
+</tbody>
+</table>
+<table class="content-table">
+<tbody>
+<tr>
+<td>NON-CONFORMITY RECORD FORM</td>
+<td>NON-CONFORMITY RECORD FORM</td>
+<td>NON-CONFORMITY RECORD FORM</td>
+<td>NON-CONFORMITY RECORD FORM</td>
+</tr>
+<tr>
+<td>PART A — IDENTIFICATION</td>
+<td>PART A — IDENTIFICATION</td>
+<td>PART A — IDENTIFICATION</td>
+<td>PART A — IDENTIFICATION</td>
+</tr>
+<tr>
+<td>NC Reference Number</td>
+<td>NC-[YYYY]-[SEQ]</td>
+<td>Date Detected</td>
+<td>DD/MM/YYYY</td>
+</tr>
+<tr>
+<td>Detected By (Name / Role)</td>
+<td> </td>
+<td>Source</td>
+<td>Audit / Incident / Monitoring / Other</td>
+</tr>
+<tr>
+<td>PART B — CLASSIFICATION</td>
+<td>PART B — CLASSIFICATION</td>
+<td>PART B — CLASSIFICATION</td>
+<td>PART B — CLASSIFICATION</td>
+</tr>
+<tr>
+<td>Severity</td>
+<td>☐ Critical   ☐ Major   ☐ Minor</td>
+<td>Type</td>
+<td>☐ Documentation  ☐ Implementation  ☐ Effectiveness  ☐ Systemic</td>
+</tr>
+<tr>
+<td>Requirement Reference</td>
+<td>ISO 37001 Clause / Policy / Procedure reference</td>
+<td>ISO 37001 Clause / Policy / Procedure reference</td>
+<td>ISO 37001 Clause / Policy / Procedure reference</td>
+</tr>
+<tr>
+<td>PART C — DESCRIPTION OF NON-CONFORMITY</td>
+<td>PART C — DESCRIPTION OF NON-CONFORMITY</td>
+<td>PART C — DESCRIPTION OF NON-CONFORMITY</td>
+<td>PART C — DESCRIPTION OF NON-CONFORMITY</td>
+</tr>
+<tr>
+<td>Describe the observed gap (factual, objective — do not propose solutions here):</td>
+<td>Describe the observed gap (factual, objective — do not propose solutions here):</td>
+<td>Describe the observed gap (factual, objective — do not propose solutions here):</td>
+<td>Describe the observed gap (factual, objective — do not propose solutions here):</td>
+</tr>
+<tr>
+<td>PART D — CONTAINMENT (if required)</td>
+<td>PART D — CONTAINMENT (if required)</td>
+<td>PART D — CONTAINMENT (if required)</td>
+<td>PART D — CONTAINMENT (if required)</td>
+</tr>
+<tr>
+<td>Immediate Action Taken</td>
+<td> </td>
+<td>Date / By Whom</td>
+<td> </td>
+</tr>
+<tr>
+<td>PART E — ASSIGNMENT</td>
+<td>PART E — ASSIGNMENT</td>
+<td>PART E — ASSIGNMENT</td>
+<td>PART E — ASSIGNMENT</td>
+</tr>
+<tr>
+<td>Assigned To</td>
+<td> </td>
+<td>RCA Due Date</td>
+<td> </td>
+</tr>
+</tbody>
+</table>
+<table class="content-table">
+<tbody>
+<tr>
+<td>NC Ref</td>
+<td>Detected</td>
+<td>Source</td>
+<td>Severity</td>
+<td>Type</td>
+<td>Requirement</td>
+<td>Description (Summary)</td>
+<td>Owner</td>
+<td>Status</td>
+</tr>
+<tr>
+<td>NC-2025-001</td>
+<td>15 Jan 25</td>
+<td>Int. Audit</td>
+<td>Major</td>
+<td>Implementation</td>
+<td>ISO 37001 §8.4 / Training Procedure</td>
+<td>40% of high-risk role staff not trained within required period</td>
+<td>HR Director</td>
+<td>In Progress</td>
+</tr>
+<tr>
+<td>NC-2025-002</td>
+<td>22 Jan 25</td>
+<td>Monitoring</td>
+<td>Minor</td>
+<td>Documentation</td>
+<td>ABMS Policy §4.3</td>
+<td>One BP file missing signed anti-bribery clause</td>
+<td>Legal Counsel</td>
+<td>Closed</td>
+</tr>
+</tbody>
+</table>
+<table class="content-table">
+<tbody>
+<tr>
+<td>ROOT CAUSE ANALYSIS WORKSHEET</td>
+<td>ROOT CAUSE ANALYSIS WORKSHEET</td>
+</tr>
+<tr>
+<td>NC Reference:  ____________________     Date of RCA:  ____________________     Facilitated by:  ____________________</td>
+<td>NC Reference:  ____________________     Date of RCA:  ____________________     Facilitated by:  ____________________</td>
+</tr>
+<tr>
+<td>METHOD SELECTION</td>
+<td>METHOD SELECTION</td>
+</tr>
+<tr>
+<td>☐ Five-Why Method  (use for isolated or implementation-type NCs)       ☐ Fishbone / Ishikawa  (use for systemic or effectiveness-type NCs)</td>
+<td>☐ Five-Why Method  (use for isolated or implementation-type NCs)       ☐ Fishbone / Ishikawa  (use for systemic or effectiveness-type NCs)</td>
+</tr>
+<tr>
+<td>NON-CONFORMITY STATEMENT (copy from NC Record — factual, no solution language)</td>
+<td>NON-CONFORMITY STATEMENT (copy from NC Record — factual, no solution language)</td>
+</tr>
+<tr>
+<td> </td>
+<td> </td>
+</tr>
+<tr>
+<td>FIVE-WHY ANALYSIS</td>
+<td>FIVE-WHY ANALYSIS</td>
+</tr>
+<tr>
+<td>Level</td>
+<td>Why / Response</td>
+</tr>
+<tr>
+<td>Why 1</td>
+<td> </td>
+</tr>
+<tr>
+<td>Why 2</td>
+<td> </td>
+</tr>
+<tr>
+<td>Why 3</td>
+<td> </td>
+</tr>
+<tr>
+<td>Why 4</td>
+<td> </td>
+</tr>
+<tr>
+<td>Why 5</td>
+<td> </td>
+</tr>
+<tr>
+<td>ROOT CAUSE</td>
+<td>State the systemic root cause — it must be actionable:</td>
+</tr>
+</tbody>
+</table>
+<table class="content-table">
+<tbody>
+<tr>
+<td>Contributing Factor(s) Identified:
+ </td>
+<td>RCA Sign-off:  Name / Date:
+ </td>
+</tr>
+</tbody>
+</table>
+<table class="content-table">
+<tbody>
+<tr>
+<td>Action #</td>
+<td>Corrective Action Description</td>
+<td>Responsible</td>
+<td>Due Date</td>
+<td>Resources Required</td>
+</tr>
+<tr>
+<td>CA-001</td>
+<td>Revise Training Monitoring Procedure to assign named owner for compliance tracking and add monthly monitoring obligation.</td>
+<td>HR Director</td>
+<td>28 Feb 2025</td>
+<td>2 days HR team + Legal review</td>
+</tr>
+<tr>
+<td>CA-002</td>
+<td>Implement training compliance dashboard with automated 30-day pre-expiry alerts for all roles in high-risk classification.</td>
+<td>IT / Learning Platform Admin</td>
+<td>15 Mar 2025</td>
+<td>Platform configuration — no additional budget</td>
+</tr>
+</tbody>
+</table>
+<table class="content-table">
+<tbody>
+<tr>
+<td>Field</td>
+<td>Value</td>
+<td>Guidance</td>
+</tr>
+<tr>
+<td>CAP Number</td>
+<td> </td>
+<td>Format: CAP-[NC Ref]-[Year]</td>
+</tr>
+<tr>
+<td>Linked NC Reference</td>
+<td> </td>
+<td>Must match NC Register entry</td>
+</tr>
+<tr>
+<td>Root Cause Addressed</td>
+<td> </td>
+<td>Paste root cause statement from RCA Worksheet</td>
+</tr>
+<tr>
+<td>Effectiveness Review Date</td>
+<td> </td>
+<td>Set at minimum 30 days post-implementation (90 days for Major/Critical)</td>
+</tr>
+<tr>
+<td>Approved By</td>
+<td> </td>
+<td>Management System Owner or delegate</td>
+</tr>
+</tbody>
+</table>
+<table class="content-table">
+<tbody>
+<tr>
+<td>EFFECTIVENESS REVIEW FORM</td>
+<td>EFFECTIVENESS REVIEW FORM</td>
+<td>EFFECTIVENESS REVIEW FORM</td>
+<td>EFFECTIVENESS REVIEW FORM</td>
+</tr>
+<tr>
+<td>NC Reference:  ________________     CAP Reference:  ________________     Review Date:  ________________     Reviewer:  ________________</td>
+<td>NC Reference:  ________________     CAP Reference:  ________________     Review Date:  ________________     Reviewer:  ________________</td>
+<td>NC Reference:  ________________     CAP Reference:  ________________     Review Date:  ________________     Reviewer:  ________________</td>
+<td>NC Reference:  ________________     CAP Reference:  ________________     Review Date:  ________________     Reviewer:  ________________</td>
+</tr>
+<tr>
+<td>Effectiveness Test Question</td>
+<td>Effectiveness Test Question</td>
+<td>Evidence Reviewed</td>
+<td>Result</td>
+</tr>
+<tr>
+<td>Has the corrective action been fully implemented as documented in the CAP?</td>
+<td>Has the corrective action been fully implemented as documented in the CAP?</td>
+<td> </td>
+<td>☐ Yes  ☐ No</td>
+</tr>
+<tr>
+<td>Has the original non-conformity or an equivalent gap been observed since implementation?</td>
+<td>Has the original non-conformity or an equivalent gap been observed since implementation?</td>
+<td> </td>
+<td>☐ Yes  ☐ No</td>
+</tr>
+<tr>
+<td>Has the root cause identified in the RCA been eliminated or materially mitigated?</td>
+<td>Has the root cause identified in the RCA been eliminated or materially mitigated?</td>
+<td> </td>
+<td>☐ Yes  ☐ No</td>
+</tr>
+<tr>
+<td>Has the corrective action introduced any new or unintended risks?</td>
+<td>Has the corrective action introduced any new or unintended risks?</td>
+<td> </td>
+<td>☐ Yes  ☐ No</td>
+</tr>
+<tr>
+<td>Does monitoring data / control testing / re-audit confirm the control is now operating effectively?</td>
+<td>Does monitoring data / control testing / re-audit confirm the control is now operating effectively?</td>
+<td> </td>
+<td>☐ Yes  ☐ No</td>
+</tr>
+<tr>
+<td>Overall Effectiveness Determination</td>
+<td>☐ EFFECTIVE — NC may be formally closed          ☐ PARTIALLY EFFECTIVE — additional actions required          ☐ NOT EFFECTIVE — CAP must be revised</td>
+<td>☐ EFFECTIVE — NC may be formally closed          ☐ PARTIALLY EFFECTIVE — additional actions required          ☐ NOT EFFECTIVE — CAP must be revised</td>
+<td>☐ EFFECTIVE — NC may be formally closed          ☐ PARTIALLY EFFECTIVE — additional actions required          ☐ NOT EFFECTIVE — CAP must be revised</td>
+</tr>
+<tr>
+<td>Reviewer Narrative</td>
+<td> </td>
+<td> </td>
+<td> </td>
+</tr>
+</tbody>
+</table>
+<table class="content-table">
+<tbody>
+<tr>
+<td>Analysis Section</td>
+<td>Content Required</td>
+</tr>
+<tr>
+<td>NC Volume Summary</td>
+<td>Total NCs by period; comparison to prior period; breakdown by severity (Critical/Major/Minor)</td>
+</tr>
+<tr>
+<td>Source Analysis</td>
+<td>NCs by detection source; trend over time; identifies whether coverage is balanced across detection channels</td>
+</tr>
+<tr>
+<td>Type Distribution</td>
+<td>NCs by type (Documentation/Implementation/Effectiveness/Systemic); pattern identification</td>
+</tr>
+<tr>
+<td>Process / Clause Heat Map</td>
+<td>Which ISO clauses and internal process areas are generating the most findings; identifies structural weaknesses</td>
+</tr>
+<tr>
+<td>Root Cause Category Frequency</td>
+<td>Which root cause categories (People/Process/Systems/Management/Policy/Environment) appear most often</td>
+</tr>
+<tr>
+<td>Time-to-Closure Performance</td>
+<td>Average days to close by severity; trend; identifies bottlenecks in the corrective action process</td>
+</tr>
+<tr>
+<td>Effectiveness Review Results</td>
+<td>Proportion of CAs assessed as Effective / Partially Effective / Not Effective; trend</td>
+</tr>
+<tr>
+<td>Management Escalations</td>
+<td>NCs escalated to senior management; status; decisions taken</td>
+</tr>
+<tr>
+<td>Recommended System Actions</td>
+<td>Specific recommendations for management review to consider — informed by pattern data</td>
+</tr>
+</tbody>
+</table>
+<table class="content-table">
+<tbody>
+<tr>
+<td>Common Mistake</td>
+<td>Why It Fails</td>
+<td>What to Do Instead</td>
+</tr>
+<tr>
+<td>Using a corrective action tracker as the system</td>
+<td>Actions are recorded but root causes are never identified. The same nonconformities recur.</td>
+<td>Build a complete lifecycle: NC Record → Classification → RCA → CAP → Effectiveness Review.</td>
+</tr>
+<tr>
+<td>Recording proposed solutions rather than observed gaps</td>
+<td>The description pre-determines the solution before analysis, bypassing RCA.</td>
+<td>Train all auditors and monitors: describe the gap, not the fix. Solutions come after diagnosis.</td>
+</tr>
+<tr>
+<td>Closing NCs when the CAP is complete rather than when effectiveness is confirmed</td>
+<td>Actions are taken but their effectiveness is never verified. The root cause may persist.</td>
+<td>Require a formal effectiveness review before any NC can be formally closed.</td>
+</tr>
+<tr>
+<td>Relying solely on internal audits to generate NCs</td>
+<td>Gaps in control coverage, incidents, and day-to-day non-compliance go undetected.</td>
+<td>Build detection channels across all sources: incidents, monitoring, self-assessment, stakeholders.</td>
+</tr>
+<tr>
+<td>Treating all NCs with the same urgency</td>
+<td>Resource is wasted on minor findings while Critical gaps receive insufficient attention.</td>
+<td>Apply a documented classification system and calibrate response protocols to severity.</td>
+</tr>
+<tr>
+<td>Performing RCA superficially (stopping at &#x27;human error&#x27;)</td>
+<td>&#x27;Human error&#x27; is almost never a root cause. It is a symptom of a process or training failure.</td>
+<td>Train RCA facilitators in Five-Why methodology. Reject any RCA that terminates at &#x27;human error&#x27;.</td>
+</tr>
+<tr>
+<td>Not reporting NC trend data to management review</td>
+<td>Management cannot make informed decisions about the system without performance data.</td>
+<td>Mandate NC trend analysis as a fixed agenda item at every management review.</td>
+</tr>
+<tr>
+<td>Conflating nonconformities with observations and improvement opportunities</td>
+<td>Resources are misallocated; requirements compliance is unclear; audit evidence is confused.</td>
+<td>Define and document the distinction clearly. Train all users of the system on the difference.</td>
+</tr>
+</tbody>
+</table>
+<table class="content-table">
+<tbody>
+<tr>
+<td>Phase</td>
+<td>Activity</td>
+<td>Description</td>
+<td>Timeline</td>
+<td>Owner</td>
+</tr>
+<tr>
+<td>Phase 1
+Design</td>
+<td>Define the NC Procedure</td>
+<td>Document the complete lifecycle, classification system, RCA requirements, escalation thresholds, and effectiveness review criteria.</td>
+<td>Weeks 1–2</td>
+<td>MSO</td>
+</tr>
+<tr>
+<td>Phase 1
+Design</td>
+<td>Build the Template Suite</td>
+<td>Develop and finalise all six templates. Align numbering conventions. Test with a historical NC scenario.</td>
+<td>Weeks 2–3</td>
+<td>MSO</td>
+</tr>
+<tr>
+<td>Phase 1
+Design</td>
+<td>Configure NC Register</td>
+<td>Set up the central register with all required fields, auto-reference numbering, and status workflow.</td>
+<td>Week 3</td>
+<td>MSO</td>
+</tr>
+<tr>
+<td>Phase 2
+Deploy</td>
+<td>Train All Users</td>
+<td>Deliver training on the classification system, recording obligations, RCA methodology, and template usage for auditors, monitors, and process owners.</td>
+<td>Week 4</td>
+<td>All</td>
+</tr>
+<tr>
+<td>Phase 2
+Deploy</td>
+<td>Migrate Historical NCs</td>
+<td>Classify and enter all open NCs and CAs from prior systems into the new register. Assign owners. Set effectiveness review dates.</td>
+<td>Week 5</td>
+<td>MSO</td>
+</tr>
+<tr>
+<td>Phase 3
+Operate &amp; Improve</td>
+<td>Produce First Trend Report</td>
+<td>At the 90-day mark, produce the first formal trend analysis report and present to management review.</td>
+<td>Month 3</td>
+<td>MSO</td>
+</tr>
+<tr>
+<td>Phase 3
+Operate &amp; Improve</td>
+<td>Annual System Review</td>
+<td>Review NC procedure effectiveness annually. Update classification definitions, RCA tools, and templates based on operational experience.</td>
+<td>Annually</td>
+<td>MSO</td>
+</tr>
+</tbody>
+</table>
+<table class="content-table">
+<tbody>
+<tr>
+<td>SPEEKI</td>
+<td>Speeki provides independent assurance and ISO certificationfor organisations across 100+ countries. Our team of accredited auditors and management system specialists can help you audit your non-conformity management system to the standard required by ISO 37001, ISO 37301, ISO 42001, and all other Annex SL-aligned management system standards. Contact us at speeki.com.</td>
+</tr>
+</tbody>
+</table>
+<table class="content-table">
+<tbody>
+<tr>
+<td>About Speeki
+Speeki is an independent ESG assurance and ISO certification firm operating across 100+ countries. We assure that management systems that actually work.
+speeki.com</td>
+<td>Our Services
+• ISO 37001 / 37301 / 42001 Certification
+• Independent Sustainability Assurance
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+  </div>
+
+  <aside class="sidebar">
+    <h3 class="sidebar-title">In This Guide</h3>
+<ul class="sidebar-nav"><li><a href="#executive-summary">Executive Summary</a></li><li><a href="#1--the-fundamental-misconception">1.  The Fundamental Misconception</a></li><li><a href="#2--what-non-conformity-management-actually-is">2.  What Non-Conformity Management Actually Is</a></li><li><a href="#3--building-a-classification-system">3.  Building a Classification System</a></li><li><a href="#4--the-non-conformity-lifecycle-in-detail">4.  The Non-Conformity Lifecycle in Detail</a></li><li><a href="#5--the-template-suite">5.  The Template Suite</a></li><li><a href="#6--connecting-non-conformity-management-to-the-broader-system">6.  Connecting Non-Conformity Management to the Broader System</a></li><li><a href="#7--common-mistakes-and-how-to-avoid-them">7.  Common Mistakes and How to Avoid Them</a></li><li><a href="#8--implementation-roadmap">8.  Implementation Roadmap</a></li><li><a href="#conclusion">Conclusion</a></li></ul>
+  </aside>
+</div>
+
+<!-- CTA Section -->
+<section class="cta-section">
+  <h2>Ready to Transform Your Non-Conformity Management?</h2>
+  <p>Discover how Speeki helps organisations build effective, auditor-ready non-conformity management systems that drive real operational improvement.</p>
+  <a href="https://www.speeki.com" target="_blank" class="cta-btn">Learn About Speeki Platform</a>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+  <p><strong>Speeki Whitepaper Series.</strong> Non-Conformity Management. Published 20 March 2026. <a href="https://www.speeki.com">Visit speeki.com</a></p>
+</footer>
+
+</body>
+</html>
