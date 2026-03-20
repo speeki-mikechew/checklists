@@ -1,0 +1,23 @@
+
+# === Orchestrator baseline (auto-added) ===
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+*.tmp
+*.swp
+*.swo
+.env
+.env.local
+.env.*.local
+dist/
+build/
+.cache/
+.playwright-mcp/
+.worktrees/
+coverage/
+*.tgz
+.idea/
+.vscode/
+__pycache__/
+*.pyc
