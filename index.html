@@ -128,6 +128,7 @@
 
         :root {
             --speeki-green: #00FF7F;
+            --speeki-green-text: #00875a;
             --speeki-dark-blue: #0a1f44;
             --speeki-dark: #0a1f44;
             --speeki-gray: #4a5568;
@@ -270,7 +271,7 @@
             align-items: center;
             gap: 8px;
             background: rgba(0, 255, 127, 0.15);
-            color: var(--speeki-green);
+            color: var(--speeki-green-text);
             padding: 8px 16px;
             border-radius: 20px;
             font-size: 14px;
@@ -414,7 +415,7 @@
         }
 
         .btn-secondary:hover {
-            border-color: var(--speeki-green);
+            border-color: var(--speeki-green-text);
             color: var(--speeki-green);
         }
 
@@ -1004,7 +1005,7 @@
 
         .lead-magnet-benefits li::before {
             content: '\2713';
-            color: var(--speeki-green);
+            color: var(--speeki-green-text);
             font-weight: 700;
             font-size: 18px;
             flex-shrink: 0;
@@ -1525,9 +1526,15 @@
                 margin-top: 8px;
             }
         }
-    </style>
+            /* Skip Navigation Link */
+        .skip-link { position: absolute; top: -40px; left: 0; background: #0a1f44; color: #fff; padding: 8px 16px; z-index: 10000; font-size: 14px; }
+        .skip-link:focus { top: 0; }
+                /* Visually Hidden (for screen readers) */
+        .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+        </style>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <!-- Announcement Bar -->
     <div class="announcement-bar">
         Free ESG Readiness Assessment - <a href="#assessment">Take the 2-minute quiz</a> and get personalised recommendations
@@ -1721,7 +1728,7 @@
         </div>
     </section>
 
-    <main>
+    <main id="main-content">
         <div class="container">
 
             <!-- Category Filter Bar -->

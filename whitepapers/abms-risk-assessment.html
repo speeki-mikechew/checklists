@@ -399,7 +399,7 @@ body {
   line-height: 1;
   margin-bottom: 4px;
 }
-.stat-number span { color: var(--teal); }
+.stat-number span { color: var(--teal-text); }
 .stat-label { color: var(--text-light); font-size: 13px; }
 
 /* ─── CONTENT LAYOUT ──────────────────────────────── */
@@ -716,9 +716,13 @@ body {
   .stat-item:nth-child(3), .stat-item:nth-child(4) { border-bottom: none; padding-bottom: 0; }
   .footer-top { grid-template-columns: 1fr; gap: 32px; }
 }
-</style>
+        /* Skip Navigation Link */
+        .skip-link { position: absolute; top: -40px; left: 0; background: #0a1f44; color: #fff; padding: 8px 16px; z-index: 10000; font-size: 14px; }
+        .skip-link:focus { top: 0; }
+        </style>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
 <!-- NAV -->
 <nav class="nav">
@@ -747,7 +751,7 @@ body {
 </div>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero" id="main-content">
   <div class="hero-inner">
     <div class="hero-content">
       <div class="hero-tag">
@@ -1461,7 +1465,7 @@ body {
 
     <p>Speeki provides independent anti-bribery risk assessments, ABMS gap analyses, and ISO 37001 certification across 100+ countries. Our assessors bring deep sector and jurisdictional experience to scenario development, control testing, and treatment plan design.</p>
 
-    <p><strong>Contact us at <a href="mailto:info@speeki.com" style="color: var(--teal);">info@speeki.com</a> or visit <a href="https://www.speeki.com" target="_blank" style="color: var(--teal);">www.speeki.com</a></strong></p>
+    <p><strong>Contact us at <a href="mailto:info@speeki.com" style="color: var(--teal-text);">info@speeki.com</a> or visit <a href="https://www.speeki.com" target="_blank" style="color: var(--teal-text);">www.speeki.com</a></strong></p>
 
   </article>
 
