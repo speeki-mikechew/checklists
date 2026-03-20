@@ -189,17 +189,6 @@
             border-bottom: 1px solid var(--speeki-border);
         }
 
-        .logo {
-            margin-bottom: 60px;
-            display: flex;
-            align-items: center;
-        }
-
-        .logo img {
-            height: 60px;
-            width: auto;
-        }
-
         header h1 {
             font-size: 56px;
             margin-bottom: 24px;
@@ -1544,10 +1533,63 @@
         .skip-link:focus { top: 0; }
                 /* Visually Hidden (for screen readers) */
         .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
+        /* Sticky Navbar */
+        nav {
+            background: rgba(255, 255, 255, 0.95);
+            border-bottom: 1px solid var(--speeki-border);
+            padding: 20px 4vw;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+        .nav-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .nav-logo {
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+        }
+        .nav-logo img {
+            height: 50px;
+            width: auto;
+        }
+        .nav-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--speeki-green);
+            color: var(--speeki-dark);
+            padding: 10px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+        .nav-cta:hover {
+            filter: brightness(0.95);
+            transform: translateY(-1px);
+        }
         </style>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
+    <!-- Sticky Navbar -->
+    <nav>
+        <div class="nav-content">
+            <a href="index.html" class="nav-logo">
+                <img src="speeki-logo.png" alt="Speeki" style="height: 50px; width: auto;">
+            </a>
+            <a href="https://www.speeki.com" class="nav-cta">Visit Speeki.com</a>
+        </div>
+    </nav>
     <!-- Announcement Bar -->
     <div class="announcement-bar">
         Free ESG Resource Finder - <a href="#assessment">Take the 2-minute quiz</a> to find the most relevant resources for your context
@@ -1555,9 +1597,6 @@
 
     <header>
         <div class="container">
-            <a href="index.html" class="logo">
-                <img src="speeki-logo.png" alt="Speeki - The Sustainability Firm">
-            </a>
             <h1>Resources</h1>
             <div class="accent-line"></div>
             <p class="subtitle">Interactive checklists, whitepapers, and practical guides to strengthen your ESG and sustainability programmes. Download, track progress, and drive meaningful change in your organisation.</p>
