@@ -1,0 +1,2557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Security: Protect page with authentication -->
+    <script src="assets/auth.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ESG and sustainability resources by Speeki. Interactive checklists, whitepapers, and guides for CSOs, sustainability professionals, and compliance teams to strengthen ESG reporting, avoid greenwashing, and drive sustainable business practices.">
+    <meta name="keywords" content="ESG resources, sustainability resources, ESG whitepaper, interactive checklist, greenwashing prevention, CSO tools, sustainability reporting, ESG compliance, Speeki">
+    <meta name="author" content="Speeki">
+    <meta property="og:title" content="ESG & Sustainability Resources | Speeki">
+    <meta property="og:description" content="Interactive checklists, whitepapers, and guides for sustainability professionals. Resources to strengthen ESG reporting and avoid greenwashing.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/assets/speeki-og-image.jpg">
+    <meta property="og:url" content="https://www.speeki.com/en-GB/resources">
+    <meta property="og:site_name" content="Speeki">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ESG & Sustainability Resources | Speeki">
+    <meta name="twitter:description" content="Interactive checklists, whitepapers, and guides for sustainability professionals. Resources to strengthen ESG reporting and avoid greenwashing.">
+    <meta name="robots" content="index, follow">
+    <title>Resources | Speeki - ESG & Sustainability Tools</title>
+    <link rel="canonical" href="https://www.speeki.com/en-GB/resources">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "ESG & Sustainability Resources",
+        "description": "Interactive ESG and sustainability resources by Speeki. Checklists, whitepapers, and guides for CSOs, sustainability professionals, and compliance teams.",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Speeki",
+            "url": "https://www.speeki.com",
+            "description": "The Sustainability Firm"
+        },
+        "mainEntity": {
+            "@type": "ItemList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "CSO's Anti-Greenwashing Checklist",
+                    "url": "https://www.speeki.com/checklists/anti-greenwashing"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "GHG Reporting Readiness Checklist",
+                    "url": "https://www.speeki.com/checklists/ghg-reporting-readiness"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "ESG Reporting Assurance Checklist",
+                    "url": "https://www.speeki.com/checklists/esg-reporting-assurance"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 4,
+                    "name": "ESG Software Must-Haves Checklist",
+                    "url": "https://www.speeki.com/checklists/esg-software"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 5,
+                    "name": "ISO 37001 Anti-Bribery Checklist",
+                    "url": "https://www.speeki.com/checklists/iso-37001"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 6,
+                    "name": "ISO 37002 Whistleblowing Checklist",
+                    "url": "https://www.speeki.com/checklists/iso-37002-whistleblowing"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 7,
+                    "name": "ISO 37000 Governance Checklist",
+                    "url": "https://www.speeki.com/checklists/iso-37000-governance"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 8,
+                    "name": "ISO 37008 Internal Investigations Checklist",
+                    "url": "https://www.speeki.com/checklists/iso-37008-investigations"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 9,
+                    "name": "ISO 26000 Social Responsibility Checklist",
+                    "url": "https://www.speeki.com/checklists/iso-26000-social-responsibility"
+                }
+            ]
+        }
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/growth.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --speeki-green: #00FF7F;
+            --speeki-dark-blue: #0a1f44;
+            --speeki-dark: #0a1f44;
+            --speeki-gray: #4a5568;
+            --speeki-light-gray: #f8f9fa;
+            --speeki-border: #e5e7eb;
+        }
+
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', 'Arial', sans-serif;
+            background: #ffffff;
+            color: var(--speeki-dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 4vw;
+        }
+
+        /* Announcement Bar */
+        .announcement-bar {
+            background: var(--speeki-dark-blue);
+            color: #ffffff;
+            text-align: center;
+            padding: 12px 4vw;
+            font-size: 14px;
+            font-weight: 500;
+        }
+
+        .announcement-bar a {
+            color: var(--speeki-green);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .announcement-bar a:hover {
+            text-decoration: underline;
+        }
+
+        /* Header */
+        header {
+            background: #ffffff;
+            padding: 60px 0 80px;
+            border-bottom: 1px solid var(--speeki-border);
+        }
+
+        .logo {
+            margin-bottom: 60px;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 40px;
+            width: auto;
+        }
+
+        header h1 {
+            font-size: 56px;
+            margin-bottom: 24px;
+            font-weight: 700;
+            letter-spacing: -1.8px;
+            color: var(--speeki-dark);
+            max-width: 900px;
+            line-height: 1.1;
+        }
+
+        header .subtitle {
+            font-size: 20px;
+            color: var(--speeki-gray);
+            max-width: 800px;
+            line-height: 1.7;
+            font-weight: 400;
+        }
+
+        .accent-line {
+            width: 80px;
+            height: 4px;
+            background: var(--speeki-green);
+            margin: 40px 0 60px;
+            border-radius: 2px;
+        }
+
+        /* Social Proof Stats */
+        .social-proof-stats {
+            display: flex;
+            gap: 48px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .stat-number {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--speeki-dark);
+            letter-spacing: -1px;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: var(--speeki-gray);
+            font-weight: 500;
+        }
+
+        /* Quick Assessment Section */
+        .quick-assessment {
+            background: linear-gradient(135deg, var(--speeki-dark-blue) 0%, #1a2d5c 100%);
+            padding: 60px 0;
+        }
+
+        .assessment-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .assessment-text h2 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+        }
+
+        .assessment-text p {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.85);
+            line-height: 1.7;
+        }
+
+        .assessment-text .time-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0, 255, 127, 0.15);
+            color: var(--speeki-green);
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 600;
+            margin-top: 20px;
+        }
+
+        .assessment-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 40px;
+        }
+
+        .assessment-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--speeki-dark);
+            margin-bottom: 24px;
+        }
+
+        .quiz-step {
+            display: none;
+        }
+
+        .quiz-step.active {
+            display: block;
+        }
+
+        .quiz-question {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--speeki-dark);
+            margin-bottom: 16px;
+        }
+
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .quiz-option {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 16px;
+            border: 2px solid var(--speeki-border);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .quiz-option:hover {
+            border-color: var(--speeki-green);
+            background: #f0fdf4;
+        }
+
+        .quiz-option input {
+            accent-color: var(--speeki-green);
+            width: 18px;
+            height: 18px;
+        }
+
+        .quiz-option span {
+            font-size: 15px;
+            color: var(--speeki-dark);
+        }
+
+        .quiz-progress {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 24px;
+        }
+
+        .quiz-progress-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: var(--speeki-border);
+        }
+
+        .quiz-progress-dot.active {
+            background: var(--speeki-green);
+        }
+
+        .quiz-progress-dot.completed {
+            background: var(--speeki-dark-blue);
+        }
+
+        /* Company Input Styles */
+        .company-input-wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .company-input {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid var(--speeki-border);
+            border-radius: 8px;
+            font-size: 15px;
+            font-family: inherit;
+            transition: all 0.2s;
+        }
+
+        .company-input:focus {
+            outline: none;
+            border-color: var(--speeki-green);
+            background: #f0fdf4;
+        }
+
+        .btn-primary, .btn-secondary {
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+        }
+
+        .btn-primary {
+            background: var(--speeki-green);
+            color: white;
+        }
+
+        .btn-primary:hover:not(:disabled) {
+            background: #059669;
+        }
+
+        .btn-primary:disabled {
+            background: #d1d5db;
+            cursor: not-allowed;
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--speeki-gray);
+            border: 2px solid var(--speeki-border);
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--speeki-green);
+            color: var(--speeki-green);
+        }
+
+        .analysis-loading {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 12px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid var(--speeki-border);
+            border-top-color: var(--speeki-green);
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        .analysis-loading p {
+            color: var(--speeki-gray);
+            font-size: 14px;
+        }
+
+        .analysis-result {
+            margin-top: 20px;
+            padding: 16px;
+            background: #f0fdf4;
+            border: 2px solid var(--speeki-green);
+            border-radius: 8px;
+        }
+
+        .analysis-result h5 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--speeki-dark);
+            margin-bottom: 8px;
+        }
+
+        .analysis-result p {
+            font-size: 14px;
+            color: var(--speeki-gray);
+            margin: 0;
+        }
+
+        .quiz-result {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .quiz-result h4 {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--speeki-dark);
+            margin-bottom: 12px;
+        }
+
+        .quiz-result p {
+            font-size: 16px;
+            color: var(--speeki-gray);
+            margin-bottom: 24px;
+        }
+
+        .quiz-result-cta {
+            display: inline-block;
+            background: var(--speeki-dark-blue);
+            color: #ffffff;
+            padding: 14px 28px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.2s;
+        }
+
+        .quiz-result-cta:hover {
+            background: #1a2d5c;
+            transform: translateY(-2px);
+        }
+
+        /* Roadmap Styles */
+        .industry-context {
+            font-size: 14px;
+            color: var(--speeki-gray);
+            margin-bottom: 20px;
+            padding: 12px 16px;
+            background: #f0fdf4;
+            border-radius: 6px;
+            border-left: 3px solid var(--speeki-green);
+        }
+
+        .roadmap-path {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin: 20px 0;
+            max-height: 280px;
+            overflow-y: auto;
+        }
+
+        .roadmap-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 14px;
+            background: #ffffff;
+            border: 2px solid var(--speeki-border);
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+        }
+
+        .roadmap-item:hover {
+            border-color: var(--speeki-green);
+            background: #f0fdf4;
+        }
+
+        .roadmap-item.primary {
+            border-color: var(--speeki-green);
+            background: linear-gradient(135deg, #f0fdf4 0%, #ecfdf5 100%);
+        }
+
+        .roadmap-item.primary .roadmap-step {
+            background: var(--speeki-green);
+            color: var(--speeki-dark);
+        }
+
+        .roadmap-step {
+            flex-shrink: 0;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: var(--speeki-dark-blue);
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 700;
+        }
+
+        .roadmap-content {
+            flex: 1;
+            text-align: left;
+        }
+
+        .roadmap-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--speeki-dark);
+            margin-bottom: 4px;
+        }
+
+        .roadmap-reason {
+            font-size: 12px;
+            color: var(--speeki-gray);
+            line-height: 1.4;
+        }
+
+        .roadmap-tag {
+            display: inline-block;
+            font-size: 10px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 2px 8px;
+            border-radius: 4px;
+            margin-top: 6px;
+        }
+
+        .roadmap-tag.start-here {
+            background: var(--speeki-green);
+            color: var(--speeki-dark);
+        }
+
+        .roadmap-tag.next-step {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+
+        .roadmap-tag.complete {
+            background: #f3e8ff;
+            color: #7c3aed;
+        }
+
+        /* Legacy support for old tag names */
+        .roadmap-tag.recommended {
+            background: #dbeafe;
+            color: #1e40af;
+        }
+
+        .roadmap-tag.advanced {
+            background: #f3e8ff;
+            color: #7c3aed;
+        }
+
+        .roadmap-actions {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+        }
+
+        .quiz-result-secondary {
+            flex: 1;
+            padding: 14px 20px;
+            background: transparent;
+            color: var(--speeki-dark);
+            border: 2px solid var(--speeki-border);
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .quiz-result-secondary:hover {
+            border-color: var(--speeki-dark);
+            background: var(--speeki-light-gray);
+        }
+
+        .roadmap-note {
+            font-size: 12px;
+            color: var(--speeki-gray);
+            margin-top: 16px;
+            text-align: center;
+        }
+
+        .quiz-options {
+            max-height: 260px;
+            overflow-y: auto;
+        }
+
+        /* Main Content */
+        main {
+            padding: 80px 0 120px;
+        }
+
+        .section-intro {
+            margin-bottom: 60px;
+        }
+
+        .section-intro h2 {
+            font-size: 36px;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin-bottom: 20px;
+            color: var(--speeki-dark);
+        }
+
+        .section-intro p {
+            font-size: 18px;
+            color: var(--speeki-gray);
+            line-height: 1.7;
+            max-width: 800px;
+        }
+
+        /* Resources Grid (previously Checklist Grid) */
+        .resources-grid,
+        .checklists-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+            gap: 32px;
+            margin-top: 48px;
+        }
+
+        .resource-card,
+        .checklist-card {
+            background: #ffffff;
+            border: 1px solid var(--speeki-border);
+            border-radius: 8px;
+            padding: 40px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: block;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .resource-card::before,
+        .checklist-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 0;
+            background: var(--speeki-green);
+            transition: height 0.3s ease;
+        }
+
+        .resource-card:hover,
+        .checklist-card:hover {
+            border-color: var(--speeki-green);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+        }
+
+        .resource-card:hover::before,
+        .checklist-card:hover::before {
+            height: 100%;
+        }
+
+        .card-badge {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: var(--speeki-green);
+            color: var(--speeki-dark);
+            font-size: 11px;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 4px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .card-tag {
+            display: inline-block;
+            padding: 6px 16px;
+            background: #f0fdf4;
+            color: #166534;
+            font-size: 12px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        .card-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--speeki-dark);
+            margin-bottom: 16px;
+            letter-spacing: -0.5px;
+            line-height: 1.3;
+        }
+
+        .card-description {
+            font-size: 16px;
+            color: var(--speeki-gray);
+            line-height: 1.6;
+            margin-bottom: 24px;
+        }
+
+        .card-meta {
+            display: flex;
+            gap: 24px;
+            font-size: 14px;
+            color: #6b7280;
+            padding-top: 20px;
+            border-top: 1px solid var(--speeki-border);
+        }
+
+        .card-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .card-users {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-top: 16px;
+            font-size: 13px;
+            color: var(--speeki-gray);
+        }
+
+        .card-avatars {
+            display: flex;
+        }
+
+        .card-avatar {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--speeki-dark-blue);
+            border: 2px solid #ffffff;
+            margin-left: -8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        .card-avatar:first-child {
+            margin-left: 0;
+        }
+
+        .card-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--speeki-dark);
+            font-weight: 600;
+            font-size: 15px;
+            margin-top: 16px;
+        }
+
+        .card-cta::after {
+            content: '\2192';
+            transition: transform 0.3s ease;
+        }
+
+        .resource-card:hover .card-cta::after,
+        .checklist-card:hover .card-cta::after {
+            transform: translateX(4px);
+        }
+
+        /* Lead Magnet Section */
+        .lead-magnet {
+            background: var(--speeki-light-gray);
+            padding: 80px 0;
+        }
+
+        .lead-magnet-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .lead-magnet-text h2 {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--speeki-dark);
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+        }
+
+        .lead-magnet-text p {
+            font-size: 18px;
+            color: var(--speeki-gray);
+            line-height: 1.7;
+            margin-bottom: 24px;
+        }
+
+        .lead-magnet-benefits {
+            list-style: none;
+        }
+
+        .lead-magnet-benefits li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 12px;
+            font-size: 16px;
+            color: var(--speeki-dark);
+        }
+
+        .lead-magnet-benefits li::before {
+            content: '\2713';
+            color: var(--speeki-green);
+            font-weight: 700;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .lead-form {
+            background: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid var(--speeki-border);
+        }
+
+        .lead-form h3 {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--speeki-dark);
+            margin-bottom: 8px;
+        }
+
+        .lead-form > p {
+            font-size: 14px;
+            color: var(--speeki-gray);
+            margin-bottom: 24px;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--speeki-dark);
+            margin-bottom: 6px;
+        }
+
+        .form-group input,
+        .form-group select {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid var(--speeki-border);
+            border-radius: 8px;
+            font-size: 15px;
+            font-family: inherit;
+            transition: border-color 0.2s;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus {
+            outline: none;
+            border-color: var(--speeki-green);
+        }
+
+        .form-submit {
+            width: 100%;
+            padding: 16px 32px;
+            background: var(--speeki-dark-blue);
+            color: #ffffff;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .form-submit:hover {
+            background: #1a2d5c;
+            transform: translateY(-2px);
+        }
+
+        .form-privacy {
+            font-size: 12px;
+            color: var(--speeki-gray);
+            margin-top: 16px;
+            text-align: center;
+        }
+
+        .form-privacy a {
+            color: var(--speeki-dark);
+            text-decoration: underline;
+        }
+
+        .form-success {
+            display: none;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .form-success.show {
+            display: block;
+        }
+
+        .form-success h4 {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--speeki-dark);
+            margin-bottom: 12px;
+        }
+
+        .form-success p {
+            font-size: 16px;
+            color: var(--speeki-gray);
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 80px 0;
+            background: #ffffff;
+        }
+
+        .testimonials h2 {
+            font-size: 36px;
+            font-weight: 700;
+            text-align: center;
+            color: var(--speeki-dark);
+            margin-bottom: 48px;
+            letter-spacing: -1px;
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+            gap: 32px;
+        }
+
+        .testimonial-card {
+            background: var(--speeki-light-gray);
+            padding: 32px;
+            border-radius: 12px;
+            border: 1px solid var(--speeki-border);
+        }
+
+        .testimonial-quote {
+            font-size: 16px;
+            color: var(--speeki-dark);
+            line-height: 1.7;
+            margin-bottom: 24px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .testimonial-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--speeki-dark-blue);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            font-weight: 600;
+            color: #ffffff;
+        }
+
+        .testimonial-info h4 {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--speeki-dark);
+        }
+
+        .testimonial-info p {
+            font-size: 13px;
+            color: var(--speeki-gray);
+        }
+
+        /* Info Section */
+        .info-section {
+            background: var(--speeki-light-gray);
+            padding: 80px 0;
+            margin-top: 0;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 48px;
+            margin-top: 48px;
+        }
+
+        .info-card {
+            background: #ffffff;
+            padding: 36px;
+            border-radius: 8px;
+            border: 1px solid var(--speeki-border);
+        }
+
+        .info-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--speeki-dark);
+        }
+
+        .info-card p {
+            color: var(--speeki-gray);
+            line-height: 1.7;
+        }
+
+        .info-icon {
+            width: 48px;
+            height: 48px;
+            background: var(--speeki-dark-blue);
+            color: var(--speeki-green);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: var(--speeki-dark-blue);
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -80px;
+            right: -80px;
+            width: 300px;
+            height: 300px;
+            background: var(--speeki-green);
+            opacity: 0.1;
+            border-radius: 50%;
+        }
+
+        .cta-section h2 {
+            font-size: 40px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 16px;
+            letter-spacing: -1px;
+        }
+
+        .cta-section p {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 32px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.7;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .cta-primary {
+            display: inline-block;
+            background: var(--speeki-green);
+            color: var(--speeki-dark-blue);
+            padding: 18px 40px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 14px;
+            transition: all 0.2s ease;
+        }
+
+        .cta-primary:hover {
+            background: #00e070;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 255, 127, 0.3);
+        }
+
+        .cta-secondary {
+            display: inline-block;
+            background: transparent;
+            color: #ffffff;
+            padding: 18px 40px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 14px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            transition: all 0.2s ease;
+        }
+
+        .cta-secondary:hover {
+            border-color: #ffffff;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 60px 4vw;
+            background: #ffffff;
+            border-top: 1px solid var(--speeki-border);
+        }
+
+        footer p {
+            margin: 8px 0;
+            font-size: 14px;
+            color: var(--speeki-gray);
+        }
+
+        footer .footer-logo {
+            margin-bottom: 12px;
+            display: inline-block;
+        }
+
+        footer .footer-logo img {
+            height: 32px;
+            width: auto;
+        }
+
+        .footer-links {
+            margin-top: 24px;
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--speeki-gray);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--speeki-dark);
+        }
+
+        /* Exit Intent Modal */
+        .exit-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(10, 31, 68, 0.7);
+            z-index: 10000;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(4px);
+        }
+
+        .exit-modal.show {
+            display: flex;
+        }
+
+        .exit-modal-content {
+            background: #ffffff;
+            border-radius: 12px;
+            max-width: 480px;
+            width: 90%;
+            padding: 48px 40px;
+            position: relative;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        .exit-modal-close {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: none;
+            border: none;
+            font-size: 28px;
+            cursor: pointer;
+            color: var(--speeki-gray);
+            line-height: 1;
+        }
+
+        .exit-modal-close:hover {
+            color: var(--speeki-dark);
+        }
+
+        .exit-modal-content h3 {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--speeki-dark);
+            margin-bottom: 12px;
+            letter-spacing: -0.5px;
+        }
+
+        .exit-modal-content > p {
+            font-size: 16px;
+            color: var(--speeki-gray);
+            margin-bottom: 24px;
+            line-height: 1.6;
+        }
+
+        /* Share Section */
+        .share-section {
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid var(--speeki-border);
+            margin-top: 40px;
+        }
+
+        .share-section h4 {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--speeki-gray);
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .share-buttons-row {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+        }
+
+        .share-btn-inline {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--speeki-light-gray);
+            border: 1px solid var(--speeki-border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            text-decoration: none;
+            color: var(--speeki-dark);
+        }
+
+        .share-btn-inline:hover {
+            background: var(--speeki-dark-blue);
+            color: #ffffff;
+            border-color: var(--speeki-dark-blue);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 40px;
+                letter-spacing: -1.2px;
+            }
+
+            header .subtitle {
+                font-size: 18px;
+            }
+
+            .resources-grid,
+            .checklists-grid {
+                grid-template-columns: 1fr;
+                gap: 24px;
+            }
+
+            .section-intro h2 {
+                font-size: 28px;
+            }
+
+            .info-grid {
+                gap: 24px;
+            }
+
+            .assessment-grid,
+            .lead-magnet-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .social-proof-stats {
+                gap: 32px;
+            }
+
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-section h2 {
+                font-size: 32px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .cta-primary,
+            .cta-secondary {
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        Free ESG Readiness Assessment - <a href="#assessment">Take the 2-minute quiz</a> and get personalised recommendations
+    </div>
+
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="speeki-logo.png" alt="Speeki - The Sustainability Firm">
+            </a>
+            <h1>Resources</h1>
+            <div class="accent-line"></div>
+            <p class="subtitle">Interactive checklists, whitepapers, and practical guides to strengthen your ESG and sustainability programmes. Download, track progress, and drive meaningful change in your organisation.</p>
+
+            <!-- Social Proof Stats -->
+            <div class="social-proof-stats">
+                <div class="stat-item">
+                    <span class="stat-number">2,500+</span>
+                    <span class="stat-label">Professionals using our tools</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">9</span>
+                    <span class="stat-label">Interactive resources</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">400+</span>
+                    <span class="stat-label">Actionable checkpoints</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Countries reached</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Quick Assessment Section -->
+    <section class="quick-assessment" id="assessment">
+        <div class="container">
+            <div class="assessment-grid">
+                <div class="assessment-text">
+                    <h2>Not sure where to start?</h2>
+                    <p>Tell us about your organisation and we'll create a personalised compliance roadmap with the most relevant resources for your industry and maturity level.</p>
+                    <div class="time-badge">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                        Takes only 2 minutes
+                    </div>
+                </div>
+                <div class="assessment-card">
+                    <h3>Quick ESG Assessment</h3>
+                    <div class="quiz-progress" id="quizProgress">
+                        <div class="quiz-progress-dot active"></div>
+                        <div class="quiz-progress-dot"></div>
+                        <div class="quiz-progress-dot"></div>
+                        <div class="quiz-progress-dot"></div>
+                        <div class="quiz-progress-dot"></div>
+                    </div>
+
+                    <!-- Step 0: Company Name (Optional) -->
+                    <div class="quiz-step active" data-step="0">
+                        <div class="quiz-question">What is your company name?</div>
+                        <p style="font-size: 14px; color: #64748b; margin-bottom: 20px;">We'll use this to provide tailored recommendations based on your industry and compliance needs. Optional - you can skip this step.</p>
+                        <div class="company-input-wrapper">
+                            <input type="text" id="companyNameInput" class="company-input" placeholder="e.g., Acme Manufacturing Ltd" />
+                            <button type="button" id="analyzeCompanyBtn" class="btn-primary" disabled>Analyze & Continue</button>
+                            <button type="button" id="skipCompanyBtn" class="btn-secondary">Skip this step</button>
+                        </div>
+                        <div id="companyAnalysisLoading" class="analysis-loading" style="display: none;">
+                            <div class="spinner"></div>
+                            <p>Analyzing your company...</p>
+                        </div>
+                        <div id="companyAnalysisResult" class="analysis-result" style="display: none;"></div>
+                    </div>
+
+                    <!-- Step 1: Industry (now optional if company analyzed) -->
+                    <div class="quiz-step" data-step="1">
+                        <div class="quiz-question">What industry does your organisation operate in?</div>
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="q1" value="manufacturing">
+                                <span>Manufacturing / Industrial</span>
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q1" value="financial">
+                                <span>Financial Services / Banking</span>
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q1" value="technology">
+                                <span>Technology / Software</span>
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q1" value="retail">
+                                <span>Retail / Consumer Goods</span>
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q1" value="energy">
+                                <span>Energy / Utilities</span>
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q1" value="healthcare">
+                                <span>Healthcare / Pharmaceuticals</span>
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q1" value="other">
+                                <span>Other / Multi-sector</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Step 2: Primary Focus -->
+                    <div class="quiz-step" data-step="2">
+                        <div class="quiz-question">What is your primary ESG focus right now?</div>
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="q2" value="reporting">
+                                <span>ESG reporting and disclosure requirements</span>
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q2" value="compliance">
+                                <span>ISO standards and certification</span>
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q2" value="risk">
+                                <span>Risk management and governance</span>
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q2" value="emissions">
+                                <span>Carbon footprint and emissions reduction</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Step 3: Maturity -->
+                    <div class="quiz-step" data-step="3">
+                        <div class="quiz-question">How mature is your current ESG programme?</div>
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="q3" value="early">
+                                <span>Just starting - building foundations</span>
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q3" value="developing">
+                                <span>Developing - have basic processes</span>
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q3" value="mature">
+                                <span>Mature - seeking optimisation</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Step 4: Timeline -->
+                    <div class="quiz-step" data-step="4">
+                        <div class="quiz-question">What is your most pressing deadline?</div>
+                        <div class="quiz-options">
+                            <label class="quiz-option">
+                                <input type="radio" name="q4" value="immediate">
+                                <span>Within 3 months - urgent compliance</span>
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q4" value="planning">
+                                <span>6-12 months - building capability</span>
+                            </label>
+                            <label class="quiz-option">
+                                <input type="radio" name="q4" value="strategic">
+                                <span>Long-term strategic planning</span>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Result: Personalised Roadmap -->
+                    <div class="quiz-step quiz-result" data-step="result">
+                        <div id="roadmapHeader">
+                            <h4 id="resultTitle">Your Personalised Compliance Roadmap</h4>
+                            <p id="resultIndustryContext" class="industry-context"></p>
+                        </div>
+                        <div id="roadmapPath" class="roadmap-path">
+                            <!-- Dynamic path items will be inserted here -->
+                        </div>
+                        <div class="roadmap-actions">
+                            <a href="#" id="startFirstChecklist" class="quiz-result-cta">Start Your Journey</a>
+                            <button type="button" id="viewAllChecklists" class="quiz-result-secondary">View All Resources</button>
+                        </div>
+                        <p class="roadmap-note">This is your recommended learning path based on your specific needs. Follow these three steps in order for maximum impact, or explore other resources anytime.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main>
+        <div class="container">
+            <section class="section-intro" id="interactive-checklists">
+                <h2>Interactive Checklists</h2>
+                <p>Comprehensive, actionable checklists designed for sustainability professionals, CSOs, and compliance teams. Each tool addresses critical pain points in ESG reporting and helps you maintain transparency and credibility.</p>
+            </section>
+
+            <div class="resources-grid">
+                <!-- Anti-Greenwashing Checklist -->
+                <a href="anti-greenwashing-checklist.html" class="checklist-card" data-checklist="anti-greenwashing">
+                    <span class="card-badge">Most Popular</span>
+                    <span class="card-tag">ESG Reporting</span>
+                    <h3 class="card-title">CSO's Anti-Greenwashing Checklist</h3>
+                    <p class="card-description">Ten essential actions every chief sustainability officer should take to reduce the risk of greenwashing in ESG reporting and communications.</p>
+                    <div class="card-meta">
+                        <span class="card-meta-item">10 Actions</span>
+                        <span class="card-meta-item">50 Checkpoints</span>
+                    </div>
+                    <div class="card-users">
+                        <div class="card-avatars">
+                            <span class="card-avatar">JK</span>
+                            <span class="card-avatar">MS</span>
+                            <span class="card-avatar">AL</span>
+                        </div>
+                        <span>847 professionals completed this</span>
+                    </div>
+                    <span class="card-cta">Start Checklist</span>
+                </a>
+
+                <!-- GHG Reporting Readiness Checklist -->
+                <a href="ghg-reporting-readiness-checklist.html" class="checklist-card" data-checklist="ghg-reporting">
+                    <span class="card-tag">ESG Reporting</span>
+                    <h3 class="card-title">GHG Reporting Readiness Checklist</h3>
+                    <p class="card-description">Assess your organisation's ability to confidently calculate and report Scope 1, 2 and 3 emissions with this comprehensive readiness checklist.</p>
+                    <div class="card-meta">
+                        <span class="card-meta-item">9 Key Areas</span>
+                        <span class="card-meta-item">30+ Checkpoints</span>
+                    </div>
+                    <div class="card-users">
+                        <div class="card-avatars">
+                            <span class="card-avatar">RP</span>
+                            <span class="card-avatar">TW</span>
+                        </div>
+                        <span>412 professionals completed this</span>
+                    </div>
+                    <span class="card-cta">Start Checklist</span>
+                </a>
+
+                <!-- ESG Reporting Assurance Checklist -->
+                <a href="esg-reporting-assurance-checklist.html" class="checklist-card" data-checklist="esg-assurance">
+                    <span class="card-tag">ESG Reporting</span>
+                    <h3 class="card-title">ESG Reporting Assurance Checklist</h3>
+                    <p class="card-description">Prepare for external ESG assurance with this comprehensive readiness assessment covering CSRD, ESRS, IFRS S1/S2, GRI and TCFD reporting frameworks.</p>
+                    <div class="card-meta">
+                        <span class="card-meta-item">10 Key Areas</span>
+                        <span class="card-meta-item">24 Checkpoints</span>
+                    </div>
+                    <div class="card-users">
+                        <div class="card-avatars">
+                            <span class="card-avatar">HC</span>
+                            <span class="card-avatar">LM</span>
+                        </div>
+                        <span>298 professionals completed this</span>
+                    </div>
+                    <span class="card-cta">Start Checklist</span>
+                </a>
+
+                <!-- ESG Software Must-Haves Checklist -->
+                <a href="esg-software-checklist.html" class="checklist-card" data-checklist="esg-software">
+                    <span class="card-tag">ESG Reporting</span>
+                    <h3 class="card-title">ESG Software Must-Haves Checklist</h3>
+                    <p class="card-description">Evaluate ESG software platforms on essential capabilities for data management, reporting, compliance and stakeholder engagement.</p>
+                    <div class="card-meta">
+                        <span class="card-meta-item">12 Categories</span>
+                        <span class="card-meta-item">62 Requirements</span>
+                    </div>
+                    <div class="card-users">
+                        <div class="card-avatars">
+                            <span class="card-avatar">NB</span>
+                            <span class="card-avatar">DK</span>
+                        </div>
+                        <span>189 professionals completed this</span>
+                    </div>
+                    <span class="card-cta">Start Checklist</span>
+                </a>
+            </div>
+
+            <section class="section-intro" style="margin-top: 80px;">
+                <h2>ISO Standards Compliance</h2>
+                <p>Interactive compliance tools for key ISO governance, anti-bribery, whistleblowing, investigations, and social responsibility standards. Built for compliance officers, risk managers, and governance professionals.</p>
+            </section>
+
+            <div class="resources-grid">
+                <!-- ISO 37001 Anti-Bribery Checklist -->
+                <a href="iso-37001-checklist.html" class="checklist-card" data-checklist="iso-37001">
+                    <span class="card-badge">New</span>
+                    <span class="card-tag">ISO Standards</span>
+                    <h3 class="card-title">ISO 37001 Anti-Bribery Checklist</h3>
+                    <p class="card-description">Essential steps to implement and maintain an ISO 37001 compliant anti-bribery management system to prevent, detect, and respond to bribery.</p>
+                    <div class="card-meta">
+                        <span class="card-meta-item">18 Steps</span>
+                        <span class="card-meta-item">68 Checkpoints</span>
+                    </div>
+                    <div class="card-users">
+                        <div class="card-avatars">
+                            <span class="card-avatar">SL</span>
+                            <span class="card-avatar">JW</span>
+                        </div>
+                        <span>156 professionals completed this</span>
+                    </div>
+                    <span class="card-cta">Start Checklist</span>
+                </a>
+
+                <!-- ISO 37002 Whistleblowing Checklist -->
+                <a href="iso-37002-whistleblowing-checklist.html" class="checklist-card" data-checklist="iso-37002">
+                    <span class="card-tag">ISO Standards</span>
+                    <h3 class="card-title">ISO 37002 Whistleblowing Checklist</h3>
+                    <p class="card-description">Build an effective whistleblowing management system based on ISO 37002 guidance to ensure compliance and foster speak-up culture.</p>
+                    <div class="card-meta">
+                        <span class="card-meta-item">12 Steps</span>
+                        <span class="card-meta-item">60+ Checkpoints</span>
+                    </div>
+                    <div class="card-users">
+                        <div class="card-avatars">
+                            <span class="card-avatar">EH</span>
+                            <span class="card-avatar">CF</span>
+                        </div>
+                        <span>203 professionals completed this</span>
+                    </div>
+                    <span class="card-cta">Start Checklist</span>
+                </a>
+
+                <!-- ISO 37000 Governance Checklist -->
+                <a href="iso-37000-governance-checklist.html" class="checklist-card" data-checklist="iso-37000">
+                    <span class="card-tag">ISO Standards</span>
+                    <h3 class="card-title">ISO 37000 Governance Checklist</h3>
+                    <p class="card-description">Comprehensive guide to implementing ISO 37000 governance principles and achieving organisational excellence through effective governance frameworks.</p>
+                    <div class="card-meta">
+                        <span class="card-meta-item">10 Principles</span>
+                        <span class="card-meta-item">29 Checkpoints</span>
+                    </div>
+                    <div class="card-users">
+                        <div class="card-avatars">
+                            <span class="card-avatar">PG</span>
+                        </div>
+                        <span>134 professionals completed this</span>
+                    </div>
+                    <span class="card-cta">Start Checklist</span>
+                </a>
+
+                <!-- ISO 37008 Investigations Checklist -->
+                <a href="iso-37008-investigations-checklist.html" class="checklist-card" data-checklist="iso-37008">
+                    <span class="card-tag">ISO Standards</span>
+                    <h3 class="card-title">ISO 37008 Internal Investigations Checklist</h3>
+                    <p class="card-description">Manage effective internal investigations with ISO 37008 best practices covering evidence handling, reporting, and legal compliance considerations.</p>
+                    <div class="card-meta">
+                        <span class="card-meta-item">10 Key Areas</span>
+                        <span class="card-meta-item">55+ Checkpoints</span>
+                    </div>
+                    <div class="card-users">
+                        <div class="card-avatars">
+                            <span class="card-avatar">RK</span>
+                            <span class="card-avatar">AJ</span>
+                        </div>
+                        <span>98 professionals completed this</span>
+                    </div>
+                    <span class="card-cta">Start Checklist</span>
+                </a>
+
+                <!-- ISO 26000 Social Responsibility Checklist -->
+                <a href="iso-26000-social-responsibility-checklist.html" class="checklist-card" data-checklist="iso-26000">
+                    <span class="card-tag">ISO Standards</span>
+                    <h3 class="card-title">ISO 26000 Social Responsibility Checklist</h3>
+                    <p class="card-description">Assess your organisation's social responsibility practices across seven core subjects using ISO 26000 guidance for sustainable business practices.</p>
+                    <div class="card-meta">
+                        <span class="card-meta-item">8 Core Areas</span>
+                        <span class="card-meta-item">46+ Checkpoints</span>
+                    </div>
+                    <div class="card-users">
+                        <div class="card-avatars">
+                            <span class="card-avatar">YT</span>
+                        </div>
+                        <span>167 professionals completed this</span>
+                    </div>
+                    <span class="card-cta">Start Checklist</span>
+                </a>
+            </div>
+
+            <!-- Share Section -->
+            <div class="share-section">
+                <h4>Share These Resources</h4>
+                <div class="share-buttons-row">
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.speeki.com/en-GB/resources" target="_blank" rel="noopener" class="share-btn-inline" aria-label="Share on LinkedIn">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    </a>
+                    <a href="https://twitter.com/intent/tweet?text=Free%20ESG%20%26%20Sustainability%20Resources%20by%20Speeki&url=https://www.speeki.com/en-GB/resources" target="_blank" rel="noopener" class="share-btn-inline" aria-label="Share on X">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                    <button class="share-btn-inline" onclick="copyPageLink()" aria-label="Copy link">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lead Magnet Section -->
+        <section class="lead-magnet" id="download">
+            <div class="container">
+                <div class="lead-magnet-grid">
+                    <div class="lead-magnet-text">
+                        <h2>Download the Complete ESG Toolkit</h2>
+                        <p>Get all 9 resources in a single PDF bundle, plus exclusive bonus content to accelerate your ESG programme:</p>
+                        <ul class="lead-magnet-benefits">
+                            <li>All interactive resources in printable format</li>
+                            <li>ESG implementation roadmap template</li>
+                            <li>Stakeholder communication templates</li>
+                            <li>Quarterly ESG review framework</li>
+                            <li>Early access to new resources</li>
+                        </ul>
+                    </div>
+                    <div class="lead-form" id="leadFormContainer">
+                        <form id="leadForm">
+                            <h3>Get Instant Access</h3>
+                            <p>Join 2,500+ sustainability professionals</p>
+                            <div class="form-group">
+                                <label for="leadName">Full Name</label>
+                                <input type="text" id="leadName" name="name" required placeholder="Jane Smith">
+                            </div>
+                            <div class="form-group">
+                                <label for="leadEmail">Work Email</label>
+                                <input type="email" id="leadEmail" name="email" required placeholder="jane@company.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="leadCompany">Company</label>
+                                <input type="text" id="leadCompany" name="company" required placeholder="Your Company">
+                            </div>
+                            <div class="form-group">
+                                <label for="leadRole">Your Role</label>
+                                <select id="leadRole" name="role" required>
+                                    <option value="">Select your role</option>
+                                    <option value="cso">Chief Sustainability Officer</option>
+                                    <option value="esg-manager">ESG Manager</option>
+                                    <option value="compliance">Compliance Officer</option>
+                                    <option value="risk">Risk Manager</option>
+                                    <option value="consultant">Consultant</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <button type="submit" class="form-submit">Download Free Toolkit</button>
+                            <p class="form-privacy">By submitting, you agree to our <a href="https://www.speeki.com/privacy">Privacy Policy</a>. Unsubscribe anytime.</p>
+                        </form>
+                        <div class="form-success" id="formSuccess">
+                            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#00FF7F" stroke-width="2" style="margin-bottom: 16px;">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <h4>Check Your Inbox</h4>
+                            <p>We have sent the ESG Toolkit to your email. If you do not see it, please check your spam folder.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials">
+            <div class="container">
+                <h2>Trusted by ESG Professionals Worldwide</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <p class="testimonial-quote">"The Anti-Greenwashing Checklist helped us identify gaps in our ESG reporting before our external audit. It saved us from potential reputational risks."</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">MK</div>
+                            <div class="testimonial-info">
+                                <h4>Maria K.</h4>
+                                <p>Head of Sustainability, Manufacturing</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-quote">"As someone new to ISO 37001, the step-by-step checklist made implementation manageable. We achieved certification six months ahead of schedule."</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">JC</div>
+                            <div class="testimonial-info">
+                                <h4>James C.</h4>
+                                <p>Compliance Director, Financial Services</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <p class="testimonial-quote">"The GHG Reporting Readiness Checklist is now part of our annual planning cycle. It ensures we never fall behind on emissions reporting requirements."</p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">SL</div>
+                            <div class="testimonial-info">
+                                <h4>Sophie L.</h4>
+                                <p>ESG Manager, Retail Industry</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="info-section">
+            <div class="container">
+                <h2 style="font-size: 36px; font-weight: 700; margin-bottom: 20px;">Why Use Speeki Resources?</h2>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <div class="info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+                        <h3>Interactive Progress Tracking</h3>
+                        <p>Check off items as you complete them. Your progress is automatically saved, so you can return anytime.</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg></div>
+                        <h3>Export Your Results</h3>
+                        <p>Download a complete report of your progress to share with stakeholders or keep for your records.</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="3"></circle></svg></div>
+                        <h3>Expert-Developed Content</h3>
+                        <p>Created by sustainability professionals with decades of experience in ESG, compliance, and corporate governance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready to Transform Your ESG Programme?</h2>
+            <p>The Speeki Platform empowers companies to seamlessly manage their ESG and sustainability programmes with AI-powered insights and automated reporting.</p>
+            <div class="cta-buttons">
+                <a href="https://www.speeki.com/demo" class="cta-primary">Book a Demo</a>
+                <a href="https://www.speeki.com/platform" class="cta-secondary">Learn More</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <a href="index.html" class="footer-logo"><img src="speeki-logo.png" alt="Speeki"></a>
+            <p>The Sustainability Firm</p>
+            <p style="margin-top: 16px; color: #9ca3af; font-size: 13px;">
+                © 2026 Speeki Pte Ltd. All rights reserved.
+            </p>
+            <div class="footer-links">
+                <a href="https://www.speeki.com">Home</a>
+                <a href="https://www.speeki.com/platform">Platform</a>
+                <a href="https://www.speeki.com/services">Services</a>
+                <a href="https://www.speeki.com/resources">Resources</a>
+                <a href="mailto:info@speeki.com">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Exit Intent Modal -->
+    <div class="exit-modal" id="exitModal">
+        <div class="exit-modal-content">
+            <button class="exit-modal-close" onclick="closeExitModal()">&times;</button>
+            <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="#00FF7F" stroke-width="2" style="margin-bottom: 20px;">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="16" y1="13" x2="8" y2="13"></line>
+                <line x1="16" y1="17" x2="8" y2="17"></line>
+            </svg>
+            <h3>Wait - Get All 9 Resources Free</h3>
+            <p>Enter your email to receive the complete ESG toolkit with all resources in PDF format, plus exclusive implementation guides.</p>
+            <form id="exitForm">
+                <div class="form-group">
+                    <input type="email" id="exitEmail" name="email" required placeholder="your@email.com">
+                </div>
+                <button type="submit" class="form-submit">Send Me the Toolkit</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="assets/growth.js"></script>
+    <script src="assets/growth-advanced.js"></script>
+    <script>
+        // Enhanced Quiz Logic with Industry-Based Recommendations
+        const quizSteps = document.querySelectorAll('.quiz-step');
+        const progressDots = document.querySelectorAll('.quiz-progress-dot');
+        let currentStep = 0;
+        const answers = {};
+        const TOTAL_STEPS = 5; // Includes company name step
+        let companyContext = null;
+
+        // Comprehensive checklist database with metadata
+        const checklistDatabase = {
+            'anti-greenwashing': {
+                title: "CSO's Anti-Greenwashing Checklist",
+                link: 'anti-greenwashing-checklist.html',
+                category: 'reporting',
+                industries: ['manufacturing', 'retail', 'energy', 'financial', 'technology', 'healthcare', 'other'],
+                maturityFit: ['early', 'developing'],
+                focus: ['reporting', 'risk'],
+                urgencyFit: ['immediate', 'planning'],
+                description: 'Essential ESG reporting practices to avoid greenwashing risks'
+            },
+            'ghg-reporting': {
+                title: 'GHG Reporting Readiness Checklist',
+                link: 'ghg-reporting-readiness-checklist.html',
+                category: 'reporting',
+                industries: ['manufacturing', 'energy', 'retail', 'technology', 'other'],
+                maturityFit: ['developing', 'mature'],
+                focus: ['reporting', 'emissions'],
+                urgencyFit: ['immediate', 'planning'],
+                description: 'Calculate and report Scope 1, 2 and 3 emissions'
+            },
+            'esg-assurance': {
+                title: 'ESG Reporting Assurance Checklist',
+                link: 'esg-reporting-assurance-checklist.html',
+                category: 'reporting',
+                industries: ['financial', 'manufacturing', 'energy', 'healthcare', 'other'],
+                maturityFit: ['mature'],
+                focus: ['reporting'],
+                urgencyFit: ['planning', 'strategic'],
+                description: 'Prepare for CSRD, ESRS, IFRS S1/S2 external assurance'
+            },
+            'esg-software': {
+                title: 'ESG Software Must-Haves Checklist',
+                link: 'esg-software-checklist.html',
+                category: 'reporting',
+                industries: ['financial', 'technology', 'manufacturing', 'healthcare', 'other'],
+                maturityFit: ['developing', 'mature'],
+                focus: ['reporting', 'risk'],
+                urgencyFit: ['planning', 'strategic'],
+                description: 'Evaluate ESG platforms for data management and reporting'
+            },
+            'iso-37001': {
+                title: 'ISO 37001 Anti-Bribery Checklist',
+                link: 'iso-37001-checklist.html',
+                category: 'compliance',
+                industries: ['financial', 'manufacturing', 'healthcare', 'energy', 'other'],
+                maturityFit: ['early', 'developing'],
+                focus: ['compliance', 'risk'],
+                urgencyFit: ['immediate', 'planning'],
+                description: 'Implement anti-bribery management system'
+            },
+            'iso-37002': {
+                title: 'ISO 37002 Whistleblowing Checklist',
+                link: 'iso-37002-whistleblowing-checklist.html',
+                category: 'compliance',
+                industries: ['financial', 'manufacturing', 'healthcare', 'technology', 'retail', 'other'],
+                maturityFit: ['developing', 'mature'],
+                focus: ['compliance', 'risk'],
+                urgencyFit: ['immediate', 'planning'],
+                description: 'Build effective speak-up culture and reporting channels'
+            },
+            'iso-37000': {
+                title: 'ISO 37000 Governance Checklist',
+                link: 'iso-37000-governance-checklist.html',
+                category: 'governance',
+                industries: ['financial', 'manufacturing', 'energy', 'healthcare', 'other'],
+                maturityFit: ['early', 'developing'],
+                focus: ['risk', 'compliance'],
+                urgencyFit: ['planning', 'strategic'],
+                description: 'Establish governance principles and frameworks'
+            },
+            'iso-37008': {
+                title: 'ISO 37008 Internal Investigations Checklist',
+                link: 'iso-37008-investigations-checklist.html',
+                category: 'compliance',
+                industries: ['financial', 'manufacturing', 'healthcare', 'other'],
+                maturityFit: ['mature'],
+                focus: ['compliance', 'risk'],
+                urgencyFit: ['planning', 'strategic'],
+                description: 'Manage internal investigations with best practices'
+            },
+            'iso-26000': {
+                title: 'ISO 26000 Social Responsibility Checklist',
+                link: 'iso-26000-social-responsibility-checklist.html',
+                category: 'governance',
+                industries: ['retail', 'manufacturing', 'technology', 'healthcare', 'other'],
+                maturityFit: ['developing', 'mature'],
+                focus: ['reporting', 'risk'],
+                urgencyFit: ['planning', 'strategic'],
+                description: 'Assess social responsibility across seven core areas'
+            }
+        };
+
+        // Industry-specific context messages
+        const industryContext = {
+            'manufacturing': {
+                name: 'Manufacturing',
+                message: 'Manufacturing companies face unique ESG challenges including supply chain emissions, workplace safety, and environmental compliance. Your roadmap prioritises GHG reporting and operational governance.',
+                priorities: ['ghg-reporting', 'iso-37001', 'anti-greenwashing', 'iso-37000']
+            },
+            'financial': {
+                name: 'Financial Services',
+                message: 'Financial institutions must navigate complex regulatory requirements including TCFD, anti-bribery laws, and ESG disclosure standards. Your roadmap focuses on compliance and assurance readiness.',
+                priorities: ['iso-37001', 'esg-assurance', 'iso-37002', 'anti-greenwashing']
+            },
+            'technology': {
+                name: 'Technology',
+                message: 'Tech companies are increasingly scrutinised on ESG practices, from carbon footprint to governance. Your roadmap balances sustainability reporting with strong governance frameworks.',
+                priorities: ['anti-greenwashing', 'ghg-reporting', 'iso-37002', 'esg-software']
+            },
+            'retail': {
+                name: 'Retail',
+                message: 'Retail faces pressure from consumers and regulators on supply chain sustainability and social responsibility. Your roadmap emphasises transparency and stakeholder engagement.',
+                priorities: ['anti-greenwashing', 'iso-26000', 'ghg-reporting', 'iso-37002']
+            },
+            'energy': {
+                name: 'Energy',
+                message: 'Energy companies are at the forefront of the sustainability transition with significant emissions reporting requirements. Your roadmap prioritises GHG reporting and governance.',
+                priorities: ['ghg-reporting', 'esg-assurance', 'iso-37000', 'anti-greenwashing']
+            },
+            'healthcare': {
+                name: 'Healthcare',
+                message: 'Healthcare organisations must balance patient safety, regulatory compliance, and sustainability. Your roadmap covers governance, whistleblowing, and ESG reporting.',
+                priorities: ['iso-37001', 'iso-37002', 'anti-greenwashing', 'esg-assurance']
+            },
+            'other': {
+                name: 'Multi-sector',
+                message: 'Based on your sector profile, we recommend a balanced approach covering core ESG reporting, governance, and compliance foundations.',
+                priorities: ['anti-greenwashing', 'iso-37000', 'iso-37001', 'ghg-reporting']
+            }
+        };
+
+        // Score and rank checklists based on user profile
+        function calculateChecklistScores(profile) {
+            const scores = {};
+
+            Object.keys(checklistDatabase).forEach(key => {
+                const checklist = checklistDatabase[key];
+                let score = 0;
+
+                // Industry match (high weight)
+                if (checklist.industries.includes(profile.industry)) {
+                    score += 30;
+                }
+
+                // Focus area match (highest weight)
+                if (checklist.focus.includes(profile.focus)) {
+                    score += 40;
+                }
+
+                // Maturity fit
+                if (checklist.maturityFit.includes(profile.maturity)) {
+                    score += 25;
+                }
+
+                // Urgency fit
+                if (checklist.urgencyFit.includes(profile.urgency)) {
+                    score += 20;
+                }
+
+                // Industry priority bonus
+                const industryPriorities = industryContext[profile.industry]?.priorities || [];
+                const priorityIndex = industryPriorities.indexOf(key);
+                if (priorityIndex !== -1) {
+                    score += (4 - priorityIndex) * 10; // First priority gets 40, second 30, etc.
+                }
+
+                scores[key] = { score, checklist, key };
+            });
+
+            return scores;
+        }
+
+        // Generate personalised roadmap - focused single path
+        function generateRoadmap(profile) {
+            const scores = calculateChecklistScores(profile);
+
+            // Sort by score and take top recommendation as PRIMARY path
+            const ranked = Object.values(scores)
+                .sort((a, b) => b.score - a.score);
+
+            // Primary recommendation (highest score)
+            const primary = ranked[0];
+
+            // Build a logical 3-step journey based on maturity and focus
+            const roadmap = [primary];
+
+            // Add 2 more complementary checklists for a complete journey
+            const remaining = ranked.slice(1);
+
+            // Second step: Different category but complementary
+            const secondStep = remaining.find(item =>
+                item.checklist.category !== primary.checklist.category
+            ) || remaining[0];
+
+            // Third step: Advanced or certification-focused
+            const thirdStep = remaining.find(item =>
+                item.key !== secondStep.key &&
+                (item.checklist.maturityFit.includes('mature') || item.checklist.category === 'compliance')
+            ) || remaining.find(item => item.key !== secondStep.key) || remaining[1];
+
+            roadmap.push(secondStep, thirdStep);
+
+            // Tag them appropriately
+            return roadmap.map((item, index) => ({
+                ...item,
+                step: index + 1,
+                tag: index === 0 ? 'start-here' : (index === 1 ? 'next-step' : 'complete'),
+                tagLabel: index === 0 ? 'Start Here' : (index === 1 ? 'Next Step' : 'Complete Your Journey')
+            }));
+        }
+
+        // Generate reason text based on profile match
+        function generateReason(checklist, profile) {
+            const reasons = [];
+
+            if (checklist.focus.includes(profile.focus)) {
+                if (profile.focus === 'reporting') reasons.push('Aligns with your reporting focus');
+                if (profile.focus === 'compliance') reasons.push('Supports your compliance goals');
+                if (profile.focus === 'risk') reasons.push('Addresses risk management needs');
+                if (profile.focus === 'emissions') reasons.push('Covers emissions reporting');
+            }
+
+            if (checklist.maturityFit.includes(profile.maturity)) {
+                if (profile.maturity === 'early') reasons.push('Perfect for building foundations');
+                if (profile.maturity === 'developing') reasons.push('Helps strengthen existing processes');
+                if (profile.maturity === 'mature') reasons.push('Optimises mature programmes');
+            }
+
+            if (profile.urgency === 'immediate' && checklist.urgencyFit.includes('immediate')) {
+                reasons.push('Quick wins for urgent deadlines');
+            }
+
+            return reasons.slice(0, 2).join(' • ') || checklist.description;
+        }
+
+        // Company analysis using Tavily API (with graceful fallback)
+        async function analyzeCompany(companyName) {
+            // Try to use Tavily API if available
+            const tavilyApiKey = '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';
+
+            // Start with intelligent parsing as fallback
+            let analysis = {
+                companyName: companyName,
+                industry: detectIndustryFromName(companyName),
+                suggestedFocus: 'reporting',
+                suggestedMaturity: 'developing',
+                confidence: 'low',
+                source: 'pattern_matching'
+            };
+
+            // Try Tavily API for enhanced company data
+            try {
+                const response = await fetch('https://api.tavily.com/search', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        api_key: tavilyApiKey,
+                        query: `${companyName} company industry sector business`,
+                        search_depth: 'basic',
+                        max_results: 3
+                    })
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+
+                    // Parse Tavily results to enhance industry detection
+                    if (data.results && data.results.length > 0) {
+                        const combinedText = data.results
+                            .map(r => `${r.title} ${r.content}`)
+                            .join(' ')
+                            .toLowerCase();
+
+                        // Use Tavily data to improve industry detection
+                        const tavilyIndustry = detectIndustryFromName(combinedText);
+
+                        analysis = {
+                            ...analysis,
+                            industry: tavilyIndustry !== 'other' ? tavilyIndustry : analysis.industry,
+                            confidence: tavilyIndustry !== 'other' ? 'high' : 'medium',
+                            source: 'tavily_api',
+                            tavilyData: data.results.slice(0, 2) // Store for potential future use
+                        };
+                    }
+                }
+            } catch (error) {
+                console.log('Tavily API unavailable, using pattern matching fallback', error);
+                // Fallback to pattern matching already set above
+            }
+
+            return analysis;
+        }
+
+        // Detect industry from company name patterns
+        function detectIndustryFromName(name) {
+            const nameLower = name.toLowerCase();
+
+            const patterns = {
+                'manufacturing': ['manufacturing', 'industrial', 'factory', 'production', 'engineering'],
+                'financial': ['bank', 'financial', 'finance', 'capital', 'investment', 'insurance'],
+                'technology': ['tech', 'software', 'digital', 'cyber', 'ai ', 'data', 'cloud'],
+                'retail': ['retail', 'store', 'shop', 'market', 'consumer'],
+                'energy': ['energy', 'power', 'utility', 'utilities', 'oil', 'gas', 'renewable'],
+                'healthcare': ['health', 'medical', 'pharma', 'hospital', 'care', 'clinic']
+            };
+
+            for (const [industry, keywords] of Object.entries(patterns)) {
+                if (keywords.some(keyword => nameLower.includes(keyword))) {
+                    return industry;
+                }
+            }
+
+            return 'other';
+        }
+
+        // Company Name Input Event Listeners
+        const companyInput = document.getElementById('companyNameInput');
+        const analyzeBtn = document.getElementById('analyzeCompanyBtn');
+        const skipBtn = document.getElementById('skipCompanyBtn');
+
+        companyInput?.addEventListener('input', function() {
+            analyzeBtn.disabled = this.value.trim().length < 2;
+        });
+
+        analyzeBtn?.addEventListener('click', async function() {
+            const companyName = companyInput.value.trim();
+            if (!companyName) return;
+
+            // Show loading state
+            document.getElementById('companyAnalysisLoading').style.display = 'flex';
+            this.disabled = true;
+            skipBtn.disabled = true;
+
+            try {
+                // Analyze company
+                const analysis = await analyzeCompany(companyName);
+                companyContext = analysis;
+
+                // Show result
+                document.getElementById('companyAnalysisLoading').style.display = 'none';
+                const resultDiv = document.getElementById('companyAnalysisResult');
+                resultDiv.innerHTML = `
+                    <h5>✓ Company Analyzed</h5>
+                    <p>We've identified <strong>${companyName}</strong> as a ${industryContext[analysis.industry]?.name || 'Multi-sector'} organization. Your recommendations will be tailored accordingly.</p>
+                `;
+                resultDiv.style.display = 'block';
+
+                // Pre-fill answers based on company analysis
+                answers.q0 = companyName;
+                answers.q1 = analysis.industry;
+
+                // Track event
+                if (window.SpeekiGrowth) {
+                    window.SpeekiGrowth.trackEvent('company_analyzed', {
+                        company: companyName,
+                        industry: analysis.industry
+                    });
+                }
+
+                // Auto-advance after showing result
+                setTimeout(() => {
+                    // Skip industry question since we already know it
+                    goToStep(2);
+                }, 1500);
+
+            } catch (error) {
+                console.error('Company analysis error:', error);
+                document.getElementById('companyAnalysisLoading').style.display = 'none';
+                this.disabled = false;
+                skipBtn.disabled = false;
+                alert('Unable to analyze company. Please try again or skip this step.');
+            }
+        });
+
+        skipBtn?.addEventListener('click', function() {
+            answers.q0 = null;
+            companyContext = null;
+            goToStep(1); // Go to industry selection
+        });
+
+        // Event listeners for quiz options
+        document.querySelectorAll('.quiz-option input').forEach(input => {
+            input.addEventListener('change', function() {
+                const step = parseInt(this.closest('.quiz-step').dataset.step);
+                answers['q' + step] = this.value;
+
+                // Track event
+                if (window.SpeekiGrowth) {
+                    window.SpeekiGrowth.trackEvent('quiz_answer', { step: step, value: this.value });
+                }
+
+                setTimeout(() => {
+                    if (step < 4) { // Last question step is 4 (0-indexed + 4 questions)
+                        goToStep(step + 1);
+                    } else {
+                        showResult();
+                    }
+                }, 300);
+            });
+        });
+
+        function goToStep(step) {
+            quizSteps.forEach(s => s.classList.remove('active'));
+            const nextStep = document.querySelector(`[data-step="${step}"]`);
+            if (nextStep) {
+                nextStep.classList.add('active');
+            }
+
+            progressDots.forEach((dot, i) => {
+                dot.classList.remove('active', 'completed');
+                if (i < step) dot.classList.add('completed');
+                if (i === step) dot.classList.add('active');
+            });
+
+            currentStep = step;
+        }
+
+        function showResult() {
+            // Build user profile from answers
+            const profile = {
+                companyName: answers.q0 || null,
+                industry: answers.q1 || 'other',
+                focus: answers.q2 || 'reporting',
+                maturity: answers.q3 || 'early',
+                urgency: answers.q4 || 'planning'
+            };
+
+            // Store profile for personalisation across the site
+            localStorage.setItem('speeki_user_profile', JSON.stringify(profile));
+
+            // Generate personalised roadmap
+            const roadmap = generateRoadmap(profile);
+
+            // Update title and context message
+            const resultTitle = document.getElementById('resultTitle');
+            if (profile.companyName) {
+                resultTitle.textContent = `Your Personalised Path for ${profile.companyName}`;
+            } else {
+                resultTitle.textContent = 'Your Personalised Compliance Path';
+            }
+
+            // Update industry context message
+            const context = industryContext[profile.industry];
+            let contextMessage = context.message;
+
+            if (companyContext) {
+                contextMessage = `Based on our analysis of ${profile.companyName}, ${contextMessage}`;
+            }
+
+            document.getElementById('resultIndustryContext').textContent = contextMessage;
+
+            // Render roadmap items
+            const roadmapContainer = document.getElementById('roadmapPath');
+            roadmapContainer.innerHTML = roadmap.map(item => `
+                <a href="${item.checklist.link}" class="roadmap-item ${item.step === 1 ? 'primary' : ''}"
+                   data-checklist="${item.key}">
+                    <div class="roadmap-step">${item.step}</div>
+                    <div class="roadmap-content">
+                        <div class="roadmap-title">${item.checklist.title}</div>
+                        <div class="roadmap-reason">${generateReason(item.checklist, profile)}</div>
+                        <span class="roadmap-tag ${item.tag}">${item.tagLabel}</span>
+                    </div>
+                </a>
+            `).join('');
+
+            // Set the first checklist link
+            document.getElementById('startFirstChecklist').href = roadmap[0].checklist.link;
+
+            // Show result step
+            quizSteps.forEach(s => s.classList.remove('active'));
+            document.querySelector('[data-step="result"]').classList.add('active');
+            progressDots.forEach(d => d.classList.add('completed'));
+
+            // Track completion
+            if (window.SpeekiGrowth) {
+                window.SpeekiGrowth.trackEvent('quiz_completed', {
+                    industry: profile.industry,
+                    focus: profile.focus,
+                    maturity: profile.maturity,
+                    primary_recommendation: roadmap[0].key
+                });
+            }
+        }
+
+        // View All Checklists button
+        document.getElementById('viewAllChecklists')?.addEventListener('click', function() {
+            // Smooth scroll to checklists section
+            document.querySelector('main').scrollIntoView({ behavior: 'smooth' });
+
+            if (window.SpeekiGrowth) {
+                window.SpeekiGrowth.trackEvent('quiz_view_all_clicked', {});
+            }
+        });
+
+        // Track roadmap item clicks
+        document.getElementById('roadmapPath')?.addEventListener('click', function(e) {
+            const item = e.target.closest('.roadmap-item');
+            if (item) {
+                const checklist = item.dataset.checklist;
+                if (window.SpeekiGrowth) {
+                    window.SpeekiGrowth.trackEvent('roadmap_checklist_clicked', { checklist: checklist });
+                }
+            }
+        });
+
+        // Lead Form Submission
+        document.getElementById('leadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const formData = {
+                name: document.getElementById('leadName').value,
+                email: document.getElementById('leadEmail').value,
+                company: document.getElementById('leadCompany').value,
+                role: document.getElementById('leadRole').value
+            };
+
+            // Store and track
+            localStorage.setItem('speeki_lead', JSON.stringify(formData));
+            if (window.SpeekiGrowth) {
+                window.SpeekiGrowth.trackEvent('lead_captured', { source: 'toolkit_form', role: formData.role });
+            }
+
+            // Show success
+            document.getElementById('leadForm').style.display = 'none';
+            document.getElementById('formSuccess').classList.add('show');
+        });
+
+        // Exit Intent
+        let exitIntentShown = false;
+
+        document.addEventListener('mouseout', function(e) {
+            if (e.clientY < 10 && !exitIntentShown && !localStorage.getItem('speeki_lead')) {
+                exitIntentShown = true;
+                document.getElementById('exitModal').classList.add('show');
+                if (window.SpeekiGrowth) {
+                    window.SpeekiGrowth.trackEvent('exit_intent_shown', {});
+                }
+            }
+        });
+
+        function closeExitModal() {
+            document.getElementById('exitModal').classList.remove('show');
+        }
+
+        document.getElementById('exitModal').addEventListener('click', function(e) {
+            if (e.target === this) closeExitModal();
+        });
+
+        document.getElementById('exitForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('exitEmail').value;
+
+            localStorage.setItem('speeki_exit_lead', email);
+            if (window.SpeekiGrowth) {
+                window.SpeekiGrowth.trackEvent('lead_captured', { source: 'exit_intent' });
+            }
+
+            closeExitModal();
+            alert('Thank you! Check your inbox for the complete ESG toolkit.');
+        });
+
+        // Copy link
+        function copyPageLink() {
+            navigator.clipboard.writeText(window.location.href).then(function() {
+                alert('Link copied to clipboard!');
+                if (window.SpeekiGrowth) {
+                    window.SpeekiGrowth.trackEvent('share_clicked', { platform: 'copy_link' });
+                }
+            });
+        }
+
+        // Track card clicks
+        document.querySelectorAll('.checklist-card').forEach(card => {
+            card.addEventListener('click', function() {
+                const checklist = this.dataset.checklist;
+                if (window.SpeekiGrowth) {
+                    window.SpeekiGrowth.trackEvent('checklist_clicked', { checklist: checklist });
+                }
+            });
+        });
+
+        // Hide exit modal if already subscribed
+        if (localStorage.getItem('speeki_lead') || localStorage.getItem('speeki_exit_lead')) {
+            exitIntentShown = true;
+        }
+
+        // Scroll depth tracking
+        let scrollDepths = {};
+        window.addEventListener('scroll', function() {
+            const scrollPercent = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+            [25, 50, 75, 100].forEach(depth => {
+                if (scrollPercent >= depth && !scrollDepths[depth]) {
+                    scrollDepths[depth] = true;
+                    if (window.SpeekiGrowth) {
+                        window.SpeekiGrowth.trackEvent('scroll_depth', { depth: depth });
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

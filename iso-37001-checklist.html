@@ -1,0 +1,1812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Security: Protect page with authentication -->
+    <script src="assets/auth.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ISO 37001 assurance checklist: 18 areas auditors evaluate for certification readiness. Understand documentation requirements and common audit findings. Interactive tool with progress tracking.">
+    <meta name="keywords" content="ISO 37001, anti-bribery, ABMS, corruption prevention, compliance, certification, bribery management, ISO certification">
+    <meta name="author" content="Speeki">
+    <meta property="og:title" content="ISO 37001 Compliance Checklist | Speeki">
+    <meta property="og:description" content="ISO 37001 assurance checklist: 18 areas auditors evaluate for certification readiness. Understand documentation requirements and common audit findings.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.speeki.com/checklists/iso-37001">
+    <meta property="og:site_name" content="Speeki">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ISO 37001 Compliance Checklist | Speeki">
+    <meta name="twitter:description" content="ISO 37001 assurance checklist: 18 areas auditors evaluate for certification readiness. Understand documentation requirements and common audit findings.">
+    <meta name="robots" content="index, follow">
+    <title>ISO 37001 Compliance Checklist | Speeki - Anti-Bribery Management System</title>
+    <link rel="canonical" href="https://www.speeki.com/checklists/iso-37001">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "ISO 37001 Compliance Checklist",
+        "description": "18 areas auditors evaluate when assessing Anti-Bribery Management System maturity and ISO 37001 certification readiness.",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Speeki",
+            "url": "https://www.speeki.com"
+        },
+        "step": [
+            {"@type": "HowToStep", "name": "Develop a roadmap for ABMS implementation", "position": 1},
+            {"@type": "HowToStep", "name": "Identify scope and conduct risk assessment", "position": 2},
+            {"@type": "HowToStep", "name": "Develop an anti-bribery policy", "position": 3},
+            {"@type": "HowToStep", "name": "Seek leadership commitment", "position": 4},
+            {"@type": "HowToStep", "name": "Establish anti-bribery compliance function", "position": 5},
+            {"@type": "HowToStep", "name": "Develop annual plan for ABMS", "position": 6},
+            {"@type": "HowToStep", "name": "Awareness, training and communication", "position": 7},
+            {"@type": "HowToStep", "name": "Create documentation system", "position": 8},
+            {"@type": "HowToStep", "name": "Introduce ABMS into employment process", "position": 9},
+            {"@type": "HowToStep", "name": "Implement due diligence programme", "position": 10},
+            {"@type": "HowToStep", "name": "Implement financial controls", "position": 11},
+            {"@type": "HowToStep", "name": "Implement non-financial controls", "position": 12},
+            {"@type": "HowToStep", "name": "Require third-party anti-bribery controls", "position": 13},
+            {"@type": "HowToStep", "name": "Establish GTE and donations process", "position": 14},
+            {"@type": "HowToStep", "name": "Implement reporting system", "position": 15},
+            {"@type": "HowToStep", "name": "Implement investigations policy", "position": 16},
+            {"@type": "HowToStep", "name": "Establish monitoring programme", "position": 17},
+            {"@type": "HowToStep", "name": "Remediate non-conformities and improve", "position": 18}
+        ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/growth.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --speeki-green: #00FF7F;
+            --speeki-dark-blue: #0a1f44;
+            --speeki-dark: #0a1f44;
+            --speeki-gray: #4a5568;
+            --speeki-light-gray: #f8f9fa;
+            --speeki-border: #e5e7eb;
+        }
+
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', 'Arial', sans-serif;
+            background: #ffffff;
+            min-height: 100vh;
+            color: var(--speeki-dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        nav {
+            background: #ffffff;
+            border-bottom: 1px solid var(--speeki-border);
+            padding: 20px 4vw;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        .nav-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .nav-logo img {
+            height: 32px;
+            width: auto;
+        }
+
+        .nav-back {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--speeki-gray);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-back:hover {
+            color: var(--speeki-dark);
+        }
+
+        header {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            color: var(--speeki-dark);
+            padding: 80px 4vw 60px;
+            border-bottom: 1px solid var(--speeki-border);
+        }
+
+        header h1 {
+            font-size: 48px;
+            margin-bottom: 24px;
+            font-weight: 700;
+            letter-spacing: -1.5px;
+            color: var(--speeki-dark);
+            max-width: 900px;
+            line-height: 1.2;
+        }
+
+        .header-highlight {
+            color: var(--speeki-green);
+            position: relative;
+        }
+
+        header p {
+            font-size: 18px;
+            color: var(--speeki-gray);
+            max-width: 800px;
+            margin-bottom: 40px;
+            line-height: 1.7;
+            font-weight: 400;
+        }
+
+        .progress-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 40px;
+            padding: 30px;
+            background: #ffffff;
+            border-radius: 8px;
+            max-width: 600px;
+            border: 1px solid var(--speeki-border);
+        }
+
+        .progress-info {
+            text-align: left;
+            flex: 1;
+        }
+
+        .progress-info h3 {
+            font-size: 12px;
+            color: var(--speeki-gray);
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+        }
+
+        .progress-bar {
+            width: 100%;
+            max-width: 300px;
+            height: 6px;
+            background: #e5e5e5;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--speeki-green);
+            width: 0%;
+            transition: width 0.3s ease;
+            border-radius: 3px;
+        }
+
+        .progress-text {
+            color: var(--speeki-dark);
+            font-size: 24px;
+            font-weight: 700;
+            margin-left: 30px;
+            white-space: nowrap;
+        }
+
+        main {
+            background: white;
+            padding: 60px 4vw;
+        }
+
+        .checklist-item {
+            margin-bottom: 60px;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .checklist-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .item-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 24px;
+            margin-bottom: 24px;
+        }
+
+        .item-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            background: #ffffff;
+            color: var(--speeki-dark);
+            border-radius: 50%;
+            font-size: 18px;
+            font-weight: 700;
+            flex-shrink: 0;
+            position: relative;
+            border: 2px solid var(--speeki-border);
+            transition: all 0.2s ease;
+        }
+
+        .item-number.completed {
+            background: var(--speeki-green);
+            border-color: var(--speeki-green);
+            color: var(--speeki-dark);
+        }
+
+        .item-number.completed::after {
+            content: '✓';
+            position: absolute;
+            font-size: 24px;
+            color: var(--speeki-dark);
+            font-weight: bold;
+        }
+
+        .item-number.completed {
+            font-size: 0;
+        }
+
+        .item-title {
+            flex: 1;
+        }
+
+        .item-title h2 {
+            font-size: 24px;
+            color: var(--speeki-dark);
+            margin-bottom: 8px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            line-height: 1.3;
+        }
+
+        .sub-items {
+            margin-left: 72px;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .sub-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 16px 0;
+            background: transparent;
+            border-bottom: 1px solid #f0f0f0;
+            cursor: pointer;
+            transition: all 0.15s ease;
+        }
+
+        .sub-item:hover {
+            background: transparent;
+            transform: none;
+        }
+
+        .sub-item:last-child {
+            border-bottom: none;
+        }
+
+        .sub-item input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            flex-shrink: 0;
+            margin-top: 3px;
+            accent-color: var(--speeki-green);
+            border: 2px solid #cccccc;
+        }
+
+        .sub-item label {
+            cursor: pointer;
+            flex: 1;
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--speeki-gray);
+            font-weight: 400;
+        }
+
+        .sub-item input[type="checkbox"]:checked + label {
+            color: var(--speeki-dark);
+            font-weight: 500;
+        }
+
+        .summary-section {
+            margin-top: 80px;
+            padding: 60px 4vw;
+            background: var(--speeki-light-gray);
+            border-radius: 0;
+            text-align: center;
+            border-top: 1px solid var(--speeki-border);
+        }
+
+        .summary-section h3 {
+            font-size: 28px;
+            color: var(--speeki-dark);
+            margin-bottom: 48px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .summary-stats {
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+            flex-wrap: wrap;
+            margin-bottom: 48px;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--speeki-dark);
+            letter-spacing: -1px;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: var(--speeki-gray);
+            margin-top: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            margin-top: 0;
+        }
+
+        button {
+            padding: 16px 32px;
+            font-size: 14px;
+            border: 2px solid var(--speeki-dark-blue);
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-reset {
+            background: #ffffff;
+            color: var(--speeki-dark);
+            border-color: var(--speeki-border);
+        }
+
+        .btn-reset:hover {
+            background: #f5f5f5;
+            border-color: #cccccc;
+        }
+
+        .btn-export {
+            background: var(--speeki-dark-blue);
+            color: white;
+            border-color: var(--speeki-dark-blue);
+        }
+
+        .btn-export:hover {
+            background: #1a2d5c;
+            border-color: #1a2d5c;
+        }
+
+        .cta-section {
+            background: var(--speeki-dark-blue);
+            padding: 80px 4vw;
+            text-align: center;
+            margin-top: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 200px;
+            height: 200px;
+            background: var(--speeki-green);
+            opacity: 0.1;
+            border-radius: 50%;
+        }
+
+        .cta-section h3 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 16px;
+        }
+
+        .cta-section p {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 32px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--speeki-green);
+            color: var(--speeki-dark-blue);
+            padding: 16px 40px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 14px;
+            transition: all 0.2s ease;
+        }
+
+        .cta-button:hover {
+            background: #00e070;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0, 255, 127, 0.3);
+        }
+
+        footer {
+            text-align: center;
+            color: var(--speeki-gray);
+            margin-top: 0;
+            padding: 60px 4vw;
+            background: #ffffff;
+            border-top: 1px solid var(--speeki-border);
+        }
+
+        footer p {
+            margin: 8px 0;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        footer p strong {
+            color: var(--speeki-dark);
+            font-weight: 600;
+        }
+
+        .footer-links {
+            margin-top: 24px;
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--speeki-gray);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--speeki-dark);
+        }
+
+        .auditor-insight {
+            background: #f8f9fa;
+            border-left: 4px solid var(--speeki-green);
+            padding: 24px;
+            margin: 24px 0 32px 0;
+            border-radius: 4px;
+        }
+
+        .auditor-insight h4 {
+            color: var(--speeki-dark-blue);
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .auditor-insight h4::before {
+            content: "";
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230a1f44' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E") no-repeat center;
+            background-size: contain;
+        }
+
+        .auditor-insight p {
+            color: var(--speeki-gray);
+            font-size: 15px;
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        .auditor-insight ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .auditor-insight li {
+            color: var(--speeki-gray);
+            font-size: 15px;
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        .auditor-insight strong {
+            color: var(--speeki-dark);
+            font-weight: 600;
+        }
+
+        .red-flags-section {
+            margin: 32px 0;
+            background: #ffffff;
+            border: 1px solid var(--speeki-border);
+            border-left: 3px solid #c53030;
+            border-radius: 4px;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+
+        .red-flags-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .red-flags-section-header {
+            padding: 20px 24px;
+            font-weight: 600;
+            font-size: 16px;
+            color: var(--speeki-dark-blue);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: #f8f9fa;
+            border-bottom: 1px solid var(--speeki-border);
+        }
+
+        .red-flags-section-header::before {
+            content: "";
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23c53030' stroke='%23c53030' stroke-width='2'%3E%3Cpath d='M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z'/%3E%3Cline x1='4' y1='22' x2='4' y2='15'/%3E%3C/svg%3E") no-repeat center;
+            background-size: contain;
+        }
+
+        .red-flags-content {
+            padding: 20px 24px;
+        }
+
+        .red-flag-category {
+            margin-bottom: 20px;
+        }
+
+        .red-flag-category h5 {
+            color: #c53030;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .red-flag-category ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .red-flag-category li {
+            color: var(--speeki-gray);
+            font-size: 14px;
+            margin-bottom: 6px;
+            line-height: 1.5;
+        }
+
+        /* Inline Auditor Tips - contextual insights per section */
+        .auditor-tip {
+            margin: 20px 0 32px 0;
+            background: #ffffff;
+            border: 1px solid var(--speeki-border);
+            border-left: 3px solid var(--speeki-green);
+            border-radius: 4px;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+
+        .auditor-tip.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .auditor-tip-header {
+            padding: 18px 24px;
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--speeki-dark-blue);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: #f8f9fa;
+            border-bottom: 1px solid var(--speeki-border);
+        }
+
+        .auditor-tip-header::before {
+            content: "";
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230a1f44' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E") no-repeat center;
+            background-size: contain;
+        }
+
+        .auditor-tip-content {
+            padding: 24px;
+        }
+
+        .auditor-tip-content p {
+            color: var(--speeki-gray);
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        .auditor-tip-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .auditor-tip-content .red-flag {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            padding: 10px 12px;
+            background: #fef2f2;
+            border-radius: 6px;
+            margin-top: 12px;
+        }
+
+        .auditor-tip-content .red-flag::before {
+            content: "";
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            flex-shrink: 0;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23991b1b' stroke='%23991b1b' stroke-width='2'%3E%3Cpath d='M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z'/%3E%3Cline x1='12' y1='9' x2='12' y2='13'/%3E%3Cline x1='12' y1='17' x2='12.01' y2='17'/%3E%3C/svg%3E") no-repeat center;
+            background-size: contain;
+        }
+
+        .auditor-tip-content .red-flag-text {
+            color: #991b1b;
+            font-size: 13px;
+            line-height: 1.5;
+            font-weight: 500;
+        }
+
+        .auditor-tip-content .why-matters {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            padding: 10px 12px;
+            background: #eff6ff;
+            border-radius: 6px;
+            margin-top: 12px;
+        }
+
+        .auditor-tip-content .why-matters::before {
+            content: "";
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            flex-shrink: 0;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231e40af' stroke-width='2'%3E%3Cpath d='M12 2a7 7 0 017 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 01-1 1H9a1 1 0 01-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 017-7z'/%3E%3Cpath d='M9 21h6'/%3E%3Cpath d='M9 17v4'/%3E%3Cpath d='M15 17v4'/%3E%3C/svg%3E") no-repeat center;
+            background-size: contain;
+        }
+
+        .auditor-tip-content .why-matters-text {
+            color: #1e40af;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .auditor-tip {
+                margin-left: 0;
+            }
+            header {
+                padding: 60px 6vw 40px;
+            }
+
+            header h1 {
+                font-size: 36px;
+                letter-spacing: -1px;
+            }
+
+            header p {
+                font-size: 16px;
+            }
+
+            main {
+                padding: 40px 6vw;
+            }
+
+            .item-number {
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+            }
+
+            .item-title h2 {
+                font-size: 20px;
+            }
+
+            .sub-items {
+                margin-left: 0;
+            }
+
+            .sub-item label {
+                font-size: 15px;
+            }
+
+            .progress-section {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+                padding: 24px;
+            }
+
+            .progress-text {
+                margin-left: 0;
+                margin-top: 0;
+            }
+
+            .summary-stats {
+                gap: 40px;
+            }
+
+            .stat-number {
+                font-size: 40px;
+            }
+
+            .action-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            button {
+                width: 100%;
+            }
+
+            footer {
+                padding: 40px 6vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <a href="index.html" class="nav-logo"><img src="speeki-logo.png" alt="Speeki - The Sustainability Firm"></a>
+            <a href="index.html" class="nav-back">← Back to Resources</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>ISO 37001 <span class="header-highlight">Compliance</span> Checklist</h1>
+            <p>18 areas auditors evaluate when assessing Anti-Bribery Management System (ABMS) maturity and certification readiness. This checklist reflects the areas independent auditors evaluate when providing assurance over your management system.</p>
+            <div class="progress-section">
+                <div class="progress-info">
+                    <h3>Progress</h3>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                </div>
+                <div class="progress-text" id="progressText">0/68</div>
+            </div>
+        </header>
+
+        <main>
+            <form id="checklistForm">
+                <!-- Step 1 -->
+                <div class="checklist-item">
+                    <div class="item-header">
+                        <div class="item-number" data-item="1">1</div>
+                        <div class="item-title">
+                            <h2>Develop a roadmap for the implementation of an ABMS and eventual certification</h2>
+                        </div>
+                    </div>
+                    <div class="sub-items">
+                        <div class="sub-item">
+                            <input type="checkbox" id="item1_1" class="checklist-checkbox">
+                            <label for="item1_1">Get an idea of your organisation's existing anti-bribery controls, policies and potential gaps</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item1_2" class="checklist-checkbox">
+                            <label for="item1_2">Consider any past enforcement actions against your organisation (or within your industry) and what remedial steps were taken</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item1_3" class="checklist-checkbox">
+                            <label for="item1_3">Identify potential ISO 37001 auditors</label>
+                        </div>
+                    </div>
+                    <div class="auditor-tip">
+                        <div class="auditor-tip-header">What Auditors Look For</div>
+                        <div class="auditor-tip-content">
+                            <p>Auditors will examine whether your organisation has conducted a thorough baseline assessment before implementation. They expect to see evidence of gap analysis and a realistic implementation timeline.</p>
+                            <div class="red-flag">
+                                <span class="red-flag-text">Red flag: Organisations that cannot demonstrate awareness of past compliance issues or industry enforcement trends may lack the contextual understanding needed for effective risk assessment.</span>
+                            </div>
+                            <div class="why-matters">
+                                <span class="why-matters-text">Why this matters: A documented roadmap demonstrates intentionality and helps auditors understand your organisation's compliance journey and commitment level.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="checklist-item">
+                    <div class="item-header">
+                        <div class="item-number" data-item="2">2</div>
+                        <div class="item-title">
+                            <h2>Identify the potential scope of the ABMS and conduct a risk assessment</h2>
+                        </div>
+                    </div>
+                    <div class="sub-items">
+                        <div class="sub-item">
+                            <input type="checkbox" id="item2_1" class="checklist-checkbox">
+                            <label for="item2_1">Assess what organisational factors pose or create a bribery risk – such as industry, business model, countries of operation, applicable laws, company structure, and business associates and third parties</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item2_2" class="checklist-checkbox">
+                            <label for="item2_2">Identify relevant stakeholders who should have input on the design of the ABMS</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item2_3" class="checklist-checkbox">
+                            <label for="item2_3">Conduct a risk assessment detailing your learnings from steps 1 and 2</label>
+                        </div>
+                    </div>
+                    <div class="auditor-tip">
+                        <div class="auditor-tip-header">What Auditors Look For</div>
+                        <div class="auditor-tip-content">
+                            <p>Risk assessments must be comprehensive and specific to your organisation. Auditors expect to see documented consideration of industry, geography, business model, and third-party relationships.</p>
+                            <div class="red-flag">
+                                <span class="red-flag-text">Red flag: Generic risk assessments that don't reference specific jurisdictions, transaction types, or business partner categories. Risk scores without documented rationale or quantitative analysis.</span>
+                            </div>
+                            <div class="why-matters">
+                                <span class="why-matters-text">Why this matters: The risk assessment forms the foundation for all subsequent controls. Auditors use it to evaluate whether your ABMS is proportionate to your actual risk exposure.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="checklist-item">
+                    <div class="item-header">
+                        <div class="item-number" data-item="3">3</div>
+                        <div class="item-title">
+                            <h2>Develop an anti-bribery policy</h2>
+                        </div>
+                    </div>
+                    <div class="sub-items">
+                        <div class="sub-item">
+                            <input type="checkbox" id="item3_1" class="checklist-checkbox">
+                            <label for="item3_1">Prohibit bribery in clear terms</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item3_2" class="checklist-checkbox">
+                            <label for="item3_2">Outline leadership commitment to the ABMS</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item3_3" class="checklist-checkbox">
+                            <label for="item3_3">Require compliance by employees, business associates and leadership, with consequences for violations and rewards for supporting the ABMS</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item3_4" class="checklist-checkbox">
+                            <label for="item3_4">Identify objectives for the ABMS</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item3_5" class="checklist-checkbox">
+                            <label for="item3_5">Establish authority and independence for an anti-bribery compliance function</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item3_6" class="checklist-checkbox">
+                            <label for="item3_6">Establish a reporting mechanism and guarantee non-retaliation</label>
+                        </div>
+                    </div>
+                    <div class="auditor-tip">
+                        <div class="auditor-tip-header">What Auditors Look For</div>
+                        <div class="auditor-tip-content">
+                            <p>Your anti-bribery policy must explicitly prohibit all forms of bribery, including facilitation payments, and apply to all personnel and business associates. Auditors review policy language for clarity and completeness.</p>
+                            <div class="red-flag">
+                                <span class="red-flag-text">Red flag: Policies that use vague language like "inappropriate payments" without defining bribery, or policies that only apply to certain employee levels or business units.</span>
+                            </div>
+                            <div class="why-matters">
+                                <span class="why-matters-text">Why this matters: The policy is the cornerstone document auditors review first. Ambiguous policies create enforcement gaps and suggest inadequate commitment to anti-bribery compliance.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="checklist-item">
+                    <div class="item-header">
+                        <div class="item-number" data-item="4">4</div>
+                        <div class="item-title">
+                            <h2>Seek leadership commitment from the governing body and top management</h2>
+                        </div>
+                    </div>
+                    <div class="sub-items">
+                        <div class="sub-item">
+                            <input type="checkbox" id="item4_1" class="checklist-checkbox">
+                            <label for="item4_1">Obtain approval of the anti-bribery policy</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item4_2" class="checklist-checkbox">
+                            <label for="item4_2">Ensure alignment between business strategy and the ABMS</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item4_3" class="checklist-checkbox">
+                            <label for="item4_3">Communicate the policy and importance of the ABMS to stakeholders</label>
+                        </div>
+                    </div>
+                    <div class="auditor-tip">
+                        <div class="auditor-tip-header">What Auditors Look For</div>
+                        <div class="auditor-tip-content">
+                            <p>Auditors look for documented evidence of board-level engagement with anti-bribery matters, including meeting minutes, policy approvals, and regular reporting to governance bodies.</p>
+                            <div class="red-flag">
+                                <span class="red-flag-text">Red flag: No evidence of board-level oversight or approval. Policies signed only at operational levels without C-suite or board endorsement. Absence of anti-bribery topics in board meeting agendas.</span>
+                            </div>
+                            <div class="why-matters">
+                                <span class="why-matters-text">Why this matters: Tone from the top is critical. Auditors assess whether leadership commitment is genuine by examining how anti-bribery matters are prioritised at the highest levels.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="checklist-item">
+                    <div class="item-header">
+                        <div class="item-number" data-item="5">5</div>
+                        <div class="item-title">
+                            <h2>Establish an anti-bribery compliance function</h2>
+                        </div>
+                    </div>
+                    <div class="sub-items">
+                        <div class="sub-item">
+                            <input type="checkbox" id="item5_1" class="checklist-checkbox">
+                            <label for="item5_1">Get leadership commitment to guarantee the function's independence</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item5_2" class="checklist-checkbox">
+                            <label for="item5_2">Establish a direct connection between this function and leadership</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item5_3" class="checklist-checkbox">
+                            <label for="item5_3">Ensure the function has sufficient resources and authority to enforce the ABMS</label>
+                        </div>
+                    </div>
+                    <div class="auditor-tip">
+                        <div class="auditor-tip-header">What Auditors Look For</div>
+                        <div class="auditor-tip-content">
+                            <p>The compliance function must have demonstrable independence from operational management. Auditors examine reporting lines, budget allocation, and decision-making authority.</p>
+                            <div class="red-flag">
+                                <span class="red-flag-text">Red flag: Compliance function reports to commercial leadership rather than the board or audit committee. No dedicated budget or headcount for anti-bribery activities. Compliance officer lacks authority to halt suspicious transactions.</span>
+                            </div>
+                            <div class="why-matters">
+                                <span class="why-matters-text">Why this matters: An under-resourced or compromised compliance function cannot effectively enforce the ABMS. Auditors evaluate whether the function can operate without undue influence.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 6 -->
+                <div class="checklist-item">
+                    <div class="item-header">
+                        <div class="item-number" data-item="6">6</div>
+                        <div class="item-title">
+                            <h2>Develop an annual plan for the ABMS</h2>
+                        </div>
+                    </div>
+                    <div class="sub-items">
+                        <div class="sub-item">
+                            <input type="checkbox" id="item6_1" class="checklist-checkbox">
+                            <label for="item6_1">Set objectives for the ABMS to prevent and reduce bribery</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item6_2" class="checklist-checkbox">
+                            <label for="item6_2">Describe how the ABMS can achieve its objectives</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item6_3" class="checklist-checkbox">
+                            <label for="item6_3">Include a monitoring plan and information on how the ABMS can be continually improved</label>
+                        </div>
+                    </div>
+                    <div class="auditor-tip">
+                        <div class="auditor-tip-header">What Auditors Look For</div>
+                        <div class="auditor-tip-content">
+                            <p>Auditors expect to see a documented annual plan with measurable objectives, assigned responsibilities, timelines, and allocated resources for each ABMS initiative.</p>
+                            <div class="red-flag">
+                                <span class="red-flag-text">Red flag: No documented annual plan. Objectives that are vague or unmeasurable. Plans that haven't been updated to reflect changes in risk profile or organisational structure.</span>
+                            </div>
+                            <div class="why-matters">
+                                <span class="why-matters-text">Why this matters: An annual plan demonstrates that anti-bribery compliance is an ongoing priority, not a one-time exercise. It provides the roadmap auditors use to assess progress.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 7 -->
+                <div class="checklist-item">
+                    <div class="item-header">
+                        <div class="item-number" data-item="7">7</div>
+                        <div class="item-title">
+                            <h2>Awareness, training and communication</h2>
+                        </div>
+                    </div>
+                    <div class="sub-items">
+                        <div class="sub-item">
+                            <input type="checkbox" id="item7_1" class="checklist-checkbox">
+                            <label for="item7_1">Develop an awareness and training programme for the ABMS that includes employees and business associates</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item7_2" class="checklist-checkbox">
+                            <label for="item7_2">Create a plan on how to communicate the ABMS and anti-bribery policy</label>
+                        </div>
+                    </div>
+                    <div class="auditor-tip">
+                        <div class="auditor-tip-header">What Auditors Look For</div>
+                        <div class="auditor-tip-content">
+                            <p>Training programmes must be tailored to risk exposure levels. Auditors review training records for completion rates, comprehension testing, and coverage of high-risk personnel and business associates.</p>
+                            <div class="red-flag">
+                                <span class="red-flag-text">Red flag: Generic training without role-based customisation. Training records without completion dates or test scores. High-risk personnel (sales, procurement, agents) not receiving enhanced training.</span>
+                            </div>
+                            <div class="why-matters">
+                                <span class="why-matters-text">Why this matters: Effective training builds a culture of compliance. Auditors assess whether personnel understand their obligations and can recognise bribery risks in their daily work.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 8 -->
+                <div class="checklist-item">
+                    <div class="item-header">
+                        <div class="item-number" data-item="8">8</div>
+                        <div class="item-title">
+                            <h2>Create a documentation system for the ABMS</h2>
+                        </div>
+                    </div>
+                    <div class="sub-items">
+                        <div class="sub-item">
+                            <input type="checkbox" id="item8_1" class="checklist-checkbox">
+                            <label for="item8_1">Ensure all ABMS documentation is described, formatted, reviewed, protected and held according to organisational documentation standards</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item8_2" class="checklist-checkbox">
+                            <label for="item8_2">Document receipt of anti-bribery policy by employees and business associates</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item8_3" class="checklist-checkbox">
+                            <label for="item8_3">Document status of training on the ABMS</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item8_4" class="checklist-checkbox">
+                            <label for="item8_4">Document risk assessment results</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item8_5" class="checklist-checkbox">
+                            <label for="item8_5">Document due diligence results on business associates and other transactions</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item8_6" class="checklist-checkbox">
+                            <label for="item8_6">Document review and approvals of gifts, travel and entertainment requests</label>
+                        </div>
+                    </div>
+                    <div class="auditor-tip">
+                        <div class="auditor-tip-header">What Auditors Look For</div>
+                        <div class="auditor-tip-content">
+                            <p>Auditors require a clear audit trail for all ABMS activities. Documentation must be organised, accessible, and demonstrate consistent record-keeping practices across the organisation.</p>
+                            <div class="red-flag">
+                                <span class="red-flag-text">Red flag: Fragmented documentation across multiple systems. Missing acknowledgment signatures for policy receipt. Due diligence files without documented decision rationale or approval dates.</span>
+                            </div>
+                            <div class="why-matters">
+                                <span class="why-matters-text">Why this matters: Documentation is the evidence auditors rely on to verify compliance. Incomplete or inconsistent records suggest control gaps and make it difficult to demonstrate ABMS effectiveness.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 9 -->
+                <div class="checklist-item">
+                    <div class="item-header">
+                        <div class="item-number" data-item="9">9</div>
+                        <div class="item-title">
+                            <h2>Introduce the ABMS into the employment process</h2>
+                        </div>
+                    </div>
+                    <div class="sub-items">
+                        <div class="sub-item">
+                            <input type="checkbox" id="item9_1" class="checklist-checkbox">
+                            <label for="item9_1">Distribute the anti-bribery policy to all new employees and business associates</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item9_2" class="checklist-checkbox">
+                            <label for="item9_2">Require compliance as a condition of employment or engagement</label>
+                        </div>
+                    </div>
+                    <div class="auditor-tip">
+                        <div class="auditor-tip-header">What Auditors Look For</div>
+                        <div class="auditor-tip-content">
+                            <p>Anti-bribery requirements must be embedded into HR processes from recruitment onwards. Auditors examine employment contracts, onboarding procedures, and background screening practices.</p>
+                            <div class="red-flag">
+                                <span class="red-flag-text">Red flag: Employment contracts without anti-bribery clauses. No background screening for high-risk positions. Onboarding that doesn't include anti-bribery training acknowledgment.</span>
+                            </div>
+                            <div class="why-matters">
+                                <span class="why-matters-text">Why this matters: Integrating anti-bribery into employment ensures all personnel understand expectations from day one. It also provides legal basis for disciplinary action.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 10 -->
+                <div class="checklist-item">
+                    <div class="item-header">
+                        <div class="item-number" data-item="10">10</div>
+                        <div class="item-title">
+                            <h2>Implement a due diligence programme to detect and prevent bribery risk</h2>
+                        </div>
+                    </div>
+                    <div class="sub-items">
+                        <div class="sub-item">
+                            <input type="checkbox" id="item10_1" class="checklist-checkbox">
+                            <label for="item10_1">Focus on medium- to high-risk transactions or activities such as mergers, acquisitions and government relationships</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item10_2" class="checklist-checkbox">
+                            <label for="item10_2">Focus on medium- to high-risk business associates</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item10_3" class="checklist-checkbox">
+                            <label for="item10_3">Focus on individuals holding high-risk positions or operating out of high-risk jurisdictions</label>
+                        </div>
+                    </div>
+                    <div class="auditor-tip">
+                        <div class="auditor-tip-header">What Auditors Look For</div>
+                        <div class="auditor-tip-content">
+                            <p>Third-party due diligence must be risk-based and documented. Auditors expect to see screening criteria, approval workflows, and ongoing monitoring for high-risk relationships.</p>
+                            <div class="red-flag">
+                                <span class="red-flag-text">Red flag: Due diligence files without documented business rationale. Agent appointments without enhanced screening. No periodic re-screening of existing high-risk third parties.</span>
+                            </div>
+                            <div class="why-matters">
+                                <span class="why-matters-text">Why this matters: Third parties represent one of the highest bribery risks. Auditors assess whether your due diligence is proportionate to the risk each relationship presents.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 11 -->
+                <div class="checklist-item">
+                    <div class="item-header">
+                        <div class="item-number" data-item="11">11</div>
+                        <div class="item-title">
+                            <h2>Implement financial controls to manage bribery risk</h2>
+                        </div>
+                    </div>
+                    <div class="sub-items">
+                        <div class="sub-item">
+                            <input type="checkbox" id="item11_1" class="checklist-checkbox">
+                            <label for="item11_1">Conduct financial reviews of books and records to ensure no improper payments are made or received</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item11_2" class="checklist-checkbox">
+                            <label for="item11_2">Establish a process to review gifts, travel, entertainment and other benefits</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item11_3" class="checklist-checkbox">
+                            <label for="item11_3">Implement additional levels of review or due diligence depending on spend with business associates</label>
+                        </div>
+                    </div>
+                    <div class="auditor-tip">
+                        <div class="auditor-tip-header">What Auditors Look For</div>
+                        <div class="auditor-tip-content">
+                            <p>Financial controls must include segregation of duties, appropriate approval thresholds, and regular review of high-risk transactions. Auditors examine payment processes and expense management.</p>
+                            <div class="red-flag">
+                                <span class="red-flag-text">Red flag: No segregation between those approving payments and those recording them. Cash payments in high-risk jurisdictions without enhanced approval. Unusual commission structures (success fees over 15%, payments to third countries).</span>
+                            </div>
+                            <div class="why-matters">
+                                <span class="why-matters-text">Why this matters: Financial controls are a critical defense against bribery. Auditors look for evidence that payments are properly authorised and traceable.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 12 -->
+                <div class="checklist-item">
+                    <div class="item-header">
+                        <div class="item-number" data-item="12">12</div>
+                        <div class="item-title">
+                            <h2>Implement non-financial controls to manage bribery risk</h2>
+                        </div>
+                    </div>
+                    <div class="sub-items">
+                        <div class="sub-item">
+                            <input type="checkbox" id="item12_1" class="checklist-checkbox">
+                            <label for="item12_1">Require a bidding process for supplier selection</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item12_2" class="checklist-checkbox">
+                            <label for="item12_2">Establish a conflicts of interest management process</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item12_3" class="checklist-checkbox">
+                            <label for="item12_3">Implement internal fraud and insider trading policies</label>
+                        </div>
+                    </div>
+                    <div class="auditor-tip">
+                        <div class="auditor-tip-header">What Auditors Look For</div>
+                        <div class="auditor-tip-content">
+                            <p>Non-financial controls address conflict of interest, procurement integrity, and related misconduct. Auditors review procurement processes, COI registers, and related policy enforcement.</p>
+                            <div class="red-flag">
+                                <span class="red-flag-text">Red flag: No competitive bidding requirements for significant purchases. Conflicts of interest register not maintained or updated. No process for declaring personal interests in business decisions.</span>
+                            </div>
+                            <div class="why-matters">
+                                <span class="why-matters-text">Why this matters: Non-financial controls prevent conditions that enable bribery. Auditors assess whether your organisation has addressed the full spectrum of corruption risks.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 13 -->
+                <div class="checklist-item">
+                    <div class="item-header">
+                        <div class="item-number" data-item="13">13</div>
+                        <div class="item-title">
+                            <h2>Require controlled organisations and business associates to implement anti-bribery controls</h2>
+                        </div>
+                    </div>
+                    <div class="sub-items">
+                        <div class="sub-item">
+                            <input type="checkbox" id="item13_1" class="checklist-checkbox">
+                            <label for="item13_1">Ensure controlled organisations adopt the ABMS or their own controls</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item13_2" class="checklist-checkbox">
+                            <label for="item13_2">Ensure business associates have anti-bribery controls in place or adopt controls if needed</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item13_3" class="checklist-checkbox">
+                            <label for="item13_3">Include contract terms that allow you to terminate any business associates that engage in bribery</label>
+                        </div>
+                    </div>
+                    <div class="auditor-tip">
+                        <div class="auditor-tip-header">What Auditors Look For</div>
+                        <div class="auditor-tip-content">
+                            <p>Auditors examine whether anti-bribery requirements flow down to controlled entities and business partners through contracts, policies, and ongoing monitoring.</p>
+                            <div class="red-flag">
+                                <span class="red-flag-text">Red flag: Contracts without anti-bribery warranties or termination rights. Subsidiaries operating without documented anti-bribery controls. No audit rights over high-risk business associates.</span>
+                            </div>
+                            <div class="why-matters">
+                                <span class="why-matters-text">Why this matters: Your organisation can be liable for the actions of third parties. Auditors verify that you have appropriate controls and contractual protections in place.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 14 -->
+                <div class="checklist-item">
+                    <div class="item-header">
+                        <div class="item-number" data-item="14">14</div>
+                        <div class="item-title">
+                            <h2>Establish a process for gifts, travel and entertainment (GTE) and donations/sponsorships</h2>
+                        </div>
+                    </div>
+                    <div class="sub-items">
+                        <div class="sub-item">
+                            <input type="checkbox" id="item14_1" class="checklist-checkbox">
+                            <label for="item14_1">Implement a register to document all requests for GTE and donations/sponsorships</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item14_2" class="checklist-checkbox">
+                            <label for="item14_2">Include rules around review and approval for these benefits</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item14_3" class="checklist-checkbox">
+                            <label for="item14_3">Clearly describe to employees when giving and receiving of benefits is allowed</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item14_4" class="checklist-checkbox">
+                            <label for="item14_4">Ensure that giving and receiving of benefits is reviewed or audited periodically</label>
+                        </div>
+                    </div>
+                    <div class="auditor-tip">
+                        <div class="auditor-tip-header">What Auditors Look For</div>
+                        <div class="auditor-tip-content">
+                            <p>GTE and donation processes must have clear thresholds, approval workflows, and documentation requirements. Auditors review registers and analyse spending patterns.</p>
+                            <div class="red-flag">
+                                <span class="red-flag-text">Red flag: Thresholds set without reference to local law or industry norms. Hospitality spend that spikes before major contract decisions. No pre-approval for government official entertainment.</span>
+                            </div>
+                            <div class="why-matters">
+                                <span class="why-matters-text">Why this matters: GTE and donations are common bribery vehicles. Well-documented processes with appropriate thresholds demonstrate mature anti-bribery controls.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 15 -->
+                <div class="checklist-item">
+                    <div class="item-header">
+                        <div class="item-number" data-item="15">15</div>
+                        <div class="item-title">
+                            <h2>Implement a reporting system to raise concerns related to bribery</h2>
+                        </div>
+                    </div>
+                    <div class="sub-items">
+                        <div class="sub-item">
+                            <input type="checkbox" id="item15_1" class="checklist-checkbox">
+                            <label for="item15_1">Ensure the reporting system is accessible and communicated</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item15_2" class="checklist-checkbox">
+                            <label for="item15_2">Allow for anonymous reporting</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item15_3" class="checklist-checkbox">
+                            <label for="item15_3">Prohibit retaliation against reporters</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item15_4" class="checklist-checkbox">
+                            <label for="item15_4">Ensure reporters can receive advice or feedback related to any disclosures</label>
+                        </div>
+                    </div>
+                    <div class="auditor-tip">
+                        <div class="auditor-tip-header">What Auditors Look For</div>
+                        <div class="auditor-tip-content">
+                            <p>Speak-up channels must be accessible, confidential, and trusted. Auditors review channel usage metrics, case handling procedures, and evidence of non-retaliation enforcement.</p>
+                            <div class="red-flag">
+                                <span class="red-flag-text">Red flag: Whistleblowing channels that report to operational management rather than compliance or the board. Zero reports received (suggests lack of trust or awareness). No documented case outcomes.</span>
+                            </div>
+                            <div class="why-matters">
+                                <span class="why-matters-text">Why this matters: An effective reporting system is essential for detecting bribery. Auditors assess whether the channel is genuinely accessible and whether concerns are properly investigated.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 16 -->
+                <div class="checklist-item">
+                    <div class="item-header">
+                        <div class="item-number" data-item="16">16</div>
+                        <div class="item-title">
+                            <h2>Implement an investigations policy and procedure</h2>
+                        </div>
+                    </div>
+                    <div class="sub-items">
+                        <div class="sub-item">
+                            <input type="checkbox" id="item16_1" class="checklist-checkbox">
+                            <label for="item16_1">Clearly identify when an investigation is required (for example, when a report is made)</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item16_2" class="checklist-checkbox">
+                            <label for="item16_2">Ensure that relevant personnel cooperate in the process</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item16_3" class="checklist-checkbox">
+                            <label for="item16_3">Ensure investigators have appropriate resources to carry out reviews</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item16_4" class="checklist-checkbox">
+                            <label for="item16_4">Provide status updates to relevant personnel or authorities</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item16_5" class="checklist-checkbox">
+                            <label for="item16_5">Ensure confidentiality throughout the investigation process</label>
+                        </div>
+                    </div>
+                    <div class="auditor-tip">
+                        <div class="auditor-tip-header">What Auditors Look For</div>
+                        <div class="auditor-tip-content">
+                            <p>Investigation procedures must be documented, consistent, and include appropriate safeguards. Auditors review investigation files for process compliance and appropriate escalation.</p>
+                            <div class="red-flag">
+                                <span class="red-flag-text">Red flag: No documented investigation procedure. Investigations conducted by personnel with potential conflicts. No evidence of case tracking or outcome documentation.</span>
+                            </div>
+                            <div class="why-matters">
+                                <span class="why-matters-text">Why this matters: Proper investigation procedures ensure concerns are addressed fairly and consistently. Auditors verify that your organisation can respond appropriately to bribery allegations.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 17 -->
+                <div class="checklist-item">
+                    <div class="item-header">
+                        <div class="item-number" data-item="17">17</div>
+                        <div class="item-title">
+                            <h2>Establish a monitoring programme to review ABMS effectiveness</h2>
+                        </div>
+                    </div>
+                    <div class="sub-items">
+                        <div class="sub-item">
+                            <input type="checkbox" id="item17_1" class="checklist-checkbox">
+                            <label for="item17_1">Define which areas of the ABMS need to be evaluated</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item17_2" class="checklist-checkbox">
+                            <label for="item17_2">Identify which teams are responsible for monitoring</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item17_3" class="checklist-checkbox">
+                            <label for="item17_3">Determine how monitoring will be carried out</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item17_4" class="checklist-checkbox">
+                            <label for="item17_4">Schedule when monitoring activities will occur</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item17_5" class="checklist-checkbox">
+                            <label for="item17_5">Identify who the results of monitoring will be distributed to</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item17_6" class="checklist-checkbox">
+                            <label for="item17_6">Document how the results of the monitoring will be recorded according to organisational standards</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item17_7" class="checklist-checkbox">
+                            <label for="item17_7">Conduct internal audit review of the ABMS</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item17_8" class="checklist-checkbox">
+                            <label for="item17_8">Conduct reviews of the ABMS by top management and governing body</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item17_9" class="checklist-checkbox">
+                            <label for="item17_9">Conduct a review of the ABMS by the anti-bribery compliance function</label>
+                        </div>
+                    </div>
+                    <div class="auditor-tip">
+                        <div class="auditor-tip-header">What Auditors Look For</div>
+                        <div class="auditor-tip-content">
+                            <p>Monitoring must be systematic and documented. Auditors expect to see internal audit coverage, management reviews, and evidence that findings are reported to appropriate governance bodies.</p>
+                            <div class="red-flag">
+                                <span class="red-flag-text">Red flag: No evidence of periodic control testing or internal audit coverage of anti-bribery controls. Monitoring findings not reported to the board or audit committee. No documented management review.</span>
+                            </div>
+                            <div class="why-matters">
+                                <span class="why-matters-text">Why this matters: Monitoring demonstrates that the ABMS is actively managed. Auditors look for evidence that control weaknesses are identified and addressed proactively.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 18 -->
+                <div class="checklist-item">
+                    <div class="item-header">
+                        <div class="item-number" data-item="18">18</div>
+                        <div class="item-title">
+                            <h2>Remediate non-conformities and continually improve the ABMS</h2>
+                        </div>
+                    </div>
+                    <div class="sub-items">
+                        <div class="sub-item">
+                            <input type="checkbox" id="item18_1" class="checklist-checkbox">
+                            <label for="item18_1">Proactively remediate non-conformities identified in monitoring</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item18_2" class="checklist-checkbox">
+                            <label for="item18_2">Identify and resolve the causes of any issues</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item18_3" class="checklist-checkbox">
+                            <label for="item18_3">Make changes to the ABMS if needed</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item18_4" class="checklist-checkbox">
+                            <label for="item18_4">Streamline processes for review and approval</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item18_5" class="checklist-checkbox">
+                            <label for="item18_5">Implement enhanced technology to optimise existing processes</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item18_6" class="checklist-checkbox">
+                            <label for="item18_6">Evangelise the importance of the ABMS with non-compliance personnel</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item18_7" class="checklist-checkbox">
+                            <label for="item18_7">Increase the frequency or quality of training programmes</label>
+                        </div>
+                    </div>
+                    <div class="auditor-tip">
+                        <div class="auditor-tip-header">What Auditors Look For</div>
+                        <div class="auditor-tip-content">
+                            <p>Continuous improvement must be demonstrable through documented remediation of findings, root cause analysis, and evidence of ABMS enhancements over time.</p>
+                            <div class="red-flag">
+                                <span class="red-flag-text">Red flag: Repeat audit findings without evidence of remediation. No root cause analysis for identified issues. ABMS unchanged despite organisational or risk profile changes.</span>
+                            </div>
+                            <div class="why-matters">
+                                <span class="why-matters-text">Why this matters: Certification auditors look for evidence that your ABMS evolves in response to lessons learned. Stagnant programmes suggest compliance is treated as a one-time exercise.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <!-- Summary Section -->
+            <div class="summary-section">
+                <h3>Your Checklist Progress</h3>
+                <div class="summary-stats">
+                    <div class="stat">
+                        <div class="stat-number" id="totalCompleted">0</div>
+                        <div class="stat-label">Items Completed</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number" id="totalRemaining">68</div>
+                        <div class="stat-label">Items Remaining</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number" id="percentComplete">0%</div>
+                        <div class="stat-label">Overall Progress</div>
+                    </div>
+                </div>
+                <div class="action-buttons">
+                    <button type="button" class="btn-reset" onclick="resetChecklist()">Reset Checklist</button>
+                    <button type="button" class="btn-export" onclick="exportProgress()">Export Progress</button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Related Checklists Section -->
+        <div class="speeki-related">
+            <h3>Related Compliance Checklists</h3>
+            <div class="speeki-related-grid">
+                <a href="iso-37002-whistleblowing-checklist.html" class="speeki-related-card">
+                    <span class="speeki-related-card-tag">ISO Standards</span>
+                    <h4>ISO 37002 Whistleblowing</h4>
+                    <p>Build an effective whistleblowing management system for speak-up culture.</p>
+                </a>
+                <a href="iso-37008-investigations-checklist.html" class="speeki-related-card">
+                    <span class="speeki-related-card-tag">ISO Standards</span>
+                    <h4>ISO 37008 Investigations</h4>
+                    <p>Manage effective internal investigations with ISO 37008 best practices.</p>
+                </a>
+                <a href="anti-greenwashing-checklist.html" class="speeki-related-card">
+                    <span class="speeki-related-card-tag">ESG Reporting</span>
+                    <h4>Anti-Greenwashing Checklist</h4>
+                    <p>Reduce greenwashing risk in ESG reporting and communications.</p>
+                </a>
+            </div>
+        </div>
+
+        <!-- Red Flags Section -->
+        <div class="red-flags-section">
+            <div class="red-flags-section-header">What Auditors Look For: ISO 37001 Red Flags</div>
+            <div class="red-flags-content">
+                <p style="color: var(--speeki-gray); font-size: 15px; margin-bottom: 20px;">When conducting ISO 37001 assurance engagements, auditors commonly flag the following areas as concerns. Understanding these red flags helps ensure your anti-bribery management system meets verification standards.</p>
+
+                <div class="red-flag-category">
+                    <h5>Documentation Red Flags</h5>
+                    <ul>
+                        <li>No evidence of board-level oversight or approval of the anti-bribery policy</li>
+                        <li>Risk assessments that lack quantitative analysis or jurisdictional considerations</li>
+                        <li>Training records without evidence of completion or comprehension testing</li>
+                        <li>Third-party due diligence files without documented decision rationale</li>
+                    </ul>
+                </div>
+
+                <div class="red-flag-category">
+                    <h5>Control Design Red Flags</h5>
+                    <ul>
+                        <li>Gift/entertainment thresholds set without reference to local law or industry norms</li>
+                        <li>No segregation between those approving payments and those recording them</li>
+                        <li>Whistleblowing channels that report to operational management, not compliance</li>
+                        <li>No evidence of periodic control testing or internal audit coverage</li>
+                    </ul>
+                </div>
+
+                <div class="red-flag-category">
+                    <h5>Operational Red Flags</h5>
+                    <ul>
+                        <li>Cash payments in high-risk jurisdictions without enhanced approval</li>
+                        <li>Unusual commission structures (success fees over 15%, payments to third countries)</li>
+                        <li>Agent appointments without documented business rationale</li>
+                        <li>Hospitality spend patterns that spike before major contract decisions</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="cta-section">
+            <h3>Ready for ISO 37001 Certification Assurance?</h3>
+            <p>The Speeki Platform provides the documentation framework and evidence trail that certification bodies require. Ensure your anti-bribery management system meets the verification standards that auditors evaluate.</p>
+            <a href="https://www.speeki.com/platform" class="cta-button">Learn More About Speeki Platform</a>
+        </div>
+
+        <footer>
+            <p style="font-size: 12px; color: #999999; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 1.5px;">© 2026 Speeki Pte Ltd</p>
+            <p><strong>ISO 37001 Compliance Checklist</strong></p>
+            <p style="margin-top: 12px;">A comprehensive guide to building an effective Anti-Bribery Management System</p>
+            <div class="footer-links">
+                <a href="https://www.speeki.com">Home</a>
+                <a href="https://www.speeki.com/platform">Platform</a>
+                <a href="index.html">All Resources</a>
+                <a href="mailto:info@speeki.com">Contact</a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const checkboxes = document.querySelectorAll('.checklist-checkbox');
+        const progressFill = document.getElementById('progressFill');
+        const progressText = document.getElementById('progressText');
+        const totalCompleted = document.getElementById('totalCompleted');
+        const totalRemaining = document.getElementById('totalRemaining');
+        const percentComplete = document.getElementById('percentComplete');
+
+        function loadProgress() {
+            const saved = localStorage.getItem('iso37001Progress');
+            if (saved) {
+                const checked = JSON.parse(saved);
+                checkboxes.forEach(checkbox => {
+                    if (checked.includes(checkbox.id)) {
+                        checkbox.checked = true;
+                    }
+                });
+            }
+            updateProgress();
+        }
+
+        function updateProgress() {
+            const checkedCount = document.querySelectorAll('.checklist-checkbox:checked').length;
+            const totalCount = checkboxes.length;
+            const percentage = (checkedCount / totalCount) * 100;
+
+            progressFill.style.width = percentage + '%';
+            progressText.textContent = `${checkedCount}/${totalCount}`;
+            totalCompleted.textContent = checkedCount;
+            totalRemaining.textContent = totalCount - checkedCount;
+            percentComplete.textContent = Math.round(percentage) + '%';
+
+            updateItemNumbers();
+            saveProgress();
+        }
+
+        function updateItemNumbers() {
+            for (let i = 1; i <= 18; i++) {
+                const itemCheckboxes = document.querySelectorAll(`input[id^="item${i}_"]`);
+                const itemNumber = document.querySelector(`.item-number[data-item="${i}"]`);
+
+                if (itemNumber) {
+                    const allChecked = Array.from(itemCheckboxes).every(cb => cb.checked);
+                    if (allChecked && itemCheckboxes.length > 0) {
+                        itemNumber.classList.add('completed');
+                    } else {
+                        itemNumber.classList.remove('completed');
+                    }
+                }
+            }
+        }
+
+        function saveProgress() {
+            const checked = Array.from(checkboxes)
+                .filter(cb => cb.checked)
+                .map(cb => cb.id);
+            localStorage.setItem('iso37001Progress', JSON.stringify(checked));
+        }
+
+        function resetChecklist() {
+            if (confirm('Are you sure you want to reset the entire checklist? This cannot be undone.')) {
+                checkboxes.forEach(checkbox => checkbox.checked = false);
+                localStorage.removeItem('iso37001Progress');
+                updateProgress();
+            }
+        }
+
+        function exportProgress() {
+            const checkedCount = document.querySelectorAll('.checklist-checkbox:checked').length;
+            const totalCount = checkboxes.length;
+            const percentage = Math.round((checkedCount / totalCount) * 100);
+
+            let exportText = 'ISO 37001 Compliance Checklist - Progress Report\n';
+            exportText += '='.repeat(50) + '\n\n';
+            exportText += `Overall Progress: ${checkedCount}/${totalCount} (${percentage}%)\n\n`;
+            exportText += 'Completed Items:\n';
+            exportText += '-'.repeat(50) + '\n';
+
+            for (let i = 1; i <= 18; i++) {
+                const itemCheckboxes = document.querySelectorAll(`input[id^="item${i}_"]`);
+                const itemTitle = document.querySelector(`.item-number[data-item="${i}"]`)?.nextElementSibling?.querySelector('h2')?.textContent;
+
+                if (itemTitle) {
+                    const checkedInSection = Array.from(itemCheckboxes).filter(cb => cb.checked).length;
+
+                    exportText += `\nStep ${i}. ${itemTitle}\n`;
+                    exportText += `   Completed: ${checkedInSection}/${itemCheckboxes.length}\n`;
+
+                    Array.from(itemCheckboxes).forEach(cb => {
+                        const label = document.querySelector(`label[for="${cb.id}"]`)?.textContent;
+                        if (label) {
+                            exportText += `   ${cb.checked ? '✓' : '○'} ${label}\n`;
+                        }
+                    });
+                }
+            }
+
+            exportText += '\n' + '='.repeat(50) + '\n';
+            exportText += `Generated: ${new Date().toLocaleString()}\n`;
+            exportText += '\nCreated with Speeki - The Sustainability Firm\n';
+            exportText += 'https://www.speeki.com\n';
+
+            const element = document.createElement('a');
+            element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(exportText));
+            element.setAttribute('download', 'ISO-37001-Checklist-Progress.txt');
+            element.style.display = 'none';
+            document.body.appendChild(element);
+            element.click();
+            document.body.removeChild(element);
+        }
+
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', updateProgress);
+        });
+
+        window.addEventListener('DOMContentLoaded', loadProgress);
+    </script>
+    <script src="assets/growth.js"></script>
+    <script src="assets/growth-advanced.js"></script>
+
+    <script>
+        // Reveal auditor tips and red flags sections when they come into view
+        (function() {
+            const revealElements = document.querySelectorAll('.auditor-tip, .red-flags-section');
+
+            const revealOnScroll = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+
+            revealElements.forEach(el => revealOnScroll.observe(el));
+        })();
+    </script>
+</body>
+</html>

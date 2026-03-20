@@ -1,0 +1,313 @@
+=== EXTRACTED FROM: Speeki_Whitepaper_ICSR_Internal_Controls_Sustainability_Reporting.docx ===
+
+SPEEKI WHITEPAPER
+
+Internal Controls Over
+
+Sustainability Reporting
+
+Why Non-Financial Data Demands the Same Rigour as Financial Data
+
+Published by Speeki
+
+March 2026
+
+www.speeki.com
+
+
+# Contents
+
+
+# Executive Summary
+
+For decades, the financial reporting ecosystem has operated on a non-negotiable premise: numbers published in annual accounts must be underpinned by a documented system of internal controls, independently tested and continuously maintained. No CFO would sign off on a set of financial statements without knowing that the data had been collected, reconciled, reviewed, and approved through a structured control environment. No external auditor would issue an opinion without evaluating whether those controls were designed effectively and operating as intended.
+
+Sustainability reporting has no such discipline. Not yet.
+
+Despite the rapid expansion of mandatory ESG disclosure requirements — CSRD in Europe, ISSB standards globally, state-based carbon reporting schemes in the United States, and emerging regimes across Asia-Pacific — most organisations are publishing sustainability data that has never passed through a formal control framework. The data is collected ad hoc, aggregated in spreadsheets, reviewed informally (if at all), and disclosed in reports that carry the same weight as financial statements in investor decision-making.
+
+This whitepaper makes the case that Internal Controls over Sustainability Reporting (ICSR) should be treated as a core component of any credible ESG programme — not as an afterthought or a future aspiration. For organisations that want their sustainability disclosures to be credible, assurable, and legally defensible, ICSR is the foundation. Importantly, the responsibility for building and maintaining ICSR sits with the reporting entity, not with the external auditor. The good news is that the path to getting there is well understood — because financial reporting has already paved the way.
+
+
+# 1. The Problem: Sustainability Reporting Without Controls
+
+Walk into any large organisation’s sustainability team today and ask a simple question: “Show me the documented control that governs how your Scope 2 emissions figure moves from raw utility invoice to published report.” In the vast majority of cases, the answer will be silence, or a vague gesture towards a spreadsheet maintained by one person.
+
+This is not an exaggeration. It is a common reality across sustainability reporting in 2026. While regulators have mandated what must be disclosed, they have largely left the question of how the underlying data is governed to the reporting entity. The result is that many sustainability reports are built on foundations that would not meet the standard expected in financial reporting.
+
+
+## 1.1 The Financial Reporting Parallel
+
+Consider how financial data flows in a well-governed organisation. Every transaction is recorded in a system with defined access controls. Journal entries are reviewed and approved by authorised personnel. Month-end close procedures are documented, with checklists, sign-offs, and reconciliations. The finance team operates under a controls framework — typically aligned to COSO — that defines preventive, detective, and corrective controls at every stage of the data lifecycle. Internal audit tests these controls periodically. External auditors evaluate their design and operating effectiveness before issuing an opinion.
+
+None of this happened by accident. It evolved over a century of corporate governance, regulatory enforcement, and hard lessons from fraud and misstatement. The Sarbanes-Oxley Act of 2002 cemented Internal Controls over Financial Reporting (ICFR) as a legal requirement for US-listed companies. Similar regimes exist across Europe, Asia, and Australia. The principle is universally accepted: if you publish financial data, you must have a documented system of controls over that data.
+
+Now apply the same logic to sustainability reporting. Companies are publishing carbon emissions figures that influence billions of dollars of investment allocation. They are disclosing workforce diversity metrics that affect procurement decisions. They are reporting water usage data that determines regulatory licensing. Yet the controls over this data are, in most cases, non-existent, informal, or undocumented.
+
+
+## 1.2 Where the Breakdown Occurs
+
+The breakdown is not primarily a technology problem. It is a governance problem. Sustainability teams in many organisations were established as communications or strategy functions, not as reporting functions subject to the same discipline as finance. The people collecting sustainability data are often well-intentioned subject-matter experts who have never been trained in data governance, control design, or audit readiness. They know their topic — carbon accounting, social impact, biodiversity — but they do not know how to build a system that produces verifiable, auditable data.
+
+Common gaps we see include:
+
+Any one of these gaps would be flagged as a finding in a financial audit. In sustainability reporting, many organisations are dealing with several of them simultaneously. Recognising this is the first step towards closing the gap.
+
+
+# 2. What ICSR Should Look Like
+
+Internal Controls over Sustainability Reporting must mirror the architecture of ICFR — adapted for the unique characteristics of non-financial data, but built on the same foundational principles. The COSO Internal Control — Integrated Framework provides the established model: control environment, risk assessment, control activities, information and communication, and monitoring.
+
+
+## 2.1 The Five Components of ICSR
+
+Control Environment. Tone from the top on sustainability data integrity. Board and audit committee oversight of non-financial reporting. Clear accountability structures with named control owners for every material sustainability data stream. A culture where sustainability data is treated with the same seriousness as financial data.
+
+Risk Assessment. Formal identification of what can go wrong in the sustainability data lifecycle: incomplete data capture, incorrect emission factors, estimation errors, scope boundary mistakes, third-party data reliability failures. Each risk scored for likelihood and impact, with controls mapped to mitigate.
+
+Control Activities. The specific preventive, detective, and corrective controls applied to sustainability data. These include: data input validation, automated and manual reconciliations, segregation of duties, management review and sign-off, system access controls, and change management procedures over methodologies and emission factors.
+
+Information and Communication. Documented policies and procedures for sustainability data governance. Training programmes for data owners. Clear escalation paths for data quality issues. Internal reporting on control effectiveness to the audit committee.
+
+Monitoring. Ongoing evaluation of whether controls are operating as designed. Internal audit coverage of ICSR. Tracking and remediation of control deficiencies. Annual management assessment of ICSR effectiveness, analogous to the management assertion on ICFR.
+
+
+## 2.2 The ICFR vs ICSR Comparison
+
+The following comparison illustrates just how far behind sustainability reporting currently sits relative to financial reporting — and where the standard must move.
+
+Understanding where sustainability reporting currently sits relative to financial reporting is the starting point for improvement. The goal is to progressively close these gaps — and the organisations that start now will be best positioned when external scrutiny intensifies.
+
+
+# 3. Whose Responsibility Is It?
+
+This is an important point to clarify, because it is one of the most commonly misunderstood aspects of sustainability assurance: the external auditor’s role is to evaluate your controls, not to build them. The external auditor assesses what the organisation has put in place, tests whether it works, and forms an opinion on whether the disclosures are reliable.
+
+This distinction is elementary in financial auditing. Nobody expects PwC or KPMG to design the chart of accounts, build the reconciliation procedures, or train the accounts payable team. The company does that. The auditor tests it. The same principle applies — without exception — to sustainability assurance.
+
+In practice, it is not uncommon for organisations approaching their first sustainability assurance engagement to have limited documented controls, unclear data ownership, and informal reconciliation procedures. This is understandable — sustainability reporting is a newer discipline — but it does create challenges. An assurance provider that designs your controls and then audits them faces a fundamental independence conflict. More practically, where controls are limited, the auditor must rely on significantly more substantive testing, which increases cost and may still result in a modified or qualified opinion.
+
+
+## 3.1 The Three Lines Model Applied to ICSR
+
+The IIA’s Three Lines Model provides the governance architecture:
+
+When the first and second lines are well established, the entire assurance chain works effectively. Where they are underdeveloped, external assurance providers have limited evidence to work with, which affects both the cost and the outcome of the engagement.
+
+
+# 4. What External Auditors Need From You
+
+When Speeki conducts a sustainability assurance engagement — whether under ISSA 5000, AA1000AS v3, or ISAE 3000 (Revised) — we need evidence that the reported data has been through a structured control process. We are not asking for perfection. We are asking for discipline. Here is what an assurance-ready organisation looks like:
+
+
+## 4.1 Documentation Requirements
+
+Controls Inventory. A documented register of all controls applied to sustainability data streams, mapped to material ESG topics. Each control should have a named owner, a defined frequency, and a description of what it does (preventive, detective, or corrective).
+
+Process Narratives or Flowcharts. For each material sustainability metric, a documented description of how data flows from source to disclosure. Who collects it? Where is it stored? How is it calculated? Who reviews and approves it?
+
+Data Lineage Maps. The ability to trace any published figure back through every transformation to its original source. If your Scope 1 emissions figure is 12,450 tonnes CO2e, show us exactly how you got there.
+
+Reconciliation Evidence. Documented reconciliations between sustainability data and other data sources. Energy consumption reconciled to utility invoices and financial payments. Headcount data reconciled to HR systems. Water usage reconciled to meter readings and bills.
+
+Review and Approval Records. Evidence that qualified individuals have reviewed and formally approved sustainability data before disclosure. This means sign-offs, dated records, and evidence of challenge — not just a rubber stamp.
+
+Exception and Error Logs. A record of data quality issues identified, how they were investigated, what was corrected, and whether the correction was disclosed where material.
+
+IT Control Documentation. Access logs, change management records, and backup procedures for sustainability data systems. If you are running your entire carbon inventory in an Excel file with no access controls and no version history, that is a material control deficiency.
+
+
+## 4.2 The Consequences of Not Being Ready
+
+If an organisation engages an external assurance provider before ICSR is in place, there are several practical implications to be aware of:
+
+The engagement will take longer and cost more, because the auditor must perform significantly more substantive testing to compensate for the absence of controls.
+
+The auditor will identify control deficiencies that must be reported to management and, in many cases, to the audit committee.
+
+The assurance opinion may be qualified or modified, undermining the very credibility the engagement was meant to provide.
+
+At the reasonable assurance level, the auditor may be unable to obtain sufficient appropriate evidence, resulting in a disclaimer of opinion.
+
+Your organisation will be exposed to regulatory scrutiny if the lack of controls is identified in any supervisory review of your sustainability disclosures.
+
+Litigation risk increases materially. If a stakeholder suffers loss based on your sustainability disclosures and you cannot demonstrate that the underlying data was controlled, the legal exposure is significant.
+
+
+# 5. A Practical ICSR Implementation Roadmap
+
+Building ICSR is not a multi-year, multi-million-dollar programme. It is a structured project that can be executed in phases, starting immediately with what you have. The following roadmap is designed to be actionable for any organisation, regardless of current maturity.
+
+
+## Phase 1: Foundation (Months 1–3)
+
+Appoint an ICSR owner with clear accountability to the audit committee.
+
+Complete a sustainability data inventory: what data streams exist, where do they originate, who touches them, where are they stored.
+
+Conduct a gap assessment against ICFR-equivalent control requirements for each material sustainability metric.
+
+Document the current state — however informal — as your baseline. You cannot improve what you have not mapped.
+
+Brief the audit committee on the gap assessment findings and the remediation plan.
+
+
+## Phase 2: Design (Months 3–6)
+
+Design controls for the full sustainability data lifecycle: collection, aggregation, calculation, review, approval, and disclosure.
+
+Assign named control owners for every material data stream. If nobody owns it, it is not controlled.
+
+Create process narratives and data flow documentation for each material metric.
+
+Implement segregation of duties: the person who collects data should not be the same person who reviews and approves it.
+
+Establish reconciliation procedures between sustainability data and corroborating sources (financial records, operational systems, third-party data).
+
+Define an error identification and correction policy, including restatement thresholds.
+
+
+## Phase 3: Implementation (Months 6–9)
+
+Operationalise the controls: begin executing them in the current reporting period.
+
+Train all first-line data owners on their control responsibilities and documentation requirements.
+
+Implement IT controls over sustainability data systems: access management, change control, audit trails.
+
+Begin collecting evidence of control operation: sign-offs, reconciliation records, review notes.
+
+Establish a control deficiency tracking register with remediation owners and deadlines.
+
+
+## Phase 4: Testing and Assurance Readiness (Months 9–12)
+
+Internal audit (or an equivalent independent function) tests ICSR design and operating effectiveness.
+
+Remediate any deficiencies identified during testing.
+
+Management performs a formal assessment of ICSR effectiveness.
+
+Prepare an ICSR package for the external assurance provider: controls inventory, process documentation, evidence files, testing results.
+
+Engage your external assurance provider with confidence that the data they will test has been through a rigorous control process.
+
+
+# 6. Common Objections — And How to Address Them
+
+“We are still building our sustainability reporting capability. Controls can come later.”
+
+The most efficient approach is to build controls alongside the reporting process, not after it. Financial reporting evolved reporting and controls together, and sustainability benefits from the same approach. Organisations that embed controls from the start avoid costly retrofitting and are better prepared for their first assurance engagement.
+
+“Our sustainability data is not as precise as financial data, so the same level of controls is not appropriate.”
+
+Imprecision is not an excuse for a lack of controls. It is the reason controls are even more important. If sustainability data involves estimates, proxies, and assumptions, then controls over the selection, application, and review of those methodological choices are critical. An uncontrolled estimate is not a conservative estimate — it is an unreliable one.
+
+“Our external auditor will tell us what we need to fix.”
+
+The external auditor’s role is to independently evaluate, not to design your systems. Relying on the auditor to identify control gaps puts the organisation in a reactive position and can create independence concerns. The most effective approach is to build the control environment proactively, so the assurance engagement can focus on testing and validating rather than identifying fundamental gaps.
+
+“We do not have the budget for a full ICSR programme.”
+
+ICSR does not need to be an expensive standalone programme. Much of it can be integrated into existing reporting workflows. The investment in building controls upfront is typically far smaller than the cost of extended assurance engagements, remediation work after a qualified opinion, or the reputational impact of unreliable disclosures. It is a question of sequencing budget towards prevention rather than cure.
+
+“Our data comes from third parties and suppliers, so we cannot control it.”
+
+Third-party data does not exempt you from control requirements. It changes the nature of the controls. You need controls over vendor selection, data validation, reconciliation against independent sources, and documented procedures for how you handle data gaps or inconsistencies. If you publish a figure, you own it — regardless of where the underlying data originated.
+
+
+# 7. The Board and Audit Committee Role
+
+Boards and audit committees are increasingly being held accountable for the credibility of sustainability disclosures. Under CSRD, the audit committee’s oversight mandate explicitly extends to sustainability reporting. Under ISSB-aligned regimes, the governing body is required to disclose its oversight of sustainability-related risks and opportunities.
+
+This means the audit committee should be asking the following questions — and expecting well-documented answers:
+
+Do we have a documented ICSR framework? If not, when will it be in place?
+
+Who owns ICSR? Is there a named accountable individual reporting to this committee?
+
+Has management performed a gap assessment of our sustainability data controls against ICFR-equivalent requirements?
+
+Is ICSR within the scope of our internal audit plan? When was it last tested?
+
+What control deficiencies have been identified, and what is the remediation plan and timeline?
+
+Has our external assurance provider expressed any concerns about the control environment over sustainability data?
+
+Are we confident that if a regulator or litigant examined our sustainability data governance, we could demonstrate a defensible control environment?
+
+How do we know the sustainability data in our published report is complete, accurate, and has been through an appropriate review and approval process?
+
+These questions help audit committees fulfil their expanding oversight mandate and provide early visibility into potential gaps. Proactive engagement on ICSR reduces the risk of surprises during external assurance engagements and strengthens the organisation’s overall governance posture.
+
+
+# 8. The Regulatory Trajectory: Where Things Are Heading
+
+The regulatory direction of travel is clear and converging across jurisdictions:
+
+CSRD (EU): Requires sustainability reporting to be subject to assurance. Limited assurance initially, with a mandated move to reasonable assurance. The audit committee’s oversight mandate explicitly covers sustainability. The direction of travel points towards ICSR requirements that mirror ICFR.
+
+ISSB Standards (Global): IFRS S1 and S2 require governance disclosures, including board oversight of sustainability-related risks. As jurisdictions adopt ISSB standards, assurance requirements will follow — and assurance over disclosures will inevitably require controls over the underlying data.
+
+State-Based Carbon Reporting (US): While federal climate disclosure rules have not materialised, state-level regimes are advancing rapidly. California’s Climate Corporate Data Accountability Act (SB 253) and Climate-Related Financial Risk Act (SB 261) mandate emissions reporting and climate risk disclosure for large companies operating in the state. Other states are developing similar frameworks. These regimes will require auditable data, which requires controls — and companies operating across multiple states face a patchwork of requirements that makes a robust ICSR framework even more essential.
+
+ISSA 5000 (IAASB): The International Standard on Sustainability Assurance, once effective, will establish a global assurance framework that requires auditors to evaluate the entity’s internal control relevant to the preparation of sustainability information. This is the sustainability equivalent of ISA 315.
+
+National Regimes (Singapore, Australia, Japan, UK): Emerging disclosure mandates across multiple jurisdictions are converging on mandatory assurance requirements. Each will require auditable data, which requires controls.
+
+Organisations that invest in ICSR ahead of mandatory requirements will be well positioned — with smoother assurance engagements, lower compliance costs, and stronger stakeholder confidence. Early movers gain a genuine competitive advantage.
+
+
+# 9. Conclusion: Controls Build Credibility
+
+The era of sustainability reporting as a narrative exercise is over. Stakeholders, regulators, and capital markets now treat sustainability disclosures as decision-useful information — information that must be reliable, verifiable, and assured. You cannot achieve any of those objectives without internal controls over the data.
+
+Financial reporting developed this discipline over decades. Sustainability reporting has the advantage of learning from that experience and building on established frameworks, rather than starting from scratch. The path is clear and well-proven.
+
+For sustainability leaders, the opportunity is to elevate data governance within your function — applying the same structured approach that CFOs have long applied to financial data. For board members and audit committee chairs, this is the moment to extend oversight to non-financial data controls, ensuring the organisation is prepared for the assurance expectations that regulators, auditors, and investors are already setting.
+
+When you engage an external assurance provider, the strongest position to be in is one where your data has already been through a robust control process. That is where credibility begins — and it is within reach for every organisation willing to invest in getting it right.
+
+Speeki provides independent sustainability assurance services under ISSA 5000, AA1000AS v3, and ISAE 3000 (Revised), accredited under ISO 17021-1, across 100+ countries.
+
+Contact us at info@speeki.com or visit www.speeki.com
+
+
+
+=== TABLES ===
+
+
+Table 1:
+Common Gap | Description
+No data lineage documentation | Nobody can trace a published figure back to its source system through a documented path
+No segregation of duties | The same person who collects sustainability data also calculates, reviews, and approves it for disclosure
+No formalised review and approval | Data goes from spreadsheet to report without a structured sign-off by a control owner
+No reconciliation procedures | Sustainability data is never cross-checked against financial data, operational data, or prior-period figures
+No change management over data systems | Emission factor databases, calculation methodologies, and reporting templates are changed without documented approval
+No error correction or restatement policy | When errors are found post-publication, there is no formal process for correction and disclosure
+No IT general controls | Sustainability data systems lack access controls, audit trails, and backup procedures
+
+
+Table 2:
+Element | ICFR (Financial) | ICSR (Sustainability)
+Control Framework | COSO-based, legally mandated (SOX, J-SOX, etc.) | Largely absent; voluntary at best
+Data Lineage | Fully documented from source to disclosure | Rarely documented; reliant on individual knowledge
+Control Owners | Named and accountable at process level | Undefined; sustainability team owns everything informally
+Segregation of Duties | Enforced: preparer, reviewer, approver are separate | One person often performs all roles
+Reconciliation | Systematic: sub-ledger to general ledger, intercompany, bank | Rare; sustainability data seldom reconciled to anything
+Review and Approval | Formal sign-off with documented evidence | Informal review, often no evidence retained
+IT General Controls | Access management, change control, backup, audit trail | Spreadsheets with no access controls or version history
+Internal Audit Coverage | Annual testing of design and operating effectiveness | Sustainability rarely in internal audit scope
+External Audit Reliance | Auditor evaluates and relies on ICFR | Auditor cannot rely on non-existent controls
+Regulatory Mandate | SOX (US), Corporate Governance Codes (EU/UK/APAC) | Emerging via CSRD but not yet enforced with equivalent rigour
+Error Correction | Restatement policy with public disclosure | Errors often silently corrected or ignored
+Management Assertion | CEO/CFO certify ICFR effectiveness annually | No equivalent assertion exists for ICSR
+
+
+Table 3:
+Line | ICSR Role
+First Line: Management and Operational Functions | Sustainability teams, operations, procurement, HR, facilities — everyone who collects, processes, and reports sustainability data. They own the controls. They execute them daily. They are accountable for data quality.
+Second Line: Risk Management, Compliance, and Oversight Functions | Sustainability governance function, data quality team, compliance. They design the control framework, set policies, provide training, and monitor whether the first line is operating controls effectively.
+Third Line: Internal Audit | Independent evaluation of whether ICSR is designed effectively and operating as intended. Reports directly to the audit committee. Provides objective assurance to the board that the control environment is sound.
+External Assurance (Speeki, other providers) | Independent, external evaluation of sustainability disclosures and the underlying control environment. Relies on the first three lines having done their work. Cannot substitute for internal controls — can only assess them.
+

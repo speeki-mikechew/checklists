@@ -1,0 +1,1762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Security: Protect page with authentication -->
+    <script src="assets/auth.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ISO 37008 Internal Investigations Management Checklist by Speeki. Essential steps for managing effective internal investigations, evidence handling, reporting and compliance. Interactive tool with progress tracking.">
+    <meta name="keywords" content="ISO 37008, internal investigations, investigations management, evidence handling, compliance, corporate investigations, fraud investigation, ISO certification">
+    <meta name="author" content="Speeki, Scott Lane">
+    <meta property="og:title" content="ISO 37008 Internal Investigations Management Checklist | Speeki">
+    <meta property="og:description" content="Essential steps for managing effective internal investigations based on ISO 37008. Interactive checklist with progress tracking.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.speeki.com/checklists/iso-37008-investigations">
+    <meta property="og:site_name" content="Speeki">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ISO 37008 Internal Investigations Management Checklist | Speeki">
+    <meta name="twitter:description" content="Essential steps for managing effective internal investigations based on ISO 37008.">
+    <meta name="robots" content="index, follow">
+    <title>ISO 37008 Internal Investigations Management Checklist | Speeki</title>
+    <link rel="canonical" href="https://www.speeki.com/checklists/iso-37008-investigations">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "ISO 37008 Internal Investigations Management Checklist",
+        "description": "Essential steps for managing effective internal investigations based on ISO 37008 guidance.",
+        "author": {
+            "@type": "Person",
+            "name": "Scott Lane",
+            "jobTitle": "CEO & Founder",
+            "worksFor": {
+                "@type": "Organization",
+                "name": "Speeki"
+            }
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Speeki",
+            "url": "https://www.speeki.com"
+        },
+        "step": [
+            {"@type": "HowToStep", "name": "Establish the investigations management framework", "position": 1},
+            {"@type": "HowToStep", "name": "Define investigation triggers and thresholds", "position": 2},
+            {"@type": "HowToStep", "name": "Plan the investigation approach", "position": 3},
+            {"@type": "HowToStep", "name": "Secure and preserve evidence", "position": 4},
+            {"@type": "HowToStep", "name": "Conduct interviews and gather information", "position": 5},
+            {"@type": "HowToStep", "name": "Analyse findings and draw conclusions", "position": 6},
+            {"@type": "HowToStep", "name": "Document and report investigation outcomes", "position": 7},
+            {"@type": "HowToStep", "name": "Address legal and compliance considerations", "position": 8},
+            {"@type": "HowToStep", "name": "Close investigations and implement remediation", "position": 9},
+            {"@type": "HowToStep", "name": "Monitor, review and improve the investigations system", "position": 10}
+        ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/growth.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --speeki-green: #00FF7F;
+            --speeki-dark-blue: #0a1f44;
+            --speeki-dark: #0a1f44;
+            --speeki-gray: #4a5568;
+            --speeki-light-gray: #f8f9fa;
+            --speeki-border: #e5e7eb;
+            --speeki-success: #f0fdf4;
+            --speeki-warning: #dc2626;
+            --speeki-warning-bg: #fef2f2;
+        }
+
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', 'Arial', sans-serif;
+            background: #ffffff;
+            min-height: 100vh;
+            color: var(--speeki-dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        nav {
+            background: #ffffff;
+            border-bottom: 1px solid var(--speeki-border);
+            padding: 20px 4vw;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        .nav-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .nav-logo img {
+            height: 32px;
+            width: auto;
+        }
+
+        .nav-back {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--speeki-gray);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-back:hover {
+            color: var(--speeki-dark);
+        }
+
+        header {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            color: var(--speeki-dark);
+            padding: 80px 4vw 60px;
+            border-bottom: 1px solid var(--speeki-border);
+        }
+
+        header h1 {
+            font-size: 48px;
+            margin-bottom: 24px;
+            font-weight: 700;
+            letter-spacing: -1.5px;
+            color: var(--speeki-dark);
+            max-width: 900px;
+            line-height: 1.2;
+        }
+
+        .header-highlight {
+            color: var(--speeki-green);
+            position: relative;
+        }
+
+        header p {
+            font-size: 18px;
+            color: var(--speeki-gray);
+            max-width: 800px;
+            margin-bottom: 40px;
+            line-height: 1.7;
+            font-weight: 400;
+        }
+
+        .progress-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 40px;
+            padding: 30px;
+            background: #ffffff;
+            border-radius: 8px;
+            max-width: 600px;
+            border: 1px solid var(--speeki-border);
+        }
+
+        .progress-info {
+            text-align: left;
+            flex: 1;
+        }
+
+        .progress-info h3 {
+            font-size: 12px;
+            color: var(--speeki-gray);
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+        }
+
+        .progress-bar {
+            width: 100%;
+            max-width: 300px;
+            height: 6px;
+            background: #e5e5e5;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--speeki-green);
+            width: 0%;
+            transition: width 0.3s ease;
+            border-radius: 3px;
+        }
+
+        .progress-text {
+            color: var(--speeki-dark);
+            font-size: 24px;
+            font-weight: 700;
+            margin-left: 30px;
+            white-space: nowrap;
+        }
+
+        main {
+            background: white;
+            padding: 60px 4vw;
+        }
+
+        .section-intro {
+            margin-bottom: 48px;
+            padding: 24px;
+            background: var(--speeki-light-gray);
+            border-radius: 8px;
+            border-left: 4px solid var(--speeki-green);
+        }
+
+        .section-intro h2 {
+            font-size: 20px;
+            color: var(--speeki-dark);
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .section-intro p {
+            font-size: 16px;
+            color: var(--speeki-gray);
+            line-height: 1.6;
+        }
+
+        .related-standards {
+            margin-top: 16px;
+            padding-top: 16px;
+            border-top: 1px solid var(--speeki-border);
+        }
+
+        .related-standards span {
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--speeki-gray);
+            font-weight: 600;
+        }
+
+        .related-standards a {
+            display: inline-block;
+            margin-left: 12px;
+            color: var(--speeki-dark-blue);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .related-standards a:hover {
+            color: var(--speeki-green);
+        }
+
+        .checklist-item {
+            margin-bottom: 60px;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .checklist-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .item-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 24px;
+            margin-bottom: 24px;
+        }
+
+        .item-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            background: #ffffff;
+            color: var(--speeki-dark);
+            border-radius: 50%;
+            font-size: 18px;
+            font-weight: 700;
+            flex-shrink: 0;
+            position: relative;
+            border: 2px solid var(--speeki-border);
+            transition: all 0.2s ease;
+        }
+
+        .item-number.completed {
+            background: var(--speeki-green);
+            border-color: var(--speeki-green);
+            color: var(--speeki-dark);
+        }
+
+        .item-number.completed::after {
+            content: '\2713';
+            position: absolute;
+            font-size: 24px;
+            color: var(--speeki-dark);
+            font-weight: bold;
+        }
+
+        .item-number.completed {
+            font-size: 0;
+        }
+
+        .item-title {
+            flex: 1;
+        }
+
+        .item-title h2 {
+            font-size: 24px;
+            color: var(--speeki-dark);
+            margin-bottom: 8px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            line-height: 1.3;
+        }
+
+        .sub-items {
+            margin-left: 72px;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+        }
+
+        .sub-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 16px 0;
+            background: transparent;
+            border-bottom: 1px solid #f0f0f0;
+            cursor: pointer;
+            transition: all 0.15s ease;
+        }
+
+        .sub-item:hover {
+            background: transparent;
+            transform: none;
+        }
+
+        .sub-item:last-child {
+            border-bottom: none;
+        }
+
+        .sub-item input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            flex-shrink: 0;
+            margin-top: 3px;
+            accent-color: var(--speeki-green);
+            border: 2px solid #cccccc;
+        }
+
+        .sub-item label {
+            cursor: pointer;
+            flex: 1;
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--speeki-gray);
+            font-weight: 400;
+        }
+
+        .sub-item input[type="checkbox"]:checked + label {
+            color: var(--speeki-dark);
+            font-weight: 500;
+        }
+
+        .red-flags-section {
+            margin-top: 80px;
+            padding: 48px;
+            background: var(--speeki-warning-bg);
+            border-radius: 8px;
+            border-left: 4px solid var(--speeki-warning);
+        }
+
+        .red-flags-section h3 {
+            font-size: 24px;
+            color: var(--speeki-dark);
+            margin-bottom: 24px;
+            font-weight: 700;
+        }
+
+        .red-flags-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 16px;
+        }
+
+        .red-flag-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 16px;
+            background: #ffffff;
+            border-radius: 6px;
+            border: 1px solid rgba(220, 38, 38, 0.2);
+        }
+
+        .red-flag-icon {
+            color: var(--speeki-warning);
+            font-weight: 700;
+            font-size: 18px;
+            flex-shrink: 0;
+        }
+
+        .red-flag-item p {
+            font-size: 14px;
+            color: var(--speeki-gray);
+            line-height: 1.5;
+        }
+
+        .self-assessment-section {
+            margin-top: 80px;
+            padding: 48px;
+            background: var(--speeki-success);
+            border-radius: 8px;
+            border-left: 4px solid var(--speeki-green);
+        }
+
+        .self-assessment-section h3 {
+            font-size: 24px;
+            color: var(--speeki-dark);
+            margin-bottom: 24px;
+            font-weight: 700;
+        }
+
+        .assessment-questions {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .assessment-question {
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 6px;
+            border: 1px solid var(--speeki-border);
+        }
+
+        .assessment-question p {
+            font-size: 16px;
+            color: var(--speeki-dark);
+            line-height: 1.6;
+            font-weight: 500;
+        }
+
+        .summary-section {
+            margin-top: 80px;
+            padding: 60px 4vw;
+            background: var(--speeki-light-gray);
+            border-radius: 0;
+            text-align: center;
+            border-top: 1px solid var(--speeki-border);
+        }
+
+        .summary-section h3 {
+            font-size: 28px;
+            color: var(--speeki-dark);
+            margin-bottom: 48px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .summary-stats {
+            display: flex;
+            justify-content: center;
+            gap: 80px;
+            flex-wrap: wrap;
+            margin-bottom: 48px;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--speeki-dark);
+            letter-spacing: -1px;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: var(--speeki-gray);
+            margin-top: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            margin-top: 0;
+        }
+
+        button {
+            padding: 16px 32px;
+            font-size: 14px;
+            border: 2px solid var(--speeki-dark-blue);
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn-reset {
+            background: #ffffff;
+            color: var(--speeki-dark);
+            border-color: var(--speeki-border);
+        }
+
+        .btn-reset:hover {
+            background: #f5f5f5;
+            border-color: #cccccc;
+        }
+
+        .btn-export {
+            background: var(--speeki-dark-blue);
+            color: white;
+            border-color: var(--speeki-dark-blue);
+        }
+
+        .btn-export:hover {
+            background: #1a2d5c;
+            border-color: #1a2d5c;
+        }
+
+        .cta-section {
+            background: var(--speeki-dark-blue);
+            padding: 80px 4vw;
+            text-align: center;
+            margin-top: 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 200px;
+            height: 200px;
+            background: var(--speeki-green);
+            opacity: 0.1;
+            border-radius: 50%;
+        }
+
+        .cta-section h3 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 16px;
+        }
+
+        .cta-section p {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 32px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--speeki-green);
+            color: var(--speeki-dark-blue);
+            padding: 16px 40px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 14px;
+            transition: all 0.2s ease;
+        }
+
+        .cta-button:hover {
+            background: #00e070;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0, 255, 127, 0.3);
+        }
+
+        footer {
+            text-align: center;
+            color: var(--speeki-gray);
+            margin-top: 0;
+            padding: 60px 4vw;
+            background: #ffffff;
+            border-top: 1px solid var(--speeki-border);
+        }
+
+        footer p {
+            margin: 8px 0;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        footer p strong {
+            color: var(--speeki-dark);
+            font-weight: 600;
+        }
+
+        .footer-links {
+            margin-top: 24px;
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--speeki-gray);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--speeki-dark);
+        }
+        .auditor-insight {
+            background: #f8f9fa;
+            border-left: 4px solid var(--speeki-green);
+            padding: 24px;
+            margin: 24px 0 32px 0;
+            border-radius: 4px;
+        }
+
+        .auditor-insight h4 {
+            color: var(--speeki-dark-blue);
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .auditor-insight h4::before {
+            content: "";
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230a1f44' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E") no-repeat center;
+            background-size: contain;
+        }
+
+        .auditor-insight p {
+            color: var(--speeki-gray);
+            font-size: 15px;
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        .auditor-insight ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .auditor-insight li {
+            color: var(--speeki-gray);
+            font-size: 15px;
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        .auditor-insight strong {
+            color: var(--speeki-dark);
+            font-weight: 600;
+        }
+
+        .red-flags-section {
+            margin: 32px 0;
+            background: #ffffff;
+            border: 1px solid var(--speeki-border);
+            border-left: 3px solid #c53030;
+            border-radius: 4px;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+
+        .red-flags-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .red-flags-section-header {
+            padding: 20px 24px;
+            font-weight: 600;
+            font-size: 16px;
+            color: var(--speeki-dark-blue);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: #f8f9fa;
+            border-bottom: 1px solid var(--speeki-border);
+        }
+
+        .red-flags-section-header::before {
+            content: "";
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23c53030' stroke='%23c53030' stroke-width='2'%3E%3Cpath d='M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z'/%3E%3Cline x1='4' y1='22' x2='4' y2='15'/%3E%3C/svg%3E") no-repeat center;
+            background-size: contain;
+        }
+
+        .red-flags-content {
+            padding: 20px 24px;
+        }
+
+        .red-flag-category {
+            margin-bottom: 20px;
+        }
+
+        .red-flag-category h5 {
+            color: #c53030;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .red-flag-category ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .red-flag-category li {
+            color: var(--speeki-gray);
+            font-size: 14px;
+            margin-bottom: 6px;
+            line-height: 1.5;
+        }
+
+        /* Inline Auditor Tips - contextual insights per section */
+        .auditor-tip {
+            margin: 20px 0 32px 0;
+            background: #ffffff;
+            border: 1px solid var(--speeki-border);
+            border-left: 3px solid var(--speeki-green);
+            border-radius: 4px;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+
+        .auditor-tip.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .auditor-tip-header {
+            padding: 18px 24px;
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--speeki-dark-blue);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: #f8f9fa;
+            border-bottom: 1px solid var(--speeki-border);
+        }
+
+        .auditor-tip-header::before {
+            content: "";
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230a1f44' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E") no-repeat center;
+            background-size: contain;
+        }
+
+        .auditor-tip-content {
+            padding: 24px;
+        }
+
+        .auditor-tip-content p {
+            color: var(--speeki-gray);
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        .auditor-tip-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .auditor-tip-content .red-flag {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            padding: 10px 12px;
+            background: #fef2f2;
+            border-radius: 6px;
+            margin-top: 12px;
+        }
+
+        .auditor-tip-content .red-flag::before {
+            content: "";
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            flex-shrink: 0;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23991b1b' stroke='%23991b1b' stroke-width='2'%3E%3Cpath d='M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z'/%3E%3Cline x1='12' y1='9' x2='12' y2='13'/%3E%3Cline x1='12' y1='17' x2='12.01' y2='17'/%3E%3C/svg%3E") no-repeat center;
+            background-size: contain;
+        }
+
+        .auditor-tip-content .red-flag-text {
+            color: #991b1b;
+            font-size: 13px;
+            line-height: 1.5;
+            font-weight: 500;
+        }
+
+        .auditor-tip-content .why-matters {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            padding: 10px 12px;
+            background: #eff6ff;
+            border-radius: 6px;
+            margin-top: 12px;
+        }
+
+        .auditor-tip-content .why-matters::before {
+            content: "";
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            flex-shrink: 0;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231e40af' stroke-width='2'%3E%3Cpath d='M12 2a7 7 0 017 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 01-1 1H9a1 1 0 01-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 017-7z'/%3E%3Cpath d='M9 21h6'/%3E%3Cpath d='M9 17v4'/%3E%3Cpath d='M15 17v4'/%3E%3C/svg%3E") no-repeat center;
+            background-size: contain;
+        }
+
+        .auditor-tip-content .why-matters-text {
+            color: #1e40af;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .auditor-tip {
+                margin-left: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 60px 6vw 40px;
+            }
+
+            header h1 {
+                font-size: 36px;
+                letter-spacing: -1px;
+            }
+
+            header p {
+                font-size: 16px;
+            }
+
+            main {
+                padding: 40px 6vw;
+            }
+
+            .item-number {
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+            }
+
+            .item-title h2 {
+                font-size: 20px;
+            }
+
+            .sub-items {
+                margin-left: 0;
+            }
+
+            .sub-item label {
+                font-size: 15px;
+            }
+
+            .progress-section {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 20px;
+                padding: 24px;
+            }
+
+            .progress-text {
+                margin-left: 0;
+                margin-top: 0;
+            }
+
+            .summary-stats {
+                gap: 40px;
+            }
+
+            .stat-number {
+                font-size: 40px;
+            }
+
+            .action-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            button {
+                width: 100%;
+            }
+
+            footer {
+                padding: 40px 6vw;
+            }
+
+            .red-flags-section,
+            .self-assessment-section {
+                padding: 32px 24px;
+            }
+
+            .red-flags-list {
+                grid-template-columns: 1fr;
+            }
+
+            .section-intro {
+                padding: 20px;
+            }
+
+            .related-standards {
+                display: flex;
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .related-standards a {
+                margin-left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <a href="index.html" class="nav-logo"><img src="speeki-logo.png" alt="Speeki - The Sustainability Firm"></a>
+            <a href="index.html" class="nav-back">Back to Resources</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <header>
+            <h1>ISO 37008 <span class="header-highlight">Internal Investigations</span> Management Checklist</h1>
+            <p>ISO 37008 provides guidance on establishing and managing internal investigation processes within organisations. Effective investigations are critical for addressing misconduct, protecting organisational integrity, and ensuring compliance with legal and regulatory requirements.</p>
+            <div class="progress-section">
+                <div class="progress-info">
+                    <h3>Progress</h3>
+                    <div class="progress-bar">
+                        <div class="progress-fill" id="progressFill"></div>
+                    </div>
+                </div>
+                <div class="progress-text" id="progressText">0/10</div>
+            </div>
+        </header>
+
+        <main>
+            <div class="section-intro">
+                <h2>About This Checklist</h2>
+                <p>This checklist covers the key elements of ISO 37008 for managing internal investigations. It addresses investigation planning, evidence handling, interviewing techniques, documentation, and legal considerations to help organisations conduct thorough, fair, and legally defensible investigations.</p>
+                <div class="related-standards">
+                    <span>Related Standards:</span>
+                    <a href="iso-37002-whistleblowing-checklist.html">ISO 37002 Whistleblowing (investigations often follow whistleblower reports)</a>
+                    <a href="iso-37001-checklist.html">ISO 37001 Anti-Bribery (bribery allegations require investigation)</a>
+                </div>
+            </div>
+
+            <form id="checklistForm">
+                <div class="checklist-item">
+                    <div class="item-header">
+                        <div class="item-number" data-item="1">1</div>
+                        <div class="item-title">
+                            <h2>Establish the investigations management framework</h2>
+                        </div>
+                    </div>
+                    <div class="sub-items">
+                        <div class="sub-item">
+                            <input type="checkbox" id="item1_1" class="checklist-checkbox">
+                            <label for="item1_1">Define the scope and objectives of the investigations function</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item1_2" class="checklist-checkbox">
+                            <label for="item1_2">Establish governance structures with clear reporting lines</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item1_3" class="checklist-checkbox">
+                            <label for="item1_3">Obtain leadership commitment and adequate resourcing</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item1_4" class="checklist-checkbox">
+                            <label for="item1_4">Document investigations policies and procedures</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item1_5" class="checklist-checkbox">
+                            <label for="item1_5">Ensure independence of the investigations function from operational management</label>
+                        </div>
+                    </div>
+                    <div class="auditor-tip">
+                        <div class="auditor-tip-header">What Auditors Look For</div>
+                        <div class="auditor-tip-content">
+                            <p>Auditors assess whether the investigations function has genuine independence from business operations. They examine board-level oversight, dedicated budget allocation, and whether the function can investigate senior management without interference.</p>
+                            <div class="red-flag">
+                                <span class="red-flag-text">Investigations function reports solely to operational management with no audit committee oversight or independent escalation path.</span>
+                            </div>
+                            <div class="why-matters">
+                                <span class="why-matters-text">Independence ensures investigations can pursue misconduct at any level without pressure to suppress findings or limit scope.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checklist-item">
+                    <div class="item-header">
+                        <div class="item-number" data-item="2">2</div>
+                        <div class="item-title">
+                            <h2>Define investigation triggers and thresholds</h2>
+                        </div>
+                    </div>
+                    <div class="sub-items">
+                        <div class="sub-item">
+                            <input type="checkbox" id="item2_1" class="checklist-checkbox">
+                            <label for="item2_1">Establish criteria for when a formal investigation is required</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item2_2" class="checklist-checkbox">
+                            <label for="item2_2">Define escalation procedures based on allegation severity</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item2_3" class="checklist-checkbox">
+                            <label for="item2_3">Create a triage process for incoming reports and allegations</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item2_4" class="checklist-checkbox">
+                            <label for="item2_4">Identify types of misconduct that require external involvement</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item2_5" class="checklist-checkbox">
+                            <label for="item2_5">Document decision-making rationale for all investigation initiations</label>
+                        </div>
+                    </div>
+                    <div class="auditor-tip">
+                        <div class="auditor-tip-header">What Auditors Look For</div>
+                        <div class="auditor-tip-content">
+                            <p>Auditors verify that triage decisions are documented consistently. They look for clear criteria defining when allegations warrant formal investigation versus informal resolution, and evidence that similar matters receive similar treatment.</p>
+                            <div class="red-flag">
+                                <span class="red-flag-text">No documented rationale for declining to investigate allegations, or pattern of closing cases involving senior personnel without investigation.</span>
+                            </div>
+                            <div class="why-matters">
+                                <span class="why-matters-text">Consistent triage criteria prevent accusations of selective enforcement and demonstrate the organisation takes all allegations seriously regardless of the subject's position.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checklist-item">
+                    <div class="item-header">
+                        <div class="item-number" data-item="3">3</div>
+                        <div class="item-title">
+                            <h2>Plan the investigation approach</h2>
+                        </div>
+                    </div>
+                    <div class="sub-items">
+                        <div class="sub-item">
+                            <input type="checkbox" id="item3_1" class="checklist-checkbox">
+                            <label for="item3_1">Assign qualified investigators with appropriate expertise</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item3_2" class="checklist-checkbox">
+                            <label for="item3_2">Assess and manage conflicts of interest</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item3_3" class="checklist-checkbox">
+                            <label for="item3_3">Develop an investigation plan with clear objectives and scope</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item3_4" class="checklist-checkbox">
+                            <label for="item3_4">Identify potential evidence sources and witnesses</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item3_5" class="checklist-checkbox">
+                            <label for="item3_5">Establish timelines and resource requirements</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item3_6" class="checklist-checkbox">
+                            <label for="item3_6">Consider jurisdictional and cross-border implications</label>
+                        </div>
+                    </div>
+                    <div class="auditor-tip">
+                        <div class="auditor-tip-header">What Auditors Look For</div>
+                        <div class="auditor-tip-content">
+                            <p>Auditors examine investigation plans for scope clarity, investigator qualifications, and conflict-of-interest assessments. They verify that plans identify all potential evidence sources and establish realistic timelines with appropriate resource allocation.</p>
+                            <div class="red-flag">
+                                <span class="red-flag-text">Investigator assigned has direct reporting relationship to investigation subject, or no documented conflict assessment before assignment.</span>
+                            </div>
+                            <div class="why-matters">
+                                <span class="why-matters-text">Proper planning ensures investigations are thorough, fair, and legally defensible while avoiding scope creep or premature conclusions.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checklist-item">
+                    <div class="item-header">
+                        <div class="item-number" data-item="4">4</div>
+                        <div class="item-title">
+                            <h2>Secure and preserve evidence</h2>
+                        </div>
+                    </div>
+                    <div class="sub-items">
+                        <div class="sub-item">
+                            <input type="checkbox" id="item4_1" class="checklist-checkbox">
+                            <label for="item4_1">Implement immediate evidence preservation measures</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item4_2" class="checklist-checkbox">
+                            <label for="item4_2">Issue legal hold notices where appropriate</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item4_3" class="checklist-checkbox">
+                            <label for="item4_3">Maintain chain of custody documentation for all evidence</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item4_4" class="checklist-checkbox">
+                            <label for="item4_4">Secure electronic data and prevent spoliation</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item4_5" class="checklist-checkbox">
+                            <label for="item4_5">Document physical evidence collection and storage</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item4_6" class="checklist-checkbox">
+                            <label for="item4_6">Ensure evidence handling complies with data protection requirements</label>
+                        </div>
+                    </div>
+                    <div class="auditor-tip">
+                        <div class="auditor-tip-header">What Auditors Look For</div>
+                        <div class="auditor-tip-content">
+                            <p>Auditors scrutinise chain of custody documentation, legal hold processes, and evidence storage security. They verify that digital evidence was forensically preserved and that physical evidence handling follows documented protocols.</p>
+                            <div class="red-flag">
+                                <span class="red-flag-text">Evidence collected without chain of custody documentation, or digital data accessed without forensic imaging that could alter metadata.</span>
+                            </div>
+                            <div class="why-matters">
+                                <span class="why-matters-text">Proper evidence preservation ensures findings are admissible in legal proceedings and cannot be challenged on procedural grounds.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checklist-item">
+                    <div class="item-header">
+                        <div class="item-number" data-item="5">5</div>
+                        <div class="item-title">
+                            <h2>Conduct interviews and gather information</h2>
+                        </div>
+                    </div>
+                    <div class="sub-items">
+                        <div class="sub-item">
+                            <input type="checkbox" id="item5_1" class="checklist-checkbox">
+                            <label for="item5_1">Prepare interview plans with key questions and objectives</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item5_2" class="checklist-checkbox">
+                            <label for="item5_2">Inform interviewees of their rights and the interview purpose</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item5_3" class="checklist-checkbox">
+                            <label for="item5_3">Conduct interviews in appropriate settings with proper documentation</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item5_4" class="checklist-checkbox">
+                            <label for="item5_4">Allow legal representation where required or appropriate</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item5_5" class="checklist-checkbox">
+                            <label for="item5_5">Record or document interviews accurately and contemporaneously</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item5_6" class="checklist-checkbox">
+                            <label for="item5_6">Protect witness confidentiality and prevent retaliation</label>
+                        </div>
+                    </div>
+                    <div class="auditor-tip">
+                        <div class="auditor-tip-header">What Auditors Look For</div>
+                        <div class="auditor-tip-content">
+                            <p>Auditors review interview documentation for procedural fairness, including whether interviewees were informed of their rights, offered legal representation where appropriate, and given opportunity to review and correct their statements.</p>
+                            <div class="red-flag">
+                                <span class="red-flag-text">Interview records lack signatures or acknowledgments, or show leading questions that could suggest coercion or bias.</span>
+                            </div>
+                            <div class="why-matters">
+                                <span class="why-matters-text">Fair interview processes protect both witness rights and the integrity of evidence, reducing risk of successful legal challenges to findings.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checklist-item">
+                    <div class="item-header">
+                        <div class="item-number" data-item="6">6</div>
+                        <div class="item-title">
+                            <h2>Analyse findings and draw conclusions</h2>
+                        </div>
+                    </div>
+                    <div class="sub-items">
+                        <div class="sub-item">
+                            <input type="checkbox" id="item6_1" class="checklist-checkbox">
+                            <label for="item6_1">Review and organise all collected evidence systematically</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item6_2" class="checklist-checkbox">
+                            <label for="item6_2">Assess credibility and reliability of evidence and witnesses</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item6_3" class="checklist-checkbox">
+                            <label for="item6_3">Apply appropriate standards of proof (balance of probabilities)</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item6_4" class="checklist-checkbox">
+                            <label for="item6_4">Identify corroborating and contradicting evidence</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item6_5" class="checklist-checkbox">
+                            <label for="item6_5">Form conclusions based on facts, not assumptions</label>
+                        </div>
+                    </div>
+                    <div class="auditor-tip">
+                        <div class="auditor-tip-header">What Auditors Look For</div>
+                        <div class="auditor-tip-content">
+                            <p>Auditors evaluate whether conclusions logically follow from documented evidence. They examine credibility assessments, the standard of proof applied, and whether alternative explanations were properly considered and ruled out.</p>
+                            <div class="red-flag">
+                                <span class="red-flag-text">Conclusions drawn without documented analysis of contradicting evidence, or findings that rely on single-source testimony without corroboration.</span>
+                            </div>
+                            <div class="why-matters">
+                                <span class="why-matters-text">Rigorous analysis ensures findings withstand scrutiny and provides defensible basis for disciplinary or legal action.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checklist-item">
+                    <div class="item-header">
+                        <div class="item-number" data-item="7">7</div>
+                        <div class="item-title">
+                            <h2>Document and report investigation outcomes</h2>
+                        </div>
+                    </div>
+                    <div class="sub-items">
+                        <div class="sub-item">
+                            <input type="checkbox" id="item7_1" class="checklist-checkbox">
+                            <label for="item7_1">Prepare a comprehensive investigation report</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item7_2" class="checklist-checkbox">
+                            <label for="item7_2">Include executive summary, methodology, findings, and recommendations</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item7_3" class="checklist-checkbox">
+                            <label for="item7_3">Ensure report is clear, objective, and supported by evidence</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item7_4" class="checklist-checkbox">
+                            <label for="item7_4">Maintain confidentiality in report distribution</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item7_5" class="checklist-checkbox">
+                            <label for="item7_5">Report to appropriate stakeholders (board, audit committee, legal)</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item7_6" class="checklist-checkbox">
+                            <label for="item7_6">Consider regulatory reporting obligations</label>
+                        </div>
+                    </div>
+                    <div class="auditor-tip">
+                        <div class="auditor-tip-header">What Auditors Look For</div>
+                        <div class="auditor-tip-content">
+                            <p>Auditors assess report quality for clarity, objectivity, and evidentiary support. They verify that distribution was appropriately restricted and that the report clearly distinguishes between facts, analysis, and recommendations.</p>
+                            <div class="red-flag">
+                                <span class="red-flag-text">Investigation reports that omit methodology description, fail to address scope limitations, or do not clearly link findings to supporting evidence.</span>
+                            </div>
+                            <div class="why-matters">
+                                <span class="why-matters-text">Well-structured reports enable informed decision-making by leadership and demonstrate thorough, professional investigation conduct.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checklist-item">
+                    <div class="item-header">
+                        <div class="item-number" data-item="8">8</div>
+                        <div class="item-title">
+                            <h2>Address legal and compliance considerations</h2>
+                        </div>
+                    </div>
+                    <div class="sub-items">
+                        <div class="sub-item">
+                            <input type="checkbox" id="item8_1" class="checklist-checkbox">
+                            <label for="item8_1">Ensure investigations comply with employment law requirements</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item8_2" class="checklist-checkbox">
+                            <label for="item8_2">Protect legal privilege where applicable</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item8_3" class="checklist-checkbox">
+                            <label for="item8_3">Comply with data protection and privacy laws</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item8_4" class="checklist-checkbox">
+                            <label for="item8_4">Consider self-reporting obligations to regulators</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item8_5" class="checklist-checkbox">
+                            <label for="item8_5">Coordinate with law enforcement when required</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item8_6" class="checklist-checkbox">
+                            <label for="item8_6">Document legal advice received during the investigation</label>
+                        </div>
+                    </div>
+                    <div class="auditor-tip">
+                        <div class="auditor-tip-header">What Auditors Look For</div>
+                        <div class="auditor-tip-content">
+                            <p>Auditors verify compliance with employment law, data protection regulations, and privilege protocols. They examine whether legal counsel was appropriately engaged and whether self-reporting obligations were identified and addressed.</p>
+                            <div class="red-flag">
+                                <span class="red-flag-text">Cross-border data transfers during investigation without legal review, or failure to identify mandatory regulatory reporting triggers.</span>
+                            </div>
+                            <div class="why-matters">
+                                <span class="why-matters-text">Legal compliance protects the organisation from liability exposure and ensures investigation outcomes can be acted upon without procedural challenges.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checklist-item">
+                    <div class="item-header">
+                        <div class="item-number" data-item="9">9</div>
+                        <div class="item-title">
+                            <h2>Close investigations and implement remediation</h2>
+                        </div>
+                    </div>
+                    <div class="sub-items">
+                        <div class="sub-item">
+                            <input type="checkbox" id="item9_1" class="checklist-checkbox">
+                            <label for="item9_1">Ensure all investigation steps are complete before closure</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item9_2" class="checklist-checkbox">
+                            <label for="item9_2">Implement disciplinary actions fairly and consistently</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item9_3" class="checklist-checkbox">
+                            <label for="item9_3">Address systemic issues identified during the investigation</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item9_4" class="checklist-checkbox">
+                            <label for="item9_4">Communicate outcomes appropriately to relevant parties</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item9_5" class="checklist-checkbox">
+                            <label for="item9_5">Provide feedback to the original reporter where appropriate</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item9_6" class="checklist-checkbox">
+                            <label for="item9_6">Archive investigation records in accordance with retention policies</label>
+                        </div>
+                    </div>
+                    <div class="auditor-tip">
+                        <div class="auditor-tip-header">What Auditors Look For</div>
+                        <div class="auditor-tip-content">
+                            <p>Auditors examine closure procedures for completeness, including whether all investigation steps were finished, disciplinary actions were proportionate and consistent, and systemic issues identified during investigation were addressed through remediation.</p>
+                            <div class="red-flag">
+                                <span class="red-flag-text">Pattern of investigations closing without documented outcomes, or disciplinary actions inconsistent with severity of substantiated findings.</span>
+                            </div>
+                            <div class="why-matters">
+                                <span class="why-matters-text">Proper closure demonstrates investigations achieve their purpose of addressing misconduct and strengthening controls, not merely documenting problems.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="checklist-item">
+                    <div class="item-header">
+                        <div class="item-number" data-item="10">10</div>
+                        <div class="item-title">
+                            <h2>Monitor, review and improve the investigations system</h2>
+                        </div>
+                    </div>
+                    <div class="sub-items">
+                        <div class="sub-item">
+                            <input type="checkbox" id="item10_1" class="checklist-checkbox">
+                            <label for="item10_1">Track key performance indicators (case volumes, resolution times)</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item10_2" class="checklist-checkbox">
+                            <label for="item10_2">Conduct periodic reviews of investigation quality</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item10_3" class="checklist-checkbox">
+                            <label for="item10_3">Identify trends and root causes across investigations</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item10_4" class="checklist-checkbox">
+                            <label for="item10_4">Provide regular training and development for investigators</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item10_5" class="checklist-checkbox">
+                            <label for="item10_5">Update procedures based on lessons learned and best practices</label>
+                        </div>
+                        <div class="sub-item">
+                            <input type="checkbox" id="item10_6" class="checklist-checkbox">
+                            <label for="item10_6">Report on investigations programme effectiveness to the board</label>
+                        </div>
+                    </div>
+                    <div class="auditor-tip">
+                        <div class="auditor-tip-header">What Auditors Look For</div>
+                        <div class="auditor-tip-content">
+                            <p>Auditors assess whether the organisation tracks meaningful KPIs, conducts quality reviews of closed investigations, and uses trend analysis to identify systemic issues. They verify that lessons learned feed back into policy and procedure updates.</p>
+                            <div class="red-flag">
+                                <span class="red-flag-text">No metrics tracked beyond basic case counts, or recurring investigation themes without corresponding control improvements.</span>
+                            </div>
+                            <div class="why-matters">
+                                <span class="why-matters-text">Continuous improvement demonstrates mature governance and maximises the value of investigation findings for organisational learning.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <div class="red-flags-section">
+                <h3>Red Flags in Internal Investigations</h3>
+                <div class="red-flags-list">
+                    <div class="red-flag-item">
+                        <span class="red-flag-icon">!</span>
+                        <p>Evidence disappearing or being altered after an investigation is announced</p>
+                    </div>
+                    <div class="red-flag-item">
+                        <span class="red-flag-icon">!</span>
+                        <p>Witnesses changing their accounts or refusing to cooperate</p>
+                    </div>
+                    <div class="red-flag-item">
+                        <span class="red-flag-icon">!</span>
+                        <p>Senior management attempting to influence investigation outcomes</p>
+                    </div>
+                    <div class="red-flag-item">
+                        <span class="red-flag-icon">!</span>
+                        <p>Retaliation against whistleblowers or witnesses during the investigation</p>
+                    </div>
+                    <div class="red-flag-item">
+                        <span class="red-flag-icon">!</span>
+                        <p>Conflicts of interest among assigned investigators</p>
+                    </div>
+                    <div class="red-flag-item">
+                        <span class="red-flag-icon">!</span>
+                        <p>Inadequate documentation or breaks in chain of custody</p>
+                    </div>
+                    <div class="red-flag-item">
+                        <span class="red-flag-icon">!</span>
+                        <p>Pressure to close investigations prematurely</p>
+                    </div>
+                    <div class="red-flag-item">
+                        <span class="red-flag-icon">!</span>
+                        <p>Pattern of similar allegations that are repeatedly unfounded</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="self-assessment-section">
+                <h3>Self-Assessment Questions</h3>
+                <div class="assessment-questions">
+                    <div class="assessment-question">
+                        <p>Does your organisation have a documented investigation policy that is regularly reviewed and updated?</p>
+                    </div>
+                    <div class="assessment-question">
+                        <p>Are investigators properly trained and do they have access to appropriate resources and expertise?</p>
+                    </div>
+                    <div class="assessment-question">
+                        <p>Is there a clear escalation path for serious allegations, including those involving senior management?</p>
+                    </div>
+                    <div class="assessment-question">
+                        <p>How do you ensure evidence is preserved and chain of custody is maintained?</p>
+                    </div>
+                    <div class="assessment-question">
+                        <p>Are investigation outcomes consistently followed through with appropriate remediation and disciplinary action?</p>
+                    </div>
+                    <div class="assessment-question">
+                        <p>Do you track and report on investigation metrics to identify trends and areas for improvement?</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="summary-section">
+                <h3>Your Checklist Progress</h3>
+                <div class="summary-stats">
+                    <div class="stat">
+                        <div class="stat-number" id="totalCompleted">0</div>
+                        <div class="stat-label">Steps Completed</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number" id="totalRemaining">10</div>
+                        <div class="stat-label">Steps Remaining</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number" id="percentComplete">0%</div>
+                        <div class="stat-label">Overall Progress</div>
+                    </div>
+                </div>
+                <div class="action-buttons">
+                    <button type="button" class="btn-reset" onclick="resetChecklist()">Reset Checklist</button>
+                    <button type="button" class="btn-export" onclick="exportProgress()">Export Progress</button>
+                </div>
+            </div>
+        </main>
+
+        <div class="cta-section">
+            <h3>Ready for ISO 37008 Investigations Assurance?</h3>
+            <p>The Speeki Platform maintains the case management documentation and audit trail that auditors require when assessing investigation processes against ISO 37008 standards. Ensure your investigation procedures meet verification requirements.</p>
+            <a href="https://www.speeki.com/platform" class="cta-button">Learn More About Speeki Platform</a>
+        </div>
+
+            <!-- Red Flags Section -->
+    <div class="red-flags-section">
+            <div class="red-flags-section-header">What Auditors Look For: ISO 37008 Investigations Red Flags</div>
+        <div class="red-flags-content">
+            <p style="color: var(--speeki-gray); font-size: 15px; margin-bottom: 20px;">When assessing investigation processes under ISO 37008, auditors commonly flag the following process and documentation concerns.</p>
+
+            <div class="red-flag-category">
+                <h5>Process Red Flags</h5>
+                <ul>
+                    <li>Investigation scope not documented at commencement</li>
+                    <li>No protocols for evidence preservation and chain of custody</li>
+                    <li>Investigator reports to subject of investigation</li>
+                </ul>
+            </div>
+
+            <div class="red-flag-category">
+                <h5>Documentation Red Flags</h5>
+                <ul>
+                    <li>Interview notes not contemporaneously recorded</li>
+                    <li>No documented criteria for case escalation or closure</li>
+                    <li>Root cause analysis not documented</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+<footer>
+            <p style="font-size: 12px; color: #999999; margin-bottom: 4px; text-transform: uppercase; letter-spacing: 1.5px;">© 2026 Speeki Pte Ltd</p>
+            <p><strong>ISO 37008 Internal Investigations Management Checklist</strong></p>
+            <p style="margin-top: 12px;">A practical guide to managing effective internal investigations based on ISO 37008</p>
+            <p style="margin-top: 20px; font-size: 13px;">Author: Scott Lane, CEO and Founder of Speeki</p>
+            <div class="footer-links">
+                <a href="https://www.speeki.com">Home</a>
+                <a href="https://www.speeki.com/platform">Platform</a>
+                <a href="index.html">All Resources</a>
+                <a href="iso-37002-whistleblowing-checklist.html">ISO 37002 Whistleblowing Checklist</a>
+                <a href="iso-37001-checklist.html">ISO 37001 Anti-Bribery Checklist</a>
+                <a href="mailto:info@speeki.com">Contact</a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        const checkboxes = document.querySelectorAll('.checklist-checkbox');
+        const progressFill = document.getElementById('progressFill');
+        const progressText = document.getElementById('progressText');
+        const totalCompleted = document.getElementById('totalCompleted');
+        const totalRemaining = document.getElementById('totalRemaining');
+        const percentComplete = document.getElementById('percentComplete');
+
+        const TOTAL_MAIN_ITEMS = 10;
+
+        function loadProgress() {
+            const saved = localStorage.getItem('iso37008InvestigationsProgress');
+            if (saved) {
+                const checked = JSON.parse(saved);
+                checkboxes.forEach(checkbox => {
+                    if (checked.includes(checkbox.id)) {
+                        checkbox.checked = true;
+                    }
+                });
+            }
+            updateProgress();
+        }
+
+        function updateProgress() {
+            const checkedCount = document.querySelectorAll('.checklist-checkbox:checked').length;
+            const totalCount = checkboxes.length;
+            const percentage = (checkedCount / totalCount) * 100;
+
+            progressFill.style.width = percentage + '%';
+            progressText.textContent = `${checkedCount}/${totalCount}`;
+
+            const completedMainItems = countCompletedMainItems();
+            totalCompleted.textContent = completedMainItems;
+            totalRemaining.textContent = TOTAL_MAIN_ITEMS - completedMainItems;
+            percentComplete.textContent = Math.round((completedMainItems / TOTAL_MAIN_ITEMS) * 100) + '%';
+
+            updateItemNumbers();
+            saveProgress();
+        }
+
+        function countCompletedMainItems() {
+            let completed = 0;
+            for (let i = 1; i <= TOTAL_MAIN_ITEMS; i++) {
+                const itemCheckboxes = document.querySelectorAll(`input[id^="item${i}_"]`);
+                if (itemCheckboxes.length > 0 && Array.from(itemCheckboxes).every(cb => cb.checked)) {
+                    completed++;
+                }
+            }
+            return completed;
+        }
+
+        function updateItemNumbers() {
+            for (let i = 1; i <= TOTAL_MAIN_ITEMS; i++) {
+                const itemCheckboxes = document.querySelectorAll(`input[id^="item${i}_"]`);
+                const itemNumber = document.querySelector(`.item-number[data-item="${i}"]`);
+
+                if (itemNumber) {
+                    const allChecked = Array.from(itemCheckboxes).every(cb => cb.checked);
+                    if (allChecked && itemCheckboxes.length > 0) {
+                        itemNumber.classList.add('completed');
+                    } else {
+                        itemNumber.classList.remove('completed');
+                    }
+                }
+            }
+        }
+
+        function saveProgress() {
+            const checked = Array.from(checkboxes)
+                .filter(cb => cb.checked)
+                .map(cb => cb.id);
+            localStorage.setItem('iso37008InvestigationsProgress', JSON.stringify(checked));
+        }
+
+        function resetChecklist() {
+            if (confirm('Are you sure you want to reset the entire checklist? This cannot be undone.')) {
+                checkboxes.forEach(checkbox => checkbox.checked = false);
+                localStorage.removeItem('iso37008InvestigationsProgress');
+                updateProgress();
+            }
+        }
+
+        function exportProgress() {
+            const completedMainItems = countCompletedMainItems();
+            const percentage = Math.round((completedMainItems / TOTAL_MAIN_ITEMS) * 100);
+
+            let exportText = 'ISO 37008 Internal Investigations Management Checklist - Progress Report\n';
+            exportText += '='.repeat(70) + '\n\n';
+            exportText += `Overall Progress: ${completedMainItems}/${TOTAL_MAIN_ITEMS} (${percentage}%)\n\n`;
+            exportText += 'Completed Steps:\n';
+            exportText += '-'.repeat(70) + '\n';
+
+            for (let i = 1; i <= TOTAL_MAIN_ITEMS; i++) {
+                const itemCheckboxes = document.querySelectorAll(`input[id^="item${i}_"]`);
+                const itemNumber = document.querySelector(`.item-number[data-item="${i}"]`);
+                const itemTitle = itemNumber?.closest('.item-header')?.querySelector('h2')?.textContent;
+
+                if (itemTitle) {
+                    const checkedInSection = Array.from(itemCheckboxes).filter(cb => cb.checked).length;
+
+                    exportText += `\n${i}. ${itemTitle}\n`;
+                    exportText += `   Completed: ${checkedInSection}/${itemCheckboxes.length}\n`;
+
+                    Array.from(itemCheckboxes).forEach(cb => {
+                        const label = document.querySelector(`label[for="${cb.id}"]`)?.textContent;
+                        if (label) {
+                            exportText += `   ${cb.checked ? '\u2713' : '\u25CB'} ${label}\n`;
+                        }
+                    });
+                }
+            }
+
+            exportText += '\n' + '='.repeat(70) + '\n';
+            exportText += `Generated: ${new Date().toLocaleString()}\n`;
+            exportText += '\nCreated with Speeki - The Sustainability Firm\n';
+            exportText += 'https://www.speeki.com\n';
+
+            const element = document.createElement('a');
+            element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(exportText));
+            element.setAttribute('download', 'ISO-37008-Investigations-Checklist-Progress.txt');
+            element.style.display = 'none';
+            document.body.appendChild(element);
+            element.click();
+            document.body.removeChild(element);
+        }
+
+        checkboxes.forEach(checkbox => {
+            checkbox.addEventListener('change', updateProgress);
+        });
+
+        window.addEventListener('DOMContentLoaded', loadProgress);
+    </script>
+    <script src="assets/growth.js"></script>
+    <script src="assets/growth-advanced.js"></script>
+
+    <script>
+        // Reveal auditor tips and red flags sections when they come into view
+        (function() {
+            const revealElements = document.querySelectorAll('.auditor-tip, .red-flags-section');
+
+            const revealOnScroll = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+
+            revealElements.forEach(el => revealOnScroll.observe(el));
+        })();
+    </script>
+</body>
+</html>

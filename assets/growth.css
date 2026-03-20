@@ -1,0 +1,565 @@
+/**
+ * Speeki Growth Engine Styles
+ * Lead capture modals, share bars, toasts, and engagement UI
+ */
+
+/* ==========================================
+   LEAD CAPTURE MODAL
+   ========================================== */
+
+.speeki-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+}
+
+.speeki-modal.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.speeki-modal-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 31, 68, 0.7);
+    backdrop-filter: blur(4px);
+}
+
+.speeki-modal-content {
+    position: relative;
+    background: #ffffff;
+    padding: 48px;
+    border-radius: 12px;
+    max-width: 480px;
+    width: 90%;
+    text-align: center;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    animation: slideUp 0.3s ease;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.speeki-modal-close {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    width: 32px;
+    height: 32px;
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    color: #9ca3af;
+    cursor: pointer;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.speeki-modal-close:hover {
+    background: #f3f4f6;
+    color: #0a1f44;
+}
+
+.speeki-modal-icon {
+    width: 80px;
+    height: 80px;
+    background: #0a1f44;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+}
+
+.speeki-modal-content h3 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #0a1f44;
+    margin-bottom: 12px;
+    letter-spacing: -0.5px;
+}
+
+.speeki-modal-content p {
+    font-size: 16px;
+    color: #4a5568;
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+#speeki-lead-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#speeki-email {
+    width: 100%;
+    padding: 16px 20px;
+    font-size: 16px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-family: inherit;
+    transition: border-color 0.2s;
+}
+
+#speeki-email:focus {
+    outline: none;
+    border-color: #00FF7F;
+}
+
+#speeki-lead-form button {
+    width: 100%;
+    padding: 16px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: #0a1f44;
+    color: #ffffff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+#speeki-lead-form button:hover {
+    background: #1a2d5c;
+    transform: translateY(-2px);
+}
+
+.speeki-privacy {
+    font-size: 12px !important;
+    color: #9ca3af !important;
+    margin-top: 16px !important;
+    margin-bottom: 0 !important;
+}
+
+.speeki-modal-cta {
+    padding: 16px 32px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    background: #00FF7F;
+    color: #0a1f44;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-top: 24px;
+}
+
+.speeki-modal-cta:hover {
+    background: #00e070;
+    transform: translateY(-2px);
+}
+
+/* ==========================================
+   SOCIAL SHARE BAR
+   ========================================== */
+
+#speeki-share-bar {
+    background: #ffffff;
+    border-bottom: 1px solid #e5e7eb;
+    padding: 16px 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.share-label {
+    font-size: 14px;
+    color: #4a5568;
+    font-weight: 500;
+}
+
+.share-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.share-btn {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #e5e7eb;
+    background: #ffffff;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4a5568;
+    transition: all 0.2s;
+}
+
+.share-btn:hover {
+    border-color: #00FF7F;
+    color: #0a1f44;
+    transform: translateY(-2px);
+}
+
+.share-linkedin:hover {
+    background: #0077b5;
+    color: #ffffff;
+    border-color: #0077b5;
+}
+
+.share-twitter:hover {
+    background: #000000;
+    color: #ffffff;
+    border-color: #000000;
+}
+
+.share-email:hover {
+    background: #0a1f44;
+    color: #ffffff;
+    border-color: #0a1f44;
+}
+
+.share-copy:hover {
+    background: #00FF7F;
+    color: #0a1f44;
+    border-color: #00FF7F;
+}
+
+/* ==========================================
+   TOAST NOTIFICATIONS
+   ========================================== */
+
+.speeki-toast {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-left: 4px solid #00FF7F;
+    border-radius: 8px;
+    padding: 20px 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    z-index: 9998;
+    max-width: 400px;
+    transform: translateX(120%);
+    transition: transform 0.3s ease;
+}
+
+.speeki-toast.show {
+    transform: translateX(0);
+}
+
+.toast-icon {
+    width: 48px;
+    height: 48px;
+    background: #0a1f44;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.toast-content strong {
+    display: block;
+    font-size: 16px;
+    color: #0a1f44;
+    margin-bottom: 4px;
+}
+
+.toast-content p {
+    font-size: 14px;
+    color: #4a5568;
+    margin: 0;
+    line-height: 1.4;
+}
+
+/* ==========================================
+   INLINE CTA BOXES
+   ========================================== */
+
+.speeki-inline-cta {
+    background: linear-gradient(135deg, #0a1f44 0%, #1a2d5c 100%);
+    border-radius: 12px;
+    padding: 40px;
+    margin: 48px 0;
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    flex-wrap: wrap;
+}
+
+.speeki-inline-cta-content {
+    flex: 1;
+    min-width: 280px;
+}
+
+.speeki-inline-cta h4 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+}
+
+.speeki-inline-cta p {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.speeki-inline-cta-button {
+    display: inline-block;
+    background: #00FF7F;
+    color: #0a1f44;
+    padding: 16px 32px;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.speeki-inline-cta-button:hover {
+    background: #00e070;
+    transform: translateY(-2px);
+}
+
+/* ==========================================
+   RELATED CHECKLISTS
+   ========================================== */
+
+.speeki-related {
+    background: #f8f9fa;
+    padding: 60px 4vw;
+    margin-top: 60px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.speeki-related h3 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #0a1f44;
+    margin-bottom: 32px;
+    text-align: center;
+    letter-spacing: -0.5px;
+}
+
+.speeki-related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.speeki-related-card {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    padding: 28px;
+    text-decoration: none;
+    transition: all 0.2s;
+    display: block;
+}
+
+.speeki-related-card:hover {
+    border-color: #00FF7F;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.speeki-related-card-tag {
+    display: inline-block;
+    padding: 4px 12px;
+    background: #f0fdf4;
+    color: #166534;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    border-radius: 4px;
+    margin-bottom: 12px;
+}
+
+.speeki-related-card h4 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0a1f44;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.speeki-related-card p {
+    font-size: 14px;
+    color: #4a5568;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* ==========================================
+   STICKY PROGRESS BAR (MOBILE)
+   ========================================== */
+
+.speeki-sticky-progress {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #ffffff;
+    border-top: 1px solid #e5e7eb;
+    padding: 16px 4vw;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    z-index: 100;
+    box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.speeki-sticky-progress-bar {
+    flex: 1;
+    height: 8px;
+    background: #e5e5e5;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.speeki-sticky-progress-fill {
+    height: 100%;
+    background: #00FF7F;
+    transition: width 0.3s ease;
+    border-radius: 4px;
+}
+
+.speeki-sticky-progress-text {
+    font-size: 14px;
+    font-weight: 600;
+    color: #0a1f44;
+    white-space: nowrap;
+}
+
+/* ==========================================
+   SOCIAL PROOF BADGE
+   ========================================== */
+
+.speeki-social-proof {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 24px;
+    background: #f0fdf4;
+    border-radius: 8px;
+    margin-top: 24px;
+}
+
+.speeki-social-proof-icon {
+    width: 40px;
+    height: 40px;
+    background: #00FF7F;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.speeki-social-proof-text {
+    font-size: 14px;
+    color: #166534;
+}
+
+.speeki-social-proof-text strong {
+    font-weight: 600;
+}
+
+/* ==========================================
+   RESPONSIVE ADJUSTMENTS
+   ========================================== */
+
+@media (max-width: 768px) {
+    .speeki-modal-content {
+        padding: 32px 24px;
+        margin: 16px;
+    }
+
+    .speeki-modal-content h3 {
+        font-size: 24px;
+    }
+
+    #speeki-share-bar {
+        padding: 12px 6vw;
+    }
+
+    .share-label {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 8px;
+    }
+
+    .speeki-toast {
+        left: 16px;
+        right: 16px;
+        bottom: 16px;
+        max-width: none;
+    }
+
+    .speeki-inline-cta {
+        flex-direction: column;
+        text-align: center;
+        padding: 32px 24px;
+    }
+
+    .speeki-sticky-progress {
+        display: flex;
+    }
+
+    .speeki-related-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .share-buttons {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .toast-content p {
+        display: none;
+    }
+
+    .speeki-toast {
+        padding: 16px;
+    }
+}

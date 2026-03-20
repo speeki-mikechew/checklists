@@ -1,0 +1,654 @@
+=== EXTRACTED FROM: ABMS_Risk_Assessment_Whitepaper.docx ===
+
+
+# Executive Summary
+
+Anti-bribery risk assessment is the engine of ISO 37001. Every other element of the standard — the controls, the due diligence, the training, the monitoring — is calibrated and justified by what the risk assessment reveals. Get the assessment wrong and you build a management system that is precisely, expensively wrong: protecting against the bribery risks you imagined while leaving the actual risks you face completely unaddressed.
+
+The failure pattern is consistent across organisations of all sizes and sectors. Risk assessments are conducted at the corporate level. They produce statements like 'medium corruption risk in procurement' or 'elevated bribery exposure in government-facing operations.' These statements are not wrong, exactly. They are simply useless. They describe geography without identifying territory. They name a category of risk without identifying a single specific bribery scenario that could actually occur.
+
+Effective anti-bribery risk assessment under ISO 37001 Clause 4.5 requires three things that most assessments fail to deliver: genuine specificity at the transaction and interaction level; a rigorous distinction between gross risk (inherent exposure before controls) and net risk (residual exposure after controls are applied and tested); and actual testing of the controls that are claimed to reduce gross risk to net risk. Without all three, the risk assessment is a document rather than an analysis.
+
+This whitepaper explains the standards framework, the methodology, the gross-to-net discipline, the role of control testing, and how to build an assessment that Speeki as an ISO 37001 certification auditor would find credible.
+
+
+# 1.  The Standards Framework
+
+
+## 1.1  ISO 37001 Clause 4.5 — What Is Actually Required
+
+ISO 37001 Clause 4.5 sets out the requirement for anti-bribery risk assessment. It is more prescriptive than many organisations recognise. The standard requires that the organisation shall carry out a bribery risk assessment to identify, analyse, and evaluate bribery risks. Critically, it specifies the factors that the assessment must consider:
+
+The nature, scale, and complexity of the organisation's activities.
+
+The countries and sectors in which the organisation operates.
+
+The business relationships it has — including business partners, joint ventures, agents, subsidiaries, and supply chain participants.
+
+The transactions it conducts, particularly those involving government officials, public procurement, or high-value discretionary decisions.
+
+The regulatory and legal context in each jurisdiction.
+
+The persons associated with the organisation who could commit bribery on its behalf.
+
+These requirements point unmistakably toward specificity. The standard is not asking for a general statement about the organisation's risk profile. It is asking for an analysis of how bribery could actually occur — in specific transactions, with specific categories of counterparty, conducted by specific functions or roles — and at what level of inherent and residual risk.
+
+Clause 4.5 further requires that the risk assessment be documented, that it be reviewed at planned intervals or when significant changes occur, and that it inform the design and implementation of anti-bribery controls. The risk assessment is therefore not a one-time activity. It is a living component of the management system that must be maintained and kept current.
+
+
+## 1.2  ISO 31000 — The Risk Management Framework
+
+ISO 37001 does not prescribe a specific risk assessment methodology. Organisations are expected to apply recognised risk management practice, and the global standard for this is ISO 31000:2018 — Risk Management: Guidelines. ISO 31000 provides the conceptual and process framework within which the anti-bribery risk assessment should be conducted.
+
+The ISO 31000 framework identifies three core stages of the risk assessment process: risk identification, risk analysis, and risk evaluation. These stages are sequential and interdependent. They are embedded within a broader risk management process that includes risk treatment, monitoring, and review — and all of this sits within an organisational and governance context defined by the standard.
+
+ISO 37000:2021 — Governance of Organisations — adds an important governance dimension. It establishes that the governing body bears ultimate accountability for ensuring that the organisation's risk management framework is fit for purpose, that risk appetite is defined and communicated, and that the risk assessment informs strategic decision-making. In an ISO 37001 context, this means that the anti-bribery risk assessment must be approved by — or at minimum reported to — top management, and that the organisation's anti-bribery risk appetite must be explicitly defined before the risk evaluation stage can be meaningfully completed.
+
+
+## 1.3  The Relationship Between Standards
+
+The three standards operate at different levels and must be understood as complementary rather than interchangeable. ISO 31000 provides the risk management methodology. ISO 37001 applies that methodology specifically to bribery. ISO 37000 ensures that the outputs of the risk assessment reach the governance level where decisions about risk appetite and treatment resources are made.
+
+
+# 2.  The Specificity Imperative
+
+
+## 2.1  Why Corporate-Level Risk Assessment Fails
+
+Walk into any compliance team and ask to see the anti-bribery risk assessment. In most organisations you will receive a document — sometimes impressively formatted — that describes bribery risk at the level of business division, geography, or function. It might say that the sales function carries elevated bribery risk in markets with high Transparency International CPI scores, or that procurement is exposed to third-party bribery risk. These statements are true. They are also almost entirely useless for designing a control framework.
+
+Corporate-level risk statements fail for three connected reasons. First, they cannot identify specific controls because they have not identified specific scenarios. A control is a mechanism that prevents, detects, or corrects a specific type of failure event. If the risk has not been described at the level of a failure event — who does what to whom, in which transaction, under what circumstances — then no control can be precisely calibrated to address it.
+
+Second, corporate-level statements cannot be tested. If the risk is 'elevated bribery exposure in government-facing operations', what does a control look like and how would you verify it works? The abstraction prevents evaluation. Conversely, if the risk is 'sales representatives in Malaysia may offer facilitation payments to customs officials to accelerate clearance of goods through the port of Klang when facing client delivery deadlines', then the control framework becomes specific and testable: a no-facilitation-payments policy, pre-trip briefings for sales staff travelling to Malaysia, expense claim scrutiny for small cash disbursements, and management review of customs clearance timelines against payment patterns.
+
+Third, corporate-level assessments fail the certification audit. An ISO 37001 auditor will probe the risk assessment. They will ask: show me the bribery scenarios you identified. Show me how the controls address those scenarios. Show me the evidence that the controls are operating effectively. A document full of high-level corporate risk statements cannot survive that questioning.
+
+
+## 2.2  The Bribery Scenario: The Unit of Analysis
+
+The fundamental unit of analysis in an anti-bribery risk assessment is the bribery scenario — not the risk category, not the business function, not the geography. A bribery scenario is a specific, plausible description of how a bribery event could occur, including: who within the organisation (by role, not name) might commit or be subject to bribery; who the counterparty is (government official, procurement officer, commercial decision-maker); what the transaction or interaction is; what the bribe consists of (cash, gift, entertainment, employment, contract award); what the intended outcome of the bribe is; and what conditions make the scenario more or less likely.
+
+Bribery scenarios are inherently local. They are shaped by local business practices, local regulatory environments, local relationships, and local pressure points. The same company in the same industry will face materially different bribery scenarios in Singapore, Nigeria, Indonesia, and France. The scenarios are not interchangeable. An assessment that applies a single set of high-level risks across all jurisdictions has not assessed the risk — it has applied a template.
+
+
+### From Risk Category to Bribery Scenario — A Worked Example
+
+The following table illustrates the transformation from a generic risk category to specific, assessable bribery scenarios across three geographies for the same company in the same industry.
+
+Each scenario in this table requires a different control response. None of them would be adequately addressed by a generic control labelled 'anti-bribery policy' or 'ethics training'. Specificity in risk identification drives specificity in control design.
+
+
+## 2.3  Identifying Bribery Scenarios — The Four Lenses
+
+Bribery scenarios can be systematically identified through four analytical lenses, applied in combination. No single lens is sufficient; used together they generate a comprehensive scenario set.
+
+
+### Lens 1: Transaction Mapping
+
+Map every significant category of transaction the organisation conducts where a decision-maker or influencer on the other side of the transaction has discretionary power that affects the organisation's commercial outcome. These are the transaction types most susceptible to bribery because the counterparty has something the organisation wants and the discretion to give or withhold it.
+
+Regulatory and licence applications (permits, approvals, registrations, certifications).
+
+Public procurement (tendering, contract award, variation orders, extensions).
+
+Customs and border control (clearance, valuation, tariff classification).
+
+Judicial and quasi-judicial proceedings (disputes, appeals, enforcement actions).
+
+Tax assessments and negotiations with revenue authorities.
+
+Commercial contract award and renewal by counterparties with concentrated purchasing power.
+
+Employment of individuals with regulatory influence or public official connections.
+
+
+### Lens 2: Interaction Mapping
+
+Map every significant category of interaction the organisation has with persons outside the organisation who have discretionary power. This extends beyond formal transactions to include relationship management, hospitality, gifts, and sponsorships — all of which can serve as bribery vehicles.
+
+Government and regulatory relationships: who interacts, how frequently, in what context.
+
+Business partner and agent relationships: who represents the organisation and in what capacity.
+
+Political relationships: donations, sponsorships, secondments, employment.
+
+Charitable and community relationships: whether these could be used to channel value to officials.
+
+
+### Lens 3: Pressure Point Analysis
+
+Identify the circumstances under which individuals within the organisation face pressure that could motivate or rationalise bribery. Bribery is not a corporate decision; it is typically made by an individual under pressure, with a rationalisation that makes the act feel necessary or justified. Understanding pressure points reveals which functions and individuals are at highest risk of both paying and receiving bribes.
+
+Revenue pressure: sales targets, commission structures, deal deadlines, market share requirements.
+
+Operational pressure: delivery timelines, project milestones, regulatory deadline compliance.
+
+Competitive pressure: markets where competitors are known or suspected to engage in bribery.
+
+Relationship pressure: long-standing business relationships where refusal to pay damages the relationship.
+
+Personal financial pressure: individuals in financial difficulty may be more susceptible to receiving bribes.
+
+
+### Lens 4: Historical and Intelligence Analysis
+
+Analyse available evidence about how bribery has actually occurred — within the organisation (past incidents, whistleblower reports, compliance findings), within the industry (regulatory actions, prosecutions, enforcement trends), and within the relevant geographies (Transparency International indices, TRACE Matrix, local legal counsel intelligence, news analysis). Past bribery patterns in an industry or market are among the most reliable predictors of where bribery risk is concentrated.
+
+Review all internal incident reports, whistleblower submissions, and compliance findings over the past three years.
+
+Analyse enforcement actions against industry peers and competitors in relevant jurisdictions.
+
+Review TI CPI, TRACE Matrix, and World Bank governance indicators for each operating jurisdiction.
+
+Consult local legal counsel and compliance professionals for jurisdiction-specific intelligence.
+
+Review prior risk assessment findings and determine whether previously identified risks have materialised.
+
+
+## 2.4  The Risk Register at the Right Level of Granularity
+
+The output of the risk identification stage must be a risk register where each entry is a specific bribery scenario, not a risk category. The register must capture sufficient information to enable analysis, control mapping, and testing. The minimum required fields for each risk register entry are set out below.
+
+
+# 3.  Gross Risk: The Inherent Baseline
+
+
+## 3.1  What Gross Risk Means and Why It Matters
+
+Gross risk — sometimes called inherent risk — is the level of risk that exists before any controls are applied. It represents the organisation's raw exposure to a bribery scenario in a world where no policies, procedures, monitoring systems, or other control mechanisms exist to prevent, detect, or correct it.
+
+Many organisations skip gross risk assessment entirely. They identify a risk and immediately describe it in terms of their existing control framework, producing a net risk estimate that they treat as if it were the inherent exposure. This conflation is one of the most consequential errors in risk assessment practice because it makes the control framework invisible. If you can only see net risk, you cannot evaluate whether your controls are adequate, appropriately calibrated, or actually working. The gross-to-net gap is precisely the space in which the control framework lives. Collapsing that gap produces an assessment that obscures rather than illuminates the organisation's true risk posture.
+
+
+## 3.2  Scoring Gross Risk — Likelihood
+
+Gross likelihood is the probability that the bribery scenario would occur in the absence of any controls. It is an assessment of the intrinsic conditions that make the scenario plausible, frequent, or rare — absent any mitigating intervention. Gross likelihood is driven by factors intrinsic to the scenario context, not by what the organisation has put in place to address it.
+
+
+## 3.3  Scoring Gross Risk — Consequence
+
+Gross consequence is the magnitude of impact on the organisation if the bribery scenario actually occurs — assessed across multiple impact dimensions. Bribery events do not produce a single type of harm; their consequences cascade across legal, financial, reputational, and operational dimensions. The consequence score should reflect the worst plausible outcome, not the most likely immediate impact.
+
+Critically, consequence assessment in an anti-bribery context must recognise that the organisation bears consequence risk on two sides of the bribery event: the consequence of bribery occurring (prosecution, debarment, reputational damage), and the consequence of refusing a bribe (loss of contract, regulatory difficulty, market access restriction). Both sides must be assessed, because a complete understanding of consequence drives a more honest assessment of the pressure under which individuals operate.
+
+Where consequence scores differ across dimensions (e.g., legal consequence = 3 but reputational consequence = 5), the risk assessment should use the highest individual dimension score as the overall consequence score. The purpose of consequence assessment is to identify the worst realistic harm, not to average across impact types.
+
+
+## 3.4  The Gross Risk Matrix
+
+The gross risk matrix combines likelihood and consequence scores to produce a gross risk rating for each bribery scenario. The rating determines the baseline from which control assessment and net risk calculation proceed.
+
+Legend:   Extreme (≥20)     High (12–19)     Medium (6–11)     Low (1–5)
+
+
+# 4.  Controls: Mapping, Testing, and Net Risk
+
+
+## 4.1  The Function of Controls in Risk Assessment
+
+Controls are the mechanisms through which an organisation reduces gross risk to an acceptable net level. In the context of ISO 37001, controls fall into three broad categories: preventive controls (which reduce the likelihood of a bribery event occurring), detective controls (which identify bribery events that have occurred or are in progress), and corrective controls (which contain the damage and prevent recurrence once an event has been identified).
+
+Effective anti-bribery risk assessment does not merely list the controls that exist. It evaluates the extent to which those controls actually reduce the gross risk score — and that evaluation can only be done if the controls have been tested. A control that has never been tested is not a control in any meaningful operational sense. It is a documented intention.
+
+
+## 4.2  The Anti-Bribery Control Taxonomy
+
+Controls must be mapped to specific bribery scenarios. The same control can address multiple scenarios, but the mapping must be explicit. The following taxonomy covers the full range of anti-bribery controls that an ISO 37001-compliant organisation might deploy:
+
+
+## 4.3  Control Testing: Methodology and Evidence
+
+Control testing is the process of gathering objective evidence that a control is operating as designed, with sufficient frequency and coverage to actually reduce the risk it is mapped to address. It is not the same as verifying that the control exists or has been documented. A policy is not evidence that the policy is followed. A training completion record is not evidence that training changed behaviour. A due diligence procedure is not evidence that due diligence is conducted with rigour.
+
+Control testing requires a structured programme that addresses three questions for each control: Is the control designed adequately to address the risk? Is the control implemented as designed? Is the control operating effectively over time? All three questions must be answered affirmatively before the control can legitimately reduce the gross risk score.
+
+
+### Testing Framework by Control Type
+
+
+## 4.4  Control Effectiveness Ratings
+
+Control testing must produce a documented effectiveness rating for each control tested. The rating directly determines the extent to which the control reduces gross likelihood in the net risk calculation. The following four-point rating scale is recommended:
+
+The effectiveness rating must be documented in the risk register alongside the test evidence. An effectiveness rating that is not supported by documented test evidence has no validity — it is an opinion, not an assessment. ISO 37001 auditors will ask to see the testing that underpins net risk scores, and organisations that cannot produce it will face findings.
+
+
+## 4.5  From Gross to Net: The Calculation
+
+Net risk is calculated by applying the control effectiveness ratings to the gross risk scores. The key discipline is that controls primarily affect likelihood, not consequence. A well-designed and effectively operating set of preventive controls reduces the probability that a bribery event will occur. However, if bribery does occur despite those controls, the consequence to the organisation is largely unchanged — criminal sanctions, financial penalties, and reputational damage remain at the same order of magnitude regardless of how good the controls were.
+
+This distinction has important implications. An organisation with very high inherent consequence exposure (Catastrophic = 5) can never achieve low net risk by building preventive controls alone. If the consequence score is 5 and even the most effective controls reduce likelihood by 2 points, the minimum net risk score is 5 × 1 = 5 (Low/Medium), and a single control failure immediately produces a net score of 5 × 2 = 10 (Medium/High). For scenarios with catastrophic consequence, the organisation must accept that the residual risk will always be material, and design its response accordingly — with deeper detective controls, more frequent monitoring, and pre-planned response protocols.
+
+
+### Gross to Net Calculation — Worked Example
+
+Note that in this example, despite four controls being in place (three effective, one partially effective), the net risk remains HIGH rather than MEDIUM or LOW. This is because the catastrophic consequence score creates a floor that even effective controls cannot overcome. The organisation must recognise that Vietnam procurement engagement will always carry elevated residual risk, and design its monitoring intensity accordingly.
+
+
+# 5.  Risk Evaluation and Treatment
+
+
+## 5.1  Risk Appetite and Evaluation Criteria
+
+Risk evaluation — the comparison of net risk scores against defined criteria to determine acceptability — cannot be conducted without a defined risk appetite. Risk appetite is the statement of how much risk the organisation is willing to accept in pursuit of its objectives. In an anti-bribery context, risk appetite has a particular character: it is almost always expressed as zero tolerance for bribery itself (the event), combined with a tolerance threshold for the level of residual control risk the organisation is willing to carry.
+
+This distinction is critical. An organisation that says 'we have zero tolerance for bribery' is stating its ethical position. An organisation that defines its risk appetite for anti-bribery risk is making a governance decision about how much residual risk it accepts, how much monitoring it applies to HIGH-rated risks, and at what net risk level it requires escalation to the Board or Audit Committee.
+
+Risk appetite must be defined by the governing body (consistent with ISO 37000) before the risk evaluation stage. It should specify at minimum: the net risk rating levels at which scenarios are automatically escalated to top management; the net risk rating levels at which additional treatment is required; and the net risk rating levels that are within the organisation's accepted tolerance for ongoing monitoring without further immediate action.
+
+
+## 5.2  Risk Treatment Options
+
+ISO 31000 identifies four primary risk treatment options: avoid, reduce, share (transfer), and accept. In an anti-bribery context, these translate as follows:
+
+
+### Avoid
+
+Risk avoidance means eliminating the activity that gives rise to the bribery risk. In practice this means declining to enter a market, refusing to engage a category of business partner, withdrawing from a transaction type, or exiting a jurisdiction where the risk cannot be reduced to an acceptable level through controls. Risk avoidance is the only treatment option that genuinely eliminates the scenario rather than managing it. It is appropriate for EXTREME net risk scenarios where controls cannot bring the risk within appetite and the business value of the activity does not justify the exposure.
+
+
+### Reduce
+
+Risk reduction means implementing additional or enhanced controls to bring net risk within appetite. This is the most common treatment response and the one most directly connected to the ISO 37001 control framework. Reduction treatments should be specific, actionable, and time-bound. A treatment plan that says 'strengthen compliance culture' is not a treatment — it is an aspiration. A treatment plan that says 'implement quarterly pre-travel briefings for all sales staff travelling to Indonesia, with sign-off by ABCO, by 31 March 2025' is a treatment.
+
+
+### Share / Transfer
+
+Risk sharing transfers some portion of the financial consequence to a third party — typically through insurance (Directors and Officers liability; legal expense coverage for regulatory investigations; anti-bribery specific coverage products) or through contractual allocation of risk with partners. Risk sharing does not reduce the likelihood of bribery occurring, nor does it eliminate legal consequence. It is a financial mitigation tool, not a compliance control. It is appropriate as a supplementary treatment for scenarios where the financial dimension of consequence has been assessed as significant and the organisation has brought likelihood within appetite but wishes to limit financial exposure from residual events.
+
+
+### Accept
+
+Risk acceptance means deciding that a risk at its current net level falls within the organisation's risk appetite and does not require additional treatment at this time. Acceptance must be an explicit, documented, and authorised decision — not an absence of action. The risk register must record: the net risk score, the treatment decision (accept), the authorising person or body, the date of the decision, and the next scheduled review. Acceptance without documentation is not a governance decision — it is negligence.
+
+
+## 5.3  Treatment Plans: From Decision to Action
+
+Every net risk scenario rated above the acceptance threshold must have a documented treatment plan. The treatment plan bridges the gap between the risk evaluation decision and the operational actions required to improve the control environment. Treatment plans must be specific enough to be auditable.
+
+
+# 6.  High-Risk Bribery Scenarios: A Reference Library
+
+The following section provides a reference library of specific bribery scenarios commonly encountered across industries and geographies. These are not templates to be adopted without adaptation — they are starting points for the scenario development work that each organisation must conduct based on its own specific context, transactions, and operating environment. In every case, the organisation must localise and refine these scenarios to reflect the actual specifics of its people, processes, counterparties, and jurisdictions.
+
+
+## 6.1  Government Interaction Scenarios
+
+
+## 6.2  Commercial and Private Sector Scenarios
+
+
+## 6.3  Internal / Inbound Bribery Scenarios
+
+Most anti-bribery risk assessment focuses on outbound bribery — the risk that the organisation or its associates will pay bribes. ISO 37001 explicitly covers passive bribery — the risk that persons associated with the organisation will receive or solicit bribes. This category is frequently underassessed.
+
+
+# 7.  Conducting the Risk Assessment: Process and Governance
+
+
+## 7.1  Who Should Conduct the Assessment
+
+The anti-bribery risk assessment must be led by a person with the authority, competence, and independence to conduct it credibly. ISO 37001 Clause 5.3 requires the designation of an Anti-Bribery Compliance Officer (ABCO) or equivalent. The ABCO is typically responsible for leading the risk assessment, though the assessment requires inputs from across the organisation and cannot be conducted in isolation.
+
+The assessment process should involve the following participants:
+
+ABCO or equivalent: overall responsibility for assessment design, methodology, facilitation, and sign-off.
+
+Legal Counsel: jurisdiction-specific legal risk assessment; regulatory enforcement analysis; privilege considerations.
+
+Senior business line managers: identification of business-specific scenarios; transaction context; commercial pressure points.
+
+Finance and Treasury: financial flows; payment mechanisms; expense monitoring capability.
+
+Human Resources: compensation structure analysis; employee pressure indicators; training delivery.
+
+Procurement: supplier and vendor relationships; procurement process design; conflict of interest exposure.
+
+Internal Audit: control testing methodology; prior findings; audit programme integration.
+
+Operations / Country Managers: jurisdiction-specific intelligence; local relationship context; operational pressure points.
+
+For organisations with significant international operations, local management and legal counsel in each operating jurisdiction must be engaged in the scenario development for that jurisdiction. Headquarters cannot adequately assess bribery scenarios in Indonesia from Singapore, or in France from London. Local specificity requires local knowledge.
+
+
+## 7.2  Assessment Process and Timeline
+
+
+## 7.3  Review Frequency and Triggers
+
+ISO 37001 Clause 4.5 requires the risk assessment to be reviewed at planned intervals and whenever significant changes occur. 'Planned intervals' should be interpreted as at least annually for the full assessment, with interim reviews triggered by specific events. The following events should trigger an unscheduled review:
+
+Entry into a new market, jurisdiction, or sector.
+
+Acquisition of or merger with another organisation.
+
+Commencement of material new business relationships (agents, JV partners, significant suppliers).
+
+A bribery incident or credible allegation within the organisation.
+
+A significant enforcement action against a peer organisation in the same market or sector.
+
+A material change in the regulatory environment of an operating jurisdiction.
+
+A significant restructuring of the organisation's operations or business model.
+
+Identification of a significant control failure through audit, monitoring, or other source.
+
+The review schedule and trigger events must be documented in the risk assessment procedure. It is insufficient to rely on 'we will review when something changes' — the trigger conditions must be specified, and the ABCO must have a mechanism to monitor for them.
+
+
+# 8.  Common Failures in Anti-Bribery Risk Assessment
+
+
+# 9.  What an ISO 37001 Auditor Will Look For
+
+Understanding how an ISO 37001 certification auditor will approach the risk assessment review is essential for organisations building or improving their assessment. Certification audits conducted by companies like Speeki are substantive assessments, not document reviews. Auditors will probe the quality of the assessment, not just its existence.
+
+
+## 9.1  Document Review — What Auditors Will Read
+
+The risk assessment procedure: does it define methodology, frequency, roles, and trigger events?
+
+The risk register: does it contain specific scenarios (not categories)? Does it have gross and net scores? Are controls mapped to scenarios?
+
+Control testing documentation: what was tested, when, by whom, and what did the testing find?
+
+Treatment plans: are they specific, owned, time-bound, and linked to risk register entries?
+
+Approval records: has the risk assessment been formally approved by the appropriate level of management?
+
+Review records: is there evidence of the last review? Were trigger events assessed?
+
+
+## 9.2  Interview Evidence — What Auditors Will Ask
+
+"Walk me through how you identified the bribery scenarios in your risk register." — Tests whether the process was genuine or the register was populated from a template.
+
+"What is your gross likelihood score for this scenario, and why?" — Tests whether assessors understand the gross/net distinction and can articulate their scoring rationale.
+
+"How did you test this control, and what did the testing find?" — Tests whether control testing is genuine and evidenced, or assumed.
+
+"Show me the evidence that this control is operating effectively." — Forces production of test documentation.
+
+"What would happen to your net risk score if this control failed?" — Tests understanding of control dependency and risk exposure.
+
+"Has there been any event since your last review that should have triggered a reassessment?" — Tests whether the review protocol is actively managed.
+
+
+## 9.3  Transaction Testing — What Auditors Will Sample
+
+A sample of gifts and hospitality register entries: are entries complete, approved, and consistent with policy limits? Are there entries near contract award dates?
+
+A sample of business partner due diligence files: are they complete? Proportionate to risk? Free of unresolved red flags?
+
+A sample of high-risk transactions (government-adjacent sales, public procurement bids, agent-facilitated deals): do the transaction records align with the control framework the risk assessment claims is in place?
+
+Expense claim data for high-risk roles in high-risk jurisdictions: any anomalies consistent with facilitation payment patterns?
+
+
+# Conclusion
+
+Anti-bribery risk assessment under ISO 37001 Clause 4.5 is not a compliance exercise to be completed once and filed. It is the analytical foundation of the entire anti-bribery management system. Everything the ABMS does — every control it operates, every training it delivers, every due diligence it conducts — is only as effective as the risk assessment that designed and calibrated it.
+
+The assessment must be specific. Bribery occurs in specific transactions, conducted by specific people, with specific counterparties, under specific conditions. An assessment that does not reach that level of specificity has not assessed bribery risk; it has categorised it. Categories cannot be controlled. Scenarios can.
+
+The assessment must distinguish between gross and net risk. Gross risk tells you what you are exposed to before controls. Net risk tells you what you have done about it. The gap between them is the contribution of your control framework. If you cannot measure that gap — because you have not scored gross risk, or because you have not tested whether your controls are working — you do not know your residual exposure, and you cannot represent that it is within your risk appetite.
+
+Control testing is not optional. It is the mechanism by which claimed risk reduction becomes evidenced risk reduction. Every control on which you rely in your net risk calculation must have been tested. The test must assess design, implementation, and operational effectiveness. The results must be documented. Untested controls are hypotheses, and net risk scores built on untested controls are fictions.
+
+The organisations that build their ABMS on a genuinely rigorous risk assessment — specific, methodologically sound, gross-to-net disciplined, and control-tested — build management systems that actually reduce bribery risk. Those are the systems that pass certification audits, withstand regulatory scrutiny, and provide real protection against one of the most serious categories of legal and reputational risk that any international organisation faces.
+
+
+
+=== TABLES ===
+
+
+Table 1:
+SPEEKI
+WHITEPAPER SERIES | SPEEKI
+WHITEPAPER SERIES
+ | 
+Anti-Bribery Risk Assessment
+Under ISO 37001 Clause 4.5
+Gross risk, net risk, control testing, and why bribery risks demand specificity — not corporate generality | Anti-Bribery Risk Assessment
+Under ISO 37001 Clause 4.5
+Gross risk, net risk, control testing, and why bribery risks demand specificity — not corporate generality
+Standards Referenced
+ISO 37001:2016  —  Anti-Bribery Management Systems
+ISO 31000:2018  —  Risk Management Guidelines
+ISO 37000:2021  —  Governance of Organisations | speeki.com
+2025 Edition
+
+
+Table 2:
+CORE ARGUMENT | The difference between a weak and a strong anti-bribery risk assessment is not effort. It is specificity. A risk that cannot be described in terms of who might pay a bribe, to whom, in what transaction, under what circumstances, is not a risk that has been assessed. It is a risk that has been acknowledged.
+
+
+Table 3:
+ISO 31000 Stage | What It Means | In an ISO 37001 Context
+Risk Identification | Find and describe all sources of risk, events, and their potential consequences | Map every transaction type, function, geography, and counterparty category where bribery could occur
+Risk Analysis | Understand the nature of the risk and determine the level of risk (likelihood × consequence) — before controls (gross) and after controls (net) | Score each identified bribery scenario for likelihood and consequence at gross level, then apply and test controls to determine net level
+Risk Evaluation | Compare the level of risk against risk criteria to determine whether the risk is acceptable or requires treatment | Determine which residual bribery risks require additional controls, enhanced monitoring, or escalation to senior management
+
+
+Table 4:
+Standard | Role | Key Contribution to Risk Assessment
+ISO 31000:2018 | Methodology | Likelihood × consequence framework; gross vs net distinction; risk treatment and monitoring cycle
+ISO 37001:2016 | Subject matter | Defines bribery-specific risk factors; requires documented assessment; links risk to control design
+ISO 37000:2021 | Governance | Risk appetite definition; board accountability; risk reporting to governing body; ethical context
+
+
+Table 5:
+CRITICAL FAILURE | Listing 'procurement bribery risk: HIGH' is not a risk assessment. It is a risk acknowledgement. The assessment begins where acknowledgement ends — with the specific question: who, to whom, in which transaction, using what mechanism, under what circumstances, and with what consequence if it occurs?
+
+
+Table 6:
+Risk Category | Scenario: Singapore | Scenario: Indonesia | Scenario: France | What Makes Them Different
+Government Permit Approval | A regulatory officer demands an accelerated review fee (facilitation payment) for port health inspection of food imports, with risk of shipment rejection if declined. | A district government official conditions grant of a mining environmental permit on the company providing employment to a family member of the official. | A public procurement officer signals that a consulting contract award would be influenced by an invitation to an industry conference in Paris with travel and accommodation covered. | Mechanism, counterparty type, bribe form, and leverage all differ. One standard control cannot address all three.
+Commercial Decision Influence | A procurement director at a state-owned enterprise requests that the company employ his spouse as a 'consultant' as a condition of contract renewal. | A commercial counterparty's agent (who is undisclosed) is the nephew of the relevant minister and has no genuine commercial role beyond access provision. | An official from a strategic client's parent company expects attendance at a skiing event as part of the commercial relationship, with tickets, accommodation, and entertainment at the company's expense. | Each scenario implicates different control elements: employment screening, agent due diligence, or hospitality policy.
+
+
+Table 7:
+Field | Content Required
+Risk ID | Unique sequential reference (e.g., ABR-2025-014)
+Scenario Title | Short descriptive label — specific enough to distinguish from all other entries
+Scenario Description | Full narrative of the bribery scenario: role of internal actor, counterparty type, transaction or interaction context, form of bribe, intended outcome
+Jurisdiction | The specific country or region where the scenario applies
+Function / Process | The internal business function and process within which the scenario could occur
+Actor (Role) | The internal role most likely to commit or be subjected to bribery in this scenario
+Counterparty Type | Government official / Public procurement officer / Commercial counterparty / Agent / Other
+Bribe Type | Cash / Gift / Hospitality / Employment / Contract award / Other benefit
+Gross Likelihood Score | 1–5 scale: likelihood of the scenario occurring in the absence of controls
+Gross Consequence Score | 1–5 scale: magnitude of impact if the bribery event occurs
+Gross Risk Score | Likelihood × Consequence at gross level
+Controls in Place | Reference to each control that applies to this scenario, with the control ID
+Control Test Result | Evidence-based assessment of whether each listed control is operating effectively
+Net Likelihood Score | Likelihood score after applying and testing controls
+Net Consequence Score | Consequence score after applying controls (note: controls may reduce likelihood but rarely reduce consequence)
+Net Risk Score | Likelihood × Consequence at net level
+Risk Rating | Extreme / High / Medium / Low — based on net score against risk matrix
+Treatment Required | Additional controls or monitoring required based on net risk rating
+Risk Owner | Named individual accountable for this risk scenario
+Last Reviewed | Date of most recent review / assessment
+
+
+Table 8:
+FUNDAMENTAL PRINCIPLE | Gross risk tells you what you are exposed to. Net risk tells you what you have done about it. The difference between them is the contribution of your controls. If you cannot calculate the difference, you cannot evaluate your controls.
+
+
+Table 9:
+Score | Label | Definition | Bribery-Specific Indicators
+5 | Almost Certain | The scenario is expected to occur frequently or routinely in this context | High-volume government interactions in jurisdictions where facilitation payments are normalised industry practice; markets with TI CPI below 30; industries with documented enforcement history in this jurisdiction
+4 | Likely | The scenario would occur in most circumstances without active prevention | Regular commercial dealings with SOEs in high-risk markets; use of third-party agents in jurisdictions where undisclosed commissions are common; significant procurement decisions concentrated in one individual
+3 | Possible | The scenario could occur under certain conditions | Periodic permit applications in moderate-risk jurisdictions; competitive markets where bribery of procurement officials is suspected but not confirmed; hospitality relationships with government-adjacent commercial counterparties
+2 | Unlikely | The scenario would occur only in unusual circumstances | Low-frequency government interactions in jurisdictions with strong rule of law; commercial dealings with counterparties who have strong anti-bribery compliance programmes; transparent public procurement processes
+1 | Rare | The scenario would occur only in exceptional circumstances | Jurisdictions with TI CPI above 75; transactions subject to independent oversight and public scrutiny; counterparties in regulated sectors with their own strong compliance obligations
+
+
+Table 10:
+Score | Label | Legal / Criminal | Financial | Reputational | Operational
+5 | Catastrophic | Criminal prosecution of the organisation and senior individuals; debarment from public procurement globally | Fines exceeding 10% of annual turnover; disgorgement of profits; civil litigation from counterparties | International media coverage; loss of major clients; board-level departures; investor action | Operations suspended; licences revoked; loss of certification
+4 | Major | Regulatory enforcement action; significant DPA or settlement; individual prosecutions | Fines in the range of 5–10% of annual revenue; restitution obligations; significant legal costs | National/regional media coverage; loss of key contracts; investor concern; credit rating impact | Significant disruption to operations in affected markets; loss of key regulatory approvals
+3 | Significant | Regulatory investigation; enforcement correspondence; remediation requirements | Material legal and investigation costs; possible disgorgement; contractual penalties | Industry and trade media coverage; relationship damage with key counterparties; staff concern | Delays to projects or approvals; enhanced regulatory scrutiny
+2 | Moderate | Internal disciplinary matter; reporting obligations triggered; possible regulatory notification | Costs contained to internal investigation and remediation; limited financial exposure | Limited external visibility; internal reputational impact; relationship management required | Minor operational impact; manageable with existing resources
+1 | Minor | Procedural or administrative breach; documentation or reporting correction required | Negligible direct financial impact | No external visibility; minor internal concern | No material operational consequence
+
+
+Table 11:
+LIKELIHOOD → | Rare (1) | Unlikely (2) | Possible (3) | Likely (4) | Almost Certain (5)
+Catastrophic (5) | 5 — Medium | 10 — High | 15 — Extreme | 20 — Extreme | 25 — Extreme
+Major (4) | 4 — Low | 8 — Medium | 12 — High | 16 — Extreme | 20 — Extreme
+Significant (3) | 3 — Low | 6 — Medium | 9 — Medium | 12 — High | 15 — Extreme
+Moderate (2) | 2 — Low | 4 — Low | 6 — Medium | 8 — Medium | 10 — High
+Minor (1) | 1 — Low | 2 — Low | 3 — Low | 4 — Low | 5 — Medium
+
+
+Table 12:
+THE TESTING IMPERATIVE | An untested control is a hypothesis. When you record a net risk score based on controls that have not been tested, you are not assessing risk — you are expressing hope. ISO 37001 auditors will test whether your controls are operating. Your risk assessment should do the same, and the results should inform your net risk scores.
+
+
+Table 13:
+Type | Control Category | Examples | What It Reduces
+PREVENTIVE CONTROLS | PREVENTIVE CONTROLS | PREVENTIVE CONTROLS | PREVENTIVE CONTROLS
+Preventive | Policy & Documentation | Anti-bribery policy; gifts & hospitality policy; facilitation payments policy; political contributions policy; code of conduct | Likelihood — removes ambiguity about what is and is not permitted; creates accountability framework
+Preventive | Training & Awareness | Role-specific ABMS training; scenario-based learning; manager briefings; pre-travel briefings for high-risk jurisdictions | Likelihood — increases individual awareness of scenarios and refusal skills; reduces rationalisation
+Preventive | Due Diligence | Business partner due diligence; agent screening; JV partner assessment; supplier vetting; public official connection checks | Likelihood — filters out high-risk counterparties before engagement; creates a deterrence signal
+Preventive | Authorisation & Segregation | Dual-approval for high-value transactions; segregation of duties in procurement; independent review of agent commission rates | Likelihood — removes single-point-of-failure decision authority; increases cost and visibility of bribery
+Preventive | Contractual Controls | Anti-bribery representations and warranties; audit rights clauses; termination for ABMS breach; compliance obligations in contracts | Likelihood — extends compliance obligations to third parties; creates legal basis for remediation
+DETECTIVE CONTROLS | DETECTIVE CONTROLS | DETECTIVE CONTROLS | DETECTIVE CONTROLS
+Detective | Monitoring & Analytics | Expense claim analysis; gifts & hospitality register review; payment monitoring; vendor concentration analysis; customs clearance time monitoring | Likelihood of recurrence — creates detection capability that deters and identifies patterns
+Detective | Reporting Channels | Whistleblower hotline; ethics reporting mechanisms; manager escalation protocols; anonymous reporting options | Likelihood of recurrence — creates detection mechanism for events that controls fail to prevent
+Detective | Audit | Internal audit of ABMS controls; transaction testing; third-party compliance audits; on-site review of business partners | Likelihood of recurrence — identifies control failures before external detection
+Detective | Management Review | Periodic ABMS performance review; KPI monitoring; risk indicator tracking; management attestations | Likelihood of recurrence — senior management visibility creates accountability and detects systemic gaps
+CORRECTIVE CONTROLS | CORRECTIVE CONTROLS | CORRECTIVE CONTROLS | CORRECTIVE CONTROLS
+Corrective | Investigation | Internal investigation capability or protocol; external investigation resources; evidence preservation procedures | Consequence — limits extent of harm by enabling rapid, competent response
+Corrective | Disciplinary Framework | Documented disciplinary process for ABMS breaches; proportionate sanction guidelines; senior management involvement | Consequence — deters through credible enforcement; enables proportionate response
+Corrective | Remediation | Non-conformity management; corrective action process; voluntary disclosure protocols; regulator engagement procedures | Consequence — reduces downstream legal and regulatory consequence through proactive response
+
+
+Table 14:
+Control | Test Method | Evidence of Effectiveness | Red Flags
+Anti-Bribery Policy | Document review; version control check; staff awareness testing | Policy reviewed in last 12 months; distributed to all covered persons; staff can articulate key requirements | Policy has not been reviewed since certification; staff unaware of facilitation payments prohibition; no acknowledgement records
+Role-specific ABMS Training | Training completion record review; knowledge assessment results; interview of trained staff | ≥95% completion by target population within required period; assessment pass rates; staff demonstrate scenario awareness in interview | Completion records inconsistent with staff numbers; no assessment component; training generic rather than role-specific
+Business Partner Due Diligence | Sample file review; process walkthrough with responsible team; output quality assessment | Completed DD records for all in-scope partners; risk-proportionate depth; adverse findings documented and escalated | Files missing; no adverse media search; due diligence completed after engagement commenced; no escalation of red flags
+Gifts & Hospitality Register | Register review; expense claim reconciliation; approval workflow check; trend analysis | Register complete; all entries approved; trends consistent with stated policy limits; no clustering around procurement decisions | Significant gifts not in register; approvals missing or inadequate; clustering of hospitality near contract awards
+Facilitation Payments Prohibition | Policy review; training content check; incident report review; agent instruction review | Explicit policy prohibition; training addresses scenarios; no facilitation payments in expense data; agents contractually bound | Policy silent or ambiguous on facilitation payments; expense data shows unexplained small cash disbursements in high-risk markets
+Whistleblower / Reporting Channel | Channel availability test; report handling process review; response time data; non-retaliation evidence | Channel accessible and operational; all reports investigated; response within defined SLA; no evidence of retaliation | Channel not accessible in all geographies or languages; reports not logged or investigated; investigation process undocumented
+Transaction Monitoring | Monitoring process review; exception reporting data; sample of flagged transactions | Monitoring operates as documented; exceptions are reviewed and resolved; results reported to management | Monitoring exists on paper but no exception reports generated; exceptions not reviewed or resolved within defined timeframe
+Segregation of Duties | Process walkthrough; system access review; sample transaction testing | No single individual can initiate and approve high-value transactions without independent review | One person controls initiation and approval; system access permissions exceed role requirement; no evidence of independent review
+
+
+Table 15:
+Rating | Definition | Effect on Net Likelihood | Evidence Required
+EFFECTIVE | Control is designed adequately, implemented as designed, and operating consistently. Evidence demonstrates the control is achieving its intended risk reduction. | Likelihood score may be reduced by 2–3 points from gross level, subject to floor | Positive results from all three test questions (design, implementation, operation); independent corroboration
+PARTIALLY EFFECTIVE | Control is designed adequately and partially implemented but not consistently operating, or operating with gaps in coverage or frequency. | Likelihood score may be reduced by 1 point from gross level | Mixed test results; implementation gaps documented; corrective actions in progress
+INEFFECTIVE | Control exists on paper but testing reveals it is not consistently implemented or is not achieving its intended risk reduction. Significant gaps in design, coverage, or operation. | No reduction from gross likelihood — net likelihood = gross likelihood | Test results show systematic implementation failure; multiple red flags confirmed; no evidence of operation
+NOT IN PLACE | Control does not exist. No relevant policy, procedure, system, or mechanism has been implemented for this risk scenario. | Not applicable — gross and net likelihood are identical; control gap must be treated as a finding | N/A — absence of control is itself the evidence
+
+
+Table 16:
+Assessment Element | Gross Risk | Net Risk
+Scenario | Sales representative in Vietnam may offer cash to a government procurement officer to secure inclusion of the company's product on an approved vendor list | ← same scenario
+Likelihood Score | 4 (Likely) — Government procurement in Vietnam; volume of interactions; commission-based incentive structure; competitors known to pay | 2 (Unlikely) — Specific policy prohibition; role-specific Vietnam pre-travel briefing completed; expense monitoring detects cash anomalies; manager dual-approval for procurement entertainment
+Consequence Score | 5 (Catastrophic) — Vietnam FCPA/UKBA exposure; potential prosecution of individual and company; debarment risk; strategic market | 5 (Catastrophic) — Controls reduce likelihood but not consequence. A bribery event in Vietnam carries the same legal, financial, and reputational consequence whether controls existed or not.
+Risk Score | 4 × 5 = 20  (EXTREME) | 2 × 5 = 10  (HIGH)
+Controls Relied Upon | N/A at gross stage | (1) ABMS Policy — EFFECTIVE; (2) Vietnam Pre-Travel Briefing — EFFECTIVE; (3) Expense Monitoring — PARTIALLY EFFECTIVE (cash gaps); (4) Dual Approval — EFFECTIVE
+Control Gap Identified | N/A | Expense monitoring partially effective — cash expenditure in Vietnam not fully captured in current system. Residual gap in detection of cash facilitation payments.
+Net Risk Rating | N/A | HIGH — Additional monitoring treatment required: enhanced cash expense scrutiny for Vietnam travel; quarterly review of customs clearance data
+
+
+Table 17:
+Net Risk Rating | Typical Appetite Position | Management Response Required | Reporting Level
+EXTREME (≥20) | Outside all appetite — immediate action required | Immediate escalation; mandatory additional controls; enhanced monitoring; possible suspension of activity pending control improvement | Board / Governing Body; Anti-Bribery Compliance Officer
+HIGH (12–19) | Outside normal appetite — treatment required before acceptance | Senior management review; defined treatment plan with timelines; quarterly monitoring; compliance officer approval required for continued activity | Senior Management; Compliance Committee; ABCO
+MEDIUM (6–11) | At the boundary of appetite — monitoring required | Annual treatment plan review; enhanced monitoring of control effectiveness; reporting to management review | Management Review; ABCO
+LOW (1–5) | Within appetite — standard monitoring | Standard monitoring; annual risk register review; no additional treatment unless scenario changes | Annual Risk Assessment; ABCO review
+
+
+Table 18:
+Field | Requirement
+Treatment Plan ID | Reference number linked to the risk register entry
+Risk Reference | ABR-ID of the scenario being treated
+Current Net Risk Rating | Rating triggering the treatment requirement
+Target Net Risk Rating | The rating the organisation aims to achieve after treatment
+Treatment Option | Avoid / Reduce / Share / Accept
+Specific Actions | Each action described with enough specificity to be verified. Avoid generic language. Include process, coverage, frequency, and format.
+Responsible Owner | Named individual for each action
+Target Completion Date | Realistic date; not 'ongoing'
+Resource Requirements | Budget, personnel, or system changes required
+Progress Milestone(s) | Interim checkpoints to verify progress before final completion
+Evidence of Completion | Specific artefacts that will demonstrate the action has been implemented (e.g., training records, updated procedure, test results)
+Post-Treatment Testing Date | When the control will be tested following implementation to verify it achieves the intended risk reduction
+Approved By | Authorising person; must be at a level commensurate with the risk rating
+
+
+Table 19:
+Scenario | Context | Typical Bribe Form | Primary Control Response
+Facilitation Payment — Customs | Goods arriving at port in jurisdiction with documented customs corruption. Clearance officer signals delay or seizure risk. Operations team faces delivery deadline. | Small cash payment; gift card; prepaid card | Facilitation payments policy (absolute prohibition); pre-travel briefing for logistics staff; expense anomaly monitoring; manager escalation protocol
+Permit Acceleration | Company requires environmental or operating permit; application pending with government agency. Official signals faster outcome is possible for consideration. | Cash; invitation to 'consulting' arrangement; employment offer for family member | Policy and training; two-person rule for government liaison meetings; ABCO pre-approval for any gratuities; interaction log maintained
+Tax Assessment Negotiation | Revenue authority conducting audit or assessment. Inspector suggests that a smaller settlement figure could be reached informally. | Cash; payment to third-party intermediary; over-priced service contract | All tax negotiations conducted by qualified professional with company lawyer present; no cash or gratuity payments in any form; all negotiations documented
+Public Procurement — Tender | Company bidding for government contract. Procurement official signals that access to tender specifications or evaluation criteria is available for a fee, or that outcome can be influenced. | Cash; commission to intermediary; future employment commitment | No-payment rule for tender intelligence; agent/intermediary prohibition in public procurement; tender process documented independently; no employment offers to procurement officials or their family members during or after bid period
+Judicial or Regulatory Proceeding | Company involved in dispute, appeal, or enforcement action before court or regulator. Intermediary approaches with offer to resolve proceedings for payment. | Cash via intermediary; investment in judge's business associate; property transaction | Immediate escalation to General Counsel and ABCO; no engagement with intermediary; instruction to external counsel; documented refusal
+
+
+Table 20:
+Scenario | Context | Typical Bribe Form | Primary Control Response
+Procurement Officer — Kickback | Company selling product or service; procurement officer at commercial counterparty conditions award or renewal on personal benefit. | Cash rebate; percentage of contract value paid to personal account; 'consulting fees' to connected entity | Anti-bribery contractual clause; no off-book payments; no cash rebates; unusual payment requests escalated to ABCO; senior sign-off for commission payments
+Undisclosed Agent / Intermediary | Business partner or agent has undisclosed connection to decision-maker at commercial counterparty or government body. Engagement provides access but genuine commercial value is questionable. | Commission routed through agent to decision-maker | Enhanced due diligence on agents; disclosure of beneficial ownership required; commission rates benchmarked to market; ABCO approval for all agent engagements; contractual ABMS representations
+Commercial Hospitality — Influence | Company providing hospitality to commercial decision-maker. Volume, frequency, or proximity to procurement decision crosses from relationship-building to bribery. | Sporting events; international travel; accommodation; entertainment; gifts exceeding policy threshold | Gifts & hospitality policy with specific limits; register of all hospitality over threshold; approval required; 30-day pre/post procurement blackout period; no hospitality to government officials without ABCO pre-approval
+Employment — Revolving Door | Company offers employment or consulting arrangement to former government official or commercial counterparty employee who recently had relevant decision-making authority. | Employment; directorship; consulting contract | Pre-employment ABCO screening for candidates from government or counterparty roles within prior 3 years; Board approval for senior hires; documented rationale for engagement
+Political Contribution — Influence | Company makes political contribution or donation to candidate, party, or associated entity in jurisdiction where the political recipient has regulatory or procurement influence over the company. | Political donation; sponsorship; contribution to associated charitable foundation | Political contribution policy (full prohibition or highly restricted); ABCO pre-approval; all contributions publicly disclosed; no contributions in jurisdictions where regulatory nexus exists
+
+
+Table 21:
+Scenario | Who Is at Risk | Indicators | Control Response
+Procurement Staff — Receiving Kickbacks | Internal procurement officers responsible for vendor selection, contract award, or variation orders | Vendor concentration; prices above market; favourable treatment of one supplier; unexplained personal wealth of procurement officer | Supplier diversification reviews; competitive tendering requirements; dual approval; internal audit of procurement decisions; confidential reporting channel
+Sales / Business Development — Receiving Referral Payments | Sales staff who receive undisclosed payments from sub-contractors, referral partners, or intermediaries in exchange for directing business | Unusual third-party relationships; payments to staff from outside payroll; vendor selection that does not align with commercial logic | Outside employment declaration; conflict of interest policy; gifts & hospitality inbound register; internal audit of sales decisions involving third parties
+Management — Undisclosed Interest | Senior managers or directors who have an undisclosed financial interest in a vendor, customer, or business partner | Related-party transactions; unusual commercial terms; decision-making that departs from normal process without documented rationale | Annual conflict of interest declaration (all management); Board approval for related-party transactions; ABCO review of all significant vendor relationships
+Regulatory or Compliance Staff — Corruption of the Control Function | Internal compliance, audit, or regulatory affairs staff who are bribed to suppress findings, approve non-compliant transactions, or facilitate bribery by others | Inconsistent audit findings; decisions that override controls without escalation; unusual relationships between compliance staff and regulated counterparties | Segregation of compliance function from business units; external audit of compliance function; ABCO reports directly to Board / CEO; rotation of compliance personnel in high-risk roles
+
+
+Table 22:
+Step | Stage | Activities | Output
+1 | Scope Definition | Define the entities, geographies, functions, and transaction types within scope. Align with ISO 37001 scope of certification. Confirm risk criteria and risk appetite with governing body. | Scope document; risk appetite statement; risk criteria approved by Board/Senior Management
+2 | Context Analysis | Review organisational context (ISO 37001 Clause 4.1); internal and external factors; relevant legal and regulatory framework by jurisdiction; prior risk assessment findings; incident history. | Context analysis document; jurisdiction risk profiles; incident register review
+3 | Transaction and Interaction Mapping | Map all relevant transaction types and interaction categories across functions and geographies using the four lenses: transaction mapping, interaction mapping, pressure point analysis, historical analysis. | Transaction and interaction inventory
+4 | Scenario Development | For each transaction/interaction type and geography, develop specific bribery scenarios using workshops with business line and country management. Each scenario must meet the specificity test: who, to whom, what, how, why. | Draft bribery scenario library
+5 | Gross Risk Scoring | Score each scenario for gross likelihood and gross consequence using defined scales. Produce gross risk matrix. Document rationale for each score. | Gross risk register with scores and rationale
+6 | Control Mapping | Map existing anti-bribery controls to each scenario. Document control ID, type (preventive/detective/corrective), and the specific risk reduction mechanism for each mapped control. | Risk register with control mapping
+7 | Control Testing | Test the design adequacy, implementation, and operational effectiveness of each mapped control. Document test method, evidence reviewed, and effectiveness rating. Identify control gaps. | Control testing log; effectiveness ratings; gap register
+8 | Net Risk Scoring | Apply control effectiveness ratings to gross scores to calculate net likelihood and net risk. Document the contribution of each control to the risk reduction. Flag scenarios where net risk exceeds acceptance threshold. | Net risk register; residual risk map
+9 | Risk Evaluation | Compare net risk scores against risk appetite and risk criteria. Classify each scenario as: within appetite (accept with monitoring) or outside appetite (treatment required). | Risk evaluation summary; prioritised treatment list
+10 | Treatment Planning | Develop specific treatment plans for all scenarios outside appetite. Assign owners, timelines, and resources. Link treatment actions to the control taxonomy. | Treatment plans; updated control programme
+11 | Documentation and Approval | Compile the full risk assessment document for approval by senior management or the governing body. Document assessment methodology, assumptions, limitations, and review schedule. | Approved risk assessment; Board or Management Committee minute
+12 | Integration and Monitoring | Integrate risk assessment outputs into internal audit plan, training programme, due diligence procedures, and monitoring calendar. Schedule next review. | Integrated ABMS programme; monitoring calendar; next review date
+
+
+Table 23:
+Failure | Why It Undermines the Assessment | What a Sound Assessment Does Instead
+Assessing at category level rather than scenario level | Categories cannot be controlled, tested, or audited. 'Government interaction risk: HIGH' tells you nothing about what to do. | Every risk register entry is a specific, plausible bribery scenario describing who, what, to whom, how, and under what conditions
+Applying the same risk profile across all jurisdictions | Bribery risk is local. Vietnam, Singapore, France, and Nigeria present entirely different scenarios even for the same company in the same industry. | Jurisdiction-specific scenario development; local management and legal counsel engagement; per-jurisdiction gross scoring
+Conflating gross and net risk | If you only see net risk, you cannot evaluate whether your controls are adequate. Collapsing the two makes the control framework invisible. | Explicit gross scoring stage before controls are introduced; net scoring stage after control mapping and testing; documented gap between gross and net
+Recording controls without testing them | An untested control is a documented intention. Net risk scores based on untested controls are fiction. | Every control relied upon in net risk scoring must have been tested for design adequacy, implementation, and operational effectiveness. Test evidence documented.
+Assuming controls reduce consequence as well as likelihood | Controls primarily reduce likelihood. If bribery occurs despite controls, the legal and reputational consequence is the same. | Consequence scores are assessed independently of controls. Controls affect the likelihood side of the matrix. High-consequence scenarios retain elevated net risk even with effective controls.
+Treating risk acceptance as absence of action | Risks 'accepted' without documentation or authorisation represent unmanaged exposure, not a governance decision. | Acceptance decisions are explicitly documented, authorised at the appropriate level, and scheduled for review
+Not assessing passive/inbound bribery | ISO 37001 covers both active and passive bribery. Organisations that only assess outbound bribery miss half the risk. | Risk register includes scenarios for staff receiving bribes, procurement staff soliciting kickbacks, and management conflicts of interest
+Failing to connect risk assessment to control design | Risk assessment produced as a standalone document with no visible influence on the control programme, training, or audit plan. | Risk assessment directly drives: control programme design; training scenario content; internal audit focus areas; due diligence thresholds; monitoring priorities
+No review following significant events | Risk assessment becomes stale as the business changes. Controls designed for the business of three years ago may not address the business of today. | Documented trigger-based review protocol; ABCO monitors for trigger events; interim review findings reported to senior management
+Treatment plans that are generic or aspirational | 'Enhance compliance culture' or 'increase training' are not treatment actions. They cannot be implemented, measured, or verified. | Treatment plans specify exact actions, responsible owners, completion dates, resource requirements, and the specific evidence that will demonstrate completion and effectiveness
+
+
+Table 24:
+AUDITOR PERSPECTIVE | An auditor's job is not to find a risk assessment document. It is to determine whether the organisation actually knows what its bribery risks are, and whether it has built controls that actually work. A well-formatted document that does not reflect genuine analysis will not survive a competent Stage 2 audit.
+
+
+Table 25:
+SPEEKI | Speeki provides independent anti-bribery risk assessments, ISO 37001 certification, and ABMS implementation support for organisations across 100+ countries. Our accredited auditors and subject matter specialists conduct risk assessments at the level of specificity that ISO 37001 demands — and that your organisation's risk profile deserves. Contact us at speeki.com.
+
+
+Table 26:
+About Speeki
+Speeki is an independent ESG assurance and ISO certification firm operating across 100+ countries. We specialise in anti-bribery, compliance, and sustainability management systems — helping organisations build programmes that work, then verifying they do.
+speeki.com | Our Services
+• ISO 37001 Anti-Bribery Certification
+

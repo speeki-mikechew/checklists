@@ -1,0 +1,1434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- Security: Protect page with authentication -->
+    <script src="assets/auth.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ISO 26000 Social Responsibility Checklist by Speeki. Assess your organisation's social responsibility practices across seven core subjects. Interactive guidance tool with progress tracking.">
+    <meta name="keywords" content="ISO 26000, social responsibility, CSR, stakeholder engagement, human rights, labour practices, environmental responsibility, fair operating practices">
+    <meta name="author" content="Speeki">
+    <meta property="og:title" content="ISO 26000 Social Responsibility Checklist | Speeki">
+    <meta property="og:description" content="Assess your organisation's social responsibility practices using ISO 26000 guidance across seven core subjects.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.speeki.com/checklists/iso-26000-social-responsibility">
+    <meta property="og:site_name" content="Speeki">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="ISO 26000 Social Responsibility Checklist | Speeki">
+    <meta name="twitter:description" content="Assess your organisation's social responsibility practices using ISO 26000 guidance.">
+    <meta name="robots" content="index, follow">
+    <title>ISO 26000 Social Responsibility Checklist | Speeki - CSR Assessment</title>
+    <link rel="canonical" href="https://www.speeki.com/checklists/iso-26000-social-responsibility">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "ISO 26000 Social Responsibility Checklist",
+        "description": "Assess your organisation's social responsibility practices using ISO 26000 guidance across seven core subjects including organisational governance, human rights, labour practices, environment, fair operating practices, consumer issues, and community involvement.",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Speeki",
+            "url": "https://www.speeki.com"
+        }
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/growth.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --speeki-green: #00FF7F;
+            --speeki-dark-blue: #0a1f44;
+            --speeki-dark: #0a1f44;
+            --speeki-gray: #4a5568;
+            --speeki-light-gray: #f8f9fa;
+            --speeki-border: #e5e7eb;
+        }
+
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', 'Arial', sans-serif;
+            background: #ffffff;
+            min-height: 100vh;
+            color: var(--speeki-dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0;
+        }
+
+        nav {
+            background: #ffffff;
+            border-bottom: 1px solid var(--speeki-border);
+            padding: 20px 4vw;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        .nav-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .nav-logo {
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .nav-logo img {
+            height: 32px;
+            width: auto;
+        }
+
+        .nav-links a {
+            color: var(--speeki-dark);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--speeki-green);
+        }
+
+        header {
+            padding: 80px 4vw 60px;
+            background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+        }
+
+        .header-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 48px;
+            font-weight: 700;
+            letter-spacing: -1.5px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .highlight {
+            color: var(--speeki-green);
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: var(--speeki-gray);
+            max-width: 800px;
+            margin-bottom: 40px;
+        }
+
+        .progress-section {
+            background: white;
+            padding: 24px;
+            border-radius: 8px;
+            border: 1px solid var(--speeki-border);
+            max-width: 500px;
+        }
+
+        .progress-label {
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--speeki-gray);
+            margin-bottom: 12px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 6px;
+            background: #e5e5e5;
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--speeki-green);
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        main {
+            padding: 60px 4vw;
+        }
+
+        .main-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .checklist-item {
+            background: white;
+            padding: 32px;
+            border-radius: 8px;
+            border: 1px solid var(--speeki-border);
+            margin-bottom: 24px;
+        }
+
+        .item-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 24px;
+        }
+
+        .item-number {
+            min-width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--speeki-light-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 20px;
+            color: var(--speeki-dark);
+            position: relative;
+            flex-shrink: 0;
+        }
+
+        .item-number.completed {
+            background: var(--speeki-green);
+            color: white;
+        }
+
+        .item-number.completed::after {
+            content: '✓';
+            position: absolute;
+            font-size: 24px;
+        }
+
+        .item-title {
+            flex: 1;
+        }
+
+        .item-title h2 {
+            font-size: 24px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+        }
+
+        .checklist-subitems {
+            margin-left: 68px;
+        }
+
+        .subitem {
+            margin-bottom: 16px;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .subitem input[type="checkbox"] {
+            margin-top: 4px;
+            width: 20px;
+            height: 20px;
+            cursor: pointer;
+            accent-color: var(--speeki-green);
+            flex-shrink: 0;
+        }
+
+        .subitem label {
+            cursor: pointer;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        .red-flags {
+            background: #fef2f2;
+            padding: 40px 4vw;
+            margin: 60px 0;
+        }
+
+        .red-flags-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .red-flags h2 {
+            font-size: 36px;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin-bottom: 32px;
+            color: var(--speeki-dark);
+        }
+
+        .red-flags-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .red-flag-item {
+            background: white;
+            padding: 24px;
+            border-radius: 8px;
+            border-left: 4px solid #dc2626;
+        }
+
+        .red-flag-item h3 {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: #dc2626;
+        }
+
+        .red-flag-item p {
+            font-size: 14px;
+            color: var(--speeki-gray);
+        }
+
+        .questions {
+            background: #f0fdf4;
+            padding: 40px 4vw;
+            margin: 60px 0;
+        }
+
+        .questions-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .questions h2 {
+            font-size: 36px;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin-bottom: 32px;
+        }
+
+        .question-item {
+            background: white;
+            padding: 24px;
+            border-radius: 8px;
+            border: 1px solid var(--speeki-border);
+            margin-bottom: 16px;
+        }
+
+        .question-item h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--speeki-dark);
+        }
+
+        .question-item p {
+            font-size: 14px;
+            color: var(--speeki-gray);
+            line-height: 1.6;
+        }
+
+        .summary {
+            background: var(--speeki-light-gray);
+            padding: 60px 4vw;
+        }
+
+        .summary-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .summary h2 {
+            font-size: 36px;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin-bottom: 40px;
+        }
+
+        .summary-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+            margin-bottom: 40px;
+        }
+
+        .stat-card {
+            background: white;
+            padding: 32px;
+            border-radius: 8px;
+            border: 1px solid var(--speeki-border);
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--speeki-green);
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: var(--speeki-gray);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .summary-actions {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        button {
+            padding: 16px 32px;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-primary {
+            background: var(--speeki-dark-blue);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(10, 31, 68, 0.3);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: var(--speeki-dark-blue);
+            border: 1px solid var(--speeki-dark-blue);
+        }
+
+        .btn-secondary:hover {
+            background: var(--speeki-light-gray);
+        }
+
+        .cta {
+            background: var(--speeki-dark-blue);
+            color: white;
+            padding: 80px 4vw;
+        }
+
+        .cta-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .cta h2 {
+            font-size: 36px;
+            font-weight: 700;
+            letter-spacing: -1px;
+            margin-bottom: 20px;
+        }
+
+        .cta p {
+            font-size: 18px;
+            margin-bottom: 32px;
+            opacity: 0.9;
+        }
+
+        .cta button {
+            background: var(--speeki-green);
+            color: var(--speeki-dark);
+        }
+
+        .cta button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 255, 127, 0.4);
+        }
+
+        footer {
+            background: white;
+            border-top: 1px solid var(--speeki-border);
+            padding: 40px 4vw;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .footer-text {
+            font-size: 14px;
+            color: var(--speeki-gray);
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 24px;
+        }
+
+        .footer-links a {
+            color: var(--speeki-gray);
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--speeki-green);
+        }
+        .auditor-insight {
+            background: #f8f9fa;
+            border-left: 4px solid var(--speeki-green);
+            padding: 24px;
+            margin: 24px 0 32px 0;
+            border-radius: 4px;
+        }
+
+        .auditor-insight h4 {
+            color: var(--speeki-dark-blue);
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .auditor-insight h4::before {
+            content: "";
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230a1f44' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E") no-repeat center;
+            background-size: contain;
+        }
+
+        .auditor-insight p {
+            color: var(--speeki-gray);
+            font-size: 15px;
+            margin-bottom: 12px;
+            line-height: 1.6;
+        }
+
+        .auditor-insight ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .auditor-insight li {
+            color: var(--speeki-gray);
+            font-size: 15px;
+            margin-bottom: 8px;
+            line-height: 1.6;
+        }
+
+        .auditor-insight strong {
+            color: var(--speeki-dark);
+            font-weight: 600;
+        }
+
+        .red-flags-section {
+            margin: 32px 0;
+            background: #ffffff;
+            border: 1px solid var(--speeki-border);
+            border-left: 3px solid #c53030;
+            border-radius: 4px;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+
+        .red-flags-section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .red-flags-section-header {
+            padding: 20px 24px;
+            font-weight: 600;
+            font-size: 16px;
+            color: var(--speeki-dark-blue);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: #f8f9fa;
+            border-bottom: 1px solid var(--speeki-border);
+        }
+
+        .red-flags-section-header::before {
+            content: "";
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23c53030' stroke='%23c53030' stroke-width='2'%3E%3Cpath d='M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z'/%3E%3Cline x1='4' y1='22' x2='4' y2='15'/%3E%3C/svg%3E") no-repeat center;
+            background-size: contain;
+        }
+
+        .red-flags-content {
+            padding: 20px 24px;
+        }
+
+        .red-flag-category {
+            margin-bottom: 20px;
+        }
+
+        .red-flag-category h5 {
+            color: #c53030;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .red-flag-category ul {
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .red-flag-category li {
+            color: var(--speeki-gray);
+            font-size: 14px;
+            margin-bottom: 6px;
+            line-height: 1.5;
+        }
+
+        /* Inline Auditor Tips - contextual insights per section */
+        .auditor-tip {
+            margin: 20px 0 32px 0;
+            background: #ffffff;
+            border: 1px solid var(--speeki-border);
+            border-left: 3px solid var(--speeki-green);
+            border-radius: 4px;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+
+        .auditor-tip.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .auditor-tip-header {
+            padding: 18px 24px;
+            font-weight: 600;
+            font-size: 14px;
+            color: var(--speeki-dark-blue);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: #f8f9fa;
+            border-bottom: 1px solid var(--speeki-border);
+        }
+
+        .auditor-tip-header::before {
+            content: "";
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%230a1f44' stroke-width='2'%3E%3Ccircle cx='11' cy='11' r='8'/%3E%3Cpath d='m21 21-4.35-4.35'/%3E%3C/svg%3E") no-repeat center;
+            background-size: contain;
+        }
+
+        .auditor-tip-content {
+            padding: 24px;
+        }
+
+        .auditor-tip-content p {
+            color: var(--speeki-gray);
+            font-size: 14px;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        .auditor-tip-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .auditor-tip-content .red-flag {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            padding: 10px 12px;
+            background: #fef2f2;
+            border-radius: 6px;
+            margin-top: 12px;
+        }
+
+        .auditor-tip-content .red-flag::before {
+            content: "";
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            flex-shrink: 0;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23991b1b' stroke='%23991b1b' stroke-width='2'%3E%3Cpath d='M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z'/%3E%3Cline x1='12' y1='9' x2='12' y2='13'/%3E%3Cline x1='12' y1='17' x2='12.01' y2='17'/%3E%3C/svg%3E") no-repeat center;
+            background-size: contain;
+        }
+
+        .auditor-tip-content .red-flag-text {
+            color: #991b1b;
+            font-size: 13px;
+            line-height: 1.5;
+            font-weight: 500;
+        }
+
+        .auditor-tip-content .why-matters {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+            padding: 10px 12px;
+            background: #eff6ff;
+            border-radius: 6px;
+            margin-top: 12px;
+        }
+
+        .auditor-tip-content .why-matters::before {
+            content: "";
+            display: inline-block;
+            width: 14px;
+            height: 14px;
+            flex-shrink: 0;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231e40af' stroke-width='2'%3E%3Cpath d='M12 2a7 7 0 017 7c0 2.38-1.19 4.47-3 5.74V17a1 1 0 01-1 1H9a1 1 0 01-1-1v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 017-7z'/%3E%3Cpath d='M9 21h6'/%3E%3Cpath d='M9 17v4'/%3E%3Cpath d='M15 17v4'/%3E%3C/svg%3E") no-repeat center;
+            background-size: contain;
+        }
+
+        .auditor-tip-content .why-matters-text {
+            color: #1e40af;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .auditor-tip {
+                margin-left: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 36px;
+            }
+
+            .checklist-subitems {
+                margin-left: 0;
+            }
+
+            .item-header {
+                flex-direction: column;
+            }
+
+            .summary-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-links {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-content">
+            <a href="index.html" class="nav-logo"><img src="speeki-logo.png" alt="Speeki - The Sustainability Firm"></a>
+            <div class="nav-links">
+                <a href="index.html">← Back to Resources</a>
+            </div>
+        </div>
+    </nav>
+
+    <header>
+        <div class="header-content">
+            <h1>ISO 26000 <span class="highlight">Social Responsibility</span> Checklist</h1>
+            <p class="subtitle">Assess your organisation's social responsibility practices across seven core subjects using ISO 26000 guidance. Build a sustainable business that contributes to society while respecting stakeholders and the environment.</p>
+
+            <div class="progress-section">
+                <div class="progress-label">
+                    <span>Your Progress</span>
+                    <span id="progress-percentage">0%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="main-content">
+            <div class="checklist-item">
+                <div class="item-header">
+                    <div class="item-number" data-section="1">1</div>
+                    <div class="item-title">
+                        <h2>Organisational Governance</h2>
+                    </div>
+                </div>
+                <div class="checklist-subitems">
+                    <div class="subitem">
+                        <input type="checkbox" id="item-1-1" data-section="1">
+                        <label for="item-1-1">Board-level oversight and accountability for social responsibility</label>
+                    </div>
+                    <div class="subitem">
+                        <input type="checkbox" id="item-1-2" data-section="1">
+                        <label for="item-1-2">Transparent decision-making processes and governance structures</label>
+                    </div>
+                    <div class="subitem">
+                        <input type="checkbox" id="item-1-3" data-section="1">
+                        <label for="item-1-3">Integration of social responsibility into organisational strategy and operations</label>
+                    </div>
+                    <div class="subitem">
+                        <input type="checkbox" id="item-1-4" data-section="1">
+                        <label for="item-1-4">Regular review and assessment of social responsibility performance</label>
+                    </div>
+                    <div class="subitem">
+                        <input type="checkbox" id="item-1-5" data-section="1">
+                        <label for="item-1-5">Stakeholder engagement integrated into governance processes</label>
+                    </div>
+                </div>
+                <div class="auditor-tip">
+                    <div class="auditor-tip-header">What Auditors Look For: Organisational Governance</div>
+                    <div class="auditor-tip-content">
+                        <p>Auditors assess whether social responsibility is genuinely embedded in governance structures or exists only as a superficial commitment. They examine board-level accountability, decision-making transparency, and evidence that social responsibility considerations influence strategic choices.</p>
+                        <p>Key evidence includes board meeting minutes discussing SR topics, documented governance policies referencing ISO 26000 principles, and clear accountability assignments for social responsibility outcomes.</p>
+                        <div class="red-flag">
+                            <span class="red-flag-text">Social responsibility assigned to junior staff without board oversight or strategic authority signals weak governance integration.</span>
+                        </div>
+                        <div class="why-matters">
+                            <span class="why-matters-text">Strong governance is the foundation of ISO 26000 - without board-level commitment, other core subjects cannot be effectively addressed.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <div class="item-header">
+                    <div class="item-number" data-section="2">2</div>
+                    <div class="item-title">
+                        <h2>Human Rights</h2>
+                    </div>
+                </div>
+                <div class="checklist-subitems">
+                    <div class="subitem">
+                        <input type="checkbox" id="item-2-1" data-section="2">
+                        <label for="item-2-1">Due diligence to identify human rights impacts across operations and value chain</label>
+                    </div>
+                    <div class="subitem">
+                        <input type="checkbox" id="item-2-2" data-section="2">
+                        <label for="item-2-2">Policies against discrimination, harassment, and abuse</label>
+                    </div>
+                    <div class="subitem">
+                        <input type="checkbox" id="item-2-3" data-section="2">
+                        <label for="item-2-3">Respect for civil and political rights of workers and communities</label>
+                    </div>
+                    <div class="subitem">
+                        <input type="checkbox" id="item-2-4" data-section="2">
+                        <label for="item-2-4">Protection of economic, social, and cultural rights</label>
+                    </div>
+                    <div class="subitem">
+                        <input type="checkbox" id="item-2-5" data-section="2">
+                        <label for="item-2-5">Remediation mechanisms for human rights violations or grievances</label>
+                    </div>
+                    <div class="subitem">
+                        <input type="checkbox" id="item-2-6" data-section="2">
+                        <label for="item-2-6">Avoidance of complicity in human rights abuses through business relationships</label>
+                    </div>
+                </div>
+                <div class="auditor-tip">
+                    <div class="auditor-tip-header">What Auditors Look For: Human Rights</div>
+                    <div class="auditor-tip-content">
+                        <p>Auditors evaluate the rigour of human rights due diligence processes, looking for systematic identification of risks across operations and the value chain. They expect documented assessments that go beyond tier-one suppliers to identify salient human rights issues.</p>
+                        <p>Evidence of functioning grievance mechanisms accessible to affected stakeholders is essential, along with records demonstrating how identified impacts were remediated.</p>
+                        <div class="red-flag">
+                            <span class="red-flag-text">Lack of documented remedy actions where human rights impacts have been identified indicates due diligence without meaningful follow-through.</span>
+                        </div>
+                        <div class="why-matters">
+                            <span class="why-matters-text">Human rights due diligence is increasingly mandated by legislation globally - gaps here create both ethical and legal exposure.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <div class="item-header">
+                    <div class="item-number" data-section="3">3</div>
+                    <div class="item-title">
+                        <h2>Labour Practices</h2>
+                    </div>
+                </div>
+                <div class="checklist-subitems">
+                    <div class="subitem">
+                        <input type="checkbox" id="item-3-1" data-section="3">
+                        <label for="item-3-1">Fair employment practices without discrimination or coercion</label>
+                    </div>
+                    <div class="subitem">
+                        <input type="checkbox" id="item-3-2" data-section="3">
+                        <label for="item-3-2">Safe and healthy working conditions for all employees</label>
+                    </div>
+                    <div class="subitem">
+                        <input type="checkbox" id="item-3-3" data-section="3">
+                        <label for="item-3-3">Recognition of workers' rights to collective bargaining and freedom of association</label>
+                    </div>
+                    <div class="subitem">
+                        <input type="checkbox" id="item-3-4" data-section="3">
+                        <label for="item-3-4">Social dialogue mechanisms between management and workers</label>
+                    </div>
+                    <div class="subitem">
+                        <input type="checkbox" id="item-3-5" data-section="3">
+                        <label for="item-3-5">Training and skills development opportunities for employees</label>
+                    </div>
+                    <div class="subitem">
+                        <input type="checkbox" id="item-3-6" data-section="3">
+                        <label for="item-3-6">Fair remuneration and benefits aligned with local living standards</label>
+                    </div>
+                </div>
+                <div class="auditor-tip">
+                    <div class="auditor-tip-header">What Auditors Look For: Labour Practices</div>
+                    <div class="auditor-tip-content">
+                        <p>Auditors examine whether labour practices extend equitably to all workers, including contractors, temporary staff, and those in the supply chain. They look for documented health and safety management systems with incident tracking and root cause analysis.</p>
+                        <p>Evidence of social dialogue mechanisms, training records, and fair remuneration policies (including gender pay gap analysis) demonstrates commitment to worker welfare.</p>
+                        <div class="red-flag">
+                            <span class="red-flag-text">Contractor workforce excluded from health and safety metrics or training programmes indicates inconsistent application of labour standards.</span>
+                        </div>
+                        <div class="why-matters">
+                            <span class="why-matters-text">Labour practices directly affect employee wellbeing, productivity, and organisational reputation - they are often the first area stakeholders scrutinise.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <div class="item-header">
+                    <div class="item-number" data-section="4">4</div>
+                    <div class="item-title">
+                        <h2>The Environment</h2>
+                    </div>
+                </div>
+                <div class="checklist-subitems">
+                    <div class="subitem">
+                        <input type="checkbox" id="item-4-1" data-section="4">
+                        <label for="item-4-1">Pollution prevention and reduction across operations</label>
+                    </div>
+                    <div class="subitem">
+                        <input type="checkbox" id="item-4-2" data-section="4">
+                        <label for="item-4-2">Sustainable resource use and circular economy principles</label>
+                    </div>
+                    <div class="subitem">
+                        <input type="checkbox" id="item-4-3" data-section="4">
+                        <label for="item-4-3">Climate change mitigation and adaptation strategies</label>
+                    </div>
+                    <div class="subitem">
+                        <input type="checkbox" id="item-4-4" data-section="4">
+                        <label for="item-4-4">Protection and restoration of the natural environment and biodiversity</label>
+                    </div>
+                    <div class="subitem">
+                        <input type="checkbox" id="item-4-5" data-section="4">
+                        <label for="item-4-5">Life-cycle thinking in product and service design</label>
+                    </div>
+                    <div class="subitem">
+                        <input type="checkbox" id="item-4-6" data-section="4">
+                        <label for="item-4-6">Environmental risk assessment and management systems</label>
+                    </div>
+                </div>
+                <div class="auditor-tip">
+                    <div class="auditor-tip-header">What Auditors Look For: The Environment</div>
+                    <div class="auditor-tip-content">
+                        <p>Auditors assess environmental performance through quantified metrics on emissions, resource consumption, waste generation, and biodiversity impacts. They expect evidence of life-cycle thinking in product design and documented climate strategies with measurable targets.</p>
+                        <p>Environmental management systems (ISO 14001 alignment), pollution prevention programmes, and circular economy initiatives demonstrate mature environmental practices.</p>
+                        <div class="red-flag">
+                            <span class="red-flag-text">Absence of Scope 3 emissions tracking or climate targets indicates incomplete environmental accountability across the value chain.</span>
+                        </div>
+                        <div class="why-matters">
+                            <span class="why-matters-text">Environmental stewardship is increasingly linked to financial performance through regulatory requirements, resource costs, and stakeholder expectations.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <div class="item-header">
+                    <div class="item-number" data-section="5">5</div>
+                    <div class="item-title">
+                        <h2>Fair Operating Practices</h2>
+                    </div>
+                </div>
+                <div class="checklist-subitems">
+                    <div class="subitem">
+                        <input type="checkbox" id="item-5-1" data-section="5">
+                        <label for="item-5-1">Anti-corruption policies and procedures throughout operations</label>
+                    </div>
+                    <div class="subitem">
+                        <input type="checkbox" id="item-5-2" data-section="5">
+                        <label for="item-5-2">Responsible political involvement and lobbying practices</label>
+                    </div>
+                    <div class="subitem">
+                        <input type="checkbox" id="item-5-3" data-section="5">
+                        <label for="item-5-3">Fair competition and anti-trust compliance</label>
+                    </div>
+                    <div class="subitem">
+                        <input type="checkbox" id="item-5-4" data-section="5">
+                        <label for="item-5-4">Promotion of social responsibility in the supply chain</label>
+                    </div>
+                    <div class="subitem">
+                        <input type="checkbox" id="item-5-5" data-section="5">
+                        <label for="item-5-5">Respect for intellectual property rights</label>
+                    </div>
+                </div>
+                <div class="auditor-tip">
+                    <div class="auditor-tip-header">What Auditors Look For: Fair Operating Practices</div>
+                    <div class="auditor-tip-content">
+                        <p>Auditors evaluate anti-corruption programmes for comprehensiveness, including policies, risk assessments, training records, and third-party due diligence procedures. They examine competitive practices and political engagement for ethical boundaries.</p>
+                        <p>Supply chain responsibility is critical - auditors look for documented supplier codes of conduct, assessment processes, and evidence that social responsibility requirements flow through procurement decisions.</p>
+                        <div class="red-flag">
+                            <span class="red-flag-text">Anti-corruption training limited to senior management or gifts and hospitality registers not systematically reviewed suggests superficial compliance.</span>
+                        </div>
+                        <div class="why-matters">
+                            <span class="why-matters-text">Fair operating practices protect organisational reputation and prevent legal exposure from corruption, anti-competitive behaviour, or supply chain misconduct.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <div class="item-header">
+                    <div class="item-number" data-section="6">6</div>
+                    <div class="item-title">
+                        <h2>Consumer Issues</h2>
+                    </div>
+                </div>
+                <div class="checklist-subitems">
+                    <div class="subitem">
+                        <input type="checkbox" id="item-6-1" data-section="6">
+                        <label for="item-6-1">Fair marketing, truthful information, and fair contractual practices</label>
+                    </div>
+                    <div class="subitem">
+                        <input type="checkbox" id="item-6-2" data-section="6">
+                        <label for="item-6-2">Protection of consumer health and safety in products and services</label>
+                    </div>
+                    <div class="subitem">
+                        <input type="checkbox" id="item-6-3" data-section="6">
+                        <label for="item-6-3">Sustainable consumption promotion and education</label>
+                    </div>
+                    <div class="subitem">
+                        <input type="checkbox" id="item-6-4" data-section="6">
+                        <label for="item-6-4">Consumer data protection and privacy safeguards</label>
+                    </div>
+                    <div class="subitem">
+                        <input type="checkbox" id="item-6-5" data-section="6">
+                        <label for="item-6-5">Access to essential services for vulnerable populations</label>
+                    </div>
+                    <div class="subitem">
+                        <input type="checkbox" id="item-6-6" data-section="6">
+                        <label for="item-6-6">Consumer service, support, and complaint resolution mechanisms</label>
+                    </div>
+                </div>
+                <div class="auditor-tip">
+                    <div class="auditor-tip-header">What Auditors Look For: Consumer Issues</div>
+                    <div class="auditor-tip-content">
+                        <p>Auditors examine marketing materials and product information for accuracy and transparency. They assess consumer health and safety through product testing records, recall procedures, and incident response protocols.</p>
+                        <p>Data protection practices, complaint resolution systems, and accessibility considerations for vulnerable consumers are key areas of focus for demonstrating consumer-centric responsibility.</p>
+                        <div class="red-flag">
+                            <span class="red-flag-text">Consumer complaint data not systematically analysed for root causes or product safety recalls handled reactively rather than proactively.</span>
+                        </div>
+                        <div class="why-matters">
+                            <span class="why-matters-text">Consumer trust is earned through transparent practices and responsive service - failures here directly impact brand reputation and market position.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <div class="item-header">
+                    <div class="item-number" data-section="7">7</div>
+                    <div class="item-title">
+                        <h2>Community Involvement and Development</h2>
+                    </div>
+                </div>
+                <div class="checklist-subitems">
+                    <div class="subitem">
+                        <input type="checkbox" id="item-7-1" data-section="7">
+                        <label for="item-7-1">Engagement with local communities on issues affecting them</label>
+                    </div>
+                    <div class="subitem">
+                        <input type="checkbox" id="item-7-2" data-section="7">
+                        <label for="item-7-2">Education and skills development support for community members</label>
+                    </div>
+                    <div class="subitem">
+                        <input type="checkbox" id="item-7-3" data-section="7">
+                        <label for="item-7-3">Employment creation and skills development in local communities</label>
+                    </div>
+                    <div class="subitem">
+                        <input type="checkbox" id="item-7-4" data-section="7">
+                        <label for="item-7-4">Technology development and access initiatives</label>
+                    </div>
+                    <div class="subitem">
+                        <input type="checkbox" id="item-7-5" data-section="7">
+                        <label for="item-7-5">Wealth and income creation through local sourcing and partnerships</label>
+                    </div>
+                    <div class="subitem">
+                        <input type="checkbox" id="item-7-6" data-section="7">
+                        <label for="item-7-6">Health promotion and access to healthcare support</label>
+                    </div>
+                    <div class="subitem">
+                        <input type="checkbox" id="item-7-7" data-section="7">
+                        <label for="item-7-7">Social investment aligned with community priorities</label>
+                    </div>
+                </div>
+                <div class="auditor-tip">
+                    <div class="auditor-tip-header">What Auditors Look For: Community Involvement and Development</div>
+                    <div class="auditor-tip-content">
+                        <p>Auditors assess whether community engagement is genuine and responsive to local priorities rather than corporate-driven philanthropy. They look for evidence of community consultation, needs assessments, and programmes designed in partnership with local stakeholders.</p>
+                        <p>Documentation of local hiring practices, skills development initiatives, local procurement policies, and health promotion activities demonstrates substantive community commitment.</p>
+                        <div class="red-flag">
+                            <span class="red-flag-text">Community investment programmes designed without community input or impact measurement indicates tokenistic rather than meaningful engagement.</span>
+                        </div>
+                        <div class="why-matters">
+                            <span class="why-matters-text">Organisations operate within communities - genuine investment in community development builds social licence and long-term business sustainability.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="checklist-item">
+                <div class="item-header">
+                    <div class="item-number" data-section="8">8</div>
+                    <div class="item-title">
+                        <h2>Stakeholder Identification and Engagement</h2>
+                    </div>
+                </div>
+                <div class="checklist-subitems">
+                    <div class="subitem">
+                        <input type="checkbox" id="item-8-1" data-section="8">
+                        <label for="item-8-1">Systematic identification of all relevant stakeholder groups</label>
+                    </div>
+                    <div class="subitem">
+                        <input type="checkbox" id="item-8-2" data-section="8">
+                        <label for="item-8-2">Regular and meaningful engagement with stakeholders</label>
+                    </div>
+                    <div class="subitem">
+                        <input type="checkbox" id="item-8-3" data-section="8">
+                        <label for="item-8-3">Consideration of stakeholder interests in decision-making</label>
+                    </div>
+                    <div class="subitem">
+                        <input type="checkbox" id="item-8-4" data-section="8">
+                        <label for="item-8-4">Transparent communication of social responsibility performance</label>
+                    </div>
+                    <div class="subitem">
+                        <input type="checkbox" id="item-8-5" data-section="8">
+                        <label for="item-8-5">Mechanisms for stakeholder feedback and grievances</label>
+                    </div>
+                </div>
+                <div class="auditor-tip">
+                    <div class="auditor-tip-header">What Auditors Look For: Stakeholder Identification and Engagement</div>
+                    <div class="auditor-tip-content">
+                        <p>Auditors evaluate stakeholder mapping processes for comprehensiveness and whether engagement approaches are tailored to different stakeholder groups. They expect documented stakeholder engagement plans with clear objectives, methods, and feedback loops.</p>
+                        <p>Evidence that stakeholder input genuinely influences organisational decisions - not just consultation for appearance - is essential. Transparency in communicating both positive performance and challenges builds credibility.</p>
+                        <div class="red-flag">
+                            <span class="red-flag-text">Stakeholder engagement limited to shareholders and customers while excluding workers, communities, or civil society groups signals incomplete stakeholder analysis.</span>
+                        </div>
+                        <div class="why-matters">
+                            <span class="why-matters-text">Effective stakeholder engagement is the mechanism through which organisations understand expectations, identify risks, and build the relationships needed for sustainable success.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="red-flags">
+        <div class="red-flags-content">
+            <h2>Red Flags in Social Responsibility</h2>
+            <div class="red-flags-grid">
+                <div class="red-flag-item">
+                    <h3>Lack of Governance Oversight</h3>
+                    <p>Social responsibility relegated to junior staff without board-level accountability or strategic integration.</p>
+                </div>
+                <div class="red-flag-item">
+                    <h3>Human Rights Blind Spots</h3>
+                    <p>No systematic assessment of human rights risks in operations or supply chain, particularly in high-risk regions.</p>
+                </div>
+                <div class="red-flag-item">
+                    <h3>Poor Labour Conditions</h3>
+                    <p>Evidence of unfair treatment, unsafe working conditions, or suppression of workers' rights to organise.</p>
+                </div>
+                <div class="red-flag-item">
+                    <h3>Environmental Degradation</h3>
+                    <p>Operations causing significant pollution, resource depletion, or biodiversity loss without mitigation plans.</p>
+                </div>
+                <div class="red-flag-item">
+                    <h3>Corruption Vulnerabilities</h3>
+                    <p>Weak anti-corruption controls, opaque political involvement, or unfair competitive practices.</p>
+                </div>
+                <div class="red-flag-item">
+                    <h3>Stakeholder Exclusion</h3>
+                    <p>Limited or tokenistic engagement with affected communities, workers, or other key stakeholders.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="questions">
+        <div class="questions-content">
+            <h2>Self-Assessment Questions</h2>
+            <div class="question-item">
+                <h3>How does your organisation balance financial performance with social and environmental considerations?</h3>
+                <p>Assess whether social responsibility is truly integrated into strategy or treated as a secondary concern.</p>
+            </div>
+            <div class="question-item">
+                <h3>Which stakeholder groups have the most influence on your decisions, and are any groups systematically excluded?</h3>
+                <p>Identify potential blind spots in stakeholder engagement that could lead to adverse impacts.</p>
+            </div>
+            <div class="question-item">
+                <h3>What mechanisms exist for workers, communities, or consumers to raise concerns without fear of retaliation?</h3>
+                <p>Effective grievance mechanisms are essential for identifying and addressing social responsibility failures.</p>
+            </div>
+            <div class="question-item">
+                <h3>How do you verify that social responsibility commitments extend throughout your supply chain?</h3>
+                <p>Many social responsibility risks exist in the value chain beyond direct operations.</p>
+            </div>
+            <div class="question-item">
+                <h3>What measures track progress on social responsibility, and are these reported transparently to stakeholders?</h3>
+                <p>Meaningful accountability requires clear metrics, regular monitoring, and public disclosure of performance.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="summary">
+        <div class="summary-content">
+            <h2>Your Progress Summary</h2>
+            <div class="summary-stats">
+                <div class="stat-card">
+                    <div class="stat-number" id="items-completed">0</div>
+                    <div class="stat-label">Items Completed</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="items-remaining">46</div>
+                    <div class="stat-label">Items Remaining</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" id="overall-progress">0%</div>
+                    <div class="stat-label">Overall Progress</div>
+                </div>
+            </div>
+            <div class="summary-actions">
+                <button class="btn-secondary" onclick="resetChecklist()">Reset Checklist</button>
+                <button class="btn-primary" onclick="exportProgress()">Export Progress</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="cta-content">
+            <h2>Ready for Social Responsibility Assurance?</h2>
+            <p>The Speeki Platform provides the documentation framework and evidence trail that auditors require when assessing social responsibility management systems against ISO 26000 guidance.</p>
+            <button onclick="window.open('https://www.speeki.com', '_blank')">Explore Speeki Platform</button>
+        </div>
+    </section>
+
+        <!-- Red Flags Section -->
+    <div class="red-flags-section">
+            <div class="red-flags-section-header">What Auditors Look For: ISO 26000 Social Responsibility Red Flags</div>
+        <div class="red-flags-content">
+            <p style="color: var(--speeki-gray); font-size: 15px; margin-bottom: 20px;">When assessing social responsibility management systems, auditors commonly flag the following governance, human rights, and labour practice concerns.</p>
+
+            <div class="red-flag-category">
+                <h5>Governance Red Flags</h5>
+                <ul>
+                    <li>Board composition does not include ESG expertise</li>
+                    <li>Stakeholder engagement conducted ad hoc, not systematically</li>
+                    <li>No documented due diligence process for social impacts</li>
+                </ul>
+            </div>
+
+            <div class="red-flag-category">
+                <h5>Human Rights Red Flags</h5>
+                <ul>
+                    <li>Supply chain due diligence limited to tier 1 suppliers</li>
+                    <li>Grievance mechanisms not accessible to affected communities</li>
+                    <li>No evidence of remedy where impacts identified</li>
+                </ul>
+            </div>
+
+            <div class="red-flag-category">
+                <h5>Labour Practice Red Flags</h5>
+                <ul>
+                    <li>Contractor workforce excluded from health and safety metrics</li>
+                    <li>No gender pay gap analysis or disclosure</li>
+                    <li>Training records incomplete for safety-critical roles</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+<footer>
+        <div class="footer-content">
+            <div class="footer-text">
+                <p>&copy; 2026 Speeki Pte Ltd. All rights reserved.</p>
+                <p>Interactive checklist created by Speeki</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://www.speeki.com">About Speeki</a>
+                <a href="https://www.speeki.com/contact">Contact Us</a>
+                <a href="index.html">All Resources</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const TOTAL_ITEMS = 46;
+        const STORAGE_KEY = 'iso26000SocialResponsibilityProgress';
+
+        function loadProgress() {
+            const saved = localStorage.getItem(STORAGE_KEY);
+            if (saved) {
+                const progress = JSON.parse(saved);
+                progress.forEach(id => {
+                    const checkbox = document.getElementById(id);
+                    if (checkbox) checkbox.checked = true;
+                });
+            }
+            updateProgress();
+        }
+
+        function saveProgress() {
+            const checked = Array.from(document.querySelectorAll('input[type="checkbox"]:checked'))
+                .map(cb => cb.id);
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(checked));
+        }
+
+        function updateProgress() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            const checked = document.querySelectorAll('input[type="checkbox"]:checked').length;
+            const percentage = Math.round((checked / TOTAL_ITEMS) * 100);
+
+            document.getElementById('progress-fill').style.width = percentage + '%';
+            document.getElementById('progress-percentage').textContent = percentage + '%';
+            document.getElementById('items-completed').textContent = checked;
+            document.getElementById('items-remaining').textContent = TOTAL_ITEMS - checked;
+            document.getElementById('overall-progress').textContent = percentage + '%';
+
+            // Update section numbers
+            const sections = {};
+            checkboxes.forEach(cb => {
+                const section = cb.dataset.section;
+                if (!sections[section]) sections[section] = { total: 0, checked: 0 };
+                sections[section].total++;
+                if (cb.checked) sections[section].checked++;
+            });
+
+            Object.keys(sections).forEach(section => {
+                const circle = document.querySelector(`[data-section="${section}"]`);
+                if (sections[section].checked === sections[section].total) {
+                    circle.classList.add('completed');
+                    circle.textContent = '';
+                } else {
+                    circle.classList.remove('completed');
+                    circle.textContent = section;
+                }
+            });
+
+            saveProgress();
+        }
+
+        function resetChecklist() {
+            if (confirm('Are you sure you want to reset all progress? This action cannot be undone.')) {
+                localStorage.removeItem(STORAGE_KEY);
+                document.querySelectorAll('input[type="checkbox"]').forEach(cb => cb.checked = false);
+                updateProgress();
+            }
+        }
+
+        function exportProgress() {
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            let report = 'ISO 26000 Social Responsibility Checklist - Progress Report\n';
+            report += 'Generated: ' + new Date().toLocaleDateString('en-GB') + '\n\n';
+
+            const checked = document.querySelectorAll('input[type="checkbox"]:checked').length;
+            const percentage = Math.round((checked / TOTAL_ITEMS) * 100);
+            report += `Overall Progress: ${checked}/${TOTAL_ITEMS} (${percentage}%)\n\n`;
+
+            report += '='.repeat(60) + '\n\n';
+
+            let currentSection = '';
+            checkboxes.forEach(cb => {
+                const label = document.querySelector(`label[for="${cb.id}"]`);
+                const sectionTitle = cb.closest('.checklist-item').querySelector('h2').textContent;
+
+                if (sectionTitle !== currentSection) {
+                    currentSection = sectionTitle;
+                    report += `\n${currentSection}\n${'-'.repeat(currentSection.length)}\n`;
+                }
+
+                const status = cb.checked ? '[✓]' : '[ ]';
+                report += `${status} ${label.textContent}\n`;
+            });
+
+            const blob = new Blob([report], { type: 'text/plain' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'ISO-26000-Social-Responsibility-Checklist-Progress.txt';
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+
+        document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+            checkbox.addEventListener('change', updateProgress);
+        });
+
+        window.addEventListener('load', loadProgress);
+    </script>
+    <script src="assets/growth.js"></script>
+    <script src="assets/growth-advanced.js"></script>
+
+    <script>
+        // Reveal auditor tips and red flags sections when they come into view
+        (function() {
+            const revealElements = document.querySelectorAll('.auditor-tip, .red-flags-section');
+
+            const revealOnScroll = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            });
+
+            revealElements.forEach(el => revealOnScroll.observe(el));
+        })();
+    </script>
+</body>
+</html>
