@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /login.html
+Disallow: /growth-dashboard.html
+Disallow: /assets/
+
+Sitemap: https://www.speeki.com/en-GB/resources/sitemap.xml
