@@ -825,6 +825,18 @@ body {
 
     <p>This whitepaper makes the case that <strong>Internal Controls over Sustainability Reporting (ICSR)</strong> should be treated as a core component of any credible ESG programme — not as an afterthought or a future aspiration. For organisations that want their sustainability disclosures to be credible, assurable, and legally defensible, ICSR is the foundation.</p>
 
+    <!-- INLINE LEAD CAPTURE CTA -->
+    <div class="inline-cta" style="background: linear-gradient(135deg, #0a1f44, #1a2d5c); border-radius: 12px; padding: 40px; margin: 48px 0; color: white; text-align: center;">
+      <h3 style="font-size: 24px; font-weight: 700; margin-bottom: 12px; color: white;">Get This Guide as PDF</h3>
+      <p style="font-size: 16px; color: rgba(255,255,255,0.85); margin-bottom: 24px; max-width: 500px; margin-left: auto; margin-right: auto;">Download this whitepaper plus related resources and implementation templates.</p>
+      <form class="inline-cta-form" style="display: flex; gap: 12px; max-width: 440px; margin: 0 auto;" onsubmit="handleInlineCTA(event, this)">
+        <input type="email" placeholder="your@email.com" required style="flex: 1; padding: 14px 16px; border: 2px solid rgba(255,255,255,0.3); border-radius: 8px; background: rgba(255,255,255,0.1); color: white; font-size: 15px;" aria-label="Email address">
+        <button type="submit" style="padding: 14px 24px; background: #00FF7F; color: #0a1f44; border: none; border-radius: 8px; font-weight: 700; font-size: 14px; cursor: pointer; white-space: nowrap;">Download PDF</button>
+      </form>
+      <p class="inline-cta-success" style="display:none; font-size: 15px; color: #00FF7F; margin-top: 12px; font-weight: 600;">Thank you — check your inbox for the download link.</p>
+      <p style="font-size: 12px; color: rgba(255,255,255,0.6); margin-top: 12px;">No spam. Unsubscribe anytime.</p>
+    </div>
+
     <h2 id="problem">1. The Problem: Sustainability Reporting Without Controls</h2>
 
     <p>Walk into any large organisation's sustainability team today and ask a simple question: "Show me the documented control that governs how your Scope 2 emissions figure moves from raw utility invoice to published report." In the vast majority of cases, the answer will be silence, or a vague gesture towards a spreadsheet maintained by one person.</p>
@@ -1159,6 +1171,14 @@ body {
     <p>Speeki provides independent sustainability assurance services under ISSA 5000, AA1000AS v3, and ISAE 3000 (Revised), accredited under ISO 17021-1, across 100+ countries.</p>
 
     <p><strong>Contact us at <a href="mailto:info@speeki.com" style="color: var(--teal-text);">info@speeki.com</a> or visit <a href="https://www.speeki.com" target="_blank" style="color: var(--teal-text);">www.speeki.com</a></strong></p>
+
+    <!-- BOTTOM CTA -->
+    <div style="background: #f0fdf4; border: 2px solid #00FF7F; border-radius: 12px; padding: 40px; margin-top: 48px; text-align: center;">
+      <h3 style="font-size: 22px; font-weight: 700; color: #0a1f44; margin-bottom: 12px;">Need Expert Assurance Support?</h3>
+      <p style="font-size: 16px; color: #374151; margin-bottom: 24px; max-width: 520px; margin-left: auto; margin-right: auto;">Speeki provides independent ESG assurance and ISO certification services.</p>
+      <a href="https://www.speeki.com/demo" style="display: inline-block; padding: 14px 32px; background: #0a1f44; color: white; border-radius: 8px; font-weight: 700; font-size: 15px; text-decoration: none;">Book a Demo</a>
+    </div>
+
   </article>
 
   <!-- SIDEBAR -->
@@ -1285,6 +1305,20 @@ window.addEventListener('scroll', function() {
     }
   });
 });
+
+// Inline CTA lead capture
+function handleInlineCTA(e, form) {
+  e.preventDefault();
+  var email = form.querySelector('input[type="email"]').value;
+  if (!email) return;
+  try { localStorage.setItem('speeki_lead_email', email); } catch(err) {}
+  if (window.SpeekiGrowth && typeof SpeekiGrowth.trackEvent === 'function') {
+    SpeekiGrowth.trackEvent('inline_cta_submit', { email: email, page: window.location.pathname });
+  }
+  form.style.display = 'none';
+  var success = form.closest('.inline-cta').querySelector('.inline-cta-success');
+  if (success) success.style.display = 'block';
+}
 </script>
 
 </body>

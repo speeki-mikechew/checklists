@@ -848,6 +848,18 @@ body {
 
     <p>This whitepaper sets out the technical requirements of an anti-bribery risk assessment that is genuinely fit for purpose — one that can support ISO 37001 certification, inform control design, and provide real governance value rather than serving as a compliance artefact.</p>
 
+    <!-- INLINE LEAD CAPTURE CTA -->
+    <div class="inline-cta" style="background: linear-gradient(135deg, #0a1f44, #1a2d5c); border-radius: 12px; padding: 40px; margin: 48px 0; color: white; text-align: center;">
+      <h3 style="font-size: 24px; font-weight: 700; margin-bottom: 12px; color: white;">Get This Guide as PDF</h3>
+      <p style="font-size: 16px; color: rgba(255,255,255,0.85); margin-bottom: 24px; max-width: 500px; margin-left: auto; margin-right: auto;">Download this whitepaper plus related resources and implementation templates.</p>
+      <form class="inline-cta-form" style="display: flex; gap: 12px; max-width: 440px; margin: 0 auto;" onsubmit="handleInlineCTA(event, this)">
+        <input type="email" placeholder="your@email.com" required style="flex: 1; padding: 14px 16px; border: 2px solid rgba(255,255,255,0.3); border-radius: 8px; background: rgba(255,255,255,0.1); color: white; font-size: 15px;" aria-label="Email address">
+        <button type="submit" style="padding: 14px 24px; background: #00FF7F; color: #0a1f44; border: none; border-radius: 8px; font-weight: 700; font-size: 14px; cursor: pointer; white-space: nowrap;">Download PDF</button>
+      </form>
+      <p class="inline-cta-success" style="display:none; font-size: 15px; color: #00FF7F; margin-top: 12px; font-weight: 600;">Thank you — check your inbox for the download link.</p>
+      <p style="font-size: 12px; color: rgba(255,255,255,0.6); margin-top: 12px;">No spam. Unsubscribe anytime.</p>
+    </div>
+
     <h2 id="standards">1. The Standards Framework</h2>
 
     <p>Three international standards govern the design and conduct of an anti-bribery risk assessment within an Anti-Bribery Management System (ABMS). Each plays a distinct role, and a well-constructed assessment draws on all three.</p>
@@ -1471,6 +1483,13 @@ body {
 
     <p><strong>Contact us at <a href="mailto:info@speeki.com" style="color: var(--teal-text);">info@speeki.com</a> or visit <a href="https://www.speeki.com" target="_blank" style="color: var(--teal-text);">www.speeki.com</a></strong></p>
 
+    <!-- BOTTOM CTA -->
+    <div style="background: #f0fdf4; border: 2px solid #00FF7F; border-radius: 12px; padding: 40px; margin-top: 48px; text-align: center;">
+      <h3 style="font-size: 22px; font-weight: 700; color: #0a1f44; margin-bottom: 12px;">Need Expert Assurance Support?</h3>
+      <p style="font-size: 16px; color: #374151; margin-bottom: 24px; max-width: 520px; margin-left: auto; margin-right: auto;">Speeki provides independent ESG assurance and ISO certification services.</p>
+      <a href="https://www.speeki.com/demo" style="display: inline-block; padding: 14px 32px; background: #0a1f44; color: white; border-radius: 8px; font-weight: 700; font-size: 15px; text-decoration: none;">Book a Demo</a>
+    </div>
+
   </article>
 
   <!-- SIDEBAR -->
@@ -1605,6 +1624,20 @@ window.addEventListener('scroll', function() {
     }
   });
 });
+
+// Inline CTA lead capture
+function handleInlineCTA(e, form) {
+  e.preventDefault();
+  var email = form.querySelector('input[type="email"]').value;
+  if (!email) return;
+  try { localStorage.setItem('speeki_lead_email', email); } catch(err) {}
+  if (window.SpeekiGrowth && typeof SpeekiGrowth.trackEvent === 'function') {
+    SpeekiGrowth.trackEvent('inline_cta_submit', { email: email, page: window.location.pathname });
+  }
+  form.style.display = 'none';
+  var success = form.closest('.inline-cta').querySelector('.inline-cta-success');
+  if (success) success.style.display = 'block';
+}
 </script>
 
 </body>

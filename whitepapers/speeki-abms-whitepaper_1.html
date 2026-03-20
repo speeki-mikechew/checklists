@@ -1427,6 +1427,18 @@ body {
       <p>An objective designed for the organisation as a whole — set at a comfortable global average — may mask serious underperformance in the markets that matter most.</p>
     </div>
 
+    <!-- INLINE LEAD CAPTURE CTA -->
+    <div class="inline-cta" style="background: linear-gradient(135deg, #0a1f44, #1a2d5c); border-radius: 12px; padding: 40px; margin: 48px 0; color: white; text-align: center;">
+      <h3 style="font-size: 24px; font-weight: 700; margin-bottom: 12px; color: white;">Get This Guide as PDF</h3>
+      <p style="font-size: 16px; color: rgba(255,255,255,0.85); margin-bottom: 24px; max-width: 500px; margin-left: auto; margin-right: auto;">Download this whitepaper plus related resources and implementation templates.</p>
+      <form class="inline-cta-form" style="display: flex; gap: 12px; max-width: 440px; margin: 0 auto;" onsubmit="handleInlineCTA(event, this)">
+        <input type="email" placeholder="your@email.com" required style="flex: 1; padding: 14px 16px; border: 2px solid rgba(255,255,255,0.3); border-radius: 8px; background: rgba(255,255,255,0.1); color: white; font-size: 15px;" aria-label="Email address">
+        <button type="submit" style="padding: 14px 24px; background: #00FF7F; color: #0a1f44; border: none; border-radius: 8px; font-weight: 700; font-size: 14px; cursor: pointer; white-space: nowrap;">Download PDF</button>
+      </form>
+      <p class="inline-cta-success" style="display:none; font-size: 15px; color: #00FF7F; margin-top: 12px; font-weight: 600;">Thank you — check your inbox for the download link.</p>
+      <p style="font-size: 12px; color: rgba(255,255,255,0.6); margin-top: 12px;">No spam. Unsubscribe anytime.</p>
+    </div>
+
     <h2>Anatomy of a Well-Constructed ABMS Objective</h2>
     <p>Before looking at the breadth of what a good objectives programme covers, it is worth examining the structure of a single well-constructed objective in detail. The following is a fully worked example using OBJ-005: reducing the turnaround time for Level 1 due diligence reports.</p>
 
@@ -1529,6 +1541,13 @@ body {
     <p>The twenty-five examples in this article share a common characteristic: they are built to tell an organisation something true and useful about whether its anti-bribery programme is working. In an environment where bribery risk is persistent, regulators are sophisticated, and the consequences of failure are severe — that is exactly what an ABMS objective should do.</p>
 
     <p style="margin-top: 32px; padding-top: 24px; border-top: 1px solid var(--border); color: var(--gray-400); font-size: 13px; font-style: italic;">Speeki is an accredited ISO certification body providing independent assurance and certification under ISO 37001:2025 globally.</p>
+
+    <!-- BOTTOM CTA -->
+    <div style="background: #f0fdf4; border: 2px solid #00FF7F; border-radius: 12px; padding: 40px; margin-top: 48px; text-align: center;">
+      <h3 style="font-size: 22px; font-weight: 700; color: #0a1f44; margin-bottom: 12px;">Need Expert Assurance Support?</h3>
+      <p style="font-size: 16px; color: #374151; margin-bottom: 24px; max-width: 520px; margin-left: auto; margin-right: auto;">Speeki provides independent ESG assurance and ISO certification services.</p>
+      <a href="https://www.speeki.com/demo" style="display: inline-block; padding: 14px 32px; background: #0a1f44; color: white; border-radius: 8px; font-weight: 700; font-size: 15px; text-decoration: none;">Book a Demo</a>
+    </div>
 
   </article>
 
@@ -2511,6 +2530,20 @@ document.addEventListener('keydown', e => {
 });
 
 renderObjectives(objectives);
+
+// Inline CTA lead capture
+function handleInlineCTA(e, form) {
+  e.preventDefault();
+  var email = form.querySelector('input[type="email"]').value;
+  if (!email) return;
+  try { localStorage.setItem('speeki_lead_email', email); } catch(err) {}
+  if (window.SpeekiGrowth && typeof SpeekiGrowth.trackEvent === 'function') {
+    SpeekiGrowth.trackEvent('inline_cta_submit', { email: email, page: window.location.pathname });
+  }
+  form.style.display = 'none';
+  var success = form.closest('.inline-cta').querySelector('.inline-cta-success');
+  if (success) success.style.display = 'block';
+}
 </script>
 </body>
 </html>
