@@ -185,7 +185,7 @@ Each checklist includes:
 
 ## License
 
-© 2024 Speeki Pte Ltd. All rights reserved.
+© 2026 Speeki Pte Ltd. All rights reserved.
 
 ## Support
 
