@@ -1,0 +1,20 @@
+# Source documents (keep in data/ or attachments, not in git)
+*.docx
+*.pdf
+*.xlsx
+*.pptx
+
+# Python scripts (build tools, not output)
+*.py
+__pycache__/
+
+# Data/extracted content
+data/
+extracted_content/
+docx_extracted/
+
+# OS
+.DS_Store
+
+# Node
+node_modules/
