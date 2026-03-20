@@ -1,0 +1,1453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anti-Bribery Risk Assessment Under ISO 37001 Clause 4.5 — Speeki Resources</title>
+<meta name="description" content="Gross risk, net risk, control testing, and specificity requirements for ISO 37001 anti-bribery risk assessment. A practical framework from Speeki's certification auditors.">
+<meta name="keywords" content="ISO 37001, anti-bribery risk assessment, ABMS, Clause 4.5, gross risk, net risk, control testing, Speeki">
+<meta name="author" content="Speeki">
+<meta property="og:title" content="Anti-Bribery Risk Assessment Under ISO 37001 Clause 4.5">
+<meta property="og:description" content="Gross risk, net risk, control testing, and specificity requirements for ISO 37001 anti-bribery risk assessment. A practical framework from Speeki's certification auditors.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.speeki.com/resources/whitepapers/abms-risk-assessment">
+<meta property="og:site_name" content="Speeki">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Anti-Bribery Risk Assessment Under ISO 37001 Clause 4.5">
+<meta name="twitter:description" content="How to build a risk assessment that passes ISO 37001 certification — from the auditors who conduct it.">
+<link rel="canonical" href="https://www.speeki.com/resources/whitepapers/abms-risk-assessment">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #0f1c3f;
+  --navy-mid: #1a2d5a;
+  --navy-light: #243672;
+  --teal: #00c4b4;
+  --teal-dark: #00a89a;
+  --teal-light: #e6faf8;
+  --gold: #f0a500;
+  --white: #ffffff;
+  --off-white: #f7f8fc;
+  --gray-100: #f0f2f7;
+  --gray-200: #e2e6f0;
+  --gray-400: #9aa3bf;
+  --gray-600: #5a6380;
+  --gray-800: #2d3558;
+  --text: #1a2033;
+  --text-light: #4a5270;
+  --border: #dde1ef;
+  --shadow: 0 4px 24px rgba(15,28,63,0.10);
+  --shadow-lg: 0 12px 48px rgba(15,28,63,0.18);
+  --radius: 8px;
+  --radius-lg: 16px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  color: var(--text);
+  background: var(--white);
+  line-height: 1.6;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* NAV */
+.nav {
+  background: var(--navy);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.25);
+}
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+}
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+.nav-logo-mark {
+  width: 36px;
+  height: 36px;
+  background: var(--teal);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--navy);
+  letter-spacing: -1px;
+}
+.nav-brand {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: -0.5px;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  list-style: none;
+}
+.nav-links a {
+  color: rgba(255,255,255,0.75);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--teal); }
+.nav-cta {
+  background: var(--teal);
+  color: var(--navy) !important;
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-weight: 600 !important;
+  transition: background 0.2s !important;
+}
+.nav-cta:hover { background: var(--teal-dark) !important; }
+
+/* BREADCRUMB */
+.breadcrumb {
+  background: var(--navy-mid);
+  padding: 12px 0;
+}
+.breadcrumb-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: rgba(255,255,255,0.5);
+}
+.breadcrumb a { color: rgba(255,255,255,0.6); text-decoration: none; }
+.breadcrumb a:hover { color: var(--teal); }
+.breadcrumb-sep { opacity: 0.4; }
+.breadcrumb-current { color: var(--teal); }
+
+/* HERO */
+.hero {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 50%, #162050 100%);
+  padding: 72px 0 80px;
+  position: relative;
+  overflow: hidden;
+}
+.hero::before {
+  content: '';
+  position: absolute;
+  top: -120px;
+  right: -80px;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(0,196,180,0.12) 0%, transparent 65%);
+  pointer-events: none;
+}
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -80px;
+  left: 20%;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(0,196,180,0.06) 0%, transparent 65%);
+  pointer-events: none;
+}
+.hero-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 64px;
+  align-items: start;
+}
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0,196,180,0.12);
+  border: 1px solid rgba(0,196,180,0.3);
+  color: var(--teal);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 100px;
+  margin-bottom: 24px;
+}
+.hero-tag svg { width: 12px; height: 12px; }
+.hero-title {
+  font-family: 'DM Serif Display', serif;
+  font-size: 52px;
+  line-height: 1.08;
+  color: var(--white);
+  margin-bottom: 12px;
+  letter-spacing: -1px;
+}
+.hero-title em {
+  font-style: italic;
+  color: var(--teal);
+}
+.hero-subtitle {
+  font-size: 18px;
+  color: rgba(255,255,255,0.65);
+  margin-bottom: 36px;
+  line-height: 1.5;
+  max-width: 560px;
+}
+.hero-meta {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+.hero-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: rgba(255,255,255,0.55);
+  font-size: 13px;
+}
+.hero-meta-item svg { color: var(--teal); width: 14px; height: 14px; }
+.hero-meta-dot { width: 4px; height: 4px; background: rgba(255,255,255,0.2); border-radius: 50%; }
+.hero-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.btn-primary {
+  background: var(--teal);
+  color: var(--navy);
+  border: none;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.2s, transform 0.15s;
+}
+.btn-primary:hover { background: var(--teal-dark); transform: translateY(-1px); }
+.btn-outline {
+  background: transparent;
+  color: rgba(255,255,255,0.8);
+  border: 1px solid rgba(255,255,255,0.25);
+  padding: 13px 24px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: border-color 0.2s, color 0.2s;
+}
+.btn-outline:hover { border-color: var(--teal); color: var(--teal); }
+.hero-card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 16px;
+  padding: 32px;
+  backdrop-filter: blur(8px);
+  position: relative;
+  top: 12px;
+}
+.hero-card-doc {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.doc-icon {
+  width: 48px;
+  height: 60px;
+  background: var(--navy);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid rgba(0,196,180,0.3);
+  position: relative;
+}
+.doc-icon::before {
+  content: 'PDF';
+  color: var(--teal);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  position: absolute;
+  bottom: 6px;
+}
+.doc-icon svg { color: var(--teal); }
+.doc-info h4 { color: var(--white); font-size: 14px; font-weight: 600; margin-bottom: 4px; }
+.doc-info p { color: rgba(255,255,255,0.45); font-size: 12px; }
+.hero-card h3 { color: var(--white); font-size: 14px; font-weight: 600; margin-bottom: 14px; }
+.hero-card-topics {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.topic-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: rgba(255,255,255,0.65);
+  font-size: 13px;
+}
+.topic-dot {
+  width: 6px;
+  height: 6px;
+  background: var(--teal);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.hero-card-download {
+  margin-top: 24px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.download-btn {
+  width: 100%;
+  background: var(--teal);
+  color: var(--navy);
+  border: none;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.download-btn:hover { background: var(--teal-dark); }
+
+/* STATS STRIP */
+.stats-strip {
+  background: var(--gray-100);
+  border-bottom: 1px solid var(--border);
+  padding: 28px 0;
+}
+.stats-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0;
+}
+.stat-item {
+  padding: 0 32px;
+  border-right: 1px solid var(--border);
+}
+.stat-item:first-child { padding-left: 0; }
+.stat-item:last-child { border-right: none; }
+.stat-number {
+  font-family: 'DM Serif Display', serif;
+  font-size: 36px;
+  color: var(--navy);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+.stat-number span { color: var(--teal); }
+.stat-label { color: var(--text-light); font-size: 13px; }
+
+/* CONTENT LAYOUT */
+.content-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 64px 32px;
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 64px;
+  align-items: start;
+}
+
+/* ARTICLE */
+.article h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 30px;
+  color: var(--navy);
+  margin: 48px 0 16px;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+.article h2:first-child { margin-top: 0; }
+.article h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--navy);
+  margin: 36px 0 12px;
+}
+.article h4 {
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--navy);
+  margin: 28px 0 10px;
+}
+.article p {
+  color: var(--text-light);
+  margin-bottom: 20px;
+  line-height: 1.75;
+  font-size: 16px;
+}
+.article p strong { color: var(--text); }
+.article .lead {
+  font-size: 18px;
+  color: var(--text);
+  font-weight: 400;
+  line-height: 1.7;
+  border-left: 4px solid var(--teal);
+  padding-left: 20px;
+  margin-bottom: 32px;
+}
+.article ul {
+  margin: 16px 0 24px 0;
+  padding-left: 0;
+  list-style: none;
+}
+.article ul li {
+  padding-left: 20px;
+  position: relative;
+  margin-bottom: 10px;
+  color: var(--text-light);
+  line-height: 1.65;
+}
+.article ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 6px;
+  height: 6px;
+  background: var(--teal);
+  border-radius: 50%;
+}
+
+.pullquote {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+  border-radius: 12px;
+  padding: 32px 36px;
+  margin: 36px 0;
+  position: relative;
+}
+.pullquote::before {
+  content: '"';
+  font-family: 'DM Serif Display', serif;
+  font-size: 96px;
+  color: var(--teal);
+  opacity: 0.2;
+  position: absolute;
+  top: -8px;
+  left: 20px;
+  line-height: 1;
+}
+.pullquote p {
+  font-family: 'DM Serif Display', serif;
+  font-size: 20px;
+  line-height: 1.5;
+  color: var(--white);
+  font-style: italic;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* COMPARISON TABLE */
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 32px 0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(15,28,63,0.08);
+}
+.comparison-table thead th {
+  background: var(--navy);
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 14px 16px;
+  text-align: left;
+}
+.comparison-table tbody tr { border-bottom: 1px solid var(--border); }
+.comparison-table tbody tr:last-child { border-bottom: none; }
+.comparison-table tbody tr:nth-child(odd) { background: var(--off-white); }
+.comparison-table tbody tr:nth-child(even) { background: var(--white); }
+.comparison-table td {
+  padding: 14px 16px;
+  font-size: 14px;
+  vertical-align: top;
+  color: var(--text-light);
+}
+.comparison-table td:first-child {
+  font-weight: 600;
+  color: var(--navy);
+  border-right: 1px solid var(--border);
+}
+
+/* GAPS GRID */
+.gaps-grid {
+  display: grid;
+  gap: 16px;
+  margin: 28px 0;
+}
+.gap-card {
+  background: var(--off-white);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 20px;
+  border-left: 4px solid var(--teal);
+}
+.gap-card h4 { font-size: 15px; font-weight: 700; color: var(--navy); margin-bottom: 8px; }
+.gap-card p { font-size: 14px; color: var(--text-light); line-height: 1.6; margin: 0; }
+
+/* RISK MATRIX */
+.risk-matrix {
+  overflow-x: auto;
+  margin: 28px 0;
+}
+.risk-matrix table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(15,28,63,0.08);
+  min-width: 520px;
+}
+.risk-matrix th {
+  background: var(--navy);
+  color: var(--white);
+  font-size: 11px;
+  font-weight: 600;
+  padding: 12px 10px;
+  text-align: center;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.risk-matrix td {
+  padding: 10px;
+  text-align: center;
+  font-size: 13px;
+  font-weight: 600;
+  border: 1px solid rgba(255,255,255,0.15);
+}
+.risk-matrix td.row-label {
+  background: var(--navy-mid);
+  color: rgba(255,255,255,0.8);
+  font-size: 11px;
+  font-weight: 600;
+  text-align: left;
+  padding-left: 14px;
+  width: 140px;
+}
+.cell-extreme { background: #dc2626; color: white; }
+.cell-high { background: #f97316; color: white; }
+.cell-medium { background: #f59e0b; color: var(--navy); }
+.cell-low { background: #22c55e; color: white; }
+
+/* PHASES */
+.phase-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 32px;
+  margin-bottom: 24px;
+  box-shadow: 0 2px 12px rgba(15,28,63,0.07);
+  border-left: 4px solid var(--teal);
+}
+.phase-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.phase-number {
+  background: var(--teal);
+  color: var(--navy);
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+.phase-title { font-size: 20px; font-weight: 700; color: var(--navy); }
+.phase-card ul { list-style: none; padding: 0; margin: 0; }
+.phase-card li {
+  padding-left: 28px;
+  position: relative;
+  margin-bottom: 12px;
+  color: var(--text-light);
+  line-height: 1.6;
+}
+.phase-card li:last-child { margin-bottom: 0; }
+.phase-card li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 6px;
+  height: 6px;
+  background: var(--teal);
+  border-radius: 50%;
+}
+
+/* WARNING/INSIGHT BOX */
+.insight-box {
+  background: rgba(0,196,180,0.08);
+  border: 1px solid rgba(0,196,180,0.25);
+  border-left: 4px solid var(--teal);
+  border-radius: 8px;
+  padding: 20px 24px;
+  margin: 28px 0;
+}
+.insight-box .insight-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--teal-dark);
+  margin-bottom: 8px;
+}
+.insight-box p { font-size: 15px; color: var(--text); line-height: 1.65; margin: 0; }
+
+.warning-box {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-left: 4px solid #dc2626;
+  border-radius: 8px;
+  padding: 20px 24px;
+  margin: 28px 0;
+}
+.warning-box .warning-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #dc2626;
+  margin-bottom: 8px;
+}
+.warning-box p { font-size: 15px; color: var(--text); line-height: 1.65; margin: 0; }
+
+/* SIDEBAR */
+.sidebar { position: sticky; top: 92px; }
+.sidebar-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 12px rgba(15,28,63,0.07);
+}
+.sidebar-card-header {
+  background: var(--navy);
+  padding: 16px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--white);
+  letter-spacing: 0.02em;
+}
+.sidebar-card-body { padding: 20px; }
+.toc-nav { display: flex; flex-direction: column; gap: 2px; }
+.toc-link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  color: var(--text-light);
+  font-size: 13px;
+  text-decoration: none;
+  transition: background 0.15s, color 0.15s;
+}
+.toc-link:hover { background: var(--off-white); color: var(--navy); }
+.toc-link.active { background: var(--teal-light); color: var(--teal-dark); font-weight: 600; }
+.toc-dot { width: 5px; height: 5px; background: var(--border); border-radius: 50%; flex-shrink: 0; }
+.toc-link.active .toc-dot { background: var(--teal); }
+
+.speeki-promo {
+  background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+}
+.speeki-promo h4 { color: var(--white); font-size: 15px; font-weight: 600; margin-bottom: 8px; }
+.speeki-promo p { color: rgba(255,255,255,0.55); font-size: 13px; margin-bottom: 16px; line-height: 1.5; }
+.promo-btn {
+  display: block;
+  background: var(--teal);
+  color: var(--navy);
+  text-align: center;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.promo-btn:hover { background: var(--teal-dark); }
+
+/* FOOTER */
+.footer {
+  background: var(--navy);
+  color: rgba(255,255,255,0.65);
+  padding: 48px 0 32px;
+  margin-top: 80px;
+}
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+}
+.footer-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 32px;
+  padding-bottom: 32px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.footer-brand h3 { color: var(--white); font-size: 22px; margin-bottom: 12px; }
+.footer-brand p { font-size: 14px; line-height: 1.6; margin-bottom: 20px; }
+.footer-col h4 { color: var(--white); font-size: 14px; font-weight: 600; margin-bottom: 16px; }
+.footer-col ul { list-style: none; }
+.footer-col li { margin-bottom: 10px; }
+.footer-col a { color: rgba(255,255,255,0.65); text-decoration: none; font-size: 14px; transition: color 0.2s; }
+.footer-col a:hover { color: var(--teal); }
+.footer-bottom {
+  text-align: center;
+  font-size: 13px;
+  color: rgba(255,255,255,0.45);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .hero-inner { grid-template-columns: 1fr; gap: 32px; }
+  .hero-title { font-size: 36px; }
+  .content-section { grid-template-columns: 1fr; gap: 32px; }
+  .sidebar { position: static; }
+  .stats-inner { grid-template-columns: 1fr 1fr; gap: 20px; }
+  .stat-item { border-right: none; padding: 0; border-bottom: 1px solid var(--border); padding-bottom: 20px; }
+  .stat-item:nth-child(3), .stat-item:nth-child(4) { border-bottom: none; padding-bottom: 0; }
+  .footer-top { grid-template-columns: 1fr; gap: 32px; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-logo">
+      <div class="nav-logo-mark">S</div>
+      <span class="nav-brand">Speeki</span>
+    </a>
+    <ul class="nav-links">
+      <li><a href="../index.html">Resources</a></li>
+      <li><a href="https://www.speeki.com" target="_blank">speeki.com</a></li>
+      <li><a href="https://www.speeki.com/en-GB/contact-us" target="_blank" class="nav-cta">Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+  <div class="breadcrumb-inner">
+    <a href="../index.html">Resources</a>
+    <span class="breadcrumb-sep">/</span>
+    <a href="../index.html">Whitepapers</a>
+    <span class="breadcrumb-sep">/</span>
+    <span class="breadcrumb-current">ABMS Risk Assessment</span>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <div class="hero-tag">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+        Whitepaper
+      </div>
+      <h1 class="hero-title">Anti-Bribery Risk Assessment Under <em>ISO 37001 Clause 4.5</em></h1>
+      <p class="hero-subtitle">Gross risk, net risk, control testing, and the specificity requirements that most assessments fail to deliver</p>
+      <div class="hero-meta">
+        <div class="hero-meta-item">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>
+          2025 Edition
+        </div>
+        <div class="hero-meta-dot"></div>
+        <div class="hero-meta-item">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" /></svg>
+          20 min read
+        </div>
+        <div class="hero-meta-dot"></div>
+        <div class="hero-meta-item">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-2 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" /></svg>
+          ISO 37001 &bull; ISO 31000 &bull; ISO 37000
+        </div>
+      </div>
+      <div class="hero-actions">
+        <a href="#specificity" class="btn-primary">
+          Read the Whitepaper
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" /></svg>
+        </a>
+        <a href="https://www.speeki.com/en-GB/contact-us" target="_blank" class="btn-outline">
+          Contact Speeki
+        </a>
+      </div>
+    </div>
+    <div class="hero-card">
+      <div class="hero-card-doc">
+        <div class="doc-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>
+        </div>
+        <div class="doc-info">
+          <h4>Speeki Whitepaper</h4>
+          <p>2025 Edition &bull; ABMS Series</p>
+        </div>
+      </div>
+      <h3>Key Topics</h3>
+      <div class="hero-card-topics">
+        <div class="topic-item"><span class="topic-dot"></span>ISO 37001 Clause 4.5 Requirements</div>
+        <div class="topic-item"><span class="topic-dot"></span>Bribery Scenario Identification</div>
+        <div class="topic-item"><span class="topic-dot"></span>Gross vs Net Risk Discipline</div>
+        <div class="topic-item"><span class="topic-dot"></span>Control Testing Framework</div>
+        <div class="topic-item"><span class="topic-dot"></span>What Auditors Look For</div>
+      </div>
+      <div class="hero-card-download">
+        <a href="mailto:info@speeki.com?subject=ABMS Risk Assessment Whitepaper Request" class="download-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M9 19l3 3m0 0l3-3m-3 3V10" /></svg>
+          Request PDF
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-strip">
+  <div class="stats-inner">
+    <div class="stat-item">
+      <div class="stat-number"><span>4</span></div>
+      <div class="stat-label">Scenario Identification Lenses</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number"><span>5</span></div>
+      <div class="stat-label">Risk Likelihood Levels</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number"><span>3</span></div>
+      <div class="stat-label">Control Categories</div>
+    </div>
+    <div class="stat-item">
+      <div class="stat-number">9<span>sec</span></div>
+      <div class="stat-label">Common Audit Failures Identified</div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div class="content-section">
+  <article class="article">
+    <p class="lead">Anti-bribery risk assessment is the engine of ISO 37001. Every other element of the standard — the controls, the due diligence, the training, the monitoring — is calibrated and justified by what the risk assessment reveals. An assessment that is vague, generic, or disconnected from actual transactions produces controls that are similarly vague, generic, and disconnected from actual risk.</p>
+
+    <p>The failure pattern is consistent across organisations of all sizes and sectors. Risk assessments are conducted at the corporate level. They produce statements like "medium corruption risk in procurement" or "elevated exposure in government-facing markets." Controls are then mapped to these categories. The assessment is filed, approved, and used as evidence of compliance.</p>
+
+    <p>It does not work. Certification auditors conducting ISO 37001 audits on behalf of accredited certification bodies see this pattern repeatedly — and they reject it.</p>
+
+    <h2 id="framework">1. The Standards Framework</h2>
+
+    <h3>1.1 ISO 37001 Clause 4.5 — What Is Actually Required</h3>
+
+    <p>ISO 37001 Clause 4.5 is more prescriptive than many organisations recognise. The standard requires that the organisation shall carry out an anti-bribery risk assessment that takes into account:</p>
+
+    <ul>
+      <li>The nature, scale, and complexity of the organisation's activities</li>
+      <li>The countries and sectors in which the organisation operates</li>
+      <li>The business relationships it has — including business partners, joint ventures, agents, subsidiaries, and supply chain participants</li>
+      <li>The transactions it conducts, particularly those involving government officials, public procurement, or high-value discretionary decisions</li>
+      <li>The regulatory and legal context in each jurisdiction</li>
+      <li>The persons associated with the organisation who could commit bribery on its behalf</li>
+    </ul>
+
+    <p>These requirements point unmistakably toward specificity. The standard is not asking for a general statement about the organisation's risk profile. It is asking for an analysis of how bribery could actually occur in this organisation's specific context.</p>
+
+    <p>Clause 4.5 further requires that the risk assessment be documented, reviewed at planned intervals or when significant changes occur, and that it inform the design and implementation of anti-bribery controls.</p>
+
+    <h3>1.2 ISO 31000 — The Risk Management Framework</h3>
+
+    <p>ISO 37001 does not prescribe a specific risk assessment methodology. Organisations are expected to apply recognised risk management practice, and the global standard for this is ISO 31000:2018. ISO 31000 identifies three core stages: risk identification, risk analysis, and risk evaluation. These stages are sequential and interdependent.</p>
+
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th>ISO 31000 Stage</th>
+          <th>What It Means</th>
+          <th>In an ISO 37001 Context</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Risk Identification</td>
+          <td>Find and describe all sources of risk, events, and their potential consequences</td>
+          <td>Map every transaction type, function, geography, and counterparty category where bribery could occur</td>
+        </tr>
+        <tr>
+          <td>Risk Analysis</td>
+          <td>Understand the nature of the risk and determine the level of risk (likelihood x consequence)</td>
+          <td>Score each identified bribery scenario for likelihood and consequence at gross level, then assess net risk after controls</td>
+        </tr>
+        <tr>
+          <td>Risk Evaluation</td>
+          <td>Compare the level of risk against risk criteria to determine whether the risk is acceptable</td>
+          <td>Determine which residual bribery risks require additional controls, enhanced monitoring, or escalated treatment</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2 id="specificity">2. The Specificity Imperative</h2>
+
+    <h3>2.1 Why Corporate-Level Risk Assessment Fails</h3>
+
+    <p>Corporate-level risk statements fail for three connected reasons. First, they cannot identify specific controls because they have not identified specific scenarios. A control is a mechanism that prevents or detects a specific bribery event. Without the specific event, the control cannot be designed with precision.</p>
+
+    <p>Second, corporate-level statements cannot be tested. If the risk is "elevated bribery exposure in government-facing operations", what does a control look like and how would you verify it works? The abstraction is too great.</p>
+
+    <p>Third, corporate-level assessments fail the certification audit. An ISO 37001 auditor will probe the risk assessment directly: "Show me the bribery scenarios you identified. Show me how the controls map to those scenarios. Show me the evidence you tested those controls."</p>
+
+    <div class="warning-box">
+      <div class="warning-label">Critical Failure</div>
+      <p>Listing "procurement bribery risk: HIGH" is not a risk assessment. It is a risk label. The assessment is the documented analysis of which specific procurement transactions, with which specific counterparties, in which specific jurisdictions, under which specific conditions, create bribery exposure — and how.</p>
+    </div>
+
+    <h3>2.2 The Bribery Scenario: The Unit of Analysis</h3>
+
+    <p>The fundamental unit of analysis in an anti-bribery risk assessment is the bribery scenario — not the risk category, not the business function, not the geography. A bribery scenario is a specific, plausible description of how a bribery event could occur: who the internal actor is, what decision or outcome they are seeking to influence, who the counterparty is, what form the bribe would take, and under what conditions the scenario would arise.</p>
+
+    <p>Bribery scenarios are inherently local. They are shaped by local business practices, local regulatory environments, local relationships, and local pressure points. The same company in the same industry operating across three different geographies will face materially different bribery scenarios in each location.</p>
+
+    <h3>2.3 Identifying Bribery Scenarios — The Four Lenses</h3>
+
+    <p>Bribery scenarios can be systematically identified through four analytical lenses, applied in combination. No single lens is sufficient; used together they generate a comprehensive scenario set.</p>
+
+    <div class="gaps-grid">
+      <div class="gap-card">
+        <h4>Lens 1: Transaction Mapping</h4>
+        <p>Map every significant category of transaction where a decision-maker on the other side has discretionary power affecting the organisation's interests: regulatory applications, public procurement, customs clearance, tax negotiations, commercial contract awards, and employment of individuals with regulatory influence.</p>
+      </div>
+      <div class="gap-card">
+        <h4>Lens 2: Interaction Mapping</h4>
+        <p>Map every significant category of interaction with persons outside the organisation who have discretionary power — including government and regulatory relationships, business partner and agent relationships, political relationships, and charitable or community relationships.</p>
+      </div>
+      <div class="gap-card">
+        <h4>Lens 3: Pressure Point Analysis</h4>
+        <p>Identify the circumstances under which individuals within the organisation face pressure that could motivate or rationalise bribery: revenue pressure, operational delivery timelines, competitive pressure in markets where bribery is known to occur, relationship pressure, and personal financial pressure.</p>
+      </div>
+      <div class="gap-card">
+        <h4>Lens 4: Historical and Intelligence Analysis</h4>
+        <p>Analyse internal incident reports, whistleblower submissions, and prior compliance findings. Review enforcement actions against industry peers. Consult Transparency International CPI, TRACE Matrix, and World Bank governance indicators for each jurisdiction. Engage local legal counsel for jurisdiction-specific intelligence.</p>
+      </div>
+    </div>
+
+    <h2 id="gross-risk">3. Gross Risk: The Inherent Baseline</h2>
+
+    <h3>3.1 What Gross Risk Means and Why It Matters</h3>
+
+    <p>Gross risk — sometimes called inherent risk — is the level of risk that exists before any controls are applied. It represents the organisation's raw exposure to a bribery scenario in a world where no preventive, detective, or corrective controls exist.</p>
+
+    <p>Many organisations skip gross risk assessment entirely. They identify a risk and immediately describe it in terms of their existing control framework, producing a net risk estimate that they treat as the starting point. This is a fundamental error. Without a gross risk baseline, it is impossible to evaluate whether controls are adequate, because you do not know what they are supposed to be reducing.</p>
+
+    <div class="insight-box">
+      <div class="insight-label">Fundamental Principle</div>
+      <p>Gross risk tells you what you are exposed to. Net risk tells you what you have done about it. The gap between them is the compliance task.</p>
+    </div>
+
+    <h3>3.2 Scoring Gross Risk — Likelihood</h3>
+
+    <p>Gross likelihood is the probability that the bribery scenario would occur in the absence of any controls. It is an assessment of the intrinsic conditions that make the scenario plausible.</p>
+
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th>Score</th>
+          <th>Label</th>
+          <th>Definition</th>
+          <th>Bribery-Specific Indicators</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>5</td>
+          <td>Almost Certain</td>
+          <td>The scenario is expected to occur frequently or routinely</td>
+          <td>High-volume government interactions in jurisdictions where facilitation payments are endemic</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Likely</td>
+          <td>The scenario would occur in most circumstances without active prevention</td>
+          <td>Regular commercial dealings with state-owned enterprises in high-risk markets; use of third-party agents</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Possible</td>
+          <td>The scenario could occur under certain conditions</td>
+          <td>Periodic permit applications in moderate-risk jurisdictions; competitive markets with some corruption history</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Unlikely</td>
+          <td>The scenario would occur only in unusual circumstances</td>
+          <td>Low-frequency government interactions in jurisdictions with strong rule of law</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>Rare</td>
+          <td>The scenario would occur only in exceptional circumstances</td>
+          <td>Jurisdictions with Transparency International CPI above 75; transactions subject to independent oversight</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>3.3 The Gross Risk Matrix</h3>
+
+    <p>The gross risk matrix combines likelihood and consequence scores to produce a gross risk rating for each bribery scenario. Consequence must be assessed across multiple dimensions: legal/criminal, financial, reputational, and operational — with the highest individual dimension score driving the overall consequence rating.</p>
+
+    <div class="risk-matrix">
+      <table>
+        <thead>
+          <tr>
+            <th>Consequence / Likelihood</th>
+            <th>Rare (1)</th>
+            <th>Unlikely (2)</th>
+            <th>Possible (3)</th>
+            <th>Likely (4)</th>
+            <th>Almost Certain (5)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td class="row-label">Catastrophic (5)</td>
+            <td class="cell-medium">5 — Medium</td>
+            <td class="cell-high">10 — High</td>
+            <td class="cell-extreme">15 — Extreme</td>
+            <td class="cell-extreme">20 — Extreme</td>
+            <td class="cell-extreme">25 — Extreme</td>
+          </tr>
+          <tr>
+            <td class="row-label">Major (4)</td>
+            <td class="cell-low">4 — Low</td>
+            <td class="cell-medium">8 — Medium</td>
+            <td class="cell-high">12 — High</td>
+            <td class="cell-extreme">16 — Extreme</td>
+            <td class="cell-extreme">20 — Extreme</td>
+          </tr>
+          <tr>
+            <td class="row-label">Significant (3)</td>
+            <td class="cell-low">3 — Low</td>
+            <td class="cell-medium">6 — Medium</td>
+            <td class="cell-medium">9 — Medium</td>
+            <td class="cell-high">12 — High</td>
+            <td class="cell-extreme">15 — Extreme</td>
+          </tr>
+          <tr>
+            <td class="row-label">Moderate (2)</td>
+            <td class="cell-low">2 — Low</td>
+            <td class="cell-low">4 — Low</td>
+            <td class="cell-medium">6 — Medium</td>
+            <td class="cell-medium">8 — Medium</td>
+            <td class="cell-high">10 — High</td>
+          </tr>
+          <tr>
+            <td class="row-label">Minor (1)</td>
+            <td class="cell-low">1 — Low</td>
+            <td class="cell-low">2 — Low</td>
+            <td class="cell-low">3 — Low</td>
+            <td class="cell-low">4 — Low</td>
+            <td class="cell-medium">5 — Medium</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h2 id="controls">4. Controls: Mapping, Testing, and Net Risk</h2>
+
+    <h3>4.1 The Function of Controls in Risk Assessment</h3>
+
+    <p>Controls are the mechanisms through which an organisation reduces gross risk to an acceptable net level. In the context of ISO 37001, controls fall into three broad categories: preventive controls (which reduce the likelihood of a bribery event occurring), detective controls (which identify when bribery has occurred or is occurring), and corrective controls (which limit the consequences when a bribery event is detected).</p>
+
+    <p>Effective anti-bribery risk assessment does not merely list the controls that exist. It evaluates the extent to which those controls actually reduce the gross risk score — and that evaluation can only be performed through testing.</p>
+
+    <div class="pullquote">
+      <p>An untested control is a hypothesis. When you record a net risk score based on claimed control effectiveness, you are asserting a fact that the control is working as designed. Without testing, that assertion is unsupported.</p>
+    </div>
+
+    <h3>4.2 Control Effectiveness Ratings</h3>
+
+    <p>Control testing must produce a documented effectiveness rating for each control tested. The rating directly determines the extent to which the control reduces gross likelihood in the net risk calculation.</p>
+
+    <div class="gaps-grid">
+      <div class="gap-card">
+        <h4>Effective</h4>
+        <p>Control is designed adequately, implemented as designed, and operating consistently. Likelihood score may be reduced by 2–3 points from gross level, subject to a floor of 1. Requires positive results from all three test questions: design, implementation, and operation.</p>
+      </div>
+      <div class="gap-card">
+        <h4>Partially Effective</h4>
+        <p>Control has adequate design but is not consistently implemented, or has implementation gaps. Likelihood score may be reduced by 1 point from gross level. Requires documented evidence of the gap alongside positive design assessment.</p>
+      </div>
+      <div class="gap-card">
+        <h4>Ineffective</h4>
+        <p>Control has design deficiencies, or is not implemented at all, or testing reveals it is not operating. No reduction in likelihood score is applied. This rating requires documented remediation through the treatment planning process.</p>
+      </div>
+    </div>
+
+    <h3>4.3 From Gross to Net: The Key Discipline</h3>
+
+    <p>Net risk is calculated by applying the control effectiveness ratings to the gross risk scores. The key discipline is that <strong>controls primarily affect likelihood, not consequence</strong>. A well-designed and effectively operating preventive control makes a bribery event less likely to occur. It does not reduce the scale of harm if the event occurs anyway.</p>
+
+    <p>This distinction has important implications. An organisation with very high inherent consequence exposure (Catastrophic = 5) can never achieve low net risk by building preventive controls alone. If the consequence of a bribery scenario materialising is catastrophic, the risk can only be brought to an acceptable level by either avoiding the activity or ensuring the net likelihood is driven to its minimum floor.</p>
+
+    <h2 id="treatment">5. Risk Evaluation and Treatment</h2>
+
+    <h3>5.1 Risk Appetite and Evaluation Criteria</h3>
+
+    <p>Risk evaluation — the comparison of net risk scores against defined criteria to determine acceptability — cannot be conducted without a defined risk appetite. Risk appetite is the statement of how much residual bribery risk the organisation is prepared to accept after controls are applied. It must be defined by the governing body before the risk evaluation stage, consistent with ISO 37000.</p>
+
+    <h3>5.2 Risk Treatment Options</h3>
+
+    <div class="gaps-grid">
+      <div class="gap-card">
+        <h4>Avoid</h4>
+        <p>Eliminating the activity that gives rise to the bribery risk — declining to enter a market, refusing to engage a category of business partner, withdrawing from a procurement process. Avoidance is appropriate where the net risk cannot be reduced to within appetite through controls, and where the commercial cost of avoidance is acceptable.</p>
+      </div>
+      <div class="gap-card">
+        <h4>Reduce</h4>
+        <p>Implementing additional or enhanced controls to bring net risk within appetite. This is the most common treatment response and the one most directly connected to the ISO 37001 control framework. Treatment plans must specify which additional controls, with named owners and target dates.</p>
+      </div>
+      <div class="gap-card">
+        <h4>Share / Transfer</h4>
+        <p>Transferring some portion of the financial consequence to a third party — typically through insurance coverage for regulatory investigations and legal costs. This does not reduce the likelihood of the bribery event but reduces financial consequence. Importantly, liability for criminal conduct generally cannot be insured away.</p>
+      </div>
+      <div class="gap-card">
+        <h4>Accept</h4>
+        <p>Deciding that a risk at its current net level falls within the organisation's risk appetite. Acceptance must be an explicit, documented decision — not a default resulting from failure to act. It requires sign-off at the appropriate governance level and periodic review to confirm the risk has not changed.</p>
+      </div>
+    </div>
+
+    <h2 id="auditor">6. What an ISO 37001 Auditor Will Look For</h2>
+
+    <p>Understanding how a certification auditor will approach the risk assessment review is essential for organisations building or improving their programme.</p>
+
+    <h3>6.1 Document Review</h3>
+
+    <ul>
+      <li>The risk assessment procedure: does it define methodology, frequency, roles, and trigger events?</li>
+      <li>The risk register: does it contain specific scenarios (not categories)? Does it have gross and net scores? Are controls mapped to scenarios?</li>
+      <li>Control testing documentation: what was tested, when, by whom, and what did the testing find?</li>
+      <li>Treatment plans: are they specific, owned, time-bound, and linked to risk register entries?</li>
+      <li>Approval records: has the risk assessment been formally approved at the appropriate level?</li>
+      <li>Review records: is there evidence of the last review? Were trigger events assessed?</li>
+    </ul>
+
+    <h3>6.2 Interview Questions Auditors Will Ask</h3>
+
+    <div class="gaps-grid">
+      <div class="gap-card">
+        <h4>"Walk me through how you identified the bribery scenarios in your risk register."</h4>
+        <p>Tests whether the process was genuine or the register was populated from a template. Auditors can tell the difference within minutes.</p>
+      </div>
+      <div class="gap-card">
+        <h4>"What is your gross likelihood score for this scenario, and why?"</h4>
+        <p>Tests whether assessors understand the gross/net distinction and can articulate scoring rationale. A blank stare indicates the scores were assigned without genuine analysis.</p>
+      </div>
+      <div class="gap-card">
+        <h4>"How did you test this control, and what did the testing find?"</h4>
+        <p>Tests whether control testing is genuine and evidenced. An answer of "we reviewed the policy" is insufficient for an effectiveness rating.</p>
+      </div>
+      <div class="gap-card">
+        <h4>"What would happen to your net risk score if this control failed?"</h4>
+        <p>Tests understanding of control dependency and residual risk exposure. Organisations that cannot answer this question do not understand their own risk assessment.</p>
+      </div>
+    </div>
+
+    <h3>6.3 Transaction Testing</h3>
+
+    <p>Auditors will sample actual transactions to verify that the control framework the risk assessment claims actually operates in practice:</p>
+
+    <ul>
+      <li>A sample of gifts and hospitality register entries: are entries complete, approved, and consistent with policy limits? Are there entries near contract award dates?</li>
+      <li>A sample of business partner due diligence files: are they complete? Proportionate to risk? Free of unresolved red flags?</li>
+      <li>A sample of high-risk transactions (government-adjacent sales, public procurement bids, agent-facilitated deals): do the transaction records align with the control framework?</li>
+      <li>Expense claim data for high-risk roles in high-risk jurisdictions: any anomalies consistent with facilitation payment patterns?</li>
+    </ul>
+
+    <h2 id="review">7. Review Frequency and Triggers</h2>
+
+    <p>ISO 37001 Clause 4.5 requires the risk assessment to be reviewed at planned intervals and whenever significant changes occur. "Planned intervals" should be interpreted as at least annually for the full assessment, with more frequent targeted reviews when specific trigger conditions arise:</p>
+
+    <ul>
+      <li>Entry into a new market, jurisdiction, or sector</li>
+      <li>Acquisition of or merger with another organisation</li>
+      <li>Commencement of material new business relationships (agents, joint venture partners, significant suppliers)</li>
+      <li>A bribery incident or credible allegation within the organisation</li>
+      <li>A significant enforcement action against a peer organisation in the same market or sector</li>
+      <li>A material change in the regulatory environment of an operating jurisdiction</li>
+      <li>Identification of a significant control failure through audit, monitoring, or other source</li>
+    </ul>
+
+    <div id="implementation">
+      <h2>8. Building Your Assessment: A Phased Approach</h2>
+
+      <div class="phase-card">
+        <div class="phase-header">
+          <div class="phase-number">1</div>
+          <div class="phase-title">Foundation: Scope and Methodology</div>
+        </div>
+        <ul>
+          <li>Define the scope of the assessment: which entities, geographies, functions, and business relationships are included</li>
+          <li>Select and document the risk assessment methodology aligned to ISO 31000 principles</li>
+          <li>Define the likelihood and consequence scales with organisation-specific calibration</li>
+          <li>Define the gross risk matrix and net risk calculation approach</li>
+          <li>Obtain governing body approval for risk appetite and acceptance thresholds before proceeding to evaluation</li>
+        </ul>
+      </div>
+
+      <div class="phase-card">
+        <div class="phase-header">
+          <div class="phase-number">2</div>
+          <div class="phase-title">Scenario Development</div>
+        </div>
+        <ul>
+          <li>Apply all four identification lenses: transaction mapping, interaction mapping, pressure point analysis, and historical intelligence</li>
+          <li>Develop specific scenario narratives for each identified risk — not categories, but plausible event descriptions with named actors and counterparty types</li>
+          <li>Engage local management and legal counsel in each significant operating jurisdiction</li>
+          <li>Document each scenario in the risk register with all required fields before assigning scores</li>
+        </ul>
+      </div>
+
+      <div class="phase-card">
+        <div class="phase-header">
+          <div class="phase-number">3</div>
+          <div class="phase-title">Gross Risk Scoring and Control Mapping</div>
+        </div>
+        <ul>
+          <li>Score each scenario for gross likelihood and gross consequence using the defined scales</li>
+          <li>Calculate gross risk scores and apply risk matrix ratings</li>
+          <li>Map all existing controls to each scenario — preventive, detective, and corrective</li>
+          <li>Prepare a control testing programme addressing design adequacy, implementation, and operating effectiveness</li>
+        </ul>
+      </div>
+
+      <div class="phase-card">
+        <div class="phase-header">
+          <div class="phase-number">4</div>
+          <div class="phase-title">Control Testing, Net Risk, and Treatment</div>
+        </div>
+        <ul>
+          <li>Execute the control testing programme and document test evidence for each control</li>
+          <li>Assign effectiveness ratings based on test results</li>
+          <li>Calculate net risk scores by applying effectiveness ratings to gross likelihood</li>
+          <li>Evaluate net risk against risk appetite criteria — identify scenarios above acceptance threshold</li>
+          <li>Develop documented treatment plans for all scenarios above threshold, with named owners and target dates</li>
+          <li>Obtain formal approval of the completed assessment at the appropriate governance level</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2 id="conclusion">Conclusion</h2>
+
+    <p>Anti-bribery risk assessment under ISO 37001 Clause 4.5 is not a compliance exercise to be completed once and filed. It is the analytical foundation of the entire anti-bribery management system. Every control, every due diligence process, every training programme, and every monitoring activity derives its justification from what the risk assessment reveals.</p>
+
+    <p>The assessment must be specific. Bribery occurs in specific transactions, conducted by specific people, with specific counterparties, under specific conditions. An assessment that does not reach that level of specificity cannot design controls that actually address the risk.</p>
+
+    <p>The assessment must distinguish between gross and net risk. Gross risk tells you what you are exposed to before controls. Net risk tells you what you have done about it. The gap between them is the compliance task.</p>
+
+    <p>Control testing is not optional. It is the mechanism by which claimed risk reduction becomes evidenced risk reduction. Every control on which you rely in your net risk calculation must have been tested, and the test results must be documented.</p>
+
+  </article>
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-card">
+      <div class="sidebar-card-header">Contents</div>
+      <div class="sidebar-card-body">
+        <nav class="toc-nav">
+          <a href="#framework" class="toc-link">
+            <span class="toc-dot"></span>1. The Standards Framework
+          </a>
+          <a href="#specificity" class="toc-link">
+            <span class="toc-dot"></span>2. The Specificity Imperative
+          </a>
+          <a href="#gross-risk" class="toc-link">
+            <span class="toc-dot"></span>3. Gross Risk: The Baseline
+          </a>
+          <a href="#controls" class="toc-link">
+            <span class="toc-dot"></span>4. Controls and Net Risk
+          </a>
+          <a href="#treatment" class="toc-link">
+            <span class="toc-dot"></span>5. Risk Evaluation and Treatment
+          </a>
+          <a href="#auditor" class="toc-link">
+            <span class="toc-dot"></span>6. What Auditors Look For
+          </a>
+          <a href="#review" class="toc-link">
+            <span class="toc-dot"></span>7. Review Frequency
+          </a>
+          <a href="#implementation" class="toc-link">
+            <span class="toc-dot"></span>8. Phased Approach
+          </a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-card-header">Standards Referenced</div>
+      <div class="sidebar-card-body">
+        <nav class="toc-nav">
+          <a href="https://www.iso.org/standard/65073.html" target="_blank" class="toc-link">
+            <span class="toc-dot"></span>ISO 37001 — Anti-Bribery Management Systems
+          </a>
+          <a href="https://www.iso.org/standard/65694.html" target="_blank" class="toc-link">
+            <span class="toc-dot"></span>ISO 31000 — Risk Management
+          </a>
+          <a href="https://www.iso.org/standard/75056.html" target="_blank" class="toc-link">
+            <span class="toc-dot"></span>ISO 37000 — Governance of Organisations
+          </a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="sidebar-card">
+      <div class="sidebar-card-header">Related Resources</div>
+      <div class="sidebar-card-body">
+        <nav class="toc-nav">
+          <a href="abms-objectives.html" class="toc-link">
+            <span class="toc-dot"></span>ABMS Objectives: Beyond the Checkbox
+          </a>
+          <a href="iso-37001-employee-hiring.html" class="toc-link">
+            <span class="toc-dot"></span>HR Due Diligence Under ISO 37001
+          </a>
+          <a href="../checklists/iso-37001-checklist.html" class="toc-link">
+            <span class="toc-dot"></span>ISO 37001 Compliance Checklist
+          </a>
+          <a href="non-conformity-management.html" class="toc-link">
+            <span class="toc-dot"></span>Non-Conformity Management System
+          </a>
+        </nav>
+      </div>
+    </div>
+
+    <div class="speeki-promo">
+      <h4>ISO 37001 Certification</h4>
+      <p>Speeki provides accredited ISO 37001 certification services. Our auditors wrote this whitepaper from direct certification audit experience.</p>
+      <a href="https://www.speeki.com/en-GB/contact-us" target="_blank" class="promo-btn">Talk to Our Team</a>
+    </div>
+  </aside>
+</div>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <h3>Speeki</h3>
+        <p>Independent ESG assurance and ISO certification. We help organisations build management systems that work — not just ones that pass audits.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Resources</h4>
+        <ul>
+          <li><a href="../index.html">All Resources</a></li>
+          <li><a href="icsr-internal-controls.html">ICSR Whitepaper</a></li>
+          <li><a href="abms-objectives.html">ABMS Objectives</a></li>
+          <li><a href="non-conformity-management.html">NCR Management</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Checklists</h4>
+        <ul>
+          <li><a href="../checklists/iso-37001-checklist.html">ISO 37001</a></li>
+          <li><a href="../checklists/iso-37002-whistleblowing-checklist.html">ISO 37002</a></li>
+          <li><a href="../checklists/iso-37008-investigations-checklist.html">ISO 37008</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Speeki</h4>
+        <ul>
+          <li><a href="https://www.speeki.com" target="_blank">speeki.com</a></li>
+          <li><a href="https://www.speeki.com/en-GB/contact-us" target="_blank">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Speeki. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+// Active TOC highlighting on scroll
+(function() {
+  const sections = document.querySelectorAll('h2[id]');
+  const tocLinks = document.querySelectorAll('.toc-link');
+
+  function updateActiveToc() {
+    let current = '';
+    sections.forEach(section => {
+      const sectionTop = section.getBoundingClientRect().top;
+      if (sectionTop <= 120) {
+        current = section.getAttribute('id');
+      }
+    });
+    tocLinks.forEach(link => {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === '#' + current) {
+        link.classList.add('active');
+        const dot = link.querySelector('.toc-dot');
+        if (dot) dot.style.background = 'var(--teal)';
+      }
+    });
+  }
+
+  window.addEventListener('scroll', updateActiveToc);
+  updateActiveToc();
+})();
+</script>
+</body>
+</html>
