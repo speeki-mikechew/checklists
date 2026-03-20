@@ -1375,20 +1375,45 @@
 
         /* Footer */
         footer {
-            background: var(--speeki-dark-blue);
-            padding: 40px 0;
-            color: rgba(255,255,255,0.6);
-            font-size: 13px;
             text-align: center;
+            padding: 60px 4vw;
+            background: #ffffff;
+            border-top: 1px solid var(--speeki-border);
         }
 
-        footer a {
-            color: rgba(255,255,255,0.6);
+        footer p {
+            margin: 8px 0;
+            font-size: 14px;
+            color: var(--speeki-gray);
+        }
+
+        footer .footer-logo {
+            margin-bottom: 12px;
+            display: inline-block;
+        }
+
+        footer .footer-logo img {
+            height: 32px;
+            width: auto;
+        }
+
+        .footer-links {
+            margin-top: 24px;
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--speeki-gray);
             text-decoration: none;
+            font-size: 14px;
+            transition: color 0.2s;
         }
 
-        footer a:hover {
-            color: var(--speeki-green);
+        .footer-links a:hover {
+            color: var(--speeki-dark);
         }
 
         /* Responsive */
@@ -1761,11 +1786,18 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2025 Speeki. All rights reserved. &nbsp;|&nbsp;
-                <a href="https://www.speeki.com/privacy">Privacy Policy</a> &nbsp;|&nbsp;
-                <a href="https://www.speeki.com">Speeki.com</a>
+            <a href="../index.html" class="footer-logo"><img src="../speeki-logo.png" alt="Speeki"></a>
+            <p>The Sustainability Firm</p>
+            <p style="margin-top: 16px; color: #9ca3af; font-size: 13px;">
+                © 2026 Speeki Pte Ltd. All rights reserved.
             </p>
-            <p style="margin-top: 8px;">This tool is for educational and self-assessment purposes only. It does not constitute professional advice.</p>
+            <div class="footer-links">
+                <a href="https://www.speeki.com">Home</a>
+                <a href="https://www.speeki.com/platform">Platform</a>
+                <a href="https://www.speeki.com/services">Services</a>
+                <a href="https://www.speeki.com/resources">Resources</a>
+                <a href="mailto:info@speeki.com">Contact</a>
+            </div>
         </div>
     </footer>
 
