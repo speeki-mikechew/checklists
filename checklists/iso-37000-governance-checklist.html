@@ -67,6 +67,7 @@
 
         :root {
             --speeki-green: #00FF7F;
+            --speeki-green-text: #00875a;
             --speeki-dark-blue: #0a1f44;
             --speeki-dark: #0a1f44;
             --speeki-gray: #4a5568;
@@ -151,7 +152,7 @@
         }
 
         .header-highlight {
-            color: var(--speeki-green);
+            color: var(--speeki-green-text);
             position: relative;
         }
 
@@ -817,9 +818,13 @@
                 padding: 40px 6vw;
             }
         }
-    </style>
+            /* Skip Navigation Link */
+        .skip-link { position: absolute; top: -40px; left: 0; background: #0a1f44; color: #fff; padding: 8px 16px; z-index: 10000; font-size: 14px; }
+        .skip-link:focus { top: 0; }
+        </style>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <nav>
         <div class="nav-content">
             <a href="../index.html" class="nav-logo"><img src="../speeki-logo.png" alt="Speeki - The Sustainability Firm"></a>
@@ -842,7 +847,7 @@
             </div>
         </header>
 
-        <main>
+        <main id="main-content">
             <form id="checklistForm">
                 <div class="checklist-item">
                     <div class="item-header">

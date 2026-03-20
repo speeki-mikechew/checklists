@@ -22,6 +22,7 @@
 
         :root {
             --speeki-green: #00FF7F;
+            --speeki-green-text: #00875a;
             --speeki-dark: #0a1f44;
             --speeki-gray: #4a5568;
             --speeki-light-gray: #f8f9fa;
@@ -213,7 +214,7 @@
         }
 
         .btn-secondary:hover {
-            border-color: var(--speeki-green);
+            border-color: var(--speeki-green-text);
         }
 
         .chart-container {
@@ -270,15 +271,19 @@
                 padding: 12px 8px;
             }
         }
-    </style>
+            /* Skip Navigation Link */
+        .skip-link { position: absolute; top: -40px; left: 0; background: #0a1f44; color: #fff; padding: 8px 16px; z-index: 10000; font-size: 14px; }
+        .skip-link:focus { top: 0; }
+        </style>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <header>
         <h1>📊 Growth Analytics Dashboard</h1>
         <p class="subtitle">Real-time metrics from your Speeki checklists growth engine</p>
     </header>
 
-    <div class="container">
+    <div class="container" id="main-content">
         <!-- Key Metrics -->
         <h2 class="section-title">Key Performance Indicators</h2>
         <div class="metrics-grid">

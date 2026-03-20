@@ -3,19 +3,40 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Beyond the Checkbox: ABMS Objectives — Speeki Resources</title>
-<meta name="description" content="Why most organisations set activity-based ABMS objectives instead of outcome-based ones — and how to design objectives that genuinely measure whether an anti-bribery programme is working. ISO 37001:2025 Clause 6.2.">
+<title>Beyond the Checkbox: ABMS Objectives — Speeki</title>
+<meta name="description" content="Why most organisations set activity-based ABMS objectives instead of outcome-based ones, and how to design objectives that genuinely measure anti-bribery programme effectiveness. ISO 37001:2025 Clause 6.2.">
 <meta name="keywords" content="ABMS objectives, ISO 37001, anti-bribery management system, compliance objectives, ISO 37001:2025, Clause 6.2, SMART objectives">
 <meta name="author" content="Speeki">
+<meta name="robots" content="index, follow">
 <meta property="og:title" content="Beyond the Checkbox: Why Companies Need to Rethink ABMS Objectives">
-<meta property="og:description" content="Most ABMS objectives measure activity, not effectiveness. This whitepaper shows how to design objectives that are genuinely connected to bribery risk and capable of demonstrating whether the system is working.">
+<meta property="og:description" content="Most ABMS objectives measure activity, not effectiveness. This whitepaper shows how to design objectives genuinely connected to bribery risk and capable of demonstrating whether the system is working.">
 <meta property="og:type" content="article">
-<meta property="og:url" content="https://www.speeki.com/resources/whitepapers/abms-objectives">
+<meta property="og:url" content="https://www.speeki.com/en-GB/resources/whitepapers/abms-objectives.html">
 <meta property="og:site_name" content="Speeki">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Beyond the Checkbox: ABMS Objectives — Speeki">
 <meta name="twitter:description" content="ISO 37001:2025 requires measurable, risk-connected ABMS objectives. Most organisations fall short. Here is what better looks like.">
-<link rel="canonical" href="https://www.speeki.com/resources/whitepapers/abms-objectives">
+<link rel="canonical" href="https://www.speeki.com/en-GB/resources/whitepapers/abms-objectives.html">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Beyond the Checkbox: ABMS Objectives",
+  "description": "Why most organisations set activity-based ABMS objectives instead of outcome-based ones, and how to design objectives that genuinely measure anti-bribery programme effectiveness.",
+  "author": {
+    "@type": "Organization",
+    "name": "Speeki",
+    "url": "https://www.speeki.com"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Speeki",
+    "url": "https://www.speeki.com"
+  },
+  "url": "https://www.speeki.com/en-GB/resources/whitepapers/abms-objectives.html",
+  "mainEntityOfPage": "https://www.speeki.com/en-GB/resources/whitepapers/abms-objectives.html"
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
 <style>
@@ -24,6 +45,8 @@
   --navy-mid: #1a2d5a;
   --navy-light: #243672;
   --teal: #00FF7F;
+  --teal-text: #00875a;
+  --teal-accessible: #00875a;
   --teal-dark: #00e06e;
   --teal-light: #e6fff0;
   --gold: #f0a500;
@@ -92,7 +115,7 @@ body {
   font-weight: 500;
   transition: color 0.2s;
 }
-.nav-links a:hover { color: var(--teal); }
+.nav-links a:hover { color: var(--teal-accessible); }
 .nav-links .active { color: var(--white); }
 .nav-cta {
   background: var(--teal);
@@ -120,9 +143,9 @@ body {
   color: rgba(255,255,255,0.5);
 }
 .breadcrumb a { color: rgba(255,255,255,0.6); text-decoration: none; }
-.breadcrumb a:hover { color: var(--teal); }
+.breadcrumb a:hover { color: var(--teal-accessible); }
 .breadcrumb-sep { opacity: 0.4; }
-.breadcrumb-current { color: var(--teal); }
+.breadcrumb-current { color: var(--teal-accessible); }
 
 /* ─── HERO ────────────────────────────────────────── */
 .hero {
@@ -248,7 +271,7 @@ body {
   gap: 8px;
   transition: border-color 0.2s, color 0.2s;
 }
-.btn-outline:hover { border-color: var(--teal); color: var(--teal); }
+.btn-outline:hover { border-color: var(--teal-accessible); color: var(--teal-accessible); }
 .hero-card {
   background: rgba(255,255,255,0.05);
   border: 1px solid rgba(255,255,255,0.1);
@@ -361,7 +384,7 @@ body {
   line-height: 1;
   margin-bottom: 4px;
 }
-.stat-number span { color: var(--teal); }
+.stat-number span { color: var(--teal-accessible); }
 .stat-label { color: var(--text-light); font-size: 13px; }
 
 /* ─── CONTENT LAYOUT ──────────────────────────────── */
@@ -505,7 +528,7 @@ body {
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--teal);
+  color: var(--teal-text);
   margin-bottom: 6px;
 }
 .objective-card h4 { font-size: 16px; font-weight: 700; color: var(--navy); margin-bottom: 10px; }
@@ -702,9 +725,13 @@ body {
   .footer-top { grid-template-columns: 1fr; gap: 32px; }
   .objective-grid { grid-template-columns: 1fr; }
 }
-</style>
+        /* Skip Navigation Link */
+        .skip-link { position: absolute; top: -40px; left: 0; background: #0a1f44; color: #fff; padding: 8px 16px; z-index: 10000; font-size: 14px; }
+        .skip-link:focus { top: 0; }
+        </style>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
 <!-- NAV -->
 <nav class="nav">
@@ -732,7 +759,7 @@ body {
 </div>
 
 <!-- HERO -->
-<section class="hero">
+<section class="hero" id="main-content">
   <div class="hero-inner">
     <div class="hero-content">
       <div class="hero-tag">
@@ -1186,7 +1213,7 @@ body {
 
     <p>Speeki is an accredited ISO certification body providing independent assurance and certification under ISO 37001:2025 globally.</p>
 
-    <p><strong>Contact us at <a href="mailto:info@speeki.com" style="color: var(--teal);">info@speeki.com</a> or visit <a href="https://www.speeki.com" target="_blank" style="color: var(--teal);">www.speeki.com</a></strong></p>
+    <p><strong>Contact us at <a href="mailto:info@speeki.com" style="color: var(--teal-text);">info@speeki.com</a> or visit <a href="https://www.speeki.com" target="_blank" style="color: var(--teal-text);">www.speeki.com</a></strong></p>
   </article>
 
   <!-- SIDEBAR -->

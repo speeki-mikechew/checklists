@@ -6,19 +6,19 @@
     <script src="../assets/auth.js"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ESG Reporting Assurance Readiness Checklist by Speeki. Assess your assurance readiness for CSRD, ESRS, IFRS S1/S2, GRI and TCFD reporting. Interactive tool with progress tracking.">
+    <meta name="description" content="ESG Reporting Assurance Readiness Checklist by Speeki. Understand what assurance providers require for CSRD, ESRS, IFRS S1/S2, GRI and TCFD reporting.">
     <meta name="keywords" content="ESG assurance, CSRD, ESRS, IFRS S1, IFRS S2, GRI, TCFD, sustainability reporting, assurance readiness, ESG audit">
     <meta name="author" content="Speeki">
     <meta property="og:title" content="ESG Reporting Assurance Readiness Checklist | Speeki">
-    <meta property="og:description" content="Assess your ESG assurance readiness. Prepare for CSRD, ESRS, IFRS S1/S2, GRI and TCFD reporting assurance with confidence.">
+    <meta property="og:description" content="Understand ESG assurance requirements for CSRD, ESRS, IFRS S1/S2, GRI and TCFD reporting. Educational reference for what assurance providers evaluate.">
     <meta property="og:type" content="article">
     <meta property="og:url" content="https://www.speeki.com/checklists/esg-reporting-assurance">
     <meta property="og:site_name" content="Speeki">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="ESG Reporting Assurance Readiness Checklist | Speeki">
-    <meta name="twitter:description" content="Assess your ESG assurance readiness before engaging a provider.">
+    <meta name="twitter:description" content="Understand what ESG assurance providers evaluate under CSRD, ESRS, IFRS S1/S2, GRI and TCFD reporting standards.">
     <meta name="robots" content="index, follow">
-    <title>ESG Reporting Assurance Readiness Checklist | Speeki - Prepare for External Assurance</title>
+    <title>ESG Reporting Assurance Readiness Checklist | Speeki</title>
     <link rel="canonical" href="https://www.speeki.com/checklists/esg-reporting-assurance">
 
     <script type="application/ld+json">
@@ -26,7 +26,7 @@
         "@context": "https://schema.org",
         "@type": "HowTo",
         "name": "ESG Reporting Assurance Readiness Checklist",
-        "description": "Assess your ESG assurance readiness for CSRD, ESRS, IFRS S1/S2, GRI and TCFD reporting. Prepare for external assurance with confidence.",
+        "description": "Understand what assurance providers evaluate for CSRD, ESRS, IFRS S1/S2, GRI and TCFD reporting. Educational reference on ESG assurance requirements.",
         "publisher": {
             "@type": "Organization",
             "name": "Speeki",
@@ -49,6 +49,7 @@
 
         :root {
             --speeki-green: #00FF7F;
+            --speeki-green-text: #00875a;
             --speeki-dark-blue: #0a1f44;
             --speeki-dark: #0a1f44;
             --speeki-gray: #4a5568;
@@ -663,9 +664,13 @@
                 width: 100%;
             }
         }
-    </style>
+            /* Skip Navigation Link */
+        .skip-link { position: absolute; top: -40px; left: 0; background: #0a1f44; color: #fff; padding: 8px 16px; z-index: 10000; font-size: 14px; }
+        .skip-link:focus { top: 0; }
+        </style>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <nav>
         <div class="nav-content">
             <a href="../index.html" class="nav-logo"><img src="../speeki-logo.png" alt="Speeki - The Sustainability Firm"></a>
@@ -679,7 +684,7 @@
         <div class="header-content">
             <h1>ESG Reporting Assurance Readiness Checklist</h1>
             <div class="accent-line"></div>
-            <p class="subtitle">Whether you're reporting for CSRD (ESRS), IFRS S1 and S2, GRI or TCFD, this checklist will help you assess your assurance readiness by highlighting key areas to address before engaging a provider.</p>
+            <p class="subtitle">Whether you're reporting for CSRD (ESRS), IFRS S1 and S2, GRI or TCFD, this checklist explains what assurance providers evaluate and the documentation standards they apply when conducting external assurance engagements.</p>
 
             <div class="progress-section">
                 <div class="progress-bar-container">
@@ -690,7 +695,7 @@
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <div class="main-content">
             <section class="section">
                 <h2 class="section-title">1. Governance and Oversight</h2>
@@ -1000,7 +1005,7 @@
                         <div class="checklist-item" style="cursor: pointer;">
                             <div class="checklist-item-content">
                                 <div class="checklist-item-title">GHG Reporting Readiness</div>
-                                <p style="font-size: 14px; color: var(--speeki-gray); margin-top: 8px;">Assess your carbon accounting readiness for Scope 1, 2 and 3</p>
+                                <p style="font-size: 14px; color: var(--speeki-gray); margin-top: 8px;">GHG carbon accounting requirements for Scope 1, 2 and 3</p>
                             </div>
                         </div>
                     </a>
@@ -1019,8 +1024,8 @@
 
     <div class="cta-section">
         <div class="cta-content">
-            <h2 class="cta-title">Ready for Limited or Reasonable Assurance?</h2>
-            <p class="cta-text">The Speeki Platform provides the documentation framework and evidence management that assurance providers require when evaluating ESG disclosures. Ensure your reporting meets the verification standards that auditors evaluate under ISAE 3000.</p>
+            <h2 class="cta-title">About ESG Reporting Assurance</h2>
+            <p class="cta-text">The Speeki Platform provides the documentation framework and evidence management that assurance providers require when evaluating ESG disclosures under ISAE 3000. Learn how Speeki supports independent ESG assurance engagements.</p>
             <button class="cta-button" onclick="window.location.href='https://www.speeki.com/platform'">Learn More About Speeki Platform</button>
         </div>
     </div>
