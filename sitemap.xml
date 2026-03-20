@@ -1,83 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Root pages -->
+  <!-- Main resources hub -->
   <url>
-    <loc>https://www.speeki.com/en-GB/resources/</loc>
+    <loc>https://www.speeki.com/en-GB/resources</loc>
+    <lastmod>2026-03-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <!-- Checklist pages -->
   <url>
-    <loc>https://www.speeki.com/en-GB/resources/anti-greenwashing-checklist.html</loc>
+    <loc>https://www.speeki.com/checklists/anti-greenwashing</loc>
+    <lastmod>2026-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.speeki.com/en-GB/resources/esg-reporting-assurance-checklist.html</loc>
+    <loc>https://www.speeki.com/checklists/ghg-reporting-readiness</loc>
+    <lastmod>2026-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.speeki.com/en-GB/resources/esg-software-checklist.html</loc>
+    <loc>https://www.speeki.com/checklists/esg-reporting-assurance</loc>
+    <lastmod>2026-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.speeki.com/en-GB/resources/ghg-reporting-readiness-checklist.html</loc>
+    <loc>https://www.speeki.com/checklists/esg-software</loc>
+    <lastmod>2026-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.speeki.com/en-GB/resources/iso-26000-social-responsibility-checklist.html</loc>
+    <loc>https://www.speeki.com/checklists/iso-37001</loc>
+    <lastmod>2026-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.speeki.com/en-GB/resources/iso-37000-governance-checklist.html</loc>
+    <loc>https://www.speeki.com/checklists/iso-37002-whistleblowing</loc>
+    <lastmod>2026-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.speeki.com/en-GB/resources/iso-37001-checklist.html</loc>
+    <loc>https://www.speeki.com/checklists/iso-37000-governance</loc>
+    <lastmod>2026-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.speeki.com/en-GB/resources/iso-37002-whistleblowing-checklist.html</loc>
+    <loc>https://www.speeki.com/checklists/iso-37008-investigations</loc>
+    <lastmod>2026-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.speeki.com/en-GB/resources/iso-37008-investigations-checklist.html</loc>
+    <loc>https://www.speeki.com/checklists/iso-26000-social-responsibility</loc>
+    <lastmod>2026-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <!-- Whitepaper pages -->
   <url>
-    <loc>https://www.speeki.com/en-GB/resources/whitepapers/abms-objectives.html</loc>
+    <loc>https://www.speeki.com/resources/whitepapers/abms-objectives</loc>
+    <lastmod>2026-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.speeki.com/en-GB/resources/whitepapers/abms-risk-assessment.html</loc>
+    <loc>https://www.speeki.com/resources/whitepapers/abms-risk-assessment</loc>
+    <lastmod>2026-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.speeki.com/en-GB/resources/whitepapers/icsr-internal-controls.html</loc>
+    <loc>https://www.speeki.com/resources/whitepapers/icsr-internal-controls</loc>
+    <lastmod>2026-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.speeki.com/en-GB/resources/whitepapers/iso-37001-employee-hiring.html</loc>
+    <loc>https://www.speeki.com/resources/whitepapers/iso-37001-employee-hiring</loc>
+    <lastmod>2026-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://www.speeki.com/en-GB/resources/whitepapers/non-conformity-management.html</loc>
+    <loc>https://www.speeki.com/resources/whitepapers/non-conformity-management</loc>
+    <lastmod>2026-03-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
