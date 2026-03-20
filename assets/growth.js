@@ -11,7 +11,7 @@
         storagePrefix: 'speeki_',
         leadCaptureDelay: 30000, // Show lead capture after 30 seconds (disabled - see initLeadCapture)
         progressMilestones: [25, 50, 75, 100], // Percentages to celebrate
-        shareMessage: 'I\'m using this great ESG resource from Speeki. Check it out!',
+        shareMessage: 'I\'m using this great compliance resource from Speeki. Check it out!',
         exitIntentCooldown: 60000, // Minimum 60 seconds between exit intent triggers
         exitIntentThreshold: 50, // Mouse must go above 50px from top to trigger
     };
@@ -63,8 +63,8 @@
                             <line x1="16" y1="17" x2="8" y2="17"></line>
                         </svg>
                     </div>
-                    <h3>Get This Resource</h3>
-                    <p>Enter your email to receive a copy of this resource and related ESG and compliance tools.</p>
+                    <h3>Get This Compliance Resource</h3>
+                    <p>Enter your email to receive a copy of this resource guide and related compliance resources.</p>
                     <form id="speeki-lead-form">
                         <input type="email" id="speeki-email" placeholder="your@email.com" required>
                         <button type="submit">Send Me the Resource</button>
@@ -119,7 +119,7 @@
                     </svg>
                 </div>
                 <h3>Thank You!</h3>
-                <p>Check your inbox for the resource and related ESG tools.</p>
+                <p>Check your inbox for the compliance resource and related resources.</p>
                 <button class="speeki-modal-cta" onclick="SpeekiGrowth.hideLeadCaptureModal()">Continue</button>
             `;
 
@@ -323,10 +323,10 @@
             toast.className = 'speeki-toast';
 
             let message = '';
-            if (milestone === 25) message = 'Great start! You\'re 25% through this assessment.';
+            if (milestone === 25) message = 'Great start! You\'re 25% through the resource.';
             else if (milestone === 50) message = 'Halfway there! Keep up the momentum.';
             else if (milestone === 75) message = 'Almost done! Just a few more items to go.';
-            else if (milestone === 100) message = 'Congratulations! You\'ve completed this assessment!';
+            else if (milestone === 100) message = 'Congratulations! You\'ve completed the entire resource!';
 
             toast.innerHTML = `
                 <div class="toast-icon">
