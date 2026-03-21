@@ -38,10 +38,10 @@
 }
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root {
-  --navy: #0a1f44;
+  --navy: #0f1c3f;
   --navy-mid: #1a2d5a;
   --navy-light: #243672;
   --teal: #00FF7F;
@@ -74,14 +74,14 @@ body {
   font-family: 'DM Sans', sans-serif;
   color: var(--text);
   background: var(--white);
-  line-height: 1.6;
-  font-size: 16px;
+  line-height: 1.8;
+  font-size: 17px;
   -webkit-font-smoothing: antialiased;
 }
 
 /* ─── NAV ─────────────────────────────────────────── */
 nav {
-  background: #0a1628;
+  background: #0f1c3f;
   padding: 0 32px;
   position: sticky;
   top: 0;
@@ -89,7 +89,7 @@ nav {
   border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 .nav-content {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -117,7 +117,7 @@ nav {
 .nav-back:hover { color: #00FF7F; }
 .nav-cta {
   background: #00FF7F;
-  color: #0a1628;
+  color: #0f1c3f;
   padding: 8px 20px;
   border-radius: 6px;
   text-decoration: none;
@@ -133,7 +133,7 @@ nav {
   padding: 12px 0;
 }
 .breadcrumb-inner {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 32px;
   display: flex;
@@ -175,7 +175,7 @@ nav {
   pointer-events: none;
 }
 .hero-inner {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 32px;
   display: grid;
@@ -200,13 +200,12 @@ nav {
 }
 .hero-tag svg { width: 12px; height: 12px; }
 .hero-title {
-  font-family: 'GT Walsheim Pro', 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-  font-size: 52px;
-  letter-spacing: -1.5px;
-  line-height: 1.08;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1.15;
   color: var(--white);
   margin-bottom: 12px;
-  letter-spacing: -1px;
 }
 .hero-title em {
   font-style: italic;
@@ -365,7 +364,7 @@ nav {
   padding: 28px 0;
 }
 .stats-inner {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 32px;
   display: grid;
@@ -390,7 +389,7 @@ nav {
 
 /* ─── CONTENT LAYOUT ──────────────────────────────── */
 .content-section {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 64px 32px;
   display: grid;
@@ -401,16 +400,15 @@ nav {
 
 /* ─── ARTICLE ─────────────────────────────────────── */
 .article h2 {
-  font-family: 'GT Walsheim Pro', 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
-  font-size: 36px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 28px;
   color: var(--navy);
   margin: 48px 0 16px;
   line-height: 1.2;
-  letter-spacing: -0.5px;
 }
 .article h2:first-child { margin-top: 0; }
 .article h3 {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 600;
   color: var(--navy);
   margin: 36px 0 12px;
@@ -660,14 +658,14 @@ nav {
 
 /* ─── FOOTER ──────────────────────────────────────── */
 footer {
-  background: #0a1628;
+  background: #0f1c3f;
   color: #9ca3af;
   text-align: center;
   padding: 48px 32px;
   margin-top: 60px;
 }
 footer .container {
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 .footer-logo img {
@@ -701,7 +699,7 @@ footer .container {
   .stat-item:nth-child(3), .stat-item:nth-child(4) { border-bottom: none; padding-bottom: 0; }
 }
         /* Skip Navigation Link */
-        .skip-link { position: absolute; top: -40px; left: 0; background: #0a1f44; color: #fff; padding: 8px 16px; z-index: 10000; font-size: 14px; }
+        .skip-link { position: absolute; top: -40px; left: 0; background: #0f1c3f; color: #fff; padding: 8px 16px; z-index: 10000; font-size: 14px; }
         .skip-link:focus { top: 0; }
         .related-card:hover { border-color: #00FF7F !important; box-shadow: 0 4px 16px rgba(0,255,127,0.12) !important; }
         </style>
@@ -833,12 +831,12 @@ footer .container {
     <p>This whitepaper sets out the technical requirements of an anti-bribery risk assessment that is genuinely fit for purpose — one that can support ISO 37001 certification, inform control design, and provide real governance value rather than serving as a compliance artefact.</p>
 
     <!-- INLINE LEAD CAPTURE CTA -->
-    <div class="inline-cta" style="background: linear-gradient(135deg, #0a1f44, #1a2d5c); border-radius: 12px; padding: 40px; margin: 48px 0; color: white; text-align: center;">
+    <div class="inline-cta" style="background: linear-gradient(135deg, #0f1c3f, #1a2d5c); border-radius: 12px; padding: 40px; margin: 48px 0; color: white; text-align: center;">
       <h3 style="font-size: 24px; font-weight: 700; margin-bottom: 12px; color: white;">Get This Guide as PDF</h3>
       <p style="font-size: 16px; color: rgba(255,255,255,0.85); margin-bottom: 24px; max-width: 500px; margin-left: auto; margin-right: auto;">Download this whitepaper plus related resources and implementation templates.</p>
       <form class="inline-cta-form" style="display: flex; gap: 12px; max-width: 440px; margin: 0 auto;" onsubmit="handleInlineCTA(event, this)">
         <input type="email" placeholder="your@email.com" required style="flex: 1; padding: 14px 16px; border: 2px solid rgba(255,255,255,0.3); border-radius: 8px; background: rgba(255,255,255,0.1); color: white; font-size: 15px;" aria-label="Email address">
-        <button type="submit" style="padding: 14px 24px; background: #00FF7F; color: #0a1f44; border: none; border-radius: 8px; font-weight: 700; font-size: 14px; cursor: pointer; white-space: nowrap;">Download PDF</button>
+        <button type="submit" style="padding: 14px 24px; background: #00FF7F; color: #0f1c3f; border: none; border-radius: 8px; font-weight: 700; font-size: 14px; cursor: pointer; white-space: nowrap;">Download PDF</button>
       </form>
       <p class="inline-cta-success" style="display:none; font-size: 15px; color: #00FF7F; margin-top: 12px; font-weight: 600;">Thank you — check your inbox for the download link.</p>
       <p style="font-size: 12px; color: rgba(255,255,255,0.6); margin-top: 12px;">No spam. Unsubscribe anytime.</p>
@@ -1469,9 +1467,9 @@ footer .container {
 
     <!-- BOTTOM CTA -->
     <div style="background: #f0fdf4; border: 2px solid #00FF7F; border-radius: 12px; padding: 40px; margin-top: 48px; text-align: center;">
-      <h3 style="font-size: 22px; font-weight: 700; color: #0a1f44; margin-bottom: 12px;">Need Expert Assurance Support?</h3>
+      <h3 style="font-size: 22px; font-weight: 700; color: #0f1c3f; margin-bottom: 12px;">Need Expert Assurance Support?</h3>
       <p style="font-size: 16px; color: #374151; margin-bottom: 24px; max-width: 520px; margin-left: auto; margin-right: auto;">Speeki provides independent ESG assurance and ISO certification services.</p>
-      <a href="https://www.speeki.com/demo" style="display: inline-block; padding: 14px 32px; background: #0a1f44; color: white; border-radius: 8px; font-weight: 700; font-size: 15px; text-decoration: none;">Book a Demo</a>
+      <a href="https://www.speeki.com/demo" style="display: inline-block; padding: 14px 32px; background: #0f1c3f; color: white; border-radius: 8px; font-weight: 700; font-size: 15px; text-decoration: none;">Book a Demo</a>
     </div>
 
   </article>
@@ -1542,7 +1540,7 @@ footer .container {
 
 <!-- Related Resources -->
 <section class="related-resources" style="background: #f8f9fa; padding: 60px 0; font-family: 'DM Sans', sans-serif;">
-  <div style="max-width: 1400px; margin: 0 auto; padding: 0 4vw;">
+  <div style="max-width: 1200px; margin: 0 auto; padding: 0 4vw;">
     <h2 style="font-size: 28px; font-weight: 700; margin: 0 0 32px 0; color: #0a0a0a; font-family: 'DM Sans', sans-serif;">Related Resources</h2>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
       <a href="../checklists/iso-37001-checklist.html" style="text-decoration: none; display: block;">
