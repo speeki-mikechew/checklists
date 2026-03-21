@@ -344,7 +344,122 @@
 
         main {
             padding: 60px 4vw;
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 64px;
+            max-width: 1400px;
+            margin: 0 auto;
+            align-items: start;
         }
+
+        /* Sticky Sidebar */
+        .sticky-sidebar {
+            display: none;
+            position: sticky;
+            top: 80px;
+            height: fit-content;
+            background: var(--speeki-light-gray);
+            border-radius: 8px;
+            padding: 28px;
+            border: 1px solid var(--speeki-border);
+        }
+
+        @media (min-width: 1024px) {
+            .sticky-sidebar {
+                display: block;
+            }
+        }
+
+        .sidebar-title {
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--speeki-dark);
+            margin-bottom: 16px;
+        }
+
+        .sidebar-progress {
+            margin-bottom: 28px;
+            padding-bottom: 28px;
+            border-bottom: 1px solid var(--speeki-border);
+        }
+
+        .sidebar-progress-bar {
+            width: 100%;
+            height: 6px;
+            background: #e5e7eb;
+            border-radius: 3px;
+            overflow: hidden;
+            margin-bottom: 12px;
+        }
+
+        .sidebar-progress-fill {
+            height: 100%;
+            background: var(--speeki-green);
+            width: 0%;
+            transition: width 0.3s ease;
+            border-radius: 3px;
+        }
+
+        .sidebar-progress-text {
+            font-size: 12px;
+            color: var(--speeki-gray);
+            text-align: center;
+        }
+
+        .toc-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .toc-item {
+            margin: 0;
+            padding: 0;
+        }
+
+        .toc-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 12px;
+            color: var(--speeki-gray);
+            text-decoration: none;
+            font-size: 14px;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+            line-height: 1.4;
+        }
+
+        .toc-link:hover {
+            background: rgba(0, 255, 127, 0.1);
+            color: var(--speeki-dark);
+        }
+
+        .toc-link.active {
+            background: rgba(0, 255, 127, 0.15);
+            color: var(--speeki-green-text);
+            font-weight: 600;
+        }
+
+        .toc-dot {
+            width: 6px;
+            height: 6px;
+            background: var(--speeki-border);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .toc-link.active .toc-dot {
+            background: var(--speeki-green-text);
+            width: 8px;
+            height: 8px;
+        }
+
 
         .main-content {
             max-width: 1400px;
@@ -770,6 +885,18 @@
             line-height: 1.5;
         }
 
+
+        @media (max-width: 1023px) {
+            main {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .sticky-sidebar {
+                position: static;
+                top: auto;
+            }
+        }
+
         @media (max-width: 768px) {
             h1 {
                 font-size: 36px;
@@ -1051,7 +1178,7 @@
 
     <main id="main-content">
         <div class="main-content">
-            <section class="section">
+            <section class="section" id="section-1">
                 <h2 class="section-title">01. Governance, Strategy and Policy</h2>
                 <div class="checklist-item">
                     <div class="checklist-item-header">
@@ -1115,7 +1242,7 @@
                 </div>
             </section>
 
-            <section class="section">
+            <section class="section" id="section-2">
                 <h2 class="section-title">02. Scope and Methodology</h2>
                 <div class="checklist-item">
                     <div class="checklist-item-header">
@@ -1163,7 +1290,7 @@
                 </div>
             </section>
 
-            <section class="section">
+            <section class="section" id="section-3">
                 <h2 class="section-title">03. Data and Teams</h2>
                 <div class="checklist-item">
                     <div class="checklist-item-header">
@@ -1227,7 +1354,7 @@
                 </div>
             </section>
 
-            <section class="section">
+            <section class="section" id="section-4">
                 <h2 class="section-title">04. Reporting and Improvement</h2>
                 <div class="checklist-item">
                     <div class="checklist-item-header">
@@ -1299,7 +1426,7 @@
                 </div>
             </section>
 
-            <section class="section">
+            <section class="section" id="section-5">
                 <h2 class="section-title">05. Tools and Systems</h2>
                 <div class="checklist-item">
                     <div class="checklist-item-header">
@@ -1399,6 +1526,42 @@
                     <button class="button button-primary" id="exportButton">Export Progress</button>
                 </div>
             </div></div>
+    
+
+        <!-- Sticky Sidebar -->
+
+        <aside class="sticky-sidebar">
+
+            <div class="sidebar-progress">
+
+                <div class="sidebar-title">Your Progress</div>
+
+                <div class="sidebar-progress-bar">
+
+                    <div class="sidebar-progress-fill" id="sidebarProgressFill"></div>
+
+                </div>
+
+                <div class="sidebar-progress-text" id="sidebarProgressText">0/31</div>
+
+            </div>
+
+            <div>
+
+                <div class="sidebar-title">Sections</div>
+
+                <ul class="toc-list">
+                    <li class="toc-item"><a href="#section-1" class="toc-link"><span class="toc-dot"></span>Governance, Strategy and Policy</a></li>
+                    <li class="toc-item"><a href="#section-2" class="toc-link"><span class="toc-dot"></span>Scope and Methodology</a></li>
+                    <li class="toc-item"><a href="#section-3" class="toc-link"><span class="toc-dot"></span>Data and Teams</a></li>
+                    <li class="toc-item"><a href="#section-4" class="toc-link"><span class="toc-dot"></span>Reporting and Improvement</a></li>
+                    <li class="toc-item"><a href="#section-5" class="toc-link"><span class="toc-dot"></span>Tools and Systems</a></li>
+                    </ul>
+
+            </div>
+
+        </aside>
+
     </main>
 
     <!-- Red Flags Section -->
@@ -1530,6 +1693,16 @@
             document.getElementById('completedCount').textContent = completed;
             document.getElementById('remainingCount').textContent = TOTAL_ITEMS - completed;
             document.getElementById('percentageComplete').textContent = percentage + '%';
+
+            // Update sidebar progress
+            var sidebarProgressFill = document.getElementById('sidebarProgressFill');
+            var sidebarProgressText = document.getElementById('sidebarProgressText');
+            if (sidebarProgressFill) {
+                sidebarProgressFill.style.width = percentage + '%';
+            }
+            if (sidebarProgressText) {
+                sidebarProgressText.textContent = completed + '/' + TOTAL_ITEMS;
+            }
         }
 
         function resetProgress() {
@@ -1581,8 +1754,32 @@
             URL.revokeObjectURL(url);
         }
 
+        // Scrollspy for TOC
+        function updateScrollSpy() {
+            const tocLinks = document.querySelectorAll('.toc-link');
+            const sections = document.querySelectorAll('section[id^="section-"]');
+
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            tocLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateScrollSpy);
+
         document.addEventListener('DOMContentLoaded', function() {
             loadProgress();
+            updateScrollSpy();
 
             const checkboxes = document.querySelectorAll('.checkbox');
             checkboxes.forEach(checkbox => {
