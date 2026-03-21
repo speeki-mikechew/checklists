@@ -2392,7 +2392,7 @@
                 <line x1="16" y1="13" x2="8" y2="13"></line>
                 <line x1="16" y1="17" x2="8" y2="17"></line>
             </svg>
-            <h3>Wait - Get All 15 Resources Free</h3>
+            <h3>Wait - Get All <span id="exitModalResourceCount">15</span> Resources Free</h3>
             <p>Enter your email to receive the complete ESG toolkit with all resources in PDF format, plus exclusive implementation guides.</p>
             <form id="exitForm">
                 <div class="form-group">
@@ -3026,6 +3026,8 @@
             if (statEl) statEl.textContent = totalResources;
             var leadEl = document.getElementById('leadMagnetResourceCount');
             if (leadEl) leadEl.textContent = totalResources;
+            var exitEl = document.getElementById('exitModalResourceCount');
+            if (exitEl) exitEl.textContent = totalResources;
         }());
 
         // Hide exit modal if already subscribed
