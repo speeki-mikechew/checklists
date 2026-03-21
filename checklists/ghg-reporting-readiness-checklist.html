@@ -1754,8 +1754,32 @@
             URL.revokeObjectURL(url);
         }
 
+        // Scrollspy for TOC
+        function updateScrollSpy() {
+            const tocLinks = document.querySelectorAll('.toc-link');
+            const sections = document.querySelectorAll('section[id^="section-"]');
+
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            tocLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateScrollSpy);
+
         document.addEventListener('DOMContentLoaded', function() {
             loadProgress();
+            updateScrollSpy();
 
             const checkboxes = document.querySelectorAll('.checkbox');
             checkboxes.forEach(checkbox => {
