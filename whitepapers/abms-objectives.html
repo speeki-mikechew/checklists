@@ -633,7 +633,7 @@ nav {
   transition: background 0.15s, color 0.15s;
 }
 .toc-link:hover { background: var(--off-white); color: #0a1628; }
-.toc-link.active { background: rgba(0,255,127,0.08); color: #00e06f; font-weight: 600; }
+.toc-link.active { background: rgba(0,255,127,0.15); color: #0a5c2f; font-weight: 600; }
 .toc-dot { width: 5px; height: 5px; background: var(--border); border-radius: 50%; flex-shrink: 0; }
 .toc-link.active .toc-dot { background: #00FF7F; }
 
@@ -1319,6 +1319,11 @@ window.addEventListener('scroll', function() {
       current = section.getAttribute('id');
     }
   });
+
+  // Default to first section when above all headings
+  if (!current && sections.length) {
+    current = sections[0].getAttribute('id');
+  }
 
   document.querySelectorAll('.toc-link').forEach(link => {
     link.classList.remove('active');

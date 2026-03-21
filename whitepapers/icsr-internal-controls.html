@@ -632,7 +632,7 @@ nav {
   transition: background 0.15s, color 0.15s;
 }
 .toc-link:hover { background: var(--off-white); color: var(--navy); }
-.toc-link.active { background: var(--teal-light); color: var(--teal-dark); font-weight: 600; }
+.toc-link.active { background: var(--teal-light); color: var(--navy); font-weight: 600; }
 .toc-dot { width: 5px; height: 5px; background: var(--border); border-radius: 50%; flex-shrink: 0; }
 .toc-link.active .toc-dot { background: var(--teal); }
 
@@ -1291,7 +1291,7 @@ document.querySelectorAll('.toc-link').forEach(link => {
     const targetId = this.getAttribute('href');
     const targetElement = document.querySelector(targetId);
     if (targetElement) {
-      const navHeight = document.querySelector('.nav').offsetHeight;
+      const navHeight = document.querySelector('nav').offsetHeight;
       const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navHeight - 20;
       window.scrollTo({ top: targetPosition, behavior: 'smooth' });
     }
@@ -1301,7 +1301,7 @@ document.querySelectorAll('.toc-link').forEach(link => {
 // Active TOC link on scroll
 window.addEventListener('scroll', function() {
   const sections = document.querySelectorAll('.article h2[id]');
-  const navHeight = document.querySelector('.nav').offsetHeight;
+  const navHeight = document.querySelector('nav').offsetHeight;
   let current = '';
 
   sections.forEach(section => {
@@ -1310,6 +1310,11 @@ window.addEventListener('scroll', function() {
       current = section.getAttribute('id');
     }
   });
+
+  // Default to first section when above all headings
+  if (!current && sections.length) {
+    current = sections[0].getAttribute('id');
+  }
 
   document.querySelectorAll('.toc-link').forEach(link => {
     link.classList.remove('active');
