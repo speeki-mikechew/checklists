@@ -593,6 +593,74 @@ nav:not(.toc-nav) {
   border-radius: 50%;
 }
 
+/* --- AUDITOR CALLOUT BOX --- */
+.auditor-callout {
+  background: #fef9e7;
+  border: 1px solid #f0d060;
+  border-left: 4px solid #e6a817;
+  border-radius: 10px;
+  padding: 24px 28px;
+  margin: 32px 0;
+  position: relative;
+}
+.auditor-callout-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #b8860b;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.auditor-callout p {
+  font-size: 15px;
+  color: var(--text);
+  line-height: 1.7;
+  margin: 0 0 10px 0;
+}
+.auditor-callout p:last-child { margin-bottom: 0; }
+
+/* --- IMPLEMENTATION CHECKLIST TABLE --- */
+.impl-checklist {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 32px 0;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 16px rgba(15,28,63,0.08);
+  font-size: 14px;
+}
+.impl-checklist thead th {
+  background: var(--navy);
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 14px 16px;
+  text-align: left;
+}
+.impl-checklist tbody tr { border-bottom: 1px solid var(--border); }
+.impl-checklist tbody tr:last-child { border-bottom: none; }
+.impl-checklist tbody tr:nth-child(odd) { background: var(--off-white); }
+.impl-checklist tbody tr:nth-child(even) { background: var(--white); }
+.impl-checklist td {
+  padding: 12px 16px;
+  vertical-align: top;
+  color: var(--text-light);
+  line-height: 1.5;
+}
+.impl-checklist td:first-child {
+  font-weight: 600;
+  color: var(--navy);
+  white-space: nowrap;
+  width: 90px;
+}
+.impl-checklist td:nth-child(3) { white-space: nowrap; }
+.impl-checklist td:nth-child(4) { white-space: nowrap; }
+
 /* --- AUDIT FINDINGS --- */
 .audit-finding {
   background: var(--white);
@@ -860,6 +928,12 @@ footer .container {
 
     <p>This whitepaper examines each sub-clause in detail, explains why common practice falls short, and provides a practical implementation framework for organisations seeking genuine compliance &#8212; not just a documented process that satisfies the letter of the requirement while missing its substance entirely.</p>
 
+    <p>In audit after audit, organisations present their background check processes as evidence of compliance with sub-clause (a) &#8212; showing reference checks, sanctions screening results, and reports from commercial background check providers. They believe, in good faith, that they are meeting the requirement. Most are not. And the majority have done nothing substantive to address sub-clauses (b) and (c).</p>
+
+    <p>This white paper examines all three sub-clauses, explains what each actually requires, identifies the misconceptions that drive non-compliance, and provides a practical framework for building a programme that meets the standard and protects the organisation. It gives particular attention to the guidance in Annex A.8.1, which describes seven specific dimensions of personnel due diligence &#8212; including two that require the organisation to assess whether the act of hiring itself could constitute bribery.</p>
+
+    <p>It is written from the perspective of an ISO 37001 auditor who has seen these failures repeatedly across industries and jurisdictions, and is intended to help compliance professionals, HR leaders, and management system owners understand the gap between what they are doing and what they need to be doing.</p>
+
     <!-- INLINE LEAD CAPTURE CTA -->
     <div class="inline-cta" style="background: linear-gradient(135deg, #0a1f44, #1a2d5c); border-radius: 12px; padding: 40px; margin: 48px 0; color: white; text-align: center;">
       <h3 style="font-size: 24px; font-weight: 700; margin-bottom: 12px; color: white;">Get This Guide as PDF</h3>
@@ -881,6 +955,12 @@ footer .container {
     <p><strong>Sub-Clause (b) &#8212; Periodic Review of Performance Incentives:</strong> The organisation shall periodically review the performance bonuses, targets, and other elements that incentivise personnel in positions that are exposed to more than a low bribery risk, and shall take action to verify that these do not create incentives for bribery, and that adequate safeguards exist.</p>
 
     <p><strong>Sub-Clause (c) &#8212; Periodic Compliance Declarations:</strong> The organisation shall periodically obtain from in-scope personnel, top management, and the governing body a declaration confirming compliance with the ABMS, proportionate to the bribery risk to which they are exposed.</p>
+
+    <div class="auditor-callout">
+      <div class="auditor-callout-label">Auditor Perspective</div>
+      <p>The standard does not ask whether a candidate has a clean criminal record. It asks whether the organisation has reasonable grounds to believe the individual will comply with the anti-bribery policy and the ABMS.</p>
+      <p>That is a fundamentally different question &#8212; and answering it requires a fundamentally different process.</p>
+    </div>
 
     <div class="pullquote">
       <p>Clause 7.2.2.2 imposes three obligations, not one. An organisation that has addressed only due diligence &#8212; even if it has addressed it well &#8212; is meeting one-third of the requirement.</p>
@@ -927,9 +1007,18 @@ footer .container {
 
     <p>The documented basis for the scope determination must be traceable to the Clause 4.5 risk assessment. An organisation that cannot demonstrate how its scope list was derived from a documented risk assessment will have difficulty satisfying an auditor on this point.</p>
 
+    <div class="auditor-callout">
+      <div class="auditor-callout-label">Auditor Perspective</div>
+      <p>If the organisation cannot demonstrate which roles are classified as more than low bribery risk, the entire Clause 7.2.2.2 programme is built on an unsupported foundation. The risk assessment under 4.5 is the entry point.</p>
+    </div>
+
     <h2 id="due-diligence">3. Sub-Clause (a): The Due Diligence Problem</h2>
 
     <p>Sub-Clause (a) is the provision most organisations have at least attempted to address. It is also the provision that is most systematically misunderstood. The core misunderstanding is the conflation of verification with investigation, and of screening with due diligence.</p>
+
+    <p>Sub-clause (a) cross-references Clause 8.2 for the due diligence methodology. Clause 8.2 requires that due diligence be based on information from independent and reliable sources and be reasonable and proportionate to the bribery risk. These two requirements &#8212; independence and proportionality &#8212; are the tests against which the due diligence programme is judged.</p>
+
+    <p>In practice, organisations confuse three distinct processes, each of which has a legitimate purpose but none of which &#8212; individually or collectively &#8212; constitutes anti-bribery due diligence as contemplated by the standard.</p>
 
     <h3>The Three Misconceptions</h3>
 
@@ -939,14 +1028,19 @@ footer .container {
       <div class="gap-card">
         <h4>Misconception 1: Reference Checks Are Due Diligence</h4>
         <p>Reference checks are candidate-nominated, rarely independent, and not designed to elicit integrity information. A former manager confirming that an individual was &#8220;hardworking and a team player&#8221; provides no evidence whatsoever about the candidate&#8217;s propensity to comply with an ABMS. Reference checks are not due diligence under Clause 7.2.2.2 &#8212; they are part of a recruitment process.</p>
+        <p>References are nominated by the candidate, making them inherently non-independent. Referees have a social incentive to provide positive feedback. The questions asked are rarely designed to elicit information about integrity, bribery risk, or ethical conduct. And even where a referee has concerns, they are unlikely to volunteer them in a structured reference call.</p>
+        <p>An auditor reviewing reference check records as evidence of sub-clause (a) compliance will note the absence of independence and the absence of any assessment directed at whether the individual will comply with the anti-bribery policy.</p>
       </div>
       <div class="gap-card">
         <h4>Misconception 2: Sanctions and PEP Screening Is Due Diligence</h4>
         <p>Sanctions screening, politically exposed person (PEP) checks, and anti-money laundering (AML) database searches are binary list checks. A clean result tells you only that the individual does not appear on a specified watchlist at a specific point in time. It establishes nothing about their past conduct, their relationships, or their likelihood of complying with an ABMS. A clean sanctions result does not satisfy the &#8220;reasonable grounds to believe&#8221; test in Sub-Clause (a).</p>
+        <p>These databases answer binary questions: is this person on a list? Have they been designated under a sanctions regime? Are they a PEP? These are important regulatory checks, but they do not address the question the standard is asking: is it reasonable to believe this person will comply with the anti-bribery policy and the ABMS? A person with no sanctions history and no PEP designation can still pose a significant bribery risk.</p>
       </div>
       <div class="gap-card">
         <h4>Misconception 3: Commercial Background Check Services Are Due Diligence</h4>
         <p>Background check services are verification tools. They confirm whether stated facts &#8212; employment history, academic qualifications, professional licences, criminal record &#8212; are accurate. They do not investigate bribery risk. They rely primarily on information provided by or about the candidate, and they do not assess whether a candidate is likely to comply with an anti-bribery management system. For low-risk roles, this may be proportionate. For high-risk roles, it is insufficient on its own.</p>
+        <p>A background check confirms whether the information a candidate has provided is accurate and whether there are any publicly recorded adverse events. It does not investigate bribery risk. It does not assess whether the individual is likely to comply with the anti-bribery policy. It does not examine conflicts of interest, undisclosed business relationships, or patterns of conduct that might indicate corruption exposure.</p>
+        <p>For standard-risk roles, a well-configured background check may form part of the due diligence package. For high-risk roles &#8212; particularly senior appointments with financial authority or government-facing responsibilities &#8212; it is grossly insufficient on its own.</p>
       </div>
     </div>
 
@@ -984,6 +1078,11 @@ footer .container {
       </tbody>
     </table>
 
+    <div class="auditor-callout">
+      <div class="auditor-callout-label">Auditor Perspective</div>
+      <p>If your programme consists exclusively of the first three rows, you have a verification programme, not a due diligence programme. The standard requires the fourth row.</p>
+    </div>
+
     <h2 id="annex-guidance">4. The Standard&#8217;s Guidance: Annex A.8.1</h2>
 
     <p>ISO 37001:2025 Annex A.8.1 provides normative guidance on the seven dimensions that due diligence should address for personnel. These dimensions are not merely illustrative suggestions &#8212; they represent the standard&#8217;s own specification of what a due diligence programme must be capable of addressing. Most organisations address two or three. Very few address all seven.</p>
@@ -992,6 +1091,7 @@ footer .container {
       <div class="gap-card">
         <h4>(a) Discussing Anti-Bribery Policy at Interview</h4>
         <p>The organisation should discuss its anti-bribery policy with candidates during the interview process and document the candidate&#8217;s response. This is a qualitative judgement dimension: how does the candidate respond when asked about bribery risk, ethical dilemmas, or situations where they faced pressure to act improperly? Most organisations never ask these questions. Fewer still document the response and treat it as part of the due diligence record.</p>
+        <p>Most organisations do not raise anti-bribery compliance during interviews for any role, let alone document the candidate&#8217;s reaction. For high-risk roles, this is a structured component of the interview process, with documented assessment criteria.</p>
       </div>
       <div class="gap-card">
         <h4>(b) Verifying Qualifications</h4>
@@ -1000,23 +1100,42 @@ footer .container {
       <div class="gap-card">
         <h4>(c) Obtaining Satisfactory References</h4>
         <p>The emphasis in this dimension falls on the word &#8220;satisfactory&#8221; &#8212; it is a qualitative assessment, not simply the act of collecting a reference. References that do not address the candidate&#8217;s integrity, ethical conduct, or behaviour in situations where there was potential for improper advantage are of limited value. References that are unsatisfactory in any respect must be escalated and assessed &#8212; not ignored or filed away.</p>
+        <p>Organisations have criteria for assessing reference quality and a documented process for escalating unsatisfactory references. A reference that is vague, non-committal, or that raises concerns is not satisfactory.</p>
       </div>
       <div class="gap-card">
         <h4>(d) Determining Prior Involvement in Bribery</h4>
         <p>This goes significantly beyond a criminal record check. The inquiry should extend to adverse media searches, regulatory actions, debarment list searches, civil proceedings, and any other publicly available information about the candidate&#8217;s history. A candidate may have been at the centre of a corruption investigation that resulted in no criminal conviction &#8212; civil settlements, regulatory findings, or debarment from public contracts are all relevant. A criminal record check will not surface any of this.</p>
+        <p>This is the point at which background checks reach their limit. A clean criminal record is not evidence of non-involvement in bribery. It is evidence of non-conviction. The standard asks a different question.</p>
       </div>
       <div class="gap-card">
         <h4>(e) Verifying the Organisation Is NOT Offering Employment as a Reward</h4>
         <p>This is the most overlooked dimension in Annex A.8.1, and arguably the most conceptually important. It flips the lens: rather than asking whether the candidate poses a bribery risk, it asks whether the organisation&#8217;s offer of employment is itself an act of bribery &#8212; a reward for past corrupt conduct that benefited the organisation. The most common example is the hire of a former procurement official who consistently favoured the organisation in supplier selection decisions. If the true reason for the hire is to reward past conduct rather than because of the individual&#8217;s genuine merit, the hire may itself constitute bribery.</p>
+        <p>This assessment requires the organisation to review its prior business relationship with the candidate&#8217;s former employer, identify any contracts or decisions in which the candidate was involved, and assess whether the employment offer could reasonably be perceived as a quid pro quo. It is a fundamentally different kind of due diligence &#8212; one that examines the organisation&#8217;s own conduct and motivations, not just the candidate&#8217;s history.</p>
       </div>
+
+      <div class="auditor-callout">
+        <div class="auditor-callout-label">Auditor Perspective</div>
+        <p>This flips the due diligence lens entirely. Most organisations ask: is this person a risk to us?</p>
+        <p>The standard also asks: are we creating a risk by hiring this person? Is the job offer itself an act of bribery &#8212; a reward for past corrupt conduct that benefited us?</p>
+      </div>
+
       <div class="gap-card">
         <h4>(f) Verifying the Purpose of the Employment Offer Is NOT to Secure Future Advantage</h4>
         <p>This dimension asks whether the true purpose of the hire is to leverage the individual&#8217;s relationships, access, or influence with government bodies or regulators to secure future improper advantage. The hire of a well-connected former regulator into a regulatory affairs role is not automatically problematic &#8212; but if the primary purpose of the hire is to exploit that access, and if the organisation has not examined that question, it may have failed both this dimension and its broader ABMS obligations.</p>
+        <p>In practice, this means asking: why are we hiring this person? Is the primary driver their professional capability, or is it their network, their relationships, or their ability to influence outcomes in our favour? If the answer is the latter, the organisation must consider whether the hire itself creates a bribery risk &#8212; even if no explicit corrupt agreement exists.</p>
       </div>
       <div class="gap-card">
         <h4>(g) Identifying Relationships to Public Officials</h4>
         <p>Beyond PEP database checks, which identify only the individual themselves, this dimension requires inquiry into family relationships, business interests, and political connections that could create a conflict of interest or bribery risk in the performance of the role. A candidate who is not a PEP but whose spouse holds a senior position in a government procurement function may present significant risk in a sales or bid management role.</p>
+        <p>In high-risk jurisdictions, these relationships can be complex and opaque. Due diligence in this area requires more than a PEP database check &#8212; it requires inquiry into the candidate&#8217;s broader network and an assessment of whether those relationships create bribery exposure for the organisation.</p>
       </div>
+    </div>
+
+    <div class="auditor-callout">
+      <div class="auditor-callout-label">Auditor Perspective</div>
+      <p>The A.8.1 guidance describes seven dimensions of personnel due diligence. Most organisations address two of them (qualifications and references) and partially address a third (prior involvement in bribery through background checks).</p>
+      <p>Items (e) and (f) &#8212; which require the organisation to assess whether the hire itself could constitute bribery &#8212; are almost universally ignored. Yet they represent some of the most significant bribery risks an organisation can face.</p>
+      <p>An auditor who is familiar with Annex A.8.1 will assess the organisation&#8217;s due diligence programme against all seven items, not just the first three.</p>
     </div>
 
     <div class="pullquote">
@@ -1055,6 +1174,11 @@ footer .container {
 
     <p>This requirement is regularly missed. Organisations tend to treat internal appointments as exempt from due diligence requirements, reasoning that the person is already known. The standard does not support this reasoning.</p>
 
+    <div class="auditor-callout">
+      <div class="auditor-callout-label">Auditor Perspective</div>
+      <p>The clause says &#8220;before they are transferred or promoted.&#8221; Not after. Not during onboarding into the new role. Before. If the due diligence is conducted after the individual has started in the new position, it is too late to satisfy the requirement.</p>
+    </div>
+
     <h3>Anonymised Audit Findings</h3>
 
     <p>The following examples illustrate common audit findings in this area. All are drawn from real assessments and have been anonymised.</p>
@@ -1081,6 +1205,11 @@ footer .container {
       <div class="audit-finding-label">Audit Finding &#8212; Minor Nonconformity</div>
       <h4>Country Manager Transfer, Southeast Asia</h4>
       <p>Individual transferred from a role that had been classified as moderate-risk to a country manager position in a jurisdiction rated high on the organisation&#8217;s bribery risk assessment. The only due diligence conducted was equivalent to the original moderate-risk hire checks. No enhanced investigation was undertaken. The auditor raised a minor nonconformity on the basis that the due diligence package was not calibrated to the risk level of the new appointment.</p>
+    </div>
+
+    <div class="auditor-callout">
+      <div class="auditor-callout-label">Auditor Perspective</div>
+      <p>In every one of these cases, the organisation had a background check process in place. In every case, the process was insufficient to establish that it was appropriate to employ or redeploy the individual and reasonable to believe they would comply with the anti-bribery policy. The standard does not reward effort &#8212; it requires effectiveness.</p>
     </div>
 
     <h2 id="incentives">6. Sub-Clause (b): Performance Incentives</h2>
@@ -1141,6 +1270,11 @@ footer .container {
 
     <p>One point warrants emphasis: the standard does <strong>not</strong> require the organisation to change its incentive structures. It requires the organisation to review them and to verify that adequate safeguards exist. An organisation may conclude &#8212; after a documented, genuine review &#8212; that its existing incentive structures are appropriate. What it cannot do is never conduct that review.</p>
 
+    <div class="auditor-callout">
+      <div class="auditor-callout-label">Auditor Perspective</div>
+      <p>The standard requires review and verification. An organisation that says &#8220;our incentives don&#8217;t encourage bribery&#8221; without documented evidence of periodic review has not met the requirement. The assertion is not a substitute for the process.</p>
+    </div>
+
     <h2 id="declarations">7. Sub-Clause (c): Compliance Declarations</h2>
 
     <p>Sub-Clause (c) requires the organisation to obtain, periodically, a declaration from in-scope personnel, top management, and the governing body confirming compliance with the ABMS. The declaration must be proportionate to the bribery risk to which the individual is exposed.</p>
@@ -1197,6 +1331,12 @@ footer .container {
       </div>
     </div>
 
+    <h3>Integration with Broader Compliance Programmes</h3>
+
+    <p>Note 1 to the clause confirms that the anti-bribery compliance declaration can be a standalone document or a component of a broader compliance declaration process. Many organisations already have annual compliance or conflict of interest declaration processes in place. The anti-bribery declaration can be integrated into these existing programmes, provided that the anti-bribery-specific content is substantive and clearly distinguishable.</p>
+
+    <p>An auditor will look for evidence that the anti-bribery element is not buried within a generic compliance attestation to the point of meaninglessness. The declaration must specifically address anti-bribery policy compliance, not merely assert general policy adherence.</p>
+
     <h2 id="implementation">8. Implementation Framework</h2>
 
     <p>Building a compliant Clause 7.2.2.2 programme does not require the organisation to design an entirely new infrastructure. In most cases, the components already exist in some form. The task is to make them coherent, calibrate them to risk, and document them in a way that demonstrates genuine compliance across all three sub-clauses.</p>
@@ -1241,6 +1381,119 @@ footer .container {
       </div>
     </div>
 
+    <h3 id="implementation-checklist">Implementation Checklist</h3>
+
+    <p>The following checklist covers all three sub-clauses and is sequenced by priority.</p>
+
+    <table class="impl-checklist">
+      <thead>
+        <tr>
+          <th>Sub-Clause</th>
+          <th>Action</th>
+          <th>Owner</th>
+          <th>Timeline</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>(a)</td>
+          <td>Complete role-based bribery risk classification under Clause 4.5</td>
+          <td>Compliance / HR</td>
+          <td>Immediate</td>
+        </tr>
+        <tr>
+          <td>(a)</td>
+          <td>Document tiered due diligence requirements (moderate-risk vs. high-risk)</td>
+          <td>Compliance</td>
+          <td>Within 30 days</td>
+        </tr>
+        <tr>
+          <td>(a)</td>
+          <td>Identify and engage independent sources for high-risk investigations</td>
+          <td>Compliance</td>
+          <td>Within 30 days</td>
+        </tr>
+        <tr>
+          <td>(a)</td>
+          <td>Implement pre-appointment completion requirement for all in-scope hires, transfers, and promotions</td>
+          <td>HR / Compliance</td>
+          <td>Within 60 days</td>
+        </tr>
+        <tr>
+          <td>(a)</td>
+          <td>Define and document triggers for refreshed due diligence on role changes</td>
+          <td>HR / Compliance</td>
+          <td>Within 60 days</td>
+        </tr>
+        <tr>
+          <td>(a)</td>
+          <td>Separate reference checking from due diligence in documentation and practice</td>
+          <td>HR / Compliance</td>
+          <td>Within 60 days</td>
+        </tr>
+        <tr>
+          <td>(b)</td>
+          <td>Conduct first documented review of incentive structures against bribery risk</td>
+          <td>HR / Compliance / Finance</td>
+          <td>Within 60 days</td>
+        </tr>
+        <tr>
+          <td>(b)</td>
+          <td>Assess sales targets, bonus structures, commission arrangements, and procurement KPIs</td>
+          <td>HR / Business Units</td>
+          <td>Within 60 days</td>
+        </tr>
+        <tr>
+          <td>(b)</td>
+          <td>Document safeguards and any remediation required</td>
+          <td>Compliance</td>
+          <td>Within 90 days</td>
+        </tr>
+        <tr>
+          <td>(b)</td>
+          <td>Establish periodic review cycle (at least annual)</td>
+          <td>Compliance / HR</td>
+          <td>Within 90 days</td>
+        </tr>
+        <tr>
+          <td>(c)</td>
+          <td>Design anti-bribery compliance declaration (scope, content, frequency)</td>
+          <td>Compliance</td>
+          <td>Within 90 days</td>
+        </tr>
+        <tr>
+          <td>(c)</td>
+          <td>Implement distribution, collection, and tracking mechanism</td>
+          <td>Compliance / HR / IT</td>
+          <td>Within 120 days</td>
+        </tr>
+        <tr>
+          <td>(c)</td>
+          <td>Define review and escalation process for disclosures</td>
+          <td>Compliance</td>
+          <td>Within 120 days</td>
+        </tr>
+        <tr>
+          <td>(c)</td>
+          <td>Conduct first declaration cycle for in-scope personnel, top management, and governing body</td>
+          <td>Compliance</td>
+          <td>Within 120 days</td>
+        </tr>
+        <tr>
+          <td>All</td>
+          <td>Integrate all three sub-clause processes into management review</td>
+          <td>Compliance</td>
+          <td>Ongoing</td>
+        </tr>
+        <tr>
+          <td>All</td>
+          <td>Conduct annual review of programme effectiveness and risk classifications</td>
+          <td>Compliance / HR</td>
+          <td>Annual</td>
+        </tr>
+      </tbody>
+    </table>
+
     <h2 id="conclusion">9. Conclusion</h2>
 
     <p>Clause 7.2.2.2 of ISO 37001:2025 addresses three dimensions of the human risk that organisations face in managing bribery: the integrity of the people they appoint to positions of risk; the design of the financial and non-financial incentive structures that govern those people&#8217;s behaviour; and the ongoing accountability mechanism through which those people confirm their compliance.</p>
@@ -1253,6 +1506,15 @@ footer .container {
 
     <div class="pullquote">
       <p>An organisation that genuinely implements all three sub-clauses of Clause 7.2.2.2 &#8212; with depth proportionate to risk, documented processes, and evidence of operation &#8212; has built a compliance programme that is materially more resilient to the human risk of bribery than the vast majority of its peers.</p>
+    </div>
+
+    <div class="auditor-callout" style="margin-top: 36px;">
+      <div class="auditor-callout-label">Key Takeaways</div>
+      <p>If your due diligence programme cannot tell you anything about a candidate that the candidate did not already tell you, it is not due diligence. It is verification.</p>
+      <p>If you have never assessed whether a hire could itself constitute a reward for past corrupt conduct (A.8.1(e)) or an attempt to secure future improper advantage (A.8.1(f)), you are missing the standard&#8217;s most critical due diligence dimension.</p>
+      <p>If you have never reviewed your incentive structures against bribery risk, you have an open nonconformity waiting to be found.</p>
+      <p>If your compliance declarations are generic policy attestations, they are not meeting the standard.</p>
+      <p>Clause 7.2.2.2 requires all three sub-clauses. Annex A.8.1 describes seven dimensions of due diligence. The standard is clear. The question is whether your programme measures up.</p>
     </div>
 
     <p>Speeki provides independent ISO 37001 anti-bribery management system certification and ABMS gap assessments across 100+ countries. Our assessment teams have evaluated Clause 7.2.2.2 compliance across organisations in multiple sectors and jurisdictions. We work with organisations at all stages of ABMS maturity &#8212; from initial gap assessment through to certification readiness and ongoing assurance.</p>
@@ -1305,6 +1567,10 @@ footer .container {
           <a href="#implementation" class="toc-link">
             <span class="toc-dot"></span>
             Implementation Framework
+          </a>
+          <a href="#implementation-checklist" class="toc-link">
+            <span class="toc-dot"></span>
+            Implementation Checklist
           </a>
           <a href="#conclusion" class="toc-link">
             <span class="toc-dot"></span>
