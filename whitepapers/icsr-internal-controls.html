@@ -632,9 +632,9 @@ nav {
   transition: background 0.15s, color 0.15s;
 }
 .toc-link:hover { background: var(--off-white); color: var(--navy); }
-.toc-link.active { background: var(--teal-light); color: var(--teal-dark); font-weight: 600; }
+.toc-link.active { background: rgba(0,135,90,0.08); color: var(--teal-accessible); font-weight: 600; }
 .toc-dot { width: 5px; height: 5px; background: var(--border); border-radius: 50%; flex-shrink: 0; }
-.toc-link.active .toc-dot { background: var(--teal); }
+.toc-link.active .toc-dot { background: var(--teal-accessible); }
 
 .speeki-promo {
   background: linear-gradient(135deg, var(--navy), var(--navy-mid));
@@ -1205,7 +1205,7 @@ footer .container {
             <span class="toc-dot"></span>
             What Auditors Need
           </a>
-          <a href="#implementation" class="toc-link active">
+          <a href="#implementation" class="toc-link">
             <span class="toc-dot"></span>
             Implementation Roadmap
           </a>

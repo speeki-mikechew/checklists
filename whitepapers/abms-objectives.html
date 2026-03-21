@@ -28,6 +28,7 @@
   --teal: #00c4b4;
   --teal-dark: #00a89a;
   --teal-light: #e6faf8;
+  --green-accessible: #00875a;
   --gold: #f0a500;
   --white: #ffffff;
   --off-white: #f7f8fc;
@@ -633,9 +634,9 @@ nav {
   transition: background 0.15s, color 0.15s;
 }
 .toc-link:hover { background: var(--off-white); color: #0a1628; }
-.toc-link.active { background: rgba(0,255,127,0.08); color: #00e06f; font-weight: 600; }
+.toc-link.active { background: rgba(0,135,90,0.08); color: var(--green-accessible); font-weight: 600; }
 .toc-dot { width: 5px; height: 5px; background: var(--border); border-radius: 50%; flex-shrink: 0; }
-.toc-link.active .toc-dot { background: #00FF7F; }
+.toc-link.active .toc-dot { background: var(--green-accessible); }
 
 .speeki-promo {
   background: linear-gradient(135deg, #0a1628, #1a2d5a);
@@ -1216,7 +1217,7 @@ footer .container {
             <span class="toc-dot"></span>
             Anatomy of a Good Objective
           </a>
-          <a href="#examples" class="toc-link active">
+          <a href="#examples" class="toc-link">
             <span class="toc-dot"></span>
             25 Example Objectives
           </a>
