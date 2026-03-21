@@ -1,0 +1,1998 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Which ESG Framework Applies to You? Answer 4 quick questions to identify which ESG reporting frameworks are applicable to your organisation based on jurisdiction, size, and industry.">
+    <meta name="keywords" content="ESG framework selector, CSRD, ISSB, GRI, TCFD, SEC climate rules, ISO 14001, ESG reporting frameworks, which ESG framework, Speeki">
+    <meta name="author" content="Speeki">
+    <meta property="og:title" content="Which ESG Framework Applies to You? | Speeki">
+    <meta property="og:description" content="Answer 4 quick questions to identify which ESG reporting frameworks are applicable to your organisation based on jurisdiction, size, and industry.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://www.speeki.com/assets/speeki-og-image.jpg">
+    <meta property="og:url" content="https://www.speeki.com/en-GB/resources/tools/framework-selector.html">
+    <meta property="og:site_name" content="Speeki">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Which ESG Framework Applies to You? | Speeki">
+    <meta name="twitter:description" content="Answer 4 quick questions to identify which ESG reporting frameworks are applicable to your organisation based on jurisdiction, size, and industry.">
+    <meta name="twitter:image" content="https://www.speeki.com/assets/speeki-og-image.jpg">
+    <meta name="robots" content="index, follow">
+    <title>Which ESG Framework Applies to You? | Speeki Framework Selector</title>
+    <link rel="canonical" href="https://www.speeki.com/en-GB/resources/tools/framework-selector.html">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "ESG Framework Selector",
+        "description": "Interactive tool to identify which ESG reporting frameworks apply to your organisation based on jurisdiction, size, and industry.",
+        "url": "https://www.speeki.com/en-GB/resources/tools/framework-selector.html",
+        "applicationCategory": "BusinessApplication",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Speeki",
+            "url": "https://www.speeki.com"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --speeki-green: #00FF7F;
+            --speeki-green-text: #00875a;
+            --speeki-dark-blue: #0a1f44;
+            --speeki-dark: #0a1f44;
+            --speeki-navy: #0a1628;
+            --speeki-gray: #4a5568;
+            --speeki-light-gray: #f8f9fa;
+            --speeki-border: #e5e7eb;
+        }
+
+        body {
+            font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', 'Arial', sans-serif;
+            background: #ffffff;
+            color: var(--speeki-dark);
+            line-height: 1.6;
+        }
+
+        /* Skip Link */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #0a1f44;
+            color: #fff;
+            padding: 8px 16px;
+            z-index: 10000;
+            font-size: 14px;
+        }
+        .skip-link:focus { top: 0; }
+
+        /* Visually Hidden */
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0,0,0,0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 4vw;
+        }
+
+        .container-wide {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 4vw;
+        }
+
+        /* ============================================================
+           NAVBAR
+        ============================================================ */
+        nav {
+            background: #0a1628;
+            padding: 0 32px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .nav-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+        }
+
+        .nav-logo img {
+            height: 50px;
+            width: auto;
+        }
+
+        .nav-right {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .nav-back {
+            color: #e2e8f0;
+            text-decoration: none;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: color 0.2s;
+        }
+
+        .nav-back:hover { color: #00FF7F; }
+
+        .nav-cta {
+            background: #00FF7F;
+            color: #0a1628;
+            padding: 8px 20px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: background 0.2s;
+        }
+
+        .nav-cta:hover { background: #00e06f; }
+
+        /* ============================================================
+           PAGE HEADER
+        ============================================================ */
+        .page-header {
+            background: linear-gradient(135deg, var(--speeki-dark-blue) 0%, #1a2d5c 100%);
+            padding: 60px 0 80px;
+            color: #ffffff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: -60px;
+            right: -60px;
+            width: 250px;
+            height: 250px;
+            background: var(--speeki-green);
+            opacity: 0.08;
+            border-radius: 50%;
+        }
+
+        .page-header::after {
+            content: '';
+            position: absolute;
+            bottom: -80px;
+            left: -40px;
+            width: 200px;
+            height: 200px;
+            background: var(--speeki-green);
+            opacity: 0.05;
+            border-radius: 50%;
+        }
+
+        .page-header-inner {
+            position: relative;
+            z-index: 1;
+        }
+
+        .tool-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0, 255, 127, 0.15);
+            color: var(--speeki-green);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 20px;
+        }
+
+        .page-header h1 {
+            font-size: 48px;
+            font-weight: 700;
+            letter-spacing: -1.5px;
+            margin-bottom: 20px;
+            line-height: 1.1;
+            color: #ffffff;
+        }
+
+        .page-header p {
+            font-size: 18px;
+            color: rgba(255, 255, 255, 0.85);
+            max-width: 680px;
+            line-height: 1.7;
+        }
+
+        .header-meta {
+            display: flex;
+            gap: 32px;
+            margin-top: 32px;
+            flex-wrap: wrap;
+        }
+
+        .header-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: rgba(255, 255, 255, 0.75);
+            font-weight: 500;
+        }
+
+        .header-meta-item svg {
+            color: var(--speeki-green);
+            flex-shrink: 0;
+        }
+
+        /* ============================================================
+           TOOL WRAPPER
+        ============================================================ */
+        .tool-wrapper {
+            padding: 60px 0 80px;
+        }
+
+        /* ============================================================
+           INTRO / START SCREEN
+        ============================================================ */
+        #toolIntro {
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        #toolIntro h2 {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--speeki-dark);
+            margin-bottom: 16px;
+            letter-spacing: -0.8px;
+        }
+
+        #toolIntro p {
+            font-size: 17px;
+            color: var(--speeki-gray);
+            line-height: 1.7;
+            max-width: 640px;
+            margin: 0 auto 32px;
+        }
+
+        .frameworks-preview {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin: 40px 0;
+            text-align: left;
+        }
+
+        .framework-preview-card {
+            background: var(--speeki-light-gray);
+            border: 1px solid var(--speeki-border);
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .framework-preview-card .fw-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(0, 255, 127, 0.12);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 12px;
+        }
+
+        .framework-preview-card .fw-icon svg {
+            color: var(--speeki-green-text);
+        }
+
+        .framework-preview-card h4 {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--speeki-dark);
+            margin-bottom: 4px;
+        }
+
+        .framework-preview-card p {
+            font-size: 12px;
+            color: var(--speeki-gray);
+            line-height: 1.5;
+            margin: 0;
+        }
+
+        .btn-start {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--speeki-green);
+            color: var(--speeki-dark-blue);
+            padding: 16px 40px;
+            border-radius: 8px;
+            font-size: 17px;
+            font-weight: 700;
+            border: none;
+            cursor: pointer;
+            transition: background 0.2s, transform 0.15s;
+            text-decoration: none;
+        }
+
+        .btn-start:hover {
+            background: #00e06f;
+            transform: translateY(-1px);
+        }
+
+        /* ============================================================
+           QUESTIONS PANEL
+        ============================================================ */
+        #toolQuestions {
+            display: none;
+        }
+
+        .question-header {
+            margin-bottom: 40px;
+        }
+
+        .progress-bar-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .progress-bar {
+            flex: 1;
+            height: 6px;
+            background: var(--speeki-border);
+            border-radius: 999px;
+            overflow: hidden;
+        }
+
+        .progress-bar-fill {
+            height: 100%;
+            background: var(--speeki-green);
+            border-radius: 999px;
+            transition: width 0.4s ease;
+        }
+
+        .progress-label {
+            font-size: 13px;
+            color: var(--speeki-gray);
+            white-space: nowrap;
+            font-weight: 600;
+        }
+
+        .question-title {
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--speeki-dark);
+            letter-spacing: -0.6px;
+            margin-bottom: 8px;
+        }
+
+        .question-subtitle {
+            font-size: 15px;
+            color: var(--speeki-gray);
+        }
+
+        .options-grid {
+            display: grid;
+            gap: 12px;
+            margin-top: 28px;
+        }
+
+        .option-btn {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            background: #ffffff;
+            border: 2px solid var(--speeki-border);
+            border-radius: 10px;
+            padding: 18px 20px;
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--speeki-dark);
+            cursor: pointer;
+            text-align: left;
+            transition: border-color 0.2s, background 0.2s;
+            width: 100%;
+        }
+
+        .option-btn:hover {
+            border-color: var(--speeki-green);
+            background: rgba(0, 255, 127, 0.04);
+        }
+
+        .option-btn.selected {
+            border-color: var(--speeki-green);
+            background: rgba(0, 255, 127, 0.08);
+        }
+
+        .option-btn .option-check {
+            width: 22px;
+            height: 22px;
+            border: 2px solid var(--speeki-border);
+            border-radius: 50%;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: border-color 0.2s, background 0.2s;
+        }
+
+        .option-btn.selected .option-check {
+            border-color: var(--speeki-green);
+            background: var(--speeki-green);
+        }
+
+        .option-check svg {
+            display: none;
+        }
+
+        .option-btn.selected .option-check svg {
+            display: block;
+        }
+
+        .option-label {
+            flex: 1;
+        }
+
+        .option-label .option-title {
+            display: block;
+            font-weight: 600;
+        }
+
+        .option-label .option-desc {
+            display: block;
+            font-size: 13px;
+            color: var(--speeki-gray);
+            margin-top: 2px;
+        }
+
+        .question-nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 32px;
+            gap: 12px;
+        }
+
+        .btn-back {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: transparent;
+            border: 1px solid var(--speeki-border);
+            border-radius: 8px;
+            padding: 12px 20px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--speeki-gray);
+            cursor: pointer;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .btn-back:hover {
+            border-color: var(--speeki-gray);
+            color: var(--speeki-dark);
+        }
+
+        .btn-next {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--speeki-green);
+            border: none;
+            border-radius: 8px;
+            padding: 12px 28px;
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--speeki-dark-blue);
+            cursor: pointer;
+            transition: background 0.2s;
+            margin-left: auto;
+        }
+
+        .btn-next:hover { background: #00e06f; }
+        .btn-next:disabled {
+            background: var(--speeki-border);
+            color: #9ca3af;
+            cursor: not-allowed;
+        }
+
+        /* ============================================================
+           RESULTS PANEL
+        ============================================================ */
+        #toolResults {
+            display: none;
+        }
+
+        .results-header {
+            margin-bottom: 40px;
+        }
+
+        .results-summary-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0, 255, 127, 0.12);
+            color: var(--speeki-green-text);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 16px;
+        }
+
+        .results-header h2 {
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: -0.8px;
+            color: var(--speeki-dark);
+            margin-bottom: 12px;
+        }
+
+        .results-header p {
+            font-size: 16px;
+            color: var(--speeki-gray);
+            max-width: 640px;
+        }
+
+        .profile-summary {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px 0 40px;
+        }
+
+        .profile-tag {
+            background: var(--speeki-light-gray);
+            border: 1px solid var(--speeki-border);
+            border-radius: 6px;
+            padding: 5px 12px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--speeki-dark);
+        }
+
+        /* Applicable Frameworks */
+        .results-section-title {
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--speeki-gray);
+            margin-bottom: 16px;
+        }
+
+        .frameworks-applicable {
+            display: grid;
+            gap: 16px;
+            margin-bottom: 40px;
+        }
+
+        .framework-card {
+            border: 1px solid var(--speeki-border);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .framework-card.applicable {
+            border-color: #c6f6d5;
+            background: #fff;
+        }
+
+        .framework-card.not-applicable {
+            background: #fafafa;
+            opacity: 0.75;
+        }
+
+        .framework-card-header {
+            padding: 20px 24px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 16px;
+            cursor: pointer;
+        }
+
+        .framework-card-left {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            flex: 1;
+        }
+
+        .framework-icon {
+            width: 44px;
+            height: 44px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 18px;
+            font-weight: 800;
+        }
+
+        .applicable .framework-icon {
+            background: rgba(0, 255, 127, 0.15);
+            color: var(--speeki-green-text);
+        }
+
+        .not-applicable .framework-icon {
+            background: #f1f5f9;
+            color: #94a3b8;
+        }
+
+        .framework-name {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--speeki-dark);
+            margin-bottom: 4px;
+        }
+
+        .framework-short-desc {
+            font-size: 14px;
+            color: var(--speeki-gray);
+            line-height: 1.5;
+        }
+
+        .framework-badges {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            margin-top: 8px;
+        }
+
+        .badge-mandatory {
+            display: inline-block;
+            background: #fef2f2;
+            color: #b91c1c;
+            border: 1px solid #fecaca;
+            border-radius: 4px;
+            padding: 2px 8px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+        }
+
+        .badge-voluntary {
+            display: inline-block;
+            background: #eff6ff;
+            color: #1d4ed8;
+            border: 1px solid #bfdbfe;
+            border-radius: 4px;
+            padding: 2px 8px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+        }
+
+        .badge-widely-adopted {
+            display: inline-block;
+            background: #f0fdf4;
+            color: #166534;
+            border: 1px solid #bbf7d0;
+            border-radius: 4px;
+            padding: 2px 8px;
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.4px;
+        }
+
+        .framework-toggle-icon {
+            flex-shrink: 0;
+            color: var(--speeki-gray);
+            transition: transform 0.2s;
+        }
+
+        .framework-card.expanded .framework-toggle-icon {
+            transform: rotate(180deg);
+        }
+
+        .framework-card-body {
+            display: none;
+            padding: 0 24px 24px;
+            border-top: 1px solid var(--speeki-border);
+        }
+
+        .framework-card.expanded .framework-card-body {
+            display: block;
+        }
+
+        .framework-applies-reason {
+            background: rgba(0, 255, 127, 0.07);
+            border-left: 3px solid var(--speeki-green);
+            padding: 12px 16px;
+            border-radius: 0 8px 8px 0;
+            font-size: 14px;
+            color: var(--speeki-dark);
+            line-height: 1.6;
+            margin: 16px 0;
+        }
+
+        .not-applicable .framework-applies-reason {
+            background: #f8fafc;
+            border-left-color: #cbd5e1;
+        }
+
+        .framework-resources-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 16px;
+        }
+
+        .framework-resource-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: #fff;
+            border: 1px solid var(--speeki-border);
+            border-radius: 6px;
+            padding: 8px 14px;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--speeki-dark);
+            text-decoration: none;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .framework-resource-link:hover {
+            border-color: var(--speeki-green);
+            color: var(--speeki-green-text);
+        }
+
+        .framework-resource-link svg {
+            color: var(--speeki-green-text);
+        }
+
+        /* Not applicable section */
+        .not-applicable-section {
+            margin-top: 16px;
+        }
+
+        .not-applicable-toggle {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            background: transparent;
+            border: 1px solid var(--speeki-border);
+            border-radius: 8px;
+            padding: 12px 20px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--speeki-gray);
+            cursor: pointer;
+            transition: color 0.2s, border-color 0.2s;
+        }
+
+        .not-applicable-toggle:hover {
+            border-color: var(--speeki-gray);
+            color: var(--speeki-dark);
+        }
+
+        #notApplicableList {
+            display: none;
+            margin-top: 16px;
+        }
+
+        #notApplicableList.visible {
+            display: grid;
+            gap: 12px;
+        }
+
+        /* ============================================================
+           LEAD CAPTURE
+        ============================================================ */
+        .lead-capture-section {
+            background: linear-gradient(135deg, var(--speeki-dark-blue) 0%, #1a2d5c 100%);
+            border-radius: 16px;
+            padding: 40px;
+            margin: 48px 0;
+            color: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .lead-capture-section::before {
+            content: '';
+            position: absolute;
+            top: -40px;
+            right: -40px;
+            width: 160px;
+            height: 160px;
+            background: var(--speeki-green);
+            opacity: 0.07;
+            border-radius: 50%;
+        }
+
+        .lead-capture-inner {
+            position: relative;
+            z-index: 1;
+        }
+
+        .lead-capture-section h3 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        .lead-capture-section p {
+            font-size: 15px;
+            color: rgba(255,255,255,0.8);
+            margin-bottom: 24px;
+            max-width: 520px;
+        }
+
+        #captureForm {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            max-width: 480px;
+        }
+
+        .capture-row {
+            display: flex;
+            gap: 12px;
+        }
+
+        .capture-input {
+            flex: 1;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 8px;
+            padding: 12px 16px;
+            font-size: 15px;
+            color: #fff;
+            font-family: inherit;
+            transition: border-color 0.2s;
+        }
+
+        .capture-input::placeholder {
+            color: rgba(255,255,255,0.5);
+        }
+
+        .capture-input:focus {
+            outline: none;
+            border-color: var(--speeki-green);
+        }
+
+        .btn-capture {
+            background: var(--speeki-green);
+            color: var(--speeki-dark-blue);
+            border: none;
+            border-radius: 8px;
+            padding: 14px 28px;
+            font-size: 15px;
+            font-weight: 700;
+            cursor: pointer;
+            font-family: inherit;
+            transition: background 0.2s;
+            white-space: nowrap;
+        }
+
+        .btn-capture:hover { background: #00e06f; }
+
+        .capture-privacy {
+            font-size: 12px;
+            color: rgba(255,255,255,0.5);
+        }
+
+        #captureSuccess {
+            display: none;
+            align-items: center;
+            gap: 12px;
+            background: rgba(0, 255, 127, 0.12);
+            border: 1px solid rgba(0, 255, 127, 0.3);
+            border-radius: 10px;
+            padding: 16px 20px;
+            color: var(--speeki-green);
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        #captureSuccess.show {
+            display: flex;
+        }
+
+        /* ============================================================
+           SHARE SECTION
+        ============================================================ */
+        .share-section {
+            margin: 32px 0;
+        }
+
+        .share-section h4 {
+            font-size: 14px;
+            font-weight: 700;
+            color: var(--speeki-gray);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 12px;
+        }
+
+        .share-btns {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--speeki-light-gray);
+            border: 1px solid var(--speeki-border);
+            border-radius: 8px;
+            padding: 10px 18px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--speeki-dark);
+            text-decoration: none;
+            cursor: pointer;
+            font-family: inherit;
+            transition: border-color 0.2s, background 0.2s;
+        }
+
+        .share-btn:hover {
+            border-color: #94a3b8;
+            background: #f1f5f9;
+        }
+
+        /* ============================================================
+           RETAKE / ACTIONS
+        ============================================================ */
+        .retake-section {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 32px;
+            border-top: 1px solid var(--speeki-border);
+        }
+
+        .btn-retake {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: transparent;
+            border: 1px solid var(--speeki-border);
+            border-radius: 8px;
+            padding: 12px 24px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--speeki-gray);
+            cursor: pointer;
+            font-family: inherit;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .btn-retake:hover {
+            border-color: var(--speeki-gray);
+            color: var(--speeki-dark);
+        }
+
+        /* ============================================================
+           FOOTER
+        ============================================================ */
+        footer {
+            background: var(--speeki-navy);
+            padding: 40px 0;
+            text-align: center;
+            color: rgba(255,255,255,0.7);
+        }
+
+        footer .footer-logo img {
+            height: 50px;
+            width: auto;
+            margin-bottom: 12px;
+        }
+
+        footer p {
+            font-size: 14px;
+            color: rgba(255,255,255,0.6);
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+
+        .footer-links a {
+            color: rgba(255,255,255,0.5);
+            text-decoration: none;
+            font-size: 13px;
+            transition: color 0.2s;
+        }
+
+        .footer-links a:hover {
+            color: var(--speeki-green);
+        }
+
+        /* ============================================================
+           RESPONSIVE
+        ============================================================ */
+        @media (max-width: 768px) {
+            .page-header h1 {
+                font-size: 32px;
+                letter-spacing: -0.8px;
+            }
+
+            .page-header {
+                padding: 40px 0 60px;
+            }
+
+            .tool-wrapper {
+                padding: 40px 0 60px;
+            }
+
+            .question-title {
+                font-size: 22px;
+            }
+
+            .lead-capture-section {
+                padding: 28px 24px;
+            }
+
+            .capture-row {
+                flex-direction: column;
+            }
+
+            .frameworks-preview {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .framework-card-header {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .framework-toggle-icon {
+                align-self: flex-end;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                padding: 0 16px;
+            }
+
+            .nav-right {
+                gap: 12px;
+            }
+
+            .frameworks-preview {
+                grid-template-columns: 1fr;
+            }
+
+            .page-header h1 {
+                font-size: 26px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
+<!-- NAVBAR -->
+<nav aria-label="Site navigation">
+    <div class="nav-content">
+        <a href="../index.html" class="nav-logo" aria-label="Speeki - Back to Resources Hub">
+            <img src="../speeki-logo-white.png" alt="Speeki" style="height: 50px; width: auto;">
+        </a>
+        <div class="nav-right">
+            <a href="../index.html" class="nav-back" aria-label="Back to all resources">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+                All Resources
+            </a>
+            <a href="https://www.speeki.com" class="nav-cta">Visit Speeki.com</a>
+        </div>
+    </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<header class="page-header" role="banner">
+    <div class="container">
+        <div class="page-header-inner">
+            <div class="tool-badge" aria-hidden="true">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
+                Free Interactive Tool
+            </div>
+            <h1>Which ESG Framework<br>Applies to You?</h1>
+            <p>Answer 4 questions about your organisation and identify which ESG reporting frameworks are applicable to your profile — based on jurisdiction, size, listing status, and industry.</p>
+            <div class="header-meta">
+                <div class="header-meta-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                    4 Questions
+                </div>
+                <div class="header-meta-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    7 Frameworks Covered
+                </div>
+                <div class="header-meta-item">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg>
+                    No Registration Required
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- MAIN CONTENT -->
+<main id="main-content">
+    <div class="tool-wrapper">
+        <div class="container">
+
+            <!-- ======================== INTRO SCREEN ======================== -->
+            <section id="toolIntro" aria-labelledby="intro-heading">
+                <h2 id="intro-heading">Identify Your Applicable ESG Frameworks</h2>
+                <p>Different ESG reporting frameworks apply to different organisations. This tool maps your organisational profile to the frameworks that are relevant based on public regulatory requirements and widely adopted standards.</p>
+
+                <div class="frameworks-preview" role="list" aria-label="Frameworks covered by this tool">
+                    <div class="framework-preview-card" role="listitem">
+                        <div class="fw-icon" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                        </div>
+                        <h4>CSRD / ESRS</h4>
+                        <p>EU Corporate Sustainability Reporting Directive</p>
+                    </div>
+                    <div class="framework-preview-card" role="listitem">
+                        <div class="fw-icon" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
+                        </div>
+                        <h4>IFRS S1/S2 (ISSB)</h4>
+                        <p>International Sustainability Standards Board</p>
+                    </div>
+                    <div class="framework-preview-card" role="listitem">
+                        <div class="fw-icon" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                        </div>
+                        <h4>GRI Standards</h4>
+                        <p>Global Reporting Initiative — widely adopted voluntary standard</p>
+                    </div>
+                    <div class="framework-preview-card" role="listitem">
+                        <div class="fw-icon" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path></svg>
+                        </div>
+                        <h4>TCFD / TNFD</h4>
+                        <p>Task Force on Climate &amp; Nature-related Financial Disclosures</p>
+                    </div>
+                    <div class="framework-preview-card" role="listitem">
+                        <div class="fw-icon" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="9" x2="15" y2="15"></line><line x1="15" y1="9" x2="9" y2="15"></line></svg>
+                        </div>
+                        <h4>SEC Climate Rules</h4>
+                        <p>US Securities and Exchange Commission climate disclosure</p>
+                    </div>
+                    <div class="framework-preview-card" role="listitem">
+                        <div class="fw-icon" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                        </div>
+                        <h4>ISO 14001</h4>
+                        <p>Environmental Management Systems standard</p>
+                    </div>
+                    <div class="framework-preview-card" role="listitem">
+                        <div class="fw-icon" aria-hidden="true">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg>
+                        </div>
+                        <h4>ISO 37001</h4>
+                        <p>Anti-Bribery Management Systems standard</p>
+                    </div>
+                </div>
+
+                <button class="btn-start" id="btnStart" aria-label="Start the framework selector">
+                    Start Framework Selector
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </section>
+
+            <!-- ======================== QUESTIONS ======================== -->
+            <section id="toolQuestions" aria-labelledby="questions-heading">
+                <h2 id="questions-heading" class="visually-hidden">Framework Selector Questions</h2>
+
+                <div class="question-header">
+                    <div class="progress-bar-wrapper">
+                        <div class="progress-bar" role="progressbar" id="progressBar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Question progress">
+                            <div class="progress-bar-fill" id="progressBarFill" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-label" id="progressLabel" aria-live="polite">Question 1 of 4</span>
+                    </div>
+                </div>
+
+                <div id="questionContainer" aria-live="polite"></div>
+
+                <div class="question-nav">
+                    <button class="btn-back" id="btnBack" aria-label="Go to previous question">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                        Back
+                    </button>
+                    <button class="btn-next" id="btnNext" disabled aria-label="Go to next question">
+                        Next
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </button>
+                </div>
+            </section>
+
+            <!-- ======================== RESULTS ======================== -->
+            <section id="toolResults" aria-labelledby="results-heading">
+                <div class="results-header">
+                    <div class="results-summary-badge" aria-hidden="true">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        Framework Analysis Complete
+                    </div>
+                    <h2 id="results-heading">Frameworks Applicable to Your Profile</h2>
+                    <p>Based on your organisational profile, the following frameworks have been identified as applicable. Mandatory requirements are determined by regulatory scope; voluntary frameworks are widely adopted by organisations with your profile.</p>
+                    <div class="profile-summary" id="profileSummary" role="list" aria-label="Your organisational profile"></div>
+                </div>
+
+                <div class="results-section-title">Applicable Frameworks</div>
+                <div id="applicableFrameworks" class="frameworks-applicable" role="list" aria-label="Applicable frameworks"></div>
+
+                <div class="not-applicable-section">
+                    <button class="not-applicable-toggle" id="btnShowNotApplicable" aria-expanded="false" aria-controls="notApplicableList">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                        Show frameworks that do not apply
+                    </button>
+                    <div id="notApplicableList" role="list" aria-label="Non-applicable frameworks"></div>
+                </div>
+
+                <!-- LEAD CAPTURE -->
+                <div class="lead-capture-section" aria-labelledby="capture-heading">
+                    <div class="lead-capture-inner">
+                        <h3 id="capture-heading">Get Your Framework Analysis Report</h3>
+                        <p>Receive a personalised PDF summary of applicable frameworks with key requirements, timelines, and Speeki resources — delivered to your inbox.</p>
+                        <form id="captureForm" novalidate aria-label="Email capture form">
+                            <div class="capture-row">
+                                <input type="text" id="captureName" class="capture-input" placeholder="Your name" autocomplete="name" aria-label="Your name (optional)">
+                            </div>
+                            <div class="capture-row">
+                                <input type="email" id="captureEmail" class="capture-input" placeholder="Work email address" required autocomplete="email" aria-label="Work email address" aria-required="true">
+                                <button type="submit" class="btn-capture">Send Report</button>
+                            </div>
+                            <p class="capture-privacy">No spam. Speeki may follow up about your ESG reporting needs. Unsubscribe at any time.</p>
+                        </form>
+                        <div id="captureSuccess" role="status" aria-live="polite">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            Your framework analysis report is on its way!
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SHARE -->
+                <div class="share-section">
+                    <h4>Share This Tool</h4>
+                    <div class="share-btns">
+                        <a id="shareLinkedIn" href="#" target="_blank" rel="noopener noreferrer" class="share-btn" aria-label="Share on LinkedIn">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                            LinkedIn
+                        </a>
+                        <a id="shareTwitter" href="#" target="_blank" rel="noopener noreferrer" class="share-btn" aria-label="Share on X (Twitter)">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                            Share on X
+                        </a>
+                        <button class="share-btn" id="btnCopyLink" aria-label="Copy link to this tool">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                            Copy Link
+                        </button>
+                    </div>
+                </div>
+
+                <!-- RETAKE -->
+                <div class="retake-section">
+                    <button class="btn-retake" id="btnRetake" aria-label="Start over with new answers">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="1 4 1 10 7 10"></polyline><path d="M3.51 15a9 9 0 1 0 .49-3.51"></path></svg>
+                        Start Over
+                    </button>
+                </div>
+            </section>
+
+        </div><!-- .container -->
+    </div><!-- .tool-wrapper -->
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <a href="../index.html" class="footer-logo"><img src="../speeki-logo-white.png" alt="Speeki" style="height: 50px; width: auto;"></a>
+        <p>The Sustainability Firm</p>
+        <p style="margin-top: 16px; color: #9ca3af; font-size: 13px;">
+            &copy; 2026 Speeki Pte Ltd. All rights reserved.
+        </p>
+        <div class="footer-links">
+            <a href="https://www.speeki.com">Home</a>
+            <a href="https://www.speeki.com/platform">Platform</a>
+            <a href="https://www.speeki.com/services">Services</a>
+            <a href="../index.html">Resources</a>
+            <a href="mailto:info@speeki.com">Contact</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+(function () {
+    'use strict';
+
+    // ============================================================
+    // DATA: QUESTIONS
+    // ============================================================
+    const QUESTIONS = [
+        {
+            id: 'hq',
+            title: 'Where is your organisation headquartered?',
+            subtitle: 'Select the primary jurisdiction of your registered headquarters.',
+            options: [
+                { value: 'eu', label: 'European Union', desc: 'EU member state (e.g. Germany, France, Netherlands)' },
+                { value: 'uk', label: 'United Kingdom', desc: 'England, Scotland, Wales, or Northern Ireland' },
+                { value: 'us', label: 'United States', desc: 'Any US state or territory' },
+                { value: 'apac', label: 'Asia-Pacific', desc: 'Australia, Japan, Singapore, Hong Kong, China, India, or other APAC' },
+                { value: 'other', label: 'Other jurisdiction', desc: 'Middle East, Africa, Latin America, Canada, or other' }
+            ]
+        },
+        {
+            id: 'size',
+            title: 'What is your organisation size?',
+            subtitle: 'Based on employee headcount or market listing status.',
+            options: [
+                { value: 'large', label: 'Large enterprise', desc: '500+ employees, or publicly listed on a major exchange' },
+                { value: 'mid', label: 'Mid-size', desc: '50–499 employees' },
+                { value: 'small', label: 'Small organisation', desc: 'Fewer than 50 employees' }
+            ]
+        },
+        {
+            id: 'industry',
+            title: 'What is your primary industry?',
+            subtitle: 'Select the sector that best describes your core business activity.',
+            options: [
+                { value: 'financial', label: 'Financial services', desc: 'Banking, insurance, investment, asset management' },
+                { value: 'energy', label: 'Energy', desc: 'Oil & gas, renewables, utilities, mining' },
+                { value: 'manufacturing', label: 'Manufacturing', desc: 'Industrial production, chemicals, automotive, FMCG' },
+                { value: 'technology', label: 'Technology', desc: 'Software, hardware, telecoms, digital services' },
+                { value: 'healthcare', label: 'Healthcare', desc: 'Pharma, medical devices, hospitals, life sciences' },
+                { value: 'retail', label: 'Retail', desc: 'Consumer goods, food & beverage, e-commerce' },
+                { value: 'other', label: 'Other industry', desc: 'Professional services, education, government, NGO, other' }
+            ]
+        },
+        {
+            id: 'listing',
+            title: 'Is your organisation publicly listed?',
+            subtitle: 'Select the exchange on which your organisation\'s securities are publicly traded.',
+            options: [
+                { value: 'eu_listed', label: 'Listed on an EU exchange', desc: 'Frankfurt, Paris, Amsterdam, Madrid, or other EU-regulated market' },
+                { value: 'us_listed', label: 'Listed on a US exchange', desc: 'NYSE, NASDAQ, or other US exchange (including ADR issuers)' },
+                { value: 'other_listed', label: 'Listed on another exchange', desc: 'London Stock Exchange, Hong Kong, Tokyo, Singapore, or other non-EU/US exchange' },
+                { value: 'not_listed', label: 'Not publicly listed', desc: 'Private company, NGO, government entity, or subsidiary' }
+            ]
+        }
+    ];
+
+    // ============================================================
+    // DATA: FRAMEWORK DEFINITIONS
+    // ============================================================
+    const FRAMEWORKS = [
+        {
+            id: 'csrd',
+            name: 'CSRD / ESRS',
+            shortName: 'CSRD',
+            icon: 'EU',
+            description: 'The EU Corporate Sustainability Reporting Directive (CSRD) requires organisations to report on sustainability matters using European Sustainability Reporting Standards (ESRS). It significantly expands the scope of mandatory sustainability disclosure in the EU.',
+            mandatoryBadge: 'mandatory',
+            resources: [
+                {
+                    href: '../checklists/esg-reporting-assurance-checklist.html',
+                    label: 'ESG Reporting Assurance Checklist',
+                    type: 'checklist'
+                }
+            ],
+            applies: function(a) {
+                const euOrEuListed = (a.hq === 'eu') || (a.listing === 'eu_listed');
+                const sufficientSize = (a.size === 'large') || (a.size === 'mid');
+                return euOrEuListed && sufficientSize;
+            },
+            reason: function(a) {
+                const reasons = [];
+                if (a.hq === 'eu') reasons.push('your organisation is headquartered in the EU');
+                if (a.listing === 'eu_listed') reasons.push('your organisation is listed on an EU-regulated exchange');
+                if (a.size === 'large') reasons.push('your organisation qualifies as a large enterprise');
+                if (a.size === 'mid') reasons.push('your organisation is mid-size (CSRD scope is extending to cover mid-size entities over time)');
+                return 'CSRD applies because ' + reasons.join(', and ') + '. EU-headquartered or EU-listed organisations of sufficient size are within the mandatory scope of CSRD.';
+            },
+            notApplicableReason: function(a) {
+                if (a.hq !== 'eu' && a.listing !== 'eu_listed') {
+                    return 'CSRD is mandatory for EU-based or EU-listed organisations. Your organisation is not headquartered in the EU and is not listed on an EU exchange.';
+                }
+                return 'CSRD applies to large and mid-size entities. Small organisations are currently outside the mandatory scope, though voluntary reporting is possible.';
+            }
+        },
+        {
+            id: 'issb',
+            name: 'IFRS S1/S2 (ISSB)',
+            shortName: 'ISSB',
+            icon: 'IS',
+            description: 'The ISSB Standards (IFRS S1 and S2) provide a global baseline for sustainability-related financial disclosures. IFRS S1 covers general sustainability-related disclosures; IFRS S2 focuses specifically on climate-related disclosures. Many jurisdictions are adopting or referencing ISSB for listed companies.',
+            mandatoryBadge: 'voluntary',
+            resources: [
+                {
+                    href: '../checklists/ghg-reporting-readiness-checklist.html',
+                    label: 'GHG Reporting Readiness Checklist',
+                    type: 'checklist'
+                }
+            ],
+            applies: function(a) {
+                const isListed = (a.listing === 'eu_listed') || (a.listing === 'us_listed') || (a.listing === 'other_listed');
+                const ukLarge = (a.hq === 'uk') && (a.size === 'large');
+                return isListed || ukLarge;
+            },
+            reason: function(a) {
+                const reasons = [];
+                if (a.listing === 'eu_listed' || a.listing === 'us_listed' || a.listing === 'other_listed') {
+                    reasons.push('your organisation is publicly listed — multiple jurisdictions are adopting ISSB as the baseline for listed company sustainability disclosure');
+                }
+                if (a.hq === 'uk' && a.size === 'large') {
+                    reasons.push('UK large companies are within scope of UK-aligned IFRS S1/S2 adoption by the FCA');
+                }
+                return 'IFRS S1/S2 (ISSB) is applicable because ' + reasons.join(', and ') + '.';
+            },
+            notApplicableReason: function(a) {
+                return 'IFRS S1/S2 (ISSB) is primarily targeted at publicly listed companies and large entities in jurisdictions adopting the standards. Your profile does not currently trigger mandatory ISSB reporting, though voluntary adoption is recognised.';
+            }
+        },
+        {
+            id: 'gri',
+            name: 'GRI Standards',
+            shortName: 'GRI',
+            icon: 'GR',
+            description: 'The Global Reporting Initiative (GRI) Standards are the most widely adopted voluntary sustainability reporting framework globally. GRI provides topic-specific standards covering economic, environmental, and social impacts, and is used by organisations of all sizes and sectors.',
+            mandatoryBadge: 'widely-adopted',
+            resources: [
+                {
+                    href: '../checklists/esg-reporting-assurance-checklist.html',
+                    label: 'ESG Reporting Assurance Checklist',
+                    type: 'checklist'
+                }
+            ],
+            applies: function(a) {
+                return true; // GRI applies universally as a voluntary framework
+            },
+            reason: function(a) {
+                return 'GRI Standards are applicable to organisations of all sizes, sectors, and jurisdictions. GRI is widely used as a voluntary reporting framework and is referenced in numerous regulatory and supply chain contexts globally.';
+            },
+            notApplicableReason: function(a) {
+                return '';
+            }
+        },
+        {
+            id: 'tcfd',
+            name: 'TCFD / TNFD',
+            shortName: 'TCFD',
+            icon: 'TC',
+            description: 'The Task Force on Climate-related Financial Disclosures (TCFD) establishes a framework for disclosing climate-related financial risks. The Taskforce on Nature-related Financial Disclosures (TNFD) extends this to nature-related risks. TCFD has been incorporated into regulatory regimes in multiple jurisdictions.',
+            mandatoryBadge: 'voluntary',
+            resources: [
+                {
+                    href: '../checklists/ghg-reporting-readiness-checklist.html',
+                    label: 'GHG Reporting Readiness Checklist',
+                    type: 'checklist'
+                }
+            ],
+            applies: function(a) {
+                const isListed = (a.listing === 'eu_listed') || (a.listing === 'us_listed') || (a.listing === 'other_listed');
+                const isFinancial = (a.industry === 'financial');
+                const isLarge = (a.size === 'large');
+                return isListed || isFinancial || isLarge;
+            },
+            reason: function(a) {
+                const reasons = [];
+                if (a.listing !== 'not_listed') reasons.push('publicly listed companies are primary targets of TCFD-aligned disclosure requirements in multiple jurisdictions');
+                if (a.industry === 'financial') reasons.push('financial institutions face heightened regulatory expectations for climate risk disclosure under TCFD');
+                if (a.size === 'large') reasons.push('large enterprises are within scope of TCFD-aligned reporting requirements in key jurisdictions');
+                return 'TCFD/TNFD is applicable because ' + reasons.join(', and ') + '.';
+            },
+            notApplicableReason: function(a) {
+                return 'TCFD/TNFD is primarily applicable to publicly listed companies, large enterprises, and financial institutions. Your profile is outside the primary target population, though voluntary adoption is possible.';
+            }
+        },
+        {
+            id: 'sec',
+            name: 'SEC Climate Rules',
+            shortName: 'SEC',
+            icon: 'SC',
+            description: 'The US Securities and Exchange Commission (SEC) climate disclosure rules require US-listed companies to disclose climate-related risks, greenhouse gas emissions, and climate targets in their annual filings. The rules apply to registrants with the SEC.',
+            mandatoryBadge: 'mandatory',
+            resources: [
+                {
+                    href: '../checklists/ghg-reporting-readiness-checklist.html',
+                    label: 'GHG Reporting Readiness Checklist',
+                    type: 'checklist'
+                }
+            ],
+            applies: function(a) {
+                return a.listing === 'us_listed';
+            },
+            reason: function(a) {
+                return 'SEC Climate Rules apply because your organisation is listed on a US exchange (NYSE, NASDAQ, or similar). All SEC registrants are subject to the SEC\'s climate-related disclosure requirements.';
+            },
+            notApplicableReason: function(a) {
+                return 'SEC Climate Rules apply specifically to companies registered with the US Securities and Exchange Commission (i.e. listed on US exchanges). Your organisation is not US-listed.';
+            }
+        },
+        {
+            id: 'iso14001',
+            name: 'ISO 14001',
+            shortName: '14001',
+            icon: '14',
+            description: 'ISO 14001 specifies requirements for an effective environmental management system (EMS). It is applicable to any organisation that wants to improve its environmental performance, fulfil compliance obligations, and achieve environmental objectives.',
+            mandatoryBadge: 'voluntary',
+            resources: [
+                {
+                    href: '../checklists/esg-reporting-assurance-checklist.html',
+                    label: 'ESG Reporting Assurance Checklist',
+                    type: 'checklist'
+                }
+            ],
+            applies: function(a) {
+                const highImpactIndustry = (a.industry === 'manufacturing') || (a.industry === 'energy');
+                const isLarge = (a.size === 'large');
+                return highImpactIndustry || isLarge;
+            },
+            reason: function(a) {
+                const reasons = [];
+                if (a.industry === 'manufacturing') reasons.push('manufacturing organisations typically have significant direct environmental impacts that ISO 14001 is designed to manage');
+                if (a.industry === 'energy') reasons.push('energy sector organisations face heightened regulatory and stakeholder expectations for environmental management');
+                if (a.size === 'large') reasons.push('large enterprises frequently implement ISO 14001 to demonstrate environmental governance to regulators, customers, and investors');
+                return 'ISO 14001 is applicable because ' + reasons.join(', and ') + '.';
+            },
+            notApplicableReason: function(a) {
+                return 'ISO 14001 is most commonly adopted by organisations with significant environmental footprints — particularly manufacturing, energy, and large enterprises. Your profile may have lower environmental exposure, though certification is open to any organisation.';
+            }
+        },
+        {
+            id: 'iso37001',
+            name: 'ISO 37001',
+            shortName: '37001',
+            icon: '37',
+            description: 'ISO 37001 specifies requirements and provides guidance for establishing, implementing, maintaining, reviewing, and improving an anti-bribery management system (ABMS). It applies to all types and sizes of organisations in any sector.',
+            mandatoryBadge: 'widely-adopted',
+            resources: [
+                {
+                    href: '../checklists/iso-37001-checklist.html',
+                    label: 'ISO 37001 Checklist',
+                    type: 'checklist'
+                },
+                {
+                    href: '../whitepapers/abms-risk-assessment.html',
+                    label: 'ABMS Risk Assessment Whitepaper',
+                    type: 'whitepaper'
+                }
+            ],
+            applies: function(a) {
+                return true; // ISO 37001 applicable to all organisations
+            },
+            reason: function(a) {
+                const extras = [];
+                if (a.industry === 'financial') extras.push('Financial services organisations face heightened anti-bribery regulatory scrutiny.');
+                if (a.hq === 'eu' || a.hq === 'uk' || a.hq === 'us') extras.push('Organisations in your jurisdiction operate under active anti-bribery legislation (e.g. UK Bribery Act, US FCPA, EU anti-corruption frameworks).');
+                let base = 'ISO 37001 is applicable to organisations of all sizes, sectors, and jurisdictions. It provides a structured framework for anti-bribery risk management and is increasingly referenced in supply chain due diligence, procurement, and regulatory contexts.';
+                if (extras.length > 0) base += ' ' + extras.join(' ');
+                return base;
+            },
+            notApplicableReason: function(a) {
+                return '';
+            }
+        }
+    ];
+
+    // ============================================================
+    // STATE
+    // ============================================================
+    const STORAGE_KEY = 'speeki_framework_selector';
+
+    let state = {
+        phase: 'intro',
+        currentQ: 0,
+        answers: {}
+    };
+
+    // ============================================================
+    // DOM REFS
+    // ============================================================
+    const elIntro = document.getElementById('toolIntro');
+    const elQuestions = document.getElementById('toolQuestions');
+    const elResults = document.getElementById('toolResults');
+    const elContainer = document.getElementById('questionContainer');
+    const elProgressFill = document.getElementById('progressBarFill');
+    const elProgressLabel = document.getElementById('progressLabel');
+    const elProgressBar = document.getElementById('progressBar');
+    const elBtnBack = document.getElementById('btnBack');
+    const elBtnNext = document.getElementById('btnNext');
+
+    // ============================================================
+    // INIT
+    // ============================================================
+    function init() {
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if (saved) {
+            try {
+                const parsed = JSON.parse(saved);
+                if (parsed.phase === 'results' && parsed.answers) {
+                    state = parsed;
+                    showResults();
+                    return;
+                }
+            } catch(e) { /* ignore */ }
+        }
+
+        document.getElementById('btnStart').addEventListener('click', startTool);
+        elBtnBack.addEventListener('click', goBack);
+        elBtnNext.addEventListener('click', goNext);
+        document.getElementById('btnRetake').addEventListener('click', retake);
+        document.getElementById('captureForm').addEventListener('submit', onCaptureSubmit);
+        document.getElementById('btnCopyLink').addEventListener('click', copyLink);
+        document.getElementById('btnShowNotApplicable').addEventListener('click', toggleNotApplicable);
+        setupShareButtons();
+    }
+
+    // ============================================================
+    // NAVIGATION
+    // ============================================================
+    function startTool() {
+        state.phase = 'questions';
+        state.currentQ = 0;
+        elIntro.style.display = 'none';
+        elQuestions.style.display = 'block';
+        renderQuestion();
+        elQuestions.focus();
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function goBack() {
+        if (state.currentQ === 0) {
+            // Back to intro
+            elQuestions.style.display = 'none';
+            elIntro.style.display = 'block';
+            state.phase = 'intro';
+        } else {
+            state.currentQ--;
+            renderQuestion();
+        }
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function goNext() {
+        const q = QUESTIONS[state.currentQ];
+        if (!state.answers[q.id]) return;
+
+        if (state.currentQ < QUESTIONS.length - 1) {
+            state.currentQ++;
+            renderQuestion();
+        } else {
+            // All questions answered — show results
+            state.phase = 'results';
+            saveState();
+            showResults();
+        }
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // ============================================================
+    // RENDER QUESTION
+    // ============================================================
+    function renderQuestion() {
+        const q = QUESTIONS[state.currentQ];
+        const qNum = state.currentQ + 1;
+        const total = QUESTIONS.length;
+        const pct = ((qNum - 1) / total) * 100;
+
+        elProgressFill.style.width = pct + '%';
+        elProgressBar.setAttribute('aria-valuenow', Math.round(pct));
+        elProgressLabel.textContent = 'Question ' + qNum + ' of ' + total;
+
+        const current = state.answers[q.id] || null;
+
+        elContainer.innerHTML = `
+            <p class="question-title" id="q-title-${q.id}">${q.title}</p>
+            <p class="question-subtitle">${q.subtitle}</p>
+            <div class="options-grid" role="radiogroup" aria-labelledby="q-title-${q.id}">
+                ${q.options.map(opt => `
+                    <button
+                        class="option-btn${current === opt.value ? ' selected' : ''}"
+                        data-value="${opt.value}"
+                        role="radio"
+                        aria-checked="${current === opt.value ? 'true' : 'false'}"
+                        aria-label="${opt.label}${opt.desc ? ': ' + opt.desc : ''}"
+                        onclick="window._selectOption('${q.id}', '${opt.value}', this)"
+                    >
+                        <span class="option-check" aria-hidden="true">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#0a1628" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        </span>
+                        <span class="option-label">
+                            <span class="option-title">${opt.label}</span>
+                            ${opt.desc ? `<span class="option-desc">${opt.desc}</span>` : ''}
+                        </span>
+                    </button>
+                `).join('')}
+            </div>
+        `;
+
+        elBtnBack.style.display = 'flex';
+        elBtnNext.disabled = !current;
+    }
+
+    // Exposed globally for inline onclick
+    window._selectOption = function(qId, value, btn) {
+        state.answers[qId] = value;
+
+        // Update UI — clear all, set selected
+        const allBtns = elContainer.querySelectorAll('.option-btn');
+        allBtns.forEach(b => {
+            b.classList.remove('selected');
+            b.setAttribute('aria-checked', 'false');
+        });
+        btn.classList.add('selected');
+        btn.setAttribute('aria-checked', 'true');
+
+        elBtnNext.disabled = false;
+        saveState();
+    };
+
+    // ============================================================
+    // SHOW RESULTS
+    // ============================================================
+    function showResults() {
+        elIntro.style.display = 'none';
+        elQuestions.style.display = 'none';
+        elResults.style.display = 'block';
+
+        // Ensure event listeners
+        document.getElementById('btnRetake').addEventListener('click', retake);
+        document.getElementById('captureForm').addEventListener('submit', onCaptureSubmit);
+        document.getElementById('btnCopyLink').addEventListener('click', copyLink);
+        document.getElementById('btnShowNotApplicable').addEventListener('click', toggleNotApplicable);
+        setupShareButtons();
+
+        renderProfileSummary();
+        renderFrameworks();
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // ============================================================
+    // RENDER PROFILE SUMMARY TAGS
+    // ============================================================
+    function renderProfileSummary() {
+        const a = state.answers;
+        const hqMap = { eu: 'EU', uk: 'UK', us: 'United States', apac: 'Asia-Pacific', other: 'Other jurisdiction' };
+        const sizeMap = { large: 'Large enterprise (500+)', mid: 'Mid-size (50–499)', small: 'Small (<50)' };
+        const industryMap = { financial: 'Financial services', energy: 'Energy', manufacturing: 'Manufacturing', technology: 'Technology', healthcare: 'Healthcare', retail: 'Retail', other: 'Other industry' };
+        const listingMap = { eu_listed: 'Listed on EU exchange', us_listed: 'Listed on US exchange', other_listed: 'Listed on other exchange', not_listed: 'Not publicly listed' };
+
+        const tags = [
+            hqMap[a.hq],
+            sizeMap[a.size],
+            industryMap[a.industry],
+            listingMap[a.listing]
+        ].filter(Boolean);
+
+        document.getElementById('profileSummary').innerHTML = tags.map(t =>
+            `<span class="profile-tag" role="listitem">${t}</span>`
+        ).join('');
+    }
+
+    // ============================================================
+    // RENDER FRAMEWORKS
+    // ============================================================
+    function renderFrameworks() {
+        const a = state.answers;
+        const applicable = FRAMEWORKS.filter(f => f.applies(a));
+        const notApplicable = FRAMEWORKS.filter(f => !f.applies(a));
+
+        const applyContainer = document.getElementById('applicableFrameworks');
+        const notApplyContainer = document.getElementById('notApplicableList');
+
+        applyContainer.innerHTML = applicable.map(f => renderCard(f, a, true)).join('');
+        notApplyContainer.innerHTML = notApplicable.map(f => renderCard(f, a, false)).join('');
+
+        // Update "show not applicable" button text
+        const btn = document.getElementById('btnShowNotApplicable');
+        btn.textContent = notApplicable.length > 0
+            ? `Show ${notApplicable.length} framework${notApplicable.length > 1 ? 's' : ''} that do not apply`
+            : 'All frameworks are applicable to your profile';
+        if (notApplicable.length === 0) btn.disabled = true;
+
+        // Attach toggle listeners
+        applyContainer.querySelectorAll('.framework-card').forEach(card => {
+            card.querySelector('.framework-card-header').addEventListener('click', function() {
+                card.classList.toggle('expanded');
+            });
+        });
+
+        notApplyContainer.querySelectorAll('.framework-card').forEach(card => {
+            card.querySelector('.framework-card-header').addEventListener('click', function() {
+                card.classList.toggle('expanded');
+            });
+        });
+    }
+
+    function getBadgeHTML(badgeType) {
+        if (badgeType === 'mandatory') return '<span class="badge-mandatory">Mandatory</span>';
+        if (badgeType === 'voluntary') return '<span class="badge-voluntary">Voluntary</span>';
+        if (badgeType === 'widely-adopted') return '<span class="badge-widely-adopted">Widely Adopted</span>';
+        return '';
+    }
+
+    function renderCard(fw, answers, isApplicable) {
+        const reason = isApplicable ? fw.reason(answers) : fw.notApplicableReason(answers);
+        const resourceLinksHTML = (isApplicable && fw.resources && fw.resources.length > 0)
+            ? `<div class="framework-resources-links">
+                ${fw.resources.map(r => `
+                    <a href="${r.href}" class="framework-resource-link" target="_blank" rel="noopener">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline></svg>
+                        ${r.label}
+                    </a>
+                `).join('')}
+              </div>`
+            : '';
+
+        return `
+        <div class="framework-card ${isApplicable ? 'applicable' : 'not-applicable'}" role="listitem">
+            <div class="framework-card-header" role="button" aria-expanded="false" tabindex="0">
+                <div class="framework-card-left">
+                    <div class="framework-icon" aria-hidden="true">${fw.icon}</div>
+                    <div>
+                        <div class="framework-name">${fw.name}</div>
+                        <div class="framework-short-desc">${fw.description.substring(0, 80)}${fw.description.length > 80 ? '...' : ''}</div>
+                        <div class="framework-badges">${getBadgeHTML(fw.mandatoryBadge)}</div>
+                    </div>
+                </div>
+                <svg class="framework-toggle-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+            </div>
+            <div class="framework-card-body">
+                <p style="font-size:14px; color: var(--speeki-gray); line-height: 1.7; margin-bottom: 12px;">${fw.description}</p>
+                <div class="framework-applies-reason">${reason}</div>
+                ${resourceLinksHTML}
+            </div>
+        </div>`;
+    }
+
+    // ============================================================
+    // NOT-APPLICABLE TOGGLE
+    // ============================================================
+    function toggleNotApplicable() {
+        const list = document.getElementById('notApplicableList');
+        const btn = document.getElementById('btnShowNotApplicable');
+        const isVisible = list.classList.contains('visible');
+        list.classList.toggle('visible', !isVisible);
+        btn.setAttribute('aria-expanded', String(!isVisible));
+    }
+
+    // ============================================================
+    // SHARE BUTTONS
+    // ============================================================
+    function setupShareButtons() {
+        const url = encodeURIComponent(window.location.href);
+        const text = encodeURIComponent('Find out which ESG frameworks apply to your organisation — free tool by Speeki:');
+
+        const liEl = document.getElementById('shareLinkedIn');
+        const twEl = document.getElementById('shareTwitter');
+        if (liEl) liEl.href = 'https://www.linkedin.com/sharing/share-offsite/?url=' + url;
+        if (twEl) twEl.href = 'https://twitter.com/intent/tweet?text=' + text + '&url=' + url;
+    }
+
+    function copyLink() {
+        const btn = document.getElementById('btnCopyLink');
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(window.location.href).then(() => {
+                const original = btn.innerHTML;
+                btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg> Copied!';
+                setTimeout(() => { btn.innerHTML = original; }, 2000);
+            });
+        }
+    }
+
+    // ============================================================
+    // LEAD CAPTURE
+    // ============================================================
+    function onCaptureSubmit(e) {
+        e.preventDefault();
+        const email = document.getElementById('captureEmail').value.trim();
+        if (!email || !email.includes('@')) {
+            document.getElementById('captureEmail').focus();
+            return;
+        }
+
+        const submission = {
+            email: email,
+            name: document.getElementById('captureName').value.trim(),
+            answers: state.answers,
+            timestamp: new Date().toISOString()
+        };
+        localStorage.setItem('speeki_framework_selector_lead', JSON.stringify(submission));
+
+        document.getElementById('captureForm').style.display = 'none';
+        document.getElementById('captureSuccess').style.display = 'flex';
+    }
+
+    // ============================================================
+    // RETAKE
+    // ============================================================
+    function retake() {
+        state = { phase: 'intro', currentQ: 0, answers: {} };
+        localStorage.removeItem(STORAGE_KEY);
+        elResults.style.display = 'none';
+        elQuestions.style.display = 'none';
+        elIntro.style.display = 'block';
+
+        // Reset lead capture form
+        const form = document.getElementById('captureForm');
+        const success = document.getElementById('captureSuccess');
+        if (form) form.style.display = 'flex';
+        if (success) success.style.display = 'none';
+
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // ============================================================
+    // STATE PERSISTENCE
+    // ============================================================
+    function saveState() {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify({
+            phase: state.phase,
+            currentQ: state.currentQ,
+            answers: state.answers
+        }));
+    }
+
+    // ============================================================
+    // START
+    // ============================================================
+    init();
+
+})();
+</script>
+
+</body>
+</html>
