@@ -40,14 +40,14 @@
 }
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
 <style>
 :root {
   --navy: #0f1c3f;
   --navy-mid: #1a2d5a;
   --navy-light: #243672;
   --teal: #00FF7F;
-  --teal-dark: #00e06e;
+  --teal-dark: #00a89a;
   --teal-text: #00875a;
   --teal-accessible: #00875a;
   --teal-light: #e6fff0;
@@ -62,8 +62,8 @@
   --text: #1a2033;
   --text-light: #4a5270;
   --border: #dde1ef;
-  --shadow: 0 4px 24px rgba(10,31,68,0.10);
-  --shadow-lg: 0 12px 48px rgba(10,31,68,0.18);
+  --shadow: 0 4px 24px rgba(15,28,63,0.10);
+  --shadow-lg: 0 12px 48px rgba(15,28,63,0.18);
   --radius: 8px;
   --radius-lg: 16px;
 }
@@ -73,22 +73,22 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'DM Sans', sans-serif;
   color: var(--text);
   background: var(--white);
-  line-height: 1.8;
-  font-size: 17px;
+  line-height: 1.6;
+  font-size: 16px;
   -webkit-font-smoothing: antialiased;
 }
 
 /* ─── NAV ─────────────────────────────────────────── */
 nav {
-  background: #ffffff;
+  background: #0a1628;
   padding: 0 32px;
   position: sticky;
   top: 0;
   z-index: 100;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 .nav-content {
   max-width: 1200px;
@@ -108,7 +108,7 @@ nav {
   gap: 24px;
 }
 .nav-back {
-  color: var(--navy);
+  color: #e2e8f0;
   text-decoration: none;
   font-size: 14px;
   display: flex;
@@ -119,7 +119,7 @@ nav {
 .nav-back:hover { color: #00FF7F; }
 .nav-cta {
   background: #00FF7F;
-  color: var(--navy);
+  color: #0a1628;
   padding: 8px 20px;
   border-radius: 6px;
   text-decoration: none;
@@ -202,12 +202,12 @@ nav {
 }
 .hero-tag svg { width: 12px; height: 12px; }
 .hero-title {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  font-size: 42px;
-  font-weight: 800;
-  line-height: 1.15;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 52px;
+  line-height: 1.08;
   color: var(--white);
   margin-bottom: 12px;
+  letter-spacing: -1px;
 }
 .hero-title em {
   font-style: italic;
@@ -380,7 +380,7 @@ nav {
 .stat-item:first-child { padding-left: 0; }
 .stat-item:last-child { border-right: none; }
 .stat-number {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: 36px;
   color: var(--navy);
   line-height: 1;
@@ -402,36 +402,14 @@ nav {
 
 /* ─── ARTICLE ─────────────────────────────────────── */
 .article h2 {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  font-size: 28px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 30px;
   color: var(--navy);
   margin: 48px 0 16px;
   line-height: 1.2;
-  display: flex;
-  align-items: center;
-  gap: 16px;
+  letter-spacing: -0.5px;
 }
 .article h2:first-child { margin-top: 0; }
-/* ─── SECTION NUMBERING ──────────────────────────── */
-.article {
-  counter-reset: section;
-}
-.article h2::before {
-  counter-increment: section;
-  content: counter(section);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: #00FF7F;
-  color: #0f1c3f;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  font-size: 18px;
-  font-weight: 700;
-  flex-shrink: 0;
-}
 .article h3 {
   font-size: 20px;
   font-weight: 600;
@@ -464,7 +442,7 @@ nav {
 }
 .pullquote::before {
   content: '"';
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: 96px;
   color: var(--teal);
   opacity: 0.2;
@@ -474,8 +452,8 @@ nav {
   line-height: 1;
 }
 .pullquote p {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  font-size: 24px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 20px;
   line-height: 1.5;
   color: var(--white);
   font-style: italic;
@@ -522,7 +500,7 @@ nav {
   border-radius: 10px;
   padding: 24px;
   text-align: center;
-  box-shadow: 0 2px 12px rgba(10,31,68,0.06);
+  box-shadow: 0 2px 12px rgba(15,28,63,0.06);
 }
 .arch-icon {
   width: 48px;
@@ -544,7 +522,7 @@ nav {
   margin: 24px 0;
   border-radius: 10px;
   overflow: hidden;
-  box-shadow: 0 2px 16px rgba(10,31,68,0.08);
+  box-shadow: 0 2px 16px rgba(15,28,63,0.08);
 }
 .framework-table thead th {
   background: var(--navy);
@@ -608,7 +586,7 @@ nav {
   margin-bottom: 16px;
 }
 .objectives-header h2 {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: 38px;
   color: var(--white);
   margin-bottom: 12px;
@@ -758,7 +736,7 @@ nav {
   letter-spacing: 0.05em;
 }
 .modal-header h3 {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: 24px;
   color: var(--white);
   line-height: 1.25;
@@ -900,7 +878,7 @@ nav {
   border-radius: 12px;
   overflow: hidden;
   margin-bottom: 20px;
-  box-shadow: 0 2px 12px rgba(10,31,68,0.07);
+  box-shadow: 0 2px 12px rgba(15,28,63,0.07);
 }
 .sidebar-card-header {
   background: var(--navy);
@@ -1010,8 +988,8 @@ nav {
   margin-bottom: 16px;
 }
 .steps-header h2 {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  font-size: 28px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 36px;
   color: var(--navy);
   margin-bottom: 10px;
 }
@@ -1050,7 +1028,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: 22px;
   color: var(--navy);
   margin-bottom: 16px;
@@ -1076,7 +1054,7 @@ nav {
   margin-bottom: 32px;
 }
 .related-header h2 {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'DM Sans', sans-serif;
   font-size: 28px;
   color: var(--navy);
 }
@@ -1142,7 +1120,7 @@ nav {
 
 /* ─── FOOTER ──────────────────────────────────────── */
 footer {
-  background: #0f1c3f;
+  background: #0a1628;
   color: #9ca3af;
   text-align: center;
   padding: 48px 32px;
@@ -1194,7 +1172,7 @@ footer .container {
   padding: 12px 16px 12px 44px;
   font-size: 14px;
   color: var(--white);
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-family: 'DM Sans', sans-serif;
   outline: none;
   transition: border-color 0.2s;
 }
@@ -1234,7 +1212,7 @@ footer .container {
 /* ─── HIDDEN OBJECTIVES (filter) ─────────────────── */
 .obj-card.hidden { display: none; }
         /* Skip Navigation Link */
-        .skip-link { position: absolute; top: -40px; left: 0; background: #0f1c3f; color: #fff; padding: 8px 16px; z-index: 10000; font-size: 14px; }
+        .skip-link { position: absolute; top: -40px; left: 0; background: #0a1f44; color: #fff; padding: 8px 16px; z-index: 10000; font-size: 14px; }
         .skip-link:focus { top: 0; }
         .resource-card {
             text-decoration: none;
@@ -1260,7 +1238,7 @@ footer .container {
 <nav>
     <div class="nav-content">
         <a href="../index.html" class="nav-logo" aria-label="Speeki - Back to Resources Hub">
-            <img src="../speeki-logo.png" alt="Speeki" style="height: 50px; width: auto;">
+            <img src="../speeki-logo-white.png" alt="Speeki" style="height: 50px; width: auto;">
         </a>
         <div class="nav-right">
             <a href="../index.html" class="nav-back" aria-label="Back to all resources">
@@ -1425,12 +1403,12 @@ footer .container {
     </div>
 
     <!-- INLINE LEAD CAPTURE CTA -->
-    <div class="inline-cta" style="background: linear-gradient(135deg, #0f1c3f, #1a2d5c); border-radius: 12px; padding: 40px; margin: 48px 0; color: white; text-align: center;">
+    <div class="inline-cta" style="background: linear-gradient(135deg, #0a1f44, #1a2d5c); border-radius: 12px; padding: 40px; margin: 48px 0; color: white; text-align: center;">
       <h3 style="font-size: 24px; font-weight: 700; margin-bottom: 12px; color: white;">Get This Guide as PDF</h3>
       <p style="font-size: 16px; color: rgba(255,255,255,0.85); margin-bottom: 24px; max-width: 500px; margin-left: auto; margin-right: auto;">Download this whitepaper plus related resources and implementation templates.</p>
       <form class="inline-cta-form" style="display: flex; gap: 12px; max-width: 440px; margin: 0 auto;" onsubmit="handleInlineCTA(event, this)">
         <input type="email" placeholder="your@email.com" required style="flex: 1; padding: 14px 16px; border: 2px solid rgba(255,255,255,0.3); border-radius: 8px; background: rgba(255,255,255,0.1); color: white; font-size: 15px;" aria-label="Email address">
-        <button type="submit" style="padding: 14px 24px; background: #00FF7F; color: #0f1c3f; border: none; border-radius: 8px; font-weight: 700; font-size: 14px; cursor: pointer; white-space: nowrap;">Download PDF</button>
+        <button type="submit" style="padding: 14px 24px; background: #00FF7F; color: #0a1f44; border: none; border-radius: 8px; font-weight: 700; font-size: 14px; cursor: pointer; white-space: nowrap;">Download PDF</button>
       </form>
       <p class="inline-cta-success" style="display:none; font-size: 15px; color: #00FF7F; margin-top: 12px; font-weight: 600;">Thank you — check your inbox for the download link.</p>
       <p style="font-size: 12px; color: rgba(255,255,255,0.6); margin-top: 12px;">No spam. Unsubscribe anytime.</p>
@@ -1541,9 +1519,9 @@ footer .container {
 
     <!-- BOTTOM CTA -->
     <div style="background: #f0fdf4; border: 2px solid #00FF7F; border-radius: 12px; padding: 40px; margin-top: 48px; text-align: center;">
-      <h3 style="font-size: 22px; font-weight: 700; color: #0f1c3f; margin-bottom: 12px;">Need Expert Assurance Support?</h3>
+      <h3 style="font-size: 22px; font-weight: 700; color: #0a1f44; margin-bottom: 12px;">Need Expert Assurance Support?</h3>
       <p style="font-size: 16px; color: #374151; margin-bottom: 24px; max-width: 520px; margin-left: auto; margin-right: auto;">Speeki provides independent ESG assurance and ISO certification services.</p>
-      <a href="https://www.speeki.com/demo" style="display: inline-block; padding: 14px 32px; background: #0f1c3f; color: white; border-radius: 8px; font-weight: 700; font-size: 15px; text-decoration: none;">Book a Demo</a>
+      <a href="https://www.speeki.com/demo" style="display: inline-block; padding: 14px 32px; background: #0a1f44; color: white; border-radius: 8px; font-weight: 700; font-size: 15px; text-decoration: none;">Book a Demo</a>
     </div>
 
   </article>
@@ -1716,22 +1694,22 @@ footer .container {
 <!-- FOOTER -->
 
 <!-- Related Resources -->
-<section class="related-resources" style="background: #f8f9fa; padding: 60px 0; font-family: 'Inter', system-ui, -apple-system, sans-serif;">
+<section class="related-resources" style="background: #f8f9fa; padding: 60px 0; font-family: 'DM Sans', sans-serif;">
   <div style="max-width: 1200px; margin: 0 auto; padding: 0 4vw;">
-    <h2 style="font-size: 28px; font-weight: 700; margin: 0 0 32px 0; color: #0a0a0a; font-family: 'Inter', system-ui, -apple-system, sans-serif;">Related Resources</h2>
+    <h2 style="font-size: 28px; font-weight: 700; margin: 0 0 32px 0; color: #0a0a0a; font-family: 'DM Sans', sans-serif;">Related Resources</h2>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
       <a href="../checklists/iso-37001-checklist.html" style="text-decoration: none; display: block;">
         <div class="resource-card">
           <span style="display: inline-block; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: #ffffff; background: #00FF7F; border-radius: 4px; padding: 3px 8px; margin-bottom: 12px;">Checklist</span>
-          <h3 style="font-size: 16px; font-weight: 700; color: #0a0a0a; margin: 0 0 8px 0; font-family: 'Inter', system-ui, -apple-system, sans-serif;">ISO 37001 Anti-Bribery</h3>
-          <p style="font-size: 14px; color: #6b7280; margin: 0; line-height: 1.5; font-family: 'Inter', system-ui, -apple-system, sans-serif;">Implement an ISO 37001-compliant anti-bribery management system.</p>
+          <h3 style="font-size: 16px; font-weight: 700; color: #0a0a0a; margin: 0 0 8px 0; font-family: 'DM Sans', sans-serif;">ISO 37001 Anti-Bribery</h3>
+          <p style="font-size: 14px; color: #6b7280; margin: 0; line-height: 1.5; font-family: 'DM Sans', sans-serif;">Implement an ISO 37001-compliant anti-bribery management system.</p>
         </div>
       </a>
       <a href="abms-risk-assessment.html" style="text-decoration: none; display: block;">
         <div class="resource-card">
           <span style="display: inline-block; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: #ffffff; background: #6366f1; border-radius: 4px; padding: 3px 8px; margin-bottom: 12px;">Whitepaper</span>
-          <h3 style="font-size: 16px; font-weight: 700; color: #0a0a0a; margin: 0 0 8px 0; font-family: 'Inter', system-ui, -apple-system, sans-serif;">ABMS Risk Assessment</h3>
-          <p style="font-size: 14px; color: #6b7280; margin: 0; line-height: 1.5; font-family: 'Inter', system-ui, -apple-system, sans-serif;">A structured approach to bribery and corruption risk assessment under ISO 37001.</p>
+          <h3 style="font-size: 16px; font-weight: 700; color: #0a0a0a; margin: 0 0 8px 0; font-family: 'DM Sans', sans-serif;">ABMS Risk Assessment</h3>
+          <p style="font-size: 14px; color: #6b7280; margin: 0; line-height: 1.5; font-family: 'DM Sans', sans-serif;">A structured approach to bribery and corruption risk assessment under ISO 37001.</p>
         </div>
       </a>
     </div>
