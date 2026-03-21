@@ -247,6 +247,35 @@
             font-weight: 500;
         }
 
+        /* Accreditation Trust Bar */
+        .trust-bar {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-top: 40px;
+            padding: 14px 20px;
+            border-left: 3px solid var(--speeki-green);
+            background: rgba(0, 255, 127, 0.06);
+            border-radius: 0 6px 6px 0;
+            max-width: 640px;
+        }
+
+        .trust-bar-icon {
+            flex-shrink: 0;
+            color: var(--speeki-green-text);
+        }
+
+        .trust-bar-text {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--speeki-gray);
+            line-height: 1.5;
+        }
+
+        .trust-bar-text strong {
+            color: var(--speeki-dark);
+        }
+
         /* Quick Assessment Section */
         .quick-assessment {
             background: linear-gradient(135deg, var(--speeki-dark-blue) 0%, #1a2d5c 100%);
@@ -1615,6 +1644,16 @@
                     <span class="stat-label">Countries reached</span>
                 </div>
             </div>
+
+            <!-- Accreditation Trust Bar -->
+            <div class="trust-bar" role="note" aria-label="Accreditation context">
+                <span class="trust-bar-icon" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                    </svg>
+                </span>
+                <p class="trust-bar-text"><strong>Resources developed from the perspective of accredited ISO certification auditors</strong> — independent, practical, and assurance-focused.</p>
+            </div>
         </div>
     </header>
 
@@ -2169,7 +2208,7 @@
                 <h2>Trusted by ESG Professionals Worldwide</h2>
                 <div class="testimonials-grid">
                     <div class="testimonial-card">
-                        <p class="testimonial-quote">"The Anti-Greenwashing Checklist helped us identify gaps in our ESG reporting before our external audit. It saved us from potential reputational risks."</p>
+                        <p class="testimonial-quote">"The Anti-Greenwashing Checklist gave us clarity on the gaps in our ESG reporting before our external audit. We understood exactly where we stood against assurance criteria."</p>
                         <div class="testimonial-author">
                             <div class="testimonial-avatar">MK</div>
                             <div class="testimonial-info">
@@ -2179,7 +2218,7 @@
                         </div>
                     </div>
                     <div class="testimonial-card">
-                        <p class="testimonial-quote">"As someone new to ISO 37001, the step-by-step checklist made implementation manageable. We achieved certification six months ahead of schedule."</p>
+                        <p class="testimonial-quote">"The ISO 37001 checklist helped us understand our readiness against the standard's requirements. The auditor's perspective gave us confidence in our self-assessment."</p>
                         <div class="testimonial-author">
                             <div class="testimonial-avatar">JC</div>
                             <div class="testimonial-info">
@@ -2189,7 +2228,7 @@
                         </div>
                     </div>
                     <div class="testimonial-card">
-                        <p class="testimonial-quote">"The GHG Reporting Readiness Checklist is now part of our annual planning cycle. It ensures we never fall behind on emissions reporting requirements."</p>
+                        <p class="testimonial-quote">"The GHG Reporting Readiness Checklist helped us evaluate our emissions reporting against the same criteria our assurance provider uses. The framework alignment is invaluable."</p>
                         <div class="testimonial-author">
                             <div class="testimonial-avatar">SL</div>
                             <div class="testimonial-info">
@@ -2207,19 +2246,19 @@
                 <h2 style="font-size: 36px; font-weight: 700; margin-bottom: 20px;">Why Use Speeki Resources?</h2>
                 <div class="info-grid">
                     <div class="info-card">
-                        <div class="info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
-                        <h3>Interactive Progress Tracking</h3>
-                        <p>Check off items as you complete them. Your progress is automatically saved, so you can return anytime.</p>
+                        <div class="info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
+                        <h3>Auditor's Perspective</h3>
+                        <p>Built by accredited certification auditors who assess ESG programmes professionally. Every tool reflects what assurance providers actually examine.</p>
                     </div>
                     <div class="info-card">
-                        <div class="info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg></div>
-                        <h3>Export Your Results</h3>
-                        <p>Download a complete report of your progress to share with stakeholders or keep for your records.</p>
+                        <div class="info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"></rect><rect x="14" y="3" width="7" height="7"></rect><rect x="14" y="14" width="7" height="7"></rect><rect x="3" y="14" width="7" height="7"></rect></svg></div>
+                        <h3>Framework-Aligned</h3>
+                        <p>Mapped to ISO standards, CSRD, ESRS, GRI, and TCFD requirements. Evaluate your programme against the same criteria used in formal assurance engagements.</p>
                     </div>
                     <div class="info-card">
-                        <div class="info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><circle cx="12" cy="12" r="3"></circle></svg></div>
-                        <h3>Expert-Developed Content</h3>
-                        <p>Created by sustainability professionals with decades of experience in ESG, compliance, and corporate governance.</p>
+                        <div class="info-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg></div>
+                        <h3>Independence You Can Trust</h3>
+                        <p>As an accredited certification body, Speeki maintains strict independence. These resources inform and evaluate — they never prescribe.</p>
                     </div>
                 </div>
             </div>
