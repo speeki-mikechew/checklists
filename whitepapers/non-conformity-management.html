@@ -718,6 +718,18 @@ footer .container {
 <p>Think of non-conformity management not as a process but as a circulatory system. The body of your management system continuously generates information — through audits, incident reports, complaints, performance monitoring, and management review. That information, when it identifies a gap, enters the non-conformity system. The system classifies it, diagnoses it, treats it, and returns it to the body in improved form. If the system is healthy, the organisation learns and strengthens with each cycle. If the system is absent or broken, gaps accumulate, compounding risk.</p>
 <h2>2.3  Sources of Non-Conformity</h2>
 <p>A mature system captures nonconformities from multiple sources. Organisations that rely solely on internal audits will systematically miss categories of failure. The complete set of detection sources includes:</p>
+<ul>
+<li><strong>Internal audits</strong> — planned assessments conducted by trained internal auditors against defined criteria (ISO clause requirements, internal procedures, or regulatory obligations).</li>
+<li><strong>External audits</strong> — findings raised by certification bodies, regulatory inspectors, or second-party auditors (e.g., client audits of suppliers).</li>
+<li><strong>Incident and event reports</strong> — policy breaches, near-misses, complaints, or operational failures that indicate a requirement has not been met.</li>
+<li><strong>Whistleblowing and speak-up channels</strong> — reports received through confidential reporting mechanisms that identify control failures or policy violations.</li>
+<li><strong>Management review outputs</strong> — gaps identified during periodic leadership reviews of system performance, where targets are missed or trends indicate declining effectiveness.</li>
+<li><strong>Performance monitoring and KPIs</strong> — automated or manual monitoring that detects deviations from defined thresholds or control parameters.</li>
+<li><strong>Customer and stakeholder feedback</strong> — complaints, grievances, or formal feedback that reveals unmet requirements or service failures.</li>
+<li><strong>Regulatory changes and gap analyses</strong> — updates to legislation, regulations, or standards that render existing controls non-compliant until revised.</li>
+<li><strong>Self-assessment and control testing</strong> — periodic checks by process owners to confirm controls are operating as documented.</li>
+</ul>
+<p>Each source introduces different types and severities of non-conformity. An effective system weights and triages findings from all channels equally — the reporting source does not determine how seriously a non-conformity is treated. What matters is the nature and severity of the gap itself.</p>
 </section>
 <section class="content-section" id="3--building-a-classification-system">
 <h2>3.  Building a Classification System</h2>
@@ -726,8 +738,18 @@ footer .container {
 <p>Non-conformities should be classified across two independent dimensions: severity and type. These dimensions interact but serve different purposes.</p>
 <h2>3.2  Severity Classification Definitions</h2>
 <p>The following definitions should be embedded in your non-conformity procedure and applied consistently by all persons recording findings:</p>
+<p><strong>Critical</strong> — A total absence or fundamental failure of a required element of the management system. The non-conformity represents an immediate and significant risk to the organisation&#x27;s ability to meet its policy commitments, legal obligations, or certification requirements. Examples: no anti-bribery risk assessment has ever been conducted (ISO 37001 §4.5); a mandatory control required by the Statement of Applicability does not exist in any form.</p>
+<p><strong>Major</strong> — A significant gap in the implementation or effectiveness of a required element. The element exists in documented form but is either not implemented in practice, not implemented across the required scope, or demonstrably ineffective. Examples: a due diligence procedure exists but has not been applied to 40% of high-risk business partners; training records show that key personnel in scope have not completed required anti-bribery training.</p>
+<p><strong>Minor</strong> — A partial gap that does not represent a systemic failure. The requirement is substantially met, but isolated instances of non-fulfilment have been identified. Examples: one of twelve departmental risk assessments is overdue for its annual review; a single transaction was approved without the required second signature, but all other sampled transactions were compliant.</p>
+<p><strong>Observation</strong> — A potential area of concern that has not yet breached a requirement but, if left unaddressed, could develop into a non-conformity. Observations are not non-conformities and do not require formal corrective action, but they are recorded and tracked to prevent escalation. Examples: a procedure has not been updated to reflect a recent organisational restructure, though current practice remains compliant; training materials reference an outdated version of a policy, though the correct requirements are being communicated verbally.</p>
+<p>Severity classification directly determines the required response timeline, the depth of root cause analysis, the level of management escalation, and the reporting obligations to management review.</p>
 <h2>3.3  Type Classification</h2>
 <p>Classifying nonconformities by type enables pattern analysis and drives more targeted corrective actions. The four types below cover the complete range of management system failures:</p>
+<p><strong>Documentation Non-Conformity</strong> — A required document, record, or procedure does not exist, is incomplete, is not current, or does not meet the standard&#x27;s requirements. The gap is in what is written, not in what is done. Examples: a required procedure has not been documented; a policy exists but does not address all mandatory elements; records of a completed activity cannot be located.</p>
+<p><strong>Implementation Non-Conformity</strong> — A documented requirement exists but is not being followed in practice. The gap is between what the organisation says it does and what it actually does. Examples: a procedure requires quarterly reviews but the last review was conducted eleven months ago; a control exists on paper but staff are unaware of it or routinely bypass it.</p>
+<p><strong>Effectiveness Non-Conformity</strong> — A control or process is both documented and implemented, but it is not achieving its intended outcome. The organisation is doing what it says, but it is not working. Examples: anti-bribery training is delivered to all staff, but post-training assessments show no improvement in knowledge; a due diligence process is applied to all partners, but it fails to identify known high-risk indicators in the data available.</p>
+<p><strong>Systemic Non-Conformity</strong> — A pattern of related failures across multiple processes, departments, or time periods that indicates a fundamental weakness in the management system design rather than an isolated control failure. Systemic NCs are typically identified through trend analysis rather than individual audits. Examples: the same type of finding has been raised in three consecutive audit cycles despite corrective actions being recorded as complete; multiple departments independently demonstrate the same training gap, indicating a failure in the competence management process rather than in any single department.</p>
+<p>Type classification is applied independently of severity. A documentation NC can be Critical (if the missing document is a mandatory element of the system) or Minor (if a supporting record is incomplete but the core requirement is met). Combining severity and type enables the organisation to build a two-dimensional view of its NC profile, which is essential for effective trend analysis and resource allocation.</p>
 </section>
 <section class="content-section" id="4--the-non-conformity-lifecycle-in-detail">
 <h2>4.  The Non-Conformity Lifecycle in Detail</h2>
@@ -802,10 +824,53 @@ footer .container {
 </section>
 <section class="content-section" id="7--common-mistakes-and-how-to-avoid-them">
 <h2>7.  Common Mistakes and How to Avoid Them</h2>
+<p>Organisations implementing non-conformity management systems frequently fall into predictable patterns of error. These mistakes are not failures of intent — they are failures of system design. Understanding them is essential for building a process that functions as intended.</p>
+
+<h3>Mistake 1: Treating Correction as Corrective Action</h3>
+<p>The most common error is conflating correction (fixing the immediate problem) with corrective action (eliminating the root cause). An organisation that discovers an untrained employee and sends them to training has performed a correction. If the underlying reason for the training gap — a broken onboarding process, an outdated training matrix, insufficient resource allocation — is not identified and addressed, the same type of finding will recur with different individuals. Correction addresses the symptom. Corrective action addresses the system.</p>
+
+<h3>Mistake 2: Closing Non-Conformities Without Effectiveness Review</h3>
+<p>Many organisations close NC records once the planned corrective actions have been implemented. This is premature. Implementation does not equal effectiveness. A revised procedure that no one reads, a new control that is routinely bypassed, or a training programme that does not change behaviour — all represent completed actions that have not resolved the underlying problem. NCs remain open until an independent effectiveness review confirms that the root cause has been eliminated and the non-conformity has not recurred.</p>
+
+<h3>Mistake 3: Limiting Detection to Internal Audits</h3>
+<p>Organisations that rely exclusively on internal audits as their source of non-conformities are systematically blind to entire categories of failure. Internal audits are periodic and sample-based by design — they cannot detect every gap. A mature system captures nonconformities from incident reports, complaints, whistleblowing channels, management reviews, regulatory inspections, performance monitoring, and self-assessments. If the NC register is populated only during audit season, the system is not functioning as intended.</p>
+
+<h3>Mistake 4: Superficial Root Cause Analysis</h3>
+<p>Root cause analysis that stops at the first plausible explanation produces corrective actions that address proximate causes rather than systemic ones. &#x27;The employee did not follow the procedure&#x27; is not a root cause — it is a description of the non-conformity itself. The root cause lies in why the procedure was not followed: insufficient training, inaccessible documentation, conflicting instructions, inadequate supervision, or a procedure that does not reflect operational reality. Effective RCA requires multiple iterations of &#x27;why&#x27; until the answer points to something the organisation can structurally change.</p>
+
+<h3>Mistake 5: No Trend Analysis</h3>
+<p>Individual nonconformities, once resolved, contain limited strategic value. Their value multiplies when aggregated. Organisations that do not perform trend analysis miss patterns that individual findings do not reveal: recurring root cause categories, process areas with disproportionate NC volumes, seasonal or cyclical patterns, and declining or improving trajectories. Without trend analysis, management review receives anecdotal information rather than data-driven insight, and the management system cannot learn at an organisational level.</p>
+
+<h3>Mistake 6: Conflating Non-Conformities with Improvement Opportunities</h3>
+<p>Non-conformities and opportunities for improvement are distinct concepts with different system responses. A non-conformity is the non-fulfilment of a requirement — something that must be fixed. An opportunity for improvement is a potential enhancement to something that is already compliant — something that could be made better. Mixing them in the same register with the same classification and response process dilutes the urgency of genuine nonconformities and inflates NC statistics with items that do not represent actual failures. Each requires its own tracking mechanism and governance process.</p>
+
+<h3>Mistake 7: Assigning Corrective Actions to the Wrong Level</h3>
+<p>Corrective actions for systemic nonconformities are frequently assigned to operational staff who do not have the authority, budget, or organisational reach to implement systemic change. If a root cause analysis identifies a resourcing gap, a structural misalignment, or a policy deficiency, the corrective action owner must be someone with the authority to address it — typically a senior manager or the management system owner. Assigning systemic fixes to operational personnel virtually guarantees that the action will be recorded as &#x27;complete&#x27; while the root cause persists.</p>
 </section>
 <section class="content-section" id="8--implementation-roadmap">
 <h2>8.  Implementation Roadmap</h2>
-<p>Building a non-conformity management system from the ground up is a structured project. The following phased approach is recommended for organisations implementing this for the first time, or organisations whose existing NC process requires fundamental redesign.</p>
+<p>Building a non-conformity management system from the ground up is a structured project. The following phased approach is designed for organisations implementing this for the first time, or organisations whose existing NC process requires fundamental redesign.</p>
+
+<h3>Phase 1: Foundation — Procedure and Classification</h3>
+<p>The first phase establishes the documented framework. This includes drafting the non-conformity management procedure, defining the severity classification scale (Critical, Major, Minor, Observation), defining the type classification categories (Documentation, Implementation, Effectiveness, Systemic), and establishing the NC Record Form template. The procedure must define roles and responsibilities — who can raise an NC, who classifies it, who owns the corrective action, who conducts the effectiveness review, and who performs trend analysis. This phase also defines the NC Register structure and the unique numbering convention for NC records.</p>
+
+<h3>Phase 2: Tooling — Register and Templates</h3>
+<p>The second phase builds the operational infrastructure. The NC Register is created (whether in a dedicated system, a controlled spreadsheet, or within an integrated management platform). The Root Cause Analysis Worksheet, Corrective Action Plan template, and Effectiveness Review Form are designed and approved. Each template must reference and link to the others — the NC Record references the RCA Worksheet, which feeds the CAP, which is verified by the Effectiveness Review. If these documents are not connected by design, the system will fragment in practice.</p>
+
+<h3>Phase 3: Integration — Connecting to Existing Processes</h3>
+<p>The third phase connects the NC system to the broader management system. This includes establishing linkages to the risk register (so that NCs trigger risk reassessment), to the internal audit programme (so that NC trend data informs audit planning), to management review (so that NC performance data is a standing agenda item), and to the continual improvement programme (so that effectiveness review outputs feed improvement initiatives). Integration also means configuring detection channels: ensuring that internal audit reports, incident reports, complaints, whistleblowing reports, and monitoring outputs all feed into the NC Register through defined pathways.</p>
+
+<h3>Phase 4: Training and Communication</h3>
+<p>The fourth phase ensures that all persons within the scope of the management system understand their role in the NC process. Training must cover: how to identify and report a non-conformity; the difference between a non-conformity, an observation, and an opportunity for improvement; how to complete the NC Record Form; how root cause analysis works; and what an effectiveness review involves. Training is not a one-time event — it must be repeated when the procedure is updated, when new staff join, and when trend analysis identifies knowledge gaps.</p>
+
+<h3>Phase 5: Pilot and Calibration</h3>
+<p>Before full deployment, the system is tested through a pilot period. During this phase, the organisation processes a controlled set of nonconformities through the complete lifecycle — from detection through classification, RCA, corrective action, effectiveness review, and trend analysis. The pilot reveals procedural gaps, template weaknesses, classification inconsistencies, and timing issues that are not apparent in documentation alone. Calibration sessions — where multiple users independently classify the same sample NCs — are essential for ensuring consistent application of severity and type categories.</p>
+
+<h3>Phase 6: Full Deployment and First Cycle</h3>
+<p>Following pilot calibration, the system is deployed across the full scope of the management system. All detection channels are activated. The NC Register begins accumulating live data. The first quarterly trend analysis report is produced and presented to management review. This phase typically coincides with at least one internal audit cycle, providing a natural source of nonconformities to process through the new system. The first full cycle is the critical test — it reveals whether the system operates as designed under real conditions.</p>
+
+<h3>Phase 7: Review and Maturation</h3>
+<p>After the first complete cycle (typically 12 months), the NC management system itself is reviewed for effectiveness. Key questions for this review include: Is the system capturing nonconformities from all intended sources? Are classifications being applied consistently? Is root cause analysis reaching systemic causes or stopping at symptoms? Are effectiveness reviews being conducted independently and on time? Is trend data providing actionable insight to management review? The answers to these questions drive refinements to the procedure, templates, training, and tooling — completing the first improvement cycle of the system that manages improvement cycles.</p>
 </section>
 <section class="content-section" id="conclusion">
 <h2>Conclusion</h2>
