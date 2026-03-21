@@ -21,7 +21,6 @@ checklist-page-*.png
 index-page-*.png
 
 # Non-public HTML pages
-login.html
 growth-dashboard.html
 
 # Data/extracted content directories
