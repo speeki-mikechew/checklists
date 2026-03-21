@@ -2547,60 +2547,16 @@
             return reasons.slice(0, 2).join(' • ') || checklist.description;
         }
 
-        // Company analysis using Tavily API (with graceful fallback)
+        // Company analysis using keyword pattern matching
         async function analyzeCompany(companyName) {
-            // Try to use Tavily API if available
-            const tavilyApiKey = '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';
-
-            // Start with intelligent parsing as fallback
-            let analysis = {
+            const analysis = {
                 companyName: companyName,
                 industry: detectIndustryFromName(companyName),
                 suggestedFocus: 'reporting',
                 suggestedMaturity: 'developing',
-                confidence: 'low',
+                confidence: 'medium',
                 source: 'pattern_matching'
             };
-
-            // Try Tavily API for enhanced company data
-            try {
-                const response = await fetch('https://api.tavily.com/search', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({
-                        api_key: tavilyApiKey,
-                        query: `${companyName} company industry sector business`,
-                        search_depth: 'basic',
-                        max_results: 3
-                    })
-                });
-
-                if (response.ok) {
-                    const data = await response.json();
-
-                    // Parse Tavily results to enhance industry detection
-                    if (data.results && data.results.length > 0) {
-                        const combinedText = data.results
-                            .map(r => `${r.title} ${r.content}`)
-                            .join(' ')
-                            .toLowerCase();
-
-                        // Use Tavily data to improve industry detection
-                        const tavilyIndustry = detectIndustryFromName(combinedText);
-
-                        analysis = {
-                            ...analysis,
-                            industry: tavilyIndustry !== 'other' ? tavilyIndustry : analysis.industry,
-                            confidence: tavilyIndustry !== 'other' ? 'high' : 'medium',
-                            source: 'tavily_api',
-                            tavilyData: data.results.slice(0, 2) // Store for potential future use
-                        };
-                    }
-                }
-            } catch (error) {
-                console.log('Tavily API unavailable, using pattern matching fallback', error);
-                // Fallback to pattern matching already set above
-            }
 
             return analysis;
         }
