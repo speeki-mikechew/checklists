@@ -703,6 +703,21 @@ footer .container {
         /* Skip Navigation Link */
         .skip-link { position: absolute; top: -40px; left: 0; background: #0a1f44; color: #fff; padding: 8px 16px; z-index: 10000; font-size: 14px; }
         .skip-link:focus { top: 0; }
+        .resource-card {
+            text-decoration: none;
+            display: block;
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+            padding: 24px;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            height: 100%;
+            box-sizing: border-box;
+        }
+        .resource-card:hover {
+            border-color: #00FF7F;
+            box-shadow: 0 4px 16px rgba(0,255,127,0.12);
+        }
         </style>
 </head>
 <body>
@@ -1245,18 +1260,14 @@ footer .container {
     <h2 style="font-size: 28px; font-weight: 700; margin: 0 0 32px 0; color: #0a0a0a; font-family: 'DM Sans', sans-serif;">Related Resources</h2>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
       <a href="../checklists/esg-reporting-assurance-checklist.html" style="text-decoration: none; display: block;">
-        <div style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 24px; transition: border-color 0.2s, box-shadow 0.2s; height: 100%; box-sizing: border-box;"
-             onmouseover="this.style.borderColor='#00FF7F'; this.style.boxShadow='0 4px 16px rgba(0,255,127,0.12)';"
-             onmouseout="this.style.borderColor='#e5e7eb'; this.style.boxShadow='none';">
+        <div class="resource-card">
           <span style="display: inline-block; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: #ffffff; background: #00FF7F; border-radius: 4px; padding: 3px 8px; margin-bottom: 12px;">Checklist</span>
           <h3 style="font-size: 16px; font-weight: 700; color: #0a0a0a; margin: 0 0 8px 0; font-family: 'DM Sans', sans-serif;">ESG Reporting Assurance</h3>
           <p style="font-size: 14px; color: #6b7280; margin: 0; line-height: 1.5; font-family: 'DM Sans', sans-serif;">Prepare for external ESG assurance with CSRD, ESRS, and GRI coverage.</p>
         </div>
       </a>
       <a href="../checklists/anti-greenwashing-checklist.html" style="text-decoration: none; display: block;">
-        <div style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 24px; transition: border-color 0.2s, box-shadow 0.2s; height: 100%; box-sizing: border-box;"
-             onmouseover="this.style.borderColor='#00FF7F'; this.style.boxShadow='0 4px 16px rgba(0,255,127,0.12)';"
-             onmouseout="this.style.borderColor='#e5e7eb'; this.style.boxShadow='none';">
+        <div class="resource-card">
           <span style="display: inline-block; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: #ffffff; background: #00FF7F; border-radius: 4px; padding: 3px 8px; margin-bottom: 12px;">Checklist</span>
           <h3 style="font-size: 16px; font-weight: 700; color: #0a0a0a; margin: 0 0 8px 0; font-family: 'DM Sans', sans-serif;">Anti-Greenwashing</h3>
           <p style="font-size: 14px; color: #6b7280; margin: 0; line-height: 1.5; font-family: 'DM Sans', sans-serif;">Audit your environmental claims against ESMA, FCA, and ASIC greenwashing standards.</p>
