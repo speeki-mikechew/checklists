@@ -660,6 +660,167 @@ nav:not(.toc-nav) {
 }
 .promo-btn:hover { background: #00e06f; }
 
+/* ─── APPENDIX ACCORDION ─────────────────────────── */
+.appendix-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 64px 32px;
+}
+.appendix-section h2 {
+  font-family: 'DM Serif Display', serif;
+  font-size: 30px;
+  color: #0a1628;
+  margin: 0 0 12px;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+.appendix-section > p {
+  color: var(--text-light);
+  margin-bottom: 20px;
+  line-height: 1.75;
+  font-size: 16px;
+}
+.appendix-section > p.appendix-subtitle {
+  font-size: 17px;
+  color: var(--text);
+  font-weight: 500;
+  margin-bottom: 8px;
+}
+.accordion-item {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  margin-bottom: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(15,28,63,0.04);
+  background: var(--white);
+}
+.accordion-item details {
+  width: 100%;
+}
+.accordion-item summary {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 24px;
+  cursor: pointer;
+  list-style: none;
+  border-left: 4px solid #00FF7F;
+  transition: background 0.15s;
+  -webkit-user-select: none;
+  user-select: none;
+}
+.accordion-item summary::-webkit-details-marker { display: none; }
+.accordion-item summary::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' fill='none' viewBox='0 0 24 24' stroke='%235a6380' stroke-width='2'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M9 5l7 7-7 7'/%3E%3C/svg%3E") center/contain no-repeat;
+  transition: transform 0.2s;
+}
+.accordion-item details[open] summary::before {
+  transform: rotate(90deg);
+}
+.accordion-item summary:hover { background: var(--off-white); }
+.accordion-item .accordion-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--green-accessible);
+  flex-shrink: 0;
+  min-width: 62px;
+}
+.accordion-item .accordion-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: #0a1628;
+}
+.accordion-body {
+  padding: 0 24px 28px 24px;
+  border-top: 1px solid var(--border);
+}
+.accordion-body h4 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #0a1628;
+  margin: 24px 0 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.accordion-body .smart-table,
+.accordion-body .action-table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(15,28,63,0.06);
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+.accordion-body .smart-table thead th,
+.accordion-body .action-table thead th {
+  background: #0a1628;
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 12px 16px;
+  text-align: left;
+}
+.accordion-body .smart-table tbody tr,
+.accordion-body .action-table tbody tr {
+  border-bottom: 1px solid var(--border);
+}
+.accordion-body .smart-table tbody tr:last-child,
+.accordion-body .action-table tbody tr:last-child {
+  border-bottom: none;
+}
+.accordion-body .smart-table tbody tr:nth-child(odd),
+.accordion-body .action-table tbody tr:nth-child(odd) {
+  background: var(--off-white);
+}
+.accordion-body .smart-table tbody tr:nth-child(even),
+.accordion-body .action-table tbody tr:nth-child(even) {
+  background: var(--white);
+}
+.accordion-body .smart-table td,
+.accordion-body .action-table td {
+  padding: 12px 16px;
+  vertical-align: top;
+  line-height: 1.6;
+  color: var(--text-light);
+}
+.accordion-body .smart-table td:first-child {
+  font-weight: 600;
+  color: #0a1628;
+  width: 160px;
+  border-right: 1px solid var(--border);
+}
+.accordion-body .action-table td:first-child {
+  font-weight: 600;
+  color: #0a1628;
+  width: 100px;
+  text-align: center;
+  border-right: 1px solid var(--border);
+}
+.accordion-body .action-table td:nth-child(3) { width: 180px; }
+.accordion-body .action-table td:nth-child(4) { width: 120px; }
+.accordion-body .action-table td:nth-child(5) { width: 80px; }
+
+.obj-detail-link {
+  font-size: 12px;
+  color: var(--green-accessible);
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 8px;
+}
+.obj-detail-link:hover { text-decoration: underline; }
+
 /* ─── FOOTER ──────────────────────────────────────── */
 footer {
   background: #0a1628;
@@ -703,6 +864,11 @@ footer .container {
   .stat-item:nth-child(3), .stat-item:nth-child(4) { border-bottom: none; padding-bottom: 0; }
   .footer-links { gap: 16px; }
   .objective-grid { grid-template-columns: 1fr; }
+  .appendix-section { padding: 40px 16px; }
+  .accordion-item summary { padding: 16px; gap: 10px; }
+  .accordion-body { padding: 0 16px 20px 16px; }
+  .accordion-body .smart-table td:first-child { width: 120px; }
+  .accordion-body .action-table { display: block; overflow-x: auto; }
 }
 </style>
 </head>
@@ -873,7 +1039,9 @@ footer .container {
 
     <h2 id="anatomy">4. Anatomy of a Well-Constructed ABMS Objective</h2>
 
-    <p>Before looking at the breadth of what a good objectives programme covers, it is worth examining the structure of a single well-constructed objective in detail. The following is a fully worked example using the objective of reducing the turnaround time for Level 1 due diligence reports (OBJ-005).</p>
+    <p>Before looking at the breadth of what a good objectives programme covers, it is worth examining the structure of a single well-constructed objective in detail. Each field in the framework below serves a specific purpose. Understanding why each field exists — and what happens when it is absent — explains why most ABMS objectives registers fall short.</p>
+
+    <p>The following is a fully worked example using the objective of reducing the turnaround time for Level 1 due diligence reports.</p>
 
     <table class="field-table">
       <thead>
@@ -947,9 +1115,13 @@ footer .container {
       </tbody>
     </table>
 
+    <p>The action plan that sits beneath each objective — a numbered set of specific tasks, owners, and due dates — closes the loop between the objective and execution. An objective without an action plan is a statement of intent. An objective with a numbered action plan is a management commitment. Each action carries a reference number (for example, AP-005-01) that ties it unambiguously back to its parent objective, creating an auditable trail from risk to objective to action to outcome.</p>
+
     <div class="pullquote">
       <p>An objective without an action plan is a statement of intent. An objective with a numbered action plan is a management commitment.</p>
     </div>
+
+    <p>Taken together, these fields transform an ABMS objective from a compliance formality into a genuine management tool — one that tells the organisation what it is trying to achieve, why it matters, how it will know if it is succeeding, who is responsible, and what they need to do to get there.</p>
 
     <h2 id="examples">5. Twenty-Five Examples of What Better Looks Like</h2>
 
@@ -960,126 +1132,151 @@ footer .container {
         <div class="objective-label">OBJ-001 — Global</div>
         <h4>Third-Party EDD Coverage</h4>
         <p>100% of new high-risk third parties complete enhanced due diligence before contract execution. Measured quarterly from the KYC system. Any shortfall triggers a 30-day root cause review.</p>
+        <a href="#obj-001-detail" class="obj-detail-link">View full SMART breakdown &rarr;</a>
       </div>
       <div class="objective-card">
         <div class="objective-label">OBJ-002 — Global</div>
         <h4>Employee Perception of Management Integrity</h4>
         <p>Increase Q6 of the Annual Employee Survey (manager integrity) from 36% to 75% by year-end. Disaggregated by region, with regions below 60% subject to targeted culture improvement plans.</p>
+        <a href="#obj-002-detail" class="obj-detail-link">View full SMART breakdown &rarr;</a>
       </div>
       <div class="objective-card">
         <div class="objective-label">OBJ-003 — Global</div>
         <h4>Anti-Bribery Training Completion Rate</h4>
         <p>95% of in-scope employees complete mandatory training by 31 December. Monthly LMS reports with two-stage escalation at 60 and 90 days overdue.</p>
+        <a href="#obj-003-detail" class="obj-detail-link">View full SMART breakdown &rarr;</a>
       </div>
       <div class="objective-card">
         <div class="objective-label">OBJ-004 — Global</div>
         <h4>Gifts Pre-Approval vs Expense Claim Matching</h4>
         <p>Fewer than 5% of government-related G&amp;E submissions have no matching pre-approval reference. Quarterly reconciliation with individual review of all unmatched claims.</p>
+        <a href="#obj-004-detail" class="obj-detail-link">View full SMART breakdown &rarr;</a>
       </div>
       <div class="objective-card">
         <div class="objective-label">OBJ-005 — Global</div>
         <h4>Level 1 DD Report Turnaround Time</h4>
         <p>Reduce average Level 1 DD turnaround from 15 to 7 business days by Q3. Monthly KYC system data. Root cause review for all cases exceeding 10 days.</p>
+        <a href="#obj-005-detail" class="obj-detail-link">View full SMART breakdown &rarr;</a>
       </div>
       <div class="objective-card">
         <div class="objective-label">OBJ-006 — Global</div>
         <h4>Compliance SLA — Response to Issues</h4>
         <p>95% of Tier 1 issues responded to within 3 business days; 100% of Tier 2 within 7. Case management system tracks all escalations with automated SLA alerts.</p>
+        <a href="#obj-006-detail" class="obj-detail-link">View full SMART breakdown &rarr;</a>
       </div>
       <div class="objective-card">
         <div class="objective-label">OBJ-007 — Global</div>
         <h4>Speak Up Investigation Resolution Time</h4>
         <p>Reduce average investigation closure time from 94 to 60 calendar days. Quarterly NAVEX data, disaggregated by investigation type and region.</p>
+        <a href="#obj-007-detail" class="obj-detail-link">View full SMART breakdown &rarr;</a>
       </div>
       <div class="objective-card">
         <div class="objective-label">OBJ-008 — Global</div>
         <h4>ISO 37001 Internal Auditor Certification</h4>
         <p>100% of compliance and internal audit team members with ABMS responsibilities hold current ISO 37001 auditor certification by 31 March. Certification register maintained and reviewed monthly.</p>
+        <a href="#obj-008-detail" class="obj-detail-link">View full SMART breakdown &rarr;</a>
       </div>
       <div class="objective-card">
         <div class="objective-label">OBJ-009 — Global</div>
         <h4>Manager-Led Integrity Sessions</h4>
         <p>100% of people managers deliver two structured integrity sessions with their teams during the year. Session completion records submitted to HR and tracked quarterly.</p>
+        <a href="#obj-009-detail" class="obj-detail-link">View full SMART breakdown &rarr;</a>
       </div>
       <div class="objective-card">
         <div class="objective-label">OBJ-010 — Global</div>
         <h4>DD Report Quality — Error and Omission Rate</h4>
         <p>Reduce DD report error rate from 22% to below 8% by year-end. Quarterly QA review of a random 15% sample of completed reports against a standardised checklist.</p>
+        <a href="#obj-010-detail" class="obj-detail-link">View full SMART breakdown &rarr;</a>
       </div>
       <div class="objective-card">
         <div class="objective-label">OBJ-011 — Global</div>
         <h4>Annual Controls Testing Programme</h4>
         <p>100% of planned ABMS controls tests completed by 30 November. 100% of findings have corrective actions assigned within 30 days. Controls testing tracker reviewed monthly.</p>
+        <a href="#obj-011-detail" class="obj-detail-link">View full SMART breakdown &rarr;</a>
       </div>
       <div class="objective-card">
         <div class="objective-label">OBJ-012 — Africa &amp; APAC</div>
         <h4>ASP Due Diligence Completion</h4>
         <p>100% of active Administrative Services Providers in Africa and Asia Pacific have a completed, current due diligence file by Q2. Regional scope reflects elevated ASP risk in these markets.</p>
+        <a href="#obj-012-detail" class="obj-detail-link">View full SMART breakdown &rarr;</a>
       </div>
       <div class="objective-card">
         <div class="objective-label">OBJ-013 — Global</div>
         <h4>Conflicts of Interest Declaration Rate</h4>
         <p>90% annual COI declaration completion rate by 31 December. 100% of declared conflicts assessed within 30 days of declaration. Monthly completion reports from COI system.</p>
+        <a href="#obj-013-detail" class="obj-detail-link">View full SMART breakdown &rarr;</a>
       </div>
       <div class="objective-card">
         <div class="objective-label">OBJ-014 — Global</div>
         <h4>Background Check Completion Before Start Date</h4>
         <p>100% of new hires in high-risk roles and jurisdictions complete background screening before their employment start date. Quarterly HR system comparison of check completion and start dates.</p>
+        <a href="#obj-014-detail" class="obj-detail-link">View full SMART breakdown &rarr;</a>
       </div>
       <div class="objective-card">
         <div class="objective-label">OBJ-015 — Africa Region</div>
         <h4>Speak Up Awareness</h4>
         <p>Increase the percentage of Africa-region employees correctly identifying the Speak Up channel from 41% to 70% in the Annual Employee Survey. Mid-year pulse check to assess progress.</p>
+        <a href="#obj-015-detail" class="obj-detail-link">View full SMART breakdown &rarr;</a>
       </div>
       <div class="objective-card">
         <div class="objective-label">OBJ-016 — Global</div>
         <h4>Management Review Input Quality and Timeliness</h4>
         <p>100% of management review input reports submitted on time and complete for all four 2026 reviews. Submission compliance tracked by the CCO and reported as a standing agenda item.</p>
+        <a href="#obj-016-detail" class="obj-detail-link">View full SMART breakdown &rarr;</a>
       </div>
       <div class="objective-card">
         <div class="objective-label">OBJ-017 — Global</div>
         <h4>Annual Bribery Risk Assessment Refresh</h4>
         <p>Risk assessment refresh completed and approved by Top Management by 31 March. ERM integration confirmed by 30 April. Evidence filed in the ABMS document management system.</p>
+        <a href="#obj-017-detail" class="obj-detail-link">View full SMART breakdown &rarr;</a>
       </div>
       <div class="objective-card">
         <div class="objective-label">OBJ-018 — Global</div>
         <h4>Internal Audit Corrective Action Closure Rate</h4>
         <p>90% of internal audit corrective actions closed within agreed timeframes by year-end. Actions overdue by more than 30 days escalated to the CCO. Quarterly tracker review.</p>
+        <a href="#obj-018-detail" class="obj-detail-link">View full SMART breakdown &rarr;</a>
       </div>
       <div class="objective-card">
         <div class="objective-label">OBJ-019 — Papua New Guinea</div>
         <h4>Anti-Bribery Culture Score</h4>
         <p>Improve PNG compliance culture survey score from 52% to 72% by year-end. Country-specific scope reflects elevated risk in this jurisdiction. Results disaggregated by team and location.</p>
+        <a href="#obj-019-detail" class="obj-detail-link">View full SMART breakdown &rarr;</a>
       </div>
       <div class="objective-card">
         <div class="objective-label">OBJ-020 — Global</div>
         <h4>Sanctions Screening Coverage Rate</h4>
         <p>100% sanctions screening coverage across all in-scope counterparty categories by Q3. Quarterly system-generated coverage report. Gaps addressed within 30 days of identification.</p>
+        <a href="#obj-020-detail" class="obj-detail-link">View full SMART breakdown &rarr;</a>
       </div>
       <div class="objective-card">
         <div class="objective-label">OBJ-021 — India</div>
         <h4>G&amp;E Policy Breach Rate</h4>
         <p>Reduce government-related G&amp;E policy breaches in India from 18 per quarter to fewer than 4 by Q4. Local scope reflects elevated risk. Quarterly reconciliation with individual breach follow-up.</p>
+        <a href="#obj-021-detail" class="obj-detail-link">View full SMART breakdown &rarr;</a>
       </div>
       <div class="objective-card">
         <div class="objective-label">OBJ-022 — Global</div>
         <h4>Investigation Quality Audit Score</h4>
         <p>Average investigation quality score of 80% or above across a random 30% sample of 2026 investigations. Independent annual audit using a standardised quality assessment rubric.</p>
+        <a href="#obj-022-detail" class="obj-detail-link">View full SMART breakdown &rarr;</a>
       </div>
       <div class="objective-card">
         <div class="objective-label">OBJ-023 — Global</div>
         <h4>Business Associate Code of Conduct Acknowledgment</h4>
         <p>100% of active high-risk and medium-risk business associates have a signed Code of Conduct acknowledgment by 30 June. Business associate acknowledgment register reviewed quarterly.</p>
+        <a href="#obj-023-detail" class="obj-detail-link">View full SMART breakdown &rarr;</a>
       </div>
       <div class="objective-card">
         <div class="objective-label">OBJ-024 — Global</div>
         <h4>Top Management ABMS Training</h4>
         <p>100% of Top Management complete a tailored ABMS responsibilities briefing by 30 June. New appointments complete within 60 days. Attendance register maintained in the ABMS document system.</p>
+        <a href="#obj-024-detail" class="obj-detail-link">View full SMART breakdown &rarr;</a>
       </div>
       <div class="objective-card">
         <div class="objective-label">OBJ-025 — Global</div>
         <h4>Anti-Bribery Training Comprehension Score</h4>
         <p>Average post-training assessment score of 80% or above by year-end. Minimum 70% pass mark required for individual completion to be recorded as compliant. Monthly LMS data by region and business unit.</p>
+        <a href="#obj-025-detail" class="obj-detail-link">View full SMART breakdown &rarr;</a>
       </div>
     </div>
 
@@ -1090,15 +1287,15 @@ footer .container {
     <div class="gaps-grid">
       <div class="gap-card">
         <h4>Foundation 1: Traceability</h4>
-        <p>Every objective should be linked to a specific risk in the risk register by reference number. This creates an auditable chain from risk to objective to action to outcome — the kind of chain that demonstrates to a certifier, a regulator, or a board that the programme is risk-driven rather than activity-driven.</p>
+        <p>Every objective should be linked to a specific risk in the risk register by reference number. This creates an auditable chain from risk to objective to action to outcome — the kind of chain that demonstrates to a certifier, a regulator, or a board that the programme is risk-driven rather than activity-driven. When a nonconformity is raised or an investigation is opened, traceability means the organisation can show exactly how the relevant risk was being managed, what the objective was, whether it was being achieved, and what actions were in place.</p>
       </div>
       <div class="gap-card">
         <h4>Foundation 2: Scope Granularity</h4>
-        <p>Not every objective should be global. Some of the most important objectives in a well-designed ABMS are the local ones — the country-specific, market-specific, or function-specific objectives that acknowledge where the real risk concentrations are. A global average target that looks acceptable may be concealing a market where performance is dangerously low.</p>
+        <p>Not every objective should be global. Some of the most important objectives in a well-designed ABMS are the local ones — the country-specific, market-specific, or function-specific objectives that acknowledge where the real risk concentrations are. A global average target that looks acceptable may be concealing a market where performance is dangerously low. Designing objectives at the right level of granularity — and being willing to set harder targets for higher-risk markets — is a mark of a mature programme.</p>
       </div>
       <div class="gap-card">
         <h4>Foundation 3: Measurement Discipline</h4>
-        <p>The measurement methodology is not a footnote to the objective — it is the objective. If you cannot describe precisely how the data will be collected, by whom, from which system, on what frequency, and what will happen when the target is missed, then the objective is not yet finished. The organisations that do this well treat measurement design as a first-class activity.</p>
+        <p>The measurement methodology is not a footnote to the objective. It is the objective. If you cannot describe precisely how the data will be collected, by whom, from which system, on what frequency, and what will happen when the target is missed — then the objective is not yet finished. The organisations that do this well treat measurement design as a first-class activity, investing time in it rather than treating it as something to be worked out later.</p>
       </div>
     </div>
 
@@ -1237,6 +1434,10 @@ footer .container {
             <span class="toc-dot"></span>
             Conclusion
           </a>
+          <a href="#appendix" class="toc-link">
+            <span class="toc-dot"></span>
+            Appendix: 25 Full SMART Objectives
+          </a>
         </nav>
       </div>
     </div>
@@ -1272,6 +1473,1041 @@ footer .container {
     </div>
   </aside>
 </div>
+
+<!-- APPENDIX -->
+<section class="appendix-section" id="appendix">
+  <h2>Appendix: 25 Full SMART Objectives with Action Plans</h2>
+  <p class="appendix-subtitle">ISO 37001:2025 Anti-Bribery Management System</p>
+  <p>Each objective is presented in full with its risk linkage, scope, SMART breakdown, measurement methodology, target, owner, and numbered action plan.</p>
+
+  <!-- OBJ-001 -->
+  <div class="accordion-item" id="obj-001-detail">
+    <details>
+      <summary>
+        <span class="accordion-label">OBJ-001</span>
+        <span class="accordion-title">Third-Party Enhanced Due Diligence Coverage</span>
+      </summary>
+      <div class="accordion-body">
+        <h4>SMART Breakdown</h4>
+        <table class="smart-table">
+          <thead><tr><th>Field</th><th>Content</th></tr></thead>
+          <tbody>
+            <tr><td>Relevant Risk</td><td>Inadequate screening of third parties operating in high-risk jurisdictions creates exposure to bribery conducted by or through business partners.</td></tr>
+            <tr><td>Risk Reference</td><td>Linked to Risk BR-012 — Third Party Bribery Risk</td></tr>
+            <tr><td>Scope</td><td>Global</td></tr>
+            <tr><td>Objective Statement</td><td>Ensure that 100% of new third-party relationships classified as high-risk are subject to enhanced due diligence screening prior to contract execution.</td></tr>
+            <tr><td>Specific</td><td>Enhanced due diligence must be completed before any high-risk third party is onboarded — no exceptions.</td></tr>
+            <tr><td>Measurable</td><td>Percentage of high-risk third parties onboarded during the year who completed EDD prior to contract signature, as a proportion of all high-risk third parties onboarded.</td></tr>
+            <tr><td>Achievable</td><td>The due diligence process and risk classification methodology are already in place; this objective sets a compliance floor for their consistent application.</td></tr>
+            <tr><td>Relevant</td><td>Directly linked to the identified bribery risk associated with third-party relationships in higher-risk markets.</td></tr>
+            <tr><td>Time-bound</td><td>Measured quarterly, reported at each management review, with full-year performance assessed at year-end.</td></tr>
+            <tr><td>How We Measure It</td><td>Compliance team extracts a quarterly report from the KYC/due diligence system showing all third parties onboarded in the period, filtered by risk classification. The number completing EDD prior to contract execution is divided by the total number of high-risk third parties onboarded. Any shortfall triggers a root cause review and corrective action within 30 days.</td></tr>
+            <tr><td>Target</td><td>100% completion prior to contract execution for all high-risk third parties.</td></tr>
+            <tr><td>Owner</td><td>Chief Compliance Officer</td></tr>
+          </tbody>
+        </table>
+        <h4>Action Plan</h4>
+        <table class="action-table">
+          <thead><tr><th>Action No.</th><th>Action</th><th>Owner</th><th>Due Date</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>AP-001-01</td><td>Map all active third-party relationships and apply risk classification methodology to identify the full high-risk population</td><td>Compliance Manager</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-001-02</td><td>Configure KYC/due diligence system to flag and block onboarding of high-risk third parties where EDD has not been completed</td><td>Systems / Compliance</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-001-03</td><td>Establish quarterly reporting template extracting EDD completion rates by risk tier and region</td><td>Compliance Manager</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-001-04</td><td>Report EDD completion performance at each quarterly management review</td><td>CCO</td><td>Ongoing</td><td></td></tr>
+            <tr><td>AP-001-05</td><td>Implement root cause review process for any shortfall, with corrective action required within 30 days</td><td>CCO</td><td>Ongoing</td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+  </div>
+
+  <!-- OBJ-002 -->
+  <div class="accordion-item" id="obj-002-detail">
+    <details>
+      <summary>
+        <span class="accordion-label">OBJ-002</span>
+        <span class="accordion-title">Employee Perception of Management Integrity</span>
+      </summary>
+      <div class="accordion-body">
+        <h4>SMART Breakdown</h4>
+        <table class="smart-table">
+          <thead><tr><th>Field</th><th>Content</th></tr></thead>
+          <tbody>
+            <tr><td>Relevant Risk</td><td>A compliance culture that is not genuinely embedded at the leadership level increases the risk that bribery is normalised or overlooked in day-to-day business decisions.</td></tr>
+            <tr><td>Risk Reference</td><td>Linked to Risk BR-021 — Anti-Bribery Culture and Tone at the Top</td></tr>
+            <tr><td>Scope</td><td>Global</td></tr>
+            <tr><td>Objective Statement</td><td>Increase the percentage of employees who agree that managers in the company are trustworthy and act with integrity (Question 6 of the Annual Employee Survey) from 36% in 2025 to 75% by end of 2026.</td></tr>
+            <tr><td>Specific</td><td>Question 6 of the Annual Employee Survey is the defined measurement instrument. The target is an increase from 36% to 75% in a single year.</td></tr>
+            <tr><td>Measurable</td><td>Percentage of employees responding positively to Q6 of the Annual Employee Survey, tracked year-on-year.</td></tr>
+            <tr><td>Achievable</td><td>Achievable given planned manager-led integrity sessions, leadership re-induction into the ABMS, and increased communications activity in 2026.</td></tr>
+            <tr><td>Relevant</td><td>Employee perception of leadership integrity is a leading indicator of whether the ABMS is genuinely embedded.</td></tr>
+            <tr><td>Time-bound</td><td>Annual survey to be completed by Q3 2026, with results reviewed at year-end management review.</td></tr>
+            <tr><td>How We Measure It</td><td>Results extracted from the Annual Employee Survey platform by the HR function. Q6 responses are disaggregated by region, business unit, and seniority band. Year-on-year comparison presented at the annual management review. Regions scoring below 60% are subject to a targeted culture improvement plan.</td></tr>
+            <tr><td>Target</td><td>75% positive response rate on Q6 by end of 2026 (up from 36% in 2025).</td></tr>
+            <tr><td>Owner</td><td>Chief Compliance Officer / Chief People Officer</td></tr>
+          </tbody>
+        </table>
+        <h4>Action Plan</h4>
+        <table class="action-table">
+          <thead><tr><th>Action No.</th><th>Action</th><th>Owner</th><th>Due Date</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>AP-002-01</td><td>Analyse 2025 survey results by region and function to identify lowest-scoring areas</td><td>HR / Compliance</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-002-02</td><td>Design and deploy manager-led integrity session programme for all-hands and monthly team meetings</td><td>Compliance Manager</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-002-03</td><td>Deliver ABMS re-induction programme for all managers appointed in 2025 and early 2026</td><td>CCO</td><td>Q2 2026</td><td></td></tr>
+            <tr><td>AP-002-04</td><td>Issue targeted internal communications reinforcing leadership integrity expectations in lowest-scoring regions</td><td>Compliance / Communications</td><td>Q2 2026</td><td></td></tr>
+            <tr><td>AP-002-05</td><td>Run Annual Employee Survey and extract Q6 results by region and business unit</td><td>HR</td><td>Q3 2026</td><td></td></tr>
+            <tr><td>AP-002-06</td><td>Present Q6 results and year-on-year comparison at year-end management review</td><td>CCO</td><td>Q4 2026</td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+  </div>
+
+  <!-- OBJ-003 -->
+  <div class="accordion-item" id="obj-003-detail">
+    <details>
+      <summary>
+        <span class="accordion-label">OBJ-003</span>
+        <span class="accordion-title">Anti-Bribery Training Completion Rate</span>
+      </summary>
+      <div class="accordion-body">
+        <h4>SMART Breakdown</h4>
+        <table class="smart-table">
+          <thead><tr><th>Field</th><th>Content</th></tr></thead>
+          <tbody>
+            <tr><td>Relevant Risk</td><td>Employees who have not completed mandatory anti-bribery training may be unaware of their obligations, increasing the risk of inadvertent or deliberate bribery.</td></tr>
+            <tr><td>Risk Reference</td><td>Linked to Risk BR-008 — Employee Awareness and Training Gap</td></tr>
+            <tr><td>Scope</td><td>Global</td></tr>
+            <tr><td>Objective Statement</td><td>Achieve a minimum 95% completion rate for mandatory annual anti-bribery training across all in-scope employees by 31 December 2026.</td></tr>
+            <tr><td>Specific</td><td>All employees in scope for mandatory anti-bribery training must complete the assigned module by the year-end deadline. A 5% tolerance accommodates planned absences, new starters, and leave.</td></tr>
+            <tr><td>Measurable</td><td>Percentage of in-scope employees who have completed the mandatory anti-bribery training module, tracked monthly.</td></tr>
+            <tr><td>Achievable</td><td>The training module is already deployed via the LMS. The objective focuses on improving completion discipline and follow-up.</td></tr>
+            <tr><td>Relevant</td><td>Training completion is a foundational control in the ABMS and a direct mitigant to the employee awareness risk.</td></tr>
+            <tr><td>Time-bound</td><td>Monthly completion rates monitored throughout the year. Final compliance measured at 31 December 2026.</td></tr>
+            <tr><td>How We Measure It</td><td>LMS generates a monthly completion report by business unit, region, and employee category. Non-completions are escalated to line managers at 60 days overdue, with a second escalation to the relevant GM at 90 days. Final year-end completion rate reported at Q4 management review.</td></tr>
+            <tr><td>Target</td><td>95% of all in-scope employees complete mandatory anti-bribery training by 31 December 2026.</td></tr>
+            <tr><td>Owner</td><td>Compliance Manager / HR</td></tr>
+          </tbody>
+        </table>
+        <h4>Action Plan</h4>
+        <table class="action-table">
+          <thead><tr><th>Action No.</th><th>Action</th><th>Owner</th><th>Due Date</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>AP-003-01</td><td>Confirm full list of in-scope employees and synchronise with LMS enrolment data</td><td>HR / Compliance</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-003-02</td><td>Set up monthly automated LMS completion reports disaggregated by region and business unit</td><td>LMS Administrator</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-003-03</td><td>Establish escalation protocol for employees overdue at 60 and 90 days</td><td>Compliance Manager</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-003-04</td><td>Issue reminder communications at 90-day and 30-day intervals before year-end deadline</td><td>Compliance / Communications</td><td>Ongoing</td><td></td></tr>
+            <tr><td>AP-003-05</td><td>Report monthly completion rates to management and flag underperforming regions for intervention</td><td>CCO</td><td>Ongoing</td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+  </div>
+
+  <!-- OBJ-004 -->
+  <div class="accordion-item" id="obj-004-detail">
+    <details>
+      <summary>
+        <span class="accordion-label">OBJ-004</span>
+        <span class="accordion-title">Gifts Pre-Approval vs Expense Claim Matching Rate</span>
+      </summary>
+      <div class="accordion-body">
+        <h4>SMART Breakdown</h4>
+        <table class="smart-table">
+          <thead><tr><th>Field</th><th>Content</th></tr></thead>
+          <tbody>
+            <tr><td>Relevant Risk</td><td>Employees bypassing the gifts pre-approval process by submitting expenditure through expense reimbursement systems undermines the effectiveness of the gifts and entertainment control.</td></tr>
+            <tr><td>Risk Reference</td><td>Linked to Risk BR-015 — Gifts and Entertainment Control Circumvention</td></tr>
+            <tr><td>Scope</td><td>Global</td></tr>
+            <tr><td>Objective Statement</td><td>Reduce mismatched government-related G&amp;E claims — where Workday reimbursement submissions have no matching Kissflow pre-approval reference — to fewer than 5% of total submissions by year-end 2026.</td></tr>
+            <tr><td>Specific</td><td>Expenditure on government-related gifts and entertainment must flow through the Kissflow pre-approval process. Claims submitted via Workday without a matching Kissflow approval reference are flagged as non-compliant.</td></tr>
+            <tr><td>Measurable</td><td>Percentage of Workday G&amp;E claims with no matching Kissflow pre-approval reference, tracked quarterly through a reconciliation exercise.</td></tr>
+            <tr><td>Achievable</td><td>Data from both systems is already available. Matching can be performed quarterly as a manual or automated reconciliation exercise.</td></tr>
+            <tr><td>Relevant</td><td>Directly addresses the control effectiveness gap identified in the gifts and entertainment approval process.</td></tr>
+            <tr><td>Time-bound</td><td>Quarterly reconciliation. Year-end target assessed at Q4 management review.</td></tr>
+            <tr><td>How We Measure It</td><td>Compliance team reconciles Kissflow pre-approval data against Workday government G&amp;E reimbursement claims quarterly. Unmatched claims are expressed as a percentage of total claims and reviewed individually. Escalation where breach is suspected.</td></tr>
+            <tr><td>Target</td><td>Fewer than 5% of government-related G&amp;E Workday submissions have no matching Kissflow pre-approval reference by Q4 2026.</td></tr>
+            <tr><td>Owner</td><td>Compliance Manager / Finance</td></tr>
+          </tbody>
+        </table>
+        <h4>Action Plan</h4>
+        <table class="action-table">
+          <thead><tr><th>Action No.</th><th>Action</th><th>Owner</th><th>Due Date</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>AP-004-01</td><td>Design and document the quarterly reconciliation process between Kissflow and Workday for G&amp;E expenditure</td><td>Compliance / Finance</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-004-02</td><td>Make the Kissflow pre-approval reference field mandatory in the Workday G&amp;E submission form</td><td>Systems / IT</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-004-03</td><td>Run first reconciliation covering Q4 2025 data to establish baseline mismatch rate</td><td>Compliance Manager</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-004-04</td><td>Issue guidance to all employees on the requirement to obtain Kissflow pre-approval before incurring G&amp;E expenditure</td><td>Compliance</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-004-05</td><td>Escalate unmatched claims for individual review and take corrective action where breaches are identified</td><td>CCO</td><td>Ongoing</td><td></td></tr>
+            <tr><td>AP-004-06</td><td>Report quarterly mismatch rate at each management review</td><td>CCO</td><td>Ongoing</td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+  </div>
+
+  <!-- OBJ-005 -->
+  <div class="accordion-item" id="obj-005-detail">
+    <details>
+      <summary>
+        <span class="accordion-label">OBJ-005</span>
+        <span class="accordion-title">Level 1 Due Diligence Report Turnaround Time</span>
+      </summary>
+      <div class="accordion-body">
+        <h4>SMART Breakdown</h4>
+        <table class="smart-table">
+          <thead><tr><th>Field</th><th>Content</th></tr></thead>
+          <tbody>
+            <tr><td>Relevant Risk</td><td>Delays in completing due diligence reports create pressure on business teams to proceed with third-party engagements before screening is complete, increasing bribery risk.</td></tr>
+            <tr><td>Risk Reference</td><td>Linked to Risk BR-013 — Due Diligence Process Delay and Bypass Risk</td></tr>
+            <tr><td>Scope</td><td>Global</td></tr>
+            <tr><td>Objective Statement</td><td>Reduce the average turnaround time for Level 1 due diligence reports from 15 business days to 7 business days by Q3 2026.</td></tr>
+            <tr><td>Specific</td><td>Level 1 DD reports must be completed within 7 business days of the request being submitted.</td></tr>
+            <tr><td>Measurable</td><td>Average number of business days between DD request submission and report completion, calculated monthly from the KYC system.</td></tr>
+            <tr><td>Achievable</td><td>Reduction is achievable through process streamlining, API integration with screening providers, and clearer intake requirements.</td></tr>
+            <tr><td>Relevant</td><td>Faster turnaround reduces commercial pressure to bypass due diligence and reinforces compliance as an operational enabler.</td></tr>
+            <tr><td>Time-bound</td><td>Baseline measured in Q1 2026. Target of 7 business days to be achieved by Q3 2026.</td></tr>
+            <tr><td>How We Measure It</td><td>KYC system records the date and time of DD request submission and report completion for every case. Monthly average turnaround calculated and broken down by region and DD type. Cases exceeding 10 business days reviewed for root cause. Performance reported at each quarterly management review.</td></tr>
+            <tr><td>Target</td><td>Average Level 1 DD report turnaround time of 7 business days or fewer by Q3 2026.</td></tr>
+            <tr><td>Owner</td><td>Head of Due Diligence / Compliance Manager</td></tr>
+          </tbody>
+        </table>
+        <h4>Action Plan</h4>
+        <table class="action-table">
+          <thead><tr><th>Action No.</th><th>Action</th><th>Owner</th><th>Due Date</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>AP-005-01</td><td>Audit the current Level 1 DD process to identify bottlenecks and redundant steps</td><td>Compliance Manager</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-005-02</td><td>Establish baseline average turnaround using Q4 2025 KYC system data</td><td>Compliance Manager</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-005-03</td><td>Implement standardised intake form to ensure complete information is provided at submission</td><td>Compliance</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-005-04</td><td>Explore and implement API integration with Refinitiv to automate screening data retrieval</td><td>Systems / Compliance</td><td>Q2 2026</td><td></td></tr>
+            <tr><td>AP-005-05</td><td>Set individual case SLAs within the KYC system with automated alerts at 5-day and 7-day thresholds</td><td>Systems</td><td>Q2 2026</td><td></td></tr>
+            <tr><td>AP-005-06</td><td>Report monthly average turnaround times at management reviews</td><td>CCO</td><td>Ongoing</td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+  </div>
+
+  <!-- OBJ-006 -->
+  <div class="accordion-item" id="obj-006-detail">
+    <details>
+      <summary>
+        <span class="accordion-label">OBJ-006</span>
+        <span class="accordion-title">Compliance Team SLA — Response to Escalated Issues</span>
+      </summary>
+      <div class="accordion-body">
+        <h4>SMART Breakdown</h4>
+        <table class="smart-table">
+          <thead><tr><th>Field</th><th>Content</th></tr></thead>
+          <tbody>
+            <tr><td>Relevant Risk</td><td>Slow response by the compliance function to issues raised by the business creates uncertainty, erodes confidence in the programme, and may allow bribery risks to go unaddressed.</td></tr>
+            <tr><td>Risk Reference</td><td>Linked to Risk BR-022 — Compliance Function Responsiveness</td></tr>
+            <tr><td>Scope</td><td>Global</td></tr>
+            <tr><td>Objective Statement</td><td>Achieve 95% of Tier 1 issues responded to within 3 business days, and 100% of Tier 2 issues within 7 business days, by Q2 2026.</td></tr>
+            <tr><td>Specific</td><td>Tier 1 issues (urgent / potential breach) must receive a substantive compliance response within 3 business days. Tier 2 issues (guidance, low-risk queries) within 7 business days.</td></tr>
+            <tr><td>Measurable</td><td>Percentage of Tier 1 and Tier 2 issues receiving a substantive response within the defined SLA windows, tracked monthly from the case management system.</td></tr>
+            <tr><td>Achievable</td><td>SLA tracking is achievable through the compliance case management system.</td></tr>
+            <tr><td>Relevant</td><td>Compliance responsiveness directly affects the willingness of the business to raise concerns — a key cultural health indicator.</td></tr>
+            <tr><td>Time-bound</td><td>SLA tracking commences Q1 2026. Target performance level to be achieved by Q2 2026 and maintained thereafter.</td></tr>
+            <tr><td>How We Measure It</td><td>Case management system records date and time of issue receipt and first substantive response for all escalations. Monthly SLA performance reports disaggregated by issue tier, region, and team member. Breaches reviewed with corrective action where systemic patterns emerge.</td></tr>
+            <tr><td>Target</td><td>95% of Tier 1 issues responded to within 3 business days; 100% of Tier 2 issues within 7 business days.</td></tr>
+            <tr><td>Owner</td><td>Chief Compliance Officer</td></tr>
+          </tbody>
+        </table>
+        <h4>Action Plan</h4>
+        <table class="action-table">
+          <thead><tr><th>Action No.</th><th>Action</th><th>Owner</th><th>Due Date</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>AP-006-01</td><td>Define and document the Tier 1 / Tier 2 issue classification framework with illustrative examples</td><td>CCO</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-006-02</td><td>Configure case management system to record receipt time and trigger SLA countdown on all incoming escalations</td><td>Systems / Compliance</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-006-03</td><td>Set up automated SLA alerts to notify the responsible officer at 50% and 80% of the SLA window</td><td>Systems</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-006-04</td><td>Generate and review monthly SLA performance report at compliance team meetings</td><td>CCO</td><td>Ongoing</td><td></td></tr>
+            <tr><td>AP-006-05</td><td>Review SLA breaches quarterly and implement process or resource changes where patterns emerge</td><td>CCO</td><td>Ongoing</td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+  </div>
+
+  <!-- OBJ-007 -->
+  <div class="accordion-item" id="obj-007-detail">
+    <details>
+      <summary>
+        <span class="accordion-label">OBJ-007</span>
+        <span class="accordion-title">Speak Up Investigation Resolution Time</span>
+      </summary>
+      <div class="accordion-body">
+        <h4>SMART Breakdown</h4>
+        <table class="smart-table">
+          <thead><tr><th>Field</th><th>Content</th></tr></thead>
+          <tbody>
+            <tr><td>Relevant Risk</td><td>Prolonged investigation timelines reduce confidence in the Speak Up mechanism, may expose the organisation to continued harm, and risk losing critical evidence.</td></tr>
+            <tr><td>Risk Reference</td><td>Linked to Risk BR-019 — Whistleblower Programme Effectiveness</td></tr>
+            <tr><td>Scope</td><td>Global</td></tr>
+            <tr><td>Objective Statement</td><td>Reduce the average time to close Speak Up investigations from 94 days in 2025 to 60 days by end of 2026, while maintaining investigation quality standards.</td></tr>
+            <tr><td>Specific</td><td>All Speak Up investigations must be progressed actively from the date of triage approval to closure. Target average closure time is 60 calendar days.</td></tr>
+            <tr><td>Measurable</td><td>Average number of calendar days from triage decision to investigation closure, calculated from the NAVEX case management system quarterly.</td></tr>
+            <tr><td>Achievable</td><td>Reduction is achievable through a structured investigation methodology, improved investigator competency, and triage to eliminate speculative cases.</td></tr>
+            <tr><td>Relevant</td><td>Faster, high-quality investigations strengthen reporter confidence, reduce ongoing risk exposure, and demonstrate organisational commitment.</td></tr>
+            <tr><td>Time-bound</td><td>Baseline from 2025 NAVEX data. Target of 60-day average to be achieved by Q4 2026.</td></tr>
+            <tr><td>How We Measure It</td><td>NAVEX generates a quarterly case management report showing average days from triage decision to closure for all investigations closed in the period. Cases exceeding 90 days subject to mandatory escalation review. Reported at each management review, disaggregated by investigation type and region.</td></tr>
+            <tr><td>Target</td><td>Average investigation closure time of 60 calendar days by Q4 2026 (down from 94 days in 2025).</td></tr>
+            <tr><td>Owner</td><td>Head of Investigations / CCO</td></tr>
+          </tbody>
+        </table>
+        <h4>Action Plan</h4>
+        <table class="action-table">
+          <thead><tr><th>Action No.</th><th>Action</th><th>Owner</th><th>Due Date</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>AP-007-01</td><td>Extract 2025 baseline investigation closure data from NAVEX and identify top causes of delay</td><td>Head of Investigations</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-007-02</td><td>Develop and implement a structured investigation methodology with defined milestones and stage gates</td><td>Head of Investigations</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-007-03</td><td>Implement formal triage process to filter unsubstantiated reports before formal investigation commences</td><td>Compliance / Legal</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-007-04</td><td>Configure NAVEX to flag cases exceeding 60 days for mandatory management review</td><td>Systems</td><td>Q2 2026</td><td></td></tr>
+            <tr><td>AP-007-05</td><td>Report average investigation closure time quarterly at management reviews</td><td>CCO</td><td>Ongoing</td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+  </div>
+
+  <!-- OBJ-008 -->
+  <div class="accordion-item" id="obj-008-detail">
+    <details>
+      <summary>
+        <span class="accordion-label">OBJ-008</span>
+        <span class="accordion-title">ISO 37001 Internal Auditor Certification</span>
+      </summary>
+      <div class="accordion-body">
+        <h4>SMART Breakdown</h4>
+        <table class="smart-table">
+          <thead><tr><th>Field</th><th>Content</th></tr></thead>
+          <tbody>
+            <tr><td>Relevant Risk</td><td>Internal audits conducted by individuals without formal ISO 37001 competency may fail to identify nonconformities and give false assurance about ABMS effectiveness.</td></tr>
+            <tr><td>Risk Reference</td><td>Linked to Risk BR-024 — Internal Audit Competency Gap</td></tr>
+            <tr><td>Scope</td><td>Global</td></tr>
+            <tr><td>Objective Statement</td><td>Achieve 100% ISO 37001 certified internal auditor status across all members of the compliance and internal audit team responsible for ABMS audits by 31 March 2026.</td></tr>
+            <tr><td>Specific</td><td>Every individual with assigned ABMS internal audit responsibilities must hold a current ISO 37001 internal auditor certification. No ABMS audit may be led by an uncertified auditor after 31 March 2026.</td></tr>
+            <tr><td>Measurable</td><td>Percentage of team members with assigned ABMS audit responsibilities who hold a current ISO 37001 internal auditor certification.</td></tr>
+            <tr><td>Achievable</td><td>The majority of the team is already certified. Remaining members are enrolled or in progress.</td></tr>
+            <tr><td>Relevant</td><td>Certification directly strengthens the competency and credibility of the internal audit function.</td></tr>
+            <tr><td>Time-bound</td><td>100% certification to be achieved by 31 March 2026.</td></tr>
+            <tr><td>How We Measure It</td><td>Compliance team maintains a certification register recording name, certification date, certification number, and renewal date for each team member. Register reviewed monthly and presented at Q1 2026 management review.</td></tr>
+            <tr><td>Target</td><td>100% of team members with ABMS audit responsibilities hold current ISO 37001 internal auditor certification by 31 March 2026.</td></tr>
+            <tr><td>Owner</td><td>Chief Compliance Officer</td></tr>
+          </tbody>
+        </table>
+        <h4>Action Plan</h4>
+        <table class="action-table">
+          <thead><tr><th>Action No.</th><th>Action</th><th>Owner</th><th>Due Date</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>AP-008-01</td><td>Identify all team members with assigned ABMS internal audit responsibilities</td><td>CCO</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-008-02</td><td>Confirm enrolment of all uncertified team members in an accredited ISO 37001 internal auditor certification programme</td><td>CCO / HR</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-008-03</td><td>Create and maintain a certification register tracking status for all relevant team members</td><td>Compliance Manager</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-008-04</td><td>Confirm 100% certification achieved and update register accordingly</td><td>CCO</td><td>31 March 2026</td><td></td></tr>
+            <tr><td>AP-008-05</td><td>Establish renewal tracking to ensure certifications do not lapse</td><td>Compliance Manager</td><td>Q2 2026</td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+  </div>
+
+  <!-- OBJ-009 -->
+  <div class="accordion-item" id="obj-009-detail">
+    <details>
+      <summary>
+        <span class="accordion-label">OBJ-009</span>
+        <span class="accordion-title">Manager-Led Integrity Sessions</span>
+      </summary>
+      <div class="accordion-body">
+        <h4>SMART Breakdown</h4>
+        <table class="smart-table">
+          <thead><tr><th>Field</th><th>Content</th></tr></thead>
+          <tbody>
+            <tr><td>Relevant Risk</td><td>Anti-bribery culture communicated only through formal training channels fails to embed at the team level, where day-to-day behavioural norms are set by line managers.</td></tr>
+            <tr><td>Risk Reference</td><td>Linked to Risk BR-021 — Anti-Bribery Culture and Tone at the Top</td></tr>
+            <tr><td>Scope</td><td>Global</td></tr>
+            <tr><td>Objective Statement</td><td>Ensure that 100% of people managers conduct at least two structured integrity sessions with their direct reports in a team setting during 2026.</td></tr>
+            <tr><td>Specific</td><td>Every people manager must deliver a minimum of two integrity sessions during 2026 using a structured format and agenda provided by the compliance function.</td></tr>
+            <tr><td>Measurable</td><td>Number of managers who have delivered two or more integrity sessions as a percentage of the total people manager population, tracked via session completion records.</td></tr>
+            <tr><td>Achievable</td><td>Session materials and agenda guides will be developed and provided by the compliance team to reduce preparation burden.</td></tr>
+            <tr><td>Relevant</td><td>Manager-led sessions create direct, team-level dialogue about integrity — a more powerful cultural tool than formal e-learning.</td></tr>
+            <tr><td>Time-bound</td><td>First session by Q2 2026. Second session by Q4 2026. Compliance reported at year-end management review.</td></tr>
+            <tr><td>How We Measure It</td><td>Managers submit a brief session completion record — date, team, approximate attendee numbers — to HR following each integrity session. HR compiles a completion tracker updated quarterly. Results reported at each management review.</td></tr>
+            <tr><td>Target</td><td>100% of people managers complete two integrity sessions with their direct reports by Q4 2026.</td></tr>
+            <tr><td>Owner</td><td>CCO / Chief People Officer</td></tr>
+          </tbody>
+        </table>
+        <h4>Action Plan</h4>
+        <table class="action-table">
+          <thead><tr><th>Action No.</th><th>Action</th><th>Owner</th><th>Due Date</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>AP-009-01</td><td>Develop structured integrity session agenda, prompt cards, and facilitation guide for managers</td><td>Compliance Manager</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-009-02</td><td>Communicate the requirement to all people managers with clear expectations and timelines</td><td>CCO / CPO</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-009-03</td><td>Create session completion submission form for managers to record delivery confirmation</td><td>HR</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-009-04</td><td>Compile and review quarterly completion tracker; follow up with non-completing managers</td><td>HR / Compliance</td><td>Ongoing</td><td></td></tr>
+            <tr><td>AP-009-05</td><td>Report completion rates at Q2 and Q4 management reviews</td><td>CCO</td><td>Q2, Q4 2026</td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+  </div>
+
+  <!-- OBJ-010 -->
+  <div class="accordion-item" id="obj-010-detail">
+    <details>
+      <summary>
+        <span class="accordion-label">OBJ-010</span>
+        <span class="accordion-title">Due Diligence Report Quality — Error and Omission Rate</span>
+      </summary>
+      <div class="accordion-body">
+        <h4>SMART Breakdown</h4>
+        <table class="smart-table">
+          <thead><tr><th>Field</th><th>Content</th></tr></thead>
+          <tbody>
+            <tr><td>Relevant Risk</td><td>Poor quality due diligence reports — including missed findings, incorrect entity profiles, and omitted sanctions checks — provide false assurance and may allow high-risk third parties to be onboarded without appropriate scrutiny.</td></tr>
+            <tr><td>Risk Reference</td><td>Linked to Risk BR-014 — Due Diligence Quality Assurance</td></tr>
+            <tr><td>Scope</td><td>Global</td></tr>
+            <tr><td>Objective Statement</td><td>Reduce the error and omission rate identified in QA reviews of completed due diligence reports from 22% in 2025 to below 8% by end of 2026.</td></tr>
+            <tr><td>Specific</td><td>QA reviews of a random 15% sample of completed DD reports conducted quarterly. Errors include: incorrect entity profiled, missed adverse media, incomplete sanctions checks, missing required fields.</td></tr>
+            <tr><td>Measurable</td><td>Percentage of reviewed DD reports containing at least one material error or omission, calculated from quarterly QA reviews.</td></tr>
+            <tr><td>Achievable</td><td>Reduction is achievable through improved analyst training, a standardised report template, and a mandatory peer review step.</td></tr>
+            <tr><td>Relevant</td><td>Report quality directly determines whether due diligence is providing genuine risk intelligence or a false paper trail.</td></tr>
+            <tr><td>Time-bound</td><td>Baseline from 2025 QA reviews. Quarterly tracking with year-end target of sub-8% error rate.</td></tr>
+            <tr><td>How We Measure It</td><td>Compliance QA lead conducts quarterly review of a random 15% sample of all DD reports. Each report is scored against a standardised checklist. Error rate calculated as percentage of reviewed reports and reported at each management review.</td></tr>
+            <tr><td>Target</td><td>DD report error and omission rate below 8% by Q4 2026 (down from 22% in 2025).</td></tr>
+            <tr><td>Owner</td><td>Head of Due Diligence</td></tr>
+          </tbody>
+        </table>
+        <h4>Action Plan</h4>
+        <table class="action-table">
+          <thead><tr><th>Action No.</th><th>Action</th><th>Owner</th><th>Due Date</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>AP-010-01</td><td>Design and implement a standardised DD report template with mandatory fields and completion checklist</td><td>Head of Due Diligence</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-010-02</td><td>Introduce mandatory peer review for all Level 2 and above DD reports before finalisation</td><td>Compliance Manager</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-010-03</td><td>Deliver targeted training for DD analysts on common error types identified in 2025 QA reviews</td><td>Compliance Manager</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-010-04</td><td>Implement quarterly QA review programme covering 15% random sample of completed reports</td><td>QA Lead</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-010-05</td><td>Report error rates and trend analysis at each quarterly management review</td><td>CCO</td><td>Ongoing</td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+  </div>
+
+  <!-- OBJ-011 -->
+  <div class="accordion-item" id="obj-011-detail">
+    <details>
+      <summary>
+        <span class="accordion-label">OBJ-011</span>
+        <span class="accordion-title">Annual Controls Testing Programme Completion</span>
+      </summary>
+      <div class="accordion-body">
+        <h4>SMART Breakdown</h4>
+        <table class="smart-table">
+          <thead><tr><th>Field</th><th>Content</th></tr></thead>
+          <tbody>
+            <tr><td>Relevant Risk</td><td>Controls that are documented but not regularly tested may have degraded or failed without the organisation's knowledge, creating a gap between assumed and actual ABMS effectiveness.</td></tr>
+            <tr><td>Risk Reference</td><td>Linked to Risk BR-025 — Control Testing and Assurance Gap</td></tr>
+            <tr><td>Scope</td><td>Global</td></tr>
+            <tr><td>Objective Statement</td><td>Complete 100% of the planned annual ABMS controls testing programme by 30 November 2026, with findings documented and corrective actions assigned within 30 days of test completion.</td></tr>
+            <tr><td>Specific</td><td>All controls in the annual ABMS controls testing plan must be tested, documented, and have findings assessed within the defined timeframe.</td></tr>
+            <tr><td>Measurable</td><td>Percentage of planned controls tests completed by 30 November 2026, and percentage of identified findings with corrective actions assigned within 30 days.</td></tr>
+            <tr><td>Achievable</td><td>The controls testing plan is to be agreed in Q1 2026. Completion by 30 November allows 11 months of execution time.</td></tr>
+            <tr><td>Relevant</td><td>Regular, documented controls testing provides independent assurance of ABMS effectiveness and evidence of continuous improvement.</td></tr>
+            <tr><td>Time-bound</td><td>Full testing plan completion by 30 November 2026. Corrective action assignment within 30 days of each test.</td></tr>
+            <tr><td>How We Measure It</td><td>Controls testing tracker records the planned test, testing date, responsible tester, outcome, and corrective action status for each control. Reviewed monthly and presented at each management review.</td></tr>
+            <tr><td>Target</td><td>100% of planned controls tests completed by 30 November 2026. 100% of findings have corrective actions assigned within 30 days.</td></tr>
+            <tr><td>Owner</td><td>Head of Compliance Audit</td></tr>
+          </tbody>
+        </table>
+        <h4>Action Plan</h4>
+        <table class="action-table">
+          <thead><tr><th>Action No.</th><th>Action</th><th>Owner</th><th>Due Date</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>AP-011-01</td><td>Develop and agree annual ABMS controls testing plan including scope, methodology, and responsible testers</td><td>Head of Compliance Audit / CCO</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-011-02</td><td>Build and maintain controls testing tracker with planned and actual test dates, outcomes, and action status</td><td>Compliance Manager</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-011-03</td><td>Schedule controls tests across Q1–Q3 2026 to avoid year-end bottleneck</td><td>Head of Compliance Audit</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-011-04</td><td>Review testing progress monthly and reallocate resources where slippage is identified</td><td>CCO</td><td>Ongoing</td><td></td></tr>
+            <tr><td>AP-011-05</td><td>Report testing completion rate and finding status at each management review</td><td>CCO</td><td>Ongoing</td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+  </div>
+
+  <!-- OBJ-012 -->
+  <div class="accordion-item" id="obj-012-detail">
+    <details>
+      <summary>
+        <span class="accordion-label">OBJ-012</span>
+        <span class="accordion-title">ASP Due Diligence Completion Rate</span>
+      </summary>
+      <div class="accordion-body">
+        <h4>SMART Breakdown</h4>
+        <table class="smart-table">
+          <thead><tr><th>Field</th><th>Content</th></tr></thead>
+          <tbody>
+            <tr><td>Relevant Risk</td><td>Administrative Services Providers with connections to government represent a high-risk third-party category. Incomplete due diligence on this population creates direct bribery exposure.</td></tr>
+            <tr><td>Risk Reference</td><td>Linked to Risk BR-016 — Administrative Services Provider Bribery Risk</td></tr>
+            <tr><td>Scope</td><td>Regional — Africa and Asia Pacific</td></tr>
+            <tr><td>Objective Statement</td><td>Achieve 100% due diligence completion for all active Administrative Services Providers in Africa and Asia Pacific by Q2 2026, and maintain 100% completion for all new ASP engagements throughout the year.</td></tr>
+            <tr><td>Specific</td><td>Every active ASP in Africa and Asia Pacific must have a current, completed due diligence file on record. New ASPs may not commence engagement until due diligence is fully completed.</td></tr>
+            <tr><td>Measurable</td><td>Percentage of active ASPs in scope with a completed and current due diligence file, as a proportion of the total ASP population in the defined regions.</td></tr>
+            <tr><td>Achievable</td><td>The existing ASP due diligence process is in place. The objective focuses on clearing the backlog and maintaining coverage.</td></tr>
+            <tr><td>Relevant</td><td>ASPs represent one of the highest-risk third-party categories given their direct interface with government.</td></tr>
+            <tr><td>Time-bound</td><td>Backlog cleared by Q2 2026. Ongoing 100% completion maintained for new engagements throughout the year.</td></tr>
+            <tr><td>How We Measure It</td><td>Compliance team maintains an ASP register for Africa and Asia Pacific recording entity name, engagement type, country, DD completion date, and renewal due date. Reviewed quarterly. Completion rate presented at each management review.</td></tr>
+            <tr><td>Target</td><td>100% of active ASPs in Africa and Asia Pacific have a completed, current due diligence file by Q2 2026 and throughout the year.</td></tr>
+            <tr><td>Owner</td><td>Regional Compliance Manager — Africa &amp; APAC</td></tr>
+          </tbody>
+        </table>
+        <h4>Action Plan</h4>
+        <table class="action-table">
+          <thead><tr><th>Action No.</th><th>Action</th><th>Owner</th><th>Due Date</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>AP-012-01</td><td>Compile complete register of all active ASPs in Africa and Asia Pacific</td><td>Regional Compliance Manager</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-012-02</td><td>Identify all ASPs with outstanding or expired due diligence and prioritise by risk level</td><td>Regional Compliance Manager</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-012-03</td><td>Complete outstanding DD for all backlog ASPs, starting with highest-risk</td><td>Due Diligence Team</td><td>Q2 2026</td><td></td></tr>
+            <tr><td>AP-012-04</td><td>Implement controls to prevent new ASP engagement commencing without completed DD</td><td>Compliance / Procurement</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-012-05</td><td>Review ASP register quarterly and report completion rate at management reviews</td><td>CCO</td><td>Ongoing</td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+  </div>
+
+  <!-- OBJ-013 -->
+  <div class="accordion-item" id="obj-013-detail">
+    <details>
+      <summary>
+        <span class="accordion-label">OBJ-013</span>
+        <span class="accordion-title">Conflicts of Interest Declaration Rate</span>
+      </summary>
+      <div class="accordion-body">
+        <h4>SMART Breakdown</h4>
+        <table class="smart-table">
+          <thead><tr><th>Field</th><th>Content</th></tr></thead>
+          <tbody>
+            <tr><td>Relevant Risk</td><td>Undisclosed conflicts of interest among employees and managers create conditions in which bribery or corrupt decision-making may go undetected and unmanaged.</td></tr>
+            <tr><td>Risk Reference</td><td>Linked to Risk BR-007 — Conflicts of Interest and Undisclosed Relationships</td></tr>
+            <tr><td>Scope</td><td>Global</td></tr>
+            <tr><td>Objective Statement</td><td>Achieve a 90% annual conflicts of interest declaration completion rate across all employees in scope by 31 December 2026, and ensure 100% of declared conflicts are assessed and documented within 30 days of declaration.</td></tr>
+            <tr><td>Specific</td><td>All in-scope employees must complete the annual COI declaration process. All declared conflicts must be reviewed and a documented assessment produced within 30 days.</td></tr>
+            <tr><td>Measurable</td><td>Declaration completion rate and percentage of declared conflicts assessed within 30 days, both tracked monthly.</td></tr>
+            <tr><td>Achievable</td><td>The COI declaration process is already in place. The objective sets a formal completion floor and a resolution timeline.</td></tr>
+            <tr><td>Relevant</td><td>Conflicts of interest management is a formal requirement under the ABMS internal control framework and a key culture indicator.</td></tr>
+            <tr><td>Time-bound</td><td>Annual declaration cycle closes 31 December 2026. Resolution of declared conflicts within 30 days throughout the year.</td></tr>
+            <tr><td>How We Measure It</td><td>COI declaration system generates a monthly completion report by employee, business unit, and region. Declared conflicts tracked in a separate register with assessment date and outcome. Both metrics reported at each management review.</td></tr>
+            <tr><td>Target</td><td>90% COI declaration completion rate by 31 December 2026. 100% of declared conflicts assessed within 30 days.</td></tr>
+            <tr><td>Owner</td><td>Chief Compliance Officer</td></tr>
+          </tbody>
+        </table>
+        <h4>Action Plan</h4>
+        <table class="action-table">
+          <thead><tr><th>Action No.</th><th>Action</th><th>Owner</th><th>Due Date</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>AP-013-01</td><td>Open the annual COI declaration cycle and communicate to all in-scope employees</td><td>Compliance / HR</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-013-02</td><td>Set up monthly completion tracking report from the COI declaration system</td><td>Systems / Compliance</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-013-03</td><td>Establish a declared conflicts register and 30-day assessment workflow</td><td>Compliance Manager</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-013-04</td><td>Issue reminder communications to non-declaring employees at 60-day and 30-day intervals</td><td>Compliance</td><td>Ongoing</td><td></td></tr>
+            <tr><td>AP-013-05</td><td>Report declaration rate and conflict resolution performance at each management review</td><td>CCO</td><td>Ongoing</td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+  </div>
+
+  <!-- OBJ-014 -->
+  <div class="accordion-item" id="obj-014-detail">
+    <details>
+      <summary>
+        <span class="accordion-label">OBJ-014</span>
+        <span class="accordion-title">Background Check Completion Before Start Date</span>
+      </summary>
+      <div class="accordion-body">
+        <h4>SMART Breakdown</h4>
+        <table class="smart-table">
+          <thead><tr><th>Field</th><th>Content</th></tr></thead>
+          <tbody>
+            <tr><td>Relevant Risk</td><td>Employees commencing employment before background checks are completed may be exposed to or create bribery risk before their suitability has been verified.</td></tr>
+            <tr><td>Risk Reference</td><td>Linked to Risk BR-009 — Pre-Employment Screening Gap</td></tr>
+            <tr><td>Scope</td><td>Global</td></tr>
+            <tr><td>Objective Statement</td><td>Ensure that 100% of new hires in high-risk roles and high-risk jurisdictions complete the required background screening process before their employment start date.</td></tr>
+            <tr><td>Specific</td><td>No employee in a high-risk role or jurisdiction may commence employment until the required background check has been completed and results reviewed.</td></tr>
+            <tr><td>Measurable</td><td>Percentage of new hires in high-risk roles and jurisdictions for whom background check completion is recorded prior to start date.</td></tr>
+            <tr><td>Achievable</td><td>The background check process is in place. The objective tightens the requirement by making pre-commencement completion the standard.</td></tr>
+            <tr><td>Relevant</td><td>Pre-employment screening is a foundational ABMS control for identifying individuals who may pose a bribery or integrity risk.</td></tr>
+            <tr><td>Time-bound</td><td>Measured quarterly against all new hires in scope who started employment in the period.</td></tr>
+            <tr><td>How We Measure It</td><td>HR system records background check completion date and employee start date for all new hires in scope. Quarterly report generated comparing the two dates. Non-compliant cases flagged and subject to retrospective review. Results reported at each management review.</td></tr>
+            <tr><td>Target</td><td>100% of new hires in high-risk roles and jurisdictions complete background screening prior to employment start date.</td></tr>
+            <tr><td>Owner</td><td>Chief People Officer / CCO</td></tr>
+          </tbody>
+        </table>
+        <h4>Action Plan</h4>
+        <table class="action-table">
+          <thead><tr><th>Action No.</th><th>Action</th><th>Owner</th><th>Due Date</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>AP-014-01</td><td>Define and document the list of high-risk roles and jurisdictions requiring mandatory pre-commencement background checks</td><td>HR / Compliance</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-014-02</td><td>Configure HR system to flag and hold start date processing for in-scope hires until background check is confirmed</td><td>HR Systems</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-014-03</td><td>Assess whether local provider alternatives are required where HireRight coverage is limited</td><td>CCO / HR</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-014-04</td><td>Generate quarterly report of new hires in scope and compare check completion dates to start dates</td><td>HR</td><td>Ongoing</td><td></td></tr>
+            <tr><td>AP-014-05</td><td>Report compliance rate at each management review and investigate any non-compliant cases</td><td>CCO</td><td>Ongoing</td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+  </div>
+
+  <!-- OBJ-015 -->
+  <div class="accordion-item" id="obj-015-detail">
+    <details>
+      <summary>
+        <span class="accordion-label">OBJ-015</span>
+        <span class="accordion-title">Speak Up Awareness — Employee Survey Score (Africa)</span>
+      </summary>
+      <div class="accordion-body">
+        <h4>SMART Breakdown</h4>
+        <table class="smart-table">
+          <thead><tr><th>Field</th><th>Content</th></tr></thead>
+          <tbody>
+            <tr><td>Relevant Risk</td><td>Employees who are unaware of the Speak Up mechanism are less likely to report suspected bribery, reducing the effectiveness of one of the ABMS's most critical detection tools.</td></tr>
+            <tr><td>Risk Reference</td><td>Linked to Risk BR-019 — Whistleblower Programme Effectiveness</td></tr>
+            <tr><td>Scope</td><td>Regional — Africa</td></tr>
+            <tr><td>Objective Statement</td><td>Increase the percentage of employees in Africa who can correctly identify the Speak Up reporting channel in the Annual Employee Survey from 41% in 2025 to 70% by end of 2026.</td></tr>
+            <tr><td>Specific</td><td>The specific survey question asking employees to identify the Speak Up reporting channel is the defined measurement instrument. Target is a 29 percentage point increase.</td></tr>
+            <tr><td>Measurable</td><td>Percentage of survey respondents in Africa who correctly identify NAVEX/Speak Up as the reporting channel.</td></tr>
+            <tr><td>Achievable</td><td>The NAVEX transition and associated relaunch communications provide a strong platform. Targeted regional campaign is planned.</td></tr>
+            <tr><td>Relevant</td><td>Africa is an elevated-risk region. Low awareness of the reporting mechanism in this region is a specific and material gap.</td></tr>
+            <tr><td>Time-bound</td><td>Annual survey results to be extracted by Q3 2026 and reviewed at year-end management review.</td></tr>
+            <tr><td>How We Measure It</td><td>Annual Employee Survey results for Africa extracted and filtered for the Speak Up awareness question. Percentage of correct responses calculated and compared to the 2025 baseline. Results disaggregated by country and business unit within Africa.</td></tr>
+            <tr><td>Target</td><td>70% of Africa-region employees correctly identify the Speak Up reporting channel by Q3 2026 Annual Employee Survey.</td></tr>
+            <tr><td>Owner</td><td>Regional Compliance Manager — Africa</td></tr>
+          </tbody>
+        </table>
+        <h4>Action Plan</h4>
+        <table class="action-table">
+          <thead><tr><th>Action No.</th><th>Action</th><th>Owner</th><th>Due Date</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>AP-015-01</td><td>Design and deploy a targeted Speak Up awareness campaign for Africa using NAVEX launch materials</td><td>Regional Compliance Manager</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-015-02</td><td>Include NAVEX/Speak Up information in all-hands meetings, onboarding materials, and intranet pages for Africa</td><td>Regional Compliance / Communications</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-015-03</td><td>Conduct manager briefings in Africa to equip people managers to communicate Speak Up to their teams</td><td>Regional Compliance Manager</td><td>Q2 2026</td><td></td></tr>
+            <tr><td>AP-015-04</td><td>Run targeted mid-year pulse check in Africa to assess awareness levels before main survey</td><td>HR / Compliance</td><td>Q2 2026</td><td></td></tr>
+            <tr><td>AP-015-05</td><td>Extract and review Africa-region results from Annual Employee Survey</td><td>CCO</td><td>Q3 2026</td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+  </div>
+
+  <!-- OBJ-016 -->
+  <div class="accordion-item" id="obj-016-detail">
+    <details>
+      <summary>
+        <span class="accordion-label">OBJ-016</span>
+        <span class="accordion-title">Management Review Input Quality and Timeliness</span>
+      </summary>
+      <div class="accordion-body">
+        <h4>SMART Breakdown</h4>
+        <table class="smart-table">
+          <thead><tr><th>Field</th><th>Content</th></tr></thead>
+          <tbody>
+            <tr><td>Relevant Risk</td><td>Management reviews conducted without complete, accurate, and timely inputs may fail to identify systemic weaknesses, leading to poor decisions and missed improvement opportunities.</td></tr>
+            <tr><td>Risk Reference</td><td>Linked to Risk BR-026 — Management Review Effectiveness</td></tr>
+            <tr><td>Scope</td><td>Global</td></tr>
+            <tr><td>Objective Statement</td><td>Ensure that 100% of management review input reports are submitted by designated owners no later than 10 business days before each scheduled management review meeting, for all four reviews in 2026.</td></tr>
+            <tr><td>Specific</td><td>Each designated input owner must submit their report using the agreed template, covering required data points, no later than 10 business days before the review meeting.</td></tr>
+            <tr><td>Measurable</td><td>Percentage of required input reports submitted on time and in the required format, for each management review meeting during 2026.</td></tr>
+            <tr><td>Achievable</td><td>Deadline and template requirements are clearly defined and responsibility is assigned to named individuals.</td></tr>
+            <tr><td>Relevant</td><td>Quality and timeliness of management review inputs directly determines the quality of decisions made — a core ABMS governance control.</td></tr>
+            <tr><td>Time-bound</td><td>Measured at each of the four management review meetings in 2026.</td></tr>
+            <tr><td>How We Measure It</td><td>CCO records submission date and completeness assessment for each input report received before each management review. Late or incomplete reports recorded as non-compliant and reported as a standing agenda item at the review.</td></tr>
+            <tr><td>Target</td><td>100% of management review input reports submitted on time and complete for all four 2026 management reviews.</td></tr>
+            <tr><td>Owner</td><td>Chief Compliance Officer</td></tr>
+          </tbody>
+        </table>
+        <h4>Action Plan</h4>
+        <table class="action-table">
+          <thead><tr><th>Action No.</th><th>Action</th><th>Owner</th><th>Due Date</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>AP-016-01</td><td>Confirm schedule of four management reviews for 2026 and communicate to all input owners</td><td>CCO</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-016-02</td><td>Define and distribute the standardised management review input template with required data fields</td><td>CCO</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-016-03</td><td>Set up automated deadline reminders to input owners at 20 and 10 business days before each review</td><td>Compliance Manager</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-016-04</td><td>Track and record submission compliance for each review and escalate persistent non-submission</td><td>CCO</td><td>Ongoing</td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+  </div>
+
+  <!-- OBJ-017 -->
+  <div class="accordion-item" id="obj-017-detail">
+    <details>
+      <summary>
+        <span class="accordion-label">OBJ-017</span>
+        <span class="accordion-title">Bribery Risk Assessment Annual Refresh</span>
+      </summary>
+      <div class="accordion-body">
+        <h4>SMART Breakdown</h4>
+        <table class="smart-table">
+          <thead><tr><th>Field</th><th>Content</th></tr></thead>
+          <tbody>
+            <tr><td>Relevant Risk</td><td>A bribery risk assessment that is not kept current fails to reflect changes in the business environment, personnel, and operating context, creating gaps in the ABMS control framework.</td></tr>
+            <tr><td>Risk Reference</td><td>Linked to Risk BR-001 — Risk Assessment Currency and Accuracy</td></tr>
+            <tr><td>Scope</td><td>Global</td></tr>
+            <tr><td>Objective Statement</td><td>Complete the annual bribery risk assessment refresh by 31 March 2026, with all updated risks approved by Top Management and integrated into the ERM system by 30 April 2026.</td></tr>
+            <tr><td>Specific</td><td>The full bribery risk assessment must be reviewed and updated annually. All risks must be reassessed for likelihood and impact and approved by Top Management.</td></tr>
+            <tr><td>Measurable</td><td>Binary: risk assessment refresh completed and approved by 31 March. ERM integration confirmed by 30 April.</td></tr>
+            <tr><td>Achievable</td><td>The risk assessment methodology is established and integrated with ERM. The objective sets a formal completion deadline.</td></tr>
+            <tr><td>Relevant</td><td>Currency of the risk assessment is foundational — all controls, objectives, and audit planning are derived from it.</td></tr>
+            <tr><td>Time-bound</td><td>Refresh completed by 31 March 2026. ERM integration confirmed by 30 April 2026.</td></tr>
+            <tr><td>How We Measure It</td><td>Completion evidenced by the signed and dated risk assessment document approved by Top Management, the updated ERM register entry, and management review minutes. Evidence filed in the ABMS document management system.</td></tr>
+            <tr><td>Target</td><td>Annual bribery risk assessment refresh completed and approved by 31 March 2026. ERM integration confirmed by 30 April 2026.</td></tr>
+            <tr><td>Owner</td><td>Chief Compliance Officer</td></tr>
+          </tbody>
+        </table>
+        <h4>Action Plan</h4>
+        <table class="action-table">
+          <thead><tr><th>Action No.</th><th>Action</th><th>Owner</th><th>Due Date</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>AP-017-01</td><td>Initiate risk assessment refresh including interviews with key risk owners across business units</td><td>Compliance Manager</td><td>January 2026</td><td></td></tr>
+            <tr><td>AP-017-02</td><td>Update risk register to reflect new risks and changes in likelihood, impact, and business environment</td><td>Compliance Manager</td><td>February 2026</td><td></td></tr>
+            <tr><td>AP-017-03</td><td>Present refreshed risk assessment to Top Management for review and formal approval</td><td>CCO</td><td>March 2026</td><td></td></tr>
+            <tr><td>AP-017-04</td><td>Integrate updated risk ratings and risk owners into the ERM system</td><td>Compliance / ERM</td><td>April 2026</td><td></td></tr>
+            <tr><td>AP-017-05</td><td>File approved risk assessment and integration confirmation in the ABMS document management system</td><td>Compliance Manager</td><td>April 2026</td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+  </div>
+
+  <!-- OBJ-018 -->
+  <div class="accordion-item" id="obj-018-detail">
+    <details>
+      <summary>
+        <span class="accordion-label">OBJ-018</span>
+        <span class="accordion-title">Internal Audit Corrective Action Closure Rate</span>
+      </summary>
+      <div class="accordion-body">
+        <h4>SMART Breakdown</h4>
+        <table class="smart-table">
+          <thead><tr><th>Field</th><th>Content</th></tr></thead>
+          <tbody>
+            <tr><td>Relevant Risk</td><td>Corrective actions from internal audit findings that are not closed on time indicate systemic non-compliance and allow identified ABMS weaknesses to persist.</td></tr>
+            <tr><td>Risk Reference</td><td>Linked to Risk BR-025 — Control Testing and Assurance Gap</td></tr>
+            <tr><td>Scope</td><td>Global</td></tr>
+            <tr><td>Objective Statement</td><td>Achieve a corrective action closure rate of 90% within the agreed timeframe for all findings raised in ABMS internal audits conducted during 2026.</td></tr>
+            <tr><td>Specific</td><td>All corrective actions arising from ABMS internal audit findings must be closed within the agreed timeframe with documented evidence of implementation.</td></tr>
+            <tr><td>Measurable</td><td>Percentage of corrective actions closed on time with documented evidence, as a proportion of all corrective actions raised in 2026.</td></tr>
+            <tr><td>Achievable</td><td>Corrective action tracking is managed through the internal audit management system. The 90% target allows reasonable exceptions while maintaining accountability.</td></tr>
+            <tr><td>Relevant</td><td>On-time closure of corrective actions is a direct measure of the organisation's responsiveness to identified ABMS weaknesses.</td></tr>
+            <tr><td>Time-bound</td><td>Measured quarterly. Year-end target: 90% closed on time.</td></tr>
+            <tr><td>How We Measure It</td><td>Internal audit management system tracks all corrective actions raised, agreed response dates, actual closure dates, and closure evidence. Actions overdue by more than 30 days escalated to the CCO. Year-end closure rate reported at Q4 management review.</td></tr>
+            <tr><td>Target</td><td>90% of internal audit corrective actions closed within agreed timeframes by Q4 2026.</td></tr>
+            <tr><td>Owner</td><td>Head of Compliance Audit / CCO</td></tr>
+          </tbody>
+        </table>
+        <h4>Action Plan</h4>
+        <table class="action-table">
+          <thead><tr><th>Action No.</th><th>Action</th><th>Owner</th><th>Due Date</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>AP-018-01</td><td>Confirm all corrective actions from 2025 audits are logged with agreed closure dates</td><td>Head of Compliance Audit</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-018-02</td><td>Set up quarterly corrective action status report showing open, overdue, and closed items</td><td>Audit Management System Admin</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-018-03</td><td>Implement 30-day overdue escalation protocol to CCO for unresolved corrective actions</td><td>CCO</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-018-04</td><td>Review corrective action closure performance at each quarterly management review</td><td>CCO</td><td>Ongoing</td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+  </div>
+
+  <!-- OBJ-019 -->
+  <div class="accordion-item" id="obj-019-detail">
+    <details>
+      <summary>
+        <span class="accordion-label">OBJ-019</span>
+        <span class="accordion-title">Anti-Bribery Culture Improvement — Papua New Guinea</span>
+      </summary>
+      <div class="accordion-body">
+        <h4>SMART Breakdown</h4>
+        <table class="smart-table">
+          <thead><tr><th>Field</th><th>Content</th></tr></thead>
+          <tbody>
+            <tr><td>Relevant Risk</td><td>Papua New Guinea is a high-risk operating jurisdiction. A compliance culture that is not actively managed and measured in this market increases the risk of bribery occurring or going unreported.</td></tr>
+            <tr><td>Risk Reference</td><td>Linked to Risk BR-021 — Anti-Bribery Culture and Tone at the Top / BR-017 — High-Risk Jurisdiction Exposure</td></tr>
+            <tr><td>Scope</td><td>Local — Papua New Guinea</td></tr>
+            <tr><td>Objective Statement</td><td>Improve the overall compliance culture score for Papua New Guinea in the Annual Employee Survey from 52% in 2025 to 72% by end of 2026.</td></tr>
+            <tr><td>Specific</td><td>The culture score for PNG is the average positive response rate across designated culture-related questions in the Annual Employee Survey. Target is a 20-point improvement.</td></tr>
+            <tr><td>Measurable</td><td>Average positive response rate across culture questions in the Annual Employee Survey for PNG respondents, compared year-on-year.</td></tr>
+            <tr><td>Achievable</td><td>A targeted programme of manager-led integrity sessions, local compliance communications, and an active Speak Up relaunch provides a credible basis.</td></tr>
+            <tr><td>Relevant</td><td>PNG is a high-risk market where culture quality is a first-line defence against bribery.</td></tr>
+            <tr><td>Time-bound</td><td>Annual survey results by Q3 2026.</td></tr>
+            <tr><td>How We Measure It</td><td>Annual Employee Survey results for PNG extracted and average positive response rate across culture questions calculated. Results compared to 2025 baseline of 52% and disaggregated by team and location within PNG.</td></tr>
+            <tr><td>Target</td><td>PNG compliance culture score of 72% by Q3 2026 Annual Employee Survey (up from 52% in 2025).</td></tr>
+            <tr><td>Owner</td><td>PNG Country Manager / Regional Compliance Manager</td></tr>
+          </tbody>
+        </table>
+        <h4>Action Plan</h4>
+        <table class="action-table">
+          <thead><tr><th>Action No.</th><th>Action</th><th>Owner</th><th>Due Date</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>AP-019-01</td><td>Conduct a diagnostic review of compliance culture in PNG including focus groups and manager interviews</td><td>Regional Compliance Manager</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-019-02</td><td>Design and deliver a targeted compliance awareness programme for PNG</td><td>Regional Compliance Manager</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-019-03</td><td>Ensure all PNG managers are re-inducted into the ABMS and briefed on their cultural accountability</td><td>CCO / PNG Country Manager</td><td>Q2 2026</td><td></td></tr>
+            <tr><td>AP-019-04</td><td>Deploy Speak Up relaunch communications specifically targeting the PNG workforce</td><td>Regional Compliance</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-019-05</td><td>Run Annual Employee Survey in PNG and extract culture question scores</td><td>HR</td><td>Q3 2026</td><td></td></tr>
+            <tr><td>AP-019-06</td><td>Report PNG culture score and year-on-year comparison at year-end management review</td><td>CCO</td><td>Q4 2026</td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+  </div>
+
+  <!-- OBJ-020 -->
+  <div class="accordion-item" id="obj-020-detail">
+    <details>
+      <summary>
+        <span class="accordion-label">OBJ-020</span>
+        <span class="accordion-title">Sanctions Screening Coverage Rate</span>
+      </summary>
+      <div class="accordion-body">
+        <h4>SMART Breakdown</h4>
+        <table class="smart-table">
+          <thead><tr><th>Field</th><th>Content</th></tr></thead>
+          <tbody>
+            <tr><td>Relevant Risk</td><td>Failure to conduct sanctions screening across the full population of relevant counterparties creates legal and reputational exposure and undermines the completeness of the ABMS due diligence framework.</td></tr>
+            <tr><td>Risk Reference</td><td>Linked to Risk BR-011 — Sanctions and Financial Crime Risk</td></tr>
+            <tr><td>Scope</td><td>Global</td></tr>
+            <tr><td>Objective Statement</td><td>Achieve a sanctions screening coverage rate of 100% across all in-scope counterparty categories by Q3 2026.</td></tr>
+            <tr><td>Specific</td><td>All employees (pre-employment), new third parties (pre-engagement), and existing high-risk and medium-risk third parties (annual rescreening) must have a current screening record.</td></tr>
+            <tr><td>Measurable</td><td>Percentage of in-scope counterparties with a current, completed sanctions screening record, calculated quarterly from the screening system.</td></tr>
+            <tr><td>Achievable</td><td>Screening tools and processes are in place. The objective focuses on ensuring complete coverage and up-to-date rescreening records.</td></tr>
+            <tr><td>Relevant</td><td>Sanctions screening sits at the intersection of ABMS and financial crime compliance obligations.</td></tr>
+            <tr><td>Time-bound</td><td>100% coverage to be achieved by Q3 2026 and maintained through year-end.</td></tr>
+            <tr><td>How We Measure It</td><td>Screening system generates a quarterly coverage report for each counterparty category, showing total in-scope population, number with a current record, and those overdue for rescreening. Reported at each management review.</td></tr>
+            <tr><td>Target</td><td>100% sanctions screening coverage rate across all in-scope counterparty categories by Q3 2026.</td></tr>
+            <tr><td>Owner</td><td>Head of Due Diligence / CCO</td></tr>
+          </tbody>
+        </table>
+        <h4>Action Plan</h4>
+        <table class="action-table">
+          <thead><tr><th>Action No.</th><th>Action</th><th>Owner</th><th>Due Date</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>AP-020-01</td><td>Define and document the in-scope counterparty population by category and risk tier</td><td>Compliance Manager</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-020-02</td><td>Establish rescreening frequency requirements and configure system to flag overdue records</td><td>Systems / Compliance</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-020-03</td><td>Generate baseline coverage report and identify all counterparties with missing or expired records</td><td>Due Diligence Team</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-020-04</td><td>Complete screening for all backlog cases, prioritised by risk level</td><td>Due Diligence Team</td><td>Q2 2026</td><td></td></tr>
+            <tr><td>AP-020-05</td><td>Report quarterly coverage rate at management reviews and address gaps within 30 days</td><td>CCO</td><td>Ongoing</td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+  </div>
+
+  <!-- OBJ-021 -->
+  <div class="accordion-item" id="obj-021-detail">
+    <details>
+      <summary>
+        <span class="accordion-label">OBJ-021</span>
+        <span class="accordion-title">Reduction in G&amp;E Policy Breach Rate — India</span>
+      </summary>
+      <div class="accordion-body">
+        <h4>SMART Breakdown</h4>
+        <table class="smart-table">
+          <thead><tr><th>Field</th><th>Content</th></tr></thead>
+          <tbody>
+            <tr><td>Relevant Risk</td><td>A pattern of gifts and entertainment policy breaches indicates cultural non-compliance and creates direct bribery risk, particularly in government-facing markets.</td></tr>
+            <tr><td>Risk Reference</td><td>Linked to Risk BR-015 — Gifts and Entertainment Control Circumvention</td></tr>
+            <tr><td>Scope</td><td>Local — India</td></tr>
+            <tr><td>Objective Statement</td><td>Reduce the rate of government-related G&amp;E policy breaches in India from 18 per quarter in Q4 2025 to fewer than 4 per quarter by Q4 2026.</td></tr>
+            <tr><td>Specific</td><td>A G&amp;E policy breach is any instance where G&amp;E expenditure was incurred without a valid prior approval on record in the Kissflow system. India business unit is the specific scope.</td></tr>
+            <tr><td>Measurable</td><td>Number of G&amp;E policy breaches identified per quarter in India, measured through the quarterly Kissflow/Workday reconciliation.</td></tr>
+            <tr><td>Achievable</td><td>Reduction achievable through targeted training, mandatory system controls, and visible disciplinary follow-through.</td></tr>
+            <tr><td>Relevant</td><td>India is a market where G&amp;E-related bribery risk is elevated. A high breach rate is a specific and material control failure.</td></tr>
+            <tr><td>Time-bound</td><td>Quarterly measurement. Target of fewer than 4 breaches per quarter by Q4 2026.</td></tr>
+            <tr><td>How We Measure It</td><td>Quarterly Kissflow/Workday reconciliation for India identifies all G&amp;E expenditure claims with no matching prior approval. Number of breaches per quarter tracked and trended. Each breach followed up individually. Reported at each management review.</td></tr>
+            <tr><td>Target</td><td>Fewer than 4 G&amp;E policy breaches per quarter in India by Q4 2026 (down from 18 in Q4 2025).</td></tr>
+            <tr><td>Owner</td><td>India Country Compliance Manager / CCO</td></tr>
+          </tbody>
+        </table>
+        <h4>Action Plan</h4>
+        <table class="action-table">
+          <thead><tr><th>Action No.</th><th>Action</th><th>Owner</th><th>Due Date</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>AP-021-01</td><td>Deliver targeted G&amp;E policy training to all India employees focusing on the prior approval requirement</td><td>India Compliance Manager</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-021-02</td><td>Make Kissflow pre-approval reference mandatory in the Workday G&amp;E submission form for India users</td><td>Systems / IT</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-021-03</td><td>Run Q1 2026 reconciliation to establish updated baseline breach rate</td><td>India Compliance Manager</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-021-04</td><td>Implement visible disciplinary follow-through process for identified breaches</td><td>India Country Manager / HR</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-021-05</td><td>Report quarterly breach rate at management reviews</td><td>CCO</td><td>Ongoing</td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+  </div>
+
+  <!-- OBJ-022 -->
+  <div class="accordion-item" id="obj-022-detail">
+    <details>
+      <summary>
+        <span class="accordion-label">OBJ-022</span>
+        <span class="accordion-title">Investigation Quality — Annual Audit of Investigation Reports</span>
+      </summary>
+      <div class="accordion-body">
+        <h4>SMART Breakdown</h4>
+        <table class="smart-table">
+          <thead><tr><th>Field</th><th>Content</th></tr></thead>
+          <tbody>
+            <tr><td>Relevant Risk</td><td>Poorly conducted or insufficiently documented investigations may fail to identify the true cause or extent of a bribery concern, and may expose the organisation to legal challenge.</td></tr>
+            <tr><td>Risk Reference</td><td>Linked to Risk BR-020 — Investigation Quality and Consistency</td></tr>
+            <tr><td>Scope</td><td>Global</td></tr>
+            <tr><td>Objective Statement</td><td>Achieve a minimum average quality score of 80% across all ABMS investigations completed in 2026, as assessed through an annual independent quality audit.</td></tr>
+            <tr><td>Specific</td><td>An independent quality audit of a random 30% sample of all ABMS investigation reports completed in 2026 is conducted annually using a standardised quality assessment rubric.</td></tr>
+            <tr><td>Measurable</td><td>Average quality score across audited investigation reports, expressed as a percentage of the maximum possible score on the rubric.</td></tr>
+            <tr><td>Achievable</td><td>Achievable with implementation of a standardised investigation methodology, investigator competency framework, and quality review before case closure.</td></tr>
+            <tr><td>Relevant</td><td>Investigation quality is a direct measure of whether the organisation is capable of detecting and responding to bribery.</td></tr>
+            <tr><td>Time-bound</td><td>Quality audit of 2026 investigations to be completed by Q1 2027 and reported at the Q1 2027 management review.</td></tr>
+            <tr><td>How We Measure It</td><td>An independent reviewer conducts an annual audit of a random 30% sample of investigation reports. Each report scored against a standardised rubric covering: triage documentation, investigation plan, evidence collection, interviews, findings analysis, and corrective action. Average score calculated.</td></tr>
+            <tr><td>Target</td><td>Average investigation quality score of 80% or above across the audited sample for 2026 investigations.</td></tr>
+            <tr><td>Owner</td><td>Head of Investigations / CCO</td></tr>
+          </tbody>
+        </table>
+        <h4>Action Plan</h4>
+        <table class="action-table">
+          <thead><tr><th>Action No.</th><th>Action</th><th>Owner</th><th>Due Date</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>AP-022-01</td><td>Develop standardised investigation quality assessment rubric covering all stages of the investigation process</td><td>Head of Investigations</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-022-02</td><td>Implement structured investigation methodology with defined milestones for all ABMS investigations</td><td>Head of Investigations</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-022-03</td><td>Introduce mandatory senior review and sign-off before investigation cases are closed</td><td>CCO</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-022-04</td><td>Conduct annual independent quality audit of 30% sample of 2026 investigation reports</td><td>QA Lead / External Specialist</td><td>Q1 2027</td><td></td></tr>
+            <tr><td>AP-022-05</td><td>Report quality audit results at Q1 2027 management review</td><td>CCO</td><td>Q1 2027</td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+  </div>
+
+  <!-- OBJ-023 -->
+  <div class="accordion-item" id="obj-023-detail">
+    <details>
+      <summary>
+        <span class="accordion-label">OBJ-023</span>
+        <span class="accordion-title">Business Associate Code of Conduct Acknowledgment</span>
+      </summary>
+      <div class="accordion-body">
+        <h4>SMART Breakdown</h4>
+        <table class="smart-table">
+          <thead><tr><th>Field</th><th>Content</th></tr></thead>
+          <tbody>
+            <tr><td>Relevant Risk</td><td>Business associates who have not formally acknowledged the organisation's anti-bribery expectations are not contractually or culturally bound by the ABMS standards the organisation is required to enforce.</td></tr>
+            <tr><td>Risk Reference</td><td>Linked to Risk BR-012 — Third Party Bribery Risk</td></tr>
+            <tr><td>Scope</td><td>Global</td></tr>
+            <tr><td>Objective Statement</td><td>Achieve 100% signed acknowledgment of the Anti-Bribery Code of Conduct by all active high-risk and medium-risk business associates by 30 June 2026, and for all new business associates before commencement of engagement.</td></tr>
+            <tr><td>Specific</td><td>Every active business associate in the high-risk and medium-risk categories must have a signed and dated Code of Conduct acknowledgment on file.</td></tr>
+            <tr><td>Measurable</td><td>Percentage of in-scope active business associates with a signed acknowledgment on file, as a proportion of the total high-risk and medium-risk population.</td></tr>
+            <tr><td>Achievable</td><td>The Code of Conduct and acknowledgment process are in place. The objective focuses on achieving complete documented coverage.</td></tr>
+            <tr><td>Relevant</td><td>Formal acknowledgment creates a clear record of third-party awareness of and commitment to the organisation's anti-bribery standards.</td></tr>
+            <tr><td>Time-bound</td><td>Backlog cleared by 30 June 2026. Ongoing 100% for new engagements from Q1 2026.</td></tr>
+            <tr><td>How We Measure It</td><td>Compliance team maintains a business associate acknowledgment register recording entity name, risk classification, acknowledgment date, and document reference. Reviewed quarterly. Completion rate reported at each management review. New engagements checked against register before approval.</td></tr>
+            <tr><td>Target</td><td>100% of active high-risk and medium-risk business associates have a signed Code of Conduct acknowledgment by 30 June 2026.</td></tr>
+            <tr><td>Owner</td><td>Head of Due Diligence / CCO</td></tr>
+          </tbody>
+        </table>
+        <h4>Action Plan</h4>
+        <table class="action-table">
+          <thead><tr><th>Action No.</th><th>Action</th><th>Owner</th><th>Due Date</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>AP-023-01</td><td>Compile the full list of active business associates classified as high-risk or medium-risk</td><td>Compliance Manager</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-023-02</td><td>Identify business associates without a signed acknowledgment and prioritise outreach by risk level</td><td>Compliance Manager</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-023-03</td><td>Issue Anti-Bribery Code of Conduct and acknowledgment request to all outstanding business associates</td><td>Due Diligence Team</td><td>Q1–Q2 2026</td><td></td></tr>
+            <tr><td>AP-023-04</td><td>Implement a control to block new business associate approval where signed acknowledgment is not on file</td><td>Compliance / Procurement</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-023-05</td><td>Report quarterly acknowledgment coverage rate at management reviews</td><td>CCO</td><td>Ongoing</td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+  </div>
+
+  <!-- OBJ-024 -->
+  <div class="accordion-item" id="obj-024-detail">
+    <details>
+      <summary>
+        <span class="accordion-label">OBJ-024</span>
+        <span class="accordion-title">Top Management ABMS Training Completion</span>
+      </summary>
+      <div class="accordion-body">
+        <h4>SMART Breakdown</h4>
+        <table class="smart-table">
+          <thead><tr><th>Field</th><th>Content</th></tr></thead>
+          <tbody>
+            <tr><td>Relevant Risk</td><td>Members of Top Management who are not adequately trained on the ABMS may fail to discharge their leadership and oversight responsibilities under ISO 37001, weakening governance at the highest level.</td></tr>
+            <tr><td>Risk Reference</td><td>Linked to Risk BR-021 — Anti-Bribery Culture and Tone at the Top</td></tr>
+            <tr><td>Scope</td><td>Global</td></tr>
+            <tr><td>Objective Statement</td><td>Achieve 100% completion of a tailored ABMS awareness and responsibilities briefing by all members of Top Management by 30 June 2026.</td></tr>
+            <tr><td>Specific</td><td>Every member of Top Management must complete a tailored ABMS briefing covering their specific responsibilities under ISO 37001. Generic e-learning does not satisfy this requirement.</td></tr>
+            <tr><td>Measurable</td><td>Percentage of Top Management members who have completed the tailored ABMS briefing, as a proportion of the total Top Management population.</td></tr>
+            <tr><td>Achievable</td><td>Given the relatively small population of Top Management, 100% completion is achievable within the defined timeframe.</td></tr>
+            <tr><td>Relevant</td><td>Top Management has specific and non-delegable responsibilities under the ABMS. Adequate briefing is both a Standard requirement and a prerequisite for effective governance.</td></tr>
+            <tr><td>Time-bound</td><td>100% completion by 30 June 2026. New members appointed after this date must complete within 60 days of appointment.</td></tr>
+            <tr><td>How We Measure It</td><td>Compliance team maintains an attendance register recording each participant's name, role, and date of completion. Evidence filed in the ABMS document management system. Completion rate reported at Q2 2026 management review.</td></tr>
+            <tr><td>Target</td><td>100% of Top Management complete the tailored ABMS briefing by 30 June 2026. New appointments complete within 60 days of joining.</td></tr>
+            <tr><td>Owner</td><td>Chief Compliance Officer</td></tr>
+          </tbody>
+        </table>
+        <h4>Action Plan</h4>
+        <table class="action-table">
+          <thead><tr><th>Action No.</th><th>Action</th><th>Owner</th><th>Due Date</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>AP-024-01</td><td>Develop a tailored ABMS briefing for Top Management covering their specific responsibilities under ISO 37001</td><td>CCO</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-024-02</td><td>Schedule and deliver the ABMS briefing for all current members of Top Management</td><td>CCO</td><td>Q1–Q2 2026</td><td></td></tr>
+            <tr><td>AP-024-03</td><td>Compile and maintain a Top Management briefing completion register</td><td>Compliance Manager</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-024-04</td><td>Establish protocol for briefing new Top Management appointments within 60 days of joining</td><td>CCO / HR</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-024-05</td><td>Report 100% completion at Q2 2026 management review and track ongoing compliance for new appointments</td><td>CCO</td><td>Q2 2026 and Ongoing</td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+  </div>
+
+  <!-- OBJ-025 -->
+  <div class="accordion-item" id="obj-025-detail">
+    <details>
+      <summary>
+        <span class="accordion-label">OBJ-025</span>
+        <span class="accordion-title">Anti-Bribery Training Comprehension Score</span>
+      </summary>
+      <div class="accordion-body">
+        <h4>SMART Breakdown</h4>
+        <table class="smart-table">
+          <thead><tr><th>Field</th><th>Content</th></tr></thead>
+          <tbody>
+            <tr><td>Relevant Risk</td><td>Employees who complete mandatory anti-bribery training but do not understand the content remain unequipped to recognise and avoid bribery, providing false assurance through completion rates alone.</td></tr>
+            <tr><td>Risk Reference</td><td>Linked to Risk BR-008 — Employee Awareness and Training Gap</td></tr>
+            <tr><td>Scope</td><td>Global</td></tr>
+            <tr><td>Objective Statement</td><td>Achieve an average post-training assessment score of 80% or above across all employees completing the mandatory annual anti-bribery training module by 31 December 2026, with a pass mark of 70% required for individual completion to be recorded as compliant.</td></tr>
+            <tr><td>Specific</td><td>The mandatory annual anti-bribery training module must include a post-completion assessment. A score of 70% is the minimum pass mark for an individual completion to count as compliant. Organisational average target is 80%.</td></tr>
+            <tr><td>Measurable</td><td>Average post-assessment score across all completions, and percentage of completions achieving the 70% pass mark, extracted from the LMS monthly.</td></tr>
+            <tr><td>Achievable</td><td>Assessment questions are already incorporated in the training module. The targets are challenging but consistent with an organisation with established ABMS awareness.</td></tr>
+            <tr><td>Relevant</td><td>Comprehension scores measure whether training is genuinely effective, not merely completed — a materially stronger indicator than completion rates alone.</td></tr>
+            <tr><td>Time-bound</td><td>Monthly LMS data. Year-end averages assessed at Q4 management review.</td></tr>
+            <tr><td>How We Measure It</td><td>LMS extracts monthly reports showing the distribution of post-assessment scores. Overall average score and percentage achieving 70% or above are the two key metrics. Employees failing the assessment must retake within 30 days. Regions with average below 70% subject to targeted awareness intervention.</td></tr>
+            <tr><td>Target</td><td>Average post-training assessment score of 80% or above by Q4 2026. Minimum 70% pass mark achieved by 95% of completions.</td></tr>
+            <tr><td>Owner</td><td>Compliance Manager / HR</td></tr>
+          </tbody>
+        </table>
+        <h4>Action Plan</h4>
+        <table class="action-table">
+          <thead><tr><th>Action No.</th><th>Action</th><th>Owner</th><th>Due Date</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>AP-025-01</td><td>Review and update the post-training assessment to accurately test understanding of key ABMS concepts</td><td>Compliance Manager</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-025-02</td><td>Configure LMS to record individual assessment scores and flag fails for mandatory retake within 30 days</td><td>LMS Administrator</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-025-03</td><td>Generate monthly LMS report showing average scores and pass rate by region and business unit</td><td>LMS Administrator</td><td>Q1 2026</td><td></td></tr>
+            <tr><td>AP-025-04</td><td>Identify and implement targeted awareness interventions in regions consistently scoring below 70%</td><td>Compliance Manager</td><td>Ongoing</td><td></td></tr>
+            <tr><td>AP-025-05</td><td>Report average comprehension scores and pass rates at each quarterly management review alongside completion rates</td><td>CCO</td><td>Ongoing</td><td></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </details>
+  </div>
+
+</section>
 
 <!-- FOOTER -->
 <footer>
