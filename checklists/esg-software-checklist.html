@@ -349,6 +349,120 @@
 
         main {
             padding: 60px 4vw;
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 64px;
+            max-width: 1400px;
+            margin: 0 auto;
+            align-items: start;
+        }
+
+        /* Sticky Sidebar */
+        .sticky-sidebar {
+            display: none;
+            position: sticky;
+            top: 80px;
+            height: fit-content;
+            background: var(--speeki-light-gray);
+            border-radius: 8px;
+            padding: 28px;
+            border: 1px solid var(--speeki-border);
+        }
+
+        @media (min-width: 1024px) {
+            .sticky-sidebar {
+                display: block;
+            }
+        }
+
+        .sidebar-title {
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--speeki-dark);
+            margin-bottom: 16px;
+        }
+
+        .sidebar-progress {
+            margin-bottom: 28px;
+            padding-bottom: 28px;
+            border-bottom: 1px solid var(--speeki-border);
+        }
+
+        .sidebar-progress-bar {
+            width: 100%;
+            height: 6px;
+            background: #e5e7eb;
+            border-radius: 3px;
+            overflow: hidden;
+            margin-bottom: 12px;
+        }
+
+        .sidebar-progress-fill {
+            height: 100%;
+            background: var(--speeki-green);
+            width: 0%;
+            transition: width 0.3s ease;
+            border-radius: 3px;
+        }
+
+        .sidebar-progress-text {
+            font-size: 12px;
+            color: var(--speeki-gray);
+            text-align: center;
+        }
+
+        .toc-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .toc-item {
+            margin: 0;
+            padding: 0;
+        }
+
+        .toc-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 12px;
+            color: var(--speeki-gray);
+            text-decoration: none;
+            font-size: 14px;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+            line-height: 1.4;
+        }
+
+        .toc-link:hover {
+            background: rgba(0, 255, 127, 0.1);
+            color: var(--speeki-dark);
+        }
+
+        .toc-link.active {
+            background: rgba(0, 255, 127, 0.15);
+            color: var(--speeki-green-text);
+            font-weight: 600;
+        }
+
+        .toc-dot {
+            width: 6px;
+            height: 6px;
+            background: var(--speeki-border);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .toc-link.active .toc-dot {
+            background: var(--speeki-green-text);
+            width: 8px;
+            height: 8px;
         }
 
         .main-content {
@@ -866,6 +980,18 @@
             line-height: 1.5;
         }
 
+
+        @media (max-width: 1023px) {
+            main {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .sticky-sidebar {
+                position: static;
+                top: auto;
+            }
+        }
+
         @media (max-width: 768px) {
             h1 {
                 font-size: 36px;
@@ -1141,7 +1267,7 @@
 
     <main id="main-content">
         <div class="main-content">
-            <div class="checklist-item">
+            <div class="checklist-item" id="section-1">
                 <div class="item-header">
                     <div class="item-number" data-section="1">1</div>
                     <div class="item-title">
@@ -1185,7 +1311,7 @@
                 </div>
             </div>
 
-            <div class="checklist-item">
+            <div class="checklist-item" id="section-2">
                 <div class="item-header">
                     <div class="item-number" data-section="2">2</div>
                     <div class="item-title">
@@ -1229,7 +1355,7 @@
                 </div>
             </div>
 
-            <div class="checklist-item">
+            <div class="checklist-item" id="section-3">
                 <div class="item-header">
                     <div class="item-number" data-section="3">3</div>
                     <div class="item-title">
@@ -1277,7 +1403,7 @@
                 </div>
             </div>
 
-            <div class="checklist-item">
+            <div class="checklist-item" id="section-4">
                 <div class="item-header">
                     <div class="item-number" data-section="4">4</div>
                     <div class="item-title">
@@ -1321,7 +1447,7 @@
                 </div>
             </div>
 
-            <div class="checklist-item">
+            <div class="checklist-item" id="section-5">
                 <div class="item-header">
                     <div class="item-number" data-section="5">5</div>
                     <div class="item-title">
@@ -1365,7 +1491,7 @@
                 </div>
             </div>
 
-            <div class="checklist-item">
+            <div class="checklist-item" id="section-6">
                 <div class="item-header">
                     <div class="item-number" data-section="6">6</div>
                     <div class="item-title">
@@ -1409,7 +1535,7 @@
                 </div>
             </div>
 
-            <div class="checklist-item">
+            <div class="checklist-item" id="section-7">
                 <div class="item-header">
                     <div class="item-number" data-section="7">7</div>
                     <div class="item-title">
@@ -1453,7 +1579,7 @@
                 </div>
             </div>
 
-            <div class="checklist-item">
+            <div class="checklist-item" id="section-8">
                 <div class="item-header">
                     <div class="item-number" data-section="8">8</div>
                     <div class="item-title">
@@ -1497,7 +1623,7 @@
                 </div>
             </div>
 
-            <div class="checklist-item">
+            <div class="checklist-item" id="section-9">
                 <div class="item-header">
                     <div class="item-number" data-section="9">9</div>
                     <div class="item-title">
@@ -1541,7 +1667,7 @@
                 </div>
             </div>
 
-            <div class="checklist-item">
+            <div class="checklist-item" id="section-10">
                 <div class="item-header">
                     <div class="item-number" data-section="10">10</div>
                     <div class="item-title">
@@ -1589,7 +1715,7 @@
                 </div>
             </div>
 
-            <div class="checklist-item">
+            <div class="checklist-item" id="section-11">
                 <div class="item-header">
                     <div class="item-number" data-section="11">11</div>
                     <div class="item-title">
@@ -1624,7 +1750,7 @@
                 </div>
             </div>
 
-            <div class="checklist-item">
+            <div class="checklist-item" id="section-12">
                 <div class="item-header">
                     <div class="item-number" data-section="12">12</div>
                     <div class="item-title">
@@ -1655,6 +1781,60 @@
                 </div>
             </div>
         </div>
+
+        <!-- Sticky Sidebar -->
+
+        <aside class="sticky-sidebar">
+
+            <div class="sidebar-progress">
+
+                <div class="sidebar-title">Your Progress</div>
+
+                <div class="sidebar-progress-bar">
+
+                    <div class="sidebar-progress-fill" id="sidebarProgressFill"></div>
+
+                </div>
+
+                <div class="sidebar-progress-text" id="sidebarProgressText">0/71</div>
+
+            </div>
+
+            <div>
+
+                <div class="sidebar-title">Sections</div>
+
+                <ul class="toc-list">
+
+                    <li class="toc-item"><a href="#section-1" class="toc-link"><span class="toc-dot"></span>Data Collection and Management</a></li>
+
+                    <li class="toc-item"><a href="#section-2" class="toc-link"><span class="toc-dot"></span>Emissions and Carbon Accounting</a></li>
+
+                    <li class="toc-item"><a href="#section-3" class="toc-link"><span class="toc-dot"></span>Reporting Framework Alignment</a></li>
+
+                    <li class="toc-item"><a href="#section-4" class="toc-link"><span class="toc-dot"></span>Integration Capabilities</a></li>
+
+                    <li class="toc-item"><a href="#section-5" class="toc-link"><span class="toc-dot"></span>Materiality Assessment and Strategy</a></li>
+
+                    <li class="toc-item"><a href="#section-6" class="toc-link"><span class="toc-dot"></span>Compliance and Assurance Readiness</a></li>
+
+                    <li class="toc-item"><a href="#section-7" class="toc-link"><span class="toc-dot"></span>Analytics and Insights</a></li>
+
+                    <li class="toc-item"><a href="#section-8" class="toc-link"><span class="toc-dot"></span>User Experience and Accessibility</a></li>
+
+                    <li class="toc-item"><a href="#section-9" class="toc-link"><span class="toc-dot"></span>Supply Chain and Third-Party Management</a></li>
+
+                    <li class="toc-item"><a href="#section-10" class="toc-link"><span class="toc-dot"></span>Vendor Support and Service</a></li>
+
+                    <li class="toc-item"><a href="#section-11" class="toc-link"><span class="toc-dot"></span>Security and Data Privacy</a></li>
+
+                    <li class="toc-item"><a href="#section-12" class="toc-link"><span class="toc-dot"></span>Scalability and Future-Proofing</a></li>
+
+                </ul>
+
+            </div>
+
+        </aside>
     </main>
 
     <section class="red-flags">
@@ -1887,6 +2067,16 @@
                     circle.textContent = section;
                 }
             });
+            // Update sidebar progress
+            var sidebarProgressFill = document.getElementById('sidebarProgressFill');
+            var sidebarProgressText = document.getElementById('sidebarProgressText');
+            if (sidebarProgressFill) {
+                sidebarProgressFill.style.width = percentage + '%';
+            }
+            if (sidebarProgressText) {
+                sidebarProgressText.textContent = checked + '/' + TOTAL_ITEMS;
+            }
+
 
             saveProgress();
         }
@@ -1939,7 +2129,30 @@
             checkbox.addEventListener('change', updateProgress);
         });
 
-        window.addEventListener('load', loadProgress);
+        // Scrollspy for TOC
+        function updateScrollSpy() {
+            const tocLinks = document.querySelectorAll('.toc-link');
+            const sections = document.querySelectorAll('.checklist-item[id^="section-"]');
+
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            tocLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateScrollSpy);
+
+        window.addEventListener('load', function() { loadProgress(); updateScrollSpy(); });
     </script>
     <script src="assets/growth.js"></script>
     <script src="assets/growth-advanced.js"></script>
