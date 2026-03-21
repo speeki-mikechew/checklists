@@ -65,7 +65,7 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   color: var(--text);
   background: var(--white);
   line-height: 1.8;
@@ -75,12 +75,12 @@ body {
 
 /* --- NAV --- */
 nav {
-  background: #0f1c3f;
+  background: #ffffff;
   padding: 0 32px;
   position: sticky;
   top: 0;
   z-index: 100;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid var(--border);
 }
 .nav-content {
   max-width: 1200px;
@@ -100,7 +100,7 @@ nav {
   gap: 24px;
 }
 .nav-back {
-  color: #e2e8f0;
+  color: var(--navy);
   text-decoration: none;
   font-size: 14px;
   display: flex;
@@ -111,7 +111,7 @@ nav {
 .nav-back:hover { color: #00FF7F; }
 .nav-cta {
   background: #00FF7F;
-  color: #0f1c3f;
+  color: var(--navy);
   padding: 8px 20px;
   border-radius: 6px;
   text-decoration: none;
@@ -194,7 +194,7 @@ nav {
 }
 .hero-tag svg { width: 12px; height: 12px; }
 .hero-title {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   font-size: 42px;
   font-weight: 800;
   line-height: 1.15;
@@ -372,7 +372,7 @@ nav {
 .stat-item:first-child { padding-left: 0; }
 .stat-item:last-child { border-right: none; }
 .stat-number {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   font-size: 36px;
   color: var(--navy);
   line-height: 1;
@@ -394,13 +394,36 @@ nav {
 
 /* --- ARTICLE --- */
 .article h2 {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   font-size: 28px;
   color: var(--navy);
   margin: 48px 0 16px;
   line-height: 1.2;
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 .article h2:first-child { margin-top: 0; }
+/* ─── SECTION NUMBERING ──────────────────────────── */
+.article {
+  counter-reset: section;
+}
+.article h2::before {
+  counter-increment: section;
+  content: counter(section);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #00FF7F;
+  color: #0f1c3f;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
 .article h3 {
   font-size: 20px;
   font-weight: 600;
@@ -433,7 +456,7 @@ nav {
 }
 .pullquote::before {
   content: '"';
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   font-size: 96px;
   color: var(--teal);
   opacity: 0.2;
@@ -443,7 +466,7 @@ nav {
   line-height: 1;
 }
 .pullquote p {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   font-size: 24px;
   line-height: 1.5;
   color: var(--white);
@@ -740,7 +763,7 @@ footer .container {
 <nav>
     <div class="nav-content">
         <a href="../index.html" class="nav-logo" aria-label="Speeki - Back to Resources Hub">
-            <img src="../speeki-logo-white.png" alt="Speeki" style="height: 50px; width: auto;">
+            <img src="../speeki-logo.png" alt="Speeki" style="height: 50px; width: auto;">
         </a>
         <div class="nav-right">
             <a href="../index.html" class="nav-back" aria-label="Back to all resources">
@@ -871,7 +894,7 @@ footer .container {
       <p style="font-size: 12px; color: rgba(255,255,255,0.6); margin-top: 12px;">No spam. Unsubscribe anytime.</p>
     </div>
 
-    <h2 id="standard-requirements">1. What the Standard Actually Requires</h2>
+    <h2 id="standard-requirements">What the Standard Actually Requires</h2>
 
     <p>Clause 7.2.2.2 of ISO 37001:2025 contains three distinct mandatory sub-clauses, each addressing a different aspect of how organisations manage the human risk dimension of bribery. These are not alternatives or a menu from which an organisation may select. All three apply.</p>
 
@@ -887,7 +910,7 @@ footer .container {
 
     <p>The remainder of this whitepaper addresses each sub-clause in turn, beginning with the one that is most commonly attempted yet most commonly done wrong.</p>
 
-    <h2 id="scope">2. Scope: Who Is In Scope?</h2>
+    <h2 id="scope">Scope: Who Is In Scope?</h2>
 
     <p>Before examining each sub-clause, it is necessary to be precise about who falls within the scope of Clause 7.2.2.2. The standard links scope directly to the bribery risk assessment conducted under Clause 4.5. The obligation applies to <strong>all positions exposed to more than a low bribery risk</strong> as determined by that assessment.</p>
 
@@ -926,7 +949,7 @@ footer .container {
 
     <p>The documented basis for the scope determination must be traceable to the Clause 4.5 risk assessment. An organisation that cannot demonstrate how its scope list was derived from a documented risk assessment will have difficulty satisfying an auditor on this point.</p>
 
-    <h2 id="due-diligence">3. Sub-Clause (a): The Due Diligence Problem</h2>
+    <h2 id="due-diligence">Sub-Clause (a): The Due Diligence Problem</h2>
 
     <p>Sub-Clause (a) is the provision most organisations have at least attempted to address. It is also the provision that is most systematically misunderstood. The core misunderstanding is the conflation of verification with investigation, and of screening with due diligence.</p>
 
@@ -983,7 +1006,7 @@ footer .container {
       </tbody>
     </table>
 
-    <h2 id="annex-guidance">4. The Standard&#8217;s Guidance: Annex A.8.1</h2>
+    <h2 id="annex-guidance">The Standard&#8217;s Guidance: Annex A.8.1</h2>
 
     <p>ISO 37001:2025 Annex A.8.1 provides normative guidance on the seven dimensions that due diligence should address for personnel. These dimensions are not merely illustrative suggestions &#8212; they represent the standard&#8217;s own specification of what a due diligence programme must be capable of addressing. Most organisations address two or three. Very few address all seven.</p>
 
@@ -1022,7 +1045,7 @@ footer .container {
       <p>If your due diligence programme cannot tell you anything about a candidate that the candidate did not already tell you, it is not due diligence. It is verification.</p>
     </div>
 
-    <h2 id="genuine-dd">5. What Genuine Due Diligence Looks Like</h2>
+    <h2 id="genuine-dd">What Genuine Due Diligence Looks Like</h2>
 
     <p>Genuine due diligence under Clause 7.2.2.2 is risk-proportionate. The standard does not require the same intensity of inquiry for a moderate-risk role as for a high-risk senior appointment. What it does require is that the depth of inquiry be calibrated to the risk and that the process be capable of addressing all seven dimensions of Annex A.8.1 &#8212; at least at a level proportionate to the risk profile of the role.</p>
 
@@ -1082,7 +1105,7 @@ footer .container {
       <p>Individual transferred from a role that had been classified as moderate-risk to a country manager position in a jurisdiction rated high on the organisation&#8217;s bribery risk assessment. The only due diligence conducted was equivalent to the original moderate-risk hire checks. No enhanced investigation was undertaken. The auditor raised a minor nonconformity on the basis that the due diligence package was not calibrated to the risk level of the new appointment.</p>
     </div>
 
-    <h2 id="incentives">6. Sub-Clause (b): Performance Incentives</h2>
+    <h2 id="incentives">Sub-Clause (b): Performance Incentives</h2>
 
     <p>Sub-Clause (b) requires a periodic review of the performance bonuses, targets, and other incentivising elements applicable to in-scope personnel. The purpose is to verify that these structures do not, in practice, create incentives for bribery, and that adequate safeguards exist where incentive pressure is high.</p>
 
@@ -1140,7 +1163,7 @@ footer .container {
 
     <p>One point warrants emphasis: the standard does <strong>not</strong> require the organisation to change its incentive structures. It requires the organisation to review them and to verify that adequate safeguards exist. An organisation may conclude &#8212; after a documented, genuine review &#8212; that its existing incentive structures are appropriate. What it cannot do is never conduct that review.</p>
 
-    <h2 id="declarations">7. Sub-Clause (c): Compliance Declarations</h2>
+    <h2 id="declarations">Sub-Clause (c): Compliance Declarations</h2>
 
     <p>Sub-Clause (c) requires the organisation to obtain, periodically, a declaration from in-scope personnel, top management, and the governing body confirming compliance with the ABMS. The declaration must be proportionate to the bribery risk to which the individual is exposed.</p>
 
@@ -1196,7 +1219,7 @@ footer .container {
       </div>
     </div>
 
-    <h2 id="implementation">8. Implementation Framework</h2>
+    <h2 id="implementation">Implementation Framework</h2>
 
     <p>Building a compliant Clause 7.2.2.2 programme does not require the organisation to design an entirely new infrastructure. In most cases, the components already exist in some form. The task is to make them coherent, calibrate them to risk, and document them in a way that demonstrates genuine compliance across all three sub-clauses.</p>
 
@@ -1240,7 +1263,7 @@ footer .container {
       </div>
     </div>
 
-    <h2 id="conclusion">9. Conclusion</h2>
+    <h2 id="conclusion">Conclusion</h2>
 
     <p>Clause 7.2.2.2 of ISO 37001:2025 addresses three dimensions of the human risk that organisations face in managing bribery: the integrity of the people they appoint to positions of risk; the design of the financial and non-financial incentive structures that govern those people&#8217;s behaviour; and the ongoing accountability mechanism through which those people confirm their compliance.</p>
 
@@ -1328,22 +1351,22 @@ footer .container {
 <!-- FOOTER -->
 
 <!-- Related Resources -->
-<section class="related-resources" style="background: #f8f9fa; padding: 60px 0; font-family: 'DM Sans', sans-serif;">
+<section class="related-resources" style="background: #f8f9fa; padding: 60px 0; font-family: 'Inter', system-ui, -apple-system, sans-serif;">
   <div style="max-width: 1200px; margin: 0 auto; padding: 0 4vw;">
-    <h2 style="font-size: 28px; font-weight: 700; margin: 0 0 32px 0; color: #0a0a0a; font-family: 'DM Sans', sans-serif;">Related Resources</h2>
+    <h2 style="font-size: 28px; font-weight: 700; margin: 0 0 32px 0; color: #0a0a0a; font-family: 'Inter', system-ui, -apple-system, sans-serif;">Related Resources</h2>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
       <a href="../checklists/iso-37001-checklist.html" style="text-decoration: none; display: block;">
         <div class="resource-card">
           <span style="display: inline-block; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: #ffffff; background: #00FF7F; border-radius: 4px; padding: 3px 8px; margin-bottom: 12px;">Checklist</span>
-          <h3 style="font-size: 16px; font-weight: 700; color: #0a0a0a; margin: 0 0 8px 0; font-family: 'DM Sans', sans-serif;">ISO 37001 Anti-Bribery</h3>
-          <p style="font-size: 14px; color: #6b7280; margin: 0; line-height: 1.5; font-family: 'DM Sans', sans-serif;">Implement an ISO 37001-compliant anti-bribery management system.</p>
+          <h3 style="font-size: 16px; font-weight: 700; color: #0a0a0a; margin: 0 0 8px 0; font-family: 'Inter', system-ui, -apple-system, sans-serif;">ISO 37001 Anti-Bribery</h3>
+          <p style="font-size: 14px; color: #6b7280; margin: 0; line-height: 1.5; font-family: 'Inter', system-ui, -apple-system, sans-serif;">Implement an ISO 37001-compliant anti-bribery management system.</p>
         </div>
       </a>
       <a href="abms-risk-assessment.html" style="text-decoration: none; display: block;">
         <div class="resource-card">
           <span style="display: inline-block; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: #ffffff; background: #6366f1; border-radius: 4px; padding: 3px 8px; margin-bottom: 12px;">Whitepaper</span>
-          <h3 style="font-size: 16px; font-weight: 700; color: #0a0a0a; margin: 0 0 8px 0; font-family: 'DM Sans', sans-serif;">ABMS Risk Assessment</h3>
-          <p style="font-size: 14px; color: #6b7280; margin: 0; line-height: 1.5; font-family: 'DM Sans', sans-serif;">A structured approach to bribery and corruption risk assessment under ISO 37001.</p>
+          <h3 style="font-size: 16px; font-weight: 700; color: #0a0a0a; margin: 0 0 8px 0; font-family: 'Inter', system-ui, -apple-system, sans-serif;">ABMS Risk Assessment</h3>
+          <p style="font-size: 14px; color: #6b7280; margin: 0; line-height: 1.5; font-family: 'Inter', system-ui, -apple-system, sans-serif;">A structured approach to bribery and corruption risk assessment under ISO 37001.</p>
         </div>
       </a>
     </div>

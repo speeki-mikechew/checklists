@@ -72,7 +72,7 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   color: var(--text);
   background: var(--white);
   line-height: 1.8;
@@ -82,12 +82,12 @@ body {
 
 /* ─── NAV ─────────────────────────────────────────── */
 nav {
-  background: #0f1c3f;
+  background: #ffffff;
   padding: 0 32px;
   position: sticky;
   top: 0;
   z-index: 100;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid var(--border);
 }
 .nav-content {
   max-width: 1200px;
@@ -107,7 +107,7 @@ nav {
   gap: 24px;
 }
 .nav-back {
-  color: #e2e8f0;
+  color: var(--navy);
   text-decoration: none;
   font-size: 14px;
   display: flex;
@@ -118,7 +118,7 @@ nav {
 .nav-back:hover { color: #00FF7F; }
 .nav-cta {
   background: #00FF7F;
-  color: #0f1c3f;
+  color: var(--navy);
   padding: 8px 20px;
   border-radius: 6px;
   text-decoration: none;
@@ -201,7 +201,7 @@ nav {
 }
 .hero-tag svg { width: 12px; height: 12px; }
 .hero-title {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   font-size: 42px;
   font-weight: 800;
   line-height: 1.15;
@@ -379,7 +379,7 @@ nav {
 .stat-item:first-child { padding-left: 0; }
 .stat-item:last-child { border-right: none; }
 .stat-number {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   font-size: 36px;
   color: var(--navy);
   line-height: 1;
@@ -401,13 +401,36 @@ nav {
 
 /* ─── ARTICLE ─────────────────────────────────────── */
 .article h2 {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   font-size: 28px;
   color: var(--navy);
   margin: 48px 0 16px;
   line-height: 1.2;
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 .article h2:first-child { margin-top: 0; }
+/* ─── SECTION NUMBERING ──────────────────────────── */
+.article {
+  counter-reset: section;
+}
+.article h2::before {
+  counter-increment: section;
+  content: counter(section);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #00FF7F;
+  color: #0f1c3f;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
 .article h3 {
   font-size: 20px;
   font-weight: 600;
@@ -440,7 +463,7 @@ nav {
 }
 .pullquote::before {
   content: '"';
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   font-size: 96px;
   color: var(--teal);
   opacity: 0.2;
@@ -450,7 +473,7 @@ nav {
   line-height: 1;
 }
 .pullquote p {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   font-size: 24px;
   line-height: 1.5;
   color: var(--white);
@@ -726,7 +749,7 @@ footer .container {
 <nav>
     <div class="nav-content">
         <a href="../index.html" class="nav-logo" aria-label="Speeki - Back to Resources Hub">
-            <img src="../speeki-logo-white.png" alt="Speeki" style="height: 50px; width: auto;">
+            <img src="../speeki-logo.png" alt="Speeki" style="height: 50px; width: auto;">
         </a>
         <div class="nav-right">
             <a href="../index.html" class="nav-back" aria-label="Back to all resources">
@@ -853,7 +876,7 @@ footer .container {
       <p style="font-size: 12px; color: rgba(255,255,255,0.6); margin-top: 12px;">No spam. Unsubscribe anytime.</p>
     </div>
 
-    <h2 id="problem">1. The Problem: Sustainability Reporting Without Controls</h2>
+    <h2 id="problem">The Problem: Sustainability Reporting Without Controls</h2>
 
     <p>Walk into any large organisation's sustainability team today and ask a simple question: "Show me the documented control that governs how your Scope 2 emissions figure moves from raw utility invoice to published report." In the vast majority of cases, the answer will be silence, or a vague gesture towards a spreadsheet maintained by one person.</p>
 
@@ -906,7 +929,7 @@ footer .container {
       </div>
     </div>
 
-    <h2 id="icsr">2. What ICSR Should Look Like</h2>
+    <h2 id="icsr">What ICSR Should Look Like</h2>
 
     <p>Internal Controls over Sustainability Reporting must mirror the architecture of ICFR — adapted for the unique characteristics of non-financial data, but built on the same foundational principles. The COSO Internal Control — Integrated Framework provides the established model.</p>
 
@@ -989,7 +1012,7 @@ footer .container {
       </tbody>
     </table>
 
-    <h2 id="responsibility">3. Whose Responsibility Is It?</h2>
+    <h2 id="responsibility">Whose Responsibility Is It?</h2>
 
     <p>This is an important point to clarify, because it is one of the most commonly misunderstood aspects of sustainability assurance: <strong>the external auditor's role is to evaluate your controls, not to build them</strong>. The external auditor assesses what the organisation has put in place, tests whether it works, and forms an opinion on whether the disclosures are reliable.</p>
 
@@ -1022,7 +1045,7 @@ footer .container {
       </div>
     </div>
 
-    <h2 id="auditor-needs">4. What External Auditors Need From You</h2>
+    <h2 id="auditor-needs">What External Auditors Need From You</h2>
 
     <p>When Speeki conducts a sustainability assurance engagement — whether under ISSA 5000, AA1000AS v3, or ISAE 3000 (Revised) — we need evidence that the reported data has been through a structured control process. We are not asking for perfection. We are asking for discipline.</p>
 
@@ -1055,7 +1078,7 @@ footer .container {
       </div>
     </div>
 
-    <h2 id="implementation">5. A Practical ICSR Implementation Roadmap</h2>
+    <h2 id="implementation">A Practical ICSR Implementation Roadmap</h2>
 
     <p>Building ICSR is not a multi-year, multi-million-dollar programme. It is a structured project that can be executed in phases, starting immediately with what you have.</p>
 
@@ -1118,7 +1141,7 @@ footer .container {
       </div>
     </div>
 
-    <h2 id="board-role">6. The Board and Audit Committee Role</h2>
+    <h2 id="board-role">The Board and Audit Committee Role</h2>
 
     <p>Boards and audit committees are increasingly being held accountable for the credibility of sustainability disclosures. Under CSRD, the audit committee's oversight mandate explicitly extends to sustainability reporting.</p>
 
@@ -1151,7 +1174,7 @@ footer .container {
       </div>
     </div>
 
-    <h2 id="trajectory">7. The Regulatory Trajectory: Where Things Are Heading</h2>
+    <h2 id="trajectory">The Regulatory Trajectory: Where Things Are Heading</h2>
 
     <p>The regulatory direction of travel is clear and converging across jurisdictions:</p>
 
@@ -1174,7 +1197,7 @@ footer .container {
       </div>
     </div>
 
-    <h2 id="conclusion">8. Conclusion: Controls Build Credibility</h2>
+    <h2 id="conclusion">Conclusion: Controls Build Credibility</h2>
 
     <p>The era of sustainability reporting as a narrative exercise is over. Stakeholders, regulators, and capital markets now treat sustainability disclosures as decision-useful information — information that must be reliable, verifiable, and assured.</p>
 
@@ -1254,22 +1277,22 @@ footer .container {
 <!-- FOOTER -->
 
 <!-- Related Resources -->
-<section class="related-resources" style="background: #f8f9fa; padding: 60px 0; font-family: 'DM Sans', sans-serif;">
+<section class="related-resources" style="background: #f8f9fa; padding: 60px 0; font-family: 'Inter', system-ui, -apple-system, sans-serif;">
   <div style="max-width: 1200px; margin: 0 auto; padding: 0 4vw;">
-    <h2 style="font-size: 28px; font-weight: 700; margin: 0 0 32px 0; color: #0a0a0a; font-family: 'DM Sans', sans-serif;">Related Resources</h2>
+    <h2 style="font-size: 28px; font-weight: 700; margin: 0 0 32px 0; color: #0a0a0a; font-family: 'Inter', system-ui, -apple-system, sans-serif;">Related Resources</h2>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
       <a href="../checklists/esg-reporting-assurance-checklist.html" style="text-decoration: none; display: block;">
         <div class="resource-card">
           <span style="display: inline-block; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: #ffffff; background: #00FF7F; border-radius: 4px; padding: 3px 8px; margin-bottom: 12px;">Checklist</span>
-          <h3 style="font-size: 16px; font-weight: 700; color: #0a0a0a; margin: 0 0 8px 0; font-family: 'DM Sans', sans-serif;">ESG Reporting Assurance</h3>
-          <p style="font-size: 14px; color: #6b7280; margin: 0; line-height: 1.5; font-family: 'DM Sans', sans-serif;">Prepare for external ESG assurance with CSRD, ESRS, and GRI coverage.</p>
+          <h3 style="font-size: 16px; font-weight: 700; color: #0a0a0a; margin: 0 0 8px 0; font-family: 'Inter', system-ui, -apple-system, sans-serif;">ESG Reporting Assurance</h3>
+          <p style="font-size: 14px; color: #6b7280; margin: 0; line-height: 1.5; font-family: 'Inter', system-ui, -apple-system, sans-serif;">Prepare for external ESG assurance with CSRD, ESRS, and GRI coverage.</p>
         </div>
       </a>
       <a href="../checklists/anti-greenwashing-checklist.html" style="text-decoration: none; display: block;">
         <div class="resource-card">
           <span style="display: inline-block; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: #ffffff; background: #00FF7F; border-radius: 4px; padding: 3px 8px; margin-bottom: 12px;">Checklist</span>
-          <h3 style="font-size: 16px; font-weight: 700; color: #0a0a0a; margin: 0 0 8px 0; font-family: 'DM Sans', sans-serif;">Anti-Greenwashing</h3>
-          <p style="font-size: 14px; color: #6b7280; margin: 0; line-height: 1.5; font-family: 'DM Sans', sans-serif;">Audit your environmental claims against ESMA, FCA, and ASIC greenwashing standards.</p>
+          <h3 style="font-size: 16px; font-weight: 700; color: #0a0a0a; margin: 0 0 8px 0; font-family: 'Inter', system-ui, -apple-system, sans-serif;">Anti-Greenwashing</h3>
+          <p style="font-size: 14px; color: #6b7280; margin: 0; line-height: 1.5; font-family: 'Inter', system-ui, -apple-system, sans-serif;">Audit your environmental claims against ESMA, FCA, and ASIC greenwashing standards.</p>
         </div>
       </a>
     </div>

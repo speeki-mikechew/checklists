@@ -72,7 +72,7 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   color: var(--text);
   background: var(--white);
   line-height: 1.8;
@@ -82,12 +82,12 @@ body {
 
 /* ─── NAV ─────────────────────────────────────────── */
 nav {
-  background: #0f1c3f;
+  background: #ffffff;
   padding: 0 32px;
   position: sticky;
   top: 0;
   z-index: 100;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid var(--border);
 }
 .nav-content {
   max-width: 1200px;
@@ -107,7 +107,7 @@ nav {
   gap: 24px;
 }
 .nav-back {
-  color: #e2e8f0;
+  color: var(--navy);
   text-decoration: none;
   font-size: 14px;
   display: flex;
@@ -118,7 +118,7 @@ nav {
 .nav-back:hover { color: #00FF7F; }
 .nav-cta {
   background: #00FF7F;
-  color: #0f1c3f;
+  color: var(--navy);
   padding: 8px 20px;
   border-radius: 6px;
   text-decoration: none;
@@ -201,7 +201,7 @@ nav {
 }
 .hero-tag svg { width: 12px; height: 12px; }
 .hero-title {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   font-size: 42px;
   font-weight: 800;
   line-height: 1.15;
@@ -379,7 +379,7 @@ nav {
 .stat-item:first-child { padding-left: 0; }
 .stat-item:last-child { border-right: none; }
 .stat-number {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   font-size: 36px;
   color: var(--navy);
   line-height: 1;
@@ -401,13 +401,36 @@ nav {
 
 /* ─── ARTICLE ─────────────────────────────────────── */
 .article h2 {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   font-size: 28px;
   color: var(--navy);
   margin: 48px 0 16px;
   line-height: 1.2;
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 .article h2:first-child { margin-top: 0; }
+/* ─── SECTION NUMBERING ──────────────────────────── */
+.article {
+  counter-reset: section;
+}
+.article h2::before {
+  counter-increment: section;
+  content: counter(section);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #00FF7F;
+  color: #0f1c3f;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
 .article h3 {
   font-size: 20px;
   font-weight: 600;
@@ -440,7 +463,7 @@ nav {
 }
 .pullquote::before {
   content: '\201C';
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   font-size: 96px;
   color: var(--teal);
   opacity: 0.2;
@@ -450,7 +473,7 @@ nav {
   line-height: 1;
 }
 .pullquote p {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   font-size: 24px;
   line-height: 1.5;
   color: var(--white);
@@ -701,7 +724,7 @@ footer .container {
 <nav>
     <div class="nav-content">
         <a href="../index.html" class="nav-logo" aria-label="Speeki - Back to Resources Hub">
-            <img src="../speeki-logo-white.png" alt="Speeki" style="height: 50px; width: auto;">
+            <img src="../speeki-logo.png" alt="Speeki" style="height: 50px; width: auto;">
         </a>
         <div class="nav-right">
             <a href="../index.html" class="nav-back" aria-label="Back to all resources">
@@ -810,7 +833,7 @@ footer .container {
 <!-- CONTENT -->
 <div class="content-section">
   <article class="article">
-    <h2 id="executive-summary">1. Executive Summary</h2>
+    <h2 id="executive-summary">Executive Summary</h2>
 
     <p class="lead">Materiality assessments sit at the foundation of every credible sustainability programme. They determine which ESG topics a company will prioritise, what metrics it will track, where it will allocate resources, and what it will ultimately report to stakeholders, regulators and assurance providers.</p>
 
@@ -834,7 +857,7 @@ footer .container {
       <p style="font-size: 12px; color: rgba(255,255,255,0.6); margin-top: 12px;">No spam. Unsubscribe anytime.</p>
     </div>
 
-    <h2 id="data-driven-rise">2. The Rise of Data-Driven Materiality Assessments</h2>
+    <h2 id="data-driven-rise">The Rise of Data-Driven Materiality Assessments</h2>
 
     <p>The sustainability landscape has changed dramatically over the past five years. The introduction of mandatory reporting frameworks such as the EU Corporate Sustainability Reporting Directive (CSRD), the International Sustainability Standards Board (ISSB) standards, and various national regulations has created enormous demand for materiality assessments. Companies that previously had no formal sustainability programme now need robust double materiality assessments, often within tight timelines.</p>
 
@@ -865,7 +888,7 @@ footer .container {
 
     <p>The practical effect is that companies receive what looks and functions like a consultant's deliverable but without the contextual guidance, challenge sessions, and tailored expertise that a genuine consulting engagement would involve. The document arrives with an implicit authority that discourages questioning.</p>
 
-    <h2 id="seventy-five-problem">3. The 75% Problem: Where External Assessments Fall Short</h2>
+    <h2 id="seventy-five-problem">The 75% Problem: Where External Assessments Fall Short</h2>
 
     <p>Based on our extensive assurance work, we have observed a consistent pattern: when companies implement an externally produced materiality assessment without meaningful internal review, the result is typically around 75% accurate. While that may sound acceptable at first glance, the implications of the remaining 25% are far-reaching.</p>
 
@@ -898,7 +921,7 @@ footer .container {
 
     <p>In our audit engagements, we frequently encounter companies that have built entire sustainability programmes on unreviewed external assessments. When we challenge a particular metric or target, the response is often: "This is what the data provider said was material." When we then ask why the company is investing significant resources tracking and reporting on a topic that has minimal actual relevance to their operations, the answer is silence. The assessment was never questioned.</p>
 
-    <h2 id="downstream-consequences">4. The Downstream Consequences</h2>
+    <h2 id="downstream-consequences">The Downstream Consequences</h2>
 
     <p>A materiality assessment is not an end in itself. It is the foundation upon which a company builds its entire sustainability architecture: strategy, targets, metrics, data collection processes, governance structures, and external reporting. When that foundation is 25% wrong, every layer built on top of it inherits and amplifies those errors.</p>
 
@@ -921,7 +944,7 @@ footer .container {
       </div>
     </div>
 
-    <h2 id="right-approach">5. The Right Approach: From External Input to Internal Ownership</h2>
+    <h2 id="right-approach">The Right Approach: From External Input to Internal Ownership</h2>
 
     <p>The solution is not to abandon external data providers or consultants. They bring valuable sector knowledge, regulatory expertise, benchmarking data, and methodological rigour. The solution is to fundamentally change how their output is used.</p>
 
@@ -1000,7 +1023,7 @@ footer .container {
       </div>
     </div>
 
-    <h2 id="comparison">6. From Input to Outcome: A Practical Comparison</h2>
+    <h2 id="comparison">From Input to Outcome: A Practical Comparison</h2>
 
     <p>The following table summarises the key differences between treating an external materiality assessment as the final answer versus treating it as an input to an internal process.</p>
 
@@ -1051,7 +1074,7 @@ footer .container {
       </tbody>
     </table>
 
-    <h2 id="regulatory-context">7. The Regulatory Context</h2>
+    <h2 id="regulatory-context">The Regulatory Context</h2>
 
     <p>The urgency of this issue is amplified by the evolving regulatory landscape. Under the EU Corporate Sustainability Reporting Directive (CSRD), companies must conduct robust double materiality assessments, and those assessments are subject to third-party assurance. The European Sustainability Reporting Standards (ESRS) issued by EFRAG provide detailed guidance on what a compliant materiality assessment process looks like, including requirements for stakeholder engagement, documentation, and governance oversight.</p>
 
@@ -1059,7 +1082,7 @@ footer .container {
 
     <p>In both cases, regulators and assurance providers will look beyond the output of the materiality assessment to examine the process. A company that simply presents an externally generated document without evidence of internal review, challenge, and refinement will face increasingly difficult questions. The EU's new regulation on ESG rating providers, taking effect in July 2026, further underscores the scrutiny being applied to the entire ESG data ecosystem.</p>
 
-    <h2 id="recommendations">8. Recommendations for Sustainability Teams</h2>
+    <h2 id="recommendations">Recommendations for Sustainability Teams</h2>
 
     <p>Based on our experience, the following actions are relevant for sustainability and ESG teams:</p>
 
@@ -1094,7 +1117,7 @@ footer .container {
       </div>
     </div>
 
-    <h2 id="conclusion">9. Conclusion</h2>
+    <h2 id="conclusion">Conclusion</h2>
 
     <p>The growing availability of data-driven materiality assessment tools represents a genuine advance for the sustainability profession. These platforms provide valuable sector intelligence, regulatory mapping, and benchmarking data that would be difficult and expensive for individual companies to replicate.</p>
 
@@ -1180,22 +1203,22 @@ footer .container {
 </div>
 
 <!-- Related Resources -->
-<section class="related-resources" style="background: #f8f9fa; padding: 60px 0; font-family: 'DM Sans', sans-serif;">
+<section class="related-resources" style="background: #f8f9fa; padding: 60px 0; font-family: 'Inter', system-ui, -apple-system, sans-serif;">
   <div style="max-width: 1200px; margin: 0 auto; padding: 0 4vw;">
-    <h2 style="font-size: 28px; font-weight: 700; margin: 0 0 32px 0; color: #0a0a0a; font-family: 'DM Sans', sans-serif;">Related Resources</h2>
+    <h2 style="font-size: 28px; font-weight: 700; margin: 0 0 32px 0; color: #0a0a0a; font-family: 'Inter', system-ui, -apple-system, sans-serif;">Related Resources</h2>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
       <a href="assurance-sustainability-readiness.html" style="text-decoration: none; display: block;">
         <div class="resource-card">
           <span style="display: inline-block; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: #ffffff; background: #00FF7F; border-radius: 4px; padding: 3px 8px; margin-bottom: 12px;">Whitepaper</span>
-          <h3 style="font-size: 16px; font-weight: 700; color: #0a0a0a; margin: 0 0 8px 0; font-family: 'DM Sans', sans-serif;">Getting Ready for Assurance in Sustainability</h3>
-          <p style="font-size: 14px; color: #6b7280; margin: 0; line-height: 1.5; font-family: 'DM Sans', sans-serif;">A practical guide to preparing your organisation for external ESG assurance.</p>
+          <h3 style="font-size: 16px; font-weight: 700; color: #0a0a0a; margin: 0 0 8px 0; font-family: 'Inter', system-ui, -apple-system, sans-serif;">Getting Ready for Assurance in Sustainability</h3>
+          <p style="font-size: 14px; color: #6b7280; margin: 0; line-height: 1.5; font-family: 'Inter', system-ui, -apple-system, sans-serif;">A practical guide to preparing your organisation for external ESG assurance.</p>
         </div>
       </a>
       <a href="../checklists/esg-reporting-assurance-checklist.html" style="text-decoration: none; display: block;">
         <div class="resource-card">
           <span style="display: inline-block; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: #ffffff; background: #00FF7F; border-radius: 4px; padding: 3px 8px; margin-bottom: 12px;">Checklist</span>
-          <h3 style="font-size: 16px; font-weight: 700; color: #0a0a0a; margin: 0 0 8px 0; font-family: 'DM Sans', sans-serif;">ESG Reporting Assurance</h3>
-          <p style="font-size: 14px; color: #6b7280; margin: 0; line-height: 1.5; font-family: 'DM Sans', sans-serif;">Prepare for external ESG assurance with CSRD, ESRS, and GRI coverage.</p>
+          <h3 style="font-size: 16px; font-weight: 700; color: #0a0a0a; margin: 0 0 8px 0; font-family: 'Inter', system-ui, -apple-system, sans-serif;">ESG Reporting Assurance</h3>
+          <p style="font-size: 14px; color: #6b7280; margin: 0; line-height: 1.5; font-family: 'Inter', system-ui, -apple-system, sans-serif;">Prepare for external ESG assurance with CSRD, ESRS, and GRI coverage.</p>
         </div>
       </a>
     </div>

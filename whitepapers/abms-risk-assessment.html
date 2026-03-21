@@ -71,7 +71,7 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   color: var(--text);
   background: var(--white);
   line-height: 1.8;
@@ -81,12 +81,12 @@ body {
 
 /* ─── NAV ─────────────────────────────────────────── */
 nav {
-  background: #0f1c3f;
+  background: #ffffff;
   padding: 0 32px;
   position: sticky;
   top: 0;
   z-index: 100;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid var(--border);
 }
 .nav-content {
   max-width: 1200px;
@@ -106,7 +106,7 @@ nav {
   gap: 24px;
 }
 .nav-back {
-  color: #e2e8f0;
+  color: var(--navy);
   text-decoration: none;
   font-size: 14px;
   display: flex;
@@ -117,7 +117,7 @@ nav {
 .nav-back:hover { color: #00FF7F; }
 .nav-cta {
   background: #00FF7F;
-  color: #0f1c3f;
+  color: var(--navy);
   padding: 8px 20px;
   border-radius: 6px;
   text-decoration: none;
@@ -200,7 +200,7 @@ nav {
 }
 .hero-tag svg { width: 12px; height: 12px; }
 .hero-title {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   font-size: 42px;
   font-weight: 800;
   line-height: 1.15;
@@ -378,7 +378,7 @@ nav {
 .stat-item:first-child { padding-left: 0; }
 .stat-item:last-child { border-right: none; }
 .stat-number {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   font-size: 36px;
   color: var(--navy);
   line-height: 1;
@@ -400,13 +400,36 @@ nav {
 
 /* ─── ARTICLE ─────────────────────────────────────── */
 .article h2 {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   font-size: 28px;
   color: var(--navy);
   margin: 48px 0 16px;
   line-height: 1.2;
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 .article h2:first-child { margin-top: 0; }
+/* ─── SECTION NUMBERING ──────────────────────────── */
+.article {
+  counter-reset: section;
+}
+.article h2::before {
+  counter-increment: section;
+  content: counter(section);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #00FF7F;
+  color: #0f1c3f;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
 .article h3 {
   font-size: 20px;
   font-weight: 600;
@@ -439,7 +462,7 @@ nav {
 }
 .pullquote::before {
   content: '"';
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   font-size: 96px;
   color: var(--teal);
   opacity: 0.2;
@@ -449,7 +472,7 @@ nav {
   line-height: 1;
 }
 .pullquote p {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   font-size: 24px;
   line-height: 1.5;
   color: var(--white);
@@ -711,7 +734,7 @@ footer .container {
 <nav>
     <div class="nav-content">
         <a href="../index.html" class="nav-logo" aria-label="Speeki - Back to Resources Hub">
-            <img src="../speeki-logo-white.png" alt="Speeki" style="height: 50px; width: auto;">
+            <img src="../speeki-logo.png" alt="Speeki" style="height: 50px; width: auto;">
         </a>
         <div class="nav-right">
             <a href="../index.html" class="nav-back" aria-label="Back to all resources">
@@ -842,7 +865,7 @@ footer .container {
       <p style="font-size: 12px; color: rgba(255,255,255,0.6); margin-top: 12px;">No spam. Unsubscribe anytime.</p>
     </div>
 
-    <h2 id="standards">1. The Standards Framework</h2>
+    <h2 id="standards">The Standards Framework</h2>
 
     <p>Three international standards govern the design and conduct of an anti-bribery risk assessment within an Anti-Bribery Management System (ABMS). Each plays a distinct role, and a well-constructed assessment draws on all three.</p>
 
@@ -879,7 +902,7 @@ footer .container {
       </tbody>
     </table>
 
-    <h2 id="specificity">2. The Specificity Imperative</h2>
+    <h2 id="specificity">The Specificity Imperative</h2>
 
     <p>The single most common failure in anti-bribery risk assessment is operating at the wrong level of abstraction. Organisations conduct assessments at the category level — "procurement bribery risk", "third-party risk", "permit-related risk" — and assign each category a rating. The output is a heat map. The heat map is filed. No useful action follows.</p>
 
@@ -945,7 +968,7 @@ footer .container {
       </tbody>
     </table>
 
-    <h2 id="gross-risk">3. Gross Risk: The Inherent Baseline</h2>
+    <h2 id="gross-risk">Gross Risk: The Inherent Baseline</h2>
 
     <p>Gross risk — sometimes called inherent risk — is the level of exposure that exists before any controls are applied. It reflects the raw vulnerability of a given scenario given the nature of the business, the jurisdiction, the transaction, and the counterparty, assuming nothing has been done to prevent or detect the bribery.</p>
 
@@ -1045,7 +1068,7 @@ footer .container {
 
     <p>The risk matrix maps the product of these two scores (1–25) to a rating band. Scores of 20–25 are EXTREME; 15–19 are HIGH; 8–14 are MEDIUM; and 1–7 are LOW. These thresholds must be defined before scoring begins and approved by management.</p>
 
-    <h2 id="controls">4. Controls: Mapping, Testing, and Net Risk</h2>
+    <h2 id="controls">Controls: Mapping, Testing, and Net Risk</h2>
 
     <p>Once gross risk scores are established, the assessment turns to the control framework. For each scenario, the assessor identifies every control that is in place that could reduce the likelihood that the bribery occurs, or the consequence if it does. Controls are then tested, and a net risk score is calculated based on the tested effectiveness of those controls.</p>
 
@@ -1132,7 +1155,7 @@ footer .container {
 
     <p><strong>Worked example:</strong> A Vietnamese sales representative has discretion over distributor selection and pricing. The gross risk score for a commercial kickback scenario is: Likelihood 4 (Likely) x Consequence 5 (Catastrophic, given FCPA and local law exposure) = 20 (EXTREME). After testing, a third-party due diligence control is rated Partially Effective (implementation gaps in annual refresh), and a gifts and hospitality pre-approval policy is rated Effective. The net likelihood is reduced from 4 to 2. Net risk = 2 x 5 = 10 (HIGH). The scenario remains HIGH, requiring senior management attention and a documented treatment plan.</p>
 
-    <h2 id="evaluation">5. Risk Evaluation and Treatment</h2>
+    <h2 id="evaluation">Risk Evaluation and Treatment</h2>
 
     <p>Risk evaluation is the process of comparing net risk scores against the organisation's defined risk appetite to determine which risks require treatment and at what level of escalation. Risk appetite must be defined by management and approved by the governing body before the evaluation phase begins — not after.</p>
 
@@ -1193,7 +1216,7 @@ footer .container {
 
     <p>Treatment plans must be specific, actionable, time-bound, and auditable. The risk assessment is not complete until every risk above the organisation's appetite threshold has a documented treatment plan with a named owner and a delivery date.</p>
 
-    <h2 id="scenarios">6. High-Risk Bribery Scenarios: A Reference Library</h2>
+    <h2 id="scenarios">High-Risk Bribery Scenarios: A Reference Library</h2>
 
     <p>The following scenario categories represent the most commonly identified high-risk bribery situations across ISO 37001 engagements. Organisations should use these as a starting point for scenario development, adapting each to their specific jurisdictions, business models, and counterparty profiles.</p>
 
@@ -1236,7 +1259,7 @@ footer .container {
       </div>
     </div>
 
-    <h2 id="process">7. Conducting the Risk Assessment: Process and Governance</h2>
+    <h2 id="process">Conducting the Risk Assessment: Process and Governance</h2>
 
     <p>The risk assessment is not a desk exercise. It requires structured engagement with business units, operational functions, and — where applicable — associated persons. The following phased process reflects the requirements of ISO 37001 Clause 4.5 and the methodology of ISO 31000.</p>
 
@@ -1344,7 +1367,7 @@ footer .container {
 
     <p>ISO 37001 requires the risk assessment to be reviewed and updated when significant changes occur. Triggers that mandate an unscheduled review include: entry into a new market or jurisdiction; acquisition or divestiture of a business; engagement of a new category of associated person; a bribery incident or near-miss within the organisation; a significant enforcement action against a sector peer; material changes to the regulatory or enforcement environment; and significant organisational restructuring affecting control ownership.</p>
 
-    <h2 id="failures">8. Common Failures in Anti-Bribery Risk Assessment</h2>
+    <h2 id="failures">Common Failures in Anti-Bribery Risk Assessment</h2>
 
     <p>The following failures are consistently observed in risk assessments reviewed during ISO 37001 gap analyses, certification pre-audits, and post-incident investigations. Each represents a methodological or governance deficiency that undermines the value and defensibility of the assessment.</p>
 
@@ -1410,7 +1433,7 @@ footer .container {
       </tbody>
     </table>
 
-    <h2 id="auditor">9. What an ISO 37001 Auditor Will Look For</h2>
+    <h2 id="auditor">What an ISO 37001 Auditor Will Look For</h2>
 
     <p>Certification auditors conducting an assessment under ISO 37001 will evaluate the bribery risk assessment across three evidence categories. Understanding the auditor's perspective allows organisations to build an assessment that is both genuinely useful and readily verifiable.</p>
 
@@ -1453,7 +1476,7 @@ footer .container {
       <p>An auditor's job is not to find a risk assessment document. It is to determine whether the organisation actually knows what its bribery risks are, and whether it has built controls that actually work.</p>
     </div>
 
-    <h2 id="conclusion">10. Conclusion</h2>
+    <h2 id="conclusion">Conclusion</h2>
 
     <p>The bribery risk assessment is not a compliance artefact to be produced for certification and then filed. It is the engine of the entire ABMS. Every element of ISO 37001 — due diligence scope, control design, training content, monitoring activity, incident response — should derive from the risk assessment. An ABMS that is disconnected from its risk assessment is an ABMS that is managing documentation rather than managing risk.</p>
 
@@ -1539,22 +1562,22 @@ footer .container {
 <!-- FOOTER -->
 
 <!-- Related Resources -->
-<section class="related-resources" style="background: #f8f9fa; padding: 60px 0; font-family: 'DM Sans', sans-serif;">
+<section class="related-resources" style="background: #f8f9fa; padding: 60px 0; font-family: 'Inter', system-ui, -apple-system, sans-serif;">
   <div style="max-width: 1200px; margin: 0 auto; padding: 0 4vw;">
-    <h2 style="font-size: 28px; font-weight: 700; margin: 0 0 32px 0; color: #0a0a0a; font-family: 'DM Sans', sans-serif;">Related Resources</h2>
+    <h2 style="font-size: 28px; font-weight: 700; margin: 0 0 32px 0; color: #0a0a0a; font-family: 'Inter', system-ui, -apple-system, sans-serif;">Related Resources</h2>
     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
       <a href="../checklists/iso-37001-checklist.html" style="text-decoration: none; display: block;">
         <div class="related-card" style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 24px; transition: border-color 0.2s, box-shadow 0.2s; height: 100%; box-sizing: border-box;">
           <span style="display: inline-block; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: #ffffff; background: #00FF7F; border-radius: 4px; padding: 3px 8px; margin-bottom: 12px;">Checklist</span>
-          <h3 style="font-size: 16px; font-weight: 700; color: #0a0a0a; margin: 0 0 8px 0; font-family: 'DM Sans', sans-serif;">ISO 37001 Anti-Bribery</h3>
-          <p style="font-size: 14px; color: #6b7280; margin: 0; line-height: 1.5; font-family: 'DM Sans', sans-serif;">Implement an ISO 37001-compliant anti-bribery management system.</p>
+          <h3 style="font-size: 16px; font-weight: 700; color: #0a0a0a; margin: 0 0 8px 0; font-family: 'Inter', system-ui, -apple-system, sans-serif;">ISO 37001 Anti-Bribery</h3>
+          <p style="font-size: 14px; color: #6b7280; margin: 0; line-height: 1.5; font-family: 'Inter', system-ui, -apple-system, sans-serif;">Implement an ISO 37001-compliant anti-bribery management system.</p>
         </div>
       </a>
       <a href="speeki-abms-whitepaper_1.html" style="text-decoration: none; display: block;">
         <div class="related-card" style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 24px; transition: border-color 0.2s, box-shadow 0.2s; height: 100%; box-sizing: border-box;">
           <span style="display: inline-block; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: #ffffff; background: #6366f1; border-radius: 4px; padding: 3px 8px; margin-bottom: 12px;">Whitepaper</span>
-          <h3 style="font-size: 16px; font-weight: 700; color: #0a0a0a; margin: 0 0 8px 0; font-family: 'DM Sans', sans-serif;">ABMS Objectives & KPIs</h3>
-          <p style="font-size: 14px; color: #6b7280; margin: 0; line-height: 1.5; font-family: 'DM Sans', sans-serif;">Setting measurable anti-bribery objectives aligned with ISO 37001.</p>
+          <h3 style="font-size: 16px; font-weight: 700; color: #0a0a0a; margin: 0 0 8px 0; font-family: 'Inter', system-ui, -apple-system, sans-serif;">ABMS Objectives & KPIs</h3>
+          <p style="font-size: 14px; color: #6b7280; margin: 0; line-height: 1.5; font-family: 'Inter', system-ui, -apple-system, sans-serif;">Setting measurable anti-bribery objectives aligned with ISO 37001.</p>
         </div>
       </a>
     </div>

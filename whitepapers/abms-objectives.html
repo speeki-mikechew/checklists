@@ -52,7 +52,7 @@
 html { scroll-behavior: smooth; }
 
 body {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   color: var(--text);
   background: var(--white);
   line-height: 1.8;
@@ -62,12 +62,12 @@ body {
 
 /* ─── NAV ─────────────────────────────────────────── */
 nav {
-  background: #0f1c3f;
+  background: #ffffff;
   padding: 0 32px;
   position: sticky;
   top: 0;
   z-index: 100;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid var(--border);
 }
 .nav-content {
   max-width: 1200px;
@@ -87,7 +87,7 @@ nav {
   gap: 24px;
 }
 .nav-back {
-  color: #e2e8f0;
+  color: var(--navy);
   text-decoration: none;
   font-size: 14px;
   display: flex;
@@ -98,7 +98,7 @@ nav {
 .nav-back:hover { color: #00FF7F; }
 .nav-cta {
   background: #00FF7F;
-  color: #0f1c3f;
+  color: var(--navy);
   padding: 8px 20px;
   border-radius: 6px;
   text-decoration: none;
@@ -181,7 +181,7 @@ nav {
 }
 .hero-tag svg { width: 12px; height: 12px; }
 .hero-title {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   font-size: 42px;
   font-weight: 800;
   line-height: 1.15;
@@ -359,7 +359,7 @@ nav {
 .stat-item:first-child { padding-left: 0; }
 .stat-item:last-child { border-right: none; }
 .stat-number {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   font-size: 36px;
   color: #0f1c3f;
   line-height: 1;
@@ -381,13 +381,36 @@ nav {
 
 /* ─── ARTICLE ─────────────────────────────────────── */
 .article h2 {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   font-size: 28px;
   color: #0f1c3f;
   margin: 48px 0 16px;
   line-height: 1.2;
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }
 .article h2:first-child { margin-top: 0; }
+/* ─── SECTION NUMBERING ──────────────────────────── */
+.article {
+  counter-reset: section;
+}
+.article h2::before {
+  counter-increment: section;
+  content: counter(section);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #00FF7F;
+  color: #0f1c3f;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  flex-shrink: 0;
+}
 .article h3 {
   font-size: 20px;
   font-weight: 600;
@@ -420,7 +443,7 @@ nav {
 }
 .pullquote::before {
   content: '"';
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   font-size: 96px;
   color: #00FF7F;
   opacity: 0.2;
@@ -430,7 +453,7 @@ nav {
   line-height: 1;
 }
 .pullquote p {
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
   font-size: 24px;
   line-height: 1.5;
   color: var(--white);
@@ -712,7 +735,7 @@ footer .container {
 <nav>
     <div class="nav-content">
         <a href="../index.html" class="nav-logo" aria-label="Speeki - Back to Resources Hub">
-            <img src="../speeki-logo-white.png" alt="Speeki" style="height: 50px; width: auto;">
+            <img src="../speeki-logo.png" alt="Speeki" style="height: 50px; width: auto;">
         </a>
         <div class="nav-right">
             <a href="../index.html" class="nav-back" aria-label="Back to all resources">
@@ -828,7 +851,7 @@ footer .container {
   <article class="article">
     <p class="lead">Ask most compliance teams what their ABMS objectives look like and you will hear: "Complete mandatory training for all employees." Or: "Conduct the annual risk assessment." These are not bad objectives. But they measure activity — not effectiveness. ISO 37001:2025 is explicit: objectives must be meaningful, genuinely connected to identified bribery risks, and capable of demonstrating whether the system is actually working.</p>
 
-    <h2 id="problem">1. The Problem with Simple Objectives</h2>
+    <h2 id="problem">The Problem with Simple Objectives</h2>
 
     <p>When organisations implement an Anti-Bribery Management System under ISO 37001, one of the most important — and most frequently mishandled — requirements is the setting of objectives. The objectives most teams produce track whether something was done, not whether doing it made any difference.</p>
 
@@ -840,13 +863,13 @@ footer .container {
 
     <p>This article argues that most organisations are leaving significant value on the table when they design their ABMS objectives — and that the organisations that get this right are not only better protected against bribery risk, but better positioned to defend their programme when it comes under external scrutiny.</p>
 
-    <h2 id="what-makes-effective">2. What Makes an ABMS Objective Genuinely Effective?</h2>
+    <h2 id="what-makes-effective">What Makes an ABMS Objective Genuinely Effective?</h2>
 
     <p>A well-constructed ABMS objective does five things simultaneously. It is connected to a specific, identified bribery risk in the organisation's risk register — not a generic category, but a named risk with a reference number. It has a measurable target that can be tracked over time and that tells the organisation whether it is improving, static, or going backwards. It explains how the measurement will actually be performed — which system, which data, which process, which person. It has a defined timeframe that creates accountability without being arbitrary. And it is owned by a named individual who is responsible for its achievement.</p>
 
     <p>The SMART framework — Specific, Measurable, Achievable, Relevant, Time-bound — is a useful starting point. But the application of SMART to ABMS objectives requires more rigour than it does in, say, a performance review. An ABMS objective that looks SMART on paper but is designed to be easily achievable rather than genuinely informative is not serving its purpose. It is generating false assurance.</p>
 
-    <h2 id="traps">3. The Traps Most Organisations Fall Into</h2>
+    <h2 id="traps">The Traps Most Organisations Fall Into</h2>
 
     <div class="gaps-grid">
       <div class="gap-card">
@@ -871,7 +894,7 @@ footer .container {
       <p>An objective designed for the organisation as a whole — set at a comfortable global average — may mask serious underperformance in the markets that matter most.</p>
     </div>
 
-    <h2 id="anatomy">4. Anatomy of a Well-Constructed ABMS Objective</h2>
+    <h2 id="anatomy">Anatomy of a Well-Constructed ABMS Objective</h2>
 
     <p>Before looking at the breadth of what a good objectives programme covers, it is worth examining the structure of a single well-constructed objective in detail. The following is a fully worked example using the objective of reducing the turnaround time for Level 1 due diligence reports (OBJ-005).</p>
 
@@ -951,7 +974,7 @@ footer .container {
       <p>An objective without an action plan is a statement of intent. An objective with a numbered action plan is a management commitment.</p>
     </div>
 
-    <h2 id="examples">5. Twenty-Five Examples of What Better Looks Like</h2>
+    <h2 id="examples">Twenty-Five Examples of What Better Looks Like</h2>
 
     <p>To illustrate what a more rigorous and comprehensive ABMS objectives programme looks like, below are twenty-five examples spanning the full range of ABMS risk areas. Each is linked to a specific risk, scoped appropriately as global, regional, or local, and designed around a measurement methodology rather than a completion checklist.</p>
 
@@ -1083,7 +1106,7 @@ footer .container {
       </div>
     </div>
 
-    <h2 id="architecture">6. The Architecture Behind Good Objectives</h2>
+    <h2 id="architecture">The Architecture Behind Good Objectives</h2>
 
     <p>What distinguishes the objectives above from a typical ABMS objectives register is architecture. Each one is built on three foundations that most organisations underinvest in when setting their objectives.</p>
 
@@ -1102,7 +1125,7 @@ footer .container {
       </div>
     </div>
 
-    <h2 id="regulators">7. What Auditors and Regulators Are Looking For</h2>
+    <h2 id="regulators">What Auditors and Regulators Are Looking For</h2>
 
     <p>The shift from ISO 37001:2016 to ISO 37001:2025 has brought with it a clearer expectation that objectives are substantive, not ceremonial. Certification auditors conducting surveillance audits are increasingly probing not just whether objectives exist, but whether they are genuine indicators of programme performance. Can the organisation demonstrate trend data over time? Can it explain what happened when a target was missed? Are objectives reviewed and updated when the risk landscape changes?</p>
 
@@ -1114,7 +1137,7 @@ footer .container {
 
     <p>There is also a board governance dimension. Senior leaders and non-executive directors who are expected to provide oversight of the ABMS need meaningful data to do so. Telling a board that anti-bribery training completion was 94% tells them almost nothing about whether the organisation is protected from bribery. Telling them that investigation closure times dropped from 94 days to 58 days, that the culture score in a high-risk market improved by 20 percentage points, and that the error rate in due diligence reports fell from 22% to 6% — that tells them something they can act on.</p>
 
-    <h2 id="getting-started">8. Getting Started</h2>
+    <h2 id="getting-started">Getting Started</h2>
 
     <p>Redesigning an ABMS objectives register does not need to be a transformation project. The following steps provide a practical path for organisations looking to move from activity-based to outcome-based objectives.</p>
 
@@ -1180,7 +1203,7 @@ footer .container {
       </div>
     </div>
 
-    <h2 id="conclusion">9. Conclusion</h2>
+    <h2 id="conclusion">Conclusion</h2>
 
     <p>ISO 37001:2025 sets a clear expectation: ABMS objectives should be meaningful, measurable, and connected to identified bribery risks. Most organisations meet the minimum threshold. The organisations that genuinely distinguish themselves — in the eyes of certifiers, regulators, boards, and their own employees — are the ones that go further.</p>
 

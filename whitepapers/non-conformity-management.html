@@ -40,6 +40,8 @@
   "mainEntityOfPage": "https://www.speeki.com/en-GB/resources/whitepapers/non-conformity-management.html"
 }
 </script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 :root {
   --navy: #0f1c3f;
@@ -82,12 +84,12 @@ body {
 
 /* ─── NAV ─────────────────────────────────────────── */
 nav {
-  background: #0f1c3f;
+  background: #ffffff;
   padding: 0 32px;
   position: sticky;
   top: 0;
   z-index: 100;
-  border-bottom: 1px solid rgba(255,255,255,0.1);
+  border-bottom: 1px solid var(--border);
 }
 .nav-content {
   max-width: 1200px;
@@ -107,7 +109,7 @@ nav {
   gap: 24px;
 }
 .nav-back {
-  color: #e2e8f0;
+  color: var(--navy);
   text-decoration: none;
   font-size: 14px;
   display: flex;
@@ -118,7 +120,7 @@ nav {
 .nav-back:hover { color: #00FF7F; }
 .nav-cta {
   background: #00FF7F;
-  color: #0f1c3f;
+  color: var(--navy);
   padding: 8px 20px;
   border-radius: 6px;
   text-decoration: none;
@@ -388,6 +390,9 @@ nav {
   margin-bottom: 24px;
 }
 
+.main-content {
+  counter-reset: section;
+}
 .main-content h2 {
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
   font-size: 28px;
@@ -395,6 +400,25 @@ nav {
   color: var(--navy);
   margin-top: 40px;
   margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.main-content h2::before {
+  counter-increment: section;
+  content: counter(section);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #00FF7F;
+  color: #0f1c3f;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  flex-shrink: 0;
 }
 
 .main-content h3 {
@@ -606,7 +630,7 @@ footer .container {
 <nav>
     <div class="nav-content">
         <a href="../index.html" class="nav-logo" aria-label="Speeki - Back to Resources Hub">
-            <img src="../speeki-logo-white.png" alt="Speeki" style="height: 50px; width: auto;">
+            <img src="../speeki-logo.png" alt="Speeki" style="height: 50px; width: auto;">
         </a>
         <div class="nav-right">
             <a href="../index.html" class="nav-back" aria-label="Back to all resources">
