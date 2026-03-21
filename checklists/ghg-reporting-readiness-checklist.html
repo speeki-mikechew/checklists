@@ -1693,6 +1693,16 @@
             document.getElementById('completedCount').textContent = completed;
             document.getElementById('remainingCount').textContent = TOTAL_ITEMS - completed;
             document.getElementById('percentageComplete').textContent = percentage + '%';
+
+            // Update sidebar progress
+            var sidebarProgressFill = document.getElementById('sidebarProgressFill');
+            var sidebarProgressText = document.getElementById('sidebarProgressText');
+            if (sidebarProgressFill) {
+                sidebarProgressFill.style.width = percentage + '%';
+            }
+            if (sidebarProgressText) {
+                sidebarProgressText.textContent = completed + '/' + TOTAL_ITEMS;
+            }
         }
 
         function resetProgress() {
@@ -1756,17 +1766,7 @@
                     } else {
                         item.classList.remove('checked');
                     }
-                                // Update sidebar progress
-            var sidebarProgressFill = document.getElementById('sidebarProgressFill');
-            var sidebarProgressText = document.getElementById('sidebarProgressText');
-            if (sidebarProgressFill) {
-                sidebarProgressFill.style.width = percentage + '%';
-            }
-            if (sidebarProgressText) {
-                sidebarProgressText.textContent = checkedCount + '/' + TOTAL_ITEMS;
-            }
-
-            saveProgress();
+                    saveProgress();
                 });
             });
 
