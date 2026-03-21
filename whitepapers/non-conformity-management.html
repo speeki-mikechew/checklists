@@ -753,6 +753,15 @@ footer .container {
 </section>
 <section class="content-section" id="4--the-non-conformity-lifecycle-in-detail">
 <h2>4.  The Non-Conformity Lifecycle in Detail</h2>
+
+<table class="content-table" style="margin: 28px 0;">
+<tbody>
+<tr><td colspan="3" style="background: var(--navy); color: var(--white); font-weight: 700; text-align: center; font-size: 16px; letter-spacing: 0.04em;">THE NON-CONFORMITY LIFECYCLE</td></tr>
+<tr><td colspan="3" style="text-align: center; font-size: 17px; font-weight: 600; color: var(--navy); padding: 20px 16px;">DETECT &nbsp;&rarr;&nbsp; RECORD &nbsp;&rarr;&nbsp; CLASSIFY &nbsp;&rarr;&nbsp; CONTAIN &nbsp;&rarr;&nbsp; DIAGNOSE (RCA) &nbsp;&rarr;&nbsp; CORRECT &nbsp;&rarr;&nbsp; VERIFY &nbsp;&rarr;&nbsp; LEARN</td></tr>
+<tr><td colspan="3" style="text-align: center; color: var(--text-light); font-style: italic; padding: 12px 16px;">Each stage is a gate. Skipping any one of them breaks the system.</td></tr>
+</tbody>
+</table>
+
 <h2>4.1  Stage 1: Detection and Recording</h2>
 <p>Every non-conformity begins with detection. The system must provide multiple, accessible channels for recording nonconformities, and every person within the scope of the management system must understand their obligation to report gaps when they encounter them. Detection cannot be limited to formal audits.</p>
 <p>At the point of detection, the following information must be captured before any analysis begins:</p>
@@ -761,6 +770,13 @@ footer .container {
 <p>The specific requirement that has not been fulfilled (citing the relevant clause, procedure, or policy reference).</p>
 <p>A factual, objective description of what was observed — not an opinion or a proposed solution.</p>
 <p>Any immediate evidence gathered (documents reviewed, interviews conducted, system records accessed).</p>
+
+<table class="content-table" style="margin: 28px 0;">
+<tbody>
+<tr><td style="background: var(--navy); color: var(--white); font-weight: 700; font-size: 14px; letter-spacing: 0.04em; width: 180px;">CRITICAL PRINCIPLE</td><td style="color: var(--text); line-height: 1.7;">The recording of a non-conformity must describe the gap, not propose the solution. The solution is determined after root cause analysis. Conflating recording with solution design is one of the most common errors organisations make and systematically undermines RCA quality.</td></tr>
+</tbody>
+</table>
+
 <h2>4.2  Stage 2: Containment (Immediate Action)</h2>
 <p>For significant nonconformities — particularly those classified as Major or Critical — containment action may be required before root cause analysis is complete. Containment addresses the immediate risk, not the underlying cause.</p>
 <p>Examples of containment actions in an ISO 37001 context:</p>
@@ -772,9 +788,47 @@ footer .container {
 <p>Root cause analysis (RCA) is the diagnostic heart of the system. It is the stage most frequently skipped, abbreviated, or performed superficially — and this is why the same nonconformities recur across audit cycles.</p>
 <p>The purpose of RCA is to identify the deepest systemic cause of a non-conformity: not what happened, but why the management system allowed it to happen. The answer should always point to a process, policy, training, resource, or cultural factor that can actually be changed.</p>
 <p>The Five-Why technique is the most accessible RCA method for management system nonconformities. It works by iteratively asking &#x27;why&#x27; until the team reaches a root cause that is actionable and systemic.</p>
+
+<h3>Five-Why Worked Example</h3>
+<table class="content-table" style="margin: 28px 0;">
+<tbody>
+<tr style="background: var(--navy);"><td style="color: var(--white); font-weight: 700; width: 120px;">Level</td><td style="color: var(--white); font-weight: 700; width: 200px;">Question</td><td style="color: var(--white); font-weight: 700;">Example (ISO 37001 — Training Gap)</td></tr>
+<tr><td style="font-weight: 600; color: var(--navy);">Finding</td><td>What happened?</td><td>40% of staff in high-risk roles have not completed mandatory ABMS training within the required 12-month period.</td></tr>
+<tr><td style="font-weight: 600; color: var(--navy);">Why 1</td><td>Why did this happen?</td><td>Training completions were not tracked against the schedule.</td></tr>
+<tr><td style="font-weight: 600; color: var(--navy);">Why 2</td><td>Why were they not tracked?</td><td>No person was assigned responsibility for monitoring training compliance.</td></tr>
+<tr><td style="font-weight: 600; color: var(--navy);">Why 3</td><td>Why was no person assigned?</td><td>The training procedure does not assign ownership of the monitoring function.</td></tr>
+<tr><td style="font-weight: 600; color: var(--navy);">Why 4</td><td>Why does the procedure omit this?</td><td>The procedure was drafted to describe delivery, not monitoring, and was never reviewed against the full lifecycle requirement.</td></tr>
+<tr><td style="font-weight: 600; color: var(--navy);">Root Cause</td><td>Systemic cause</td><td>The organisation&#x27;s procedure design process does not require identification of monitoring responsibilities, creating a systematic gap between process documentation and operational accountability.</td></tr>
+</tbody>
+</table>
+
 <p>For complex nonconformities — particularly those classified as Systemic — a fishbone diagram provides a structured framework for exploring multiple contributing cause categories simultaneously. The six standard categories for management system analysis are:</p>
+
+<h3>Fishbone (Ishikawa) Six Categories</h3>
+<table class="content-table" style="margin: 28px 0;">
+<tbody>
+<tr style="background: var(--navy);"><td colspan="2" style="color: var(--white); font-weight: 700; text-align: center;">Fishbone / Ishikawa Cause Categories for Management System Analysis</td></tr>
+<tr><td style="font-weight: 600; color: var(--navy); width: 160px;">People</td><td>Training gaps, role clarity, competence, culture, accountability</td></tr>
+<tr><td style="font-weight: 600; color: var(--navy);">Process</td><td>Procedure design, workflow, decision points, controls, interfaces</td></tr>
+<tr><td style="font-weight: 600; color: var(--navy);">Systems</td><td>Technology, tools, data flows, monitoring capability, reporting</td></tr>
+<tr><td style="font-weight: 600; color: var(--navy);">Management</td><td>Oversight, tone at the top, resource allocation, priority signals</td></tr>
+<tr><td style="font-weight: 600; color: var(--navy);">Policy / Design</td><td>Requirements definition, scope, control design adequacy, framework gaps</td></tr>
+<tr><td style="font-weight: 600; color: var(--navy);">Environment</td><td>Regulatory change, organisational change, third-party dependency, context shifts</td></tr>
+</tbody>
+</table>
 <h2>4.4  Stage 4: Corrective Action</h2>
 <p>Corrective action is the planned and implemented response to a confirmed root cause. It is fundamentally different from correction.</p>
+
+<table class="content-table" style="margin: 28px 0;">
+<tbody>
+<tr style="background: var(--navy);"><td style="color: var(--white); font-weight: 700; width: 50%;">Correction</td><td style="color: var(--white); font-weight: 700; width: 50%;">Corrective Action</td></tr>
+<tr><td>Fixes the immediate instance of the problem.</td><td>Fixes the root cause so the problem cannot recur.</td></tr>
+<tr><td>Fast and tactical.</td><td>Planned, resource-allocated, and time-bound.</td></tr>
+<tr><td>May not prevent recurrence.</td><td>Designed specifically to prevent recurrence.</td></tr>
+<tr><td>E.g., re-training one employee who was identified as untrained.</td><td>E.g., redesigning the training monitoring procedure to assign accountability, create a dashboard, and trigger automated alerts.</td></tr>
+</tbody>
+</table>
+
 <p>Each corrective action must have: a specific description of the action to be taken, the name of the responsible person, a target completion date, resource requirements identified, and linkage back to the root cause it addresses. Actions not linked to root causes are corrections, not corrective actions.</p>
 <h2>4.5  Stage 5: Effectiveness Review</h2>
 <p>The effectiveness review is the stage most commonly omitted, and its absence is the primary reason nonconformities recur. Closing a corrective action record because the planned activities were completed is not sufficient. The system requires verification that the actions actually worked.</p>
@@ -783,6 +837,13 @@ footer .container {
 <p>Monitoring data demonstrating the control is now operating as intended.</p>
 <p>Process output metrics showing improvement over a defined review period.</p>
 <p>Competence records demonstrating staff have completed required training and have been assessed.</p>
+
+<table class="content-table" style="margin: 28px 0;">
+<tbody>
+<tr><td style="background: var(--navy); color: var(--white); font-weight: 700; font-size: 14px; letter-spacing: 0.04em; width: 120px;">KEY RULE</td><td style="color: var(--text); line-height: 1.7;">Effectiveness cannot be evaluated immediately after implementing a corrective action. A reasonable observation period — typically 30 to 90 days depending on severity — is required before the effectiveness review can be conducted and the NC formally closed.</td></tr>
+</tbody>
+</table>
+
 <h2>4.6  Stage 6: Trend Analysis and Learning</h2>
 <p>The final and most strategically valuable stage of the system is trend analysis. Individual nonconformities, once resolved, must be aggregated to identify patterns that individual findings do not reveal. Trend analysis is the mechanism by which the management system learns.</p>
 <p>Trend analysis should be performed at a minimum quarterly and must be presented to management review. Key questions to answer:</p>
@@ -795,19 +856,134 @@ footer .container {
 <section class="content-section" id="5--the-template-suite">
 <h2>5.  The Template Suite</h2>
 <p>The following templates form the complete operational infrastructure of a non-conformity management system. Each template serves a distinct function. They are designed to work together as a connected system, with each document referencing and feeding into the next.</p>
+
+<table class="content-table" style="margin: 28px 0;">
+<tbody>
+<tr style="background: var(--navy);"><td style="color: var(--white); font-weight: 700;">Template</td><td style="color: var(--white); font-weight: 700;">Purpose</td><td style="color: var(--white); font-weight: 700;">Feeds Into</td></tr>
+<tr><td style="font-weight: 600; color: var(--navy);">NC Record Form</td><td>Capture and classify each non-conformity at point of detection</td><td>NC Register</td></tr>
+<tr><td style="font-weight: 600; color: var(--navy);">NC Register</td><td>Central log of all nonconformities with status, owner, and lifecycle tracking</td><td>Management Review, Trend Report</td></tr>
+<tr><td style="font-weight: 600; color: var(--navy);">RCA Worksheet</td><td>Structured analysis of root cause using Five-Why or fishbone methodology</td><td>Corrective Action Plan</td></tr>
+<tr><td style="font-weight: 600; color: var(--navy);">Corrective Action Plan (CAP)</td><td>Detailed plan for implementing corrective actions linked to root causes</td><td>Effectiveness Review</td></tr>
+<tr><td style="font-weight: 600; color: var(--navy);">Effectiveness Review Form</td><td>Structured assessment of whether corrective actions have eliminated the root cause</td><td>NC Register (closure), Trend Report</td></tr>
+<tr><td style="font-weight: 600; color: var(--navy);">NC Trend Analysis Report</td><td>Quarterly/annual aggregation and pattern analysis of all NCs</td><td>Management Review</td></tr>
+</tbody>
+</table>
+
 <h2>Template 1: Non-Conformity Record Form</h2>
+
+<table class="content-table" style="margin: 28px 0;">
+<tbody>
+<tr><td colspan="4" style="background: var(--navy); color: var(--white); font-weight: 700; text-align: center; font-size: 15px; letter-spacing: 0.04em;">NON-CONFORMITY RECORD FORM</td></tr>
+<tr><td colspan="4" style="background: var(--gray-100); font-weight: 700; color: var(--navy); font-size: 14px;">PART A — IDENTIFICATION</td></tr>
+<tr><td style="font-weight: 600; color: var(--navy); width: 20%;">NC Reference Number</td><td style="width: 30%;">NC-[YYYY]-[SEQ]</td><td style="font-weight: 600; color: var(--navy); width: 20%;">Date Detected</td><td style="width: 30%;">DD/MM/YYYY</td></tr>
+<tr><td style="font-weight: 600; color: var(--navy);">Detected By (Name / Role)</td><td></td><td style="font-weight: 600; color: var(--navy);">Source</td><td>Audit / Incident / Monitoring / Other</td></tr>
+<tr><td colspan="4" style="background: var(--gray-100); font-weight: 700; color: var(--navy); font-size: 14px;">PART B — CLASSIFICATION</td></tr>
+<tr><td style="font-weight: 600; color: var(--navy);">Severity</td><td>&#9744; Critical &nbsp; &#9744; Major &nbsp; &#9744; Minor</td><td style="font-weight: 600; color: var(--navy);">Type</td><td>&#9744; Documentation &nbsp; &#9744; Implementation &nbsp; &#9744; Effectiveness &nbsp; &#9744; Systemic</td></tr>
+<tr><td style="font-weight: 600; color: var(--navy);">Requirement Reference</td><td colspan="3">ISO 37001 Clause / Policy / Procedure reference</td></tr>
+<tr><td colspan="4" style="background: var(--gray-100); font-weight: 700; color: var(--navy); font-size: 14px;">PART C — DESCRIPTION OF NON-CONFORMITY</td></tr>
+<tr><td colspan="4" style="color: var(--text-light); font-style: italic; min-height: 60px;">Describe the observed gap (factual, objective — do not propose solutions here):</td></tr>
+<tr><td colspan="4" style="background: var(--gray-100); font-weight: 700; color: var(--navy); font-size: 14px;">PART D — CONTAINMENT (if required)</td></tr>
+<tr><td style="font-weight: 600; color: var(--navy);">Immediate Action Taken</td><td></td><td style="font-weight: 600; color: var(--navy);">Date / By Whom</td><td></td></tr>
+<tr><td colspan="4" style="background: var(--gray-100); font-weight: 700; color: var(--navy); font-size: 14px;">PART E — ASSIGNMENT</td></tr>
+<tr><td style="font-weight: 600; color: var(--navy);">Assigned To</td><td></td><td style="font-weight: 600; color: var(--navy);">RCA Due Date</td><td></td></tr>
+</tbody>
+</table>
+
 <h2>Template 2: NC Register</h2>
 <p>The NC Register is the master log of all non-conformities, maintained in real time by the Management System Owner. It is the primary input to management review and trend analysis. The following fields are mandatory:</p>
+<table class="content-table" style="margin: 28px 0; overflow-x: auto;">
+<tbody>
+<tr style="background: var(--navy);"><td style="color: var(--white); font-weight: 700; font-size: 13px;">NC Ref</td><td style="color: var(--white); font-weight: 700; font-size: 13px;">Detected</td><td style="color: var(--white); font-weight: 700; font-size: 13px;">Source</td><td style="color: var(--white); font-weight: 700; font-size: 13px;">Severity</td><td style="color: var(--white); font-weight: 700; font-size: 13px;">Type</td><td style="color: var(--white); font-weight: 700; font-size: 13px;">Requirement</td><td style="color: var(--white); font-weight: 700; font-size: 13px;">Description (Summary)</td><td style="color: var(--white); font-weight: 700; font-size: 13px;">Owner</td><td style="color: var(--white); font-weight: 700; font-size: 13px;">Status</td></tr>
+<tr><td style="font-weight: 600; white-space: nowrap;">NC-2025-001</td><td style="white-space: nowrap;">15 Jan 25</td><td>Int. Audit</td><td>Major</td><td>Implementation</td><td style="font-size: 13px;">ISO 37001 &sect;8.4 / Training Procedure</td><td>40% of high-risk role staff not trained within required period</td><td>HR Director</td><td style="font-weight: 600; color: var(--gold);">In Progress</td></tr>
+<tr><td style="font-weight: 600; white-space: nowrap;">NC-2025-002</td><td style="white-space: nowrap;">22 Jan 25</td><td>Monitoring</td><td>Minor</td><td>Documentation</td><td style="font-size: 13px;">ABMS Policy &sect;4.3</td><td>One BP file missing signed anti-bribery clause</td><td>Legal Counsel</td><td style="font-weight: 600; color: var(--teal-text);">Closed</td></tr>
+</tbody>
+</table>
+
 <p>Additional required fields not shown above: CAP reference, RCA completion date, corrective action due date, effectiveness review date, closure date, and reviewer name.</p>
 <h2>Template 3: Root Cause Analysis Worksheet</h2>
 <p>The RCA Worksheet must be completed for all Major and Critical nonconformities. For Minor nonconformities, simplified RCA (minimum three-Why iterations) is acceptable. The worksheet travels with the NC record and is retained as evidence.</p>
+
+<table class="content-table" style="margin: 28px 0;">
+<tbody>
+<tr><td colspan="2" style="background: var(--navy); color: var(--white); font-weight: 700; text-align: center; font-size: 15px; letter-spacing: 0.04em;">ROOT CAUSE ANALYSIS WORKSHEET</td></tr>
+<tr><td colspan="2" style="color: var(--text-light);">NC Reference: &nbsp;____________________&nbsp;&nbsp;&nbsp;&nbsp; Date of RCA: &nbsp;____________________&nbsp;&nbsp;&nbsp;&nbsp; Facilitated by: &nbsp;____________________</td></tr>
+<tr><td colspan="2" style="background: var(--gray-100); font-weight: 700; color: var(--navy); font-size: 14px;">METHOD SELECTION</td></tr>
+<tr><td colspan="2">&#9744; Five-Why Method &nbsp;(use for isolated or implementation-type NCs) &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#9744; Fishbone / Ishikawa &nbsp;(use for systemic or effectiveness-type NCs)</td></tr>
+<tr><td colspan="2" style="background: var(--gray-100); font-weight: 700; color: var(--navy); font-size: 14px;">NON-CONFORMITY STATEMENT (copy from NC Record — factual, no solution language)</td></tr>
+<tr><td colspan="2" style="min-height: 40px; color: var(--text-light); font-style: italic;">&nbsp;</td></tr>
+<tr><td colspan="2" style="background: var(--gray-100); font-weight: 700; color: var(--navy); font-size: 14px;">FIVE-WHY ANALYSIS</td></tr>
+<tr style="background: var(--navy);"><td style="color: var(--white); font-weight: 700; width: 120px;">Level</td><td style="color: var(--white); font-weight: 700;">Why / Response</td></tr>
+<tr><td style="font-weight: 600; color: var(--navy);">Why 1</td><td></td></tr>
+<tr><td style="font-weight: 600; color: var(--navy);">Why 2</td><td></td></tr>
+<tr><td style="font-weight: 600; color: var(--navy);">Why 3</td><td></td></tr>
+<tr><td style="font-weight: 600; color: var(--navy);">Why 4</td><td></td></tr>
+<tr><td style="font-weight: 600; color: var(--navy);">Why 5</td><td></td></tr>
+<tr><td colspan="2" style="background: var(--gray-100); font-weight: 700; color: var(--navy); font-size: 14px;">ROOT CAUSE</td></tr>
+<tr><td colspan="2" style="color: var(--text-light); font-style: italic;">State the systemic root cause — it must be actionable:</td></tr>
+<tr><td style="font-weight: 600; color: var(--navy);">Contributing Factor(s) Identified:</td><td>RCA Sign-off: &nbsp;Name / Date:</td></tr>
+</tbody>
+</table>
+
 <h2>Template 4: Corrective Action Plan</h2>
 <p>The Corrective Action Plan (CAP) is a structured document linking each identified root cause to specific, measurable, and time-bound corrective actions. It is distinct from the NC Record and must be referenced by unique CAP number. One CAP may address multiple root causes from a single NC, but each corrective action must trace to a specific cause.</p>
+
+<table class="content-table" style="margin: 28px 0;">
+<tbody>
+<tr style="background: var(--navy);"><td style="color: var(--white); font-weight: 700; font-size: 13px; width: 80px;">Action #</td><td style="color: var(--white); font-weight: 700; font-size: 13px;">Corrective Action Description</td><td style="color: var(--white); font-weight: 700; font-size: 13px; width: 120px;">Responsible</td><td style="color: var(--white); font-weight: 700; font-size: 13px; width: 100px;">Due Date</td><td style="color: var(--white); font-weight: 700; font-size: 13px;">Resources Required</td></tr>
+<tr><td style="font-weight: 600; color: var(--navy);">CA-001</td><td>Revise Training Monitoring Procedure to assign named owner for compliance tracking and add monthly monitoring obligation.</td><td>HR Director</td><td>28 Feb 2025</td><td>2 days HR team + Legal review</td></tr>
+<tr><td style="font-weight: 600; color: var(--navy);">CA-002</td><td>Implement training compliance dashboard with automated 30-day pre-expiry alerts for all roles in high-risk classification.</td><td>IT / Learning Platform Admin</td><td>15 Mar 2025</td><td>Platform configuration — no additional budget</td></tr>
+</tbody>
+</table>
+
+<table class="content-table" style="margin: 28px 0;">
+<tbody>
+<tr style="background: var(--navy);"><td style="color: var(--white); font-weight: 700;">Field</td><td style="color: var(--white); font-weight: 700;">Value</td><td style="color: var(--white); font-weight: 700;">Guidance</td></tr>
+<tr><td style="font-weight: 600; color: var(--navy);">CAP Number</td><td></td><td>Format: CAP-[NC Ref]-[Year]</td></tr>
+<tr><td style="font-weight: 600; color: var(--navy);">Linked NC Reference</td><td></td><td>Must match NC Register entry</td></tr>
+<tr><td style="font-weight: 600; color: var(--navy);">Root Cause Addressed</td><td></td><td>Paste root cause statement from RCA Worksheet</td></tr>
+<tr><td style="font-weight: 600; color: var(--navy);">Effectiveness Review Date</td><td></td><td>Set at minimum 30 days post-implementation (90 days for Major/Critical)</td></tr>
+<tr><td style="font-weight: 600; color: var(--navy);">Approved By</td><td></td><td>Management System Owner or delegate</td></tr>
+</tbody>
+</table>
+
 <h2>Template 5: Effectiveness Review Form</h2>
 <p>The effectiveness review must be conducted by someone other than the person who implemented the corrective action. It is not a self-assessment. It is a structured verification that the root cause has been eliminated and the non-conformity has not recurred.</p>
+
+<table class="content-table" style="margin: 28px 0;">
+<tbody>
+<tr><td colspan="3" style="background: var(--navy); color: var(--white); font-weight: 700; text-align: center; font-size: 15px; letter-spacing: 0.04em;">EFFECTIVENESS REVIEW FORM</td></tr>
+<tr><td colspan="3" style="color: var(--text-light);">NC Reference: &nbsp;________________&nbsp;&nbsp;&nbsp;&nbsp; CAP Reference: &nbsp;________________&nbsp;&nbsp;&nbsp;&nbsp; Review Date: &nbsp;________________&nbsp;&nbsp;&nbsp;&nbsp; Reviewer: &nbsp;________________</td></tr>
+<tr style="background: var(--navy);"><td style="color: var(--white); font-weight: 700;">Effectiveness Test Question</td><td style="color: var(--white); font-weight: 700; width: 200px;">Evidence Reviewed</td><td style="color: var(--white); font-weight: 700; width: 140px;">Result</td></tr>
+<tr><td>Has the corrective action been fully implemented as documented in the CAP?</td><td></td><td>&#9744; Yes &nbsp; &#9744; No</td></tr>
+<tr><td>Has the original non-conformity or an equivalent gap been observed since implementation?</td><td></td><td>&#9744; Yes &nbsp; &#9744; No</td></tr>
+<tr><td>Has the root cause identified in the RCA been eliminated or materially mitigated?</td><td></td><td>&#9744; Yes &nbsp; &#9744; No</td></tr>
+<tr><td>Has the corrective action introduced any new or unintended risks?</td><td></td><td>&#9744; Yes &nbsp; &#9744; No</td></tr>
+<tr><td>Does monitoring data / control testing / re-audit confirm the control is now operating effectively?</td><td></td><td>&#9744; Yes &nbsp; &#9744; No</td></tr>
+<tr><td colspan="3" style="background: var(--gray-100); font-weight: 700; color: var(--navy); font-size: 14px;">Overall Effectiveness Determination</td></tr>
+<tr><td colspan="3">&#9744; EFFECTIVE — NC may be formally closed &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#9744; PARTIALLY EFFECTIVE — additional actions required &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &#9744; NOT EFFECTIVE — CAP must be revised</td></tr>
+<tr><td style="font-weight: 600; color: var(--navy);">Reviewer Narrative</td><td colspan="2"></td></tr>
+</tbody>
+</table>
+
 <h2>Template 6: NC Trend Analysis Report</h2>
 <p>The Trend Analysis Report is produced quarterly by the Management System Owner and submitted to management review. It synthesises data from the NC Register to identify patterns, measure system performance, and flag issues requiring strategic attention.</p>
 <p>The report must include the following analytical sections:</p>
+
+<table class="content-table" style="margin: 28px 0;">
+<tbody>
+<tr style="background: var(--navy);"><td style="color: var(--white); font-weight: 700; width: 240px;">Analysis Section</td><td style="color: var(--white); font-weight: 700;">Content Required</td></tr>
+<tr><td style="font-weight: 600; color: var(--navy);">NC Volume Summary</td><td>Total NCs by period; comparison to prior period; breakdown by severity (Critical/Major/Minor)</td></tr>
+<tr><td style="font-weight: 600; color: var(--navy);">Source Analysis</td><td>NCs by detection source; trend over time; identifies whether coverage is balanced across detection channels</td></tr>
+<tr><td style="font-weight: 600; color: var(--navy);">Type Distribution</td><td>NCs by type (Documentation/Implementation/Effectiveness/Systemic); pattern identification</td></tr>
+<tr><td style="font-weight: 600; color: var(--navy);">Process / Clause Heat Map</td><td>Which ISO clauses and internal process areas are generating the most findings; identifies structural weaknesses</td></tr>
+<tr><td style="font-weight: 600; color: var(--navy);">Root Cause Category Frequency</td><td>Which root cause categories (People/Process/Systems/Management/Policy/Environment) appear most often</td></tr>
+<tr><td style="font-weight: 600; color: var(--navy);">Time-to-Closure Performance</td><td>Average days to close by severity; trend; identifies bottlenecks in the corrective action process</td></tr>
+<tr><td style="font-weight: 600; color: var(--navy);">Effectiveness Review Results</td><td>Proportion of CAs assessed as Effective / Partially Effective / Not Effective; trend</td></tr>
+<tr><td style="font-weight: 600; color: var(--navy);">Management Escalations</td><td>NCs escalated to senior management; status; decisions taken</td></tr>
+<tr><td style="font-weight: 600; color: var(--navy);">System Actions</td><td>Specific actions for management review to consider — informed by pattern data</td></tr>
+</tbody>
+</table>
+
 </section>
 <section class="content-section" id="6--connecting-non-conformity-management-to-the-broader-system">
 <h2>6.  Connecting Non-Conformity Management to the Broader System</h2>
@@ -829,22 +1005,28 @@ footer .container {
 <h3>Mistake 1: Treating Correction as Corrective Action</h3>
 <p>The most common error is conflating correction (fixing the immediate problem) with corrective action (eliminating the root cause). An organisation that discovers an untrained employee and sends them to training has performed a correction. If the underlying reason for the training gap — a broken onboarding process, an outdated training matrix, insufficient resource allocation — is not identified and addressed, the same type of finding will recur with different individuals. Correction addresses the symptom. Corrective action addresses the system.</p>
 
-<h3>Mistake 2: Closing Non-Conformities Without Effectiveness Review</h3>
+<h3>Mistake 2: Recording Proposed Solutions Rather Than Observed Gaps</h3>
+<p>When the description of a non-conformity pre-determines the solution before analysis, root cause analysis is bypassed entirely. An NC record that reads &#x27;training needs to be updated&#x27; has already decided the corrective action — the RCA stage becomes a formality. Train all auditors and monitors: describe the gap, not the fix. Solutions come after diagnosis.</p>
+
+<h3>Mistake 3: Closing Non-Conformities Without Effectiveness Review</h3>
 <p>Many organisations close NC records once the planned corrective actions have been implemented. This is premature. Implementation does not equal effectiveness. A revised procedure that no one reads, a new control that is routinely bypassed, or a training programme that does not change behaviour — all represent completed actions that have not resolved the underlying problem. NCs remain open until an independent effectiveness review confirms that the root cause has been eliminated and the non-conformity has not recurred.</p>
 
-<h3>Mistake 3: Limiting Detection to Internal Audits</h3>
+<h3>Mistake 4: Limiting Detection to Internal Audits</h3>
 <p>Organisations that rely exclusively on internal audits as their source of non-conformities are systematically blind to entire categories of failure. Internal audits are periodic and sample-based by design — they cannot detect every gap. A mature system captures nonconformities from incident reports, complaints, whistleblowing channels, management reviews, regulatory inspections, performance monitoring, and self-assessments. If the NC register is populated only during audit season, the system is not functioning as intended.</p>
 
-<h3>Mistake 4: Superficial Root Cause Analysis</h3>
+<h3>Mistake 5: Treating All NCs with the Same Urgency</h3>
+<p>Without a documented classification system, resource is wasted on minor findings while Critical gaps receive insufficient attention. When every non-conformity triggers the same response protocol — the same depth of RCA, the same escalation path, the same reporting requirements — the system loses its ability to prioritise. Apply a documented classification system and calibrate response protocols to severity. Critical and Major NCs require full Five-Why or fishbone RCA, senior management escalation, and formal effectiveness review. Minor NCs require simplified analysis and proportionate response.</p>
+
+<h3>Mistake 6: Superficial Root Cause Analysis</h3>
 <p>Root cause analysis that stops at the first plausible explanation produces corrective actions that address proximate causes rather than systemic ones. &#x27;The employee did not follow the procedure&#x27; is not a root cause — it is a description of the non-conformity itself. The root cause lies in why the procedure was not followed: insufficient training, inaccessible documentation, conflicting instructions, inadequate supervision, or a procedure that does not reflect operational reality. Effective RCA requires multiple iterations of &#x27;why&#x27; until the answer points to something the organisation can structurally change.</p>
 
-<h3>Mistake 5: No Trend Analysis</h3>
+<h3>Mistake 7: No Trend Analysis</h3>
 <p>Individual nonconformities, once resolved, contain limited strategic value. Their value multiplies when aggregated. Organisations that do not perform trend analysis miss patterns that individual findings do not reveal: recurring root cause categories, process areas with disproportionate NC volumes, seasonal or cyclical patterns, and declining or improving trajectories. Without trend analysis, management review receives anecdotal information rather than data-driven insight, and the management system cannot learn at an organisational level.</p>
 
-<h3>Mistake 6: Conflating Non-Conformities with Improvement Opportunities</h3>
+<h3>Mistake 8: Conflating Non-Conformities with Improvement Opportunities</h3>
 <p>Non-conformities and opportunities for improvement are distinct concepts with different system responses. A non-conformity is the non-fulfilment of a requirement — something that must be fixed. An opportunity for improvement is a potential enhancement to something that is already compliant — something that could be made better. Mixing them in the same register with the same classification and response process dilutes the urgency of genuine nonconformities and inflates NC statistics with items that do not represent actual failures. Each requires its own tracking mechanism and governance process.</p>
 
-<h3>Mistake 7: Assigning Corrective Actions to the Wrong Level</h3>
+<h3>Mistake 9: Assigning Corrective Actions to the Wrong Level</h3>
 <p>Corrective actions for systemic nonconformities are frequently assigned to operational staff who do not have the authority, budget, or organisational reach to implement systemic change. If a root cause analysis identifies a resourcing gap, a structural misalignment, or a policy deficiency, the corrective action owner must be someone with the authority to address it — typically a senior manager or the management system owner. Assigning systemic fixes to operational personnel virtually guarantees that the action will be recorded as &#x27;complete&#x27; while the root cause persists.</p>
 </section>
 <section class="content-section" id="8--implementation-roadmap">
