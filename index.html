@@ -1657,7 +1657,7 @@
                     <span class="stat-label">Professionals using our tools</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">15</span>
+                    <span class="stat-number" id="totalResourceCount">15</span>
                     <span class="stat-label">Interactive resources</span>
                 </div>
                 <div class="stat-item">
@@ -1865,7 +1865,7 @@
                         <button class="filter-btn" data-filter="topic" data-value="governance">Governance</button>
                         <button class="filter-btn" data-filter="topic" data-value="anti-bribery">Anti-Bribery</button>
                     </div>
-                    <span class="filter-results-count" id="filterResultsCount">12 resources</span>
+                    <span class="filter-results-count" id="filterResultsCount">19 resources</span>
                 </div>
             </div>
 
@@ -2238,7 +2238,7 @@
                 <div class="lead-magnet-grid">
                     <div class="lead-magnet-text">
                         <h2>Download the Complete ESG Toolkit</h2>
-                        <p>Get all 16 resources in a single PDF bundle, plus additional reference content for ESG and compliance professionals:</p>
+                        <p>Get all <span id="leadMagnetResourceCount">16</span> resources in a single PDF bundle, plus additional reference content for ESG and compliance professionals:</p>
                         <ul class="lead-magnet-benefits">
                             <li>All interactive resources in printable format</li>
                             <li>ESG readiness benchmark template</li>
@@ -3017,6 +3017,15 @@
             });
 
             applyFilters();
+        }());
+
+        // Auto-update resource counts across the page (no manual editing needed when adding resources)
+        (function() {
+            var totalResources = document.querySelectorAll('.checklist-card, .whitepaper-card').length;
+            var statEl = document.getElementById('totalResourceCount');
+            if (statEl) statEl.textContent = totalResources;
+            var leadEl = document.getElementById('leadMagnetResourceCount');
+            if (leadEl) leadEl.textContent = totalResources;
         }());
 
         // Hide exit modal if already subscribed
