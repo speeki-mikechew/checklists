@@ -840,7 +840,282 @@
             transition: color 0.2s;
         }
         .footer-links a:hover { color: #00FF7F; }
-</style>
+
+        /* Breadcrumb */
+        .breadcrumb {
+            background: var(--speeki-dark-blue);
+            padding: 12px 0;
+        }
+
+        .breadcrumb-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 4vw;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            color: rgba(255,255,255,0.5);
+        }
+
+        .breadcrumb a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--speeki-green-text);
+        }
+
+        .breadcrumb-sep {
+            opacity: 0.4;
+        }
+
+        .breadcrumb-current {
+            color: var(--speeki-green-text);
+        }
+
+        /* Header / Hero */
+        header {
+            background: linear-gradient(135deg, var(--speeki-dark-blue) 0%, #162050 100%);
+            color: #ffffff;
+            padding: 72px 4vw 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: -120px;
+            right: -80px;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(0,255,127,0.10) 0%, transparent 65%);
+            pointer-events: none;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: -80px;
+            left: 20%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(0,255,127,0.05) 0%, transparent 65%);
+            pointer-events: none;
+        }
+
+        .hero-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 340px;
+            gap: 64px;
+            align-items: start;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hero-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0,196,180,0.12);
+            border: 1px solid rgba(0,196,180,0.3);
+            color: var(--speeki-green);
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 6px 14px;
+            border-radius: 100px;
+            margin-bottom: 24px;
+            width: fit-content;
+        }
+
+        header h1 {
+            font-size: 52px;
+            margin-bottom: 12px;
+            font-weight: 700;
+            letter-spacing: -1px;
+            color: #ffffff;
+            line-height: 1.08;
+        }
+
+        .header-highlight {
+            color: var(--speeki-green);
+            font-style: italic;
+        }
+
+        header p {
+            font-size: 18px;
+            color: rgba(255,255,255,0.65);
+            max-width: 560px;
+            margin-bottom: 36px;
+            line-height: 1.5;
+            font-weight: 400;
+        }
+
+        .hero-meta {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .hero-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255,255,255,0.55);
+            font-size: 13px;
+        }
+
+        .hero-meta-dot {
+            width: 4px;
+            height: 4px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+        }
+
+        .hero-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--speeki-green);
+            color: var(--speeki-dark);
+            border: none;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: background 0.2s, transform 0.15s;
+        }
+
+        .btn-primary:hover {
+            background: #00e070;
+            transform: translateY(-1px);
+        }
+
+        .hero-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 32px;
+            backdrop-filter: blur(8px);
+            position: relative;
+            top: 12px;
+        }
+
+        .hero-card h3 {
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 14px;
+        }
+
+        .progress-section {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 0;
+            padding: 0;
+            background: transparent;
+            border: none;
+            max-width: 100%;
+        }
+
+        .progress-info {
+            text-align: left;
+            flex: 1;
+            width: 100%;
+        }
+
+        .progress-info h3 {
+            font-size: 12px;
+            color: rgba(255,255,255,0.55);
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+        }
+
+        .progress-bar {
+            width: 100%;
+            height: 6px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--speeki-green);
+            width: 0%;
+            transition: width 0.3s ease;
+            border-radius: 3px;
+        }
+
+        .progress-text {
+            color: rgba(255,255,255,0.85);
+            font-size: 16px;
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            background: var(--speeki-light-gray);
+            padding: 40px 4vw;
+            border-bottom: 1px solid var(--speeki-border);
+        }
+
+        .stats-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--speeki-dark);
+            letter-spacing: -1px;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: var(--speeki-gray);
+            margin-top: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+        }
+
+        </style>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -860,21 +1135,76 @@
             </div>
         </div>
     </nav>
+    <div class="breadcrumb">
+        <div class="breadcrumb-inner">
+            <a href="../index.html">Resources</a>
+            <span class="breadcrumb-sep">/</span>
+            <a href="../index.html?type=checklist">Checklists</a>
+            <span class="breadcrumb-sep">/</span>
+            <span class="breadcrumb-current">ISO 37000 Governance Checklist</span>
+        </div>
+    </div>
 
     <div class="container">
+        
         <header>
-            <h1>ISO 37000 <span class="header-highlight">Governance</span> Checklist</h1>
-            <p>ISO 37000 provides guidance on how to implement governance practices within an organisation. Published in September 2021, ISO 37000 constitutes an international consensus on what society defines as good governance since it was developed and approved by members from 77 countries.</p>
-            <div class="progress-section">
-                <div class="progress-info">
-                    <h3>Progress</h3>
-                    <div class="progress-bar">
-                        <div class="progress-fill" id="progressFill"></div>
+            <div class="hero-inner">
+                <div class="hero-content">
+                    <span class="hero-tag">Checklist</span>
+                    <h1>ISO 37000 <span class="header-highlight">Governance</span> Checklist</h1>
+                    <p>ISO 37000 provides guidance on how to implement governance practices within an organisation. Published in September 2021, ISO 37000 constitutes an international consensus on what society defines as good governance since it was developed and approved by members from 77 countries.</p>
+                    <div class="hero-meta">
+                        <div class="hero-meta-item">
+                            <span>7 Sections</span>
+                        </div>
+                        <div class="hero-meta-dot"></div>
+                        <div class="hero-meta-item">
+                            <span>29 Checkpoints</span>
+                        </div>
+                        <div class="hero-meta-dot"></div>
+                        <div class="hero-meta-item">
+                            <span>~12 min</span>
+                        </div>
+                    </div>
+                    <div class="progress-section">
+                        <div class="progress-info">
+                            <h3>Progress</h3>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="progressFill"></div>
+                            </div>
+                        </div>
+                        <div class="progress-text" id="progressText">0/29</div>
                     </div>
                 </div>
-                <div class="progress-text" id="progressText">0/7</div>
+                <div class="hero-card">
+                    <h3>Start checking items</h3>
+                    <button class="btn-primary" onclick="document.querySelector('.checklist-item').scrollIntoView({behavior: 'smooth'})">
+                        Get Started →
+                    </button>
+                </div>
             </div>
         </header>
+
+        <section class="stats-bar">
+            <div class="stats-inner">
+                <div class="stat-item">
+                    <div class="stat-number">7</div>
+                    <div class="stat-label">Sections</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">29</div>
+                    <div class="stat-label">Checkpoints</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="percentComplete">0%</div>
+                    <div class="stat-label">Complete</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="totalCompleted">0</div>
+                    <div class="stat-label">Done</div>
+                </div>
+            </div>
+        </section>
 
         <main id="main-content">
             <form id="checklistForm">
