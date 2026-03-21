@@ -1525,6 +1525,7 @@
             const percentage = Math.round((completed / TOTAL_ITEMS) * 100);
 
             document.getElementById('progressBar').style.width = percentage + '%';
+            if (window.updateStickyBar) window.updateStickyBar(percentage);
             document.getElementById('progressText').textContent = `${completed} of ${TOTAL_ITEMS} items completed (${percentage}%)`;
             document.getElementById('completedCount').textContent = completed;
             document.getElementById('remainingCount').textContent = TOTAL_ITEMS - completed;

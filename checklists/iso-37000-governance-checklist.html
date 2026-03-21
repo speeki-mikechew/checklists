@@ -1696,6 +1696,7 @@
             totalCompleted.textContent = completedMainItems;
             totalRemaining.textContent = TOTAL_MAIN_ITEMS - completedMainItems;
             percentComplete.textContent = Math.round((completedMainItems / TOTAL_MAIN_ITEMS) * 100) + '%';
+            if (window.updateStickyBar) window.updateStickyBar(percentage);
 
             updateItemNumbers();
             saveProgress();

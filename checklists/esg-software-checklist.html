@@ -1862,6 +1862,7 @@
             const percentage = Math.round((checked / TOTAL_ITEMS) * 100);
 
             document.getElementById('progress-fill').style.width = percentage + '%';
+            if (window.updateStickyBar) window.updateStickyBar(percentage);
             document.getElementById('progress-percentage').textContent = percentage + '%';
             document.getElementById('items-completed').textContent = checked;
             document.getElementById('items-remaining').textContent = TOTAL_ITEMS - checked;
