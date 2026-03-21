@@ -6,18 +6,18 @@
     <script src="assets/auth.js"></script>
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="ESG and sustainability resources by Speeki. Interactive checklists, whitepapers, and guides for CSOs and compliance teams to strengthen ESG reporting and avoid greenwashing.">
+    <meta name="description" content="ESG and sustainability resources by Speeki. Interactive checklists, whitepapers, and evaluation tools for CSOs and compliance teams to assess ESG readiness and avoid greenwashing.">
     <meta name="keywords" content="ESG resources, sustainability resources, ESG whitepaper, interactive checklist, greenwashing prevention, CSO tools, sustainability reporting, ESG compliance, Speeki">
     <meta name="author" content="Speeki">
     <meta property="og:title" content="ESG & Sustainability Resources | Speeki">
-    <meta property="og:description" content="Interactive checklists, whitepapers, and guides for sustainability professionals. Resources to strengthen ESG reporting and avoid greenwashing.">
+    <meta property="og:description" content="Interactive checklists, whitepapers, and evaluation tools for sustainability professionals. Resources to assess ESG readiness and avoid greenwashing.">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://www.speeki.com/assets/speeki-og-image.jpg">
     <meta property="og:url" content="https://www.speeki.com/en-GB/resources/">
     <meta property="og:site_name" content="Speeki">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="ESG & Sustainability Resources | Speeki">
-    <meta name="twitter:description" content="Interactive checklists, whitepapers, and guides for sustainability professionals. Resources to strengthen ESG reporting and avoid greenwashing.">
+    <meta name="twitter:description" content="Interactive checklists, whitepapers, and evaluation tools for sustainability professionals. Resources to assess ESG readiness and avoid greenwashing.">
     <meta name="twitter:image" content="https://www.speeki.com/assets/speeki-og-image.jpg">
     <meta name="robots" content="index, follow">
     <title>Resources | Speeki - ESG & Sustainability Tools</title>
@@ -107,7 +107,7 @@
                 {
                     "@type": "ListItem",
                     "position": 12,
-                    "name": "Beyond the Checkbox: Setting Effective ABMS Objectives",
+                    "name": "Beyond the Checkbox: ABMS Objectives",
                     "url": "https://www.speeki.com/en-GB/resources/whitepapers/abms-objectives.html"
                 },
                 {
@@ -603,28 +603,17 @@
             margin-top: 6px;
         }
 
-        .roadmap-tag.start-here {
+        .roadmap-tag.highest-match {
             background: var(--speeki-green);
             color: var(--speeki-dark);
         }
 
-        .roadmap-tag.next-step {
+        .roadmap-tag.strong-match {
             background: #dbeafe;
             color: #1e40af;
         }
 
-        .roadmap-tag.complete {
-            background: #f3e8ff;
-            color: #7c3aed;
-        }
-
-        /* Legacy support for old tag names */
-        .roadmap-tag.recommended {
-            background: #dbeafe;
-            color: #1e40af;
-        }
-
-        .roadmap-tag.advanced {
+        .roadmap-tag.related {
             background: #f3e8ff;
             color: #7c3aed;
         }
@@ -1605,7 +1594,7 @@
         <div class="container">
             <h1>Resources</h1>
             <div class="accent-line"></div>
-            <p class="subtitle">Interactive checklists, whitepapers, and practical guides to strengthen your ESG and sustainability programmes. Download, track progress, and drive meaningful change in your organisation.</p>
+            <p class="subtitle">Interactive checklists, whitepapers, and evaluation tools to assess your ESG and sustainability programme readiness. Download, track progress, and benchmark your organisation.</p>
 
             <!-- Social Proof Stats -->
             <div class="social-proof-stats">
@@ -1619,7 +1608,7 @@
                 </div>
                 <div class="stat-item">
                     <span class="stat-number">400+</span>
-                    <span class="stat-label">Actionable checkpoints</span>
+                    <span class="stat-label">Evaluation checkpoints</span>
                 </div>
                 <div class="stat-item">
                     <span class="stat-number">50+</span>
@@ -1657,7 +1646,7 @@
                     <!-- Step 0: Company Name (Optional) -->
                     <div class="quiz-step active" data-step="0">
                         <div class="quiz-question">What is your company name?</div>
-                        <p style="font-size: 14px; color: #64748b; margin-bottom: 20px;">This helps us suggest resources relevant to your industry context. Optional - you can skip this step.</p>
+                        <p style="font-size: 14px; color: #64748b; margin-bottom: 20px;">This helps us identify resources relevant to your industry context. Optional - you can skip this step.</p>
                         <div class="company-input-wrapper">
                             <input type="text" id="companyNameInput" class="company-input" placeholder="e.g., Acme Manufacturing Ltd" />
                             <button type="button" id="analyzeCompanyBtn" class="btn-primary" disabled>Analyze & Continue</button>
@@ -1769,7 +1758,7 @@
                     <!-- Result: Personalised Roadmap -->
                     <div class="quiz-step quiz-result" data-step="result">
                         <div id="roadmapHeader">
-                            <h4 id="resultTitle">Suggested Resources for Your Context</h4>
+                            <h4 id="resultTitle">Matched Resources for Your Context</h4>
                             <p id="resultIndustryContext" class="industry-context"></p>
                         </div>
                         <div id="roadmapPath" class="roadmap-path">
@@ -1779,7 +1768,7 @@
                             <a href="#" id="startFirstChecklist" class="quiz-result-cta">View First Resource</a>
                             <button type="button" id="viewAllChecklists" class="quiz-result-secondary">View All Resources</button>
                         </div>
-                        <p class="roadmap-note">These resources are suggested based on your industry and focus area. Explore them in any order, or browse all resources below.</p>
+                        <p class="roadmap-note">These resources are matched based on your industry and focus area. Explore them in any order, or browse all resources below.</p>
 
                         <div class="assessment-cta" style="margin-top: 32px; padding: 24px; background: rgba(0,255,127,0.08); border: 1px solid rgba(0,255,127,0.2); border-radius: 12px; text-align: center;">
                             <p style="font-size: 16px; color: #1e293b; margin-bottom: 12px; font-weight: 500;">Want a deeper analysis?</p>
@@ -1847,7 +1836,7 @@
 
             <section class="section-intro" id="interactive-checklists">
                 <h2>Interactive Checklists</h2>
-                <p>Comprehensive, actionable checklists designed for sustainability professionals, CSOs, and compliance teams. Each tool addresses critical pain points in ESG reporting and helps you maintain transparency and credibility.</p>
+                <p>Comprehensive evaluation checklists designed for sustainability professionals, CSOs, and compliance teams. Each tool addresses critical areas in ESG reporting and supports transparency and credibility.</p>
             </section>
 
             <div class="resources-grid" id="checklistsGrid">
@@ -2062,18 +2051,6 @@
                     <span class="card-cta">Read Whitepaper</span>
                 </a>
 
-                <!-- Beyond the Checkbox: ABMS Objectives Whitepaper -->
-                <a href="whitepapers/speeki-abms-whitepaper_1.html" class="whitepaper-card" data-type="whitepaper" data-topic="anti-bribery">
-                    <span class="card-tag">Anti-Bribery</span>
-                    <h3 class="card-title">Beyond the Checkbox: Setting Effective ABMS Objectives</h3>
-                    <p class="card-description">How to move from activity-based compliance to outcome-focused anti-bribery management. Guidance on ISO 37001:2025 Clause 6.2 objectives that measure real impact.</p>
-                    <div class="card-meta">
-                        <span class="card-meta-item">15 min read</span>
-                        <span class="card-meta-item">Whitepaper</span>
-                    </div>
-                    <span class="card-cta">Read Whitepaper</span>
-                </a>
-
                 <!-- ABMS Objectives Whitepaper -->
                 <a href="whitepapers/abms-objectives.html" class="whitepaper-card" data-type="whitepaper" data-topic="anti-bribery">
                     <span class="card-tag">ABMS</span>
@@ -2137,9 +2114,9 @@
                         <p>Get all 15 resources in a single PDF bundle, plus additional reference content for ESG and compliance professionals:</p>
                         <ul class="lead-magnet-benefits">
                             <li>All interactive resources in printable format</li>
-                            <li>ESG implementation roadmap template</li>
-                            <li>Stakeholder communication templates</li>
-                            <li>Quarterly ESG review framework</li>
+                            <li>ESG readiness benchmark template</li>
+                            <li>Framework comparison guide</li>
+                            <li>Quarterly ESG monitoring checklist</li>
                             <li>Early access to new resources</li>
                         </ul>
                     </div>
@@ -2518,8 +2495,8 @@
             return roadmap.map((item, index) => ({
                 ...item,
                 step: index + 1,
-                tag: index === 0 ? 'start-here' : (index === 1 ? 'next-step' : 'complete'),
-                tagLabel: index === 0 ? 'Start Here' : (index === 1 ? 'Next Step' : 'Complete Your Journey')
+                tag: index === 0 ? 'highest-match' : (index === 1 ? 'strong-match' : 'related'),
+                tagLabel: index === 0 ? 'Highest Match' : (index === 1 ? 'Strong Match' : 'Related Resource')
             }));
         }
 
@@ -2536,7 +2513,7 @@
 
             if (checklist.maturityFit.includes(profile.maturity)) {
                 if (profile.maturity === 'early') reasons.push('Perfect for building foundations');
-                if (profile.maturity === 'developing') reasons.push('Helps strengthen existing processes');
+                if (profile.maturity === 'developing') reasons.push('Evaluates existing processes');
                 if (profile.maturity === 'mature') reasons.push('Optimises mature programmes');
             }
 
@@ -2704,9 +2681,9 @@
             // Update title and context message
             const resultTitle = document.getElementById('resultTitle');
             if (profile.companyName) {
-                resultTitle.textContent = `Suggested Resources for ${profile.companyName}`;
+                resultTitle.textContent = `Matched Resources for ${profile.companyName}`;
             } else {
-                resultTitle.textContent = 'Suggested Resources for Your Sector';
+                resultTitle.textContent = 'Matched Resources for Your Sector';
             }
 
             // Update industry context message
