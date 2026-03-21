@@ -102,58 +102,216 @@
 
 
 
-        /* Header */
+        /* Breadcrumb */
+        .breadcrumb {
+            background: var(--speeki-dark-blue);
+            padding: 12px 0;
+        }
+
+        .breadcrumb-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 4vw;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            color: rgba(255,255,255,0.5);
+        }
+
+        .breadcrumb a {
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .breadcrumb a:hover {
+            color: var(--speeki-green-text);
+        }
+
+        .breadcrumb-sep {
+            opacity: 0.4;
+        }
+
+        .breadcrumb-current {
+            color: var(--speeki-green-text);
+        }
+
+        /* Header / Hero */
         header {
-            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
-            color: var(--speeki-dark);
-            padding: 80px 4vw 60px;
-            border-bottom: 1px solid var(--speeki-border);
+            background: linear-gradient(135deg, var(--speeki-dark-blue) 0%, #162050 100%);
+            color: #ffffff;
+            padding: 72px 4vw 80px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: -120px;
+            right: -80px;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(0,255,127,0.10) 0%, transparent 65%);
+            pointer-events: none;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: -80px;
+            left: 20%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(0,255,127,0.05) 0%, transparent 65%);
+            pointer-events: none;
+        }
+
+        .hero-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 340px;
+            gap: 64px;
+            align-items: start;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .hero-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(0,196,180,0.12);
+            border: 1px solid rgba(0,196,180,0.3);
+            color: var(--speeki-green);
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 6px 14px;
+            border-radius: 100px;
+            margin-bottom: 24px;
+            width: fit-content;
         }
 
         header h1 {
-            font-size: 48px;
-            margin-bottom: 24px;
+            font-size: 52px;
+            margin-bottom: 12px;
             font-weight: 700;
-            letter-spacing: -1.5px;
-            color: var(--speeki-dark);
-            max-width: 900px;
-            line-height: 1.2;
+            letter-spacing: -1px;
+            color: #ffffff;
+            line-height: 1.08;
         }
 
         .header-highlight {
-            color: var(--speeki-green-text);
-            position: relative;
+            color: var(--speeki-green);
+            font-style: italic;
         }
 
         header p {
             font-size: 18px;
-            color: var(--speeki-gray);
-            max-width: 800px;
-            margin-bottom: 40px;
-            line-height: 1.7;
+            color: rgba(255,255,255,0.65);
+            max-width: 560px;
+            margin-bottom: 36px;
+            line-height: 1.5;
             font-weight: 400;
+        }
+
+        .hero-meta {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .hero-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255,255,255,0.55);
+            font-size: 13px;
+        }
+
+        .hero-meta-dot {
+            width: 4px;
+            height: 4px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+        }
+
+        .hero-actions {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--speeki-green);
+            color: var(--speeki-dark);
+            border: none;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: background 0.2s, transform 0.15s;
+        }
+
+        .btn-primary:hover {
+            background: #00e070;
+            transform: translateY(-1px);
+        }
+
+        .hero-card {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 16px;
+            padding: 32px;
+            backdrop-filter: blur(8px);
+            position: relative;
+            top: 12px;
+        }
+
+        .hero-card h3 {
+            color: #ffffff;
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 14px;
         }
 
         .progress-section {
             display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: 40px;
-            padding: 30px;
-            background: #ffffff;
-            border-radius: 8px;
-            max-width: 600px;
-            border: 1px solid var(--speeki-border);
+            flex-direction: column;
+            gap: 16px;
+            margin-bottom: 0;
+            padding: 0;
+            background: transparent;
+            border: none;
+            max-width: 100%;
         }
 
         .progress-info {
             text-align: left;
             flex: 1;
+            width: 100%;
         }
 
         .progress-info h3 {
             font-size: 12px;
-            color: var(--speeki-gray);
+            color: rgba(255,255,255,0.55);
             margin-bottom: 12px;
             text-transform: uppercase;
             letter-spacing: 1.5px;
@@ -162,9 +320,8 @@
 
         .progress-bar {
             width: 100%;
-            max-width: 300px;
             height: 6px;
-            background: #e5e5e5;
+            background: rgba(255,255,255,0.15);
             border-radius: 3px;
             overflow: hidden;
         }
@@ -178,23 +335,67 @@
         }
 
         .progress-text {
-            color: var(--speeki-dark);
-            font-size: 24px;
-            font-weight: 700;
-            margin-left: 30px;
+            color: rgba(255,255,255,0.85);
+            font-size: 16px;
+            font-weight: 600;
             white-space: nowrap;
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            background: var(--speeki-light-gray);
+            padding: 40px 4vw;
+            border-bottom: 1px solid var(--speeki-border);
+        }
+
+        .stats-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 48px;
+            font-weight: 700;
+            color: var(--speeki-dark);
+            letter-spacing: -1px;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: var(--speeki-gray);
+            margin-top: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 600;
         }
 
         /* Main Content */
         main {
             background: white;
             padding: 60px 4vw;
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 64px;
+            max-width: 1400px;
+            margin: 0 auto;
+            align-items: start;
+        }
+
+        .checklist-section {
+            flex: 1;
         }
 
         .checklist-item {
-            margin-bottom: 60px;
-            padding-bottom: 0;
-            border-bottom: none;
+            margin-bottom: 32px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid var(--speeki-border);
         }
 
         .checklist-item:last-child {
@@ -551,6 +752,190 @@
             box-shadow: 0 8px 16px rgba(0, 255, 127, 0.3);
         }
 
+        /* Related Resources */
+        .related-resources {
+            background: var(--speeki-light-gray);
+            padding: 60px 4vw;
+            margin-top: 60px;
+        }
+
+        .related-resources-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .related-resources h2 {
+            font-size: 28px;
+            font-weight: 700;
+            margin: 0 0 32px 0;
+            color: var(--speeki-dark);
+        }
+
+        .related-resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+        }
+
+        .resource-card {
+            text-decoration: none;
+            display: block;
+            background: #ffffff;
+            border: 1px solid var(--speeki-border);
+            border-radius: 8px;
+            padding: 24px;
+            transition: border-color 0.2s, box-shadow 0.2s;
+            height: 100%;
+            box-sizing: border-box;
+        }
+
+        .resource-card:hover {
+            border-color: var(--speeki-green);
+            box-shadow: 0 4px 16px rgba(0,255,127,0.12);
+        }
+
+        .resource-badge {
+            display: inline-block;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: #ffffff;
+            border-radius: 4px;
+            padding: 3px 8px;
+            margin-bottom: 12px;
+        }
+
+        .resource-badge.checklist {
+            background: var(--speeki-green);
+        }
+
+        .resource-badge.whitepaper {
+            background: #6366f1;
+        }
+
+        .resource-card h3 {
+            font-size: 16px;
+            font-weight: 700;
+            color: var(--speeki-dark);
+            margin: 0 0 8px 0;
+        }
+
+        .resource-card p {
+            font-size: 14px;
+            color: #6b7280;
+            margin: 0;
+            line-height: 1.5;
+        }
+
+        /* Sticky Sidebar */
+        .sticky-sidebar {
+            display: none;
+            position: sticky;
+            top: 80px;
+            height: fit-content;
+            background: var(--speeki-light-gray);
+            border-radius: 8px;
+            padding: 28px;
+            border: 1px solid var(--speeki-border);
+        }
+
+        @media (min-width: 1024px) {
+            .sticky-sidebar {
+                display: block;
+            }
+        }
+
+        .sidebar-title {
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: var(--speeki-dark);
+            margin-bottom: 16px;
+        }
+
+        .sidebar-progress {
+            margin-bottom: 28px;
+            padding-bottom: 28px;
+            border-bottom: 1px solid var(--speeki-border);
+        }
+
+        .sidebar-progress-bar {
+            width: 100%;
+            height: 6px;
+            background: #e5e7eb;
+            border-radius: 3px;
+            overflow: hidden;
+            margin-bottom: 12px;
+        }
+
+        .sidebar-progress-fill {
+            height: 100%;
+            background: var(--speeki-green);
+            width: 0%;
+            transition: width 0.3s ease;
+            border-radius: 3px;
+        }
+
+        .sidebar-progress-text {
+            font-size: 12px;
+            color: var(--speeki-gray);
+            text-align: center;
+        }
+
+        .toc-list {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+
+        .toc-item {
+            margin: 0;
+            padding: 0;
+        }
+
+        .toc-link {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 8px 12px;
+            color: var(--speeki-gray);
+            text-decoration: none;
+            font-size: 14px;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+            line-height: 1.4;
+        }
+
+        .toc-link:hover {
+            background: rgba(0, 255, 127, 0.1);
+            color: var(--speeki-dark);
+        }
+
+        .toc-link.active {
+            background: rgba(0, 255, 127, 0.15);
+            color: var(--speeki-green-text);
+            font-weight: 600;
+        }
+
+        .toc-dot {
+            width: 6px;
+            height: 6px;
+            background: var(--speeki-border);
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .toc-link.active .toc-dot {
+            background: var(--speeki-green-text);
+            width: 8px;
+            height: 8px;
+        }
+
         /* Footer */
 
 
@@ -780,22 +1165,51 @@
             line-height: 1.5;
         }
 
+        @media (max-width: 1023px) {
+            main {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .sticky-sidebar {
+                position: static;
+                top: auto;
+            }
+
+            .hero-inner {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
         @media (max-width: 768px) {
             header {
-                padding: 60px 6vw 40px;
+                padding: 48px 4vw 56px;
             }
 
             header h1 {
                 font-size: 36px;
-                letter-spacing: -1px;
+                margin-bottom: 12px;
             }
 
             header p {
                 font-size: 16px;
+                margin-bottom: 24px;
+            }
+
+            .hero-inner {
+                grid-template-columns: 1fr;
+                gap: 32px;
+            }
+
+            .hero-meta {
+                gap: 16px;
+                font-size: 12px;
             }
 
             main {
-                padding: 40px 6vw;
+                padding: 40px 4vw;
+                grid-template-columns: 1fr;
             }
 
             .item-number {
@@ -809,7 +1223,7 @@
             }
 
             .sub-items {
-                margin-left: 0;
+                margin-left: 56px;
             }
 
             .sub-item label {
@@ -819,8 +1233,8 @@
             .progress-section {
                 flex-direction: column;
                 align-items: flex-start;
-                gap: 20px;
-                padding: 24px;
+                gap: 16px;
+                padding: 0;
             }
 
             .progress-text {
@@ -838,8 +1252,8 @@
                 gap: 16px;
             }
 
-            .summary-stats {
-                gap: 40px;
+            .stats-inner {
+                gap: 24px;
             }
 
             .stat-number {
@@ -860,7 +1274,7 @@
             .nav-cta { padding: 6px 14px; font-size: 13px; }
             footer { padding: 40px 16px; }
             .footer-links { gap: 16px; }
-        
+
         }
             /* Skip Navigation Link */
         .skip-link { position: absolute; top: -40px; left: 0; background: #0a1f44; color: #fff; padding: 8px 16px; z-index: 10000; font-size: 14px; }
@@ -964,25 +1378,81 @@
         </div>
     </nav>
 
+    <div class="breadcrumb">
+        <div class="breadcrumb-inner">
+            <a href="../index.html">Resources</a>
+            <span class="breadcrumb-sep">/</span>
+            <a href="../index.html?type=checklist">Checklists</a>
+            <span class="breadcrumb-sep">/</span>
+            <span class="breadcrumb-current">Anti-Greenwashing Checklist</span>
+        </div>
+    </div>
+
     <div class="container">
         <header>
-            <h1>CSO's <span class="header-highlight">Anti-Greenwashing</span> Checklist</h1>
-            <p>Ten essential actions every chief sustainability officer should take to reduce the risk of greenwashing in ESG reporting and communications.</p>
-            <div class="progress-section">
-                <div class="progress-info">
-                    <h3>Progress</h3>
-                    <div class="progress-bar">
-                        <div class="progress-fill" id="progressFill"></div>
+            <div class="hero-inner">
+                <div class="hero-content">
+                    <span class="hero-tag">Checklist</span>
+                    <h1>CSO's <span class="header-highlight">Anti-Greenwashing</span> Checklist</h1>
+                    <p>Ten essential actions every chief sustainability officer should take to reduce the risk of greenwashing in ESG reporting and communications.</p>
+                    <div class="hero-meta">
+                        <div class="hero-meta-item">
+                            <span>10 Sections</span>
+                        </div>
+                        <div class="hero-meta-dot"></div>
+                        <div class="hero-meta-item">
+                            <span>50 Checkpoints</span>
+                        </div>
+                        <div class="hero-meta-dot"></div>
+                        <div class="hero-meta-item">
+                            <span>~15 min</span>
+                        </div>
+                    </div>
+                    <div class="progress-section">
+                        <div class="progress-info">
+                            <h3>Progress</h3>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="progressFill"></div>
+                            </div>
+                        </div>
+                        <div class="progress-text" id="progressText">0/50</div>
                     </div>
                 </div>
-                <div class="progress-text" id="progressText">0/50</div>
+                <div class="hero-card">
+                    <h3>Start checking items</h3>
+                    <button class="btn-primary" onclick="document.querySelector('.checklist-item').scrollIntoView({behavior: 'smooth'})">
+                        Get Started →
+                    </button>
+                </div>
             </div>
         </header>
 
+        <section class="stats-bar">
+            <div class="stats-inner">
+                <div class="stat-item">
+                    <div class="stat-number">10</div>
+                    <div class="stat-label">Sections</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50</div>
+                    <div class="stat-label">Checkpoints</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="percentComplete">0%</div>
+                    <div class="stat-label">Complete</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number" id="totalCompleted">0</div>
+                    <div class="stat-label">Done</div>
+                </div>
+            </div>
+        </section>
+
         <main id="main-content">
-            <form id="checklistForm">
-                <!-- Item 1 -->
-                <div class="checklist-item">
+            <div class="checklist-section">
+                <form id="checklistForm">
+                    <!-- Item 1 -->
+                <div class="checklist-item" id="section-1">
                     <div class="item-header">
                         <div class="item-number" data-item="1">1</div>
                         <div class="item-title">
@@ -1026,7 +1496,7 @@
                 </div>
 
                 <!-- Item 2 -->
-                <div class="checklist-item">
+                <div class="checklist-item" id="section-2">
                     <div class="item-header">
                         <div class="item-number" data-item="2">2</div>
                         <div class="item-title">
@@ -1070,7 +1540,7 @@
                 </div>
 
                 <!-- Item 3 -->
-                <div class="checklist-item">
+                <div class="checklist-item" id="section-3">
                     <div class="item-header">
                         <div class="item-number" data-item="3">3</div>
                         <div class="item-title">
@@ -1114,7 +1584,7 @@
                 </div>
 
                 <!-- Item 4 -->
-                <div class="checklist-item">
+                <div class="checklist-item" id="section-4">
                     <div class="item-header">
                         <div class="item-number" data-item="4">4</div>
                         <div class="item-title">
@@ -1158,7 +1628,7 @@
                 </div>
 
                 <!-- Item 5 -->
-                <div class="checklist-item">
+                <div class="checklist-item" id="section-5">
                     <div class="item-header">
                         <div class="item-number" data-item="5">5</div>
                         <div class="item-title">
@@ -1211,7 +1681,7 @@
                 </div>
 
                 <!-- Item 6 -->
-                <div class="checklist-item">
+                <div class="checklist-item" id="section-6">
                     <div class="item-header">
                         <div class="item-number" data-item="6">6</div>
                         <div class="item-title">
@@ -1255,7 +1725,7 @@
                 </div>
 
                 <!-- Item 7 -->
-                <div class="checklist-item">
+                <div class="checklist-item" id="section-7">
                     <div class="item-header">
                         <div class="item-number" data-item="7">7</div>
                         <div class="item-title">
@@ -1299,7 +1769,7 @@
                 </div>
 
                 <!-- Item 8 -->
-                <div class="checklist-item">
+                <div class="checklist-item" id="section-8">
                     <div class="item-header">
                         <div class="item-number" data-item="8">8</div>
                         <div class="item-title">
@@ -1343,7 +1813,7 @@
                 </div>
 
                 <!-- Item 9 -->
-                <div class="checklist-item">
+                <div class="checklist-item" id="section-9">
                     <div class="item-header">
                         <div class="item-number" data-item="9">9</div>
                         <div class="item-title">
@@ -1375,7 +1845,7 @@
                 </div>
 
                 <!-- Item 10 -->
-                <div class="checklist-item">
+                <div class="checklist-item" id="section-10">
                     <div class="item-header">
                         <div class="item-number" data-item="10">10</div>
                         <div class="item-title">
@@ -1405,7 +1875,36 @@
                         </div>
                     </div>
                 </div>
-            </form>
+                </form>
+            </div>
+
+            <!-- Sticky Sidebar -->
+            <aside class="sticky-sidebar">
+                <div class="sidebar-progress">
+                    <div class="sidebar-title">Your Progress</div>
+                    <div class="sidebar-progress-bar">
+                        <div class="sidebar-progress-fill" id="sidebarProgressFill"></div>
+                    </div>
+                    <div class="sidebar-progress-text" id="sidebarProgressText">0/50</div>
+                </div>
+
+                <div>
+                    <div class="sidebar-title">Sections</div>
+                    <ul class="toc-list">
+                        <li class="toc-item"><a href="#section-1" class="toc-link"><span class="toc-dot"></span>Data boundaries</a></li>
+                        <li class="toc-item"><a href="#section-2" class="toc-link"><span class="toc-dot"></span>Data verification</a></li>
+                        <li class="toc-item"><a href="#section-3" class="toc-link"><span class="toc-dot"></span>Absolute metrics</a></li>
+                        <li class="toc-item"><a href="#section-4" class="toc-link"><span class="toc-dot"></span>Standardised frameworks</a></li>
+                        <li class="toc-item"><a href="#section-5" class="toc-link"><span class="toc-dot"></span>Balanced narratives</a></li>
+                        <li class="toc-item"><a href="#section-6" class="toc-link"><span class="toc-dot"></span>Resource alignment</a></li>
+                        <li class="toc-item"><a href="#section-7" class="toc-link"><span class="toc-dot"></span>Certifications</a></li>
+                        <li class="toc-item"><a href="#section-8" class="toc-link"><span class="toc-dot"></span>Commitment action</a></li>
+                        <li class="toc-item"><a href="#section-9" class="toc-link"><span class="toc-dot"></span>Stakeholder engagement</a></li>
+                        <li class="toc-item"><a href="#section-10" class="toc-link"><span class="toc-dot"></span>Documentation</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </main>
 
             <!-- Red Flags Section -->
             <div class="red-flags-section">
@@ -1534,28 +2033,19 @@
     </div>
 
 
-<!-- Related Resources -->
-<section class="related-resources" style="background: #f8f9fa; padding: 60px 0; font-family: 'DM Sans', sans-serif;">
-  <div style="max-width: 1200px; margin: 0 auto; padding: 0 4vw;">
-    <h2 style="font-size: 28px; font-weight: 700; margin: 0 0 32px 0; color: #0a0a0a; font-family: 'DM Sans', sans-serif;">Related Resources</h2>
-    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
-      <a href="ghg-reporting-readiness-checklist.html" style="text-decoration: none; display: block;">
-        <div style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 24px; transition: border-color 0.2s, box-shadow 0.2s; height: 100%; box-sizing: border-box;"
-             onmouseover="this.style.borderColor='#00FF7F'; this.style.boxShadow='0 4px 16px rgba(0,255,127,0.12)';"
-             onmouseout="this.style.borderColor='#e5e7eb'; this.style.boxShadow='none';">
-          <span style="display: inline-block; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: #ffffff; background: #00FF7F; border-radius: 4px; padding: 3px 8px; margin-bottom: 12px;">Checklist</span>
-          <h3 style="font-size: 16px; font-weight: 700; color: #0a0a0a; margin: 0 0 8px 0; font-family: 'DM Sans', sans-serif;">GHG Reporting Readiness</h3>
-          <p style="font-size: 14px; color: #6b7280; margin: 0; line-height: 1.5; font-family: 'DM Sans', sans-serif;">Assess your ability to calculate and report Scope 1, 2, and 3 emissions under ISAE 3410.</p>
-        </div>
+<section class="related-resources">
+  <div class="related-resources-inner">
+    <h2>Related Resources</h2>
+    <div class="related-resources-grid">
+      <a href="ghg-reporting-readiness-checklist.html" class="resource-card">
+        <span class="resource-badge checklist">Checklist</span>
+        <h3>GHG Reporting Readiness</h3>
+        <p>Assess your ability to calculate and report Scope 1, 2, and 3 emissions under ISAE 3410.</p>
       </a>
-      <a href="../whitepapers/icsr-internal-controls.html" style="text-decoration: none; display: block;">
-        <div style="background: #ffffff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 24px; transition: border-color 0.2s, box-shadow 0.2s; height: 100%; box-sizing: border-box;"
-             onmouseover="this.style.borderColor='#00FF7F'; this.style.boxShadow='0 4px 16px rgba(0,255,127,0.12)';"
-             onmouseout="this.style.borderColor='#e5e7eb'; this.style.boxShadow='none';">
-          <span style="display: inline-block; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: #ffffff; background: #6366f1; border-radius: 4px; padding: 3px 8px; margin-bottom: 12px;">Whitepaper</span>
-          <h3 style="font-size: 16px; font-weight: 700; color: #0a0a0a; margin: 0 0 8px 0; font-family: 'DM Sans', sans-serif;">ICSR: Internal Controls for Sustainability Reporting</h3>
-          <p style="font-size: 14px; color: #6b7280; margin: 0; line-height: 1.5; font-family: 'DM Sans', sans-serif;">How to build robust internal controls that satisfy ESG assurance providers.</p>
-        </div>
+      <a href="../whitepapers/icsr-internal-controls.html" class="resource-card">
+        <span class="resource-badge whitepaper">Whitepaper</span>
+        <h3>ICSR: Internal Controls for Sustainability Reporting</h3>
+        <p>How to build robust internal controls that satisfy ESG assurance providers.</p>
       </a>
     </div>
   </div>
@@ -1612,6 +2102,16 @@
             totalCompleted.textContent = checkedCount;
             totalRemaining.textContent = totalCount - checkedCount;
             percentComplete.textContent = Math.round(percentage) + '%';
+
+            // Update sidebar progress
+            const sidebarProgressFill = document.getElementById('sidebarProgressFill');
+            const sidebarProgressText = document.getElementById('sidebarProgressText');
+            if (sidebarProgressFill) {
+                sidebarProgressFill.style.width = percentage + '%';
+            }
+            if (sidebarProgressText) {
+                sidebarProgressText.textContent = `${checkedCount}/${totalCount}`;
+            }
 
             // Update item number circles
             updateItemNumbers();
@@ -1732,13 +2232,39 @@
             }
         }
 
+        // Scrollspy for TOC
+        function updateScrollSpy() {
+            const tocLinks = document.querySelectorAll('.toc-link');
+            const sections = document.querySelectorAll('.checklist-item[id^="section-"]');
+
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            tocLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === current) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateScrollSpy);
+
         // Add event listeners to all checkboxes
         checkboxes.forEach(checkbox => {
             checkbox.addEventListener('change', updateProgress);
         });
 
         // Load progress on page load
-        window.addEventListener('DOMContentLoaded', loadProgress);
+        window.addEventListener('DOMContentLoaded', function() {
+            loadProgress();
+            updateScrollSpy();
+        });
     </script>
     <script src="assets/growth.js"></script>
     <script src="assets/growth-advanced.js"></script>
