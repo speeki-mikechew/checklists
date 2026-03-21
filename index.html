@@ -1584,12 +1584,13 @@
 
         /* Sticky Navbar */
         nav {
-            background: #0a1628;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.95);
+            border-bottom: 1px solid var(--speeki-border);
             padding: 0 32px;
             position: sticky;
             top: 0;
             z-index: 100;
+            backdrop-filter: blur(10px);
         }
         .nav-content {
             max-width: 1400px;
@@ -1633,7 +1634,7 @@
     <nav>
         <div class="nav-content">
             <a href="index.html" class="nav-logo">
-                <img src="speeki-logo-white.png" alt="Speeki" style="height: 50px; width: auto;">
+                <img src="speeki-logo.png" alt="Speeki" style="height: 50px; width: auto;">
             </a>
             <a href="https://www.speeki.com" class="nav-cta">Visit Speeki.com</a>
         </div>
